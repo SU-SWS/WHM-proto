@@ -1,0 +1,9 @@
+node_modules/
+.next/
+out/
+.env
+.env.*
+*.local
+.DS_Store
+# Never commit survey responses or anything with respondent names or emails.
+survey*/

@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "siteKey": "webservices",
+  "source": "sample",
+  "status": "Not yet reviewed by SWS",
+  "generatedAt": "2026-11-10",
+  "findings": [
+    {
+      "title": "Accessibility and hosting questions land on a general page",
+      "evidence": "“accessibility support” (37) and “hosting” (29) are the top site searches. Both lead to Services, which covers each in a short paragraph.",
+      "recommendation": "Give each its own section on Services, with a clear next step such as a contact link."
+    },
+    {
+      "title": "Pricing questions have no direct answer",
+      "evidence": "“pricing” was searched 18 times. None of the 10 most visited pages explain cost or how quotes work.",
+      "recommendation": "Add a short explanation of how SWS scopes and prices work, or where to ask."
+    }
+  ]
+}

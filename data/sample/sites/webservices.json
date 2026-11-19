@@ -1,0 +1,275 @@
+{
+  "schemaVersion": 1,
+  "siteKey": "webservices",
+  "name": "Stanford Web Services",
+  "url": "https://webservices.stanford.edu",
+  "source": "sample",
+  "checkedAt": "2026-11-10",
+  "state": "ok",
+  "verdict": "In good shape, with two fixes worth making on well-visited pages.",
+  "lede": "Accessibility is steady. A few new broken links appeared since the last check.",
+  "readings": {
+    "siteTargetScore": {
+      "value": 99.6,
+      "change": 0.1,
+      "goal": 100,
+      "source": "sample"
+    },
+    "accessibilityScore": {
+      "value": 96.4,
+      "change": 0.2,
+      "source": "sample"
+    },
+    "brokenLinks": {
+      "value": 3,
+      "change": 1,
+      "source": "sample"
+    },
+    "stalePages": {
+      "value": 6,
+      "change": 0,
+      "total": 48,
+      "simulated": true,
+      "source": "sample"
+    },
+    "missingSearchDescriptions": {
+      "value": 4,
+      "change": 0,
+      "source": "sample"
+    }
+  },
+  "trends": {
+    "months": [
+      "2026-04",
+      "2026-05",
+      "2026-06",
+      "2026-07",
+      "2026-08",
+      "2026-09",
+      "2026-10",
+      "2026-11"
+    ],
+    "siteTargetScore": {
+      "source": "sample",
+      "values": [
+        99.2,
+        99.3,
+        99.3,
+        99.4,
+        99.4,
+        99.5,
+        99.5,
+        99.6
+      ]
+    },
+    "accessibilityScore": {
+      "source": "sample",
+      "values": [
+        95.8,
+        95.9,
+        96,
+        96.1,
+        96,
+        96.2,
+        96.2,
+        96.4
+      ]
+    },
+    "brokenLinks": {
+      "source": "sample",
+      "values": [
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        2,
+        3
+      ]
+    },
+    "pageViews": {
+      "source": "sample",
+      "values": [
+        8400,
+        8100,
+        7600,
+        9900,
+        10500,
+        11000,
+        10800,
+        10300
+      ]
+    }
+  },
+  "topPages": {
+    "viewsSource": "sample",
+    "engagementSource": "sample",
+    "pages": [
+      {
+        "path": "/ (home)",
+        "views": 2310,
+        "engagementRate": 0.52,
+        "openIssues": 0
+      },
+      {
+        "path": "/services",
+        "views": 1105,
+        "engagementRate": 0.61,
+        "openIssues": 1
+      },
+      {
+        "path": "/work",
+        "views": 980,
+        "engagementRate": 0.57,
+        "openIssues": 1
+      },
+      {
+        "path": "/why",
+        "views": 640,
+        "engagementRate": 0.63,
+        "openIssues": 0
+      },
+      {
+        "path": "/contact",
+        "views": 420,
+        "engagementRate": 0.44,
+        "openIssues": 1
+      }
+    ]
+  },
+  "issues": [
+    {
+      "type": "broken",
+      "scope": "3 broken links on 2 pages, up from 2.",
+      "reason": "One is on the Services page.",
+      "rank": 1,
+      "siteimproveUrl": null,
+      "source": "sample",
+      "pages": [
+        {
+          "path": "/services",
+          "views": 1105,
+          "count": 1
+        },
+        {
+          "path": "/work",
+          "views": 980,
+          "count": 2
+        }
+      ]
+    },
+    {
+      "type": "searchdesc",
+      "scope": "4 of 48 pages.",
+      "reason": "Includes the Contact page.",
+      "rank": 2,
+      "siteimproveUrl": null,
+      "source": "sample",
+      "pages": [
+        {
+          "path": "/contact",
+          "views": 420,
+          "count": 1
+        },
+        {
+          "path": "/work/momentum",
+          "views": 210,
+          "count": 1
+        },
+        {
+          "path": "/services/hosting",
+          "views": 180,
+          "count": 1
+        },
+        {
+          "path": "/news",
+          "views": 95,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "type": "stale",
+      "scope": "6 of 48 pages.",
+      "reason": "None are among your 5 busiest pages.",
+      "rank": 3,
+      "siteimproveUrl": null,
+      "source": "sample",
+      "pages": [
+        {
+          "path": "/work/archive",
+          "views": 80,
+          "monthsSinceUpdate": 16
+        },
+        {
+          "path": "/news/2024-launch",
+          "views": 35,
+          "monthsSinceUpdate": 19
+        },
+        {
+          "path": "/work/2023-case-study",
+          "views": 30,
+          "monthsSinceUpdate": 22
+        },
+        {
+          "path": "/news/2023-roundup",
+          "views": 22,
+          "monthsSinceUpdate": 23
+        },
+        {
+          "path": "/about/history",
+          "views": 18,
+          "monthsSinceUpdate": 31
+        },
+        {
+          "path": "/work/legacy-sites",
+          "views": 12,
+          "monthsSinceUpdate": 27
+        }
+      ]
+    }
+  ],
+  "siteSearch": {
+    "source": "sample",
+    "terms": [
+      {
+        "term": "accessibility support",
+        "count": 37
+      },
+      {
+        "term": "hosting",
+        "count": 29
+      },
+      {
+        "term": "drupal",
+        "count": 22
+      },
+      {
+        "term": "pricing",
+        "count": 18
+      },
+      {
+        "term": "contact",
+        "count": 12
+      }
+    ]
+  },
+  "speed": {
+    "source": "sample",
+    "pages": [
+      {
+        "path": "/ (home)",
+        "score": 88
+      },
+      {
+        "path": "/services",
+        "score": 85
+      },
+      {
+        "path": "/work",
+        "score": 79
+      }
+    ]
+  }
+}

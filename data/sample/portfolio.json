@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-10",
+  "sites": [
+    {
+      "key": "sitesuserguide",
+      "name": "Stanford Sites user guide",
+      "url": "https://sitesuserguide.stanford.edu",
+      "state": "attention",
+      "verdict": "Needs attention: accessibility has slipped each month, and issues sit on your busiest pages.",
+      "siteTargetScore": 98.3,
+      "accessibilityScore": 92.8,
+      "brokenLinks": 14,
+      "openOwnerIssues": 5,
+      "checkedAt": "2026-11-10",
+      "source": "sample"
+    },
+    {
+      "key": "webservices",
+      "name": "Stanford Web Services",
+      "url": "https://webservices.stanford.edu",
+      "state": "ok",
+      "verdict": "In good shape, with two fixes worth making on well-visited pages.",
+      "siteTargetScore": 99.6,
+      "accessibilityScore": 96.4,
+      "brokenLinks": 3,
+      "openOwnerIssues": 3,
+      "checkedAt": "2026-11-10",
+      "source": "sample"
+    },
+    {
+      "key": "decanter",
+      "name": "Decanter",
+      "url": "https://decanter.stanford.edu",
+      "state": "good",
+      "verdict": "In good shape. One item is being handled by SWS.",
+      "siteTargetScore": 100,
+      "accessibilityScore": 98.1,
+      "brokenLinks": 0,
+      "openOwnerIssues": 1,
+      "checkedAt": "2026-11-09",
+      "source": "sample"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "note": "Public file. Owners are role labels only: no names or emails. Fill in siteimproveSiteId before the first live run.",
+  "owners": [
+    {
+      "key": "owner-a",
+      "label": "Owner A"
+    },
+    {
+      "key": "owner-b",
+      "label": "Owner B"
+    }
+  ],
+  "sites": [
+    {
+      "key": "sitesuserguide",
+      "name": "Stanford Sites user guide",
+      "url": "https://sitesuserguide.stanford.edu",
+      "live": true,
+      "siteimproveSiteId": null,
+      "ga4PropertyId": null,
+      "owners": [
+        "owner-b"
+      ]
+    },
+    {
+      "key": "webservices",
+      "name": "Stanford Web Services",
+      "url": "https://webservices.stanford.edu",
+      "live": false,
+      "siteimproveSiteId": null,
+      "ga4PropertyId": null,
+      "owners": [
+        "owner-a"
+      ]
+    },
+    {
+      "key": "decanter",
+      "name": "Decanter",
+      "url": "https://decanter.stanford.edu",
+      "live": false,
+      "siteimproveSiteId": null,
+      "ga4PropertyId": null,
+      "owners": [
+        "owner-a",
+        "owner-b"
+      ]
+    }
+  ]
+}

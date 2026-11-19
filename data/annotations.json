@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "annotations": [
+    {
+      "issueType": "contrast",
+      "appliesTo": "all",
+      "note": "We confirmed this comes from a shared template style, not from your content. A fix is scheduled for the next platform release. You don’t need to do anything.",
+      "swsHandling": true,
+      "author": "SWS accessibility specialist",
+      "reviewedBySws": false
+    },
+    {
+      "issueType": "alt",
+      "appliesTo": "all",
+      "note": "If you already added alt text when uploading an image and it’s still flagged, the description may be on the media item but not on this placement. Check the image settings on the page itself.",
+      "swsHandling": false,
+      "author": "SWS accessibility specialist",
+      "reviewedBySws": false
+    }
+  ]
+}

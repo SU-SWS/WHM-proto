@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Website Health (demo) | Stanford Web Services</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  color-scheme: light;
+  /* Decanter v7 palette */
+  --cardinal: #8C1515;
+  --cardinal-dark: #820000;
+  --ink: #2E2D29;
+  --ink-2: #585754;
+  --surface: #FFFFFF;
+  --surface-2: #F4F4F4;
+  --rule: #D5D5D4;
+  --link: #006CB8;
+  --good: #175E54;
+  --good-bg: #E6F0EE;
+  --warn: #B1040E;
+  --warn-bg: #FBEAEA;
+  --sws: #620059;
+  --sws-bg: #F3E8F2;
+  --sample-bg: #FFF7DB;
+  --sample-edge: #E98300;
+  --on-cardinal: #FFFFFF;
+  --focus: #006CB8;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --ink: #F4F4F4; --ink-2: #C0C0BF; --surface: #2E2D29; --surface-2: #43423E; --rule: #6D6C69;
+    --link: #85CCFF; --good: #1AECBA; --good-bg: #1f3a35; --warn: #F83535; --warn-bg: #4a2222;
+    --sws: #E7A6E0; --sws-bg: #3d2a3b; --sample-bg: #4a3d12; --sample-edge: #FEDD5C; --focus: #85CCFF;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --ink: #F4F4F4; --ink-2: #C0C0BF; --surface: #2E2D29; --surface-2: #43423E; --rule: #6D6C69;
+  --link: #85CCFF; --good: #1AECBA; --good-bg: #1f3a35; --warn: #F83535; --warn-bg: #4a2222;
+  --sws: #E7A6E0; --sws-bg: #3d2a3b; --sample-bg: #4a3d12; --sample-edge: #FEDD5C; --focus: #85CCFF;
+}
+html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+*, *::before, *::after { box-sizing: inherit; }
+body {
+  margin: 0; background: var(--surface); color: var(--ink);
+  font-family: "Source Sans 3", "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.0625rem; line-height: 1.5;
+}
+a { color: var(--link); }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+.skip { position: absolute; left: -999px; top: 0; background: var(--surface); padding: .5rem 1rem; }
+.skip:focus { left: 1rem; z-index: 20; }
+.identity { background: var(--cardinal); color: var(--on-cardinal); padding: .35rem 1.25rem; }
+.identity .su-logo { display: inline-block; line-height: 0; }
+.identity .su-logo svg { height: 1.25rem; width: auto; display: block; }
+.identity .su-logo:focus-visible { outline-color: #FFFFFF; }
+header.app { border-bottom: 1px solid var(--rule); }
+.bar { max-width: 72rem; margin: 0 auto; padding: .9rem 1.25rem; display: flex; flex-wrap: wrap; gap: .75rem 1.5rem; align-items: center; }
+.brand { font-family: "Source Serif 4", Georgia, serif; font-size: 1.45rem; font-weight: 600; margin: 0; margin-right: auto; }
+.brand small { font-family: "Source Sans 3", sans-serif; font-size: .9rem; font-weight: 400; color: var(--ink-2); margin-left: .5rem; }
+nav.main { display: flex; gap: .25rem; flex-wrap: wrap; }
+nav.main button { background: none; border: 0; border-bottom: 3px solid transparent; padding: .35rem .6rem; font: inherit; color: var(--ink); cursor: pointer; }
+nav.main button[aria-current="page"] { border-bottom-color: var(--cardinal); font-weight: 600; }
+.viewas { display: flex; align-items: center; gap: .5rem; font-size: .95rem; }
+select, input[type="date"], textarea { font: inherit; color: var(--ink); background: var(--surface); border: 1px solid var(--ink-2); border-radius: 4px; padding: .3rem .5rem; }
+.sample { background: var(--sample-bg); border-left: 6px solid var(--sample-edge); }
+.sample .inner { max-width: 72rem; margin: 0 auto; padding: .55rem 1.25rem; font-size: .95rem; }
+main { max-width: 72rem; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; }
+.crumbs { font-size: .95rem; margin: 0 0 .75rem; }
+.crumbs button { background: none; border: 0; padding: 0; color: var(--link); text-decoration: underline; font: inherit; cursor: pointer; }
+h1, h2, h3 { line-height: 1.2; }
+h1 { font-size: 1.15rem; font-weight: 600; color: var(--ink-2); margin: 0 0 .35rem; }
+.verdict { font-family: "Source Serif 4", Georgia, serif; font-size: clamp(1.6rem, 3.4vw, 2.4rem); line-height: 1.22; font-weight: 600; margin: 0 0 .6rem; max-width: 34ch; }
+.lede { max-width: 62ch; margin: 0 0 1rem; color: var(--ink); }
+.meta { font-size: .92rem; color: var(--ink-2); margin: 0 0 1.5rem; }
+h2 { font-size: 1.35rem; margin: 2.25rem 0 .75rem; padding-top: .9rem; border-top: 1px solid var(--rule); }
+h3 { font-size: 1.1rem; margin: 1.25rem 0 .4rem; }
+.readings { display: grid; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); gap: 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.reading { padding: .8rem 1rem .9rem 0; }
+.reading + .reading { padding-left: 1rem; border-left: 1px solid var(--rule); }
+.reading .label { font-size: .92rem; color: var(--ink-2); display: block; }
+.reading .value { font-size: 1.7rem; font-weight: 600; display: block; line-height: 1.2; }
+.reading .change { font-size: .92rem; }
+.worse { color: var(--warn); } .better { color: var(--good); }
+.sites { list-style: none; margin: 0; padding: 0; }
+.sites li { border-top: 1px solid var(--rule); padding: 1.1rem 0; display: grid; grid-template-columns: 1fr auto; gap: .4rem 1.5rem; align-items: start; }
+.sites li:last-child { border-bottom: 1px solid var(--rule); }
+.sites h2 { border: 0; margin: 0; padding: 0; font-size: 1.25rem; }
+.sites .url { font-size: .92rem; color: var(--ink-2); }
+.sites .say { font-family: "Source Serif 4", Georgia, serif; font-size: 1.12rem; margin: .3rem 0 .4rem; max-width: 60ch; }
+.facts { display: flex; flex-wrap: wrap; gap: .25rem 1.25rem; font-size: .95rem; color: var(--ink-2); margin: 0; padding: 0; list-style: none; }
+.facts li { border: 0 !important; padding: 0 !important; display: block !important; }
+.btn { display: inline-block; font: inherit; font-weight: 600; padding: .5rem 1rem; border-radius: 4px; border: 2px solid var(--cardinal); background: var(--cardinal); color: var(--on-cardinal); cursor: pointer; text-decoration: none; }
+.btn:hover { background: var(--cardinal-dark); border-color: var(--cardinal-dark); }
+.btn.secondary { background: transparent; color: var(--ink); border-color: var(--ink-2); }
+.btn.secondary:hover { background: var(--surface-2); }
+.btn[disabled] { opacity: .55; cursor: not-allowed; }
+.actions { display: flex; flex-wrap: wrap; gap: .6rem; margin: 1rem 0; }
+.segmented { display: inline-flex; border: 1px solid var(--ink-2); border-radius: 4px; overflow: hidden; margin: 0 0 1rem; }
+.segmented button { font: inherit; background: var(--surface); color: var(--ink); border: 0; padding: .35rem .9rem; cursor: pointer; }
+.segmented button[aria-pressed="true"] { background: var(--ink); color: var(--surface); font-weight: 600; }
+.fixlist { list-style: none; margin: 0; padding: 0; counter-reset: fix; }
+.fixlist > li { border-top: 1px solid var(--rule); }
+.fixlist > li:last-child { border-bottom: 1px solid var(--rule); }
+.fixlist button.row { all: unset; box-sizing: border-box; display: grid; grid-template-columns: 2.25rem 1fr auto; gap: .2rem .9rem; width: 100%; padding: .85rem .25rem; cursor: pointer; }
+.fixlist.plain button.row { grid-template-columns: 1fr auto; }
+.fixlist button.row:hover { background: var(--surface-2); }
+.fixlist button.row:focus-visible { outline: 3px solid var(--focus); outline-offset: -3px; }
+.rank { font-family: "Source Serif 4", Georgia, serif; font-size: 1.35rem; font-weight: 600; color: var(--cardinal); }
+:root[data-theme="dark"] .rank { color: #F83535; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .rank { color: #F83535; } }
+.row .t { font-weight: 600; display: block; }
+.row .s { font-size: .95rem; color: var(--ink-2); display: block; }
+.tags { display: flex; flex-wrap: wrap; gap: .35rem; justify-content: flex-end; align-items: start; }
+.tag { font-size: .82rem; font-weight: 600; border-radius: 3px; padding: .1rem .45rem; white-space: nowrap; border: 1px solid currentColor; }
+.tag.you { color: var(--good); background: var(--good-bg); }
+.tag.sws { color: var(--sws); background: var(--sws-bg); }
+.tag.state { color: var(--ink); background: var(--surface-2); border-color: var(--rule); }
+.pagebar { margin: .3rem 0; }
+.counts { margin: .2rem 0 .8rem; padding-left: 1.2rem; }
+dl.states { margin: 0; }
+dl.states dt { font-weight: 600; margin-top: .5rem; }
+dl.states dd { margin: 0 0 .2rem; font-size: .95rem; }
+td input[type="checkbox"], th input[type="checkbox"] { width: 1.1rem; height: 1.1rem; }
+.tag.cat { color: var(--ink-2); background: transparent; border-color: var(--rule); font-weight: 400; }
+.catgroup h3 { font-size: 1rem; color: var(--ink-2); margin: 1.25rem 0 .3rem; }
+.two { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 2rem; }
+.two.issue { grid-template-columns: minmax(0, 3fr) minmax(0, 1fr); }
+@media (max-width: 52rem) { .two.issue { grid-template-columns: 1fr; } }
+@media (max-width: 52rem) { .two { grid-template-columns: 1fr; } .reading + .reading { border-left: 0; padding-left: 0; } .readings { grid-template-columns: 1fr 1fr; } }
+.swsnote { border-left: 4px solid var(--sws); background: var(--sws-bg); padding: .75rem 1rem; margin: 1rem 0; }
+.swsnote strong { color: var(--sws); }
+.ownernote { border-left: 4px solid var(--rule); padding: .5rem .9rem; margin: .5rem 0; background: var(--surface-2); }
+.ownernote .by { font-size: .88rem; color: var(--ink-2); }
+.panel { background: var(--surface-2); padding: 1rem 1.1rem; border-radius: 4px; }
+.panel h3 { margin-top: 0; }
+.statebox { border: 1px solid var(--rule); border-radius: 4px; padding: .9rem 1rem; margin: .5rem 0 1rem; }
+.statebox p { margin: .2rem 0 .6rem; }
+.later { display: flex; flex-wrap: wrap; gap: .4rem; align-items: center; width: 100%; }
+.tablewrap { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: .97rem; }
+th, td { text-align: left; padding: .45rem .6rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { font-weight: 600; background: var(--surface-2); }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+.placeholder { font-family: inherit; color: var(--ink-2); font-style: italic; }
+.chart svg { width: 100%; height: auto; display: block; max-width: 100%; }
+.chart .line { fill: none; stroke: var(--cardinal); stroke-width: 2.5; }
+:root[data-theme="dark"] .chart .line { stroke: #F83535; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .chart .line { stroke: #F83535; } }
+.chart .grid { stroke: var(--rule); }
+.chart .goal { stroke: var(--good); stroke-width: 1.5; stroke-dasharray: 5 4; }
+.chart text.goal-label { fill: var(--good); font-weight: 600; }
+.chart text { fill: var(--ink-2); font-size: 12px; font-family: "Source Sans 3", sans-serif; }
+.linkbtn { background: none; border: 0; padding: 0; color: var(--link); text-decoration: underline; font: inherit; cursor: pointer; }
+.ai { border: 1px dashed var(--ink-2); padding: .9rem 1rem; border-radius: 4px; }
+.ai .label { font-size: .9rem; color: var(--ink-2); }
+.email { max-width: 38rem; border: 1px solid var(--rule); border-radius: 4px; overflow: hidden; }
+.email .head { background: var(--surface-2); padding: .75rem 1rem; font-size: .95rem; }
+.email .head div { margin: .1rem 0; }
+.email .body { padding: 1.25rem 1.25rem 1.5rem; }
+.email .bar-top { height: 6px; background: var(--cardinal); }
+.runlog { list-style: none; margin: .75rem 0 0; padding: 0; }
+.runlog li { padding: .3rem 0 .3rem 1.6rem; position: relative; }
+.runlog li::before { content: ""; position: absolute; left: .3rem; top: .75rem; width: .6rem; height: .6rem; border-radius: 50%; background: var(--rule); }
+.runlog li.done::before { background: var(--good); }
+.runlog li.now::before { background: var(--sample-edge); }
+.ok { color: var(--good); font-weight: 600; }
+footer { border-top: 1px solid var(--rule); }
+footer .bar { font-size: .9rem; color: var(--ink-2); }
+@media print {
+  .identity, header.app, .sample, footer, .noprint { display: none !important; }
+  main { padding: 0; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<div class="identity"><a href="https://www.stanford.edu" class="su-logo"><svg role="img" aria-label="Stanford University" focusable="false" width="400" height="50" viewBox="0 0 400 50" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_24885_11911)"><path d="M45.9845 36.9969C39.7676 36.9969 39.2943 32.2042 39.2943 30.724C39.2943 28.993 39.7327 25.9279 43.6965 24.4465C47.7785 22.9162 48.6518 22.7378 51.4646 21.8462V21.0916C51.4646 19.7094 51.4646 19.3751 51.1913 18.5046C50.6557 16.8717 49.1 15.8251 46.9956 15.8251C44.8914 15.8251 43.1532 17.0111 42.3716 18.7287L41.2215 18.0365C41.955 15.3949 44.5558 12.7699 49.0498 12.7699C52.2463 12.7699 54.3364 13.6928 55.6089 15.6857C56.5817 17.2651 56.6638 19.461 56.6638 21.7403C56.6638 23.7554 56.6069 25.9903 56.5698 27.7959C56.5381 29.0465 56.5085 30.1142 56.5085 30.7763C56.5085 32.4182 56.7643 33.6922 58.1122 33.6922C58.6643 33.6922 58.7758 33.5417 59.2491 33.1516L59.9892 34.0177C58.7758 35.6282 57.4443 36.9579 55.2088 36.9579C53.3962 36.9579 52.1314 36.0685 51.7127 34.5883C50.6928 35.6617 48.8651 36.9969 45.9845 36.9969ZM51.4646 24.7274C48.4234 25.6615 47.3773 26.173 46.4437 26.6702C45.11 27.3389 44.4409 28.7155 44.4409 30.3338C44.4409 31.5956 44.8848 33.7189 47.8583 33.7189C48.8366 33.7189 50.2479 33.5272 51.4646 32.6355V24.7274ZM0.172725 35.7341C0.172725 33.3879 0.191308 31.3961 0 28.9908H1.35997C1.37744 30.4754 1.78524 31.5744 2.41816 32.309C3.38891 33.4246 5.6386 34.1012 7.72328 34.1012C12.0796 34.1012 14.1129 32.4182 14.1129 28.7991C14.1129 25.7005 12.2381 24.4154 9.63636 22.6264L9.23516 22.3399L6.49898 20.4752C2.68704 17.9094 0.737917 15.8463 0.737917 11.7312C0.737917 9.71599 1.49218 3.14876 11.0838 3.14876C13.5063 3.14876 16.6874 3.4107 18.6059 3.77069C18.5895 4.08832 18.5556 5.58749 18.5556 6.85257C18.5556 8.32046 18.5545 8.80531 18.6114 10.5999H17.4472C17.4121 9.02045 16.9859 8.00499 16.3146 7.32064C15.3843 6.38438 13.3455 5.94416 11.1865 5.94416C6.10326 5.94416 5.50304 8.60249 5.50304 10.5999C5.50304 13.3585 6.88484 14.287 9.89875 16.3233L13.3783 18.6618C16.3365 20.6725 19.1197 22.5707 19.1197 27.5719C19.1197 36.0384 11.3833 36.9468 8.06 36.9468C5.04172 36.9468 2.62144 36.5678 0.172725 35.7341ZM62.0368 14.3249C63.2009 14.4173 64.9523 14.2969 66.6663 13.9961C68.1093 13.7397 68.634 13.5312 69.7108 12.9773L70.1645 13.2503V15.105C71.3222 14.2368 73.6429 12.8592 76.8089 12.8592C80.9269 12.8592 83.627 14.8242 84.3922 18.3999C84.6076 19.2859 84.6928 21.4204 84.6928 22.5707V29.3842C84.6928 33.2408 84.8404 34.3129 85.5477 35.0019C85.9085 35.3251 86.7502 35.6783 87.7668 35.6783V36.7707C86.2976 36.6982 83.6784 36.5444 82.102 36.5444C80.0031 36.5444 77.6441 36.6459 76.3715 36.793V35.723C77.5051 35.6004 78.2813 35.2627 78.6803 34.8681C79.3418 34.1904 79.4565 32.8439 79.5527 29.9416C79.5822 29.0777 79.604 27.2464 79.604 25.9055C79.604 24.1645 79.604 22.35 79.4072 20.5722C79.0684 17.5472 77.5106 16.1472 74.5536 16.1472C72.4864 16.1472 71.2227 16.6265 70.2574 17.1236V29.3842C70.2574 33.2408 70.4072 34.3129 71.132 35.0019C71.4784 35.3251 72.3749 35.6862 73.3401 35.6783V36.7707C71.4435 36.6681 69.1697 36.5444 67.7103 36.5444C64.6658 36.5444 63.706 36.6068 61.9384 36.793V35.6862C62.9298 35.6729 63.8896 35.3128 64.4254 34.6897C65.1228 33.8872 65.1665 31.8943 65.1665 27.9241V21.2532C65.1665 18.363 65.1118 17.1404 64.7096 16.5127C64.3979 16.0279 63.6141 15.6434 62.0368 15.6623V14.3249ZM90.4921 35.6617C91.4246 35.6783 92.4215 35.3139 92.9791 34.673C93.6896 33.8615 93.7279 31.8943 93.7279 27.9241V16.3434H90.7435V15.0304C91.9974 14.5366 93.1015 13.9514 93.7279 13.4532C93.7334 11.3967 93.7967 8.72176 94.0722 7.26494C94.9523 2.45539 98.0645 0 103.246 0C105.534 0 107.71 0.796892 109.018 1.93939L109.093 2.42983L106.819 5.64319L106.267 5.65095C105.49 3.71499 104.328 2.60594 102.277 2.60594C101.566 2.60594 100.579 2.83329 99.97 3.44415C98.9894 4.45059 98.8166 5.94976 98.8166 8.93348V13.4443H103.927V16.3434H98.8166V29.2917C98.8166 32.3625 98.9238 33.8705 99.3141 34.4801C99.9514 35.4554 101.965 35.5725 102.954 35.5335V36.7707C101.271 36.667 98.6614 36.5444 96.7068 36.5444C93.8667 36.5444 92.0192 36.6291 90.4921 36.793V35.6617ZM116.834 37.1943C109.845 37.1943 105.669 32.7492 105.669 25.3238C105.669 19.5389 108.721 12.8101 117.315 12.8101C124.304 12.8101 128.469 17.2429 128.469 24.6828C128.469 30.4398 125.424 37.1943 116.834 37.1943ZM117.125 15.5096C115.761 15.5096 114.684 15.8663 113.87 16.5686C112.039 18.1435 111.104 20.9935 111.104 25.0707C111.104 26.6422 111.394 34.4913 117.029 34.4913C118.371 34.4913 119.467 34.1347 120.256 33.4403C122.11 31.8642 123.036 28.9997 123.036 24.9203C123.036 23.3643 122.752 15.5096 117.125 15.5096ZM130.776 14.2412C132.339 14.3315 134.019 14.1387 135.786 13.821C137.146 13.5758 138.013 13.2748 138.504 13.043L138.917 13.2503V15.2756C140.019 14.2201 141.748 13.1099 144.205 13.1099C146 13.1099 147.192 13.6226 148.195 14.5511V15.2901L146.274 18.8925H145.331C144.721 17.8035 143.577 16.7837 141.518 16.7837C140.549 16.7837 139.74 17.0256 139.013 17.5215V29.2917C139.013 32.3625 139.113 33.817 139.507 34.4278C140.144 35.4109 142.043 35.5134 143.134 35.4755V36.7707C141.56 36.6815 138.849 36.5444 136.898 36.5444C134.689 36.5444 132.503 36.5867 130.683 36.793V35.617C131.956 35.5502 132.672 35.1902 133.167 34.6228C133.879 33.8058 133.913 31.8943 133.913 27.9241V21.2521C133.913 18.363 133.895 17.1147 133.462 16.5127C133.086 15.9867 132.257 15.6768 130.776 15.6623V14.2412ZM162.995 1.35421C164.38 1.35421 166.18 1.09456 168.378 0.70216C169.624 0.482564 170.463 0.248472 170.866 0.0868569L171.261 0.319807C171.067 2.24926 171.065 6.58949 171.065 9.66577V28.701C171.065 31.5432 171.111 33.302 171.511 33.8705C171.868 34.3999 172.715 34.7566 174.147 34.7622V36.0094C172.705 36.0094 170.994 36.1989 169.226 36.4954C168.053 36.6905 167.124 36.8844 166.687 37.1274L166.062 36.9156V34.946C164.93 35.8043 162.667 37.1419 159.668 37.1419C153.383 37.1419 149.327 32.6946 149.327 25.8142C149.327 23.5215 149.761 21.3501 150.555 19.52C152.486 15.2845 156.465 12.8592 161.494 12.8592C163.331 12.8592 164.976 13.091 165.962 13.3061V8.33724C165.962 5.43147 165.921 3.88106 165.503 3.25685C165.183 2.77862 164.713 2.54465 162.995 2.41647V1.35421ZM162.199 33.7947C163.762 33.7947 164.823 33.5439 165.962 32.8506V17.2127C165.588 16.8472 164.2 15.6546 161.392 15.6546C156.932 15.6546 154.771 18.7643 154.771 25.1655C154.771 27.8516 155.561 33.7947 162.199 33.7947ZM36.992 34.4602C36.299 35.3162 34.5149 37.1195 30.7926 37.1195C27.2551 37.1195 25.2797 35.8345 24.4107 32.9498C24.0598 31.7996 24.0598 29.548 24.0598 28.1938C24.0598 24.4566 24.0969 21.4638 24.1319 18.0008L24.1472 16.3712H21.1289V15.4595C22.3545 14.9747 23.1863 14.473 23.9942 13.8455C25.7662 12.4445 26.901 10.6923 28.2576 8.23132H29.2644V13.4755H37.0413V16.3712H29.2644V28.6285C29.2644 32.2978 29.9192 34.3832 33.3124 34.3832C34.8986 34.3832 35.9459 33.8582 36.605 33.5049L36.992 34.4602ZM386.049 14.6437C385.417 14.6437 384.688 14.8521 384.196 15.2366C383.802 15.5409 383.704 16.048 383.704 16.359C383.704 16.9498 383.912 17.5304 384.319 18.6506L387.676 27.7558C388.181 29.1167 388.546 30.2447 388.787 31.0495L392.887 18.5882C393.379 17.1514 393.458 16.8137 393.458 16.2765C393.458 15.9745 393.275 15.6078 393.056 15.376C392.652 14.9747 391.957 14.7595 391.134 14.7038V13.3618C391.63 13.3618 392.704 13.4287 393.207 13.4677C393.671 13.5056 394.658 13.5758 395.434 13.5758C396.959 13.5758 399.08 13.4421 400 13.3451V14.716C399.386 14.793 397.954 14.5979 396.828 18.1379L388.055 42.0495C386.776 45.5014 385.18 49.7925 379.028 49.7925C376.582 49.7925 374.802 49.1829 373.541 47.9268V47.2769L375.702 44.5874L376.317 44.5762C376.965 46.0319 378.162 46.636 379.8 46.636C382.592 46.636 383.81 44.2006 385.732 39.0322L386.251 37.6301L378.79 18.1602C378.725 18.0231 378.626 17.7534 378.511 17.4468C378.298 16.9218 377.899 16.009 377.899 16.009C377.465 15.0839 376.626 14.6926 375.666 14.7272V13.3451C377.079 13.4677 379.503 13.5758 380.76 13.5758C381.597 13.5758 382.837 13.5122 383.938 13.4588C384.549 13.4231 385.57 13.3752 386.049 13.3618V14.6437ZM304.482 14.2256C306.039 14.3148 307.723 14.1198 309.485 13.8066C310.847 13.5625 311.715 13.2582 312.205 13.0241L312.618 13.2325V15.2611C313.722 14.2056 315.452 13.0943 317.906 13.0943C319.704 13.0943 320.893 13.606 321.896 14.5366V15.2734L319.975 18.878H319.032C318.423 17.789 317.279 16.7692 315.22 16.7692C314.251 16.7692 313.442 17.0088 312.716 17.5048V29.2772C312.716 32.349 312.817 33.8002 313.208 34.4111C313.845 35.3941 315.747 35.4978 316.838 35.461V36.7562C315.263 36.667 312.552 36.5289 310.603 36.5289C308.39 36.5289 306.205 36.5722 304.383 36.7763V35.6004C305.659 35.5357 306.373 35.1745 306.868 34.6062C307.581 33.7892 307.616 31.8776 307.616 27.9063V21.2365C307.616 18.3463 307.594 17.1002 307.163 16.4961C306.788 15.97 305.957 15.6602 304.482 15.6468V14.2256ZM201.65 37.0917C195.128 37.0917 191.387 35.0297 189.873 30.6047C189.129 28.3276 189.129 25.6526 189.129 23.303V10.7893C189.129 6.97743 188.955 6.40675 188.266 5.77912C187.963 5.51171 187.14 5.12376 186.054 5.06578V3.78176C187.602 3.94897 190.141 4.01585 191.737 4.01585C194.417 4.01585 195.842 3.94235 197.566 3.77845V5.11269C196.527 5.06806 195.681 5.36675 195.102 6.03559C194.38 6.85473 194.344 8.27926 194.344 12.2584V23.3486C194.344 29.8902 194.896 34.177 202.275 34.177C209.599 34.177 210.155 29.7676 210.155 23.0577V10.7893C210.155 6.97743 209.973 6.40675 209.291 5.77912C208.872 5.4091 207.987 5.11931 207.076 5.06578V3.79854C208.522 3.85092 210.37 4.01585 212.135 4.01585C213.83 4.01585 215.535 3.97134 217.585 3.77845V5.11269C216.503 5.06806 215.683 5.38125 215.114 6.03559C214.393 6.85816 214.352 8.27926 214.352 12.2584V21.6289C214.352 24.6126 214.352 27.991 213.42 30.6147C211.849 35.0342 208.11 37.0917 201.65 37.0917ZM245.641 35.6584C246.931 35.5146 247.705 35.3696 248.303 34.6808C249.019 33.8615 249.061 31.9645 249.061 27.9431V21.2722C249.061 18.3875 249.014 16.9676 248.602 16.3267C248.232 15.7883 247.614 15.5687 245.98 15.4595V14.1142C246.953 14.2635 249.32 14.0328 251.244 13.6505C252.235 13.4867 253.173 13.1467 253.774 12.8323L254.283 13.3506C254.141 14.8442 254.081 18.2348 254.081 22.5951V29.4144C254.081 32.4996 254.179 33.9207 254.583 34.5337C254.988 35.1656 256.026 35.5758 257.395 35.6472V36.7562C256.016 36.676 253.665 36.5399 251.615 36.5399C249.331 36.5399 246.89 36.6337 245.641 36.7796V35.6584ZM251.326 8.8198C249.538 8.8198 248.336 7.65733 248.336 5.91848C248.336 4.12405 249.574 2.91239 251.419 2.91239C253.206 2.91239 254.417 4.07714 254.417 5.81816C254.417 7.61602 253.173 8.8198 251.326 8.8198ZM343.164 35.6584C344.453 35.5146 345.227 35.3696 345.825 34.6808C346.541 33.8615 346.58 31.9645 346.58 27.9431V21.2722C346.58 18.3875 346.533 16.9676 346.121 16.3267C345.752 15.7883 345.133 15.5687 343.502 15.4595V14.1142C344.475 14.2635 346.842 14.0328 348.766 13.6505C349.758 13.4867 350.696 13.1467 351.297 12.8323L351.805 13.3506C351.663 14.8442 351.603 18.2348 351.603 22.5951V29.4144C351.603 32.4996 351.7 33.9207 352.104 34.5337C352.51 35.1656 353.549 35.5758 354.915 35.6472V36.7562C353.536 36.676 351.185 36.5399 349.138 36.5399C346.85 36.5399 344.412 36.6337 343.164 36.7796V35.6584ZM348.848 8.8198C347.057 8.8198 345.858 7.65733 345.858 5.91848C345.858 4.12405 347.094 2.91239 348.941 2.91239C350.728 2.91239 351.936 4.07714 351.936 5.81816C351.936 7.61602 350.696 8.8198 348.848 8.8198ZM324.498 35.9269C324.487 33.5183 324.361 31.0249 324.206 29.7632H325.719C325.755 31.075 326.072 32.0503 326.695 32.8216C327.616 33.953 328.712 34.3743 330.743 34.3743H331.021C333.555 34.3743 334.839 33.2875 334.839 31.1475C334.839 29.3864 333.742 28.6787 331.923 27.5106L328.652 25.4485C326.924 24.3707 324.935 22.7211 324.935 19.5223C324.935 16.7936 326.031 14.861 328.209 13.7686C329.625 13.0463 331.685 12.9349 332.784 12.9349C334.664 12.9349 337.304 13.1857 338.835 13.5201C338.725 14.1498 338.69 15.7939 338.69 16.3256C338.69 16.8116 338.723 19.0351 338.775 19.4364H337.266C337.266 18.4444 337.009 17.536 336.413 16.7524C335.861 16.0246 334.478 15.4116 332.784 15.4116C330.461 15.4116 329.28 16.4125 329.28 18.3987C329.28 20.0327 330.51 20.7962 331.603 21.465L331.716 21.5396L334.789 23.401C336.854 24.6305 339.43 26.1574 339.43 29.9215C339.43 36.074 333.943 36.9903 330.666 36.9903C328.586 36.9903 326.626 36.7205 324.498 35.9269ZM372.931 34.4055C372.24 35.266 370.455 37.0661 366.732 37.0661C363.196 37.0661 361.217 35.7843 360.354 32.8953C359.998 31.7472 359.998 29.4956 359.998 28.1414C359.998 24.402 360.036 21.4114 360.073 17.9485L360.086 16.3177H357.069V15.4071C358.295 14.9244 359.126 14.4206 359.935 13.7931C361.706 12.391 362.841 10.6389 364.196 8.17893H365.204V13.4231H372.98V16.3177H365.204V28.5783C365.204 32.2432 365.858 34.333 369.252 34.333C370.837 34.333 371.887 33.8058 372.546 33.4514L372.931 34.4055ZM268.565 13.3618C268.106 13.3618 267.07 13.4231 266.46 13.4588C265.286 13.5122 263.963 13.5758 263.116 13.5758C261.44 13.5758 258.943 13.4254 258.174 13.3451V14.7317C258.434 14.7384 259.749 14.6202 260.423 16.0982C260.694 16.6855 260.935 17.2651 261.011 17.458C261.126 17.7612 261.276 18.1379 261.337 18.2794L268.707 37.1965L270.983 36.7963L279.09 18.1992C279.142 18.0755 279.246 17.8671 279.357 17.6196C279.464 17.3877 279.576 17.0957 280.093 16.1394C280.612 15.1864 281.629 14.6994 282.468 14.7595L282.514 13.3451C281.59 13.4142 279.571 13.5758 278.076 13.5758C277.291 13.5758 276.491 13.5223 275.725 13.4677C275.181 13.4343 274.19 13.3752 273.643 13.3618V14.676C274.375 14.6603 275.225 14.9747 275.567 15.3201C275.756 15.4796 275.968 15.8997 275.968 16.2096C275.968 16.7335 275.889 17.1514 275.352 18.5615L270.932 29.7208C270.721 29.0521 270.415 28.1213 269.984 26.96L266.84 18.5748C266.377 17.3008 266.264 16.7936 266.264 16.2375C266.264 15.9132 266.33 15.6657 266.562 15.3959C266.991 14.9111 267.751 14.676 268.541 14.6715L268.565 13.3618ZM218.142 14.3249C219.304 14.4173 221.056 14.2969 222.772 13.9961C224.213 13.7397 224.738 13.5312 225.817 12.9773L226.268 13.2503V15.105C227.427 14.2368 229.746 12.8592 232.911 12.8592C237.032 12.8592 239.733 14.8242 240.495 18.3999C240.711 19.2859 240.796 21.4204 240.796 22.5707V29.3842C240.796 33.2408 240.946 34.3129 241.651 35.0019C242.014 35.3251 242.854 35.6783 243.872 35.6783V36.7707C242.4 36.6982 239.782 36.5444 238.208 36.5444C236.109 36.5444 233.747 36.6459 232.474 36.793V35.723C233.611 35.6004 234.387 35.2627 234.784 34.8681C235.447 34.1904 235.56 32.8439 235.655 29.9416C235.685 29.0777 235.71 27.2464 235.71 25.9055C235.71 24.1645 235.71 22.35 235.513 20.5722C235.171 17.5472 233.614 16.1472 230.656 16.1472C228.59 16.1472 227.325 16.6265 226.363 17.1236V29.3842C226.363 33.2408 226.511 34.3129 227.232 35.0019C227.582 35.3251 228.478 35.6862 229.446 35.6783V36.7707C227.547 36.6681 225.273 36.5444 223.813 36.5444C220.769 36.5444 219.81 36.6068 218.044 36.793V35.6862C219.033 35.6729 219.993 35.3128 220.531 34.6897C221.225 33.8872 221.269 31.8943 221.269 27.9241V21.2532C221.269 18.363 221.218 17.1404 220.815 16.5127C220.504 16.0279 219.717 15.6434 218.142 15.6623V14.3249ZM293.225 37.0416C286.327 37.0416 282.541 32.9811 282.541 25.608C282.541 24.3072 282.842 12.9349 293.328 12.9349C296.479 12.9349 299.158 14.248 300.48 16.437C301.811 18.6104 301.989 20.8519 301.989 22.7602V23.994H287.606C287.619 25.1978 287.696 26.1185 287.84 26.9432C288.613 31.4518 291.082 33.6421 295.4 33.6421C297.832 33.6421 299.376 33.1126 300.847 32.2655L301.522 33.4302C299.918 35.5591 296.793 37.0416 293.225 37.0416ZM287.661 21.4259H296.676C296.676 18.6584 296.144 15.5074 292.167 15.5074C288.483 15.5074 287.742 19.0295 287.661 21.4259Z" fill="white"/></g><defs><clipPath id="clip0_24885_11911"><rect width="400" height="49.7925" fill="white"/></clipPath></defs></svg></a></div>
+<header class="app">
+  <div class="bar">
+    <p class="brand">Website Health <small>Stanford Web Services</small></p>
+    <nav class="main" aria-label="Main">
+      <button data-nav="portfolio">My sites</button>
+      <button data-nav="email">Email preview</button>
+      <button data-nav="sws" id="nav-sws" hidden>All client sites</button>
+      <button data-nav="admin" id="nav-admin">Admin</button>
+    </nav>
+    <label class="viewas">Viewing as
+      <select id="viewas" aria-describedby="viewas-help">
+        <option value="a">Owner A (2 sites)</option>
+        <option value="b">Owner B (2 sites)</option>
+        <option value="admin">SWS administrator</option>
+      </select>
+    </label>
+  </div>
+</header>
+<div class="sample" role="note">
+  <div class="inner"><strong>Demo with sample data.</strong> Numbers and issues are illustrations, not measurements of these sites. <span id="viewas-help">Sign-in is not wired up; “Viewing as” shows how each person would see only their own sites.</span></div>
+</div>
+<main id="main" tabindex="-1"></main>
+<footer><div class="bar">WHM prototype demo, Stanford Web Services. Sample data only.</div></footer>
+
+<script>
+(function () {
+  "use strict";
+
+  // ---------- Sample data (illustration only) ----------
+  var TYPES = {
+    alt: { title: "Images are missing text descriptions", cat: "Accessibility", fixer: "owner", editorial: false,
+      what: "Some images have no alternative text, so people using screen readers don’t know what the image shows.",
+      why: "Text descriptions are required at WCAG level A. Missing ones are among the most common barriers for blind visitors.",
+      todo: "Edit each image listed below and add a short description of what it shows. Decorative images can be marked as decorative instead." },
+    linktext: { title: "Link text doesn’t say where the link goes", cat: "Accessibility", fixer: "owner", editorial: false,
+      what: "Links use wording like “click here” or “read more” that only makes sense with the text around it.",
+      why: "People who move through a page by its links hear the link text on its own.",
+      todo: "Rewrite each link so its words name the destination, for example “Read the accessibility guide.”" },
+    broken: { title: "Links lead to pages that don’t exist", cat: "Content quality", fixer: "owner", editorial: false,
+      what: "These links point to pages that return a “not found” error.",
+      why: "Broken links send visitors to a dead end and make the site look out of date.",
+      todo: "Update each link to the right address, or remove it if the page is gone for good." },
+    pdf: { title: "PDFs may not work with screen readers", cat: "Accessibility", fixer: "owner", editorial: false,
+      what: "These PDFs aren’t tagged, so their structure can’t be read by assistive technology.",
+      why: "Untagged PDFs can be unreadable for screen reader users.",
+      todo: "Replace the PDF with a web page where possible, or re-export it as a tagged PDF." },
+    contrast: { title: "Some text is too light to read easily", cat: "Accessibility", fixer: "sws", editorial: false,
+      what: "A few text styles don’t have enough contrast against their background.",
+      why: "Low contrast makes text hard to read for many visitors, especially on phones outdoors.",
+      todo: "No action needed from you. This comes from the site template, and SWS is handling it." },
+    stale: { title: "Pages not updated in over a year", cat: "Content freshness", fixer: "owner", editorial: true,
+      what: "These pages haven’t changed in more than 12 months. (In this demo the age check is simulated; the data source is still being chosen.)",
+      why: "Out-of-date content is the most common reason site owners make changes. Some pages are fine as they are, such as a page updated once a year.",
+      todo: "Check each page. Update it, or choose “They’re still correct” if it doesn’t need a change." },
+    titles: { title: "Pages share the same title", cat: "Findability", fixer: "owner", editorial: false,
+      what: "Several pages use the same page title.",
+      why: "In search results, visitors can’t tell these pages apart.",
+      todo: "Give each page a title that describes what is on it." },
+    searchdesc: { title: "Pages are missing a search description", cat: "Findability", fixer: "owner", editorial: false,
+      what: "These pages have no summary for search engines to show.",
+      why: "Without one, search engines pick text from the page, which may not help visitors decide to click.",
+      todo: "Add a one- or two-sentence summary in each page’s search description field." },
+    policy: { title: "Uses an outdated office name", cat: "Stanford standards", fixer: "owner", editorial: false,
+      what: "These pages use a name that Stanford has replaced.",
+      why: "A Stanford content policy checks for retired names so messages stay consistent across sites.",
+      todo: "Replace the old name with the current one on each page." }
+  };
+
+  var SWS_NOTES = {
+    contrast: "We confirmed this comes from a shared template style, not from your content. A fix is scheduled for the next platform release. You don’t need to do anything.",
+    alt: "If you already added alt text when uploading an image and it’s still flagged, the description may be on the media item but not on this placement. Check the image settings on the page itself."
+  };
+
+  var SITES = {
+    sitesuserguide: {
+      name: "Stanford Sites user guide", url: "sitesuserguide.stanford.edu", crawl: "Nov 10, 2026", traffic: "Siteimprove Analytics",
+      state: "attention",
+      verdict: "Needs attention: accessibility has slipped each month, and issues sit on your busiest pages.",
+      lede: "Fixing the first two items helps the most visitors. Most items are yours to fix; one is being handled by SWS.",
+      read: { a11y: [92.8, -0.6], broken: [14, 3], stale: [38, 5, 352], find: [61, -2] },
+      trend: [94.3, 94.1, 93.9, 93.6, 93.5, 93.4, 93.2, 92.8],
+      pages: [["/ (home)", 1980, 1], ["/add-a-page", 1240, 3], ["/update-a-menu", 870, 0], ["/accessibility-basics", 760, 2], ["/contact-and-support", 540, 4]],
+      issues: [
+        { k: "alt", scope: "12 images on 5 pages, up from 9.", reason: "Includes 2 of your 5 busiest pages.", pages: [["/add-a-page", 1240, 3], ["/accessibility-basics", 760, 2], ["/getting-started", 410, 3], ["/layout-tips", 220, 2], ["/media-library", 140, 2]] },
+        { k: "broken", scope: "14 broken links on 9 pages, up from 11.", reason: "3 are on the Contact and support page.", pages: [["/contact-and-support", 540, 3], ["/people-profiles", 300, 3], ["/archive/2023", 40, 8]] },
+        { k: "stale", scope: "38 of 352 pages, up 5.", reason: "Contact and support is your 5th busiest page and was last updated 14 months ago.", pages: [["/contact-and-support", 540, 1], ["/training-schedule", 190, 1], ["/release-notes-2024", 60, 1]] },
+        { k: "linktext", scope: "28 links on 11 pages, down from 30.", reason: "Mostly “click here.”", pages: [["/add-a-page", 1240, 6], ["/update-a-menu", 870, 4], ["/faq", 330, 9]] },
+        { k: "pdf", scope: "5 of your 7 PDFs.", reason: "No change since last check.", pages: [["/files/editor-checklist.pdf", 95, 1], ["/files/style-guide.pdf", 80, 1]] },
+        { k: "contrast", scope: "6 places.", reason: "Comes from the site template.", pages: [["/ (home)", 1980, 2], ["/add-a-page", 1240, 4]] }
+      ],
+      ai: "Visitors search the site most for help adding pages and fixing menus, and those pages get the most visits. The Contact and support page is the 5th most visited but has four open issues and hasn’t been updated in 14 months, so visitors looking for help may find outdated details."
+    },
+    webservices: {
+      name: "Stanford Web Services", url: "webservices.stanford.edu", crawl: "Nov 10, 2026", traffic: "Siteimprove Analytics",
+      state: "ok",
+      verdict: "In good shape, with two fixes worth making on well-visited pages.",
+      lede: "Accessibility is steady. A few new broken links appeared since the last check.",
+      read: { a11y: [96.4, 0.2], broken: [3, 1], stale: [6, 0, 48], find: [4, 0] },
+      trend: [95.8, 95.9, 96.0, 96.1, 96.0, 96.2, 96.2, 96.4],
+      pages: [["/ (home)", 2310, 0], ["/services", 1105, 1], ["/work", 980, 1], ["/why", 640, 0], ["/contact", 420, 1]],
+      issues: [
+        { k: "broken", scope: "3 broken links on 2 pages, up from 2.", reason: "One is on the Services page.", pages: [["/services", 1105, 1], ["/work", 980, 2]] },
+        { k: "searchdesc", scope: "4 of 48 pages.", reason: "Includes the Contact page.", pages: [["/contact", 420, 1], ["/work/momentum", 210, 1]] },
+        { k: "stale", scope: "6 of 48 pages.", reason: "None are among your 5 busiest pages.", pages: [["/work/archive", 80, 1], ["/news/2024-launch", 35, 1]] }
+      ],
+      ai: "Visitors arrive mostly on the home page and the Services page. Searches for “accessibility support” and “hosting” land on Services, which covers both briefly; visitors may need a clearer next step to contact SWS."
+    },
+    decanter: {
+      name: "Decanter", url: "decanter.stanford.edu", crawl: "Nov 9, 2026", traffic: "Siteimprove Analytics",
+      state: "good",
+      verdict: "In good shape. One item is being handled by SWS.",
+      lede: "No new issues since the last check. One page title is shared by two pages.",
+      read: { a11y: [98.1, 0.0], broken: [0, 0], stale: [2, 0, 61], find: [1, 0] },
+      trend: [97.6, 97.7, 97.9, 98.0, 98.0, 98.1, 98.1, 98.1],
+      pages: [["/ (home)", 1650, 0], ["/for-developers/installation", 1320, 0], ["/for-designers/figma", 610, 1], ["/about", 380, 0], ["/decanter-faq", 300, 0]],
+      issues: [
+        { k: "titles", scope: "2 pages share a title.", reason: "One is on your 3rd busiest page.", pages: [["/for-designers/figma", 610, 1], ["/for-designers/figma-kit", 90, 1]] },
+        { k: "contrast", scope: "2 places.", reason: "Comes from a shared component style.", pages: [["/examples", 150, 2]] }
+      ],
+      ai: "Most visits go to installation and Figma guidance. Searches for “v8” and “upgrade” find no dedicated page, so visitors looking for upgrade help may not find it."
+    }
+  };
+
+  var OWNERS = {
+    a: { label: "Owner A", sites: ["webservices", "decanter"] },
+    b: { label: "Owner B", sites: ["sitesuserguide", "decanter"] },
+    admin: { label: "SWS administrator", sites: ["sitesuserguide", "webservices", "decanter"], admin: true }
+  };
+  var ORDER = { attention: 0, ok: 1, good: 2 };
+
+  // Trends, GA4 engagement, site search, speed check and AI report (sample data)
+  var EXTRA = {
+    sitesuserguide: {
+      target: [98.3, -0.4], stTrend: [99.4, 99.2, 99.1, 98.9, 98.8, 98.7, 98.7, 98.3],
+      bTrend: [8, 9, 9, 10, 11, 11, 11, 14], tTrend: [10200, 9800, 9100, 11800, 12400, 13100, 12900, 11350],
+      eng: { "/ (home)": "48%", "/add-a-page": "71%", "/update-a-menu": "66%", "/accessibility-basics": "58%", "/contact-and-support": "31%" },
+      speed: [["/ (home)", 72], ["/add-a-page", 64], ["/update-a-menu", 81]],
+      search: [["add a page", 142], ["menu", 96], ["contact support", 58], ["accessibility checker", 41], ["image alt text", 33]],
+      report: { status: "Not yet reviewed by SWS", generated: "Nov 10, 2026", findings: [
+        { t: "Visitors looking for help may reach outdated contact details", ev: "“contact support” is the 3rd most common site search (58 searches). The Contact and support page has a 31% engagement rate, the lowest of the 5 most visited pages, and was last updated 14 months ago.", rec: "Update the Contact and support page, and put the current way to get help in its first paragraph." },
+        { t: "Image help is hard to find from the pages that need it", ev: "“image alt text” was searched 33 times. The Add a page guide (1,240 views) mentions images but doesn’t link to alt-text guidance.", rec: "Add a short alt-text section or link on Add a page, next to the image steps." },
+        { t: "The home page sends visitors onward without answering much itself", ev: "The home page is the top landing page, with 48% engagement. Most engaged visits continue to Add a page or Update a menu.", rec: "Link the two most-used tasks from the top of the home page." }
+      ] }
+    },
+    webservices: {
+      target: [99.6, 0.1], stTrend: [99.2, 99.3, 99.3, 99.4, 99.4, 99.5, 99.5, 99.6],
+      bTrend: [1, 1, 2, 2, 1, 2, 2, 3], tTrend: [8400, 8100, 7600, 9900, 10500, 11000, 10800, 10300],
+      eng: { "/ (home)": "52%", "/services": "61%", "/work": "57%", "/why": "63%", "/contact": "44%" },
+      speed: [["/ (home)", 88], ["/services", 85], ["/work", 79]],
+      search: [["accessibility support", 37], ["hosting", 29], ["drupal", 22], ["pricing", 18], ["contact", 12]],
+      report: { status: "Not yet reviewed by SWS", generated: "Nov 10, 2026", findings: [
+        { t: "Accessibility and hosting questions land on a general page", ev: "“accessibility support” (37) and “hosting” (29) are the top site searches. Both lead to Services, which covers each in a short paragraph.", rec: "Give each its own section on Services, with a clear next step such as a contact link." },
+        { t: "Pricing questions have no direct answer", ev: "“pricing” was searched 18 times. None of the 10 most visited pages explain cost or how quotes work.", rec: "Add a short explanation of how SWS scopes and prices work, or where to ask." }
+      ] }
+    },
+    decanter: {
+      target: [100, 0], stTrend: [99.8, 99.9, 100, 100, 100, 100, 100, 100],
+      bTrend: [0, 0, 1, 0, 0, 0, 0, 0], tTrend: [6900, 7100, 6400, 8800, 9300, 9700, 9400, 9100],
+      eng: { "/ (home)": "55%", "/for-developers/installation": "74%", "/for-designers/figma": "62%", "/about": "49%", "/decanter-faq": "58%" },
+      speed: [["/ (home)", 91], ["/for-developers/installation", 89], ["/for-designers/figma", 86]],
+      search: [["v8", 44], ["upgrade", 31], ["tailwind", 27], ["figma", 19], ["colors", 15]],
+      report: { status: "Not yet reviewed by SWS", generated: "Nov 9, 2026", findings: [
+        { t: "Upgrade help is the most searched topic without a page", ev: "“v8” (44) and “upgrade” (31) are the top two site searches. None of the 10 most visited pages cover upgrading.", rec: "Add an upgrade page, or a clearly labeled section on the installation page." },
+        { t: "Installation guidance is working", ev: "The installation page has 74% engagement, the highest on the site, and is the 2nd most visited page.", rec: "No change needed. Linking to it from the FAQ would help visitors who start there." }
+      ] }
+    }
+  };
+  Object.keys(EXTRA).forEach(function (k) { Object.assign(SITES[k], EXTRA[k]); });
+
+  // Full sample page lists, so per-page progress matches each issue's page count.
+  // For content freshness, the third value is months since the page was last updated.
+  var PAGE_LISTS = {
+    sitesuserguide: {
+      stale: [["/contact-and-support", 540, 14], ["/training-schedule", 190, 13], ["/getting-started/request-a-site", 180, 15], ["/getting-started/site-owner-roles", 150, 16], ["/layout-tips/columns", 120, 13], ["/layout-tips/spacing", 110, 18], ["/media-library/upload-files", 105, 14], ["/media-library/image-sizes", 98, 20], ["/menus/secondary-menu", 92, 13], ["/menus/footer-links", 88, 17], ["/people/profile-fields", 80, 22], ["/people/import-profiles", 74, 15], ["/news/news-listing", 70, 13], ["/news/tags", 66, 19], ["/release-notes-2024", 60, 23], ["/events/event-series", 61, 14], ["/events/calendar-feed", 58, 25], ["/forms/webforms", 55, 13], ["/forms/spam-protection", 51, 16], ["/accessibility/headings", 49, 18], ["/accessibility/link-text", 47, 14], ["/accessibility/color-contrast", 45, 21], ["/seo/search-descriptions", 42, 13], ["/seo/page-titles", 40, 15], ["/analytics/google-analytics", 38, 27], ["/analytics/siteimprove", 36, 14], ["/policies/site-retirement", 33, 30], ["/policies/content-ownership", 31, 19], ["/policies/accessibility-statement", 29, 13], ["/archive/2023/launch-notes", 24, 24], ["/archive/2023/survey", 21, 26], ["/archive/2022/training", 18, 34], ["/archive/2022/office-hours", 15, 35], ["/faq/billing", 14, 17], ["/faq/domains", 12, 13], ["/faq/hosting", 11, 20], ["/help/office-hours", 9, 15], ["/help/workshops", 7, 28]],
+      broken: [["/contact-and-support", 540, 3], ["/people-profiles", 300, 2], ["/getting-started", 410, 1], ["/faq", 330, 1], ["/training-schedule", 190, 1], ["/events/calendar-feed", 58, 2], ["/news/tags", 66, 1], ["/policies/site-retirement", 33, 1], ["/archive/2023", 40, 2]],
+      linktext: [["/add-a-page", 1240, 6], ["/update-a-menu", 870, 4], ["/accessibility-basics", 760, 2], ["/contact-and-support", 540, 1], ["/getting-started", 410, 3], ["/faq", 330, 5], ["/people-profiles", 300, 1], ["/layout-tips", 220, 2], ["/media-library", 140, 2], ["/news/news-listing", 70, 1], ["/events/event-series", 61, 1]],
+      pdf: [["/files/editor-checklist.pdf", 95, 1], ["/files/style-guide.pdf", 80, 1], ["/files/training-handout.pdf", 40, 1], ["/files/accessibility-checklist.pdf", 32, 1], ["/files/launch-checklist.pdf", 18, 1]]
+    },
+    webservices: {
+      searchdesc: [["/contact", 420, 1], ["/work/momentum", 210, 1], ["/services/hosting", 180, 1], ["/news", 95, 1]],
+      stale: [["/work/archive", 80, 16], ["/news/2024-launch", 35, 19], ["/work/2023-case-study", 30, 22], ["/news/2023-roundup", 22, 23], ["/about/history", 18, 31], ["/work/legacy-sites", 12, 27]]
+    }
+  };
+  Object.keys(PAGE_LISTS).forEach(function (sid) { SITES[sid].issues.forEach(function (it) { if (PAGE_LISTS[sid][it.k]) it.pages = PAGE_LISTS[sid][it.k]; }); });
+
+  // ---------- State ----------
+  var store = { issues: {}, notes: {}, pages: {} };
+  try { var saved = localStorage.getItem("whm-demo-v1"); if (saved) store = JSON.parse(saved) || store; } catch (e) {}
+  store.issues = store.issues || {}; store.notes = store.notes || {}; store.pages = store.pages || {};
+  function save() { try { localStorage.setItem("whm-demo-v1", JSON.stringify(store)); } catch (e) {} }
+
+  var view = { name: "portfolio", site: null, issue: null, mode: "prioritized", table: false, emailSite: null, metric: "target" };
+  var viewer = "a";
+  var runs = {};     // site -> last run time text
+  var running = false;
+
+  var main = document.getElementById("main");
+  var sel = document.getElementById("viewas");
+
+  function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
+  function fmt(n) { return Number(n).toLocaleString("en-US"); }
+  function key(site, k) { return site + ":" + k; }
+  function pkey(site, k, path) { return site + ":" + k + ":" + path; }
+  function progress(site, it) {
+    var c = { todo: 0, addressed: 0, keep: 0, later: 0, total: it.pages.length };
+    it.pages.forEach(function (p) { var st = store.pages[pkey(site, it.k, p[0])]; c[st ? st.state : "todo"]++; });
+    c.marked = c.total - c.todo;
+    return c;
+  }
+  function pageStatus(st) {
+    if (!st) return "To do";
+    if (st.state === "addressed") return "Waiting for next check";
+    if (st.state === "keep") return "Still correct";
+    return "Set aside" + (st.date ? " until " + st.date : "");
+  }
+  function today() { return new Date().toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }); }
+  function changeText(d, unit, lowerIsBetter) {
+    if (!d) return '<span class="change">No change since last check</span>';
+    var up = d > 0, worse = lowerIsBetter ? up : !up;
+    return '<span class="change ' + (worse ? "worse" : "better") + '">' + (up ? "Up " : "Down ") + Math.abs(d) + (unit || "") + " since last check</span>";
+  }
+  function stateLabel(st) {
+    if (!st) return "";
+    if (st.state === "addressed") return "Waiting for next check";
+    if (st.state === "keep") return "Still correct";
+    if (st.state === "later") return "Set aside" + (st.date ? " until " + st.date : "");
+    return "";
+  }
+
+  // ---------- Views ----------
+  function readings(s, compact) {
+    var r = s.read;
+    return '<div class="readings">' +
+      '<div class="reading"><span class="label">Site Target Score, goal 100</span><span class="value">' + s.target[0] + '</span>' + changeText(s.target[1], "", false) + '</div>' +
+      '<div class="reading"><span class="label">Accessibility score, out of 100</span><span class="value">' + r.a11y[0] + '</span>' + changeText(r.a11y[1], "", false) + '</div>' +
+      '<div class="reading"><span class="label">Broken links</span><span class="value">' + r.broken[0] + '</span>' + changeText(r.broken[1], "", true) + '</div>' +
+      '<div class="reading"><span class="label">Pages not updated in a year</span><span class="value">' + r.stale[0] + '</span><span class="change">of ' + r.stale[2] + ' pages (simulated check)</span></div>' +
+      '<div class="reading"><span class="label">Pages missing a search description</span><span class="value">' + r.find[0] + '</span>' + changeText(r.find[1], "", true) + '</div>' +
+      '</div>';
+  }
+
+  function vPortfolio() {
+    var ids = OWNERS[viewer].sites.slice().sort(function (x, y) { return ORDER[SITES[x].state] - ORDER[SITES[y].state]; });
+    var need = ids.filter(function (id) { return SITES[id].state === "attention"; }).length;
+    var head = need === 0 ? "All of your sites are in good shape this week." :
+      (need === 1 ? "One of your " + ids.length + " sites needs attention this week." : need + " of your sites need attention this week.");
+    var h = '<h1>Your sites</h1><p class="verdict">' + esc(head) + '</p>' +
+      '<p class="meta">Sites are listed with the one that needs the most attention first. Each line comes from that site’s latest Siteimprove check.</p><ul class="sites">';
+    ids.forEach(function (id) {
+      var s = SITES[id], r = s.read;
+      var open = s.issues.filter(function (i) { return TYPES[i.k].fixer === "owner" && progress(id, i).todo > 0; }).length;
+      h += '<li><div><h2>' + esc(s.name) + '</h2><span class="url">' + esc(s.url) + '</span>' +
+        '<p class="say">' + esc(s.verdict) + '</p><ul class="facts">' +
+        '<li>Site Target Score ' + s.target[0] + '</li><li>Accessibility ' + r.a11y[0] + '</li><li>' + r.broken[0] + ' broken links</li><li>' + open + ' item' + (open === 1 ? "" : "s") + ' for you to review</li><li>Checked ' + esc(s.crawl) + '</li></ul></div>' +
+        '<div><button class="btn" data-go-site="' + id + '">Open ' + esc(s.name) + '</button></div></li>';
+    });
+    return h + '</ul>';
+  }
+
+  function issueRow(siteId, it, n) {
+    var t = TYPES[it.k], c = progress(siteId, it);
+    var tags = '<span class="tag cat">' + esc(t.cat) + '</span>' + (t.fixer === "sws" ? '<span class="tag sws">SWS is handling this</span>' : '<span class="tag you">You can fix this</span>') +
+      (t.fixer === "owner" && c.marked ? '<span class="tag state">' + c.marked + ' of ' + c.total + ' pages marked</span>' : "");
+    return '<li><button class="row" data-go-issue="' + it.k + '">' +
+      (n ? '<span class="rank" aria-hidden="true">' + n + '</span>' : "") +
+      '<span><span class="t">' + (n ? '<span class="visually-hidden" style="position:absolute;left:-999px">Priority ' + n + ': </span>' : "") + esc(t.title) + '</span><span class="s">' + esc(it.scope) + " " + esc(it.reason) + '</span></span>' +
+      '<span class="tags">' + tags + '</span></button></li>';
+  }
+
+  var METRICS = {
+    target: { label: "Site Target Score", unit: "", key: "stTrend", src: "Siteimprove" },
+    a11y: { label: "Accessibility score", unit: "", key: "trend", src: "Siteimprove" },
+    broken: { label: "Broken links", unit: "", key: "bTrend", src: "Siteimprove" },
+    traffic: { label: "Page views per month", unit: "", key: "tTrend", src: "Google Analytics 4" }
+  };
+  function chart(s) {
+    var M = METRICS[view.metric], d = s[M.key], months = ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov"];
+    var pad = view.metric === "traffic" ? 1000 : 1;
+    var lo = Math.max(0, Math.floor(Math.min.apply(null, d) - pad)), hi = Math.ceil(Math.max.apply(null, d) + pad);
+    if (view.metric === "target" || view.metric === "a11y") hi = Math.min(hi, 100);
+    var seg = '<div class="segmented" role="group" aria-label="Which trend to show">' + Object.keys(METRICS).map(function (m) { return '<button aria-pressed="' + (view.metric === m) + '" data-metric="' + m + '">' + METRICS[m].label + '</button>'; }).join("") + '</div>';
+    var W = 640, H = 200, L = 58, R = 16, T = 16, B = 30;
+    function X(i) { return L + i * (W - L - R) / (d.length - 1); }
+    function Y(v) { return T + (hi - v) * (H - T - B) / (hi - lo); }
+    var g = "", ticks = [lo, Math.round((lo + hi) / 2 * 10) / 10, hi];
+    ticks.forEach(function (v) { g += '<line class="grid" x1="' + L + '" x2="' + (W - R) + '" y1="' + Y(v) + '" y2="' + Y(v) + '"/><text x="' + (L - 6) + '" y="' + (Y(v) + 4) + '" text-anchor="end">' + fmt(v) + '</text>'; });
+    months.forEach(function (m, i) { g += '<text x="' + X(i) + '" y="' + (H - 8) + '" text-anchor="middle">' + m + '</text>'; });
+    var pts = d.map(function (v, i) { return X(i) + "," + Y(v); }).join(" ");
+    var first = d[0], last = d.at(-1);
+    var summary = M.label + " went from " + fmt(first) + " in April to " + fmt(last) + " in November. Source: " + M.src + ".";
+    var h = seg + '<div class="chart"><svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="' + esc(summary) + '">' + g +
+      '<polyline class="line" points="' + pts + '"/>' + (view.metric === "target" ? '<line class="goal" x1="' + L + '" x2="' + (W - R) + '" y1="' + Y(100) + '" y2="' + Y(100) + '"/><text class="goal-label" x="' + (W - R) + '" y="' + (Y(100) + 16) + '" text-anchor="end">Goal: 100</text>' : '') + '</svg></div><p class="meta" style="margin:.4rem 0 .4rem">' + esc(summary) + ' <button class="linkbtn" data-toggle-table>' + (view.table ? "Hide the numbers" : "Show the numbers as a table") + '</button></p>';
+    if (view.table) {
+      h += '<div class="tablewrap"><table><caption class="visually-hidden" style="position:absolute;left:-999px">' + esc(M.label) + ' by month</caption><thead><tr><th>Month</th><th class="num">' + esc(M.label) + '</th></tr></thead><tbody>' +
+        d.map(function (v, i) { return '<tr><td>' + months[i] + '</td><td class="num">' + fmt(v) + '</td></tr>'; }).join("") + '</tbody></table></div>';
+    }
+    return h;
+  }
+
+  function vSite() {
+    var id = view.site, s = SITES[id];
+    var owner = s.issues.filter(function (i) { return TYPES[i.k].fixer === "owner"; });
+    var sws = s.issues.filter(function (i) { return TYPES[i.k].fixer === "sws"; });
+    var h = '<p class="crumbs"><button data-nav="portfolio">Your sites</button> / ' + esc(s.name) + '</p>' +
+      '<h1>' + esc(s.name) + ', ' + esc(s.url) + '</h1><p class="verdict">' + esc(s.verdict) + '</p><p class="lede">' + esc(s.lede) + '</p>' +
+      '<p class="meta">Siteimprove check of ' + esc(s.crawl) + '. Traffic, engagement and searches from Google Analytics 4. Sample data.</p>' +
+      readings(s) +
+      '<div class="actions noprint"><button class="btn secondary" data-share>Share a summary</button><button class="btn secondary" data-email="' + id + '">Preview the email</button></div>' +
+      '<h2 id="fix-heading">What to fix</h2>' +
+      '<div class="segmented" role="group" aria-label="How to show the list"><button aria-pressed="' + (view.mode === "prioritized") + '" data-mode="prioritized">Prioritized for me</button><button aria-pressed="' + (view.mode === "plain") + '" data-mode="plain">Show everything plainly</button></div>';
+    if (view.mode === "prioritized") {
+      h += '<p class="meta">Ordered by how many visitors each issue affects and whether you can fix it yourself.</p><ol class="fixlist">' +
+        owner.map(function (it, i) { return issueRow(id, it, i + 1); }).join("") + '</ol>';
+    } else {
+      var cats = {};
+      s.issues.forEach(function (it) { var c = TYPES[it.k].cat; (cats[c] = cats[c] || []).push(it); });
+      h += '<p class="meta">All findings, grouped by category, with no ranking.</p>';
+      Object.keys(cats).sort().forEach(function (c) {
+        h += '<div class="catgroup"><h3>' + esc(c) + '</h3><ul class="fixlist plain">' + cats[c].map(function (it) { return issueRow(id, it, 0); }).join("") + '</ul></div>';
+      });
+    }
+    if (view.mode === "prioritized" && sws.length) {
+      h += '<h3>Being handled by SWS</h3><ul class="fixlist plain">' + sws.map(function (it) { return issueRow(id, it, 0); }).join("") + '</ul>';
+    }
+    var r = s.report;
+    h += '<h2>Is it getting better or worse?</h2>' + chart(s) +
+      '<h2>Most visited pages</h2><div class="tablewrap"><table><thead><tr><th>Page</th><th class="num">Page views, last 30 days</th><th class="num">Engagement rate</th><th class="num">Open issues</th></tr></thead><tbody>' +
+      s.pages.map(function (p) { return '<tr><td>' + esc(p[0]) + '</td><td class="num">' + fmt(p[1]) + '</td><td class="num">' + esc(s.eng[p[0]] || "") + '</td><td class="num">' + p[2] + '</td></tr>'; }).join("") +
+      '</tbody></table></div><p class="meta">Engagement rate is the share of visits that lasted over 10 seconds, viewed 2 or more pages, or completed a key event (Google Analytics 4).</p>' +
+      '<h2>Does the content meet visitor needs?</h2><div class="ai"><p class="label">AI-generated report, sample. ' + esc(r.status) + '. Generated ' + esc(r.generated) + '.</p>' +
+      '<p style="margin:0 0 .6rem"><strong>' + esc(r.findings[0].t) + '.</strong> ' + esc(r.findings[0].rec) + '</p>' +
+      '<button class="btn secondary" data-report="' + id + '">Read the full report (' + r.findings.length + ' findings)</button></div>' +
+      '<h2>What visitors search for</h2><div class="tablewrap"><table><thead><tr><th>Search term</th><th class="num">Searches, last 30 days</th></tr></thead><tbody>' +
+      s.search.map(function (q) { return '<tr><td>' + esc(q[0]) + '</td><td class="num">' + fmt(q[1]) + '</td></tr>'; }).join("") + '</tbody></table></div>' +
+      '<h2>Speed check</h2><p class="meta">PageSpeed Insights performance score for the 3 most visited pages, out of 100. Higher is better.</p><div class="tablewrap"><table><thead><tr><th>Page</th><th class="num">Score</th></tr></thead><tbody>' +
+      s.speed.map(function (p) { return '<tr><td>' + esc(p[0]) + '</td><td class="num">' + p[1] + '</td></tr>'; }).join("") + '</tbody></table></div>';
+    return h;
+  }
+
+  function vReport() {
+    var id = view.site, s = SITES[id], r = s.report;
+    return '<p class="crumbs"><button data-nav="portfolio">Your sites</button> / <button data-go-site="' + id + '">' + esc(s.name) + '</button> / Content report</p>' +
+      '<h1>Content report for ' + esc(s.url) + '</h1><p class="verdict">Does the content meet visitor needs?</p>' +
+      '<div class="swsnote" style="border-left-color:var(--sample-edge);background:var(--sample-bg)"><strong style="color:var(--ink)">AI-generated sample report. ' + esc(r.status) + '.</strong><p style="margin:.3rem 0 0">In the prototype, the data run uses the Claude API to generate this report from the text of the site’s 10 most visited public pages and its Google Analytics 4 page views, landing pages, engagement and site searches. Each finding names the page and number behind it, so SWS can check it.</p></div>' +
+      '<p class="meta">Generated ' + esc(r.generated) + '. Sample data.</p>' +
+      r.findings.map(function (f, i) { return '<h2>' + (i + 1) + '. ' + esc(f.t) + '</h2><h3>What the data shows</h3><p>' + esc(f.ev) + '</p><h3>Recommended change</h3><p>' + esc(f.rec) + '</p>'; }).join("") +
+      '<div class="actions"><button class="btn secondary" data-go-site="' + id + '">Back to ' + esc(s.name) + '</button></div>';
+  }
+
+  function vSws() {
+    if (!OWNERS[viewer].admin) return '<h1>All client sites</h1><p class="verdict">Only SWS staff can see this page.</p>';
+    var ids = Object.keys(SITES).sort(function (x, y) { return ORDER[SITES[x].state] - ORDER[SITES[y].state]; });
+    var rows = ids.map(function (id) {
+      var s = SITES[id];
+      var who = Object.keys(OWNERS).filter(function (o) { return !OWNERS[o].admin && OWNERS[o].sites.indexOf(id) > -1; }).map(function (o) { return OWNERS[o].label; }).join(", ");
+      var open = s.issues.filter(function (i) { return TYPES[i.k].fixer === "owner" && progress(id, i).todo > 0; }).length;
+      return '<tr><td><button class="linkbtn" data-go-site="' + id + '">' + esc(s.name) + '</button><br><span class="meta">' + esc(s.url) + '</span></td><td>' + esc(s.verdict) + '</td><td class="num">' + s.target[0] + '</td><td class="num">' + open + '</td><td>' + esc(who) + '</td><td>' + (runs[id] ? "Today, " + esc(runs[id]) : esc(s.crawl)) + '</td><td><button class="btn secondary" data-email="' + id + '">Preview owner email</button></td></tr>';
+    }).join("");
+    return '<h1>All client sites</h1><p class="verdict">' + ids.filter(function (id) { return SITES[id].state === "attention"; }).length + ' of ' + ids.length + ' client sites need attention.</p>' +
+      '<p class="lede">Sites are listed with the one that needs the most attention first, so SWS can contact owners before problems grow.</p>' +
+      '<div class="tablewrap"><table><thead><tr><th>Site</th><th>Verdict</th><th class="num">Site Target Score</th><th class="num">Open owner items</th><th>Owners</th><th>Latest data</th><th>Contact</th></tr></thead><tbody>' + rows + '</tbody></table></div>';
+  }
+
+  function vIssue() {
+    var id = view.site, s = SITES[id], it = s.issues.filter(function (x) { return x.k === view.issue; })[0], t = TYPES[it.k];
+    var k = key(id, it.k), notes = store.notes[k] || [], c = progress(id, it), owner = t.fixer === "owner";
+    var flt = view.pfilter || "all", flash = view.flash || ""; view.flash = "";
+    var third = it.k === "stale" ? "Last updated" : "Times found";
+    var h = '<p class="crumbs"><button data-nav="portfolio">Your sites</button> / <button data-go-site="' + id + '">' + esc(s.name) + '</button> / ' + esc(t.title) + '</p>' +
+      '<h1>' + esc(t.cat) + '</h1><p class="verdict">' + esc(t.title) + '</p><p class="lede">' + esc(it.scope) + ' ' + esc(it.reason) + '</p>' +
+      '<p class="meta">Siteimprove check of ' + esc(s.crawl) + '. Page views from Google Analytics 4. Sample data.</p>' +
+      '<p>' + (owner ? '<span class="tag you">You can fix this</span>' : '<span class="tag sws">SWS is handling this</span>') + '</p>' +
+      '<div class="two issue"><div>' +
+      '<h3>What it is</h3><p>' + esc(t.what) + '</p><h3>Why it matters</h3><p>' + esc(t.why) + '</p><h3>What to do</h3><p>' + esc(t.todo) + '</p>';
+    if (SWS_NOTES[it.k]) h += '<div class="swsnote"><strong>Note from the SWS accessibility specialist</strong><p style="margin:.3rem 0 0">' + esc(SWS_NOTES[it.k]) + '</p></div>';
+    h += '<h3>Where it is</h3>';
+    var rows = it.pages.filter(function (p) {
+      if (flt === "all") return true;
+      var st = store.pages[pkey(id, it.k, p[0])];
+      return (st ? st.state : "todo") === flt;
+    });
+    if (owner) {
+      var opts = [["all", "All pages (" + c.total + ")"], ["todo", "To do (" + c.todo + ")"], ["addressed", "Waiting for next check (" + c.addressed + ")"]];
+      if (t.editorial) opts.push(["keep", "Still correct (" + c.keep + ")"], ["later", "Set aside (" + c.later + ")"]);
+      h += '<p class="meta" style="margin:0 0 .5rem">Select pages in the table, then choose what you did.</p>' +
+        '<div class="pagebar"><label>Show <select data-pfilter>' + opts.map(function (o) { return '<option value="' + o[0] + '"' + (o[0] === flt ? " selected" : "") + '>' + esc(o[1]) + '</option>'; }).join("") + '</select></label></div>' +
+        '<div class="actions pagebar" role="group" aria-label="Mark the selected pages">' +
+        '<button class="btn" data-set="addressed">' + (t.editorial ? 'I updated these pages' : 'I fixed these pages') + '</button>';
+      if (t.editorial) h += '<button class="btn secondary" data-set="keep">They\u2019re still correct</button>' +
+        '<span class="later"><label for="later-date" class="meta" style="margin:0">Revisit by</label><input type="date" id="later-date"><button class="btn secondary" data-set="later">Set aside</button></span>';
+      h += '<button class="btn secondary" data-set="open">Move back to To do</button></div>' +
+        '<p id="sel-msg" class="meta" aria-live="polite" style="min-height:1.4em;margin:.2rem 0 .4rem">' + esc(flash) + '</p>';
+    }
+    h += '<div class="tablewrap"><table><thead><tr>' + (owner ? '<th style="width:2.5rem"><input type="checkbox" data-select-all aria-label="Select all pages shown"></th>' : '') +
+      '<th>Page</th><th class="num">Page views, last 30 days</th><th class="num">' + third + '</th>' + (owner ? '<th>Status</th>' : '') + '</tr></thead><tbody>';
+    if (!rows.length) h += '<tr><td colspan="' + (owner ? 5 : 3) + '">No pages with this status.</td></tr>';
+    rows.forEach(function (p) {
+      var st = store.pages[pkey(id, it.k, p[0])];
+      var cell3 = it.k === "stale" ? p[2] + " months ago" : p[2];
+      h += '<tr>' + (owner ? '<td><input type="checkbox" data-page="' + esc(p[0]) + '" aria-label="Select ' + esc(p[0]) + '"></td>' : '') +
+        '<td>' + esc(p[0]) + '</td><td class="num">' + fmt(p[1]) + '</td><td class="num">' + cell3 + '</td>' +
+        (owner ? '<td>' + esc(pageStatus(st)) + (st && st.state !== "later" ? '<br><span class="meta">Marked ' + esc(st.date) + '</span>' : '') + '</td>' : '') + '</tr>';
+    });
+    h += '</tbody></table></div><p><a href="#" data-si aria-describedby="si-note">Open this issue in Siteimprove</a> <span id="si-note" class="meta">(goes straight to the issue in the live version)</span></p></div>';
+    // progress panel
+    h += '<div><div class="panel">';
+    if (!owner) {
+      h += '<h3>Your progress</h3><p>Nothing for you to do. This item stays in the \u201cBeing handled by SWS\u201d list until the fix ships.</p>';
+    } else {
+      h += '<h3>Your progress</h3><p><strong>' + c.marked + ' of ' + c.total + ' pages marked.</strong></p><ul class="counts">' +
+        '<li>To do: ' + c.todo + '</li><li>Waiting for next check: ' + c.addressed + '</li>' +
+        (t.editorial ? '<li>Still correct: ' + c.keep + '</li><li>Set aside: ' + c.later + '</li>' : '') + '</ul>' +
+        '<h3>What each status means</h3><dl class="states">';
+      if (t.editorial) {
+        h += '<dt>To do</dt><dd>The page hasn\u2019t been updated in over a year, and you haven\u2019t reviewed it yet.</dd>' +
+          '<dt>Waiting for next check</dt><dd>You updated the page. Siteimprove\u2019s next check picks up the new date and the page leaves this list. If it still looks over a year old, it goes back to To do.</dd>' +
+          '<dt>Still correct</dt><dd>You reviewed the page, and it doesn\u2019t need an update right now.</dd>' +
+          '<dt>Set aside</dt><dd>You\u2019ll decide later. The revisit date reminds you when to come back to it.</dd>';
+      } else {
+        h += '<dt>To do</dt><dd>The problem is still on this page.</dd>' +
+          '<dt>Waiting for next check</dt><dd>You fixed it. Siteimprove\u2019s next check confirms it. If the problem is gone, the page leaves this list. If it\u2019s still found, the page goes back to To do.</dd>';
+      }
+      h += '</dl>';
+      if (!t.editorial) h += '<p class="meta" style="margin:.4rem 0 0">Accessibility problems, broken links and Stanford standards can\u2019t be set aside. Setting aside is only for content choices, like whether an older page is still correct.</p>';
+    }
+    h += '<h3>Notes</h3><p class="meta" style="margin:0 0 .4rem">Notes are visible to every owner of this site. They aren\u2019t sent to SWS.</p>' +
+      notes.map(function (n) { return '<div class="ownernote"><div class="by">' + esc(n.by) + ', ' + esc(n.at) + '</div><div>' + esc(n.text) + '</div></div>'; }).join("") +
+      '<label for="note" class="visually-hidden" style="position:absolute;left:-999px">Add a note</label><textarea id="note" rows="3" style="width:100%" placeholder="Add a note for this site\u2019s owners"></textarea>' +
+      '<div class="actions" style="margin:.5rem 0 0"><button class="btn secondary" data-note>Save note</button></div></div></div></div>';
+    return h;
+  }
+
+  function vShare() {
+    var id = view.site, s = SITES[id], owner = s.issues.filter(function (i) { return TYPES[i.k].fixer === "owner"; });
+    return '<p class="crumbs noprint"><button data-go-site="' + id + '">Back to ' + esc(s.name) + '</button></p>' +
+      '<h1>Website health summary for ' + esc(s.url) + ', ' + today() + '</h1><p class="verdict">' + esc(s.verdict) + '</p><p class="lede">' + esc(s.lede) + '</p>' + readings(s) +
+      '<h2>Recommended changes, in order</h2><ol>' + owner.map(function (it) { var t = TYPES[it.k]; return '<li><strong>' + esc(t.title) + '.</strong> ' + esc(it.scope) + ' ' + esc(t.why) + '</li>'; }).join("") + '</ol>' +
+      '<p class="meta">Source: Siteimprove check of ' + esc(s.crawl) + '. Owner notes are not included. Sample data.</p>' +
+      '<div class="actions noprint"><button class="btn" data-print>Print or save as PDF</button></div>';
+  }
+
+  function vEmail() {
+    var ids = OWNERS[viewer].sites;
+    var id = view.emailSite && ids.indexOf(view.emailSite) > -1 ? view.emailSite : ids[0];
+    var s = SITES[id], owner = s.issues.filter(function (i) { return TYPES[i.k].fixer === "owner"; }).slice(0, 3);
+    var opts = ids.map(function (x) { return '<option value="' + x + '"' + (x === id ? " selected" : "") + '>' + esc(SITES[x].url) + '</option>'; }).join("");
+    return '<h1>Email preview</h1><p class="verdict">This is the monthly summary an owner receives.</p>' +
+      '<p class="meta">A static view. The prototype doesn’t send email. <label>Site <select data-email-pick>' + opts + '</select></label></p>' +
+      '<div class="email" role="region" aria-label="Email preview"><div class="bar-top"></div><div class="head">' +
+      '<div><strong>From:</strong> Stanford Web Services, Website Health</div><div><strong>Subject:</strong> ' + esc(s.url) + ': ' + esc(s.state === "attention" ? "needs attention this month" : "in good shape this month") + '</div></div>' +
+      '<div class="body"><p class="verdict" style="font-size:1.5rem">' + esc(s.verdict) + '</p><p>' + esc(s.lede) + '</p>' +
+      '<p><strong>Site Target Score:</strong> ' + s.target[0] + ' (goal: 100). <strong>Accessibility:</strong> ' + s.read.a11y[0] + ' out of 100. <strong>Broken links:</strong> ' + s.read.broken[0] + '.</p>' +
+      '<p><strong>Start with these:</strong></p><ol>' + owner.map(function (it) { return '<li>' + esc(TYPES[it.k].title) + '. ' + esc(it.reason) + '</li>'; }).join("") + '</ol>' +
+      '<p><button class="btn" data-go-site="' + id + '">Open your dashboard</button></p>' +
+      '<p class="meta" style="margin:0">Data from the Siteimprove check of ' + esc(s.crawl) + '. Change how often you get this email in your dashboard settings.</p></div></div>';
+  }
+
+  function vAdmin() {
+    if (!OWNERS[viewer].admin) {
+      return '<h1>Admin</h1><p class="verdict">Only SWS administrators can see this page.</p><p>Switch “Viewing as” to SWS administrator to see the registry and start a data run.</p>';
+    }
+    var rows = Object.keys(SITES).map(function (id) {
+      var s = SITES[id];
+      var who = Object.keys(OWNERS).filter(function (o) { return !OWNERS[o].admin && OWNERS[o].sites.indexOf(id) > -1; }).map(function (o) { return OWNERS[o].label; }).join(", ");
+      return '<tr><td>' + esc(s.name) + '</td><td>' + esc(s.url) + '</td><td class="placeholder">[Siteimprove site ID]</td><td class="placeholder">[GA4 property ID, optional]</td><td>' + esc(who) + '</td><td>' + (runs[id] ? '<span class="ok">Complete</span>, ' + esc(runs[id]) : "Not run in this session") + '</td></tr>';
+    }).join("");
+    var opts = '<option value="all">All sites</option>' + Object.keys(SITES).map(function (id) { return '<option value="' + id + '">' + esc(SITES[id].url) + '</option>'; }).join("");
+    return '<h1>Admin</h1><p class="verdict">Register sites, start a data run, and check that it finished.</p>' +
+      '<p class="lede">In the prototype, this registry is a file in the repo, and “Start data run” opens the GitHub Actions workflow, where an SWS staff member with repo access starts it. Here the run is simulated.</p>' +
+      '<h2>Data run</h2><div class="actions"><label>Sites to refresh <select id="run-site">' + opts + '</select></label>' +
+      '<button class="btn" id="run-btn"' + (running ? " disabled" : "") + '>Start data run</button></div>' +
+      '<div id="run-status" aria-live="polite"></div>' +
+      '<h2>Registry</h2><p class="meta">Source IDs are placeholders until the registry file is filled in.</p><div class="tablewrap"><table><thead><tr><th>Site</th><th>URL</th><th>Siteimprove</th><th>GA4</th><th>Owners</th><th>Last run</th></tr></thead><tbody>' + rows + '</tbody></table></div>' +
+      '<h2>Accessibility specialist notes</h2><p class="meta">Notes are attached to an issue type, so they carry over from one check to the next. Owners see them on the issue page.</p>' +
+      '<div class="tablewrap"><table><thead><tr><th>Issue type</th><th>Applies to</th><th>Note shown to owners</th><th>Status</th></tr></thead><tbody>' +
+      '<tr><td>' + esc(TYPES.contrast.title) + '</td><td>All sites</td><td>' + esc(SWS_NOTES.contrast) + '</td><td>SWS is handling this</td></tr>' +
+      '<tr><td>' + esc(TYPES.alt.title) + '</td><td>All sites</td><td>' + esc(SWS_NOTES.alt) + '</td><td>Owner fixes</td></tr></tbody></table></div>';
+  }
+
+  // ---------- Render ----------
+  function render(focusMain) {
+    var h;
+    if (view.name === "portfolio") h = vPortfolio();
+    else if (view.name === "site") h = vSite();
+    else if (view.name === "issue") h = vIssue();
+    else if (view.name === "share") h = vShare();
+    else if (view.name === "email") h = vEmail();
+    else if (view.name === "report") h = vReport();
+    else if (view.name === "sws") h = vSws();
+    else h = vAdmin();
+    main.innerHTML = h;
+    var navName = (view.name === "site" || view.name === "issue" || view.name === "share" || view.name === "report") ? "portfolio" : view.name;
+    document.getElementById("nav-sws").hidden = !OWNERS[viewer].admin;
+    document.querySelectorAll("nav.main button").forEach(function (b) {
+      if (b.getAttribute("data-nav") === navName) b.setAttribute("aria-current", "page"); else b.removeAttribute("aria-current");
+    });
+    if (focusMain) { main.focus(); window.scrollTo(0, 0); }
+  }
+
+  function go(v) { Object.assign(view, v); render(true); }
+
+  document.addEventListener("click", function (e) {
+    var t = e.target.closest("button, a[data-si]");
+    if (!t) return;
+    if (t.hasAttribute("data-nav")) return go({ name: t.getAttribute("data-nav") });
+    if (t.hasAttribute("data-go-site")) return go({ name: "site", site: t.getAttribute("data-go-site"), table: false });
+    if (t.hasAttribute("data-go-issue")) return go({ name: "issue", issue: t.getAttribute("data-go-issue"), pfilter: "all" });
+    if (t.hasAttribute("data-mode")) { view.mode = t.getAttribute("data-mode"); render(false); var f = document.querySelector('[data-mode="' + view.mode + '"]'); if (f) f.focus(); return; }
+    if (t.hasAttribute("data-toggle-table")) { view.table = !view.table; render(false); var tb = document.querySelector("[data-toggle-table]"); if (tb) tb.focus(); return; }
+    if (t.hasAttribute("data-metric")) { view.metric = t.getAttribute("data-metric"); view.table = false; render(false); var mb = document.querySelector('[data-metric="' + view.metric + '"]'); if (mb) mb.focus(); return; }
+    if (t.hasAttribute("data-report")) return go({ name: "report", site: t.getAttribute("data-report") });
+    if (t.hasAttribute("data-share")) return go({ name: "share" });
+    if (t.hasAttribute("data-email")) return go({ name: "email", emailSite: t.getAttribute("data-email") });
+    if (t.hasAttribute("data-print")) { window.print(); return; }
+    if (t.hasAttribute("data-si")) { e.preventDefault(); alert("In the live version, this opens the matching issue in Siteimprove."); return; }
+    if (t.hasAttribute("data-set")) {
+      var v = t.getAttribute("data-set"), msg = document.getElementById("sel-msg");
+      var boxes = Array.prototype.slice.call(document.querySelectorAll("input[data-page]:checked"));
+      if (!boxes.length) { if (msg) msg.textContent = "Select one or more pages in the table first."; return; }
+      var d = today();
+      if (v === "later") { var inp = document.getElementById("later-date"); d = inp && inp.value ? new Date(inp.value + "T12:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }) : ""; }
+      boxes.forEach(function (b) { var pk = pkey(view.site, view.issue, b.getAttribute("data-page")); if (v === "open") delete store.pages[pk]; else store.pages[pk] = { state: v, date: d }; });
+      save();
+      var names = { addressed: "Waiting for next check", keep: "Still correct", later: "Set aside", open: "To do" };
+      view.flash = boxes.length + " page" + (boxes.length === 1 ? "" : "s") + " moved to " + names[v] + ".";
+      render(false); var m2 = document.getElementById("sel-msg"); if (m2) { m2.setAttribute("tabindex", "-1"); m2.focus(); } return;
+    }
+    if (t.hasAttribute("data-note")) {
+      var ta = document.getElementById("note"); var txt = ta ? ta.value.trim() : "";
+      if (!txt) { ta && ta.focus(); return; }
+      var nk = key(view.site, view.issue);
+      (store.notes[nk] = store.notes[nk] || []).push({ by: OWNERS[viewer].label, at: today(), text: txt });
+      save(); render(false); var nt = document.getElementById("note"); if (nt) nt.focus(); return;
+    }
+    if (t.id === "run-btn") return startRun();
+  });
+
+  document.addEventListener("change", function (e) {
+    if (e.target.hasAttribute("data-pfilter")) { view.pfilter = e.target.value; render(false); var pf = document.querySelector("[data-pfilter]"); if (pf) pf.focus(); return; }
+    if (e.target.hasAttribute("data-select-all")) { document.querySelectorAll("input[data-page]").forEach(function (b) { b.checked = e.target.checked; }); return; }
+    if (e.target.hasAttribute("data-email-pick")) { view.emailSite = e.target.value; render(false); var p = document.querySelector("[data-email-pick]"); if (p) p.focus(); }
+  });
+
+  sel.addEventListener("change", function () {
+    viewer = sel.value;
+    if ((view.name === "site" || view.name === "issue" || view.name === "share" || view.name === "report") && OWNERS[viewer].sites.indexOf(view.site) < 0) view.name = "portfolio";
+    if (view.name === "sws" && !OWNERS[viewer].admin) view.name = "portfolio";
+    render(false);
+  });
+
+  function startRun() {
+    if (running) return;
+    var which = document.getElementById("run-site").value;
+    var list = which === "all" ? Object.keys(SITES) : [which];
+    var steps = ["Run queued in GitHub Actions", "Reading the registry file"]
+      .concat(list.map(function (id) { return "Fetching Siteimprove data for " + SITES[id].url; }))
+      .concat(["Ranking issues and removing SWS-only items", "Publishing the updated site"]);
+    running = true;
+    var btn = document.getElementById("run-btn"); if (btn) btn.disabled = true;
+    var i = 0;
+    function paint(doneMsg) {
+      var box = document.getElementById("run-status"); if (!box) return;
+      box.innerHTML = '<ul class="runlog">' + steps.map(function (s, n) { return '<li class="' + (n < i ? "done" : (n === i && !doneMsg ? "now" : "")) + '">' + esc(s) + (n < i ? "" : (n === i && !doneMsg ? " (in progress)" : "")) + '</li>'; }).join("") + '</ul>' + (doneMsg ? '<p class="ok">' + esc(doneMsg) + '</p>' : "");
+    }
+    paint();
+    var timer = setInterval(function () {
+      i++;
+      if (i >= steps.length) {
+        clearInterval(timer); running = false;
+        var tm = new Date().toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit" });
+        list.forEach(function (id) { runs[id] = tm; });
+        if (view.name === "admin") { render(false); i = steps.length; paint("Complete at " + tm + ". " + list.length + " of " + list.length + " site" + (list.length === 1 ? "" : "s") + " updated."); }
+        return;
+      }
+      paint();
+    }, 900);
+  }
+
+  render(false);
+})();
+</script>
+</body>
+</html>

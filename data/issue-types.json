@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "note": "Seed text written for the demo; not yet reviewed by SWS (OT-04). Keyed for now by WHM issue type; map to Siteimprove rule or policy IDs once known.",
+  "types": [
+    {
+      "key": "alt",
+      "title": "Images are missing text descriptions",
+      "category": "Accessibility",
+      "fixer": "owner",
+      "editorial": false,
+      "what": "Some images have no alternative text, so people using screen readers don’t know what the image shows.",
+      "why": "Text descriptions are required at WCAG level A. Missing ones are among the most common barriers for blind visitors.",
+      "todo": "Edit each image listed below and add a short description of what it shows. Decorative images can be marked as decorative instead.",
+      "siteimproveIds": [],
+      "reviewedBySws": false
+    },
+    {
+      "key": "linktext",
+      "title": "Link text doesn’t say where the link goes",
+      "category": "Accessibility",
+      "fixer": "owner",
+      "editorial": false,
+      "what": "Links use wording like “click here” or “read more” that only makes sense with the text around it.",
+      "why": "People who move through a page by its links hear the link text on its own.",
+      "todo": "Rewrite each link so its words name the destination, for example “Read the accessibility guide.”",
+      "siteimproveIds": [],
+      "reviewedBySws": false
+    },
+    {
+      "key": "broken",
+      "title": "Links lead to pages that don’t exist",
+      "category": "Content quality",
+      "fixer": "owner",
+      "editorial": false,
+      "what": "These links point to pages that return a “not found” error.",
+      "why": "Broken links send visitors to a dead end and make the site look out of date.",
+      "todo": "Update each link to the right address, or remove it if the page is gone for good.",
+      "siteimproveIds": [],
+      "reviewedBySws": false
+    },
+    {
+      "key": "pdf",
+      "title": "PDFs may not work with screen readers",
+      "category": "Accessibility",
+      "fixer": "owner",
+      "editorial": false,
+      "what": "These PDFs aren’t tagged, so their structure can’t be read by assistive technology.",
+      "why": "Untagged PDFs can be unreadable for screen reader users.",
+      "todo": "Replace the PDF with a web page where possible, or re-export it as a tagged PDF.",
+      "siteimproveIds": [],
+      "reviewedBySws": false
+    },
+    {
+      "key": "contrast",
+      "title": "Some text is too light to read easily",
+      "category": "Accessibility",
+      "fixer": "sws",
+      "editorial": false,
+      "what": "A few text styles don’t have enough contrast against their background.",
+      "why": "Low contrast makes text hard to read for many visitors, especially on phones outdoors.",
+      "todo": "No action needed from you. This comes from the site template, and SWS is handling it.",
+      "siteimproveIds": [],
+      "reviewedBySws": false
+    },
+    {
+      "key": "stale",
+      "title": "Pages not updated in over a year",
+      "category": "Content freshness",
+      "fixer": "owner",
+      "editorial": true,
+      "what": "These pages haven’t changed in more than 12 months. (In this demo the age check is simulated; the data source is still being chosen.)",
+      "why": "Out-of-date content is the most common reason site owners make changes. Some pages are fine as they are, such as a page updated once a year.",
+      "todo": "Check each page. Update it, or choose “They’re still correct” if it doesn’t need a change.",
+      "siteimproveIds": [],
+      "reviewedBySws": false
+    },
+    {
+      "key": "titles",
+      "title": "Pages share the same title",
+      "category": "Findability",
+      "fixer": "owner",
+      "editorial": false,
+      "what": "Several pages use the same page title.",
+      "why": "In search results, visitors can’t tell these pages apart.",
+      "todo": "Give each page a title that describes what is on it.",
+      "siteimproveIds": [],
+      "reviewedBySws": false
+    },
+    {
+      "key": "searchdesc",
+      "title": "Pages are missing a search description",
+      "category": "Findability",
+      "fixer": "owner",
+      "editorial": false,
+      "what": "These pages have no summary for search engines to show.",
+      "why": "Without one, search engines pick text from the page, which may not help visitors decide to click.",
+      "todo": "Add a one- or two-sentence summary in each page’s search description field.",
+      "siteimproveIds": [],
+      "reviewedBySws": false
+    },
+    {
+      "key": "policy",
+      "title": "Uses an outdated office name",
+      "category": "Stanford standards",
+      "fixer": "owner",
+      "editorial": false,
+      "what": "These pages use a name that Stanford has replaced.",
+      "why": "A Stanford content policy checks for retired names so messages stay consistent across sites.",
+      "todo": "Replace the old name with the current one on each page.",
+      "siteimproveIds": [],
+      "reviewedBySws": false
+    }
+  ]
+}
