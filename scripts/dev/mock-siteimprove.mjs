@@ -53,6 +53,7 @@ const routes = [
   }],
   [/\/a11y\/issue_kinds\/confirmed\/issues/, () => load("probe-a11y-issue_kinds-confirmed-issues.json")],
   [/\/seov2\/issues/, () => load("probe2-seov2-issues.json")],
+  [/\/policy\/policies\?/, () => load("probe2-policy-policies.json")],
 ];
 
 http

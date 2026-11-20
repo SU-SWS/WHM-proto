@@ -11,8 +11,7 @@ Every part of the prototype reads or writes these files. The pages, the workflow
 | `data/annotations.json` | People, by commit | SWS accessibility specialist notes (TR-4, TR-5) |
 | `data/sample/` | People, by commit | Sample data. Scripts never write here. |
 | `data/published/` | `scripts/refresh.mjs` | What the site builds from. Starts as a copy of `data/sample/`. |
-| `data/fixtures/siteimprove/` | People or scripts, once | Saved real API responses used to write and test code |
-| `data/history/` | `scripts/record-site-target.mjs`, daily | Site Target Score history that WHM builds itself, because the API keeps none. Live sites only. |
+| `data/fixtures/siteimprove/` | People, from the Save Siteimprove fixtures workflow | Saved real API responses used to write and test code. Reviewed before they're committed. |
 
 **How the refresh merges data:** for each site, the script starts from that site's sample file. For a site with `live: true`, it replaces each section it fetched successfully and sets that section's `source` to `"live"`. If a section fails, the script keeps that section's last good published version. The result is written to `data/published/`. `portfolio.json` is then rebuilt from the published site files, so the rollup always matches the site pages; `openOwnerIssues` is the number of issues whose type has `fixer: "owner"`. `status.json`'s `runId` is the GitHub Actions run ID, which the admin page matches against GitHub to tell when a run's data is live.
 
@@ -116,19 +115,6 @@ interface Portfolio {
   sites: { key: string; name: string; url: string; state: SiteData["state"]; verdict: string;
            siteTargetScore: number; accessibilityScore: number; brokenLinks: number;
            openOwnerIssues: number; checkedAt: IsoDate; source: Source }[];
-}
-
-// data/history/<siteKey>.json — appended by the daily Record Site Target Score
-// workflow. Values are Siteimprove's, unchanged, under Siteimprove's field names,
-// until a reviewed fixture confirms their scale. One point per UTC day.
-interface History {
-  schemaVersion: 1;
-  siteKey: string;
-  points: {
-    date: IsoDate;                          // the day WHM recorded it
-    site_target_percentage: number;
-    accessibility_dci_score: number | null;
-  }[];
 }
 
 // data/{sample|published}/status.json

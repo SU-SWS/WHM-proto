@@ -1,0 +1,29 @@
+name: Save Siteimprove fixtures
+
+# Saves real Siteimprove responses for review before code depends on them.
+# Download them from this run's Artifacts. Nothing is committed: copy the files
+# you've reviewed into data/fixtures/siteimprove/. See scripts/save-fixtures.mjs.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  save:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Save responses
+        env:
+          SITEIMPROVE_API_USER: ${{ secrets.SITEIMPROVE_API_USER }}
+          SITEIMPROVE_API_KEY: ${{ secrets.SITEIMPROVE_API_KEY }}
+        run: node scripts/save-fixtures.mjs "$RUNNER_TEMP/fixtures"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: siteimprove-fixtures
+          path: ${{ runner.temp }}/fixtures
+          retention-days: 3
