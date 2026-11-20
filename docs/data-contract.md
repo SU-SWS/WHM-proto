@@ -82,7 +82,10 @@ interface SiteData {
   topPages: {
     viewsSource: Source; periodDays?: number; engagementSource: Source; engagementAsOf?: IsoDate;   // periodDays: window for page views (sample files: 30)
     // engagement is GA4 (Apps Script export); engagementAsOf = end of its period
-    pages: { path: string; views: number; engagementRate: number | null; openIssues: number }[];
+    typicalEngagement?: number | null;   // the site's median engagement rate (CT-2)
+    pages: { path: string; title?: string; views: number; engagementRate: number | null;
+             lowEngagement?: boolean;    // well below typical, with enough sessions (rule: verdict-rules.md)
+             openIssues: number }[];
   };
   issues: {
     type: string;              // key into issue-types.json
@@ -128,7 +131,7 @@ interface Ga4Export {
   generatedAt: string;                      // ISO date-time
   periodDays: number;                       // must equal the data run's WINDOW_DAYS (90)
   period: { start: IsoDate; end: IsoDate }; // the window, ending yesterday
-  pages: { path: string; engagementRate: number }[];   // 0–1; no page views (those are Siteimprove's)
+  pages: { path: string; engagementRate: number; sessions: number }[];   // 0–1; sessions only for the CT-2 threshold, never shown
   searchTerms: { term: string; count: number }[];      // 5+ searches, personal-looking terms removed
   dropped: { searchTerms: number; rare: number; personal: number; rareByCount: Record<string, number> };  // counts only, never the terms
 }

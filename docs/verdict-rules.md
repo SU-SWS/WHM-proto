@@ -44,7 +44,18 @@ Illustration only, using today's sitesuserguide score and made-up changes and co
 > **Needs attention: your Site Target Score dropped since the last check, and issues sit on your busiest pages.**
 > Your Site Target Score is 98.38, down 0.2 since the last check. Fixing the first two items helps the most visitors. 4 items are being handled by SWS.
 
+## Low engagement on well-visited pages (CT-2)
+
+From GA4 engagement rates, over the same rolling 90 days as page views.
+
+- **Typical rate:** the median engagement rate across the site's pages that had at least 30 sessions.
+- **Flagged:** one of the 10 most visited pages (platform pages left out) with at least 30 sessions and an engagement rate at least 20 points below the typical rate.
+- **In “Most visited pages”:** the rate shows with “Fewer stay than on most pages,” and the note under the table gives the typical rate.
+- **In the lede:** for the most visited flagged page, after the score sentence: “Fewer visitors stay on “{page name}” than on most of your pages.” (“your home page” for `/`.)
+- It doesn't change the state or verdict. Sessions are used only for the threshold and are never shown; page views stay with Siteimprove (Q-4).
+
 ## Questions for SWS
 
 - Should an accessibility score drop also trigger `attention`, or only the Site Target Score?
 - Is 0.1 the right size for "fell"? The daily history moves in steps of about 0.1 to 0.4.
+- Are 30 sessions and 20 points the right bars for low engagement, and should low engagement on a busiest page also mean “needs attention”?

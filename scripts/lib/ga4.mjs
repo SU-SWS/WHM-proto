@@ -6,7 +6,7 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { normalizePath } from "./normalize.mjs";
-import { WINDOW_DAYS } from "./live-site.mjs";
+import { WINDOW_DAYS } from "./window.mjs";
 
 const MAX_AGE_DAYS = 14;
 /** Same rule as the Apps Script, applied again here before anything is published (decisions, Nov 20). */
@@ -38,22 +38,42 @@ export async function readGa4(root, site, now = new Date()) {
   const ageDays = (now - new Date(file.generatedAt)) / 86_400_000;
   if (!(ageDays <= MAX_AGE_DAYS)) return { data: null, note: `GA4 export is ${Math.floor(ageDays)} days old, so GA4 sections show sample data` };
 
-  const engagement = new Map();
+  const engagement = new Map(); // path → { rate, sessions }
   for (const p of file.pages ?? []) {
     const key = normalizePath(p.path, site.url);
-    if (key && !engagement.has(key) && Number.isFinite(p.engagementRate)) engagement.set(key, p.engagementRate);
+    if (key && !engagement.has(key) && Number.isFinite(p.engagementRate)) {
+      engagement.set(key, { rate: p.engagementRate, sessions: Number.isFinite(p.sessions) ? p.sessions : null });
+    }
   }
   const terms = (file.searchTerms ?? []).filter(isPublishableTerm).map((t) => ({ term: t.term, count: t.count }));
   return { data: { asOf: file.period?.end ?? file.generatedAt.slice(0, 10), engagement, terms }, note: null };
 }
 
-/** Puts GA4 values into a site file (live or sample). Returns the updated copy. */
+/**
+ * Low engagement on well-visited pages (CT-2; rule in docs/verdict-rules.md).
+ * A page is flagged when it has at least MIN_SESSIONS sessions and its rate is
+ * at least LOW_BY below the site's typical rate (the median over pages with
+ * enough sessions). Without session counts, nothing is flagged.
+ */
+export const MIN_SESSIONS = 30;
+export const LOW_BY = 0.2;
+export function assessEngagement(ga4) {
+  if (!ga4) return { typical: null, isLow: () => false };
+  const solid = [...ga4.engagement.values()].filter((e) => e.sessions !== null && e.sessions >= MIN_SESSIONS).map((e) => e.rate);
+  if (solid.length < 5) return { typical: null, isLow: () => false };
+  const sorted = solid.sort((a, b) => a - b);
+  const typical = sorted[Math.floor(sorted.length / 2)];
+  return {
+    typical,
+    isLow: (path) => {
+      const e = ga4.engagement.get(path);
+      return !!e && e.sessions !== null && e.sessions >= MIN_SESSIONS && e.rate <= typical - LOW_BY;
+    },
+  };
+}
+
+/** Puts GA4 site search into a site file. Engagement is merged by buildLiveSite. */
 export function mergeGa4(site, ga4) {
   if (!ga4) return site;
-  const pages = site.topPages.pages.map((p) => ({ ...p, engagementRate: ga4.engagement.get(p.path) ?? null }));
-  return {
-    ...site,
-    topPages: { ...site.topPages, pages, engagementSource: "live", engagementAsOf: ga4.asOf },
-    siteSearch: { source: "live", asOf: ga4.asOf, periodDays: WINDOW_DAYS, terms: ga4.terms },
-  };
+  return { ...site, siteSearch: { source: "live", asOf: ga4.asOf, periodDays: WINDOW_DAYS, terms: ga4.terms } };
 }

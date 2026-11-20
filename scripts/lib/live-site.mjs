@@ -9,6 +9,8 @@
 
 import { normalizePath } from "./normalize.mjs";
 import { siteimproveLink } from "./siteimprove.mjs";
+import { assessEngagement } from "./ga4.mjs";
+import { WINDOW_DAYS } from "./window.mjs";
 import { verdictFor } from "./verdict.mjs";
 
 /** Share of a site's pages at which an issue counts as coming from the template (decisions, Nov 20). */
@@ -16,13 +18,8 @@ const TEMPLATE_SHARE = 0.9;
 /** A check covering fewer pages than this share of the usual count is partial and skipped. */
 const PARTIAL_CHECK = 0.95;
 const BUSIEST = 5;
-/**
- * The rolling window for every traffic-based number: page views per page,
- * busiest pages, issue ranking, and (via the Apps Script) GA4 engagement and
- * site search. One window for all, so they always line up (decisions, Nov 20).
- * Keep in step with WINDOW_DAYS in scripts/apps-script/ga4-export.gs.
- */
-export const WINDOW_DAYS = 90;
+/** Rows in "Most visited pages"; the low-engagement check looks at these (CT-2). */
+const MOST_VISITED = 10;
 /**
  * Stanford Sites platform pages, shared by every site on the platform: search
  * and sign-in/account pages. They're left out when picking a site's busiest
@@ -53,7 +50,7 @@ function median(xs) {
   return s.length ? s[Math.floor(s.length / 2)] : 0;
 }
 
-export async function buildLiveSite({ site, sample, previous, issueTypes, client, now = new Date() }) {
+export async function buildLiveSite({ site, sample, previous, issueTypes, client, ga4 = null, now = new Date() }) {
   const id = site.siteimproveSiteId;
   const base = `/sites/${id}`;
   const months = monthWindow(now);
@@ -141,9 +138,13 @@ export async function buildLiveSite({ site, sample, previous, issueTypes, client
     async () => {
       const top = await client.getAll(`${base}/analytics/content/most_popular_pages?period=${windowPeriod}&page_size=500`);
       const views = new Map();
+      const titles = new Map();
       for (const p of top) {
         const path = normalizePath(p.url, site.url);
-        if (path) views.set(path, (views.get(path) ?? 0) + p.page_views);
+        if (!path) continue;
+        views.set(path, (views.get(path) ?? 0) + p.page_views);
+        // "Create Jump Links Using ID Tags | Stanford Sites User Guide" → the page's own name
+        if (p.title && !titles.has(path)) titles.set(path, p.title.split(" | ")[0].trim());
       }
       const history = await client.get(`${base}/analytics/overview/history?period=${months[0].replace("-", "")}01_${ymd(yesterday)}`);
       const byMonth = new Map((history.items ?? []).map((i) => [i.timestamp.slice(0, 7), i.page_views]));
@@ -151,11 +152,11 @@ export async function buildLiveSite({ site, sample, previous, issueTypes, client
       const current = now.toISOString().slice(0, 7);
       // Months before Analytics was on are no data, not zero; the current month isn't complete yet.
       const values = months.map((m, i) => (firstData < 0 || i < firstData || m === current ? null : (byMonth.get(m) ?? 0)));
-      return { views, pageViews: { source: "live", values } };
+      return { views, titles, pageViews: { source: "live", values } };
     },
     () => {
       const live = previous?.trends?.pageViews?.source === "live";
-      return keepOr(previous && { views: null, pageViews: previous.trends.pageViews }, live, { views: null, pageViews: sample.trends.pageViews });
+      return keepOr(previous && { views: null, titles: null, pageViews: previous.trends.pageViews }, live, { views: null, titles: null, pageViews: sample.trends.pageViews });
     },
   );
   const views = traffic.views ?? new Map();
@@ -412,23 +413,36 @@ export async function buildLiveSite({ site, sample, previous, issueTypes, client
   for (const i of issues) if (fixerOf(i) !== "owner") i.rank = null;
   const ordered = [...owner, ...issues.filter((i) => fixerOf(i) !== "owner")];
 
-  // --- Most visited pages, with how many issues each has.
+  // --- Most visited pages, with how many issues each has, and GA4 engagement
+  // where the Apps Script export has it. Low engagement is flagged (CT-2).
+  const engagement = assessEngagement(ga4);
+  const mostVisited = [...views.entries()]
+    .filter(([p]) => !isPlatformPage(p))
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, MOST_VISITED)
+    .map(([p]) => p);
   const topPages =
-    traffic.views && busiest.length
+    traffic.views && mostVisited.length
       ? {
           viewsSource: "live",
           periodDays: WINDOW_DAYS,
-          engagementSource: "sample", // replaced by GA4 when the Apps Script export is merged
-          pages: busiest.map((path) => ({
+          engagementSource: ga4 ? "live" : "sample",
+          ...(ga4 ? { engagementAsOf: ga4.asOf } : {}),
+          typicalEngagement: engagement.typical,
+          pages: mostVisited.map((path) => ({
             path,
+            ...(traffic.titles?.get(path) ? { title: traffic.titles.get(path) } : {}),
             views: viewsOf(path),
-            engagementRate: null,
+            engagementRate: ga4?.engagement.get(path)?.rate ?? null,
+            ...(engagement.isLow(path) ? { lowEngagement: true } : {}),
             openIssues: owner.filter((i) => i.pages.some((p) => p.path === path)).length, // the owner's own issues
           })),
         }
       : previous?.topPages?.viewsSource === "live"
         ? previous.topPages
         : sample.topPages;
+  if (ga4 && engagement.typical === null) notes.push("GA4 export has no session counts, so low engagement isn't checked; re-run the Apps Script export");
+  const lowPage = topPages.pages.find((p) => p.lowEngagement);
 
   // --- Progress from Siteimprove's own checks (TR-1, revised Nov 20): compare each
   // issue's pages with the last published run. No fix status is kept by WHM.
@@ -460,6 +474,7 @@ export async function buildLiveSite({ site, sample, previous, issueTypes, client
     ownerIssues: owner.length,
     swsIssues: ordered.length - owner.length,
     onBusiest,
+    lowEngagementPage: lowPage ? (lowPage.path === "/" ? "your home page" : `“${lowPage.title ?? lowPage.path}”`) : null,
   });
 
   const data = {

@@ -28,7 +28,7 @@ var REPO = "SU-SWS/WHM-proto";
 var BRANCH = "main";
 var MIN_SEARCHES = 5; // decisions, Nov 20
 // One rolling window for all traffic numbers (decisions, Nov 20). Keep in step
-// with WINDOW_DAYS in scripts/lib/live-site.mjs; the data run checks they match.
+// with WINDOW_DAYS in scripts/lib/window.mjs; the data run checks they match.
 var WINDOW_DAYS = 90;
 var MAX_PAGES = 500;
 var MAX_TERMS = 50;
@@ -88,14 +88,16 @@ function buildFile_() {
   var pageReport = AnalyticsData.Properties.runReport({
     dateRanges: [range],
     dimensions: [{ name: "pagePath" }],
-    metrics: [{ name: "engagementRate" }, { name: "screenPageViews" }],
+    // sessions is exported only so WHM can ignore rates based on too few visits; it isn't shown.
+    metrics: [{ name: "engagementRate" }, { name: "sessions" }, { name: "screenPageViews" }],
     orderBys: [{ metric: { metricName: "screenPageViews" }, desc: true }],
     limit: MAX_PAGES
   }, property);
   var pages = (pageReport.rows || []).map(function (r) {
     return {
       path: r.dimensionValues[0].value,
-      engagementRate: round_(Number(r.metricValues[0].value), 4)
+      engagementRate: round_(Number(r.metricValues[0].value), 4),
+      sessions: Number(r.metricValues[1].value)
     };
   });
 

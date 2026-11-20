@@ -88,9 +88,9 @@ async function refreshLive(site) {
   if (!site.siteimproveSiteId) throw new Error("The registry has no Siteimprove site ID for this site");
   const sample = await readJson(path.join(SAMPLE, "sites", `${site.key}.json`));
   const published = await readJsonOr(path.join(PUBLISHED, "sites", `${site.key}.json`), null);
-  const { data, sections, notes } = await buildLiveSite({ site, sample, previous: published, issueTypes, client });
   // GA4 engagement and site search, from the Apps Script export (decisions, Nov 20).
   const ga4 = site.ga4PropertyId ? await readGa4(ROOT, site) : { data: null, note: null };
+  const { data, sections, notes } = await buildLiveSite({ site, sample, previous: published, issueTypes, client, ga4: ga4.data });
   if (ga4.note) notes.push(ga4.note);
   await writeJson(path.join(PUBLISHED, "sites", `${site.key}.json`), mergeGa4(data, ga4.data));
 

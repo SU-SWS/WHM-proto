@@ -129,10 +129,13 @@ export interface SiteData {
     periodDays?: number; // window the page views cover; absent in sample files, which use 30
     engagementSource: Source; // GA4, from the Apps Script export when live (decisions, Nov 20)
     engagementAsOf?: IsoDate; // last day of the GA4 period
+    typicalEngagement?: number | null; // the site's median engagement rate, for comparison (CT-2)
     pages: {
       path: string;
+      title?: string; // page name from Siteimprove Analytics
       views: number;
       engagementRate: number | null;
+      lowEngagement?: boolean; // well below the site's typical rate, with enough visits to count (CT-2)
       openIssues: number;
     }[];
   };

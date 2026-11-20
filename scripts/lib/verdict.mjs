@@ -17,8 +17,9 @@ export const FELL = 0.1;
  * @param {number} p.ownerIssues number of owner issues
  * @param {number} p.swsIssues   number of SWS-handled issues
  * @param {boolean} p.onBusiest  an owner issue is on one of the 5 busiest pages
+ * @param {string|null} p.lowEngagementPage  the most visited page with low engagement, already quoted (CT-2)
  */
-export function verdictFor({ score, change, ownerIssues, swsIssues, onBusiest }) {
+export function verdictFor({ score, change, ownerIssues, swsIssues, onBusiest, lowEngagementPage = null }) {
   const fell = change !== null && change <= -FELL;
   const state = fell || onBusiest ? "attention" : ownerIssues === 0 ? "good" : "ok";
 
@@ -45,6 +46,7 @@ export function verdictFor({ score, change, ownerIssues, swsIssues, onBusiest })
   } else {
     parts.push(`Your Site Target Score is ${fmt(score)}, ${change > 0 ? "up" : "down"} ${fmt(Math.abs(change))} since the last check.`);
   }
+  if (lowEngagementPage) parts.push(`Fewer visitors stay on ${lowEngagementPage} than on most of your pages.`);
   if (ownerIssues >= 2) parts.push("Fixing the first two items helps the most visitors.");
   else if (ownerIssues === 1) parts.push("Fixing the item below helps the most visitors.");
   if (swsIssues > 0) parts.push(`${swsIssues} ${swsIssues === 1 ? "item is" : "items are"} being handled by SWS.`);

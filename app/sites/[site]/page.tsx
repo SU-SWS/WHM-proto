@@ -96,7 +96,10 @@ export default async function SitePage({ params }: PageProps<"/sites/[site]">) {
                   )}
                 </td>
                 <td className="num">{formatNumber(p.views)}</td>
-                <td className="num">{p.engagementRate === null ? "Not available" : formatPercent(p.engagementRate)}</td>
+                <td className="num">
+                  {p.engagementRate === null ? "Not available" : formatPercent(p.engagementRate)}
+                  {p.lowEngagement && <span className="block text-15 text-digital-red">Fewer stay than on most pages</span>}
+                </td>
                 <td className="num">{p.openIssues}</td>
               </tr>
             ))}
@@ -110,6 +113,8 @@ export default async function SitePage({ params }: PageProps<"/sites/[site]">) {
       <SourceNote provider="ga4" source={site.topPages.engagementSource} date={site.topPages.engagementAsOf ?? checked}>
         Engagement rate is the share of visits that lasted over 10 seconds, viewed 2 or more pages, or completed
         a key event.
+        {typeof site.topPages.typicalEngagement === "number" &&
+          ` The typical page on this site has ${formatPercent(site.topPages.typicalEngagement)}. Pages well below that, with enough visits to count, are marked.`}
       </SourceNote>
 
       <h2 className="section-heading">Does the content meet visitor needs?</h2>
