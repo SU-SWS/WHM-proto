@@ -40,7 +40,7 @@ export default async function EmailPage({ params }: PageProps<"/email/[site]">) 
             <strong>From:</strong> Stanford Web Services, Website Health
           </div>
           <div>
-            <strong>Subject:</strong> {hostOf(site.url)}: {site.state === "attention" ? "needs attention this month" : "in good shape this month"}
+            <strong>Subject:</strong> {hostOf(site.url)} {site.state === "attention" ? "needs attention" : "is in good shape"}
           </div>
         </div>
         <div className="px-20 pb-24 pt-20">

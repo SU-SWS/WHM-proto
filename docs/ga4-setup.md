@@ -1,6 +1,6 @@
 # Setting up the GA4 export (Apps Script)
 
-The data run gets GA4 engagement and site search for sitesuserguide from a small Google Apps Script that you run as yourself. There's no service account and no Cloud Console setup (decisions, Nov 20). The script is `scripts/apps-script/ga4-export.gs`. It commits `data/ga4/sitesuserguide.json` to this repo, and the next data run uses it.
+The data run gets GA4 engagement and site search for sitesuserguide, over a rolling 90 days, from a small Google Apps Script that you run as yourself. There's no service account and no Cloud Console setup (decisions, Nov 20). The script is `scripts/apps-script/ga4-export.gs`. It commits `data/ga4/sitesuserguide.json` to this repo, and the next data run uses it.
 
 You need:
 

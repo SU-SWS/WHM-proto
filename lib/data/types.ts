@@ -126,6 +126,7 @@ export interface SiteData {
   };
   topPages: {
     viewsSource: Source;
+    periodDays?: number; // window the page views cover; absent in sample files, which use 30
     engagementSource: Source; // GA4, from the Apps Script export when live (decisions, Nov 20)
     engagementAsOf?: IsoDate; // last day of the GA4 period
     pages: {
@@ -136,7 +137,7 @@ export interface SiteData {
     }[];
   };
   issues: SiteIssue[];
-  siteSearch: { source: Source; asOf?: IsoDate; terms: { term: string; count: number }[] }; // GA4; asOf is the last day of its period
+  siteSearch: { source: Source; asOf?: IsoDate; periodDays?: number; terms: { term: string; count: number }[] }; // GA4; asOf is the last day of its period
   speed: { source: Source; pages: { path: string; score: number }[] }; // optional
 }
 

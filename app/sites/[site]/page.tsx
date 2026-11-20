@@ -79,7 +79,7 @@ export default async function SitePage({ params }: PageProps<"/sites/[site]">) {
           <thead>
             <tr>
               <th scope="col">Page</th>
-              <th scope="col" className="num">Page views, last 30 days</th>
+              <th scope="col" className="num">Page views, last {site.topPages.periodDays ?? 30} days</th>
               <th scope="col" className="num">Engagement rate</th>
               <th scope="col" className="num">Open issues</th>
             </tr>
@@ -142,7 +142,7 @@ export default async function SitePage({ params }: PageProps<"/sites/[site]">) {
           <thead>
             <tr>
               <th scope="col">Search term</th>
-              <th scope="col" className="num">Searches, last 30 days</th>
+              <th scope="col" className="num">Searches, last {site.siteSearch.periodDays ?? 30} days</th>
             </tr>
           </thead>
           <tbody>

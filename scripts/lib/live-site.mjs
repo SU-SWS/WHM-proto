@@ -17,6 +17,13 @@ const TEMPLATE_SHARE = 0.9;
 const PARTIAL_CHECK = 0.95;
 const BUSIEST = 5;
 /**
+ * The rolling window for every traffic-based number: page views per page,
+ * busiest pages, issue ranking, and (via the Apps Script) GA4 engagement and
+ * site search. One window for all, so they always line up (decisions, Nov 20).
+ * Keep in step with WINDOW_DAYS in scripts/apps-script/ga4-export.gs.
+ */
+export const WINDOW_DAYS = 90;
+/**
  * Stanford Sites platform pages, shared by every site on the platform: search
  * and sign-in/account pages. They're left out when picking a site's busiest
  * pages, because the owner doesn't write them. Open question (decisions,
@@ -126,13 +133,13 @@ export async function buildLiveSite({ site, sample, previous, issueTypes, client
     },
   );
 
-  // --- Traffic: page views per page for the last 30 days, and per month (Siteimprove Analytics).
+  // --- Traffic: page views per page over the window, and per month (Siteimprove Analytics).
   const yesterday = new Date(now.getTime() - 86_400_000);
-  const last30 = `${ymd(new Date(now.getTime() - 30 * 86_400_000))}_${ymd(yesterday)}`;
+  const windowPeriod = `${ymd(new Date(now.getTime() - WINDOW_DAYS * 86_400_000))}_${ymd(yesterday)}`;
   const traffic = await section(
     "traffic",
     async () => {
-      const top = await client.getAll(`${base}/analytics/content/most_popular_pages?period=${last30}&page_size=500`);
+      const top = await client.getAll(`${base}/analytics/content/most_popular_pages?period=${windowPeriod}&page_size=500`);
       const views = new Map();
       for (const p of top) {
         const path = normalizePath(p.url, site.url);
@@ -410,7 +417,8 @@ export async function buildLiveSite({ site, sample, previous, issueTypes, client
     traffic.views && busiest.length
       ? {
           viewsSource: "live",
-          engagementSource: "sample", // engagement is GA4, from the MVP on
+          periodDays: WINDOW_DAYS,
+          engagementSource: "sample", // replaced by GA4 when the Apps Script export is merged
           pages: busiest.map((path) => ({
             path,
             views: viewsOf(path),

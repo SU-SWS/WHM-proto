@@ -6,6 +6,7 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { normalizePath } from "./normalize.mjs";
+import { WINDOW_DAYS } from "./live-site.mjs";
 
 const MAX_AGE_DAYS = 14;
 /** Same rule as the Apps Script, applied again here before anything is published (decisions, Nov 20). */
@@ -30,6 +31,10 @@ export async function readGa4(root, site, now = new Date()) {
   if (site.ga4PropertyId && String(file.propertyId) !== String(site.ga4PropertyId)) {
     return { data: null, note: "GA4 export is for a different property than the registry lists" };
   }
+  // Engagement sits next to Siteimprove page views, so both must cover the same window.
+  if ((file.periodDays ?? 30) !== WINDOW_DAYS) {
+    return { data: null, note: `GA4 export covers ${file.periodDays ?? 30} days but the data run uses ${WINDOW_DAYS}; update WINDOW_DAYS in the Apps Script` };
+  }
   const ageDays = (now - new Date(file.generatedAt)) / 86_400_000;
   if (!(ageDays <= MAX_AGE_DAYS)) return { data: null, note: `GA4 export is ${Math.floor(ageDays)} days old, so GA4 sections show sample data` };
 
@@ -49,6 +54,6 @@ export function mergeGa4(site, ga4) {
   return {
     ...site,
     topPages: { ...site.topPages, pages, engagementSource: "live", engagementAsOf: ga4.asOf },
-    siteSearch: { source: "live", asOf: ga4.asOf, terms: ga4.terms },
+    siteSearch: { source: "live", asOf: ga4.asOf, periodDays: WINDOW_DAYS, terms: ga4.terms },
   };
 }

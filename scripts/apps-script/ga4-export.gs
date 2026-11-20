@@ -6,8 +6,8 @@
  * Cloud Console setup is needed (decisions, Nov 20). Setup: docs/ga4-setup.md.
  *
  * Writes data/ga4/<siteKey>.json (shape in docs/data-contract.md):
- *   - engagement rate per page, last 30 days (CT-2)
- *   - site search terms, last 30 days (CT-5), with anything that looks personal
+ *   - engagement rate per page over the last WINDOW_DAYS days (CT-2)
+ *   - site search terms over the same window (CT-5), with anything that looks personal
  *     removed and only terms searched at least MIN_SEARCHES times kept
  * Page views are NOT exported: they come from Siteimprove Analytics (Q-4).
  *
@@ -25,6 +25,9 @@ var SITE_KEY = "sitesuserguide";
 var REPO = "SU-SWS/WHM-proto";
 var BRANCH = "main";
 var MIN_SEARCHES = 5; // decisions, Nov 20
+// One rolling window for all traffic numbers (decisions, Nov 20). Keep in step
+// with WINDOW_DAYS in scripts/lib/live-site.mjs; the data run checks they match.
+var WINDOW_DAYS = 90;
 var MAX_PAGES = 500;
 var MAX_TERMS = 50;
 
@@ -67,7 +70,7 @@ function buildFile_() {
   }
   var propertyId = prop_("GA4_PROPERTY_ID");
   var property = "properties/" + propertyId;
-  var range = { startDate: "30daysAgo", endDate: "yesterday" };
+  var range = { startDate: String(WINDOW_DAYS) + "daysAgo", endDate: "yesterday" };
 
   var pageReport = AnalyticsData.Properties.runReport({
     dateRanges: [range],
@@ -111,8 +114,9 @@ function buildFile_() {
     siteKey: SITE_KEY,
     propertyId: propertyId,
     generatedAt: new Date().toISOString(),
+    periodDays: WINDOW_DAYS,
     period: {
-      start: Utilities.formatDate(new Date(Date.now() - 30 * day), tz, "yyyy-MM-dd"),
+      start: Utilities.formatDate(new Date(Date.now() - WINDOW_DAYS * day), tz, "yyyy-MM-dd"),
       end: Utilities.formatDate(new Date(Date.now() - day), tz, "yyyy-MM-dd")
     },
     pages: pages,

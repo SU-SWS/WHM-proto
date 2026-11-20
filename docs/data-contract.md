@@ -80,7 +80,8 @@ interface SiteData {
     siteTargetScore: Series; accessibilityScore: Series; brokenLinks: Series; pageViews: Series;
   };
   topPages: {
-    viewsSource: Source; engagementSource: Source; engagementAsOf?: IsoDate;   // engagement is GA4 (Apps Script export); asOf = end of its period
+    viewsSource: Source; periodDays?: number; engagementSource: Source; engagementAsOf?: IsoDate;   // periodDays: window for page views (sample files: 30)
+    // engagement is GA4 (Apps Script export); engagementAsOf = end of its period
     pages: { path: string; views: number; engagementRate: number | null; openIssues: number }[];
   };
   issues: {
@@ -96,7 +97,7 @@ interface SiteData {
               siteimproveUrl?: string | null } |                     // this page's report in Siteimprove, impmd stripped
              { path: string; views: number; monthsSinceUpdate: number })[];
   }[];
-  siteSearch: { source: Source; asOf?: IsoDate; terms: { term: string; count: number }[] };   // GA4 (Apps Script export), filtered
+  siteSearch: { source: Source; asOf?: IsoDate; periodDays?: number; terms: { term: string; count: number }[] };   // GA4 (Apps Script export), filtered
   speed:      { source: Source; pages: { path: string; score: number }[] };  // optional
 }
 interface Reading { value: number; change: number | null; source: Source }   // null: nothing to compare with
@@ -125,7 +126,8 @@ interface Ga4Export {
   siteKey: string;
   propertyId: string;
   generatedAt: string;                      // ISO date-time
-  period: { start: IsoDate; end: IsoDate }; // last 30 days, ending yesterday
+  periodDays: number;                       // must equal the data run's WINDOW_DAYS (90)
+  period: { start: IsoDate; end: IsoDate }; // the window, ending yesterday
   pages: { path: string; engagementRate: number }[];   // 0–1; no page views (those are Siteimprove's)
   searchTerms: { term: string; count: number }[];      // 5+ searches, personal-looking terms removed
   dropped: { searchTerms: number; rare: number; personal: number; rareByCount: Record<string, number> };  // counts only, never the terms

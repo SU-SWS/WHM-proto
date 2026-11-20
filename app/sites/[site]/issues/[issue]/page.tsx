@@ -132,7 +132,7 @@ export default async function IssuePage({ params }: PageProps<"/sites/[site]/iss
         </p>
       ) : tracksHere ? (
         <>
-          <TrackedTable {...trackProps} thirdHeader={thirdHeader} viewsHeader="Page views, last 30 days" />
+          <TrackedTable {...trackProps} thirdHeader={thirdHeader} viewsHeader={`Page views, last ${site.topPages.periodDays ?? 30} days`} />
           <SourceNote className="meta mt-8" provider="siteimproveAnalytics" source={site.topPages.viewsSource} date={site.checkedAt} />
         </>
       ) : (
@@ -143,7 +143,7 @@ export default async function IssuePage({ params }: PageProps<"/sites/[site]/iss
           <thead>
             <tr>
               <th scope="col">Page</th>
-              <th scope="col" className="num">Page views, last 30 days</th>
+              <th scope="col" className="num">Page views, last {site.topPages.periodDays ?? 30} days</th>
               <th scope="col" className="num">{thirdHeader}</th>
             </tr>
           </thead>
