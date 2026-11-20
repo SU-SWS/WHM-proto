@@ -15,6 +15,7 @@ Newest decisions take priority over anything in the exported docs. Dates are 202
 | Nov 20 | **The Site Target Score history is in the API**: `a11y/overview/site_target/history`, daily from Aug 25, 2025. The trend uses it, so the “live points only” fallback isn’t needed. The daily recorder stays as a backup until task 6 reads the API history, then it can be retired. |
 | Nov 20 | The accessibility score comes from the same response as the Site Target Score (`accessibility_dci_score`), so both have one source and matching dates (Q-4). DCI history isn't used for it. |
 | Nov 20 | “Siteimprove check of [date]” uses the latest `check_date` from the QA check history. |
+| Nov 20 | Issues that come from the shared template are shown as **“SWS is handling this”**, not as owner issues. That covers rules found on all or nearly all pages (such as the AAA target size, line height and enhanced contrast rules) and broken links in the shared Stanford header or footer. |
 | Nov 20 | `_siteimprove` deep links carry an `impmd=` value. Fixtures store it redacted, and no deep link is published until SWS confirms it isn't a credential. |
 | Nov 19 | Unreviewed SWS notes show a “Draft, not yet reviewed by SWS” label until `reviewedBySws` is true. |
 | Nov 19 | The Siteimprove API base URL for Stanford's account is **`https://api.us.siteimprove.com/v2`**, not the one in the exported prototype plan. To be confirmed with the first live call. |
@@ -50,5 +51,5 @@ Newest decisions take priority over anything in the exported docs. Dates are 202
 
 - Whether `impmd` in Siteimprove deep links is safe to publish.
 - The period parameter for Siteimprove Analytics, so page views cover the last 30 days.
-- How to classify live issues that come from the shared template, such as AAA rules on every page and footer links reported broken on every page: as SWS-handled, or hidden as likely false alarms.
+- The cutoff for “nearly all pages” when marking an issue as coming from the template.
 - What happens when a "Set aside" revisit date arrives (a Phase 1 interview question).
