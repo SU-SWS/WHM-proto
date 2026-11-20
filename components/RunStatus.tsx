@@ -1,17 +1,17 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
-import { BASE_PATH, REFRESH_WORKFLOW, REPO } from "@/lib/config";
-import type { Status } from "@/lib/data/types";
+import { useCallback, useEffect, useState } from "react";
+import { TableWrap } from "./TableWrap";
+import { BASE_PATH, REFRESH_WORKFLOW, REFRESH_WORKFLOW_URL, REPO } from "@/lib/config";
+import type { SiteRunStatus, Status } from "@/lib/data/types";
 import { formatDateTime } from "@/lib/format";
 
 interface GitHubRun {
   id: number;
-  status: "queued" | "in_progress" | "completed" | string;
-  conclusion: string | null;
+  status: string; // queued, waiting, pending, in_progress, completed
+  conclusion: string | null; // success, failure, cancelled, …
   html_url: string;
   created_at: string;
-  updated_at: string;
 }
 
 type RunState =
@@ -21,102 +21,231 @@ type RunState =
   | { kind: "unavailable" } // GitHub API error or rate limit
   | { kind: "run"; run: GitHubRun };
 
-// GitHub allows 60 unauthenticated API calls an hour per visitor, so check
-// GitHub once a minute while a run is active. The status file is ours and
-// can be checked more often.
-const GITHUB_EVERY_MS = 60_000;
-const STATUS_EVERY_MS = 20_000;
-const STOP_AFTER_MS = 30 * 60_000;
+export interface RunSite {
+  key: string;
+  name: string;
+  live: boolean;
+}
+
+// GitHub allows 60 unauthenticated API calls an hour per visitor. Checking
+// every 15 seconds while a run is expected uses about 40 calls for a typical
+// 10-minute run; the watch stops on its own after 20 minutes.
+const EVERY_MS = 15_000;
+const WATCH_FOR_MS = 20 * 60_000;
 
 /**
- * Shows the latest data run (AD-3): what GitHub Actions says about it, and
- * whether the published site has caught up (status.json carries the run ID).
+ * The data run panel (AD-2, AD-3): the "Start data run" link (Option A), the
+ * latest run's progress from GitHub, and each site's last result from the
+ * published status.json, all kept current while a run is going.
  */
-export function RunStatus({ initialStatus }: { initialStatus: Status }) {
+export function RunStatus({ initialStatus, sites }: { initialStatus: Status; sites: RunSite[] }) {
   const [status, setStatus] = useState(initialStatus);
   const [gh, setGh] = useState<RunState>({ kind: "loading" });
   const [checkedAt, setCheckedAt] = useState<Date | null>(null);
-  const started = useRef(0);
+  // Set when the admin selects "Start data run": keep checking until a newer run shows up and goes live.
+  const [expecting, setExpecting] = useState(false);
+  const [gaveUp, setGaveUp] = useState(false);
+  const [runIdAtStart, setRunIdAtStart] = useState<number | null>(null);
 
-  const checkGitHub = useCallback(
-    () =>
-      fetchLatestRun().then((r) => {
-        setGh(r);
-        setCheckedAt(new Date());
-      }),
-    [],
-  );
-  const checkStatus = useCallback(
-    () =>
-      fetchStatus().then((s) => {
-        if (s) setStatus(s);
-      }),
-    [],
-  );
-
-  const run = gh.kind === "run" ? gh.run : null;
-  const active = run !== null && run.status !== "completed";
-  // A finished run that the published status doesn't know about yet is still deploying.
-  const publishing = run !== null && run.status === "completed" && run.conclusion === "success" && String(run.id) !== status.runId;
-  const watching = active || publishing;
-
-  useEffect(() => {
-    started.current = Date.now();
-    let live = true;
-    fetchLatestRun().then((r) => {
-      if (!live) return;
-      setGh(r);
-      setCheckedAt(new Date());
-    });
-    return () => {
-      live = false;
-    };
+  const refresh = useCallback(async () => {
+    const [r, s] = await Promise.all([fetchLatestRun(), fetchStatus()]);
+    setGh(r);
+    if (s) setStatus(s);
+    setCheckedAt(new Date());
   }, []);
 
+  const run = gh.kind === "run" ? gh.run : null;
+  const awaitingNewRun = expecting && (run?.id ?? null) === runIdAtStart;
+  const stage = stageOf(run, status, awaitingNewRun);
+  // Also covers a run that was already going when the page opened.
+  const watching = !gaveUp && ["waiting", "queued", "running", "publishing"].includes(stage);
+
+  // Check once on load, and again whenever the admin comes back to this tab.
   useEffect(() => {
-    if (!watching || Date.now() - started.current > STOP_AFTER_MS) return;
-    const a = setInterval(checkGitHub, GITHUB_EVERY_MS);
-    const b = setInterval(checkStatus, STATUS_EVERY_MS);
+    let live = true;
+    Promise.all([fetchLatestRun(), fetchStatus()]).then(([r, s]) => {
+      if (!live) return;
+      setGh(r);
+      if (s) setStatus(s);
+      setCheckedAt(new Date());
+    });
+    const onVisible = () => document.visibilityState === "visible" && void refresh();
+    document.addEventListener("visibilitychange", onVisible);
     return () => {
-      clearInterval(a);
-      clearInterval(b);
+      live = false;
+      document.removeEventListener("visibilitychange", onVisible);
     };
-  }, [watching, checkGitHub, checkStatus]);
+  }, [refresh]);
+
+  // While a run is expected or going, check every 15 seconds, for up to 20 minutes.
+  useEffect(() => {
+    if (!watching) return;
+    const stopAt = Date.now() + WATCH_FOR_MS;
+    const t = setInterval(() => {
+      if (Date.now() < stopAt) return void refresh();
+      clearInterval(t);
+      setGaveUp(true);
+    }, EVERY_MS);
+    return () => clearInterval(t);
+  }, [watching, refresh]);
 
   return (
-    <div className="my-16 rounded border border-black-20 px-16 py-14">
-      <h3 className="mb-6 mt-0 text-18 font-bold">Latest data run</h3>
-      <div aria-live="polite">
-        <p className="mb-6">{describe(gh, publishing)}</p>
-        {run && (
-          <p className="mb-6 text-16 text-black-80">
-            Started {formatDateTime(run.created_at)}.{" "}
-            <a href={run.html_url}>See this run in GitHub</a>
-          </p>
+    <>
+      <p>
+        <a
+          className="btn"
+          href={REFRESH_WORKFLOW_URL}
+          target="_blank"
+          rel="noopener"
+          onClick={() => {
+            setRunIdAtStart(run?.id ?? null);
+            setExpecting(true);
+            setGaveUp(false);
+          }}
+        >
+          Start data run<span className="sr-only"> (opens GitHub in a new tab)</span>
+        </a>
+      </p>
+
+      <section aria-labelledby="run-heading" className="my-16 rounded border border-black-20 px-16 py-14">
+        <h3 id="run-heading" className="mb-8 mt-0 text-18 font-bold">
+          Latest data run
+        </h3>
+        <div aria-live="polite">
+          <p className="mb-8 font-semibold">{headline(gh, stage)}</p>
+          {stage !== "idle" && (gh.kind === "run" || gh.kind === "none") && <Steps stage={stage} />}
+          {run && !awaitingNewRun && (
+            <p className="mb-8 text-16 text-black-80">
+              Started {formatDateTime(run.created_at)}. <a href={run.html_url}>See this run in GitHub</a>
+            </p>
+          )}
+        </div>
+        <button
+          type="button"
+          className="btn-secondary"
+          onClick={() => {
+            setGaveUp(false);
+            void refresh();
+          }}
+        >
+          Check again
+        </button>
+        {checkedAt && (
+          <span className="ml-12 text-15 text-black-80">
+            Last checked {checkedAt.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit", second: "2-digit" })}
+            {watching ? ". Checking every 15 seconds." : "."}
+          </span>
         )}
-        <p className="mb-10 text-16 text-black-80">
-          Published data: {status.runId ? `from run ${status.runId}, finished ${status.finishedAt ? formatDateTime(status.finishedAt) : "at an unknown time"}.` : "no data run has been published yet. The site shows the committed sample data."}
-        </p>
-      </div>
-      <button
-        type="button"
-        className="btn-secondary"
-        onClick={() => {
-          started.current = Date.now();
-          void checkGitHub();
-          void checkStatus();
-        }}
-      >
-        Check again
-      </button>
-      {checkedAt && (
-        <span className="ml-12 text-15 text-black-80">
-          Last checked {checkedAt.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit" })}
-          {watching ? ". Checking every minute while the run is going." : "."}
-        </span>
-      )}
-    </div>
+      </section>
+
+      <h3 className="subheading">Last result for each site</h3>
+      <p className="meta mb-12">
+        {status.finishedAt
+          ? `From the data run that finished ${formatDateTime(status.finishedAt)}.`
+          : "No data run has been published yet. The site shows the committed sample data."}
+      </p>
+      <TableWrap label="Last result for each site">
+        <table className="data-table">
+          <thead>
+            <tr>
+              <th scope="col">Site</th>
+              <th scope="col">Data</th>
+              <th scope="col">Result</th>
+              <th scope="col">Finished</th>
+            </tr>
+          </thead>
+          <tbody>
+            {sites.map((s) => {
+              const r = status.sites[s.key];
+              return (
+                <tr key={s.key}>
+                  <th scope="row" className="!bg-transparent font-normal">
+                    {s.name}
+                  </th>
+                  <td>{r?.source === "live" ? "Live Siteimprove data" : "Sample data"}</td>
+                  <td>{resultText(r, s.live)}</td>
+                  <td>{r?.finishedAt ? formatDateTime(r.finishedAt) : "Not run yet"}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </TableWrap>
+    </>
   );
+}
+
+type Stage = "waiting" | "queued" | "running" | "publishing" | "live" | "failed" | "idle";
+
+function stageOf(run: GitHubRun | null, status: Status, awaitingNewRun: boolean): Stage {
+  if (awaitingNewRun) return "waiting";
+  if (!run) return "idle";
+  if (run.status !== "completed") return run.status === "in_progress" ? "running" : "queued";
+  if (run.conclusion !== "success") return "failed";
+  // The workflow finishes after it deploys, so by now the new status.json is usually live.
+  return String(run.id) === status.runId ? "live" : "publishing";
+}
+
+const STEPS: { label: string; doneFrom: Stage[]; nowAt: Stage[] }[] = [
+  { label: "Run started in GitHub", doneFrom: ["running", "publishing", "live"], nowAt: ["waiting", "queued"] },
+  { label: "Fetching data and building the site", doneFrom: ["publishing", "live"], nowAt: ["running"] },
+  { label: "Publishing the updated site", doneFrom: ["live"], nowAt: ["publishing"] },
+  { label: "Live on this site", doneFrom: ["live"], nowAt: [] },
+];
+
+function Steps({ stage }: { stage: Stage }) {
+  return (
+    <ol className="mb-10 list-none p-0">
+      {STEPS.map((s) => {
+        const state = s.doneFrom.includes(stage) ? "Done" : s.nowAt.includes(stage) ? "In progress" : "Not yet";
+        return (
+          <li key={s.label} className="mb-4 flex items-center gap-10">
+            <span
+              aria-hidden="true"
+              className={`inline-block size-12 shrink-0 rounded-full border-2 ${
+                state === "Done" ? "border-palo-alto bg-palo-alto" : state === "In progress" ? "border-poppy bg-sample-tint" : "border-black-20"
+              }`}
+            />
+            <span>
+              {s.label}: <span className={state === "Not yet" ? "text-black-80" : "font-semibold"}>{state.toLowerCase()}</span>
+            </span>
+          </li>
+        );
+      })}
+    </ol>
+  );
+}
+
+function headline(gh: RunState, stage: Stage): string {
+  if (gh.kind === "loading") return "Checking GitHub for the latest run…";
+  if (gh.kind === "missing") return "The data run workflow isn’t set up in the repo yet.";
+  if (gh.kind === "unavailable") return "GitHub didn’t answer, so the run status can’t be shown right now. Try “Check again” in a minute.";
+  if (gh.kind === "none" && stage !== "waiting") return "No data run has started yet.";
+  switch (stage) {
+    case "waiting":
+      return "Waiting for the run to start. In GitHub, select “Run workflow.”";
+    case "queued":
+      return "Queued. GitHub will start the run shortly.";
+    case "running":
+      return "Running. This usually takes a few minutes.";
+    case "publishing":
+      return "Finished in GitHub. The updated site is still publishing.";
+    case "live":
+      return "Complete. The site shows the data from this run.";
+    case "failed":
+      return "The run didn’t finish. The site still shows the last good data. See the run in GitHub for the reason.";
+    default:
+      return "No data run has started yet.";
+  }
+}
+
+function resultText(r: SiteRunStatus | undefined, live: boolean): string {
+  if (!r) return "Not in the last run";
+  if (r.result === "complete") return "Complete";
+  if (r.result === "failed") return `Failed${r.reason ? `: ${r.reason}` : ""}. The site shows the last good data.`;
+  return live
+    ? "Not fetched live yet. The site shows sample data until the first live run."
+    : "Sample data. This site isn’t fetched live.";
 }
 
 async function fetchLatestRun(): Promise<RunState> {
@@ -141,30 +270,5 @@ async function fetchStatus(): Promise<Status | null> {
     return res.ok ? ((await res.json()) as Status) : null;
   } catch {
     return null;
-  }
-}
-
-function describe(gh: RunState, publishing: boolean): string {
-  switch (gh.kind) {
-    case "loading":
-      return "Checking GitHub for the latest run…";
-    case "missing":
-      return "The data run workflow isn’t set up in the repo yet.";
-    case "none":
-      return "No data run has started yet.";
-    case "unavailable":
-      return "GitHub didn’t answer, so the run status can’t be shown right now. Try “Check again” in a minute.";
-    case "run": {
-      const { status, conclusion } = gh.run;
-      if (status === "queued" || status === "waiting" || status === "pending") return "Queued. GitHub will start the run shortly.";
-      if (status !== "completed") return "Running. This usually takes a few minutes.";
-      if (conclusion === "success") {
-        return publishing
-          ? "Finished in GitHub. The updated site is still publishing, and this page will update when it’s live."
-          : "Complete. The site shows the data from this run.";
-      }
-      if (conclusion === "cancelled") return "Cancelled. The site still shows the last good data.";
-      return "Failed. The site still shows the last good data. See the run in GitHub for the reason.";
-    }
   }
 }

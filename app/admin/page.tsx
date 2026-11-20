@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
 import { RunStatus } from "@/components/RunStatus";
 import { TableWrap } from "@/components/TableWrap";
-import { REFRESH_WORKFLOW_URL } from "@/lib/config";
 import { getRegistry, getStatus } from "@/lib/data/load";
-import type { SiteRunStatus } from "@/lib/data/types";
 import { ownerLabels } from "@/lib/data/view";
-import { formatDateTime, hostOf } from "@/lib/format";
+import { hostOf } from "@/lib/format";
 
 export const metadata: Metadata = { title: "Admin" };
 
@@ -31,43 +29,15 @@ export default function AdminPage() {
           Select “Run workflow,” choose a site to refresh or leave it as <code>all</code>, and select “Run workflow”
           again.
         </li>
-        <li>Come back to this page. It shows when the run finishes and the updated site is live.</li>
+        <li>
+          Come back to this page. The “Latest data run” box below follows the run step by step, and the table under
+          it updates when the new data is live.
+        </li>
       </ol>
-      <p>
-        <a className="btn" href={REFRESH_WORKFLOW_URL} target="_blank" rel="noopener">
-          Start data run<span className="sr-only"> (opens GitHub in a new tab)</span>
-        </a>
-      </p>
-      <RunStatus initialStatus={status} />
-
-      <h3 className="subheading">Last result for each site</h3>
-      <TableWrap label="Last result for each site">
-        <table className="data-table">
-          <thead>
-            <tr>
-              <th scope="col">Site</th>
-              <th scope="col">Data</th>
-              <th scope="col">Result</th>
-              <th scope="col">Finished</th>
-            </tr>
-          </thead>
-          <tbody>
-            {registry.sites.map((s) => {
-              const r = status.sites[s.key];
-              return (
-                <tr key={s.key}>
-                  <th scope="row" className="!bg-transparent font-normal">
-                    {s.name}
-                  </th>
-                  <td>{r?.source === "live" ? "Live Siteimprove data" : "Sample data"}</td>
-                  <td>{resultText(r, s.live)}</td>
-                  <td>{r?.finishedAt ? formatDateTime(r.finishedAt) : "Not run yet"}</td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
-      </TableWrap>
+      <RunStatus
+        initialStatus={status}
+        sites={registry.sites.map((s) => ({ key: s.key, name: s.name, live: s.live }))}
+      />
 
       <h2 className="section-heading">Registry</h2>
       <p className="meta mb-12">
@@ -106,11 +76,3 @@ export default function AdminPage() {
   );
 }
 
-function resultText(r: SiteRunStatus | undefined, live: boolean): string {
-  if (!r) return "Not in the last run";
-  if (r.result === "complete") return "Complete";
-  if (r.result === "failed") return `Failed${r.reason ? `: ${r.reason}` : ""}. The site shows the last good data.`;
-  return live
-    ? "Not fetched live yet. The site shows sample data until the first live run."
-    : "Sample data. This site isn’t fetched live.";
-}
