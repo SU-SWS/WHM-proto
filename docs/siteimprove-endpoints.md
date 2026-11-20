@@ -17,7 +17,7 @@ Drawn from the SWS data inventory (Oct 15, 2026) and the prototype plan. "Confir
 | 0 | Site list and IDs | `GET /sites` | SI-01 | Confirmed, used by SWS | Finds `site_id` for sitesuserguide. Returns `items[]` with `id`, `url`, `site_name`, `pages`, `visits`. The SWS script paged with `page_size=500` and stopped when a page came back short. |
 | 0 | One site | `GET /sites/{site_id}` | SI-01 | Used by SWS | Same fields as an item in `/sites` |
 | 1 | Site Target Score (current) | `GET /sites/{site_id}/a11y/overview/site_target/overview` | none | Used by SWS | Returns `site_target_percentage` (the Site Target Score) and `accessibility_dci_score`. Other fields unknown until a fixture is saved. The SWS script read missing values with `\|\| ''`, which would also blank a real score of 0; don't copy that. |
-| 1 | Site Target Score history | `[CONFIRM ENDPOINT]` | none | Unknown | The endpoint above gives the current value only, as far as the SWS script shows. Check the fixture and Swagger for a history or date parameter. If none exists, history has to be built up from our own weekly runs. |
+| 1 | Site Target Score history | none | none | Not available | SWS believes the API has no history for this score (Nov 19). WHM has to build the history itself by saving the score on each data run. |
 | 2 | Headline scores (DCI overview) | `GET /sites/{site_id}/dci/overview` | SI-02, SI-04 | Inferred | Overall plus accessibility, QA and SEO components |
 | 2 | Score history | `GET /sites/{site_id}/dci/history` | SI-03 | Confirmed | Supports `group_id`, `page`, `page_size`. Check how far back it goes. |
 | 2 | Accessibility score history | under `/sites/{site_id}/a11y/…` | SI-09 | Inferred | If absent, derive from DCI history |
