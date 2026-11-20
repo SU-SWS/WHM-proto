@@ -30,16 +30,27 @@ var MAX_TERMS = 50;
 
 function dryRun() {
   var file = buildFile_();
-  Logger.log(JSON.stringify(file, null, 2));
-  Logger.log("Dry run: %s pages, %s search terms kept, %s dropped. Nothing was committed.",
-    file.pages.length, file.searchTerms.length, file.dropped.searchTerms);
+  var d = file.dropped;
+  // A summary, not the whole file: Apps Script's log cuts off long output.
+  // Dropped terms are counted but never printed.
+  Logger.log([
+    "Dry run for " + file.siteKey + ", " + file.period.start + " to " + file.period.end + ". Nothing was committed.",
+    "Pages: " + String(file.pages.length) + ". First 10:",
+    file.pages.slice(0, 10).map(function (p) { return "  " + p.path + "  " + String(p.engagementRate); }).join("\n"),
+    "Search terms kept: " + String(file.searchTerms.length),
+    file.searchTerms.map(function (t) { return "  " + t.term + "  " + String(t.count); }).join("\n"),
+    "Search terms dropped: " + String(d.searchTerms) + " (" + String(d.rare) + " searched fewer than " + String(MIN_SEARCHES) +
+      " times, " + String(d.personal) + " looked personal)",
+    "Dropped for rarity, by number of searches: " + Object.keys(d.rareByCount).sort(function (a, b) { return b - a; })
+      .map(function (k) { return String(k) + "× " + String(d.rareByCount[k]) + " terms"; }).join(", ")
+  ].join("\n"));
 }
 
 function exportAndCommit() {
   var file = buildFile_();
   commit_("data/ga4/" + SITE_KEY + ".json", JSON.stringify(file, null, 2) + "\n",
     "GA4 export for " + SITE_KEY + ", " + file.period.start + " to " + file.period.end);
-  Logger.log("Committed: %s pages, %s search terms.", file.pages.length, file.searchTerms.length);
+  Logger.log("Committed: " + String(file.pages.length) + " pages, " + String(file.searchTerms.length) + " search terms.");
 }
 
 function installWeeklyTrigger() {
@@ -84,6 +95,14 @@ function buildFile_() {
     return { term: r.dimensionValues[0].value.trim().toLowerCase(), count: Number(r.metricValues[0].value) };
   });
   var kept = all.filter(function (t) { return isPublishable_(t); }).slice(0, MAX_TERMS);
+  // Counts only, for the dry-run summary; the dropped terms themselves are never kept.
+  var rare = 0, personal = 0, rareByCount = {};
+  all.forEach(function (t) {
+    if (isPublishable_(t)) return;
+    if (looksPersonal_(t.term)) { personal++; return; }
+    rare++;
+    rareByCount[t.count] = (rareByCount[t.count] || 0) + 1;
+  });
 
   var tz = "America/Los_Angeles";
   var day = 24 * 60 * 60 * 1000;
@@ -98,17 +117,20 @@ function buildFile_() {
     },
     pages: pages,
     searchTerms: kept,
-    dropped: { searchTerms: all.length - kept.length }
+    dropped: { searchTerms: all.length - kept.length, rare: rare, personal: personal, rareByCount: rareByCount }
   };
 }
 
 /** Site search terms may be public only if they don't look personal and are common (decisions, Nov 20). */
 function isPublishable_(t) {
-  if (!t.term || t.count < MIN_SEARCHES) return false;
-  if (t.term.indexOf("@") !== -1) return false; // email addresses
-  if (/\d{5,}/.test(t.term.replace(/[\s().-]/g, ""))) return false; // phone, ID or card numbers
-  if (/(https?:\/\/|www\.)/.test(t.term)) return false; // URLs
-  return true;
+  return !!t.term && t.count >= MIN_SEARCHES && !looksPersonal_(t.term);
+}
+
+function looksPersonal_(term) {
+  if (term.indexOf("@") !== -1) return true; // email addresses
+  if (/\d{5,}/.test(term.replace(/[\s().-]/g, ""))) return true; // phone, ID or card numbers
+  if (/(https?:\/\/|www\.)/.test(term)) return true; // URLs
+  return false;
 }
 
 function commit_(path, text, message) {

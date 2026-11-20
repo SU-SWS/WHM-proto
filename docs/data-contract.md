@@ -128,7 +128,7 @@ interface Ga4Export {
   period: { start: IsoDate; end: IsoDate }; // last 30 days, ending yesterday
   pages: { path: string; engagementRate: number }[];   // 0–1; no page views (those are Siteimprove's)
   searchTerms: { term: string; count: number }[];      // 5+ searches, personal-looking terms removed
-  dropped: { searchTerms: number };
+  dropped: { searchTerms: number; rare: number; personal: number; rareByCount: Record<string, number> };  // counts only, never the terms
 }
 
 // data/{sample|published}/status.json
