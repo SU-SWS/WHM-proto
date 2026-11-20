@@ -1,0 +1,3182 @@
+{
+  "items": [
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.33,
+      "site_target_percentage": 0,
+      "timestamp": "2025-08-25 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.33,
+      "site_target_percentage": 0,
+      "timestamp": "2025-08-26 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.33,
+      "site_target_percentage": 0,
+      "timestamp": "2025-08-27 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.32,
+      "site_target_percentage": 0,
+      "timestamp": "2025-08-28 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 85.72,
+      "site_target_percentage": 0,
+      "timestamp": "2025-08-29 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 85.72,
+      "site_target_percentage": 0,
+      "timestamp": "2025-08-30 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 85.72,
+      "site_target_percentage": 0,
+      "timestamp": "2025-08-31 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 85.72,
+      "site_target_percentage": 0,
+      "timestamp": "2025-09-01 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 85.73,
+      "site_target_percentage": 0,
+      "timestamp": "2025-09-02 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 85.78,
+      "site_target_percentage": 0,
+      "timestamp": "2025-09-03 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.57,
+      "site_target_percentage": 0,
+      "timestamp": "2025-09-04 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 88.32,
+      "site_target_percentage": 0,
+      "timestamp": "2025-09-05 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 88.38,
+      "site_target_percentage": 0,
+      "timestamp": "2025-09-06 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 88.43,
+      "site_target_percentage": 0,
+      "timestamp": "2025-09-07 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 88.43,
+      "site_target_percentage": 0,
+      "timestamp": "2025-09-08 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 88.4,
+      "site_target_percentage": 0,
+      "timestamp": "2025-09-09 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 88.36,
+      "site_target_percentage": 0,
+      "timestamp": "2025-09-10 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 88.33,
+      "site_target_percentage": 0,
+      "timestamp": "2025-09-11 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 88.28,
+      "site_target_percentage": 0,
+      "timestamp": "2025-09-12 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 88.27,
+      "site_target_percentage": 0,
+      "timestamp": "2025-09-13 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 88.25,
+      "site_target_percentage": 0,
+      "timestamp": "2025-09-14 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 88.25,
+      "site_target_percentage": 0,
+      "timestamp": "2025-09-15 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 88.18,
+      "site_target_percentage": 0,
+      "timestamp": "2025-09-16 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 88.39,
+      "site_target_percentage": 0,
+      "timestamp": "2025-09-17 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 88.43,
+      "site_target_percentage": 0,
+      "timestamp": "2025-09-18 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 88.26,
+      "site_target_percentage": 0,
+      "timestamp": "2025-09-19 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 88.15,
+      "site_target_percentage": 0,
+      "timestamp": "2025-09-20 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 88.14,
+      "site_target_percentage": 0,
+      "timestamp": "2025-09-21 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 88.14,
+      "site_target_percentage": 0,
+      "timestamp": "2025-09-22 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 88.18,
+      "site_target_percentage": 0,
+      "timestamp": "2025-09-23 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 88.26,
+      "site_target_percentage": 0,
+      "timestamp": "2025-09-24 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 88.18,
+      "site_target_percentage": 0,
+      "timestamp": "2025-09-25 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 88.18,
+      "site_target_percentage": 0,
+      "timestamp": "2025-09-26 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.99,
+      "site_target_percentage": 0,
+      "timestamp": "2025-09-27 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.98,
+      "site_target_percentage": 0,
+      "timestamp": "2025-09-28 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.98,
+      "site_target_percentage": 0,
+      "timestamp": "2025-09-29 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.89,
+      "site_target_percentage": 0,
+      "timestamp": "2025-09-30 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.88,
+      "site_target_percentage": 0,
+      "timestamp": "2025-10-01 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.95,
+      "site_target_percentage": 0,
+      "timestamp": "2025-10-02 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.74,
+      "site_target_percentage": 0,
+      "timestamp": "2025-10-03 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.63,
+      "site_target_percentage": 0,
+      "timestamp": "2025-10-04 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.57,
+      "site_target_percentage": 0,
+      "timestamp": "2025-10-05 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.56,
+      "site_target_percentage": 0,
+      "timestamp": "2025-10-06 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.44,
+      "site_target_percentage": 0,
+      "timestamp": "2025-10-07 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.41,
+      "site_target_percentage": 0,
+      "timestamp": "2025-10-08 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.6,
+      "site_target_percentage": 0,
+      "timestamp": "2025-10-09 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.57,
+      "site_target_percentage": 0,
+      "timestamp": "2025-10-10 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.58,
+      "site_target_percentage": 0,
+      "timestamp": "2025-10-11 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.56,
+      "site_target_percentage": 0,
+      "timestamp": "2025-10-12 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.54,
+      "site_target_percentage": 0,
+      "timestamp": "2025-10-13 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.46,
+      "site_target_percentage": 0,
+      "timestamp": "2025-10-14 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.4,
+      "site_target_percentage": 0,
+      "timestamp": "2025-10-15 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.36,
+      "site_target_percentage": 0,
+      "timestamp": "2025-10-16 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.33,
+      "site_target_percentage": 0,
+      "timestamp": "2025-10-17 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.33,
+      "site_target_percentage": 0,
+      "timestamp": "2025-10-18 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.32,
+      "site_target_percentage": 0,
+      "timestamp": "2025-10-19 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.31,
+      "site_target_percentage": 0,
+      "timestamp": "2025-10-20 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.33,
+      "site_target_percentage": 0,
+      "timestamp": "2025-10-21 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.33,
+      "site_target_percentage": 0,
+      "timestamp": "2025-10-22 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.32,
+      "site_target_percentage": 0,
+      "timestamp": "2025-10-23 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.33,
+      "site_target_percentage": 0,
+      "timestamp": "2025-10-24 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.33,
+      "site_target_percentage": 0,
+      "timestamp": "2025-10-25 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.33,
+      "site_target_percentage": 0,
+      "timestamp": "2025-10-26 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.33,
+      "site_target_percentage": 0,
+      "timestamp": "2025-10-27 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.34,
+      "site_target_percentage": 0,
+      "timestamp": "2025-10-28 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.36,
+      "site_target_percentage": 0,
+      "timestamp": "2025-10-29 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.36,
+      "site_target_percentage": 0,
+      "timestamp": "2025-10-30 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.36,
+      "site_target_percentage": 0,
+      "timestamp": "2025-10-31 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.35,
+      "site_target_percentage": 0,
+      "timestamp": "2025-11-01 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.35,
+      "site_target_percentage": 0,
+      "timestamp": "2025-11-02 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.36,
+      "site_target_percentage": 0,
+      "timestamp": "2025-11-03 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.36,
+      "site_target_percentage": 0,
+      "timestamp": "2025-11-04 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.38,
+      "site_target_percentage": 0,
+      "timestamp": "2025-11-05 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.38,
+      "site_target_percentage": 0,
+      "timestamp": "2025-11-06 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.37,
+      "site_target_percentage": 0,
+      "timestamp": "2025-11-07 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.4,
+      "site_target_percentage": 0,
+      "timestamp": "2025-11-08 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.4,
+      "site_target_percentage": 0,
+      "timestamp": "2025-11-09 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.41,
+      "site_target_percentage": 0,
+      "timestamp": "2025-11-10 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.41,
+      "site_target_percentage": 0,
+      "timestamp": "2025-11-11 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.41,
+      "site_target_percentage": 0,
+      "timestamp": "2025-11-12 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.41,
+      "site_target_percentage": 0,
+      "timestamp": "2025-11-13 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.39,
+      "site_target_percentage": 0,
+      "timestamp": "2025-11-14 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.35,
+      "site_target_percentage": 0,
+      "timestamp": "2025-11-15 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.37,
+      "site_target_percentage": 0,
+      "timestamp": "2025-11-16 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.43,
+      "site_target_percentage": 0,
+      "timestamp": "2025-11-17 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.42,
+      "site_target_percentage": 0,
+      "timestamp": "2025-11-18 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.42,
+      "site_target_percentage": 0,
+      "timestamp": "2025-11-19 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.38,
+      "site_target_percentage": 0,
+      "timestamp": "2025-11-20 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.37,
+      "site_target_percentage": 0,
+      "timestamp": "2025-11-21 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.38,
+      "site_target_percentage": 0,
+      "timestamp": "2025-11-22 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.39,
+      "site_target_percentage": 0,
+      "timestamp": "2025-11-23 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.44,
+      "site_target_percentage": 0,
+      "timestamp": "2025-11-24 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.43,
+      "site_target_percentage": 0,
+      "timestamp": "2025-11-25 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.43,
+      "site_target_percentage": 0,
+      "timestamp": "2025-11-26 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.46,
+      "site_target_percentage": 0,
+      "timestamp": "2025-11-27 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.52,
+      "site_target_percentage": 0,
+      "timestamp": "2025-11-28 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.51,
+      "site_target_percentage": 0,
+      "timestamp": "2025-11-29 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.52,
+      "site_target_percentage": 0,
+      "timestamp": "2025-11-30 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.52,
+      "site_target_percentage": 0,
+      "timestamp": "2025-12-01 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.52,
+      "site_target_percentage": 0,
+      "timestamp": "2025-12-02 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.52,
+      "site_target_percentage": 0,
+      "timestamp": "2025-12-03 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.55,
+      "site_target_percentage": 0,
+      "timestamp": "2025-12-04 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.7,
+      "site_target_percentage": 0,
+      "timestamp": "2025-12-05 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.89,
+      "site_target_percentage": 0,
+      "timestamp": "2025-12-06 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 88.01,
+      "site_target_percentage": 0,
+      "timestamp": "2025-12-07 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 88.06,
+      "site_target_percentage": 0,
+      "timestamp": "2025-12-08 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 88.18,
+      "site_target_percentage": 0,
+      "timestamp": "2025-12-09 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 88.68,
+      "site_target_percentage": 0,
+      "timestamp": "2025-12-10 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 94.28,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 88.9,
+      "site_target_percentage": 0,
+      "timestamp": "2025-12-11 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 94.28,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 88.86,
+      "site_target_percentage": 0,
+      "timestamp": "2025-12-12 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 94.28,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 88.8,
+      "site_target_percentage": 0,
+      "timestamp": "2025-12-13 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 94.28,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 88.8,
+      "site_target_percentage": 0,
+      "timestamp": "2025-12-14 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 94.28,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 88.79,
+      "site_target_percentage": 0,
+      "timestamp": "2025-12-15 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 94.28,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 88.8,
+      "site_target_percentage": 0,
+      "timestamp": "2025-12-16 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 94.28,
+      "accessibility_dci_target_score": 94.38,
+      "accessibility_industry_benchmark_score": 88.81,
+      "site_target_percentage": 98.57,
+      "timestamp": "2025-12-17 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 94.28,
+      "accessibility_dci_target_score": 94.38,
+      "accessibility_industry_benchmark_score": 88.8,
+      "site_target_percentage": 98.57,
+      "timestamp": "2025-12-18 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 94.28,
+      "accessibility_dci_target_score": 94.38,
+      "accessibility_industry_benchmark_score": 88.79,
+      "site_target_percentage": 98.57,
+      "timestamp": "2025-12-19 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 94.28,
+      "accessibility_dci_target_score": 94.38,
+      "accessibility_industry_benchmark_score": 88.78,
+      "site_target_percentage": 98.57,
+      "timestamp": "2025-12-20 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.22,
+      "accessibility_dci_target_score": 94.38,
+      "accessibility_industry_benchmark_score": 88.76,
+      "site_target_percentage": 98.57,
+      "timestamp": "2025-12-21 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.22,
+      "accessibility_dci_target_score": 94.38,
+      "accessibility_industry_benchmark_score": 88.76,
+      "site_target_percentage": 99.84,
+      "timestamp": "2025-12-22 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.22,
+      "accessibility_dci_target_score": 94.38,
+      "accessibility_industry_benchmark_score": 88.76,
+      "site_target_percentage": 99.84,
+      "timestamp": "2025-12-23 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.22,
+      "accessibility_dci_target_score": 94.38,
+      "accessibility_industry_benchmark_score": 88.75,
+      "site_target_percentage": 99.84,
+      "timestamp": "2025-12-24 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.22,
+      "accessibility_dci_target_score": 94.38,
+      "accessibility_industry_benchmark_score": 88.75,
+      "site_target_percentage": 99.84,
+      "timestamp": "2025-12-25 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 94.25,
+      "accessibility_dci_target_score": 94.38,
+      "accessibility_industry_benchmark_score": 88.75,
+      "site_target_percentage": 99.84,
+      "timestamp": "2025-12-26 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 94.25,
+      "accessibility_dci_target_score": 94.38,
+      "accessibility_industry_benchmark_score": 88.75,
+      "site_target_percentage": 99.84,
+      "timestamp": "2025-12-27 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 94.25,
+      "accessibility_dci_target_score": 94.32,
+      "accessibility_industry_benchmark_score": 88.75,
+      "site_target_percentage": 98.52,
+      "timestamp": "2025-12-28 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 94.25,
+      "accessibility_dci_target_score": 94.32,
+      "accessibility_industry_benchmark_score": 88.75,
+      "site_target_percentage": 98.52,
+      "timestamp": "2025-12-29 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 94.25,
+      "accessibility_dci_target_score": 94.32,
+      "accessibility_industry_benchmark_score": 88.75,
+      "site_target_percentage": 98.52,
+      "timestamp": "2025-12-30 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.12,
+      "accessibility_dci_target_score": 94.32,
+      "accessibility_industry_benchmark_score": 88.75,
+      "site_target_percentage": 98.52,
+      "timestamp": "2025-12-31 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.12,
+      "accessibility_dci_target_score": 94.52,
+      "accessibility_industry_benchmark_score": 88.75,
+      "site_target_percentage": 98.52,
+      "timestamp": "2026-01-01 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.12,
+      "accessibility_dci_target_score": 94.52,
+      "accessibility_industry_benchmark_score": 88.74,
+      "site_target_percentage": 98.52,
+      "timestamp": "2026-01-02 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.12,
+      "accessibility_dci_target_score": 94.52,
+      "accessibility_industry_benchmark_score": 88.75,
+      "site_target_percentage": 98.52,
+      "timestamp": "2026-01-03 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.12,
+      "accessibility_dci_target_score": 94.52,
+      "accessibility_industry_benchmark_score": 88.74,
+      "site_target_percentage": 98.52,
+      "timestamp": "2026-01-04 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.33,
+      "accessibility_dci_target_score": 94.52,
+      "accessibility_industry_benchmark_score": 88.74,
+      "site_target_percentage": 98.52,
+      "timestamp": "2026-01-05 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.33,
+      "accessibility_dci_target_score": 94.46,
+      "accessibility_industry_benchmark_score": 88.73,
+      "site_target_percentage": 98.3,
+      "timestamp": "2026-01-06 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.33,
+      "accessibility_dci_target_score": 94.46,
+      "accessibility_industry_benchmark_score": 88.72,
+      "site_target_percentage": 98.3,
+      "timestamp": "2026-01-07 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.33,
+      "accessibility_dci_target_score": 94.46,
+      "accessibility_industry_benchmark_score": 88.7,
+      "site_target_percentage": 98.3,
+      "timestamp": "2026-01-08 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.33,
+      "accessibility_dci_target_score": 94.46,
+      "accessibility_industry_benchmark_score": 88.72,
+      "site_target_percentage": 98.3,
+      "timestamp": "2026-01-09 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.08,
+      "accessibility_dci_target_score": 94.46,
+      "accessibility_industry_benchmark_score": 88.71,
+      "site_target_percentage": 98.3,
+      "timestamp": "2026-01-10 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.08,
+      "accessibility_dci_target_score": 94.46,
+      "accessibility_industry_benchmark_score": 88.7,
+      "site_target_percentage": 98.3,
+      "timestamp": "2026-01-11 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.08,
+      "accessibility_dci_target_score": 94.46,
+      "accessibility_industry_benchmark_score": 88.69,
+      "site_target_percentage": 98.3,
+      "timestamp": "2026-01-12 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.08,
+      "accessibility_dci_target_score": 94.46,
+      "accessibility_industry_benchmark_score": 88.68,
+      "site_target_percentage": 98.3,
+      "timestamp": "2026-01-13 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.08,
+      "accessibility_dci_target_score": 94.55,
+      "accessibility_industry_benchmark_score": 88.7,
+      "site_target_percentage": 98.42,
+      "timestamp": "2026-01-14 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.27,
+      "accessibility_dci_target_score": 94.55,
+      "accessibility_industry_benchmark_score": 88.7,
+      "site_target_percentage": 98.42,
+      "timestamp": "2026-01-15 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.27,
+      "accessibility_dci_target_score": 94.55,
+      "accessibility_industry_benchmark_score": 88.7,
+      "site_target_percentage": 98.42,
+      "timestamp": "2026-01-16 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.27,
+      "accessibility_dci_target_score": 94.39,
+      "accessibility_industry_benchmark_score": 88.71,
+      "site_target_percentage": 98.47,
+      "timestamp": "2026-01-17 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.27,
+      "accessibility_dci_target_score": 94.39,
+      "accessibility_industry_benchmark_score": 88.71,
+      "site_target_percentage": 98.47,
+      "timestamp": "2026-01-18 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.27,
+      "accessibility_dci_target_score": 94.39,
+      "accessibility_industry_benchmark_score": 88.71,
+      "site_target_percentage": 98.47,
+      "timestamp": "2026-01-19 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.16,
+      "accessibility_dci_target_score": 94.39,
+      "accessibility_industry_benchmark_score": 88.71,
+      "site_target_percentage": 98.47,
+      "timestamp": "2026-01-20 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.16,
+      "accessibility_dci_target_score": 94.39,
+      "accessibility_industry_benchmark_score": 88.71,
+      "site_target_percentage": 98.47,
+      "timestamp": "2026-01-21 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.16,
+      "accessibility_dci_target_score": 94.39,
+      "accessibility_industry_benchmark_score": 88.71,
+      "site_target_percentage": 98.47,
+      "timestamp": "2026-01-22 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.16,
+      "accessibility_dci_target_score": 94.39,
+      "accessibility_industry_benchmark_score": 88.69,
+      "site_target_percentage": 98.47,
+      "timestamp": "2026-01-23 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.16,
+      "accessibility_dci_target_score": 94.24,
+      "accessibility_industry_benchmark_score": 88.68,
+      "site_target_percentage": 98.07,
+      "timestamp": "2026-01-24 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.69,
+      "accessibility_dci_target_score": 94.24,
+      "accessibility_industry_benchmark_score": 88.68,
+      "site_target_percentage": 98.07,
+      "timestamp": "2026-01-25 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.69,
+      "accessibility_dci_target_score": 94.39,
+      "accessibility_industry_benchmark_score": 88.68,
+      "site_target_percentage": 99,
+      "timestamp": "2026-01-26 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.69,
+      "accessibility_dci_target_score": 94.39,
+      "accessibility_industry_benchmark_score": 88.66,
+      "site_target_percentage": 99,
+      "timestamp": "2026-01-27 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.69,
+      "accessibility_dci_target_score": 94.39,
+      "accessibility_industry_benchmark_score": 88.89,
+      "site_target_percentage": 99,
+      "timestamp": "2026-01-28 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.69,
+      "accessibility_dci_target_score": 94.39,
+      "accessibility_industry_benchmark_score": 88.85,
+      "site_target_percentage": 99,
+      "timestamp": "2026-01-29 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.59,
+      "accessibility_dci_target_score": 94.39,
+      "accessibility_industry_benchmark_score": 88.81,
+      "site_target_percentage": 99,
+      "timestamp": "2026-01-30 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.59,
+      "accessibility_dci_target_score": 94.27,
+      "accessibility_industry_benchmark_score": 88.8,
+      "site_target_percentage": 98.24,
+      "timestamp": "2026-01-31 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.59,
+      "accessibility_dci_target_score": 94.27,
+      "accessibility_industry_benchmark_score": 88.79,
+      "site_target_percentage": 98.24,
+      "timestamp": "2026-02-01 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.59,
+      "accessibility_dci_target_score": 94.27,
+      "accessibility_industry_benchmark_score": 88.73,
+      "site_target_percentage": 98.24,
+      "timestamp": "2026-02-02 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.59,
+      "accessibility_dci_target_score": 94.27,
+      "accessibility_industry_benchmark_score": 88.69,
+      "site_target_percentage": 98.24,
+      "timestamp": "2026-02-03 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.85,
+      "accessibility_dci_target_score": 94.27,
+      "accessibility_industry_benchmark_score": 88.69,
+      "site_target_percentage": 98.24,
+      "timestamp": "2026-02-04 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.85,
+      "accessibility_dci_target_score": 94.27,
+      "accessibility_industry_benchmark_score": 88.69,
+      "site_target_percentage": 98.24,
+      "timestamp": "2026-02-05 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.85,
+      "accessibility_dci_target_score": 94.27,
+      "accessibility_industry_benchmark_score": 88.69,
+      "site_target_percentage": 98.24,
+      "timestamp": "2026-02-06 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.85,
+      "accessibility_dci_target_score": 94.27,
+      "accessibility_industry_benchmark_score": 88.69,
+      "site_target_percentage": 98.24,
+      "timestamp": "2026-02-07 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.85,
+      "accessibility_dci_target_score": 94.27,
+      "accessibility_industry_benchmark_score": 88.69,
+      "site_target_percentage": 98.24,
+      "timestamp": "2026-02-08 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.85,
+      "accessibility_dci_target_score": 94.27,
+      "accessibility_industry_benchmark_score": 88.69,
+      "site_target_percentage": 98.24,
+      "timestamp": "2026-02-09 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.85,
+      "accessibility_dci_target_score": 94.27,
+      "accessibility_industry_benchmark_score": 88.69,
+      "site_target_percentage": 98.24,
+      "timestamp": "2026-02-10 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.85,
+      "accessibility_dci_target_score": 94.4,
+      "accessibility_industry_benchmark_score": 88.62,
+      "site_target_percentage": 99.84,
+      "timestamp": "2026-02-11 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 94.27,
+      "accessibility_dci_target_score": 94.4,
+      "accessibility_industry_benchmark_score": 88.68,
+      "site_target_percentage": 99.84,
+      "timestamp": "2026-02-12 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 94.27,
+      "accessibility_dci_target_score": 94.4,
+      "accessibility_industry_benchmark_score": 88.67,
+      "site_target_percentage": 99.56,
+      "timestamp": "2026-02-13 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 94.27,
+      "accessibility_dci_target_score": 94.4,
+      "accessibility_industry_benchmark_score": 88.65,
+      "site_target_percentage": 99.56,
+      "timestamp": "2026-02-14 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 94.27,
+      "accessibility_dci_target_score": 94.4,
+      "accessibility_industry_benchmark_score": 88.65,
+      "site_target_percentage": 99.56,
+      "timestamp": "2026-02-15 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 94.27,
+      "accessibility_dci_target_score": 94.4,
+      "accessibility_industry_benchmark_score": 88.65,
+      "site_target_percentage": 99.56,
+      "timestamp": "2026-02-16 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 94.27,
+      "accessibility_dci_target_score": 94.4,
+      "accessibility_industry_benchmark_score": 88.67,
+      "site_target_percentage": 99.56,
+      "timestamp": "2026-02-17 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 94.27,
+      "accessibility_dci_target_score": 94.4,
+      "accessibility_industry_benchmark_score": 88.67,
+      "site_target_percentage": 99.56,
+      "timestamp": "2026-02-18 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 94.27,
+      "accessibility_dci_target_score": 94.4,
+      "accessibility_industry_benchmark_score": 88.67,
+      "site_target_percentage": 99.56,
+      "timestamp": "2026-02-19 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 94.27,
+      "accessibility_dci_target_score": 94.4,
+      "accessibility_industry_benchmark_score": 88.69,
+      "site_target_percentage": 99.56,
+      "timestamp": "2026-02-20 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 94.05,
+      "accessibility_dci_target_score": 94.4,
+      "accessibility_industry_benchmark_score": 88.69,
+      "site_target_percentage": 99.56,
+      "timestamp": "2026-02-21 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 94.05,
+      "accessibility_dci_target_score": 94.39,
+      "accessibility_industry_benchmark_score": 88.67,
+      "site_target_percentage": 99.03,
+      "timestamp": "2026-02-22 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 94.05,
+      "accessibility_dci_target_score": 94.39,
+      "accessibility_industry_benchmark_score": 88.66,
+      "site_target_percentage": 99.03,
+      "timestamp": "2026-02-23 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 94.05,
+      "accessibility_dci_target_score": 94.39,
+      "accessibility_industry_benchmark_score": 88.65,
+      "site_target_percentage": 99.03,
+      "timestamp": "2026-02-24 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 94.05,
+      "accessibility_dci_target_score": 94.39,
+      "accessibility_industry_benchmark_score": 88.64,
+      "site_target_percentage": 99.03,
+      "timestamp": "2026-02-25 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 94.05,
+      "accessibility_dci_target_score": 94.39,
+      "accessibility_industry_benchmark_score": 88.63,
+      "site_target_percentage": 99.03,
+      "timestamp": "2026-02-26 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 94.05,
+      "accessibility_dci_target_score": 94.39,
+      "accessibility_industry_benchmark_score": 88.63,
+      "site_target_percentage": 99.03,
+      "timestamp": "2026-02-27 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 94.05,
+      "accessibility_dci_target_score": 94.39,
+      "accessibility_industry_benchmark_score": 88.62,
+      "site_target_percentage": 99.03,
+      "timestamp": "2026-02-28 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.6,
+      "accessibility_dci_target_score": 94.39,
+      "accessibility_industry_benchmark_score": 88.62,
+      "site_target_percentage": 99.03,
+      "timestamp": "2026-03-01 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.6,
+      "accessibility_dci_target_score": 94.52,
+      "accessibility_industry_benchmark_score": 88.61,
+      "site_target_percentage": 99.03,
+      "timestamp": "2026-03-02 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.6,
+      "accessibility_dci_target_score": 94.52,
+      "accessibility_industry_benchmark_score": 88.62,
+      "site_target_percentage": 99.03,
+      "timestamp": "2026-03-03 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.6,
+      "accessibility_dci_target_score": 94.52,
+      "accessibility_industry_benchmark_score": 88.62,
+      "site_target_percentage": 99.03,
+      "timestamp": "2026-03-04 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.6,
+      "accessibility_dci_target_score": 94.52,
+      "accessibility_industry_benchmark_score": 88.62,
+      "site_target_percentage": 99.03,
+      "timestamp": "2026-03-05 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.73,
+      "accessibility_dci_target_score": 94.52,
+      "accessibility_industry_benchmark_score": 84.47,
+      "site_target_percentage": 99.03,
+      "timestamp": "2026-03-06 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.74,
+      "accessibility_dci_target_score": 94.52,
+      "accessibility_industry_benchmark_score": 84.46,
+      "site_target_percentage": 99.03,
+      "timestamp": "2026-03-07 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.74,
+      "accessibility_dci_target_score": 94.52,
+      "accessibility_industry_benchmark_score": 84.46,
+      "site_target_percentage": 99.03,
+      "timestamp": "2026-03-08 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.74,
+      "accessibility_dci_target_score": 94.52,
+      "accessibility_industry_benchmark_score": 84.46,
+      "site_target_percentage": 99.03,
+      "timestamp": "2026-03-09 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.74,
+      "accessibility_dci_target_score": 94.52,
+      "accessibility_industry_benchmark_score": 81.52,
+      "site_target_percentage": 99.03,
+      "timestamp": "2026-03-10 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.74,
+      "accessibility_dci_target_score": 94.53,
+      "accessibility_industry_benchmark_score": 81.52,
+      "site_target_percentage": 98.86,
+      "timestamp": "2026-03-11 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.74,
+      "accessibility_dci_target_score": 94.53,
+      "accessibility_industry_benchmark_score": 81.52,
+      "site_target_percentage": 98.86,
+      "timestamp": "2026-03-12 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.74,
+      "accessibility_dci_target_score": 94.53,
+      "accessibility_industry_benchmark_score": 81.52,
+      "site_target_percentage": 98.86,
+      "timestamp": "2026-03-13 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.74,
+      "accessibility_dci_target_score": 94.53,
+      "accessibility_industry_benchmark_score": 81.53,
+      "site_target_percentage": 98.86,
+      "timestamp": "2026-03-14 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.74,
+      "accessibility_dci_target_score": 94.53,
+      "accessibility_industry_benchmark_score": 81.53,
+      "site_target_percentage": 98.86,
+      "timestamp": "2026-03-15 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.74,
+      "accessibility_dci_target_score": 94.53,
+      "accessibility_industry_benchmark_score": 81.53,
+      "site_target_percentage": 98.86,
+      "timestamp": "2026-03-16 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.74,
+      "accessibility_dci_target_score": 94.47,
+      "accessibility_industry_benchmark_score": 81.53,
+      "site_target_percentage": 98.86,
+      "timestamp": "2026-03-17 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.74,
+      "accessibility_dci_target_score": 94.61,
+      "accessibility_industry_benchmark_score": 83.15,
+      "site_target_percentage": 98.94,
+      "timestamp": "2026-03-18 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.74,
+      "accessibility_dci_target_score": 94.61,
+      "accessibility_industry_benchmark_score": 83.85,
+      "site_target_percentage": 98.94,
+      "timestamp": "2026-03-19 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.74,
+      "accessibility_dci_target_score": 94.61,
+      "accessibility_industry_benchmark_score": 83.83,
+      "site_target_percentage": 98.94,
+      "timestamp": "2026-03-20 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.74,
+      "accessibility_dci_target_score": 94.61,
+      "accessibility_industry_benchmark_score": 83.92,
+      "site_target_percentage": 98.94,
+      "timestamp": "2026-03-21 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.76,
+      "accessibility_dci_target_score": 94.62,
+      "accessibility_industry_benchmark_score": 84.11,
+      "site_target_percentage": 98.94,
+      "timestamp": "2026-03-22 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.76,
+      "accessibility_dci_target_score": 94.62,
+      "accessibility_industry_benchmark_score": 83.95,
+      "site_target_percentage": 98.94,
+      "timestamp": "2026-03-23 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.76,
+      "accessibility_dci_target_score": 94.62,
+      "accessibility_industry_benchmark_score": 84.07,
+      "site_target_percentage": 98.94,
+      "timestamp": "2026-03-24 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.76,
+      "accessibility_dci_target_score": 94.62,
+      "accessibility_industry_benchmark_score": 83.75,
+      "site_target_percentage": 98.94,
+      "timestamp": "2026-03-25 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.76,
+      "accessibility_dci_target_score": 94.62,
+      "accessibility_industry_benchmark_score": 83.67,
+      "site_target_percentage": 98.94,
+      "timestamp": "2026-03-26 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.76,
+      "accessibility_dci_target_score": 94.61,
+      "accessibility_industry_benchmark_score": 83.97,
+      "site_target_percentage": 98.8,
+      "timestamp": "2026-03-27 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.76,
+      "accessibility_dci_target_score": 94.61,
+      "accessibility_industry_benchmark_score": 83.88,
+      "site_target_percentage": 98.8,
+      "timestamp": "2026-03-28 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.76,
+      "accessibility_dci_target_score": 94.61,
+      "accessibility_industry_benchmark_score": 83.85,
+      "site_target_percentage": 98.8,
+      "timestamp": "2026-03-29 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.76,
+      "accessibility_dci_target_score": 94.61,
+      "accessibility_industry_benchmark_score": 84.26,
+      "site_target_percentage": 98.8,
+      "timestamp": "2026-03-30 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.76,
+      "accessibility_dci_target_score": 94.61,
+      "accessibility_industry_benchmark_score": 84.52,
+      "site_target_percentage": 98.8,
+      "timestamp": "2026-03-31 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.76,
+      "accessibility_dci_target_score": 94.61,
+      "accessibility_industry_benchmark_score": 84.52,
+      "site_target_percentage": 98.8,
+      "timestamp": "2026-04-01 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.64,
+      "accessibility_dci_target_score": 94.61,
+      "accessibility_industry_benchmark_score": 84.28,
+      "site_target_percentage": 98.8,
+      "timestamp": "2026-04-02 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.64,
+      "accessibility_dci_target_score": 94.47,
+      "accessibility_industry_benchmark_score": 84.91,
+      "site_target_percentage": 98.8,
+      "timestamp": "2026-04-03 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.64,
+      "accessibility_dci_target_score": 94.47,
+      "accessibility_industry_benchmark_score": 84.85,
+      "site_target_percentage": 98.8,
+      "timestamp": "2026-04-04 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.64,
+      "accessibility_dci_target_score": 94.47,
+      "accessibility_industry_benchmark_score": 84.85,
+      "site_target_percentage": 98.8,
+      "timestamp": "2026-04-05 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.5,
+      "accessibility_dci_target_score": 94.47,
+      "accessibility_industry_benchmark_score": 84.85,
+      "site_target_percentage": 98.8,
+      "timestamp": "2026-04-06 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.5,
+      "accessibility_dci_target_score": 94.47,
+      "accessibility_industry_benchmark_score": 85.3,
+      "site_target_percentage": 98.8,
+      "timestamp": "2026-04-07 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.5,
+      "accessibility_dci_target_score": 94.47,
+      "accessibility_industry_benchmark_score": 85.47,
+      "site_target_percentage": 98.8,
+      "timestamp": "2026-04-08 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.5,
+      "accessibility_dci_target_score": 94.47,
+      "accessibility_industry_benchmark_score": 85.66,
+      "site_target_percentage": 98.8,
+      "timestamp": "2026-04-09 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.5,
+      "accessibility_dci_target_score": 94.61,
+      "accessibility_industry_benchmark_score": 85.69,
+      "site_target_percentage": 98.8,
+      "timestamp": "2026-04-10 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.5,
+      "accessibility_dci_target_score": 94.61,
+      "accessibility_industry_benchmark_score": 85.43,
+      "site_target_percentage": 98.8,
+      "timestamp": "2026-04-11 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.64,
+      "accessibility_dci_target_score": 94.61,
+      "accessibility_industry_benchmark_score": 85.41,
+      "site_target_percentage": 98.8,
+      "timestamp": "2026-04-12 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.64,
+      "accessibility_dci_target_score": 94.61,
+      "accessibility_industry_benchmark_score": 85.37,
+      "site_target_percentage": 98.8,
+      "timestamp": "2026-04-13 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.64,
+      "accessibility_dci_target_score": 94.61,
+      "accessibility_industry_benchmark_score": 85.37,
+      "site_target_percentage": 98.8,
+      "timestamp": "2026-04-14 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.64,
+      "accessibility_dci_target_score": 94.61,
+      "accessibility_industry_benchmark_score": 85.37,
+      "site_target_percentage": 98.8,
+      "timestamp": "2026-04-15 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.64,
+      "accessibility_dci_target_score": 94.62,
+      "accessibility_industry_benchmark_score": 85.56,
+      "site_target_percentage": 98.8,
+      "timestamp": "2026-04-16 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.64,
+      "accessibility_dci_target_score": 94.62,
+      "accessibility_industry_benchmark_score": 85.41,
+      "site_target_percentage": 98.8,
+      "timestamp": "2026-04-17 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.64,
+      "accessibility_dci_target_score": 94.62,
+      "accessibility_industry_benchmark_score": 85.33,
+      "site_target_percentage": 98.8,
+      "timestamp": "2026-04-18 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.64,
+      "accessibility_dci_target_score": 94.62,
+      "accessibility_industry_benchmark_score": 85.35,
+      "site_target_percentage": 98.8,
+      "timestamp": "2026-04-19 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.64,
+      "accessibility_dci_target_score": 94.62,
+      "accessibility_industry_benchmark_score": 85.34,
+      "site_target_percentage": 98.8,
+      "timestamp": "2026-04-20 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.64,
+      "accessibility_dci_target_score": 94.62,
+      "accessibility_industry_benchmark_score": 85.33,
+      "site_target_percentage": 98.8,
+      "timestamp": "2026-04-21 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.65,
+      "accessibility_dci_target_score": 94.62,
+      "accessibility_industry_benchmark_score": 85.18,
+      "site_target_percentage": 98.8,
+      "timestamp": "2026-04-22 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.65,
+      "accessibility_dci_target_score": 94.62,
+      "accessibility_industry_benchmark_score": 85.09,
+      "site_target_percentage": 98.8,
+      "timestamp": "2026-04-23 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.65,
+      "accessibility_dci_target_score": 94.62,
+      "accessibility_industry_benchmark_score": 85.13,
+      "site_target_percentage": 98.8,
+      "timestamp": "2026-04-24 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.65,
+      "accessibility_dci_target_score": 94.63,
+      "accessibility_industry_benchmark_score": 85.54,
+      "site_target_percentage": 98.8,
+      "timestamp": "2026-04-25 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.65,
+      "accessibility_dci_target_score": 94.63,
+      "accessibility_industry_benchmark_score": 85.54,
+      "site_target_percentage": 98.8,
+      "timestamp": "2026-04-26 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.67,
+      "accessibility_dci_target_score": 91.53,
+      "accessibility_industry_benchmark_score": 85.53,
+      "site_target_percentage": 98.75,
+      "timestamp": "2026-04-27 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.67,
+      "accessibility_dci_target_score": 91.53,
+      "accessibility_industry_benchmark_score": 85.53,
+      "site_target_percentage": 98.75,
+      "timestamp": "2026-04-28 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.67,
+      "accessibility_dci_target_score": 91.53,
+      "accessibility_industry_benchmark_score": 85.55,
+      "site_target_percentage": 98.75,
+      "timestamp": "2026-04-29 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.67,
+      "accessibility_dci_target_score": 91.53,
+      "accessibility_industry_benchmark_score": 85.46,
+      "site_target_percentage": 98.75,
+      "timestamp": "2026-04-30 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.67,
+      "accessibility_dci_target_score": 91.53,
+      "accessibility_industry_benchmark_score": 85.47,
+      "site_target_percentage": 98.75,
+      "timestamp": "2026-05-01 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.56,
+      "accessibility_dci_target_score": 94.54,
+      "accessibility_industry_benchmark_score": 85.5,
+      "site_target_percentage": 98.78,
+      "timestamp": "2026-05-02 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.56,
+      "accessibility_dci_target_score": 94.54,
+      "accessibility_industry_benchmark_score": 85.5,
+      "site_target_percentage": 98.78,
+      "timestamp": "2026-05-03 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.56,
+      "accessibility_dci_target_score": 94.54,
+      "accessibility_industry_benchmark_score": 85.79,
+      "site_target_percentage": 98.78,
+      "timestamp": "2026-05-04 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.56,
+      "accessibility_dci_target_score": 94.54,
+      "accessibility_industry_benchmark_score": 85.8,
+      "site_target_percentage": 98.78,
+      "timestamp": "2026-05-05 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.56,
+      "accessibility_dci_target_score": 94.54,
+      "accessibility_industry_benchmark_score": 85.82,
+      "site_target_percentage": 98.78,
+      "timestamp": "2026-05-06 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.56,
+      "accessibility_dci_target_score": 94.54,
+      "accessibility_industry_benchmark_score": 85.77,
+      "site_target_percentage": 98.78,
+      "timestamp": "2026-05-07 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.56,
+      "accessibility_dci_target_score": 94.54,
+      "accessibility_industry_benchmark_score": 85.77,
+      "site_target_percentage": 98.78,
+      "timestamp": "2026-05-08 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.56,
+      "accessibility_dci_target_score": 94.54,
+      "accessibility_industry_benchmark_score": 85.8,
+      "site_target_percentage": 98.78,
+      "timestamp": "2026-05-09 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.56,
+      "accessibility_dci_target_score": 94.54,
+      "accessibility_industry_benchmark_score": 85.78,
+      "site_target_percentage": 98.78,
+      "timestamp": "2026-05-10 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.56,
+      "accessibility_dci_target_score": 94.54,
+      "accessibility_industry_benchmark_score": 85.78,
+      "site_target_percentage": 98.78,
+      "timestamp": "2026-05-11 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.56,
+      "accessibility_dci_target_score": 94.54,
+      "accessibility_industry_benchmark_score": 85.77,
+      "site_target_percentage": 98.78,
+      "timestamp": "2026-05-12 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.56,
+      "accessibility_dci_target_score": 94.54,
+      "accessibility_industry_benchmark_score": 85.8,
+      "site_target_percentage": 98.78,
+      "timestamp": "2026-05-13 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.56,
+      "accessibility_dci_target_score": 94.54,
+      "accessibility_industry_benchmark_score": 85.76,
+      "site_target_percentage": 98.78,
+      "timestamp": "2026-05-14 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.56,
+      "accessibility_dci_target_score": 94.54,
+      "accessibility_industry_benchmark_score": 85.74,
+      "site_target_percentage": 98.78,
+      "timestamp": "2026-05-15 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.56,
+      "accessibility_dci_target_score": 94.54,
+      "accessibility_industry_benchmark_score": 85.68,
+      "site_target_percentage": 98.78,
+      "timestamp": "2026-05-16 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.56,
+      "accessibility_dci_target_score": 94.54,
+      "accessibility_industry_benchmark_score": 85.67,
+      "site_target_percentage": 98.73,
+      "timestamp": "2026-05-17 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.52,
+      "accessibility_dci_target_score": 94.54,
+      "accessibility_industry_benchmark_score": 85.65,
+      "site_target_percentage": 98.73,
+      "timestamp": "2026-05-18 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.52,
+      "accessibility_dci_target_score": 94.44,
+      "accessibility_industry_benchmark_score": 85.68,
+      "site_target_percentage": 98.78,
+      "timestamp": "2026-05-19 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.52,
+      "accessibility_dci_target_score": 94.44,
+      "accessibility_industry_benchmark_score": 85.71,
+      "site_target_percentage": 98.78,
+      "timestamp": "2026-05-20 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.52,
+      "accessibility_dci_target_score": 94.44,
+      "accessibility_industry_benchmark_score": 85.71,
+      "site_target_percentage": 98.78,
+      "timestamp": "2026-05-21 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.52,
+      "accessibility_dci_target_score": 94.44,
+      "accessibility_industry_benchmark_score": 85.64,
+      "site_target_percentage": 98.78,
+      "timestamp": "2026-05-22 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.52,
+      "accessibility_dci_target_score": 94.44,
+      "accessibility_industry_benchmark_score": 85.62,
+      "site_target_percentage": 98.78,
+      "timestamp": "2026-05-23 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.46,
+      "accessibility_dci_target_score": 94.44,
+      "accessibility_industry_benchmark_score": 85.61,
+      "site_target_percentage": 98.78,
+      "timestamp": "2026-05-24 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.46,
+      "accessibility_dci_target_score": 94.44,
+      "accessibility_industry_benchmark_score": 85.58,
+      "site_target_percentage": 98.78,
+      "timestamp": "2026-05-25 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.46,
+      "accessibility_dci_target_score": 94.44,
+      "accessibility_industry_benchmark_score": 85.58,
+      "site_target_percentage": 98.78,
+      "timestamp": "2026-05-26 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.46,
+      "accessibility_dci_target_score": 94.44,
+      "accessibility_industry_benchmark_score": 85.58,
+      "site_target_percentage": 98.76,
+      "timestamp": "2026-05-27 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.44,
+      "accessibility_dci_target_score": 94.44,
+      "accessibility_industry_benchmark_score": 85.59,
+      "site_target_percentage": 98.78,
+      "timestamp": "2026-05-28 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.44,
+      "accessibility_dci_target_score": 94.44,
+      "accessibility_industry_benchmark_score": 85.58,
+      "site_target_percentage": 98.78,
+      "timestamp": "2026-05-29 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.44,
+      "accessibility_dci_target_score": 94.44,
+      "accessibility_industry_benchmark_score": 85.58,
+      "site_target_percentage": 98.78,
+      "timestamp": "2026-05-30 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.44,
+      "accessibility_dci_target_score": 94.44,
+      "accessibility_industry_benchmark_score": 85.53,
+      "site_target_percentage": 98.78,
+      "timestamp": "2026-05-31 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.44,
+      "accessibility_dci_target_score": 94.44,
+      "accessibility_industry_benchmark_score": 85.54,
+      "site_target_percentage": 98.78,
+      "timestamp": "2026-06-01 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.46,
+      "accessibility_dci_target_score": 94.44,
+      "accessibility_industry_benchmark_score": 85.54,
+      "site_target_percentage": 98.73,
+      "timestamp": "2026-06-02 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.46,
+      "accessibility_dci_target_score": 94.44,
+      "accessibility_industry_benchmark_score": 85.53,
+      "site_target_percentage": 98.73,
+      "timestamp": "2026-06-03 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.46,
+      "accessibility_dci_target_score": 94.44,
+      "accessibility_industry_benchmark_score": 85.48,
+      "site_target_percentage": 98.73,
+      "timestamp": "2026-06-04 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.46,
+      "accessibility_dci_target_score": 94.44,
+      "accessibility_industry_benchmark_score": 85.48,
+      "site_target_percentage": 98.73,
+      "timestamp": "2026-06-05 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.46,
+      "accessibility_dci_target_score": 94.44,
+      "accessibility_industry_benchmark_score": 85.49,
+      "site_target_percentage": 98.73,
+      "timestamp": "2026-06-06 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.42,
+      "accessibility_dci_target_score": 94.44,
+      "accessibility_industry_benchmark_score": 85.49,
+      "site_target_percentage": 98.73,
+      "timestamp": "2026-06-07 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.42,
+      "accessibility_dci_target_score": 94.44,
+      "accessibility_industry_benchmark_score": 85.52,
+      "site_target_percentage": 98.73,
+      "timestamp": "2026-06-08 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.42,
+      "accessibility_dci_target_score": 94.44,
+      "accessibility_industry_benchmark_score": 85.51,
+      "site_target_percentage": 98.73,
+      "timestamp": "2026-06-09 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.42,
+      "accessibility_dci_target_score": 94.44,
+      "accessibility_industry_benchmark_score": 85.52,
+      "site_target_percentage": 98.78,
+      "timestamp": "2026-06-10 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.42,
+      "accessibility_dci_target_score": 94.44,
+      "accessibility_industry_benchmark_score": 85.52,
+      "site_target_percentage": 98.78,
+      "timestamp": "2026-06-11 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.42,
+      "accessibility_dci_target_score": 94.44,
+      "accessibility_industry_benchmark_score": 85.53,
+      "site_target_percentage": 98.78,
+      "timestamp": "2026-06-12 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.46,
+      "accessibility_dci_target_score": 94.44,
+      "accessibility_industry_benchmark_score": 85.51,
+      "site_target_percentage": 98.78,
+      "timestamp": "2026-06-13 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.46,
+      "accessibility_dci_target_score": 94.44,
+      "accessibility_industry_benchmark_score": 85.5,
+      "site_target_percentage": 98.78,
+      "timestamp": "2026-06-14 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.46,
+      "accessibility_dci_target_score": 94.44,
+      "accessibility_industry_benchmark_score": 85.63,
+      "site_target_percentage": 98.78,
+      "timestamp": "2026-06-15 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.46,
+      "accessibility_dci_target_score": 94.44,
+      "accessibility_industry_benchmark_score": 85.54,
+      "site_target_percentage": 98.78,
+      "timestamp": "2026-06-16 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.42,
+      "accessibility_dci_target_score": 94.44,
+      "accessibility_industry_benchmark_score": 85.53,
+      "site_target_percentage": 98.73,
+      "timestamp": "2026-06-17 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.42,
+      "accessibility_dci_target_score": 94.49,
+      "accessibility_industry_benchmark_score": 85.47,
+      "site_target_percentage": 98.78,
+      "timestamp": "2026-06-18 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.42,
+      "accessibility_dci_target_score": 94.49,
+      "accessibility_industry_benchmark_score": 85.5,
+      "site_target_percentage": 98.78,
+      "timestamp": "2026-06-19 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.42,
+      "accessibility_dci_target_score": 94.49,
+      "accessibility_industry_benchmark_score": 85.45,
+      "site_target_percentage": 98.78,
+      "timestamp": "2026-06-20 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.42,
+      "accessibility_dci_target_score": 94.49,
+      "accessibility_industry_benchmark_score": 85.41,
+      "site_target_percentage": 98.78,
+      "timestamp": "2026-06-21 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.42,
+      "accessibility_dci_target_score": 94.49,
+      "accessibility_industry_benchmark_score": 85.42,
+      "site_target_percentage": 98.78,
+      "timestamp": "2026-06-22 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.51,
+      "accessibility_dci_target_score": 94.49,
+      "accessibility_industry_benchmark_score": 85.46,
+      "site_target_percentage": 98.78,
+      "timestamp": "2026-06-23 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.51,
+      "accessibility_dci_target_score": 94.49,
+      "accessibility_industry_benchmark_score": 85.47,
+      "site_target_percentage": 98.67,
+      "timestamp": "2026-06-24 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.51,
+      "accessibility_dci_target_score": 94.49,
+      "accessibility_industry_benchmark_score": 85.37,
+      "site_target_percentage": 98.67,
+      "timestamp": "2026-06-25 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.51,
+      "accessibility_dci_target_score": 94.49,
+      "accessibility_industry_benchmark_score": 85.37,
+      "site_target_percentage": 98.67,
+      "timestamp": "2026-06-26 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.51,
+      "accessibility_dci_target_score": 94.49,
+      "accessibility_industry_benchmark_score": 85.37,
+      "site_target_percentage": 98.67,
+      "timestamp": "2026-06-27 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.41,
+      "accessibility_dci_target_score": 94.49,
+      "accessibility_industry_benchmark_score": 85.35,
+      "site_target_percentage": 98.67,
+      "timestamp": "2026-06-28 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.41,
+      "accessibility_dci_target_score": 94.47,
+      "accessibility_industry_benchmark_score": 85.45,
+      "site_target_percentage": 98.63,
+      "timestamp": "2026-06-29 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.41,
+      "accessibility_dci_target_score": 94.47,
+      "accessibility_industry_benchmark_score": 85.44,
+      "site_target_percentage": 98.63,
+      "timestamp": "2026-06-30 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.41,
+      "accessibility_dci_target_score": 94.47,
+      "accessibility_industry_benchmark_score": 85.52,
+      "site_target_percentage": 98.63,
+      "timestamp": "2026-07-01 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.41,
+      "accessibility_dci_target_score": 94.47,
+      "accessibility_industry_benchmark_score": 85.32,
+      "site_target_percentage": 98.63,
+      "timestamp": "2026-07-02 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.41,
+      "accessibility_dci_target_score": 94.47,
+      "accessibility_industry_benchmark_score": 85.35,
+      "site_target_percentage": 98.63,
+      "timestamp": "2026-07-03 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.36,
+      "accessibility_dci_target_score": 94.47,
+      "accessibility_industry_benchmark_score": 85.29,
+      "site_target_percentage": 98.63,
+      "timestamp": "2026-07-04 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.36,
+      "accessibility_dci_target_score": 94.47,
+      "accessibility_industry_benchmark_score": 85.29,
+      "site_target_percentage": 98.63,
+      "timestamp": "2026-07-05 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.36,
+      "accessibility_dci_target_score": 94.47,
+      "accessibility_industry_benchmark_score": 85.28,
+      "site_target_percentage": 98.63,
+      "timestamp": "2026-07-06 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.36,
+      "accessibility_dci_target_score": 94.47,
+      "accessibility_industry_benchmark_score": 85.28,
+      "site_target_percentage": 98.63,
+      "timestamp": "2026-07-07 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.4,
+      "accessibility_dci_target_score": 94.47,
+      "accessibility_industry_benchmark_score": 85.28,
+      "site_target_percentage": 98.67,
+      "timestamp": "2026-07-08 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.4,
+      "accessibility_dci_target_score": 94.46,
+      "accessibility_industry_benchmark_score": 85.26,
+      "site_target_percentage": 98.67,
+      "timestamp": "2026-07-09 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.4,
+      "accessibility_dci_target_score": 94.46,
+      "accessibility_industry_benchmark_score": 85.25,
+      "site_target_percentage": 98.67,
+      "timestamp": "2026-07-10 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.4,
+      "accessibility_dci_target_score": 94.46,
+      "accessibility_industry_benchmark_score": 85.25,
+      "site_target_percentage": 98.67,
+      "timestamp": "2026-07-11 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.4,
+      "accessibility_dci_target_score": 94.46,
+      "accessibility_industry_benchmark_score": 85.25,
+      "site_target_percentage": 98.67,
+      "timestamp": "2026-07-12 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.4,
+      "accessibility_dci_target_score": 94.46,
+      "accessibility_industry_benchmark_score": 85.23,
+      "site_target_percentage": 98.67,
+      "timestamp": "2026-07-13 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.39,
+      "accessibility_dci_target_score": 94.48,
+      "accessibility_industry_benchmark_score": 85.24,
+      "site_target_percentage": 98.63,
+      "timestamp": "2026-07-14 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.39,
+      "accessibility_dci_target_score": 94.48,
+      "accessibility_industry_benchmark_score": 85.27,
+      "site_target_percentage": 98.63,
+      "timestamp": "2026-07-15 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.39,
+      "accessibility_dci_target_score": 94.48,
+      "accessibility_industry_benchmark_score": 85.28,
+      "site_target_percentage": 98.63,
+      "timestamp": "2026-07-16 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.39,
+      "accessibility_dci_target_score": 94.48,
+      "accessibility_industry_benchmark_score": 85.33,
+      "site_target_percentage": 98.63,
+      "timestamp": "2026-07-17 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.39,
+      "accessibility_dci_target_score": 94.48,
+      "accessibility_industry_benchmark_score": 85.36,
+      "site_target_percentage": 98.63,
+      "timestamp": "2026-07-18 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.37,
+      "accessibility_dci_target_score": 94.48,
+      "accessibility_industry_benchmark_score": 85.38,
+      "site_target_percentage": 98.67,
+      "timestamp": "2026-07-19 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.37,
+      "accessibility_dci_target_score": 94.48,
+      "accessibility_industry_benchmark_score": 85.43,
+      "site_target_percentage": 98.67,
+      "timestamp": "2026-07-20 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.37,
+      "accessibility_dci_target_score": 94.48,
+      "accessibility_industry_benchmark_score": 85.42,
+      "site_target_percentage": 98.67,
+      "timestamp": "2026-07-21 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.37,
+      "accessibility_dci_target_score": 94.48,
+      "accessibility_industry_benchmark_score": 85.43,
+      "site_target_percentage": 98.67,
+      "timestamp": "2026-07-22 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.41,
+      "accessibility_dci_target_score": 94.48,
+      "accessibility_industry_benchmark_score": 85.47,
+      "site_target_percentage": 98.67,
+      "timestamp": "2026-07-23 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.41,
+      "accessibility_dci_target_score": 94.47,
+      "accessibility_industry_benchmark_score": 85.44,
+      "site_target_percentage": 98.63,
+      "timestamp": "2026-07-24 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.41,
+      "accessibility_dci_target_score": 94.47,
+      "accessibility_industry_benchmark_score": 85.33,
+      "site_target_percentage": 98.63,
+      "timestamp": "2026-07-25 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.41,
+      "accessibility_dci_target_score": 94.47,
+      "accessibility_industry_benchmark_score": 85.33,
+      "site_target_percentage": 98.63,
+      "timestamp": "2026-07-26 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.41,
+      "accessibility_dci_target_score": 94.47,
+      "accessibility_industry_benchmark_score": 85.3,
+      "site_target_percentage": 98.63,
+      "timestamp": "2026-07-27 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.41,
+      "accessibility_dci_target_score": 94.47,
+      "accessibility_industry_benchmark_score": 85.29,
+      "site_target_percentage": 98.63,
+      "timestamp": "2026-07-28 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.36,
+      "accessibility_dci_target_score": 94.47,
+      "accessibility_industry_benchmark_score": 85.26,
+      "site_target_percentage": 98.78,
+      "timestamp": "2026-07-29 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.36,
+      "accessibility_dci_target_score": 94.47,
+      "accessibility_industry_benchmark_score": 85.37,
+      "site_target_percentage": 98.78,
+      "timestamp": "2026-07-30 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.36,
+      "accessibility_dci_target_score": 94.47,
+      "accessibility_industry_benchmark_score": 85.61,
+      "site_target_percentage": 98.78,
+      "timestamp": "2026-07-31 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.36,
+      "accessibility_dci_target_score": 94.47,
+      "accessibility_industry_benchmark_score": 85.62,
+      "site_target_percentage": 98.78,
+      "timestamp": "2026-08-01 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.36,
+      "accessibility_dci_target_score": 94.47,
+      "accessibility_industry_benchmark_score": 85.63,
+      "site_target_percentage": 98.78,
+      "timestamp": "2026-08-02 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.5,
+      "accessibility_dci_target_score": 94.47,
+      "accessibility_industry_benchmark_score": 85.62,
+      "site_target_percentage": 98.78,
+      "timestamp": "2026-08-03 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.5,
+      "accessibility_dci_target_score": 94.47,
+      "accessibility_industry_benchmark_score": 85.61,
+      "site_target_percentage": 98.78,
+      "timestamp": "2026-08-04 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.5,
+      "accessibility_dci_target_score": 94.47,
+      "accessibility_industry_benchmark_score": 85.6,
+      "site_target_percentage": 98.78,
+      "timestamp": "2026-08-05 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.5,
+      "accessibility_dci_target_score": 94.47,
+      "accessibility_industry_benchmark_score": 85.59,
+      "site_target_percentage": 98.78,
+      "timestamp": "2026-08-06 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.5,
+      "accessibility_dci_target_score": 94.47,
+      "accessibility_industry_benchmark_score": 85.6,
+      "site_target_percentage": 98.78,
+      "timestamp": "2026-08-07 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.49,
+      "accessibility_dci_target_score": 94.47,
+      "accessibility_industry_benchmark_score": 85.63,
+      "site_target_percentage": 98.76,
+      "timestamp": "2026-08-08 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.49,
+      "accessibility_dci_target_score": 93.82,
+      "accessibility_industry_benchmark_score": 85.63,
+      "site_target_percentage": 98.76,
+      "timestamp": "2026-08-09 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.49,
+      "accessibility_dci_target_score": 93.82,
+      "accessibility_industry_benchmark_score": 85.63,
+      "site_target_percentage": 98.76,
+      "timestamp": "2026-08-10 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.49,
+      "accessibility_dci_target_score": 93.82,
+      "accessibility_industry_benchmark_score": 85.68,
+      "site_target_percentage": 98.76,
+      "timestamp": "2026-08-11 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.49,
+      "accessibility_dci_target_score": 93.82,
+      "accessibility_industry_benchmark_score": 85.73,
+      "site_target_percentage": 98.76,
+      "timestamp": "2026-08-12 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.84,
+      "accessibility_dci_target_score": 94.47,
+      "accessibility_industry_benchmark_score": 85.74,
+      "site_target_percentage": 97.98,
+      "timestamp": "2026-08-13 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.84,
+      "accessibility_dci_target_score": 94.47,
+      "accessibility_industry_benchmark_score": 85.72,
+      "site_target_percentage": 97.98,
+      "timestamp": "2026-08-14 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.84,
+      "accessibility_dci_target_score": 94.49,
+      "accessibility_industry_benchmark_score": 85.7,
+      "site_target_percentage": 98.67,
+      "timestamp": "2026-08-15 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.84,
+      "accessibility_dci_target_score": 94.49,
+      "accessibility_industry_benchmark_score": 85.69,
+      "site_target_percentage": 98.67,
+      "timestamp": "2026-08-16 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.84,
+      "accessibility_dci_target_score": 94.49,
+      "accessibility_industry_benchmark_score": 85.7,
+      "site_target_percentage": 98.67,
+      "timestamp": "2026-08-17 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.42,
+      "accessibility_dci_target_score": 94.49,
+      "accessibility_industry_benchmark_score": 85.67,
+      "site_target_percentage": 98.67,
+      "timestamp": "2026-08-18 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.42,
+      "accessibility_dci_target_score": 94.49,
+      "accessibility_industry_benchmark_score": 85.74,
+      "site_target_percentage": 98.67,
+      "timestamp": "2026-08-19 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.42,
+      "accessibility_dci_target_score": 94.49,
+      "accessibility_industry_benchmark_score": 85.75,
+      "site_target_percentage": 98.67,
+      "timestamp": "2026-08-20 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.42,
+      "accessibility_dci_target_score": 94.49,
+      "accessibility_industry_benchmark_score": 85.75,
+      "site_target_percentage": 98.67,
+      "timestamp": "2026-08-21 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.39,
+      "accessibility_dci_target_score": 94.49,
+      "accessibility_industry_benchmark_score": 85.88,
+      "site_target_percentage": 98.63,
+      "timestamp": "2026-08-22 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.39,
+      "accessibility_dci_target_score": 94.5,
+      "accessibility_industry_benchmark_score": 85.88,
+      "site_target_percentage": 98.67,
+      "timestamp": "2026-08-23 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.39,
+      "accessibility_dci_target_score": 94.5,
+      "accessibility_industry_benchmark_score": 85.93,
+      "site_target_percentage": 98.67,
+      "timestamp": "2026-08-24 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.39,
+      "accessibility_dci_target_score": 94.5,
+      "accessibility_industry_benchmark_score": 86.18,
+      "site_target_percentage": 98.67,
+      "timestamp": "2026-08-25 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.39,
+      "accessibility_dci_target_score": 94.5,
+      "accessibility_industry_benchmark_score": 86.46,
+      "site_target_percentage": 98.67,
+      "timestamp": "2026-08-26 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.39,
+      "accessibility_dci_target_score": 94.5,
+      "accessibility_industry_benchmark_score": 86.47,
+      "site_target_percentage": 98.67,
+      "timestamp": "2026-08-27 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.43,
+      "accessibility_dci_target_score": 94.48,
+      "accessibility_industry_benchmark_score": 86.64,
+      "site_target_percentage": 98.67,
+      "timestamp": "2026-08-28 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.43,
+      "accessibility_dci_target_score": 94.48,
+      "accessibility_industry_benchmark_score": 86.76,
+      "site_target_percentage": 98.67,
+      "timestamp": "2026-08-29 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.43,
+      "accessibility_dci_target_score": 94.48,
+      "accessibility_industry_benchmark_score": 86.76,
+      "site_target_percentage": 98.67,
+      "timestamp": "2026-08-30 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.43,
+      "accessibility_dci_target_score": 94.48,
+      "accessibility_industry_benchmark_score": 86.76,
+      "site_target_percentage": 98.67,
+      "timestamp": "2026-08-31 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.43,
+      "accessibility_dci_target_score": 94.48,
+      "accessibility_industry_benchmark_score": 86.78,
+      "site_target_percentage": 98.67,
+      "timestamp": "2026-09-01 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.41,
+      "accessibility_dci_target_score": 94.48,
+      "accessibility_industry_benchmark_score": 86.82,
+      "site_target_percentage": 98.67,
+      "timestamp": "2026-09-02 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.41,
+      "accessibility_dci_target_score": 94.48,
+      "accessibility_industry_benchmark_score": 86.93,
+      "site_target_percentage": 98.67,
+      "timestamp": "2026-09-03 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.41,
+      "accessibility_dci_target_score": 94.48,
+      "accessibility_industry_benchmark_score": 86.91,
+      "site_target_percentage": 98.67,
+      "timestamp": "2026-09-04 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.41,
+      "accessibility_dci_target_score": 94.31,
+      "accessibility_industry_benchmark_score": 86.83,
+      "site_target_percentage": 98.31,
+      "timestamp": "2026-09-05 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93.41,
+      "accessibility_dci_target_score": 94.31,
+      "accessibility_industry_benchmark_score": 86.83,
+      "site_target_percentage": 98.31,
+      "timestamp": "2026-09-06 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.94,
+      "accessibility_dci_target_score": 94.29,
+      "accessibility_industry_benchmark_score": 86.8,
+      "site_target_percentage": 98.31,
+      "timestamp": "2026-09-07 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.94,
+      "accessibility_dci_target_score": 94.29,
+      "accessibility_industry_benchmark_score": 86.87,
+      "site_target_percentage": 98.31,
+      "timestamp": "2026-09-08 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.94,
+      "accessibility_dci_target_score": 94.29,
+      "accessibility_industry_benchmark_score": 86.88,
+      "site_target_percentage": 98.31,
+      "timestamp": "2026-09-09 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.94,
+      "accessibility_dci_target_score": 94.29,
+      "accessibility_industry_benchmark_score": 86.88,
+      "site_target_percentage": 98.31,
+      "timestamp": "2026-09-10 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.94,
+      "accessibility_dci_target_score": 94.29,
+      "accessibility_industry_benchmark_score": 86.88,
+      "site_target_percentage": 98.31,
+      "timestamp": "2026-09-11 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.92,
+      "accessibility_dci_target_score": 94.31,
+      "accessibility_industry_benchmark_score": 86.88,
+      "site_target_percentage": 98.31,
+      "timestamp": "2026-09-12 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.92,
+      "accessibility_dci_target_score": 94.31,
+      "accessibility_industry_benchmark_score": 86.88,
+      "site_target_percentage": 98.31,
+      "timestamp": "2026-09-13 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.92,
+      "accessibility_dci_target_score": 94.31,
+      "accessibility_industry_benchmark_score": 86.88,
+      "site_target_percentage": 98.31,
+      "timestamp": "2026-09-14 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.95,
+      "accessibility_dci_target_score": 94.31,
+      "accessibility_industry_benchmark_score": 86.88,
+      "site_target_percentage": 98.31,
+      "timestamp": "2026-09-15 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.95,
+      "accessibility_dci_target_score": 94.16,
+      "accessibility_industry_benchmark_score": 86.88,
+      "site_target_percentage": 98.2,
+      "timestamp": "2026-09-16 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.7,
+      "accessibility_dci_target_score": 94.16,
+      "accessibility_industry_benchmark_score": 86.98,
+      "site_target_percentage": 98.2,
+      "timestamp": "2026-09-17 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.7,
+      "accessibility_dci_target_score": 94.16,
+      "accessibility_industry_benchmark_score": 86.98,
+      "site_target_percentage": 98.2,
+      "timestamp": "2026-09-18 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.7,
+      "accessibility_dci_target_score": 94.16,
+      "accessibility_industry_benchmark_score": 87,
+      "site_target_percentage": 98.2,
+      "timestamp": "2026-09-19 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.7,
+      "accessibility_dci_target_score": 94.16,
+      "accessibility_industry_benchmark_score": 87.02,
+      "site_target_percentage": 98.2,
+      "timestamp": "2026-09-20 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.7,
+      "accessibility_dci_target_score": 94.16,
+      "accessibility_industry_benchmark_score": 87,
+      "site_target_percentage": 98.2,
+      "timestamp": "2026-09-21 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.7,
+      "accessibility_dci_target_score": 94.16,
+      "accessibility_industry_benchmark_score": 87,
+      "site_target_percentage": 98.2,
+      "timestamp": "2026-09-22 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.7,
+      "accessibility_dci_target_score": 94.16,
+      "accessibility_industry_benchmark_score": 86.99,
+      "site_target_percentage": 98.2,
+      "timestamp": "2026-09-23 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.7,
+      "accessibility_dci_target_score": 94.16,
+      "accessibility_industry_benchmark_score": 86.99,
+      "site_target_percentage": 98.2,
+      "timestamp": "2026-09-24 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.7,
+      "accessibility_dci_target_score": 94.16,
+      "accessibility_industry_benchmark_score": 86.99,
+      "site_target_percentage": 98.2,
+      "timestamp": "2026-09-25 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.7,
+      "accessibility_dci_target_score": 94.17,
+      "accessibility_industry_benchmark_score": 87.04,
+      "site_target_percentage": 98.2,
+      "timestamp": "2026-09-26 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.72,
+      "accessibility_dci_target_score": 94.17,
+      "accessibility_industry_benchmark_score": 87.03,
+      "site_target_percentage": 98.22,
+      "timestamp": "2026-09-27 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.72,
+      "accessibility_dci_target_score": 94.17,
+      "accessibility_industry_benchmark_score": 87.02,
+      "site_target_percentage": 98.22,
+      "timestamp": "2026-09-28 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.72,
+      "accessibility_dci_target_score": 94.17,
+      "accessibility_industry_benchmark_score": 87.03,
+      "site_target_percentage": 98.22,
+      "timestamp": "2026-09-29 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.72,
+      "accessibility_dci_target_score": 94.17,
+      "accessibility_industry_benchmark_score": 87.03,
+      "site_target_percentage": 98.22,
+      "timestamp": "2026-09-30 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.74,
+      "accessibility_dci_target_score": 94.17,
+      "accessibility_industry_benchmark_score": 87.03,
+      "site_target_percentage": 98.22,
+      "timestamp": "2026-10-01 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.74,
+      "accessibility_dci_target_score": 94.17,
+      "accessibility_industry_benchmark_score": 87.01,
+      "site_target_percentage": 98.22,
+      "timestamp": "2026-10-02 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.74,
+      "accessibility_dci_target_score": 94.16,
+      "accessibility_industry_benchmark_score": 87.01,
+      "site_target_percentage": 98.25,
+      "timestamp": "2026-10-03 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.74,
+      "accessibility_dci_target_score": 94.16,
+      "accessibility_industry_benchmark_score": 86.99,
+      "site_target_percentage": 98.25,
+      "timestamp": "2026-10-04 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.74,
+      "accessibility_dci_target_score": 94.16,
+      "accessibility_industry_benchmark_score": 87,
+      "site_target_percentage": 98.25,
+      "timestamp": "2026-10-05 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.74,
+      "accessibility_dci_target_score": 94.16,
+      "accessibility_industry_benchmark_score": 86.99,
+      "site_target_percentage": 98.25,
+      "timestamp": "2026-10-06 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.76,
+      "accessibility_dci_target_score": 94.17,
+      "accessibility_industry_benchmark_score": 87,
+      "site_target_percentage": 98.2,
+      "timestamp": "2026-10-07 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.76,
+      "accessibility_dci_target_score": 94.17,
+      "accessibility_industry_benchmark_score": 86.98,
+      "site_target_percentage": 98.2,
+      "timestamp": "2026-10-08 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.76,
+      "accessibility_dci_target_score": 94.17,
+      "accessibility_industry_benchmark_score": 86.98,
+      "site_target_percentage": 98.2,
+      "timestamp": "2026-10-09 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.76,
+      "accessibility_dci_target_score": 94.17,
+      "accessibility_industry_benchmark_score": 86.98,
+      "site_target_percentage": 98.2,
+      "timestamp": "2026-10-10 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.76,
+      "accessibility_dci_target_score": 94.17,
+      "accessibility_industry_benchmark_score": 86.99,
+      "site_target_percentage": 98.2,
+      "timestamp": "2026-10-11 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.72,
+      "accessibility_dci_target_score": 94.17,
+      "accessibility_industry_benchmark_score": 87,
+      "site_target_percentage": 98.2,
+      "timestamp": "2026-10-12 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.72,
+      "accessibility_dci_target_score": 94.17,
+      "accessibility_industry_benchmark_score": 87.05,
+      "site_target_percentage": 98.2,
+      "timestamp": "2026-10-13 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.72,
+      "accessibility_dci_target_score": 94.19,
+      "accessibility_industry_benchmark_score": 87.04,
+      "site_target_percentage": 98.2,
+      "timestamp": "2026-10-14 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.72,
+      "accessibility_dci_target_score": 94.19,
+      "accessibility_industry_benchmark_score": 87.11,
+      "site_target_percentage": 98.2,
+      "timestamp": "2026-10-15 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.72,
+      "accessibility_dci_target_score": 94.19,
+      "accessibility_industry_benchmark_score": 87.11,
+      "site_target_percentage": 98.2,
+      "timestamp": "2026-10-16 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.73,
+      "accessibility_dci_target_score": 94.19,
+      "accessibility_industry_benchmark_score": 87.19,
+      "site_target_percentage": 98.2,
+      "timestamp": "2026-10-17 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.73,
+      "accessibility_dci_target_score": 94.17,
+      "accessibility_industry_benchmark_score": 87.18,
+      "site_target_percentage": 98.22,
+      "timestamp": "2026-10-18 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.73,
+      "accessibility_dci_target_score": 94.17,
+      "accessibility_industry_benchmark_score": 87.19,
+      "site_target_percentage": 98.22,
+      "timestamp": "2026-10-19 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.73,
+      "accessibility_dci_target_score": 94.17,
+      "accessibility_industry_benchmark_score": 87.19,
+      "site_target_percentage": 98.22,
+      "timestamp": "2026-10-20 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.73,
+      "accessibility_dci_target_score": 94.17,
+      "accessibility_industry_benchmark_score": 87.19,
+      "site_target_percentage": 98.22,
+      "timestamp": "2026-10-21 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.73,
+      "accessibility_dci_target_score": 94.17,
+      "accessibility_industry_benchmark_score": 87.2,
+      "site_target_percentage": 98.22,
+      "timestamp": "2026-10-22 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.73,
+      "accessibility_dci_target_score": 94.17,
+      "accessibility_industry_benchmark_score": 87.2,
+      "site_target_percentage": 98.22,
+      "timestamp": "2026-10-23 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.73,
+      "accessibility_dci_target_score": 94.17,
+      "accessibility_industry_benchmark_score": 87.17,
+      "site_target_percentage": 98.22,
+      "timestamp": "2026-10-24 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.73,
+      "accessibility_dci_target_score": 94.17,
+      "accessibility_industry_benchmark_score": 87.18,
+      "site_target_percentage": 98.22,
+      "timestamp": "2026-10-25 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.73,
+      "accessibility_dci_target_score": 94.1,
+      "accessibility_industry_benchmark_score": 87.18,
+      "site_target_percentage": 98.42,
+      "timestamp": "2026-10-26 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.73,
+      "accessibility_dci_target_score": 94.17,
+      "accessibility_industry_benchmark_score": 87.17,
+      "site_target_percentage": 98.22,
+      "timestamp": "2026-10-27 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.73,
+      "accessibility_dci_target_score": 94.34,
+      "accessibility_industry_benchmark_score": 87.28,
+      "site_target_percentage": 97.87,
+      "timestamp": "2026-10-28 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.73,
+      "accessibility_dci_target_score": 94.34,
+      "accessibility_industry_benchmark_score": 87.3,
+      "site_target_percentage": 97.87,
+      "timestamp": "2026-10-29 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.73,
+      "accessibility_dci_target_score": 94.34,
+      "accessibility_industry_benchmark_score": 87.31,
+      "site_target_percentage": 97.87,
+      "timestamp": "2026-10-30 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.73,
+      "accessibility_dci_target_score": 94.34,
+      "accessibility_industry_benchmark_score": 87.31,
+      "site_target_percentage": 97.87,
+      "timestamp": "2026-10-31 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.63,
+      "accessibility_dci_target_score": 94.31,
+      "accessibility_industry_benchmark_score": 87.34,
+      "site_target_percentage": 98.35,
+      "timestamp": "2026-11-01 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.63,
+      "accessibility_dci_target_score": 94.31,
+      "accessibility_industry_benchmark_score": 87.37,
+      "site_target_percentage": 98.35,
+      "timestamp": "2026-11-02 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.63,
+      "accessibility_dci_target_score": 94.31,
+      "accessibility_industry_benchmark_score": 87.37,
+      "site_target_percentage": 98.35,
+      "timestamp": "2026-11-03 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.63,
+      "accessibility_dci_target_score": 94.31,
+      "accessibility_industry_benchmark_score": 87.37,
+      "site_target_percentage": 98.35,
+      "timestamp": "2026-11-04 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.63,
+      "accessibility_dci_target_score": 94.31,
+      "accessibility_industry_benchmark_score": 87.37,
+      "site_target_percentage": 98.35,
+      "timestamp": "2026-11-05 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.98,
+      "accessibility_dci_target_score": 94.39,
+      "accessibility_industry_benchmark_score": 87.37,
+      "site_target_percentage": 97.44,
+      "timestamp": "2026-11-06 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.98,
+      "accessibility_dci_target_score": 94.39,
+      "accessibility_industry_benchmark_score": 87.41,
+      "site_target_percentage": 97.44,
+      "timestamp": "2026-11-07 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.98,
+      "accessibility_dci_target_score": 94.39,
+      "accessibility_industry_benchmark_score": 87.4,
+      "site_target_percentage": 97.44,
+      "timestamp": "2026-11-08 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.98,
+      "accessibility_dci_target_score": 94.39,
+      "accessibility_industry_benchmark_score": 87.4,
+      "site_target_percentage": 97.44,
+      "timestamp": "2026-11-09 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.98,
+      "accessibility_dci_target_score": 94.39,
+      "accessibility_industry_benchmark_score": 87.41,
+      "site_target_percentage": 97.44,
+      "timestamp": "2026-11-10 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.98,
+      "accessibility_dci_target_score": 94.39,
+      "accessibility_industry_benchmark_score": 87.41,
+      "site_target_percentage": 97.44,
+      "timestamp": "2026-11-11 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.32,
+      "accessibility_dci_target_score": 94.31,
+      "accessibility_industry_benchmark_score": 87.62,
+      "site_target_percentage": 98.38,
+      "timestamp": "2026-11-12 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.32,
+      "accessibility_dci_target_score": 94.31,
+      "accessibility_industry_benchmark_score": 87.62,
+      "site_target_percentage": 98.38,
+      "timestamp": "2026-11-13 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.32,
+      "accessibility_dci_target_score": 94.31,
+      "accessibility_industry_benchmark_score": 87.58,
+      "site_target_percentage": 98.38,
+      "timestamp": "2026-11-14 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 92.32,
+      "accessibility_dci_target_score": 94.31,
+      "accessibility_industry_benchmark_score": 87.56,
+      "site_target_percentage": 98.38,
+      "timestamp": "2026-11-15 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93,
+      "accessibility_dci_target_score": 94.31,
+      "accessibility_industry_benchmark_score": 87.56,
+      "site_target_percentage": 98.38,
+      "timestamp": "2026-11-16 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93,
+      "accessibility_dci_target_score": 94.31,
+      "accessibility_industry_benchmark_score": 87.56,
+      "site_target_percentage": 98.38,
+      "timestamp": "2026-11-17 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93,
+      "accessibility_dci_target_score": 94.31,
+      "accessibility_industry_benchmark_score": 87.58,
+      "site_target_percentage": 98.38,
+      "timestamp": "2026-11-18 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93,
+      "accessibility_dci_target_score": 94.31,
+      "accessibility_industry_benchmark_score": 87.58,
+      "site_target_percentage": 98.38,
+      "timestamp": "2026-11-19 08:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 93,
+      "accessibility_dci_target_score": 94.31,
+      "accessibility_industry_benchmark_score": 87.58,
+      "site_target_percentage": 98.38,
+      "timestamp": "2026-11-20 08:00:00Z"
+    }
+  ],
+  "total_items": 453,
+  "total_pages": 1,
+  "links": {
+    "self": {
+      "href": "https://api.us.siteimprove.com/v2/sites/25412155164/a11y/overview/site_target/history?page_size=500"
+    }
+  }
+}

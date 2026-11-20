@@ -1,0 +1,60 @@
+{
+  "items": [
+    {
+      "id": 1224666220,
+      "url": "http://web.stanford.edu/people/name",
+      "checking_now": true,
+      "last_checked": "2026-11-19 22:35:36Z",
+      "link_status_changed": "2026-07-04 04:15:42Z"
+    },
+    {
+      "id": 226730528,
+      "url": "https://emergency.stanford.edu/",
+      "checking_now": true,
+      "last_checked": "2026-11-19 22:13:21Z",
+      "link_status_changed": "2026-11-06 06:46:09Z"
+    },
+    {
+      "id": 226730843,
+      "url": "https://www.stanford.edu/",
+      "checking_now": true,
+      "last_checked": "2026-11-19 22:32:17Z",
+      "link_status_changed": "2026-11-06 06:46:09Z"
+    },
+    {
+      "id": 6967415847,
+      "url": "https://www.stanford.edu/accessibility",
+      "checking_now": true,
+      "last_checked": "2026-11-19 18:00:35Z",
+      "link_status_changed": "2026-11-06 06:46:09Z"
+    },
+    {
+      "id": 226730844,
+      "url": "https://www.stanford.edu/search/",
+      "checking_now": true,
+      "last_checked": "2026-11-19 22:35:01Z",
+      "link_status_changed": "2026-11-06 06:46:09Z"
+    },
+    {
+      "id": 226730846,
+      "url": "https://www.stanford.edu/site/privacy/",
+      "checking_now": true,
+      "last_checked": "2026-11-19 22:35:01Z",
+      "link_status_changed": "2026-11-06 06:46:09Z"
+    },
+    {
+      "id": 226730847,
+      "url": "https://www.stanford.edu/site/terms/",
+      "checking_now": true,
+      "last_checked": "2026-11-19 22:09:36Z",
+      "link_status_changed": "2026-11-06 06:46:09Z"
+    }
+  ],
+  "total_items": 7,
+  "total_pages": 1,
+  "links": {
+    "self": {
+      "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/links/pages_with_broken_links/2238642256/broken_links?page_size=20"
+    }
+  }
+}

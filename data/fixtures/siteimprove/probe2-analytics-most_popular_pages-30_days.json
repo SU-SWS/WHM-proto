@@ -1,0 +1,134 @@
+{
+  "items": [
+    {
+      "id": "17200616064825183584",
+      "title": "Stanford Sites User Guide",
+      "url": "https://sitesuserguide.stanford.edu",
+      "average_page_views_per_visit": 1.17,
+      "bounce_rate": 43.81,
+      "has_integration": false,
+      "last_visited": "2026-11-20T10:07:26-05:00",
+      "page_views": 501,
+      "rank": 1,
+      "visits": 428
+    },
+    {
+      "id": "9404843133442239226",
+      "title": "Create Jump Links Using ID Tags | Stanford Sites User Guide",
+      "url": "https://sitesuserguide.stanford.edu/build/working-text-editor/create-links/create-jump-links-using-id-tags",
+      "average_page_views_per_visit": 1.1,
+      "bounce_rate": 92.98,
+      "has_integration": false,
+      "last_visited": "2026-11-20T10:57:34-05:00",
+      "page_views": 140,
+      "rank": 2,
+      "visits": 127
+    },
+    {
+      "id": "11883942992671989902",
+      "title": "Launch your site | Stanford Sites User Guide",
+      "url": "https://sitesuserguide.stanford.edu/support/launch-your-site",
+      "average_page_views_per_visit": 1.08,
+      "bounce_rate": 80.49,
+      "has_integration": false,
+      "last_visited": "2026-11-20T07:48:35-05:00",
+      "page_views": 84,
+      "rank": 3,
+      "visits": 78
+    },
+    {
+      "id": "4857297516880188526",
+      "title": "Stanford-Only Sites | Stanford Sites User Guide",
+      "url": "https://sitesuserguide.stanford.edu/build/stanford-only-sites",
+      "average_page_views_per_visit": 1.19,
+      "bounce_rate": 69.57,
+      "has_integration": false,
+      "last_visited": "2026-11-15T14:35:50-05:00",
+      "page_views": 75,
+      "rank": 4,
+      "visits": 63
+    },
+    {
+      "id": "15937299106411266288",
+      "title": "Main Navigation (menu) | Stanford Sites User Guide",
+      "url": "https://sitesuserguide.stanford.edu/manage-your-site/menus-other-sitewide-features/main-navigation-menu",
+      "average_page_views_per_visit": 1.59,
+      "bounce_rate": 66.67,
+      "has_integration": false,
+      "last_visited": "2026-11-19T17:19:09-05:00",
+      "page_views": 62,
+      "rank": 5,
+      "visits": 39
+    },
+    {
+      "id": "187852848751329013",
+      "title": "Build | Stanford Sites User Guide",
+      "url": "https://sitesuserguide.stanford.edu/build",
+      "average_page_views_per_visit": 1.22,
+      "bounce_rate": 36.36,
+      "has_integration": false,
+      "last_visited": "2026-11-20T00:53:06-05:00",
+      "page_views": 56,
+      "rank": 6,
+      "visits": 46
+    },
+    {
+      "id": "14890514597304701848",
+      "title": "Manage Your Site | Stanford Sites User Guide",
+      "url": "https://sitesuserguide.stanford.edu/manage-your-site",
+      "average_page_views_per_visit": 1.18,
+      "bounce_rate": 62.5,
+      "has_integration": false,
+      "last_visited": "2026-11-20T01:12:28-05:00",
+      "page_views": 53,
+      "rank": 7,
+      "visits": 45
+    },
+    {
+      "id": "4168580745352755903",
+      "title": "Support | Stanford Sites User Guide",
+      "url": "https://sitesuserguide.stanford.edu/support",
+      "average_page_views_per_visit": 1.16,
+      "bounce_rate": 35.29,
+      "has_integration": false,
+      "last_visited": "2026-11-19T18:09:30-05:00",
+      "page_views": 52,
+      "rank": 8,
+      "visits": 45
+    },
+    {
+      "id": "14392532143049751154",
+      "title": "Manage User Accounts and Permissions | Stanford Sites User Guide",
+      "url": "https://sitesuserguide.stanford.edu/manage-your-site/user-accounts-and-roles/manage-user-accounts-and-permissions",
+      "average_page_views_per_visit": 1.16,
+      "bounce_rate": 73.91,
+      "has_integration": false,
+      "last_visited": "2026-11-19T16:41:39-05:00",
+      "page_views": 50,
+      "rank": 9,
+      "visits": 43
+    },
+    {
+      "id": "15767917549325097005",
+      "title": "Basic Page Content Type | Stanford Sites User Guide",
+      "url": "https://sitesuserguide.stanford.edu/build/create-and-edit-pages/basic-page-content-type",
+      "average_page_views_per_visit": 1.04,
+      "bounce_rate": 91.67,
+      "has_integration": false,
+      "last_visited": "2026-11-18T00:46:44-05:00",
+      "page_views": 47,
+      "rank": 10,
+      "visits": 45
+    }
+  ],
+  "total_items": 580,
+  "total_pages": 58,
+  "links": {
+    "next": {
+      "href": "https://api.us.siteimprove.com/v2/sites/25412155164/analytics/content/most_popular_pages?period=20261021_20261119&page_size=10&page=2"
+    },
+    "self": {
+      "href": "https://api.us.siteimprove.com/v2/sites/25412155164/analytics/content/most_popular_pages?period=20261021_20261119&page_size=10"
+    }
+  }
+}

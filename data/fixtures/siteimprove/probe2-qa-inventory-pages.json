@@ -1,0 +1,244 @@
+{
+  "items": [
+    {
+      "id": 2202959107,
+      "title": "Stanford Sites User Guide",
+      "url": "https://sitesuserguide.stanford.edu/",
+      "checking_now": false,
+      "dci_score": 91.17,
+      "first_seen": "2025-12-11 18:12:10Z",
+      "page_level": 1,
+      "page_score": 0,
+      "page_views": 304,
+      "referring_pages": 351,
+      "size_bytes": 222566,
+      "_links": {
+        "referring_pages": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/inventory/pages/2202959107/referring_pages"
+        }
+      },
+      "_siteimprove": {
+        "page_report": {
+          "href": "https://my2.us.siteimprove.com/QualityAssurance/1062154/PageDetails/Report?impmd=[REDACTED]&PageId=2202959107"
+        }
+      }
+    },
+    {
+      "id": 2205283349,
+      "title": "Create Jump Links Using ID Tags | Stanford Sites User Guide",
+      "url": "https://sitesuserguide.stanford.edu/build/working-text-editor/create-links/create-jump-links-using-id-tags",
+      "checking_now": false,
+      "dci_score": 92.71,
+      "first_seen": "2025-12-11 18:39:18Z",
+      "page_level": 2,
+      "page_score": 0,
+      "page_views": 121,
+      "referring_pages": 351,
+      "size_bytes": 213932,
+      "_links": {
+        "referring_pages": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/inventory/pages/2205283349/referring_pages"
+        }
+      },
+      "_siteimprove": {
+        "page_report": {
+          "href": "https://my2.us.siteimprove.com/QualityAssurance/1062154/PageDetails/Report?impmd=[REDACTED]&PageId=2205283349"
+        }
+      }
+    },
+    {
+      "id": 2202960559,
+      "title": "Launch your site | Stanford Sites User Guide",
+      "url": "https://sitesuserguide.stanford.edu/support/launch-your-site",
+      "checking_now": false,
+      "dci_score": 91.83,
+      "first_seen": "2025-12-11 18:12:11Z",
+      "page_level": 2,
+      "page_score": 0,
+      "page_views": 84,
+      "referring_pages": 351,
+      "size_bytes": 199309,
+      "_links": {
+        "referring_pages": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/inventory/pages/2202960559/referring_pages"
+        }
+      },
+      "_siteimprove": {
+        "page_report": {
+          "href": "https://my2.us.siteimprove.com/QualityAssurance/1062154/PageDetails/Report?impmd=[REDACTED]&PageId=2202960559"
+        }
+      }
+    },
+    {
+      "id": 2214826787,
+      "title": "Add and use files in the Media Library | Stanford Sites User Guide",
+      "url": "https://sitesuserguide.stanford.edu/build/media-library/add-and-use-files-media-library",
+      "checking_now": false,
+      "dci_score": 91.87,
+      "first_seen": "2025-12-11 20:14:37Z",
+      "page_level": 2,
+      "page_score": 0,
+      "page_views": 76,
+      "referring_pages": 351,
+      "size_bytes": 211016,
+      "_links": {
+        "referring_pages": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/inventory/pages/2214826787/referring_pages"
+        }
+      },
+      "_siteimprove": {
+        "page_report": {
+          "href": "https://my2.us.siteimprove.com/QualityAssurance/1062154/PageDetails/Report?impmd=[REDACTED]&PageId=2214826787"
+        }
+      }
+    },
+    {
+      "id": 2204152196,
+      "title": "Build | Stanford Sites User Guide",
+      "url": "https://sitesuserguide.stanford.edu/build",
+      "checking_now": false,
+      "dci_score": 90.89,
+      "first_seen": "2025-12-11 18:26:02Z",
+      "page_level": 2,
+      "page_score": 0,
+      "page_views": 53,
+      "referring_pages": 351,
+      "size_bytes": 240131,
+      "_links": {
+        "referring_pages": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/inventory/pages/2204152196/referring_pages"
+        }
+      },
+      "_siteimprove": {
+        "page_report": {
+          "href": "https://my2.us.siteimprove.com/QualityAssurance/1062154/PageDetails/Report?impmd=[REDACTED]&PageId=2204152196"
+        }
+      }
+    },
+    {
+      "id": 2207814073,
+      "title": "Event Content Type | Stanford Sites User Guide",
+      "url": "https://sitesuserguide.stanford.edu/build/event-content-type",
+      "checking_now": false,
+      "dci_score": 91.5,
+      "first_seen": "2025-12-11 19:05:46Z",
+      "page_level": 2,
+      "page_score": 0,
+      "page_views": 52,
+      "referring_pages": 351,
+      "size_bytes": 203962,
+      "_links": {
+        "referring_pages": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/inventory/pages/2207814073/referring_pages"
+        }
+      },
+      "_siteimprove": {
+        "page_report": {
+          "href": "https://my2.us.siteimprove.com/QualityAssurance/1062154/PageDetails/Report?impmd=[REDACTED]&PageId=2207814073"
+        }
+      }
+    },
+    {
+      "id": 2221814294,
+      "title": "What's New | Stanford Sites User Guide",
+      "url": "https://sitesuserguide.stanford.edu/release-notes",
+      "checking_now": false,
+      "dci_score": 91.51,
+      "first_seen": "2025-12-11 21:27:25Z",
+      "page_level": 2,
+      "page_score": 0,
+      "page_views": 52,
+      "referring_pages": 351,
+      "size_bytes": 224849,
+      "_links": {
+        "referring_pages": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/inventory/pages/2221814294/referring_pages"
+        }
+      },
+      "_siteimprove": {
+        "page_report": {
+          "href": "https://my2.us.siteimprove.com/QualityAssurance/1062154/PageDetails/Report?impmd=[REDACTED]&PageId=2221814294"
+        }
+      }
+    },
+    {
+      "id": 2222232594,
+      "title": "Support | Stanford Sites User Guide",
+      "url": "https://sitesuserguide.stanford.edu/support",
+      "checking_now": false,
+      "dci_score": 91.15,
+      "first_seen": "2025-12-11 21:32:25Z",
+      "page_level": 2,
+      "page_score": 0,
+      "page_views": 50,
+      "referring_pages": 351,
+      "size_bytes": 183558,
+      "_links": {
+        "referring_pages": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/inventory/pages/2222232594/referring_pages"
+        }
+      },
+      "_siteimprove": {
+        "page_report": {
+          "href": "https://my2.us.siteimprove.com/QualityAssurance/1062154/PageDetails/Report?impmd=[REDACTED]&PageId=2222232594"
+        }
+      }
+    },
+    {
+      "id": 2945570239,
+      "title": "People | Stanford Sites User Guide",
+      "url": "https://sitesuserguide.stanford.edu/build/people",
+      "checking_now": false,
+      "dci_score": 91.31,
+      "first_seen": "2025-12-21 17:14:49Z",
+      "page_level": 2,
+      "page_score": 0,
+      "page_views": 44,
+      "referring_pages": 351,
+      "size_bytes": 218360,
+      "_links": {
+        "referring_pages": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/inventory/pages/2945570239/referring_pages"
+        }
+      },
+      "_siteimprove": {
+        "page_report": {
+          "href": "https://my2.us.siteimprove.com/QualityAssurance/1062154/PageDetails/Report?impmd=[REDACTED]&PageId=2945570239"
+        }
+      }
+    },
+    {
+      "id": 2214832828,
+      "title": "Alternative text (alt text) for images and other media | Stanford Sites User Guide",
+      "url": "https://sitesuserguide.stanford.edu/build/media-library/alternative-text-alt-text-images-and-other-media",
+      "checking_now": false,
+      "dci_score": 90.3,
+      "first_seen": "2025-12-11 20:14:40Z",
+      "page_level": 2,
+      "page_score": 0,
+      "page_views": 42,
+      "referring_pages": 351,
+      "size_bytes": 223738,
+      "_links": {
+        "referring_pages": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/inventory/pages/2214832828/referring_pages"
+        }
+      },
+      "_siteimprove": {
+        "page_report": {
+          "href": "https://my2.us.siteimprove.com/QualityAssurance/1062154/PageDetails/Report?impmd=[REDACTED]&PageId=2214832828"
+        }
+      }
+    }
+  ],
+  "total_items": 351,
+  "total_pages": 36,
+  "links": {
+    "next": {
+      "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/inventory/pages?page_size=10&page=2"
+    },
+    "self": {
+      "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/inventory/pages?page_size=10"
+    }
+  }
+}

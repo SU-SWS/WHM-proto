@@ -1,0 +1,290 @@
+{
+  "items": [
+    {
+      "bounce_rate": 68.33,
+      "new_visitors": 43,
+      "page_views": 148,
+      "returning_visitors": 17,
+      "timestamp": "2026-10-01T00:00:00-04:00",
+      "unique_visitors": 60,
+      "visits": 60
+    },
+    {
+      "bounce_rate": 48.98,
+      "new_visitors": 69,
+      "page_views": 265,
+      "returning_visitors": 15,
+      "timestamp": "2026-10-02T00:00:00-04:00",
+      "unique_visitors": 84,
+      "visits": 98
+    },
+    {
+      "bounce_rate": 52.17,
+      "new_visitors": 34,
+      "page_views": 109,
+      "returning_visitors": 2,
+      "timestamp": "2026-10-03T00:00:00-04:00",
+      "unique_visitors": 36,
+      "visits": 46
+    },
+    {
+      "bounce_rate": 46.34,
+      "new_visitors": 34,
+      "page_views": 127,
+      "returning_visitors": 1,
+      "timestamp": "2026-10-04T00:00:00-04:00",
+      "unique_visitors": 35,
+      "visits": 41
+    },
+    {
+      "bounce_rate": 45.61,
+      "new_visitors": 96,
+      "page_views": 626,
+      "returning_visitors": 12,
+      "timestamp": "2026-10-05T00:00:00-04:00",
+      "unique_visitors": 108,
+      "visits": 114
+    },
+    {
+      "bounce_rate": 49.02,
+      "new_visitors": 84,
+      "page_views": 215,
+      "returning_visitors": 10,
+      "timestamp": "2026-10-06T00:00:00-04:00",
+      "unique_visitors": 94,
+      "visits": 102
+    },
+    {
+      "bounce_rate": 64.06,
+      "new_visitors": 45,
+      "page_views": 146,
+      "returning_visitors": 12,
+      "timestamp": "2026-10-07T00:00:00-04:00",
+      "unique_visitors": 57,
+      "visits": 64
+    },
+    {
+      "bounce_rate": 52.17,
+      "new_visitors": 65,
+      "page_views": 241,
+      "returning_visitors": 13,
+      "timestamp": "2026-10-08T00:00:00-04:00",
+      "unique_visitors": 78,
+      "visits": 92
+    },
+    {
+      "bounce_rate": 52.69,
+      "new_visitors": 63,
+      "page_views": 258,
+      "returning_visitors": 13,
+      "timestamp": "2026-10-09T00:00:00-04:00",
+      "unique_visitors": 76,
+      "visits": 93
+    },
+    {
+      "bounce_rate": 76,
+      "new_visitors": 48,
+      "page_views": 110,
+      "returning_visitors": 0,
+      "timestamp": "2026-10-10T00:00:00-04:00",
+      "unique_visitors": 48,
+      "visits": 50
+    },
+    {
+      "bounce_rate": 80,
+      "new_visitors": 16,
+      "page_views": 50,
+      "returning_visitors": 2,
+      "timestamp": "2026-10-11T00:00:00-04:00",
+      "unique_visitors": 18,
+      "visits": 20
+    },
+    {
+      "bounce_rate": 65.12,
+      "new_visitors": 32,
+      "page_views": 455,
+      "returning_visitors": 6,
+      "timestamp": "2026-10-12T00:00:00-04:00",
+      "unique_visitors": 38,
+      "visits": 43
+    },
+    {
+      "bounce_rate": 64.44,
+      "new_visitors": 37,
+      "page_views": 108,
+      "returning_visitors": 3,
+      "timestamp": "2026-10-13T00:00:00-04:00",
+      "unique_visitors": 40,
+      "visits": 45
+    },
+    {
+      "bounce_rate": 71.19,
+      "new_visitors": 45,
+      "page_views": 104,
+      "returning_visitors": 8,
+      "timestamp": "2026-10-14T00:00:00-04:00",
+      "unique_visitors": 53,
+      "visits": 59
+    },
+    {
+      "bounce_rate": 65.82,
+      "new_visitors": 63,
+      "page_views": 151,
+      "returning_visitors": 7,
+      "timestamp": "2026-10-15T00:00:00-04:00",
+      "unique_visitors": 70,
+      "visits": 79
+    },
+    {
+      "bounce_rate": 62,
+      "new_visitors": 39,
+      "page_views": 117,
+      "returning_visitors": 3,
+      "timestamp": "2026-10-16T00:00:00-04:00",
+      "unique_visitors": 42,
+      "visits": 50
+    },
+    {
+      "bounce_rate": 84.77,
+      "new_visitors": 140,
+      "page_views": 233,
+      "returning_visitors": 2,
+      "timestamp": "2026-10-17T00:00:00-04:00",
+      "unique_visitors": 142,
+      "visits": 151
+    },
+    {
+      "bounce_rate": 70,
+      "new_visitors": 90,
+      "page_views": 196,
+      "returning_visitors": 2,
+      "timestamp": "2026-10-18T00:00:00-04:00",
+      "unique_visitors": 92,
+      "visits": 100
+    },
+    {
+      "bounce_rate": 50.85,
+      "new_visitors": 41,
+      "page_views": 501,
+      "returning_visitors": 9,
+      "timestamp": "2026-10-19T00:00:00-04:00",
+      "unique_visitors": 50,
+      "visits": 59
+    },
+    {
+      "bounce_rate": 52.63,
+      "new_visitors": 61,
+      "page_views": 162,
+      "returning_visitors": 10,
+      "timestamp": "2026-10-20T00:00:00-04:00",
+      "unique_visitors": 71,
+      "visits": 76
+    },
+    {
+      "bounce_rate": 48.62,
+      "new_visitors": 90,
+      "page_views": 265,
+      "returning_visitors": 7,
+      "timestamp": "2026-10-21T00:00:00-04:00",
+      "unique_visitors": 97,
+      "visits": 109
+    },
+    {
+      "bounce_rate": 51.95,
+      "new_visitors": 60,
+      "page_views": 202,
+      "returning_visitors": 8,
+      "timestamp": "2026-10-22T00:00:00-04:00",
+      "unique_visitors": 68,
+      "visits": 77
+    },
+    {
+      "bounce_rate": 54.02,
+      "new_visitors": 70,
+      "page_views": 238,
+      "returning_visitors": 7,
+      "timestamp": "2026-10-23T00:00:00-04:00",
+      "unique_visitors": 77,
+      "visits": 87
+    },
+    {
+      "bounce_rate": 40.48,
+      "new_visitors": 31,
+      "page_views": 134,
+      "returning_visitors": 3,
+      "timestamp": "2026-10-24T00:00:00-04:00",
+      "unique_visitors": 34,
+      "visits": 42
+    },
+    {
+      "bounce_rate": 71.88,
+      "new_visitors": 29,
+      "page_views": 95,
+      "returning_visitors": 1,
+      "timestamp": "2026-10-25T00:00:00-04:00",
+      "unique_visitors": 30,
+      "visits": 32
+    },
+    {
+      "bounce_rate": 54.63,
+      "new_visitors": 85,
+      "page_views": 630,
+      "returning_visitors": 6,
+      "timestamp": "2026-10-26T00:00:00-04:00",
+      "unique_visitors": 91,
+      "visits": 108
+    },
+    {
+      "bounce_rate": 63.87,
+      "new_visitors": 102,
+      "page_views": 282,
+      "returning_visitors": 8,
+      "timestamp": "2026-10-27T00:00:00-04:00",
+      "unique_visitors": 110,
+      "visits": 119
+    },
+    {
+      "bounce_rate": 80.56,
+      "new_visitors": 65,
+      "page_views": 127,
+      "returning_visitors": 6,
+      "timestamp": "2026-10-28T00:00:00-04:00",
+      "unique_visitors": 71,
+      "visits": 72
+    },
+    {
+      "bounce_rate": 63.16,
+      "new_visitors": 78,
+      "page_views": 176,
+      "returning_visitors": 8,
+      "timestamp": "2026-10-29T00:00:00-04:00",
+      "unique_visitors": 86,
+      "visits": 95
+    },
+    {
+      "bounce_rate": 58.72,
+      "new_visitors": 89,
+      "page_views": 204,
+      "returning_visitors": 10,
+      "timestamp": "2026-10-30T00:00:00-04:00",
+      "unique_visitors": 99,
+      "visits": 109
+    },
+    {
+      "bounce_rate": 70.15,
+      "new_visitors": 60,
+      "page_views": 132,
+      "returning_visitors": 1,
+      "timestamp": "2026-10-31T00:00:00-04:00",
+      "unique_visitors": 61,
+      "visits": 67
+    }
+  ],
+  "total_items": 31,
+  "total_pages": 1,
+  "links": {
+    "self": {
+      "href": "https://api.us.siteimprove.com/v2/sites/25412155164/analytics/overview/history?period=last_month"
+    }
+  }
+}

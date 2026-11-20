@@ -37,6 +37,20 @@ Drawn from the SWS data inventory (Oct 15, 2026) and the prototype plan. "Confir
 | – | Crawl status | `GET /sites/{site_id}/content/crawl` | SI-33 | Fixture | `last_crawl`, `next_crawl`, `is_crawl_running`, `is_crawl_enabled`. `last_crawl` (Nov 15) is a day earlier than the check history's latest `check_date` (Nov 16); use the check date for data age. |
 | – | Page inventory | `GET /sites/{site_id}/quality_assurance/inventory/pages` | SI-16 | Confirmed | Check whether it returns a last-modified date. That would answer content freshness (SI-17), which is unknown. |
 
+## Second probe findings (Nov 20)
+
+Saved as `data/fixtures/siteimprove/probe2-*.json`. `impmd` values are redacted, and the policy list's `created_by` and `edited_by` names are replaced with `[REMOVED]`.
+
+- **Site Target Score history:** `page_size=500` works, so all 453 points arrive in one call. Real values start on 2025-12-17 (98.57); the accessibility score starts on 2025-12-11. Everything before is 0. Month-end values for sitesuserguide: Apr 98.75, May 98.78, Jun 98.63, Jul 98.78, Aug 98.67, Sep 98.22, Oct 97.87, Nov (so far) 98.38.
+- **Page views, `period`:** a 30-day range (`20261021_20261119`) works for top pages: 580 pages, home page 501 views. On `analytics/overview/history`, a range of several months returns **one point per month**, and `last_month` returns one point per day. April and May 2026 are 0, so Siteimprove Analytics data for sitesuserguide starts in June. The current month is partial.
+- **Broken links in a check:** `check_history/{id}/broken_links` lists 54 links for the Nov 16 check. The same check's `broken_links` field says 65, and `quality_assurance/overview/summary` says 62 right now, so the counts don't agree. Six of the 54 are on all 351 pages (shared footer links and emergency.stanford.edu); the other 48 are on 1 to 4 pages each, mostly old `userguide.sites.stanford.edu` addresses.
+- **Pages for a broken link:** `broken_links/{id}/pages` gives `url`, `title`, `broken_links` and `page_views` per page.
+- **Pages for an accessibility issue:** `a11y/issue_kinds/confirmed/issues/{rule}/pages` gives `url`, `title` and `occurrences`, but no page views. URLs can carry a query string (`/events/past?page=1`), so normalize before joining (Q-5).
+- **Page inventory:** `quality_assurance/inventory/pages` has `page_views`, `page_level`, `first_seen` and `referring_pages`, but **no last-modified date**. Content freshness (SI-17) stays simulated.
+- **Search descriptions:** `seov2/issues` has `meta_desc_missing` (73 pages for sitesuserguide), plus `meta_desc_short`, `duplicate_description` and `duplicate_page_title`. There's no history per issue.
+- **Policies:** 114 for this site, all with `all_sites: true`. Prefixes include `[QA]`, `[A11y]`, `[SEO]`, `[SWS]`, `[ADMIN]`/`ADMIN:`/`Admin:`, `TEMP:`/`[TEMP]`, unit prefixes (`[SDSS]`, `[VPSA]`, `[SOM]`), and Siteimprove's own unprefixed policies. Two `[QA]`/`[A11y][QA]` policies match all 351 pages, so they come from the template. Matches are under `_links.matches` (`/content`, `/media` or `/documents`, by category).
+- **URL forms differ:** Siteimprove Analytics gives the home page as `https://sitesuserguide.stanford.edu` and QA gives `https://sitesuserguide.stanford.edu/`. Both normalize to `/`.
+
 ## Rules for the fetch script
 
 - **Never fetch:** `quality_assurance/inventory/personal_id_numbers`, `email_addresses` and `phone_numbers` appear in `_links`. WHM doesn't need them, and personal ID findings are SWS-only (AD-7).

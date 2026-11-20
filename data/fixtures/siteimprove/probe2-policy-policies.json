@@ -1,0 +1,2710 @@
+{
+  "items": [
+    {
+      "id": 25412162972,
+      "name": "[QA] Non Secure Links to Stanford",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2021-07-29 14:56:13Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": -1,
+      "last_30_days_change_percentage": -0.28,
+      "last_30_days_change_significance": 6.09,
+      "last_edited": "2024-09-30 19:36:54Z",
+      "matches": 351,
+      "note": "This Policy identifies links that start HTTP:// that also contain \"stanford.edu\"\n\nAll Stanford sites should be using SSL, so the link should be https and not http. ",
+      "pending_execution": false,
+      "priority": "high",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412162972/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412162972/content"
+        }
+      }
+    },
+    {
+      "id": 25412163141,
+      "name": "[A11y] Bad Alt Text",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2021-06-10 15:55:12Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": -5,
+      "last_30_days_change_percentage": -45.45,
+      "last_30_days_change_significance": 41.37,
+      "last_edited": "2024-11-04 16:09:50Z",
+      "matches": 6,
+      "note": "ALT text should not include the words \"Picture of\" or \"Image of\". Also, if the file extension is present it is probably a file name and not an ALT text. ",
+      "pending_execution": false,
+      "priority": "high",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163141/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163141/content"
+        }
+      }
+    },
+    {
+      "id": 25412163041,
+      "name": "[QA] \"Lorem Ipsum\" placeholder text",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2022-03-07 19:03:16Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": -1,
+      "last_30_days_change_percentage": -16.67,
+      "last_30_days_change_significance": 11.02,
+      "last_edited": "2024-10-24 16:47:43Z",
+      "matches": 5,
+      "note": "Find pages with the text 'Lorem Ipsum', which is often used as a placeholder text when creating new pages.",
+      "pending_execution": false,
+      "priority": "high",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163041/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163041/content"
+        }
+      }
+    },
+    {
+      "id": 25412163110,
+      "name": "[A11y] Possible Animated GIF",
+      "all_sites": true,
+      "category": "media",
+      "created_by": "[REMOVED]",
+      "created_date": "2021-06-09 20:53:32Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_percentage": 0,
+      "last_30_days_change_significance": 4.67,
+      "last_edited": "2024-09-30 18:33:49Z",
+      "matches": 3,
+      "note": "Look for any GIF file that is 500kb or larger. ",
+      "pending_execution": false,
+      "priority": "high",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163110/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163110/media"
+        }
+      }
+    },
+    {
+      "id": 26187773773,
+      "name": "Site Analytics - Root Level",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2026-07-22 22:07:26Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_percentage": 0,
+      "last_30_days_change_significance": 4,
+      "matches": 1,
+      "pending_execution": false,
+      "priority": "high",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/26187773773/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/26187773773/content"
+        }
+      }
+    },
+    {
+      "id": 25412163147,
+      "name": "[QA] Google Drive Folder",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2023-02-03 15:34:17Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "last_edited": "2024-10-01 14:29:12Z",
+      "matches": 0,
+      "note": "This is a link to a google drive folder rather than to an individual document. For security purposes, it is recommended that you link to individual files. ",
+      "pending_execution": false,
+      "priority": "high",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163147/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163147/content"
+        }
+      }
+    },
+    {
+      "id": 26369044832,
+      "name": "[A11y] ALT text is [object Object]",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2026-09-10 14:43:02Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "matches": 0,
+      "note": "This is another bad ALT text policy. In this case, its looking for a NULL value that could trick Siteimprove into thinking the ALT is correct. ",
+      "pending_execution": false,
+      "priority": "high",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/26369044832/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/26369044832/content"
+        }
+      }
+    },
+    {
+      "id": 25412163101,
+      "name": "[QA] Doerr School Old Name (E3 is now SDSS)",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2022-10-04 16:42:14Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "last_edited": "2024-10-29 16:41:05Z",
+      "matches": 0,
+      "note": "The name changed, Was \"Earth, Energy, and Environmental Sciences\" should now be \"Stanford Doerr School of Sustainability\"",
+      "pending_execution": false,
+      "priority": "high",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163101/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163101/content"
+        }
+      }
+    },
+    {
+      "id": 25703537472,
+      "name": "[SWS] Accessibility Policy on Page",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2026-03-11 02:36:58Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "last_edited": "2026-03-11 20:21:24Z",
+      "matches": 0,
+      "note": "This accessibility statement does not need to appear on the sites. ",
+      "pending_execution": false,
+      "priority": "high",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25703537472/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25703537472/content"
+        }
+      }
+    },
+    {
+      "id": 25703208587,
+      "name": "[SWS] Accessibility Instruction",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2026-03-10 18:41:19Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "last_edited": "2026-03-11 20:22:13Z",
+      "matches": 0,
+      "note": "This is the instructional statement from the template about the accessibility policy. this should be removed from all pages. ",
+      "pending_execution": false,
+      "priority": "high",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25703208587/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25703208587/content"
+        }
+      }
+    },
+    {
+      "id": 25412163038,
+      "name": "[A11y] Misspelled aria-labelledby (aria-labeledby)",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2022-02-17 22:00:50Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "last_edited": "2024-10-01 14:41:36Z",
+      "matches": 0,
+      "note": "ARIA-LABELLEDBY uses the british spelling with 2 L not the American spelling with 1 L. ",
+      "pending_execution": false,
+      "priority": "high",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163038/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163038/content"
+        }
+      }
+    },
+    {
+      "id": 25412162961,
+      "name": "[QA] Common Misspellings: Stanford",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2021-06-16 20:56:36Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "last_edited": "2026-02-05 20:16:03Z",
+      "matches": 0,
+      "note": "You've typoed the name of our institution on the site. ",
+      "pending_execution": false,
+      "priority": "high",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412162961/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412162961/content"
+        }
+      }
+    },
+    {
+      "id": 25597104761,
+      "name": "Browser Not Supported",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2026-02-09 19:11:39Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "matches": 0,
+      "pending_execution": false,
+      "priority": "high",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25597104761/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25597104761/content"
+        }
+      }
+    },
+    {
+      "id": 25499175276,
+      "name": "[TEMP] Old Analytics Code",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2026-01-08 18:39:41Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "last_edited": "2026-01-08 19:41:15Z",
+      "matches": 0,
+      "note": "here is a siteimprove tracking script that needs to be updated for the new US instance. This is the new code (everything is the same except that number in there).\n\n<script async src=\"https://siteimproveanalytics.com/js/siteanalyze_6343745.js\"></script>\n\nThe old number is 80352 and the new is 634745. ",
+      "pending_execution": false,
+      "priority": "high",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25499175276/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25499175276/content"
+        }
+      }
+    },
+    {
+      "id": 25412163130,
+      "name": "[A11y] Pages without Accessibility Link",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2023-07-07 17:57:33Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "last_edited": "2026-09-23 23:19:11Z",
+      "matches": 0,
+      "note": "All Stanford sites, per university policy 6.8.1, should have a link on the page to information about accessibility and how to report a complaint.  \n\nhttps://adminguide.stanford.edu/chapters/computing/digital-accessibility/accessibility-electronic-content\n\nUniversity websites are to contain a mechanism for users to report accessibility barriers to a designated person, with notification to the Office of Digital Accessibility. This may include an accessible online form, email, or other contact information to report the accessibility barrier. The recommended location for this information is on the website's \"Accessibility\" page, and to provide a link to that page in the header or footer that persists on every page.\n\nPages in this report lack a link to the Stanford Accessibility Policy. https://www.stanford.edu/site/accessibility",
+      "pending_execution": false,
+      "priority": "high",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163130/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163130/content"
+        }
+      }
+    },
+    {
+      "id": 25412163131,
+      "name": "[QA] Links to Stanford Earth (earth.stanford.edu) instead of SDSS",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2023-05-15 18:34:20Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "last_edited": "2024-10-24 17:48:20Z",
+      "matches": 0,
+      "note": "These links should be rewritten to sustainability.stanford.edu instead of earth. ",
+      "pending_execution": false,
+      "priority": "high",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163131/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163131/content"
+        }
+      }
+    },
+    {
+      "id": 25711815939,
+      "name": "QA: HTTP Pages",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2026-03-13 14:46:36Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "matches": 0,
+      "note": "No Stanford site should be serving up pages without a security certificate (https instead of http). ",
+      "pending_execution": false,
+      "priority": "high",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25711815939/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25711815939/content"
+        }
+      }
+    },
+    {
+      "id": 25585187548,
+      "name": "[QA] Common Misspellings: Tresidder",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2026-02-05 20:08:10Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "last_edited": "2026-02-05 20:15:44Z",
+      "matches": 0,
+      "pending_execution": false,
+      "priority": "high",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25585187548/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25585187548/content"
+        }
+      }
+    },
+    {
+      "id": 25585194024,
+      "name": "[QA] Common Misspellings: Cubberley",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2026-02-05 20:21:23Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "matches": 0,
+      "pending_execution": false,
+      "priority": "high",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25585194024/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25585194024/content"
+        }
+      }
+    },
+    {
+      "id": 25412163087,
+      "name": "[A11y] Accessibility Overlay Present",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2021-04-30 14:53:40Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "last_edited": "2024-11-04 16:36:45Z",
+      "matches": 0,
+      "note": "Accessibility overlays, such as AccessiBe, UserWay, etc. harms the accessibility of a page more than it helps. It should not be used on any Stanford website. ",
+      "pending_execution": false,
+      "priority": "high",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163087/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163087/content"
+        }
+      }
+    },
+    {
+      "id": 25660430337,
+      "name": "ADMIN: Links that contain saml/login or saml_login",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2026-02-26 20:26:17Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "last_edited": "2026-06-26 14:56:09Z",
+      "matches": 0,
+      "note": "These sites need exclusions added to the Site Content Settings -> Remove Links AND Exclude content. ",
+      "pending_execution": false,
+      "priority": "high",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25660430337/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25660430337/content"
+        }
+      }
+    },
+    {
+      "id": 25412163031,
+      "name": "[A11y][QA] Printed URLs & Email Addresses",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2021-05-24 21:37:02Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": -1,
+      "last_30_days_change_percentage": -0.28,
+      "last_30_days_change_significance": 6.09,
+      "last_edited": "2024-09-30 18:45:08Z",
+      "matches": 351,
+      "note": "Link where the link text is a URL such as:\n\n<a href=\"https://www.stanford.edu\">www.stanford.edu</a>",
+      "pending_execution": false,
+      "priority": "medium",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163031/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163031/content"
+        }
+      }
+    },
+    {
+      "id": 25027952340,
+      "name": "Large pages with multiple referrals ",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2025-07-29 15:04:10Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": -6,
+      "last_30_days_change_percentage": -4.8,
+      "last_30_days_change_significance": 10.06,
+      "matches": 119,
+      "note": "Find large pages that are linked to more than twice across your site. \n\nLarge pages take longer to load, which can have a negative impact on user experience. \n\nIf a page has multiple referrals, it’s likely to get a lot of traffic. Reducing the size of such pages can significantly speed up load time for site visitors.\n",
+      "pending_execution": false,
+      "priority": "medium",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25027952340/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25027952340/content"
+        }
+      }
+    },
+    {
+      "id": 25412162958,
+      "name": "[SEO][QA] Large Pictures (Dimensions of 2000+ wide or 1000+ tall)",
+      "all_sites": true,
+      "category": "media",
+      "created_by": "[REMOVED]",
+      "created_date": "2021-07-29 19:31:54Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": -8,
+      "last_30_days_change_percentage": -10.53,
+      "last_30_days_change_significance": 16.04,
+      "last_edited": "2024-09-30 19:44:16Z",
+      "matches": 68,
+      "note": "Find any picture that has a width greater than 2000 pixels or high greater than 1000 pixels. ",
+      "pending_execution": false,
+      "priority": "medium",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412162958/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412162958/media"
+        }
+      }
+    },
+    {
+      "id": 25412163089,
+      "name": "[A11y] Words in all capital letters",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2024-05-20 23:53:00Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 6,
+      "last_30_days_change_percentage": 17.65,
+      "last_30_days_change_significance": 20.91,
+      "last_edited": "2024-10-18 15:17:18Z",
+      "matches": 40,
+      "note": "Avoid unnecessary use of capitals. Using all capital letters can make it harder to read, and it can also appear that you are shouting at the reader.\nThis is recommended by several dyslexia organizations including the British Dyslexia Association.\n\nYou can find a Dyslexia Friendly Style Guide on the [British Dyslexia Associations website](http://www.bdadyslexia.org.uk/common/ckeditor/filemanager/userfiles/About_Us/policies/Dyslexia_Style_Guide.pdf).\n\nOnly matching text that is originally all capitals in the HTML, not after applying css. \nWords separated by `<br>` are not considered consecutive.",
+      "pending_execution": false,
+      "priority": "medium",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163089/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163089/content"
+        }
+      }
+    },
+    {
+      "id": 25412162974,
+      "name": "[QA] Images larger than 1MB",
+      "all_sites": true,
+      "category": "media",
+      "created_by": "[REMOVED]",
+      "created_date": "2019-11-18 19:23:41Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": -12,
+      "last_30_days_change_percentage": -28.57,
+      "last_30_days_change_significance": 37.83,
+      "last_edited": "2024-11-01 14:23:41Z",
+      "matches": 30,
+      "note": "Images larger than 1mb are problematic for all users, especially on mobile devices. ",
+      "pending_execution": false,
+      "priority": "medium",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412162974/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412162974/media"
+        }
+      }
+    },
+    {
+      "id": 25412163146,
+      "name": "[A11y][SEO] Long paragraphs",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2023-02-01 00:50:02Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_percentage": 0,
+      "last_30_days_change_significance": 4.95,
+      "last_edited": "2024-09-30 19:47:14Z",
+      "matches": 22,
+      "note": "Highlights paragraphs longer than 600 characters. For online texts, the recommended length of a paragraph is 40-50 words, or four to five lines. Keeping your paragraphs short helps boost comprehension and keeps your reader’s focus.",
+      "pending_execution": false,
+      "priority": "medium",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163146/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163146/content"
+        }
+      }
+    },
+    {
+      "id": 25412163103,
+      "name": "[QA] Find repeated, short words",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2017-09-22 23:40:43Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 1,
+      "last_30_days_change_percentage": 6.25,
+      "last_30_days_change_significance": 7.88,
+      "last_edited": "2024-09-30 18:21:37Z",
+      "matches": 17,
+      "note": "Find words of 5 characters or less that are repeated directly after each other. \nMany repeated words are likely small words that are repeated by mistake, often caused by editing the text, more so than actually writing down the words.\nThis policy only looks for words in lower case.",
+      "pending_execution": false,
+      "priority": "medium",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163103/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163103/content"
+        }
+      }
+    },
+    {
+      "id": 25412163069,
+      "name": "[A11y] Captions: YouTube Embeds (Videos)",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2023-05-17 14:35:56Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_percentage": 0,
+      "last_30_days_change_significance": 4.88,
+      "last_edited": "2024-10-18 15:43:54Z",
+      "matches": 8,
+      "note": "Locates all videos embedded from YouTube. Use this report to locate and confirm that all of these videos should have accurate captions. ",
+      "pending_execution": false,
+      "priority": "medium",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163069/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163069/content"
+        }
+      }
+    },
+    {
+      "id": 25412163115,
+      "name": "[A11y][QA] Email addresses that are not a link (with valid mailto). ",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2021-08-23 18:20:10Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_percentage": 0,
+      "last_30_days_change_significance": 4.83,
+      "last_edited": "2024-09-30 19:35:52Z",
+      "matches": 6,
+      "note": "Find all email addresses that do not have the 'mailto:' attribute.\n\nIt is not good practice to have an email address that is not clickable. This will require the user to copy the email address in order to send an email.",
+      "pending_execution": false,
+      "priority": "medium",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163115/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163115/content"
+        }
+      }
+    },
+    {
+      "id": 25027952338,
+      "name": "\"Lorem Ipsum\" placeholder text",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2025-07-29 15:04:10Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": -1,
+      "last_30_days_change_percentage": -16.67,
+      "last_30_days_change_significance": 11.02,
+      "matches": 5,
+      "note": "Find pages with the text 'Lorem Ipsum', which is often used as a placeholder text when creating new pages.",
+      "pending_execution": false,
+      "priority": "medium",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25027952338/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25027952338/content"
+        }
+      }
+    },
+    {
+      "id": 25412163012,
+      "name": "[A11y][SEO] Vague Link Text",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2021-05-14 15:08:17Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_percentage": 0,
+      "last_30_days_change_significance": 4.5,
+      "last_edited": "2024-09-30 18:30:59Z",
+      "matches": 2,
+      "note": "The text in your links should clear to users where they are going when activating the link. Vague link text such as \"click here\" does not provide any information to the user about where they are going. This is important for users of Screen Reading software as they may only see a list of links with several \"click here\" and not know what each does. \n\nThis is also important for SEO purposes, as google puts weight on the text of your link for helping understanding the purpose of the destination page. ",
+      "pending_execution": false,
+      "priority": "medium",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163012/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163012/content"
+        }
+      }
+    },
+    {
+      "id": 25412163132,
+      "name": "[QA] Google Docs",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2023-05-03 15:31:50Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_percentage": 0,
+      "last_30_days_change_significance": 4.5,
+      "last_edited": "2024-10-01 14:30:00Z",
+      "matches": 2,
+      "note": "Looks for any google docs. ",
+      "pending_execution": false,
+      "priority": "medium",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163132/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163132/content"
+        }
+      }
+    },
+    {
+      "id": 25412163109,
+      "name": "[A11y] Incorrectly formed list",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2021-04-20 23:09:45Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_percentage": 0,
+      "last_30_days_change_significance": 4.5,
+      "last_edited": "2024-11-04 16:11:46Z",
+      "matches": 2,
+      "note": "This is a paragraph element followed by a bullet character or other formatting. This is probably supposed to be a list. \n\n<ul>\n   <li>List item</li>\n   <li>List item</li>\n</ul>",
+      "pending_execution": false,
+      "priority": "medium",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163109/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163109/content"
+        }
+      }
+    },
+    {
+      "id": 25027952341,
+      "name": "High-level pages with broken links",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2025-07-29 15:04:10Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 1,
+      "last_30_days_change_significance": 36.1,
+      "matches": 1,
+      "note": "Find pages at level 1 and 2 that contain one or more broken links. This typically includes your home page and other main pages. \n\nThis Policy looks for \"confirmed\" broken links: URLs that return error codes 404 (page not found) or 410 (gone).\n",
+      "pending_execution": false,
+      "priority": "medium",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25027952341/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25027952341/content"
+        }
+      }
+    },
+    {
+      "id": 25027952339,
+      "name": "Homepages missing image alt text",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2025-07-29 15:04:10Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_percentage": 0,
+      "last_30_days_change_significance": 4,
+      "matches": 1,
+      "note": "Find homepages (level 1 pages) that have images missing a text alternative.\n\nIn order to be fully accessible to all visitors, images need to have a text alternative added to the code (HTML).\nRead about Accessibility & Image Alt text best practices in our Help Center",
+      "pending_execution": false,
+      "priority": "medium",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25027952339/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25027952339/content"
+        }
+      }
+    },
+    {
+      "id": 25412163079,
+      "name": "[QA] Homepages (High-level pages) with broken links",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2022-12-07 00:51:37Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 1,
+      "last_30_days_change_significance": 36.1,
+      "last_edited": "2024-11-04 16:10:46Z",
+      "matches": 1,
+      "note": "Find pages at level 1 that contain one or more broken links. This Policy looks for \"confirmed\" broken links: URLs that return error codes 404 (page not found) or 410 (gone).\n",
+      "pending_execution": false,
+      "priority": "medium",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163079/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163079/content"
+        }
+      }
+    },
+    {
+      "id": 25412163133,
+      "name": "[A11y] Captions: Zoom Recordings (External Links)",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2023-12-18 18:41:18Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "last_edited": "2024-10-18 15:41:27Z",
+      "matches": 0,
+      "note": "Locates all videos embedded from Zoom. Use this report to locate and confirm that all of these videos should have accurate captions. ",
+      "pending_execution": false,
+      "priority": "medium",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163133/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163133/content"
+        }
+      }
+    },
+    {
+      "id": 25412163014,
+      "name": "[QA] LInks to Unsafe domains",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2017-09-22 23:43:54Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "last_edited": "2024-09-30 18:42:06Z",
+      "matches": 0,
+      "note": "Find all links to unsafe domains on your site(s) as defined by Google.\r\nUnsafe domains can affect your reputation and direct visitors to harmful sites. ",
+      "pending_execution": false,
+      "priority": "medium",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163014/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163014/content"
+        }
+      }
+    },
+    {
+      "id": 25412163107,
+      "name": "[A11y][SEO] Images missing an alt attribute",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2019-06-14 21:26:38Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "last_edited": "2024-09-30 18:12:54Z",
+      "matches": 0,
+      "note": "Find all images on your site(s) with no alt attribute.\r\nThere are several reasons to always remember alt attributes on your images.\r\nIt will provide text for visitors who can’t see images in their browsers or visitors using a screen reader.\r\nUsing Alt attributes on images will also improve your website's placement in search engine result pages.",
+      "pending_execution": false,
+      "priority": "medium",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163107/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163107/content"
+        }
+      }
+    },
+    {
+      "id": 25412162947,
+      "name": "[A11y] Captions: iTunes Podcasts - Links or Embeds (Podcasts)",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2023-10-24 17:14:13Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "last_edited": "2024-10-18 15:46:41Z",
+      "matches": 0,
+      "note": "Locates all audio files embedded from iTunes. Use this report to locate and confirm that all of these audio should have accurate transcripts. ",
+      "pending_execution": false,
+      "priority": "medium",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412162947/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412162947/content"
+        }
+      }
+    },
+    {
+      "id": 25027952342,
+      "name": "Broken media files",
+      "all_sites": true,
+      "category": "media",
+      "created_by": "[REMOVED]",
+      "created_date": "2025-07-29 15:04:10Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "matches": 0,
+      "note": "Looks for broken media files that do not render properly due to an invalid URL or other reasons.",
+      "pending_execution": false,
+      "priority": "medium",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25027952342/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25027952342/media"
+        }
+      }
+    },
+    {
+      "id": 25412163073,
+      "name": "A11y: Headers exceeding 250 characters",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2025-09-24 16:01:58Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "last_edited": "2025-09-25 14:41:28Z",
+      "matches": 0,
+      "note": "If your heading is longer than 250 characters, its probably not a heading, but a paragraph that has been formatted to \"look big\". \n\nFind pages that use headers over a certain length to avoid line breaks that might misalign with the website layout.\nThis is a configurable template to accommodate different header styles.",
+      "pending_execution": false,
+      "priority": "medium",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163073/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163073/content"
+        }
+      }
+    },
+    {
+      "id": 25412163127,
+      "name": "[QA] Stanford.io links",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2022-03-24 16:16:40Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "last_edited": "2024-10-18 15:36:00Z",
+      "matches": 0,
+      "note": "looks for https://stanford.io links which redirects to https://www.stanford.edu. Just link directly to the .edu instead of the .io (which may be going away)",
+      "pending_execution": false,
+      "priority": "medium",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163127/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163127/content"
+        }
+      }
+    },
+    {
+      "id": 25412163046,
+      "name": "[A11y] Captions: Soundcloud Embeds (Podcasts)",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2023-08-15 22:20:40Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "last_edited": "2024-10-18 15:47:59Z",
+      "matches": 0,
+      "note": "Locates all audio files embedded from SoundCloud. Use this report to locate and confirm that all of these audio should have accurate transcripts. ",
+      "pending_execution": false,
+      "priority": "medium",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163046/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163046/content"
+        }
+      }
+    },
+    {
+      "id": 25412163113,
+      "name": "[QA] Links to Stanford Box",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2021-06-29 16:15:58Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "last_edited": "2024-10-29 16:43:25Z",
+      "matches": 0,
+      "note": "Stanford Box has been discontinued. These should all be removed. ",
+      "pending_execution": false,
+      "priority": "medium",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163113/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163113/content"
+        }
+      }
+    },
+    {
+      "id": 25412163028,
+      "name": "[QA] Broken media files",
+      "all_sites": true,
+      "category": "media",
+      "created_by": "[REMOVED]",
+      "created_date": "2019-06-14 21:25:20Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "last_edited": "2024-09-30 18:14:09Z",
+      "matches": 0,
+      "note": "Looks for broken media files that do not render properly due to an invalid URL or other reasons.",
+      "pending_execution": false,
+      "priority": "medium",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163028/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163028/media"
+        }
+      }
+    },
+    {
+      "id": 25412163052,
+      "name": "A11y: Disclaimer Instructions",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2025-07-21 22:20:14Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "matches": 0,
+      "note": "The statement \"The accessibility content below is required by University Communications for all large units at Stanford:\" is part of the instructions for the disclaimer and should have been removed before posting. ",
+      "pending_execution": false,
+      "priority": "medium",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163052/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163052/content"
+        }
+      }
+    },
+    {
+      "id": 25412163124,
+      "name": "[QA] Academic Policies",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2022-06-22 21:17:20Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "last_edited": "2024-11-04 15:23:07Z",
+      "matches": 0,
+      "note": "Links to Academic Policies on the bulletin. This has been moved to a new location. ",
+      "pending_execution": false,
+      "priority": "medium",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163124/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163124/content"
+        }
+      }
+    },
+    {
+      "id": 25412163129,
+      "name": "[QA] Google Tracking Code on a Link",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2021-06-14 15:01:14Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "last_edited": "2024-09-30 18:20:55Z",
+      "matches": 0,
+      "note": "Remove the google tracking code from all URLS. Links such as this: \nhttps://museum.stanford.edu/museums-home?utm_source=Slideshow&utm_medium=CAC_Website&utm_campaign=Web_June\n\nShould be shortened to:\nhttps://museum.stanford.edu/museums-home",
+      "pending_execution": false,
+      "priority": "medium",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163129/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163129/content"
+        }
+      }
+    },
+    {
+      "id": 25412162949,
+      "name": "[A11y] Captions: Spotify Embeds (Podcasts)",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2023-08-15 22:01:35Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "last_edited": "2024-10-18 15:46:09Z",
+      "matches": 0,
+      "note": "Locates all audio files embedded from Spotify. Use this report to locate and confirm that all of these audio should have accurate transcripts. ",
+      "pending_execution": false,
+      "priority": "medium",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412162949/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412162949/content"
+        }
+      }
+    },
+    {
+      "id": 25412163005,
+      "name": "[A11y] Captions: Vimeo Embeds (Videos)",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2023-08-18 15:09:50Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "last_edited": "2024-10-18 15:49:17Z",
+      "matches": 0,
+      "note": "Locates all videos embedded from Vimeo. Use this report to locate and confirm that all of these videos should have accurate captions. ",
+      "pending_execution": false,
+      "priority": "medium",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163005/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163005/content"
+        }
+      }
+    },
+    {
+      "id": 25412163011,
+      "name": "[A11y][SEO] Bad Page Titles",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2022-01-26 15:00:13Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "last_edited": "2024-11-04 16:30:07Z",
+      "matches": 0,
+      "note": "Page titles are important for both SEO and accessibility. ",
+      "pending_execution": false,
+      "priority": "medium",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163011/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163011/content"
+        }
+      }
+    },
+    {
+      "id": 25412163050,
+      "name": "[A11y][QA] Documents older than 5 years",
+      "all_sites": true,
+      "category": "documents",
+      "created_by": "[REMOVED]",
+      "created_date": "2017-09-22 23:43:36Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "last_edited": "2024-11-04 16:00:31Z",
+      "matches": 0,
+      "note": "Find documents older than 5 years on your site(s).\n\nHaving old documents on your site(s) causes a range of problems. On the most basic level they are obviously old, which can mean they don’t comply with new or recently introduced design and content policies.",
+      "pending_execution": false,
+      "priority": "medium",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163050/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163050/documents"
+        }
+      }
+    },
+    {
+      "id": 25412163116,
+      "name": "[QA] Email Link with No Mailto: (Broken Link)",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2022-04-05 19:15:36Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "last_edited": "2024-10-29 15:37:25Z",
+      "matches": 0,
+      "note": "You created an email link but you set it as a page link. So you did this: \n\n<a href=\"stan.ford@stanford.edu\"> \n\nInstead of\n\n<a href=\"mailto:stan.ford@stanford.edu\">",
+      "pending_execution": false,
+      "priority": "medium",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163116/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163116/content"
+        }
+      }
+    },
+    {
+      "id": 25412163078,
+      "name": "Pages without the Siteimprove Analytics script",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2025-10-07 22:10:35Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "matches": 0,
+      "note": "Find pages without the Siteimprove Analytics script. This policy only finds direct implementations and will not find Siteimprove Analytics scripts inserted by a tag manager (e.g. Google Tag Manager)",
+      "pending_execution": false,
+      "priority": "medium",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163078/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163078/content"
+        }
+      }
+    },
+    {
+      "id": 25412163076,
+      "name": "TEMP: ChatBot Link",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2025-09-26 18:24:11Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "matches": 0,
+      "pending_execution": false,
+      "priority": "medium",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163076/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163076/content"
+        }
+      }
+    },
+    {
+      "id": 25412163121,
+      "name": "[QA] Google Docs Forms",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2023-03-15 22:55:08Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": -1,
+      "last_30_days_change_percentage": -5.88,
+      "last_30_days_change_significance": 7.77,
+      "last_edited": "2024-10-01 14:35:34Z",
+      "matches": 16,
+      "note": "Google docs forms. ",
+      "pending_execution": false,
+      "priority": "low",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163121/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163121/content"
+        }
+      }
+    },
+    {
+      "id": 25412162970,
+      "name": "[QA] Links to Stanford Digital Repository (sdr.stanford.edu)",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2023-04-06 18:44:43Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_percentage": 0,
+      "last_30_days_change_significance": 4.67,
+      "last_edited": "2024-11-04 16:39:57Z",
+      "matches": 3,
+      "pending_execution": false,
+      "priority": "low",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412162970/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412162970/content"
+        }
+      }
+    },
+    {
+      "id": 25412163126,
+      "name": "[A11y] Captions Project: YouTube Links",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2024-11-21 18:58:06Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": -349,
+      "last_30_days_change_percentage": -99.15,
+      "last_30_days_change_significance": 258.24,
+      "matches": 3,
+      "pending_execution": false,
+      "priority": "low",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163126/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163126/content"
+        }
+      }
+    },
+    {
+      "id": 25412163083,
+      "name": "[QA] Wrong time format (Time not seperated with : but with another character)",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2017-09-22 23:40:13Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_percentage": 0,
+      "last_30_days_change_significance": 4,
+      "last_edited": "2024-11-04 16:38:26Z",
+      "matches": 1,
+      "note": "Looks for time formats that do not conform to your chosen standard. You can choose from two formats: 24-hour notation: where the units of time are separated by a colon, e.g. 23:59:00, or 12-hour notation: where the units of time are separated by a colon, followed by “am” or “pm”, e.g. 3:45 am. Using the same time format throughout will give your website a unified presentation.\n \n",
+      "pending_execution": false,
+      "priority": "low",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163083/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163083/content"
+        }
+      }
+    },
+    {
+      "id": 25412163039,
+      "name": "[SWS] Stanford Sites",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2024-10-01 14:49:12Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_percentage": 0,
+      "last_30_days_change_significance": 4,
+      "last_edited": "2024-10-01 15:41:19Z",
+      "matches": 1,
+      "pending_execution": false,
+      "priority": "low",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163039/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163039/content"
+        }
+      }
+    },
+    {
+      "id": 25412163018,
+      "name": "[A11y][SEO] Page Title Too Long",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2021-05-26 19:02:17Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_percentage": 0,
+      "last_30_days_change_significance": 4,
+      "last_edited": "2024-09-30 19:45:16Z",
+      "matches": 1,
+      "note": "Excessively long page titles can be a barrier for users of assistive technology and are a poor indicator for Search Engine Optimization. This looks for any page that has a title greater than 120 characters and is in the top 3 levels of pages (Hompage -> second level -> third level). ",
+      "pending_execution": false,
+      "priority": "low",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163018/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163018/content"
+        }
+      }
+    },
+    {
+      "id": 25412163137,
+      "name": "[ADMIN] Example Link Text",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2024-09-17 17:28:30Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_percentage": 0,
+      "last_30_days_change_significance": 4,
+      "last_edited": "2024-09-30 15:34:34Z",
+      "matches": 1,
+      "note": "Link text that has the text of \"Example Link\" which is the default on SWS sites in the footer. ",
+      "pending_execution": false,
+      "priority": "low",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163137/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163137/content"
+        }
+      }
+    },
+    {
+      "id": 25412163053,
+      "name": "[ADMIN] No Siteimprove Tracking Script on Homepage",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2024-03-22 21:07:56Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_percentage": 0,
+      "last_30_days_change_significance": 4,
+      "last_edited": "2024-10-24 16:28:30Z",
+      "matches": 1,
+      "pending_execution": false,
+      "priority": "low",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163053/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163053/content"
+        }
+      }
+    },
+    {
+      "id": 25412163035,
+      "name": "[SWS] Acquia Sites",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2024-10-01 14:50:09Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "last_edited": "2024-10-01 15:06:28Z",
+      "matches": 0,
+      "pending_execution": false,
+      "priority": "low",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163035/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163035/content"
+        }
+      }
+    },
+    {
+      "id": 25412163091,
+      "name": "[QA] Clinician educator",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2021-10-01 18:55:10Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "last_edited": "2024-11-04 16:32:00Z",
+      "matches": 0,
+      "note": "Searches for the phrase \"Clinician Educator\" which is incorrectly used. ",
+      "pending_execution": false,
+      "priority": "low",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163091/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163091/content"
+        }
+      }
+    },
+    {
+      "id": 25412163136,
+      "name": "[QA] Google APIS Files",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2025-01-22 19:37:06Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "last_edited": "2025-01-22 19:49:20Z",
+      "matches": 0,
+      "note": "Find any document using the storage.googleapis.com site. ",
+      "pending_execution": false,
+      "priority": "low",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163136/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163136/content"
+        }
+      }
+    },
+    {
+      "id": 25412163122,
+      "name": "[QA] Google Files",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2023-05-03 17:20:00Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": -1,
+      "last_30_days_change_percentage": -100,
+      "last_30_days_change_significance": 36.1,
+      "last_edited": "2024-10-01 14:30:37Z",
+      "matches": 0,
+      "note": "Any files hosted on google files. ",
+      "pending_execution": false,
+      "priority": "low",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163122/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163122/content"
+        }
+      }
+    },
+    {
+      "id": 25412163120,
+      "name": "QA: Profile links to Intranet",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2025-05-29 18:31:33Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "last_edited": "2025-05-29 18:48:06Z",
+      "matches": 0,
+      "pending_execution": false,
+      "priority": "low",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163120/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163120/content"
+        }
+      }
+    },
+    {
+      "id": 25412163088,
+      "name": "[QA] Stanford Guest House",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2024-05-24 22:28:49Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "last_edited": "2024-11-04 16:54:27Z",
+      "matches": 0,
+      "pending_execution": false,
+      "priority": "low",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163088/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163088/content"
+        }
+      }
+    },
+    {
+      "id": 25412163015,
+      "name": "[A11y][SEO] Page Title Too Short",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2022-02-07 18:33:22Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "last_edited": "2024-09-30 19:43:31Z",
+      "matches": 0,
+      "note": "If the page title is too short, it probably isn't informative. ",
+      "pending_execution": false,
+      "priority": "low",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163015/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163015/content"
+        }
+      }
+    },
+    {
+      "id": 25412163139,
+      "name": "[QA] Twitter Embed",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2023-07-20 18:40:08Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "last_edited": "2024-10-18 15:20:18Z",
+      "matches": 0,
+      "note": "Find any site with a twitter embed iFrame. ",
+      "pending_execution": false,
+      "priority": "low",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163139/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163139/content"
+        }
+      }
+    },
+    {
+      "id": 25412163043,
+      "name": "[A11y] Captions Project: 'oembed' YouTube",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2024-11-14 20:22:53Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "last_edited": "2024-11-14 20:32:47Z",
+      "matches": 0,
+      "pending_execution": false,
+      "priority": "low",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163043/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163043/content"
+        }
+      }
+    },
+    {
+      "id": 25412163128,
+      "name": "[a11y] Captions Project: Vimeo Links",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2024-11-21 19:00:43Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "matches": 0,
+      "pending_execution": false,
+      "priority": "low",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163128/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163128/content"
+        }
+      }
+    },
+    {
+      "id": 25412163034,
+      "name": "[SDSS] Incorrect name for Energy Science & Engineering",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2024-10-21 18:42:59Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "last_edited": "2024-10-21 21:44:10Z",
+      "matches": 0,
+      "pending_execution": false,
+      "priority": "low",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163034/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163034/content"
+        }
+      }
+    },
+    {
+      "id": 25412163105,
+      "name": "[Admin] CookieBots",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2024-11-15 20:12:40Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "last_edited": "2024-11-26 16:29:54Z",
+      "matches": 0,
+      "pending_execution": false,
+      "priority": "low",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163105/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163105/content"
+        }
+      }
+    },
+    {
+      "id": 25412163086,
+      "name": "[VPSA] Pages containing \"Board on Judicial Affairs\"",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2023-09-14 18:04:23Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "last_edited": "2024-11-04 15:10:47Z",
+      "matches": 0,
+      "pending_execution": false,
+      "priority": "low",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163086/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163086/content"
+        }
+      }
+    },
+    {
+      "id": 25412163049,
+      "name": "[A11y][QA] \"YouTube Video Player\" Default Title",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2022-03-29 16:13:47Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "last_edited": "2024-09-30 15:28:36Z",
+      "matches": 0,
+      "note": "A YouTube video player where the name is the default of \"YouTube video player\". This should be replaced with the title of the video such as:\n\n\"Video of Rick Astley Never Going To Give You Up\"",
+      "pending_execution": false,
+      "priority": "low",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163049/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163049/content"
+        }
+      }
+    },
+    {
+      "id": 25412163047,
+      "name": "[SDSS] Old names for Energy Science and Engineering",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2024-10-21 21:43:11Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "matches": 0,
+      "note": "Energy Science and Engineering is the new name. This looks for the old name. ",
+      "pending_execution": false,
+      "priority": "low",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163047/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163047/content"
+        }
+      }
+    },
+    {
+      "id": 25412163148,
+      "name": "[QA] Stanford Earth (Old Name for SDSS)",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2022-08-30 18:03:36Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "last_edited": "2024-11-04 15:18:17Z",
+      "matches": 0,
+      "note": "The school name has changed. This may be in error. ",
+      "pending_execution": false,
+      "priority": "low",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163148/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163148/content"
+        }
+      }
+    },
+    {
+      "id": 25412162999,
+      "name": "[A11y] Suspect Page Titles",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2024-06-05 21:36:16Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "last_edited": "2025-02-19 15:08:12Z",
+      "matches": 0,
+      "pending_execution": false,
+      "priority": "low",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412162999/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412162999/content"
+        }
+      }
+    },
+    {
+      "id": 25412163108,
+      "name": "TEMP: All XML (exclude Sitemap/RSS)",
+      "all_sites": true,
+      "category": "documents",
+      "created_by": "[REMOVED]",
+      "created_date": "2024-11-21 23:15:49Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "last_edited": "2024-12-06 21:55:44Z",
+      "matches": 0,
+      "pending_execution": false,
+      "priority": "low",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163108/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163108/documents"
+        }
+      }
+    },
+    {
+      "id": 25412163119,
+      "name": "QA: SOAP Links",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2025-03-13 12:40:32Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "last_edited": "2025-03-13 12:47:00Z",
+      "matches": 0,
+      "pending_execution": false,
+      "priority": "low",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163119/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163119/content"
+        }
+      }
+    },
+    {
+      "id": 25412163013,
+      "name": "[ADMIN] Page Urls to Exclude",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2022-06-28 15:54:47Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "last_edited": "2026-06-16 15:14:02Z",
+      "matches": 0,
+      "note": "Looks for page URLs that probably should be excluded under the content administrative area such as \"saml/login\" or \"wp-admin\" and many other variants. \n\nAdministrators can Go to Settings -> Crawler Settings -> Excludes to remove these pages from being seen. ",
+      "pending_execution": false,
+      "priority": "low",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163013/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163013/content"
+        }
+      }
+    },
+    {
+      "id": 25412163010,
+      "name": "[QA] Bit.ly Links",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2024-12-04 14:57:53Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "last_edited": "2024-12-04 16:43:34Z",
+      "matches": 0,
+      "note": "Look for any links that use the Bit.ly service. ",
+      "pending_execution": false,
+      "priority": "low",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163010/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163010/content"
+        }
+      }
+    },
+    {
+      "id": 25412163134,
+      "name": "[QA][SOM] Old Med School Link (www.med.stanford.edu)",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2024-04-24 15:12:54Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "last_edited": "2024-10-24 17:13:26Z",
+      "matches": 0,
+      "note": "Any link to https://www.med.stanford.edu should be rewritten to https://med.stanford.edu",
+      "pending_execution": false,
+      "priority": "low",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163134/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163134/content"
+        }
+      }
+    },
+    {
+      "id": 25412163048,
+      "name": "[QA] Probable Spacer Image",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2022-09-09 17:46:08Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "last_edited": "2024-10-24 16:58:59Z",
+      "matches": 0,
+      "note": "Spacer images shouldn't be used. This looks for any image with a file name of \"spacer\". ",
+      "pending_execution": false,
+      "priority": "low",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163048/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163048/content"
+        }
+      }
+    },
+    {
+      "id": 25412163042,
+      "name": "[SWS] Other SItes",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2024-10-01 14:51:10Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "last_edited": "2024-10-01 15:07:01Z",
+      "matches": 0,
+      "pending_execution": false,
+      "priority": "low",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163042/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163042/content"
+        }
+      }
+    },
+    {
+      "id": 25412163045,
+      "name": "[QA] Stanford Continuing Professional Development (Old Name)",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2024-09-11 14:52:56Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "last_edited": "2024-11-04 15:07:10Z",
+      "matches": 0,
+      "note": "This department changed their name. Find all instances of the old name so you can change to Center for Global & Online Learning (CGOE).",
+      "pending_execution": false,
+      "priority": "low",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163045/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163045/content"
+        }
+      }
+    },
+    {
+      "id": 25412163097,
+      "name": "Admin: Exclude Content",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2025-10-27 19:00:28Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": -1,
+      "last_30_days_change_percentage": -0.28,
+      "last_30_days_change_significance": 6.09,
+      "last_edited": "2025-10-28 02:02:12Z",
+      "matches": 351,
+      "pending_execution": false,
+      "priority": "none",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163097/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163097/content"
+        }
+      }
+    },
+    {
+      "id": 25412163135,
+      "name": "[A11y] [QA] Documents",
+      "all_sites": true,
+      "category": "documents",
+      "created_by": "[REMOVED]",
+      "created_date": "2025-10-09 20:00:36Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_percentage": 0,
+      "last_30_days_change_significance": 4.75,
+      "matches": 4,
+      "pending_execution": false,
+      "priority": "none",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163135/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163135/documents"
+        }
+      }
+    },
+    {
+      "id": 25412162941,
+      "name": "[VPSA] Retired Systems: Explore Courses",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2025-04-11 20:36:14Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_percentage": 0,
+      "last_30_days_change_significance": 4,
+      "matches": 1,
+      "pending_execution": false,
+      "priority": "none",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412162941/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412162941/content"
+        }
+      }
+    },
+    {
+      "id": 25412163123,
+      "name": "TEMP: web.stanford.edu",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2025-07-09 21:29:19Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_percentage": 0,
+      "last_30_days_change_significance": 4,
+      "last_edited": "2025-07-09 21:38:56Z",
+      "matches": 1,
+      "pending_execution": false,
+      "priority": "none",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163123/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163123/content"
+        }
+      }
+    },
+    {
+      "id": 25412162975,
+      "name": "[VPSA] Retired Systems: SimpleEnroll",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2025-04-10 17:52:19Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "last_edited": "2025-04-11 20:35:09Z",
+      "matches": 0,
+      "pending_execution": false,
+      "priority": "none",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412162975/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412162975/content"
+        }
+      }
+    },
+    {
+      "id": 25648391150,
+      "name": "PAGES TAKE 2",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2026-02-24 17:21:43Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "matches": 0,
+      "pending_execution": false,
+      "priority": "none",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25648391150/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25648391150/content"
+        }
+      }
+    },
+    {
+      "id": 25643939163,
+      "name": "Pages Tagged High Prioity",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2026-02-23 21:11:07Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "matches": 0,
+      "note": "Data cleanup only",
+      "pending_execution": false,
+      "priority": "none",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25643939163/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25643939163/content"
+        }
+      }
+    },
+    {
+      "id": 26001140132,
+      "name": "TEMP: [NAME REMOVED]'s URL Checker",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2026-06-01 16:00:12Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "last_edited": "2026-06-15 23:18:40Z",
+      "matches": 0,
+      "pending_execution": false,
+      "priority": "none",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/26001140132/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/26001140132/content"
+        }
+      }
+    },
+    {
+      "id": 25412163071,
+      "name": "[SDSS] Old school name",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2015-11-30 18:23:39Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "last_edited": "2024-09-30 15:58:19Z",
+      "matches": 0,
+      "note": "Look for any reference to the old name",
+      "pending_execution": false,
+      "priority": "none",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163071/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163071/content"
+        }
+      }
+    },
+    {
+      "id": 25412163093,
+      "name": "TEMP: PDF Link",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2025-09-23 16:54:42Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "matches": 0,
+      "pending_execution": false,
+      "priority": "none",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163093/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163093/content"
+        }
+      }
+    },
+    {
+      "id": 25412163024,
+      "name": "QA: IBIC - URL",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2025-07-10 23:48:16Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "last_edited": "2025-07-10 23:51:11Z",
+      "matches": 0,
+      "pending_execution": false,
+      "priority": "none",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163024/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163024/content"
+        }
+      }
+    },
+    {
+      "id": 25648916120,
+      "name": "Links to TIAA.ORG",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2026-02-24 20:07:11Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "matches": 0,
+      "note": "These are all reporting as broken. ",
+      "pending_execution": false,
+      "priority": "none",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25648916120/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25648916120/content"
+        }
+      }
+    },
+    {
+      "id": 25412163142,
+      "name": "TEMP: stanfordyou.stanford.edu",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2025-11-20 16:45:48Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "matches": 0,
+      "pending_execution": false,
+      "priority": "none",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163142/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163142/content"
+        }
+      }
+    },
+    {
+      "id": 25412163074,
+      "name": "[SWS] Accessibility Text",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2025-09-22 22:59:36Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "last_edited": "2026-01-08 17:16:08Z",
+      "matches": 0,
+      "note": "Accessibility Statement that is part of the SWS template. ",
+      "pending_execution": false,
+      "priority": "none",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163074/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163074/content"
+        }
+      }
+    },
+    {
+      "id": 25412163090,
+      "name": "[ADMIN] Chatbots",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2022-01-06 16:27:20Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "last_edited": "2026-03-16 21:15:38Z",
+      "matches": 0,
+      "note": "comm100\na5\nivy.ai\ndriftt.com = mongoose harmony\nhubspot = ocelot",
+      "pending_execution": false,
+      "priority": "none",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163090/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163090/content"
+        }
+      }
+    },
+    {
+      "id": 25984899292,
+      "name": "[SWS] SWS HSDP",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2026-05-27 18:29:26Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "matches": 0,
+      "pending_execution": false,
+      "priority": "none",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25984899292/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25984899292/content"
+        }
+      }
+    },
+    {
+      "id": 26420812078,
+      "name": "[A11y] Old Accessibility Link",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2026-09-24 16:05:18Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "matches": 0,
+      "note": "The main accessibility link has changed and now redirects. This should be updated to www.stanford.edu/accessibility",
+      "pending_execution": false,
+      "priority": "none",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/26420812078/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/26420812078/content"
+        }
+      }
+    },
+    {
+      "id": 25412163096,
+      "name": "QA: IBIC - Name",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2025-07-10 23:52:26Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "matches": 0,
+      "pending_execution": false,
+      "priority": "none",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163096/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163096/content"
+        }
+      }
+    },
+    {
+      "id": 25596092690,
+      "name": "TEMP: Searching for Pages to Exclude",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2026-02-09 15:57:17Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "last_edited": "2026-02-09 19:12:31Z",
+      "matches": 0,
+      "pending_execution": false,
+      "priority": "none",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25596092690/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25596092690/content"
+        }
+      }
+    },
+    {
+      "id": 26319661765,
+      "name": "Foreign Language? ",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2026-08-28 15:31:16Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "matches": 0,
+      "pending_execution": false,
+      "priority": "none",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/26319661765/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/26319661765/content"
+        }
+      }
+    },
+    {
+      "id": 25412163098,
+      "name": "[VPSA] Retired Systems: Enroll Alternate",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2025-04-11 20:37:39Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "last_edited": "2025-04-11 20:38:26Z",
+      "matches": 0,
+      "pending_execution": false,
+      "priority": "none",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163098/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163098/content"
+        }
+      }
+    },
+    {
+      "id": 25412162680,
+      "name": "[VPSA] Retired Systems: Carta",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2025-04-11 20:39:07Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "matches": 0,
+      "pending_execution": false,
+      "priority": "none",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412162680/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412162680/content"
+        }
+      }
+    },
+    {
+      "id": 26657774407,
+      "name": "[QA] Pages with STARS links",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2026-11-17 20:43:41Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_significance": 0,
+      "last_edited": "2026-11-18 20:17:12Z",
+      "matches": 0,
+      "pending_execution": false,
+      "priority": "none",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/26657774407/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/26657774407/content"
+        }
+      }
+    },
+    {
+      "id": 26095205867,
+      "name": "TEMP: homepages with tracking script and no traffic",
+      "all_sites": true,
+      "category": "content",
+      "created_by": "[REMOVED]",
+      "created_date": "2026-06-26 14:46:54Z",
+      "edited_by": "[REMOVED]",
+      "last_30_days_change_numerical": 0,
+      "last_30_days_change_significance": 3,
+      "matches": 0,
+      "pending_execution": false,
+      "priority": "none",
+      "_links": {
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/26095205867/history"
+        },
+        "matches": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/26095205867/content"
+        }
+      }
+    }
+  ],
+  "total_items": 114,
+  "total_pages": 1,
+  "links": {
+    "self": {
+      "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies?page_size=200"
+    }
+  }
+}

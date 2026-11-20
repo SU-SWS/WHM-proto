@@ -1,0 +1,639 @@
+{
+  "items": [
+    {
+      "ai_impact": "Y",
+      "complexity": "extreme",
+      "issue_name": "mobile_speed",
+      "issue_type": "mobile",
+      "occurrences": 1,
+      "seo_points_gained": 4.7,
+      "seo_points_to_gain": 5.3,
+      "_links": {
+        "details": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/seov2/issues/mobile_speed/details"
+        }
+      }
+    },
+    {
+      "ai_impact": "N",
+      "complexity": "extreme",
+      "issue_name": "touchscreen_ready",
+      "issue_type": "mobile",
+      "occurrences": 1,
+      "seo_points_gained": 0,
+      "seo_points_to_gain": 2.5,
+      "_links": {
+        "details": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/seov2/issues/touchscreen_ready/details"
+        }
+      }
+    },
+    {
+      "ai_impact": "N",
+      "complexity": "medium",
+      "issue_name": "image_empty_alt_attribute",
+      "issue_type": "ux",
+      "occurrences": 1199,
+      "seo_points_gained": 0.17,
+      "seo_points_to_gain": 1.03,
+      "_links": {
+        "details": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/seov2/issues/image_empty_alt_attribute"
+        }
+      }
+    },
+    {
+      "ai_impact": "N",
+      "complexity": "extreme",
+      "issue_name": "redirect_chain",
+      "issue_type": "technical",
+      "occurrences": 8,
+      "seo_points_gained": 0,
+      "seo_points_to_gain": 1.01,
+      "_links": {
+        "details": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/seov2/issues/redirect_chain"
+        }
+      }
+    },
+    {
+      "ai_impact": "N",
+      "complexity": "low",
+      "issue_name": "redirect_301",
+      "issue_type": "technical",
+      "occurrences": 33,
+      "seo_points_gained": 0.13,
+      "seo_points_to_gain": 0.88,
+      "_links": {
+        "details": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/seov2/issues/redirect_301"
+        }
+      }
+    },
+    {
+      "ai_impact": "N",
+      "complexity": "high",
+      "issue_name": "canonical_urls",
+      "issue_type": "technical",
+      "occurrences": 20,
+      "seo_points_gained": 0.29,
+      "seo_points_to_gain": 0.83,
+      "_links": {
+        "details": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/seov2/issues/canonical_urls"
+        }
+      }
+    },
+    {
+      "ai_impact": "N",
+      "complexity": "medium",
+      "issue_name": "words_per_page",
+      "issue_type": "content",
+      "occurrences": 166,
+      "seo_points_gained": 0.76,
+      "seo_points_to_gain": 0.8,
+      "_links": {
+        "details": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/seov2/issues/words_per_page"
+        }
+      }
+    },
+    {
+      "ai_impact": "Y",
+      "complexity": "high",
+      "issue_name": "structured_markup_pages",
+      "issue_type": "technical",
+      "occurrences": 323,
+      "seo_points_gained": 0,
+      "seo_points_to_gain": 0.67,
+      "_links": {
+        "details": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/seov2/issues/structured_markup_pages"
+        }
+      }
+    },
+    {
+      "ai_impact": "N",
+      "complexity": "extreme",
+      "issue_name": "desktop_speed",
+      "issue_type": "technical",
+      "occurrences": 1,
+      "seo_points_gained": 3.17,
+      "seo_points_to_gain": 0.43,
+      "_links": {
+        "details": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/seov2/issues/desktop_speed/details"
+        }
+      }
+    },
+    {
+      "ai_impact": "N",
+      "complexity": "medium",
+      "issue_name": "updated_media",
+      "issue_type": "content",
+      "occurrences": 1874,
+      "seo_points_gained": 0.24,
+      "seo_points_to_gain": 0.39,
+      "_links": {
+        "details": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/seov2/issues/updated_media"
+        }
+      }
+    },
+    {
+      "ai_impact": "N",
+      "complexity": "high",
+      "issue_name": "long_urls",
+      "issue_type": "technical",
+      "occurrences": 83,
+      "seo_points_gained": 0.83,
+      "seo_points_to_gain": 0.3,
+      "_links": {
+        "details": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/seov2/issues/long_urls"
+        }
+      }
+    },
+    {
+      "ai_impact": "Y",
+      "complexity": "medium",
+      "issue_name": "readability_pages_score",
+      "issue_type": "content",
+      "occurrences": 269,
+      "seo_points_gained": 0.05,
+      "seo_points_to_gain": 0.26,
+      "_links": {
+        "details": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/seov2/issues/readability_pages_score"
+        }
+      }
+    },
+    {
+      "ai_impact": "Y",
+      "complexity": "medium",
+      "issue_name": "long_sentences",
+      "issue_type": "content",
+      "occurrences": 234,
+      "seo_points_gained": 0.09,
+      "seo_points_to_gain": 0.22,
+      "_links": {
+        "details": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/seov2/issues/long_sentences"
+        }
+      }
+    },
+    {
+      "ai_impact": "N",
+      "complexity": "medium",
+      "issue_name": "redirect_not_301",
+      "issue_type": "technical",
+      "occurrences": 5,
+      "seo_points_gained": 0.88,
+      "seo_points_to_gain": 0.13,
+      "_links": {
+        "details": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/seov2/issues/redirect_not_301"
+        }
+      }
+    },
+    {
+      "ai_impact": "N",
+      "complexity": "low",
+      "issue_name": "meta_desc_short",
+      "issue_type": "content",
+      "occurrences": 213,
+      "seo_points_gained": 0.07,
+      "seo_points_to_gain": 0.13,
+      "_links": {
+        "details": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/seov2/issues/meta_desc_short"
+        }
+      }
+    },
+    {
+      "ai_impact": "N",
+      "complexity": "low",
+      "issue_name": "duplicate_description",
+      "issue_type": "content",
+      "occurrences": 6,
+      "seo_points_gained": 3.63,
+      "seo_points_to_gain": 0.12,
+      "_links": {
+        "details": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/seov2/issues/duplicate_description"
+        }
+      }
+    },
+    {
+      "ai_impact": "N",
+      "complexity": "low",
+      "issue_name": "meta_title_short",
+      "issue_type": "content",
+      "occurrences": 41,
+      "seo_points_gained": 0.53,
+      "seo_points_to_gain": 0.07,
+      "_links": {
+        "details": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/seov2/issues/meta_title_short"
+        }
+      }
+    },
+    {
+      "ai_impact": "N",
+      "complexity": "high",
+      "issue_name": "navigation_depth",
+      "issue_type": "ux",
+      "occurrences": 10,
+      "seo_points_gained": 1.94,
+      "seo_points_to_gain": 0.06,
+      "_links": {
+        "details": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/seov2/issues/navigation_depth"
+        }
+      }
+    },
+    {
+      "ai_impact": "N",
+      "complexity": "high",
+      "issue_name": "redirect_mixed",
+      "issue_type": "technical",
+      "occurrences": 2,
+      "seo_points_gained": 0.96,
+      "seo_points_to_gain": 0.05,
+      "_links": {
+        "details": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/seov2/issues/redirect_mixed"
+        }
+      }
+    },
+    {
+      "ai_impact": "Y",
+      "complexity": "high",
+      "issue_name": "sitemap_excluded_pages",
+      "issue_type": "technical",
+      "occurrences": 27,
+      "seo_points_gained": 1.3,
+      "seo_points_to_gain": 0.05,
+      "_links": {
+        "details": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/seov2/issues/sitemap_excluded_pages"
+        }
+      }
+    },
+    {
+      "ai_impact": "Y",
+      "complexity": "medium",
+      "issue_name": "meta_desc_missing",
+      "issue_type": "content",
+      "occurrences": 73,
+      "seo_points_gained": 0.15,
+      "seo_points_to_gain": 0.05,
+      "_links": {
+        "details": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/seov2/issues/meta_desc_missing"
+        }
+      }
+    },
+    {
+      "ai_impact": "N",
+      "complexity": "medium",
+      "issue_name": "pages_with_images_1mb",
+      "issue_type": "ux",
+      "occurrences": 8,
+      "seo_points_gained": 1.16,
+      "seo_points_to_gain": 0.04,
+      "_links": {
+        "details": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/seov2/issues/pages_with_images_1mb"
+        }
+      }
+    },
+    {
+      "ai_impact": "N",
+      "complexity": "low",
+      "issue_name": "pages_with_broken_links",
+      "issue_type": "content",
+      "occurrences": 12,
+      "seo_points_gained": 0.96,
+      "seo_points_to_gain": 0.04,
+      "_links": {
+        "details": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/seov2/issues/pages_with_broken_links"
+        }
+      }
+    },
+    {
+      "ai_impact": "N",
+      "complexity": "low",
+      "issue_name": "meta_title_long",
+      "issue_type": "content",
+      "occurrences": 17,
+      "seo_points_gained": 0.56,
+      "seo_points_to_gain": 0.04,
+      "_links": {
+        "details": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/seov2/issues/meta_title_long"
+        }
+      }
+    },
+    {
+      "ai_impact": "N",
+      "complexity": "medium",
+      "issue_name": "images_1mb",
+      "issue_type": "ux",
+      "occurrences": 10,
+      "seo_points_gained": 1.18,
+      "seo_points_to_gain": 0.02,
+      "_links": {
+        "details": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/seov2/issues/images_1mb"
+        }
+      }
+    },
+    {
+      "ai_impact": "N",
+      "complexity": "high",
+      "issue_name": "code_text_ratio",
+      "issue_type": "content",
+      "occurrences": 5,
+      "seo_points_gained": 1.54,
+      "seo_points_to_gain": 0.02,
+      "_links": {
+        "details": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/seov2/issues/code_text_ratio"
+        }
+      }
+    },
+    {
+      "ai_impact": "N",
+      "complexity": "extreme",
+      "issue_name": "ssl_mixed",
+      "issue_type": "technical",
+      "occurrences": 1,
+      "seo_points_gained": 4.49,
+      "seo_points_to_gain": 0.01,
+      "_links": {
+        "details": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/seov2/issues/ssl_mixed"
+        }
+      }
+    },
+    {
+      "ai_impact": "N",
+      "complexity": "low",
+      "issue_name": "pages_with_misspellings",
+      "issue_type": "content",
+      "occurrences": 7,
+      "seo_points_gained": 0.61,
+      "seo_points_to_gain": 0.01,
+      "_links": {
+        "details": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/seov2/issues/pages_with_misspellings"
+        }
+      }
+    },
+    {
+      "ai_impact": "N",
+      "complexity": "medium",
+      "issue_name": "many_internal_links",
+      "issue_type": "ux",
+      "occurrences": 2,
+      "seo_points_gained": 1.99,
+      "seo_points_to_gain": 0.01,
+      "_links": {
+        "details": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/seov2/issues/many_internal_links"
+        }
+      }
+    },
+    {
+      "ai_impact": "N",
+      "complexity": "low",
+      "issue_name": "meta_desc_long",
+      "issue_type": "content",
+      "occurrences": 18,
+      "seo_points_gained": 0.19,
+      "seo_points_to_gain": 0.01,
+      "_links": {
+        "details": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/seov2/issues/meta_desc_long"
+        }
+      }
+    },
+    {
+      "ai_impact": "N",
+      "complexity": "low",
+      "issue_name": "duplicate_page_title",
+      "issue_type": "content",
+      "occurrences": 1,
+      "seo_points_gained": 3.74,
+      "seo_points_to_gain": 0.01,
+      "_links": {
+        "details": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/seov2/issues/duplicate_page_title"
+        }
+      }
+    },
+    {
+      "ai_impact": "N",
+      "complexity": "medium",
+      "issue_name": "status_code_404",
+      "issue_type": "technical",
+      "occurrences": 8,
+      "seo_points_gained": 1.12,
+      "seo_points_to_gain": 0,
+      "_links": {
+        "details": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/seov2/issues/status_code_404"
+        }
+      }
+    },
+    {
+      "ai_impact": "N",
+      "complexity": "high",
+      "issue_name": "status_code_4xxs",
+      "issue_type": "technical",
+      "occurrences": 8,
+      "seo_points_gained": 1.12,
+      "seo_points_to_gain": 0,
+      "_links": {
+        "details": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/seov2/issues/status_code_4xxs"
+        }
+      }
+    },
+    {
+      "ai_impact": "N",
+      "complexity": "low",
+      "issue_name": "broken_links",
+      "issue_type": "content",
+      "occurrences": 8,
+      "seo_points_gained": 1,
+      "seo_points_to_gain": 0,
+      "_links": {
+        "details": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/seov2/issues/broken_links"
+        }
+      }
+    },
+    {
+      "ai_impact": "N",
+      "complexity": "low",
+      "issue_name": "misspellings",
+      "issue_type": "content",
+      "occurrences": 4,
+      "seo_points_gained": 0.62,
+      "seo_points_to_gain": 0,
+      "_links": {
+        "details": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/seov2/issues/misspellings"
+        }
+      }
+    },
+    {
+      "ai_impact": "Y",
+      "complexity": "low",
+      "issue_name": "meta_desc_empty",
+      "issue_type": "content",
+      "occurrences": 0,
+      "seo_points_gained": 0.2,
+      "seo_points_to_gain": 0
+    },
+    {
+      "ai_impact": "Y",
+      "complexity": "low",
+      "issue_name": "empty_h1",
+      "issue_type": "content",
+      "occurrences": 0,
+      "seo_points_gained": 0.33,
+      "seo_points_to_gain": 0
+    },
+    {
+      "ai_impact": "Y",
+      "complexity": "medium",
+      "issue_name": "missing_h1",
+      "issue_type": "content",
+      "occurrences": 0,
+      "seo_points_gained": 0.33,
+      "seo_points_to_gain": 0
+    },
+    {
+      "ai_impact": "Y",
+      "complexity": "medium",
+      "issue_name": "multiple_h1",
+      "issue_type": "content",
+      "occurrences": 0,
+      "seo_points_gained": 0.33,
+      "seo_points_to_gain": 0
+    },
+    {
+      "ai_impact": "Y",
+      "complexity": "medium",
+      "issue_name": "meta_desc_multiple",
+      "issue_type": "content",
+      "occurrences": 0,
+      "seo_points_gained": 0.2,
+      "seo_points_to_gain": 0
+    },
+    {
+      "ai_impact": "Y",
+      "complexity": "low",
+      "issue_name": "meta_title_empty",
+      "issue_type": "content",
+      "occurrences": 0,
+      "seo_points_gained": 0.6,
+      "seo_points_to_gain": 0
+    },
+    {
+      "ai_impact": "Y",
+      "complexity": "medium",
+      "issue_name": "meta_title_missing",
+      "issue_type": "content",
+      "occurrences": 0,
+      "seo_points_gained": 0.6,
+      "seo_points_to_gain": 0
+    },
+    {
+      "ai_impact": "Y",
+      "complexity": "medium",
+      "issue_name": "meta_title_multiple",
+      "issue_type": "content",
+      "occurrences": 0,
+      "seo_points_gained": 0.6,
+      "seo_points_to_gain": 0
+    },
+    {
+      "ai_impact": "N",
+      "complexity": "low",
+      "issue_name": "new_pages",
+      "issue_type": "content",
+      "occurrences": 0,
+      "seo_points_gained": 0.62,
+      "seo_points_to_gain": 0
+    },
+    {
+      "ai_impact": "N",
+      "complexity": "low",
+      "issue_name": "updated_pages",
+      "issue_type": "content",
+      "occurrences": 0,
+      "seo_points_gained": 0.62,
+      "seo_points_to_gain": 0
+    },
+    {
+      "ai_impact": "N",
+      "complexity": "low",
+      "issue_name": "broken_links_entry_pages",
+      "issue_type": "content",
+      "occurrences": 0,
+      "seo_points_gained": 1,
+      "seo_points_to_gain": 0
+    },
+    {
+      "ai_impact": "N",
+      "complexity": "low",
+      "issue_name": "dead_end_pages",
+      "issue_type": "content",
+      "occurrences": 0,
+      "seo_points_gained": 1,
+      "seo_points_to_gain": 0
+    },
+    {
+      "ai_impact": "N",
+      "complexity": "medium",
+      "issue_name": "links_to_unsafe_domains",
+      "issue_type": "content",
+      "occurrences": 0,
+      "seo_points_gained": 1,
+      "seo_points_to_gain": 0
+    },
+    {
+      "ai_impact": "N",
+      "complexity": "low",
+      "issue_name": "misspelling_entry_pages",
+      "issue_type": "content",
+      "occurrences": 0,
+      "seo_points_gained": 0.62,
+      "seo_points_to_gain": 0
+    },
+    {
+      "ai_impact": "N",
+      "complexity": "extreme",
+      "issue_name": "fontsize_legibility",
+      "issue_type": "mobile",
+      "occurrences": 0,
+      "seo_points_gained": 2.5,
+      "seo_points_to_gain": 0
+    }
+  ],
+  "total_items": 68,
+  "total_pages": 2,
+  "links": {
+    "next": {
+      "href": "https://api.us.siteimprove.com/v2/sites/25412155164/seov2/issues?page_size=50&page=2"
+    },
+    "self": {
+      "href": "https://api.us.siteimprove.com/v2/sites/25412155164/seov2/issues?page_size=50"
+    }
+  }
+}

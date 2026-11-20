@@ -1,0 +1,16 @@
+{
+  "broken_links": 62,
+  "broken_links_delta": -3,
+  "clicks_on_broken_links": 1,
+  "misspellings": 4,
+  "misspellings_delta": 0,
+  "pages": 351,
+  "pages_affected_by_broken_links": 351,
+  "pages_affected_by_misspellings": 7,
+  "potential_misspellings": 272,
+  "_links": {
+    "self": {
+      "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/overview/summary"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "content_score": 91.31,
+  "mobile_score": 61,
+  "seo_score": 84.48,
+  "technical_score": 90.26,
+  "ux_score": 88.34,
+  "_links": {
+    "history": {
+      "href": "https://api.us.siteimprove.com/v2/sites/25412155164/seov2/overview/score/history"
+    },
+    "self": {
+      "href": "https://api.us.siteimprove.com/v2/sites/25412155164/seov2/overview/score"
+    }
+  }
+}

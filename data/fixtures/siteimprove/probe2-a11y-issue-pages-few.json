@@ -1,0 +1,107 @@
+{
+  "items": [
+    {
+      "id": 2243209887,
+      "title": "Example Event | Stanford Sites User Guide",
+      "url": "https://sitesuserguide.stanford.edu/events/example-event",
+      "checking_now": false,
+      "occurrences": 1,
+      "_siteimprove": {
+        "page_report": {
+          "href": "https://my2.us.siteimprove.com/Inspector/1062154/A11Y/Page?pageId=2243209887&impmd=[REDACTED]#/sia-r113/failed"
+        }
+      }
+    },
+    {
+      "id": 2228050805,
+      "title": "Past events | Stanford Sites User Guide",
+      "url": "https://sitesuserguide.stanford.edu/events/past",
+      "checking_now": false,
+      "occurrences": 10,
+      "_siteimprove": {
+        "page_report": {
+          "href": "https://my2.us.siteimprove.com/Inspector/1062154/A11Y/Page?pageId=2228050805&impmd=[REDACTED]#/sia-r113/failed"
+        }
+      }
+    },
+    {
+      "id": 2223738021,
+      "title": "Stanford Sites Onboarding Sessions | Stanford Sites User Guide",
+      "url": "https://sitesuserguide.stanford.edu/events/stanford-sites-onboarding-sessions",
+      "checking_now": false,
+      "occurrences": 1,
+      "_siteimprove": {
+        "page_report": {
+          "href": "https://my2.us.siteimprove.com/Inspector/1062154/A11Y/Page?pageId=2223738021&impmd=[REDACTED]#/sia-r113/failed"
+        }
+      }
+    },
+    {
+      "id": 2240764243,
+      "title": "Past events | Stanford Sites User Guide",
+      "url": "https://sitesuserguide.stanford.edu/events/past?page=1",
+      "checking_now": false,
+      "occurrences": 9,
+      "_siteimprove": {
+        "page_report": {
+          "href": "https://my2.us.siteimprove.com/Inspector/1062154/A11Y/Page?pageId=2240764243&impmd=[REDACTED]#/sia-r113/failed"
+        }
+      }
+    },
+    {
+      "id": 22596813365,
+      "title": "Past events | Stanford Sites User Guide",
+      "url": "https://sitesuserguide.stanford.edu/events/past?page=3",
+      "checking_now": false,
+      "occurrences": 4,
+      "_siteimprove": {
+        "page_report": {
+          "href": "https://my2.us.siteimprove.com/Inspector/1062154/A11Y/Page?pageId=22596813365&impmd=[REDACTED]#/sia-r113/failed"
+        }
+      }
+    },
+    {
+      "id": 11993919920,
+      "title": "Past events | Stanford Sites User Guide",
+      "url": "https://sitesuserguide.stanford.edu/events/past?page=2",
+      "checking_now": false,
+      "occurrences": 2,
+      "_siteimprove": {
+        "page_report": {
+          "href": "https://my2.us.siteimprove.com/Inspector/1062154/A11Y/Page?pageId=11993919920&impmd=[REDACTED]#/sia-r113/failed"
+        }
+      }
+    },
+    {
+      "id": 2240763016,
+      "title": "Introduction to Stanford Sites - July 2025 | Stanford Sites User Guide",
+      "url": "https://sitesuserguide.stanford.edu/events/introduction-stanford-sites-july-2025",
+      "checking_now": false,
+      "occurrences": 1,
+      "_siteimprove": {
+        "page_report": {
+          "href": "https://my2.us.siteimprove.com/Inspector/1062154/A11Y/Page?pageId=2240763016&impmd=[REDACTED]#/sia-r113/failed"
+        }
+      }
+    },
+    {
+      "id": 2243406112,
+      "title": "Solar Eclipse | Stanford Sites User Guide",
+      "url": "https://sitesuserguide.stanford.edu/events/solar-eclipse",
+      "checking_now": false,
+      "occurrences": 1,
+      "_siteimprove": {
+        "page_report": {
+          "href": "https://my2.us.siteimprove.com/Inspector/1062154/A11Y/Page?pageId=2243406112&impmd=[REDACTED]#/sia-r113/failed"
+        }
+      }
+    }
+  ],
+  "total_items": 8,
+  "total_pages": 1,
+  "links": {
+    "self": {
+      "href": "https://api.us.siteimprove.com/v2/sites/25412155164/a11y/issue_kinds/confirmed/issues/113/pages?page_size=20"
+    }
+  }
+}

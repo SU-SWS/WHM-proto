@@ -1,0 +1,83 @@
+{
+  "items": [
+    {
+      "bounce_rate": 0,
+      "new_visitors": 0,
+      "page_views": 0,
+      "returning_visitors": 0,
+      "timestamp": "2026-04-01T00:00:00-04:00",
+      "unique_visitors": 0,
+      "visits": 0
+    },
+    {
+      "bounce_rate": 0,
+      "new_visitors": 0,
+      "page_views": 0,
+      "returning_visitors": 0,
+      "timestamp": "2026-05-01T00:00:00-04:00",
+      "unique_visitors": 0,
+      "visits": 0
+    },
+    {
+      "bounce_rate": 73.95,
+      "new_visitors": 2184,
+      "page_views": 5494,
+      "returning_visitors": 15,
+      "timestamp": "2026-06-01T00:00:00-04:00",
+      "unique_visitors": 2199,
+      "visits": 2653
+    },
+    {
+      "bounce_rate": 77.21,
+      "new_visitors": 1966,
+      "page_views": 4683,
+      "returning_visitors": 14,
+      "timestamp": "2026-07-01T00:00:00-04:00",
+      "unique_visitors": 1980,
+      "visits": 2264
+    },
+    {
+      "bounce_rate": 62.4,
+      "new_visitors": 1418,
+      "page_views": 5889,
+      "returning_visitors": 9,
+      "timestamp": "2026-08-01T00:00:00-04:00",
+      "unique_visitors": 1427,
+      "visits": 1851
+    },
+    {
+      "bounce_rate": 61.97,
+      "new_visitors": 2304,
+      "page_views": 7946,
+      "returning_visitors": 6,
+      "timestamp": "2026-09-01T00:00:00-04:00",
+      "unique_visitors": 2310,
+      "visits": 2927
+    },
+    {
+      "bounce_rate": 60.19,
+      "new_visitors": 1880,
+      "page_views": 6807,
+      "returning_visitors": 2,
+      "timestamp": "2026-10-01T00:00:00-04:00",
+      "unique_visitors": 1882,
+      "visits": 2359
+    },
+    {
+      "bounce_rate": 65.63,
+      "new_visitors": 1125,
+      "page_views": 4266,
+      "returning_visitors": 2,
+      "timestamp": "2026-11-01T00:00:00-04:00",
+      "unique_visitors": 1127,
+      "visits": 1449
+    }
+  ],
+  "total_items": 8,
+  "total_pages": 1,
+  "links": {
+    "self": {
+      "href": "https://api.us.siteimprove.com/v2/sites/25412155164/analytics/overview/history?period=20260401_20261119"
+    }
+  }
+}
