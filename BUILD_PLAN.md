@@ -77,6 +77,13 @@ Then:
 
 **Status (Nov 20):** built in `scripts/lib/live-site.mjs` and tested against `scripts/dev/mock-siteimprove.mjs`, which serves the saved fixtures. Live: both scores and their trends, broken links (count, trend, issues), accessibility issues, page views and top pages, search descriptions, and the check date. First real run published Nov 20. The daily recorder is retired (the API has the history). "Open in Siteimprove" links are on, per page, with `impmd` stripped. Stanford policies are live for allowlisted policies (Nov 20). Task 6 is complete apart from SWS review of the drafted wording.
 
+## 6a. GA4 engagement and site search (added Nov 20)
+
+- Apps Script `scripts/apps-script/ga4-export.gs`, set up as in `docs/ga4-setup.md`: dry run, review, then weekly commits of `data/ga4/sitesuserguide.json`.
+- The data run merges engagement rate into "Most visited pages" and search terms into "What visitors search for", labeled Google Analytics 4 with the period's end date. Search terms are privacy-filtered twice.
+
+**Done when:** a reviewed export is committed, a data run shows both sections as live for sitesuserguide, and no published term looks personal.
+
 ## 7. Check and rehearse
 
 - Run an axe check on every page, test keyboard-only use and phone width, and confirm every chart has a table alternative (Q-1).

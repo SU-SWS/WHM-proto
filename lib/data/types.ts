@@ -126,7 +126,8 @@ export interface SiteData {
   };
   topPages: {
     viewsSource: Source;
-    engagementSource: Source; // engagement is GA4, so sample until the MVP
+    engagementSource: Source; // GA4, from the Apps Script export when live (decisions, Nov 20)
+    engagementAsOf?: IsoDate; // last day of the GA4 period
     pages: {
       path: string;
       views: number;
@@ -135,7 +136,7 @@ export interface SiteData {
     }[];
   };
   issues: SiteIssue[];
-  siteSearch: { source: Source; terms: { term: string; count: number }[] }; // GA4, sample until the MVP
+  siteSearch: { source: Source; asOf?: IsoDate; terms: { term: string; count: number }[] }; // GA4; asOf is the last day of its period
   speed: { source: Source; pages: { path: string; score: number }[] }; // optional
 }
 

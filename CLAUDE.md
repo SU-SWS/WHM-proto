@@ -21,8 +21,9 @@ Stanford Web Services (SWS) innovation project. A dashboard that turns Siteimpro
 
 ## Data rules
 
-- **Only Siteimprove data is live**, and only for **sitesuserguide.stanford.edu** (`live: true` in `data/registry.json`). Everything else uses the committed sample data.
-- Traffic in the prototype comes from **Siteimprove Analytics** (confirmed on for sitesuserguide). Google Analytics data and the AI content report are **labeled samples** until the MVP.
+- **Live data is only for sitesuserguide.stanford.edu** (`live: true` in `data/registry.json`): Siteimprove, plus GA4 engagement and site search from an Apps Script export (`data/ga4/`, decisions Nov 20). Everything else uses the committed sample data.
+- Page views come from **Siteimprove Analytics**; GA4 supplies only engagement rate and site search terms (one source per metric). The AI content report is a **labeled sample** until the MVP.
+- GA4 site search terms are public once published: only terms searched at least 5 times, with anything that looks like an email, phone or ID number, or web address removed.
 - Every section of every data file carries a `source` of `live` or `sample`. The UI shows it.
 - Every screen shows how old its data is and where it came from (AD-4).
 - If a live fetch fails, keep the last good published data and record the failure in `status.json` (Q-7). Never show old numbers as current.

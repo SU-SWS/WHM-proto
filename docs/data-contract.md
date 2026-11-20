@@ -11,6 +11,7 @@ Every part of the prototype reads or writes these files. The pages, the workflow
 | `data/annotations.json` | People, by commit | SWS accessibility specialist notes (TR-4, TR-5) |
 | `data/sample/` | People, by commit | Sample data. Scripts never write here. |
 | `data/published/` | `scripts/refresh.mjs` | What the site builds from. Starts as a copy of `data/sample/`. |
+| `data/ga4/<siteKey>.json` | The GA4 Apps Script (`scripts/apps-script/ga4-export.gs`), weekly | Engagement rate per page and filtered site search terms, last 30 days. Merged by the data run if under 14 days old. |
 | `data/fixtures/siteimprove/` | People, from the Save Siteimprove fixtures workflow | Saved real API responses used to write and test code. Reviewed before they're committed. |
 
 **How the refresh merges data:** for each site, the script starts from that site's sample file. For a site with `live: true`, it replaces each section it fetched successfully and sets that section's `source` to `"live"`. If a section fails, the script keeps that section's last good published version. The result is written to `data/published/`. `portfolio.json` is then rebuilt from the published site files, so the rollup always matches the site pages; `openOwnerIssues` is the number of issues whose type has `fixer: "owner"`. `status.json`'s `runId` is the GitHub Actions run ID, which the admin page matches against GitHub to tell when a run's data is live.
@@ -79,7 +80,7 @@ interface SiteData {
     siteTargetScore: Series; accessibilityScore: Series; brokenLinks: Series; pageViews: Series;
   };
   topPages: {
-    viewsSource: Source; engagementSource: Source;   // engagement is GA4, so sample until the MVP
+    viewsSource: Source; engagementSource: Source; engagementAsOf?: IsoDate;   // engagement is GA4 (Apps Script export); asOf = end of its period
     pages: { path: string; views: number; engagementRate: number | null; openIssues: number }[];
   };
   issues: {
@@ -95,7 +96,7 @@ interface SiteData {
               siteimproveUrl?: string | null } |                     // this page's report in Siteimprove, impmd stripped
              { path: string; views: number; monthsSinceUpdate: number })[];
   }[];
-  siteSearch: { source: Source; terms: { term: string; count: number }[] };   // GA4, sample until the MVP
+  siteSearch: { source: Source; asOf?: IsoDate; terms: { term: string; count: number }[] };   // GA4 (Apps Script export), filtered
   speed:      { source: Source; pages: { path: string; score: number }[] };  // optional
 }
 interface Reading { value: number; change: number | null; source: Source }   // null: nothing to compare with
@@ -116,6 +117,18 @@ interface Portfolio {
   sites: { key: string; name: string; url: string; state: SiteData["state"]; verdict: string;
            siteTargetScore: number; accessibilityScore: number; brokenLinks: number;
            openOwnerIssues: number; checkedAt: IsoDate; source: Source }[];
+}
+
+// data/ga4/<siteKey>.json — committed by the GA4 Apps Script (decisions, Nov 20)
+interface Ga4Export {
+  schemaVersion: 1;
+  siteKey: string;
+  propertyId: string;
+  generatedAt: string;                      // ISO date-time
+  period: { start: IsoDate; end: IsoDate }; // last 30 days, ending yesterday
+  pages: { path: string; engagementRate: number }[];   // 0–1; no page views (those are Siteimprove's)
+  searchTerms: { term: string; count: number }[];      // 5+ searches, personal-looking terms removed
+  dropped: { searchTerms: number };
 }
 
 // data/{sample|published}/status.json

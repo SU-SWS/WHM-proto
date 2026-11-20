@@ -107,7 +107,7 @@ export default async function SitePage({ params }: PageProps<"/sites/[site]">) {
         {site.topPages.viewsSource === "live" &&
           "Search and sign-in pages are left out, because they’re part of the Stanford Sites platform rather than your content."}
       </SourceNote>
-      <SourceNote provider="ga4" source={site.topPages.engagementSource} date={checked}>
+      <SourceNote provider="ga4" source={site.topPages.engagementSource} date={site.topPages.engagementAsOf ?? checked}>
         Engagement rate is the share of visits that lasted over 10 seconds, viewed 2 or more pages, or completed
         a key event.
       </SourceNote>
@@ -134,6 +134,9 @@ export default async function SitePage({ params }: PageProps<"/sites/[site]">) {
       </div>
 
       <h2 className="section-heading">What visitors search for</h2>
+      {site.siteSearch.terms.length === 0 ? (
+        <p>No search term was searched often enough to show for this period.</p>
+      ) : (
       <TableWrap label="What visitors search for" className="max-w-[576px]">
         <table className="data-table">
           <thead>
@@ -152,7 +155,11 @@ export default async function SitePage({ params }: PageProps<"/sites/[site]">) {
           </tbody>
         </table>
       </TableWrap>
-      <SourceNote className="meta mt-8" provider="ga4" source={site.siteSearch.source} date={checked} />
+      )}
+      <SourceNote className="meta mt-8" provider="ga4" source={site.siteSearch.source} date={site.siteSearch.asOf ?? checked}>
+        {site.siteSearch.source === "live" &&
+          "Only terms searched at least 5 times are shown, and anything that looks like an email address, phone number or web address is left out."}
+      </SourceNote>
 
       {site.speed.pages.length > 0 && (
         <>
