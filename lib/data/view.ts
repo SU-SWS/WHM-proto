@@ -1,7 +1,7 @@
 // Shaping published data for the screens. Pure functions over the contract
 // types, so pages stay mostly markup.
 
-import { getAnnotations, getIssueTypes } from "./load";
+import { getAnnotations, getIssueTypes, getRegistry } from "./load";
 import type { Annotation, IssueType, PortfolioSite, SiteData, SiteIssue, SiteState } from "./types";
 
 const NEED_ORDER: Record<SiteState, number> = { attention: 0, ok: 1, good: 2 };
@@ -56,4 +56,11 @@ export function notesFor(siteKey: string, issueType: string): Annotation[] {
   return getAnnotations().annotations.filter(
     (a) => a.issueType === issueType && (a.appliesTo === "all" || a.appliesTo === siteKey),
   );
+}
+
+/** Owner role labels for a site, from the registry ("Owner A, Owner B"). */
+export function ownerLabels(siteKey: string): string[] {
+  const registry = getRegistry();
+  const site = registry.sites.find((s) => s.key === siteKey);
+  return (site?.owners ?? []).map((k) => registry.owners.find((o) => o.key === k)?.label ?? k);
 }

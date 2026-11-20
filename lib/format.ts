@@ -36,3 +36,16 @@ export function changeTone(change: number, lowerIsBetter: boolean): "better" | "
   if (change === 0) return null;
   return change > 0 !== lowerIsBetter ? "better" : "worse";
 }
+
+/** "2026-11-20T14:17:03Z" → "Nov 20, 2026, 6:17 AM Pacific". */
+export function formatDateTime(iso: string): string {
+  const text = new Date(iso).toLocaleString("en-US", {
+    timeZone: "America/Los_Angeles",
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+    hour: "numeric",
+    minute: "2-digit",
+  });
+  return `${text} Pacific`;
+}

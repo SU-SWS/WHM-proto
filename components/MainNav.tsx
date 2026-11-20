@@ -4,7 +4,11 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 // Site pages, issue pages and reports all sit under "My sites".
-const ITEMS = [{ href: "/", label: "My sites", match: (p: string) => p === "/" || p.startsWith("/sites/") }];
+const ITEMS = [
+  { href: "/", label: "My sites", match: (p: string) => p === "/" || p.startsWith("/sites/") },
+  { href: "/sws/", label: "All client sites", match: (p: string) => p.startsWith("/sws") },
+  { href: "/admin/", label: "Admin", match: (p: string) => p.startsWith("/admin") },
+];
 
 export function MainNav() {
   const pathname = usePathname();
