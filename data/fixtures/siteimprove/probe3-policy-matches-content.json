@@ -1,0 +1,25 @@
+{
+  "items": [
+    {
+      "id": 2202959107,
+      "title": "Stanford Sites User Guide",
+      "url": "https://sitesuserguide.stanford.edu/",
+      "checking_now": false,
+      "page_level": 1,
+      "page_views": 304,
+      "violated_date": "2026-11-10 05:42:36Z",
+      "_siteimprove": {
+        "page_report": {
+          "href": "https://my2.us.siteimprove.com/Inspector/1062154/Policy/Page?pageId=2202959107"
+        }
+      }
+    }
+  ],
+  "total_items": 1,
+  "total_pages": 1,
+  "links": {
+    "self": {
+      "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163079/content?page_size=10"
+    }
+  }
+}

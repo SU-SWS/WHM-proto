@@ -1,0 +1,50 @@
+{
+  "items": [
+    {
+      "id": 226730732,
+      "url": "https://sitesuserguide.stanford.edu/sites/g/files/sbiybj29381/files/styles/card_1192x596/public/media/image/cxs-leads_mar-05_0.gif?h=ac4aac65&itok=x9Ftx8Fb",
+      "clicks": 0,
+      "referring_documents": 0,
+      "referring_pages": 1,
+      "violated_date": "2025-12-12 11:41:19Z",
+      "_links": {
+        "referring_pages": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/links/226730732/referring_pages"
+        }
+      }
+    },
+    {
+      "id": 226730745,
+      "url": "https://sitesuserguide.stanford.edu/sites/g/files/sbiybj29381/files/styles/card_1900x950/public/media/image/cxs-leads_mar-05_0.gif?h=ac4aac65&itok=1YKhDF6F",
+      "clicks": 0,
+      "referring_documents": 0,
+      "referring_pages": 1,
+      "violated_date": "2025-12-12 11:41:19Z",
+      "_links": {
+        "referring_pages": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/links/226730745/referring_pages"
+        }
+      }
+    },
+    {
+      "id": 226730771,
+      "url": "https://sitesuserguide.stanford.edu/sites/g/files/sbiybj29381/files/styles/card_956x478/public/media/image/cxs-leads_mar-05_0.gif?h=ac4aac65&itok=FtHjUZfr",
+      "clicks": 0,
+      "referring_documents": 0,
+      "referring_pages": 1,
+      "violated_date": "2025-12-12 11:41:19Z",
+      "_links": {
+        "referring_pages": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/links/226730771/referring_pages"
+        }
+      }
+    }
+  ],
+  "total_items": 3,
+  "total_pages": 1,
+  "links": {
+    "self": {
+      "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163110/media?page_size=10"
+    }
+  }
+}

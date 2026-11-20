@@ -75,7 +75,7 @@ Then:
 
 **Done when:** one run refreshes sitesuserguide from Siteimprove, and every section that isn't live is still labeled sample.
 
-**Status (Nov 20):** built in `scripts/lib/live-site.mjs` and tested against `scripts/dev/mock-siteimprove.mjs`, which serves the saved fixtures. Live: both scores and their trends, broken links (count, trend, issues), accessibility issues, page views and top pages, search descriptions, and the check date. First real run published Nov 20. The daily recorder is retired (the API has the history). "Open in Siteimprove" links are on, per page, with `impmd` stripped. Still to do: Stanford policies, waiting on a saved policy-matches response from the Save Siteimprove fixtures workflow.
+**Status (Nov 20):** built in `scripts/lib/live-site.mjs` and tested against `scripts/dev/mock-siteimprove.mjs`, which serves the saved fixtures. Live: both scores and their trends, broken links (count, trend, issues), accessibility issues, page views and top pages, search descriptions, and the check date. First real run published Nov 20. The daily recorder is retired (the API has the history). "Open in Siteimprove" links are on, per page, with `impmd` stripped. Stanford policies are live for allowlisted policies (Nov 20). Task 6 is complete apart from SWS review of the drafted wording.
 
 ## 7. Check and rehearse
 

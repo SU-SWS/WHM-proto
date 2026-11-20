@@ -33,8 +33,6 @@ export default async function IssuePage({ params }: PageProps<"/sites/[site]/iss
   // An owner-type issue moved to SWS because it's on nearly every page (template).
   const fromTemplate = issue.fixer === "sws" && type.fixer === "owner";
   const isStale = issue.pages.some((p) => "monthsSinceUpdate" in p);
-  // Broken-link issues from live data carry the broken addresses on each page.
-  const hasLinks = issue.pages.some((p) => "links" in p && (p.links?.length ?? 0) > 0);
   // Per-page reports in Siteimprove, from live data (impmd stripped on ingestion).
   const hasReports = issue.pages.some((p) => "siteimproveUrl" in p && p.siteimproveUrl);
 
@@ -86,12 +84,14 @@ export default async function IssuePage({ params }: PageProps<"/sites/[site]/iss
       </div>
 
       <h2 className="section-heading">Where it is</h2>
-      {hasLinks && (
-        <p className="mb-12 max-w-[62ch]">
-          Each page shows the broken addresses it links to. Find each link on the page by its address, then update it or
-          remove it.
+      {issue.pages.length === 0 ? (
+        <p className="max-w-[62ch]">
+          {owner
+            ? "Siteimprove lists each item for this issue. Open Siteimprove to see them and fix them."
+            : "It’s on nearly every page of the site, so the pages aren’t listed one by one. SWS is handling it."}
         </p>
-      )}
+      ) : (
+      <>
       <TableWrap label="Pages with this issue">
         <table className="data-table">
           <caption className="sr-only">Pages with this issue</caption>
@@ -99,7 +99,7 @@ export default async function IssuePage({ params }: PageProps<"/sites/[site]/iss
             <tr>
               <th scope="col">Page</th>
               <th scope="col" className="num">Page views, last 30 days</th>
-              <th scope="col" className="num">{isStale ? "Last updated" : hasLinks ? "Broken links" : "Times found"}</th>
+              <th scope="col" className="num">{isStale ? "Last updated" : issue.type === "broken" ? "Broken links" : "Times found"}</th>
             </tr>
           </thead>
           <tbody>
@@ -108,16 +108,6 @@ export default async function IssuePage({ params }: PageProps<"/sites/[site]/iss
                 <td>
                   {/* Live paths are real pages on the site. Sample paths are made up, so they stay plain text. */}
                   {issue.source === "live" ? <a href={new URL(p.path, site.url).href}>{displayPath(p.path)}</a> : displayPath(p.path)}
-                  {"links" in p && p.links && p.links.length > 0 && (
-                    <ul className="mb-0 mt-6 list-none p-0 text-16">
-                      {p.links.map((l) => (
-                        <li key={l.url} className="mb-4 text-black-80">
-                          <span className="break-all">{l.url}</span>
-                          {l.status !== null && <span className="ml-6 whitespace-nowrap">({statusText(l.status)})</span>}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
                   {"siteimproveUrl" in p && p.siteimproveUrl && (
                     <a href={p.siteimproveUrl} className="mt-4 block text-16">
                       Open in Siteimprove<span className="sr-only">: report for {displayPath(p.path)}</span>
@@ -132,22 +122,24 @@ export default async function IssuePage({ params }: PageProps<"/sites/[site]/iss
         </table>
       </TableWrap>
       <SourceNote className="meta mt-8" provider="siteimproveAnalytics" source={site.topPages.viewsSource} date={site.checkedAt} />
+      </>
+      )}
 
-      <p>
-        {issue.siteimproveUrl ? (
-          <a href={issue.siteimproveUrl}>Open this issue in Siteimprove</a>
-        ) : hasReports ? (
-          <span className="text-black-80">
-            “Open in Siteimprove” opens that page’s report in Siteimprove. You need a Siteimprove account to see it.
-          </span>
-        ) : (
-          <span className="text-black-80">
-            {issue.source === "live"
-              ? "“Open in Siteimprove” links are turned off for now, while SWS checks that they’re safe to publish."
-              : "“Open in Siteimprove” links appear here once this site’s data comes from Siteimprove."}
-          </span>
-        )}
-      </p>
+      {(issue.siteimproveUrl || hasReports || issue.source === "sample") && (
+        <p>
+          {issue.siteimproveUrl ? (
+            <a href={issue.siteimproveUrl}>Open this issue in Siteimprove</a>
+          ) : hasReports ? (
+            <span className="text-black-80">
+              “Open in Siteimprove” opens that page’s report in Siteimprove. You need a Siteimprove account to see it.
+            </span>
+          ) : (
+            <span className="text-black-80">
+              “Open in Siteimprove” links appear here once this site’s data comes from Siteimprove.
+            </span>
+          )}
+        </p>
+      )}
 
       <p className="mt-32">
         <Link className="btn-secondary" href={`/sites/${siteKey}/`}>
@@ -156,15 +148,6 @@ export default async function IssuePage({ params }: PageProps<"/sites/[site]/iss
       </p>
     </>
   );
-}
-
-/** HTTP status in words: 404 → "not found". */
-function statusText(status: number): string {
-  if (status === 404) return "not found";
-  if (status === 410) return "removed";
-  if (status === 401 || status === 403) return "access denied";
-  if (status >= 500) return `server error ${status}`;
-  return `error ${status}`;
 }
 
 function third(p: IssuePage): string {

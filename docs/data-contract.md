@@ -86,11 +86,11 @@ interface SiteData {
     type: string;              // key into issue-types.json
     scope: string; reason: string;
     rank: number | null;       // owner-fixable issues are ranked; SWS-handled issues are null
+    // pages may be empty: template issues (on every page) and file-based policies aren't listed page by page
     fixer?: "owner" | "sws";   // overrides the type's fixer; "sws" for issues from the template
     siteimproveUrl: string | null;
     source: Source;
     pages: ({ path: string; views: number; count: number;
-              links?: { url: string; status: number | null }[];      // broken links: the addresses on this page
               siteimproveUrl?: string | null } |                     // this page's report in Siteimprove, impmd stripped
              { path: string; views: number; monthsSinceUpdate: number })[];
   }[];

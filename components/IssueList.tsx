@@ -19,10 +19,17 @@ interface Props {
   groups: { category: string; items: IssueRow[] }[];
 }
 
+/** How many ranked items "Prioritized for me" shows before "Show more". */
+const TOP = 5;
+
 // The issue feed: "Prioritized for me" by default, "Show everything plainly"
 // as the same issues, unranked and grouped by category (SP-3, SP-4).
 export function IssueList({ siteKey, owner, sws, groups }: Props) {
   const [mode, setMode] = useState<"prioritized" | "plain">("prioritized");
+  // WHM summarizes: lead with the top few and let owners expand (Siteimprove holds the full detail).
+  const [showAll, setShowAll] = useState(false);
+  const shown = showAll ? owner : owner.slice(0, TOP);
+  const hidden = owner.length - shown.length;
 
   return (
     <>
@@ -39,10 +46,17 @@ export function IssueList({ siteKey, owner, sws, groups }: Props) {
         <>
           <p className="meta">Ordered by how many visitors each issue affects and whether you can fix it yourself.</p>
           <ol className="m-0 list-none p-0">
-            {owner.map((row, i) => (
+            {shown.map((row, i) => (
               <Row key={row.type} siteKey={siteKey} row={row} rank={i + 1} />
             ))}
           </ol>
+          {owner.length > TOP && (
+            <p className="mb-0 mt-12">
+              <button type="button" className="btn-secondary" aria-expanded={showAll} onClick={() => setShowAll((s) => !s)}>
+                {showAll ? `Show the top ${TOP} only` : `Show ${hidden} more ${hidden === 1 ? "item" : "items"}`}
+              </button>
+            </p>
+          )}
           {sws.length > 0 && (
             <>
               <h3 className="subheading">Being handled by SWS</h3>

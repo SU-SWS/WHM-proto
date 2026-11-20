@@ -75,8 +75,6 @@ export interface IssuePageCount {
   count: number;
   /** This page's report in Siteimprove (needs a Siteimprove account). impmd is stripped. */
   siteimproveUrl?: string | null;
-  /** Broken-link issues only: the broken addresses on this page, with their HTTP status if known. */
-  links?: { url: string; status: number | null }[];
 }
 
 export interface IssuePageStale {

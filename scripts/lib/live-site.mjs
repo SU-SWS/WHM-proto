@@ -24,7 +24,8 @@ const BUSIEST = 5;
  */
 export const PLATFORM_PAGES = [/^\/search(\/|$)/, /^\/user(\/|$)/];
 const isPlatformPage = (path) => PLATFORM_PAGES.some((re) => re.test(path));
-const TEMPLATE_PAGES_KEPT = 20;
+/** Policies that may be published: [QA], [A11y], [SEO] in any combination, QA: or A11y: (decisions, Nov 20). */
+export const ALLOWED_POLICY = /^(\[(qa|a11y|seo)\]\s*)+|^(qa|a11y):/i;
 
 const round = (n, dp = 2) => Math.round(n * 10 ** dp) / 10 ** dp;
 const day = (ts) => ts.slice(0, 10); // "2026-11-16 06:50:38Z" or ISO → "2026-11-16"
@@ -189,17 +190,6 @@ export async function buildLiveSite({ site, sample, previous, issueTypes, client
 
       const template = list.filter((l) => l.pages >= sitePages * TEMPLATE_SHARE);
       const owner = list.filter((l) => l.pages < sitePages * TEMPLATE_SHARE);
-      // HTTP status for each link, from the current broken-links list. Optional:
-      // the per-check list has no status, and a missing one just isn't shown.
-      const status = new Map();
-      try {
-        for (const l of await client.getAll(`${base}/quality_assurance/links/broken_links?page_size=500`)) {
-          status.set(l.id, l.http_status ?? null);
-        }
-      } catch (err) {
-        notes.push(`broken link statuses unavailable (${err.message})`);
-      }
-      const linkInfo = (l) => ({ url: l.url, status: status.get(l.id) ?? null });
       const pages = new Map();
       for (const link of owner) {
         let on;
@@ -216,11 +206,9 @@ export async function buildLiveSite({ site, sample, previous, issueTypes, client
             path,
             views: viewsOf(path, p.page_views ?? 0),
             count: 0,
-            links: [],
             siteimproveUrl: siteimproveLink(p._siteimprove?.page_report?.href),
           };
           entry.count++;
-          entry.links.push(linkInfo(link));
           pages.set(path, entry);
         }
       }
@@ -245,7 +233,7 @@ export async function buildLiveSite({ site, sample, previous, issueTypes, client
           rank: null,
           siteimproveUrl: null,
           source: "live",
-          pages: busiest.map((path) => ({ path, views: viewsOf(path), count: template.length, links: template.map(linkInfo) })),
+          pages: [], // on every page; SWS handles it, so pages aren't listed (decisions, Nov 20)
         });
       }
       return {
@@ -281,7 +269,8 @@ export async function buildLiveSite({ site, sample, previous, issueTypes, client
           continue;
         }
         const fromTemplate = rule.pages >= sitePages * TEMPLATE_SHARE;
-        const found = await client.getAll(`${rule._links.pages.href}${rule._links.pages.href.includes("?") ? "&" : "?"}page_size=500`);
+        // Template issues are SWS's and on every page, so their pages aren't fetched or listed.
+        const found = fromTemplate ? [] : await client.getAll(`${rule._links.pages.href}${rule._links.pages.href.includes("?") ? "&" : "?"}page_size=500`);
         const pages = new Map();
         for (const p of found) {
           const path = normalizePath(p.url, site.url);
@@ -295,8 +284,7 @@ export async function buildLiveSite({ site, sample, previous, issueTypes, client
           entry.count += p.occurrences ?? 1;
           pages.set(path, entry);
         }
-        let list = [...pages.values()].sort((a, b) => b.views - a.views || b.count - a.count);
-        if (fromTemplate) list = list.slice(0, TEMPLATE_PAGES_KEPT);
+        const list = [...pages.values()].sort((a, b) => b.views - a.views || b.count - a.count);
         const n = rule.occurrences;
         issues.push({
           type: type.key,
@@ -315,6 +303,68 @@ export async function buildLiveSite({ site, sample, previous, issueTypes, client
       const categoryOf = (key) => issueTypes.types.find((t) => t.key === key)?.category;
       const prevIssues = (previous?.issues ?? []).filter((i) => categoryOf(i.type) === "Accessibility" && i.source === "live");
       return keepOr(prevIssues.length ? prevIssues : undefined, true, null);
+    },
+  );
+
+  // --- Stanford policies (SI-23, SI-24). Allowlisted names only (AD-7). Content
+  // policies list their pages; media and document policies match files, which
+  // Siteimprove lists itself, so WHM only summarizes them (decisions, Nov 20).
+  const typeByPolicy = new Map();
+  for (const t of issueTypes.types) for (const sid of t.siteimproveIds ?? []) if (sid.startsWith("policy:")) typeByPolicy.set(sid, t);
+  const policyIssues = await section(
+    "policies",
+    async () => {
+      const policies = await client.getAll(`${base}/policy/policies?page_size=200`);
+      const issues = [];
+      for (const policy of policies) {
+        if (!ALLOWED_POLICY.test(policy.name) || !(policy.matches > 0)) continue;
+        const type = typeByPolicy.get(`policy:${policy.id}`);
+        if (!type) {
+          notes.push(`policy “${policy.name}” has no WHM issue type`);
+          continue;
+        }
+        const n = policy.matches;
+        if (policy.category !== "content") {
+          const what = policy.category === "media" ? ["image", "images"] : ["document", "documents"];
+          issues.push({
+            type: type.key,
+            scope: `${n.toLocaleString("en-US")} ${n === 1 ? `${what[0]} matches` : `${what[1]} match`} this Stanford policy.`,
+            reason: `In Siteimprove, open Policy and find “${policy.name.trim()}” to see each one.`,
+            rank: null,
+            siteimproveUrl: null,
+            source: "live",
+            pages: [],
+          });
+          continue;
+        }
+        const fromTemplate = n >= sitePages * TEMPLATE_SHARE;
+        const pages = new Map();
+        if (!fromTemplate) {
+          const href = policy._links.matches.href;
+          for (const m of await client.getAll(`${href}${href.includes("?") ? "&" : "?"}page_size=500`)) {
+            const path = normalizePath(m.url, site.url);
+            if (!path || pages.has(path)) continue;
+            pages.set(path, { path, views: viewsOf(path, m.page_views ?? 0), count: 1, siteimproveUrl: siteimproveLink(m._siteimprove?.page_report?.href) });
+          }
+        }
+        const list = [...pages.values()].sort((a, b) => b.views - a.views);
+        issues.push({
+          type: type.key,
+          ...(fromTemplate ? { fixer: "sws" } : {}),
+          scope: `Found on ${n.toLocaleString("en-US")} ${n === 1 ? "page" : "pages"}.`,
+          reason: fromTemplate ? "It’s on nearly every page, so it comes from the site template." : busiestNote(list.map((p) => p.path)),
+          rank: null,
+          siteimproveUrl: null,
+          source: "live",
+          pages: list,
+        });
+      }
+      return issues;
+    },
+    () => {
+      const policyTypes = new Set([...typeByPolicy.values()].map((t) => t.key));
+      const prev = (previous?.issues ?? []).filter((i) => policyTypes.has(i.type) && i.source === "live");
+      return keepOr(prev.length ? prev : undefined, true, []);
     },
   );
 
@@ -337,7 +387,12 @@ export async function buildLiveSite({ site, sample, previous, issueTypes, client
   // live data; one comes back only when its whole section fell back to sample.
   const categoryOf = (key) => issueTypes.types.find((t) => t.key === key)?.category;
   const fixerOf = (i) => i.fixer ?? issueTypes.types.find((t) => t.key === i.type)?.fixer;
-  const liveIssues = [...(links.issues ?? []), ...(a11y ?? [])];
+  // A policy issue can share a type with an accessibility issue (Vague Link Text uses
+  // "linktext"); keep the first so each issue page has one source.
+  const seen = new Set();
+  const liveIssues = [...(links.issues ?? []), ...(a11y ?? []), ...policyIssues].filter((i) =>
+    seen.has(i.type) ? false : (seen.add(i.type), true),
+  );
   const sampleFallback = (i) =>
     (links.issues === null && (i.type === "broken" || i.type === "broken-template")) ||
     (a11y === null && categoryOf(i.type) === "Accessibility");

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "note": "Seed text written for the demo; not yet reviewed by SWS (OT-04). Keyed for now by WHM issue type; map to Siteimprove rule or policy IDs once known. Types for live Siteimprove rules (Nov 20) map through siteimproveIds such as \"a11y-rule:113\".",
+  "note": "Seed text written for the demo; not yet reviewed by SWS (OT-04). Keyed for now by WHM issue type; map to Siteimprove rule or policy IDs once known. Types for live Siteimprove rules (Nov 20) map through siteimproveIds such as \"a11y-rule:113\". Stanford policies map through \"policy:<id>\" (allowlisted policies only, decisions Nov 20).",
   "types": [
     {
       "key": "alt",
@@ -23,7 +23,9 @@
       "what": "Links use wording like “click here” or “read more” that only makes sense with the text around it.",
       "why": "People who move through a page by its links hear the link text on its own.",
       "todo": "Rewrite each link so its words name the destination, for example “Read the accessibility guide.”",
-      "siteimproveIds": [],
+      "siteimproveIds": [
+        "policy:25412163012"
+      ],
       "reviewedBySws": false
     },
     {
@@ -218,6 +220,216 @@
       "why": "These links come from the site template, not from your content. They may be false alarms caused by how the check visits those sites.",
       "todo": "No action needed from you. SWS is looking into it.",
       "siteimproveIds": [],
+      "reviewedBySws": false
+    },
+    {
+      "key": "policy-http-stanford-links",
+      "title": "Links to Stanford sites use http instead of https",
+      "category": "Content quality",
+      "fixer": "owner",
+      "editorial": false,
+      "what": "Some links to stanford.edu addresses start with http:// instead of https://.",
+      "why": "Stanford sites use secure (https) addresses. An insecure link adds a redirect and can trigger a browser warning.",
+      "todo": "Change each link so it starts with https://.",
+      "siteimproveIds": [
+        "policy:25412162972"
+      ],
+      "reviewedBySws": false
+    },
+    {
+      "key": "policy-url-as-link-text",
+      "title": "Links show a web address instead of words",
+      "category": "Accessibility",
+      "fixer": "owner",
+      "editorial": false,
+      "what": "Some links use the web address itself as the link text, such as “www.stanford.edu.”",
+      "why": "Screen readers read an address out character by character, and an address doesn’t tell visitors where the link goes.",
+      "todo": "Replace each address with words that name the destination, such as “Stanford home page.”",
+      "siteimproveIds": [
+        "policy:25412163031"
+      ],
+      "reviewedBySws": false
+    },
+    {
+      "key": "policy-all-caps",
+      "title": "Words typed in all capital letters",
+      "category": "Accessibility",
+      "fixer": "owner",
+      "editorial": false,
+      "what": "Some text is typed in all capital letters.",
+      "why": "All-caps text is harder to read, especially for people with dyslexia, and it can read as shouting.",
+      "todo": "Retype the text with normal capitals. To make it stand out, use a heading or bold text instead.",
+      "siteimproveIds": [
+        "policy:25412163089"
+      ],
+      "reviewedBySws": false
+    },
+    {
+      "key": "policy-long-paragraphs",
+      "title": "Paragraphs are very long",
+      "category": "Accessibility",
+      "fixer": "owner",
+      "editorial": false,
+      "what": "Some paragraphs are longer than 600 characters, about 100 words.",
+      "why": "Short paragraphs are easier to read and skim, especially on a phone.",
+      "todo": "Break each long paragraph into shorter ones of about 40 to 50 words, or turn a run of items into a bulleted list.",
+      "siteimproveIds": [
+        "policy:25412163146"
+      ],
+      "reviewedBySws": false
+    },
+    {
+      "key": "policy-repeated-words",
+      "title": "Words repeated by mistake",
+      "category": "Content quality",
+      "fixer": "owner",
+      "editorial": false,
+      "what": "Some short words appear twice in a row, such as “the the.”",
+      "why": "Repeated words are usually typing mistakes, and they make a page look less careful.",
+      "todo": "Remove the extra word in each place.",
+      "siteimproveIds": [
+        "policy:25412163103"
+      ],
+      "reviewedBySws": false
+    },
+    {
+      "key": "policy-youtube-captions",
+      "title": "YouTube videos to check for captions",
+      "category": "Accessibility",
+      "fixer": "owner",
+      "editorial": false,
+      "what": "These pages show videos from YouTube.",
+      "why": "Videos need accurate captions so people who are deaf or hard of hearing can follow them. Automatic captions are often not accurate enough.",
+      "todo": "Check that each video has accurate captions. Fix them or add them if not.",
+      "siteimproveIds": [
+        "policy:25412163069"
+      ],
+      "reviewedBySws": false
+    },
+    {
+      "key": "policy-bad-alt-text",
+      "title": "Image descriptions that don’t describe the image",
+      "category": "Accessibility",
+      "fixer": "owner",
+      "editorial": false,
+      "what": "Some image descriptions (alt text) start with “picture of” or “image of,” or are just a file name.",
+      "why": "Screen readers already announce that it’s an image, and a file name tells visitors nothing about what the image shows.",
+      "todo": "Rewrite each description to say briefly what the image shows.",
+      "siteimproveIds": [
+        "policy:25412163141"
+      ],
+      "reviewedBySws": false
+    },
+    {
+      "key": "policy-unlinked-email",
+      "title": "Email addresses aren’t clickable",
+      "category": "Content quality",
+      "fixer": "owner",
+      "editorial": false,
+      "what": "Some email addresses are plain text instead of links.",
+      "why": "Visitors have to copy and paste the address to send an email.",
+      "todo": "Make each address a link that starts with “mailto:”.",
+      "siteimproveIds": [
+        "policy:25412163115"
+      ],
+      "reviewedBySws": false
+    },
+    {
+      "key": "policy-lorem-ipsum",
+      "title": "Placeholder text left on pages",
+      "category": "Content quality",
+      "fixer": "owner",
+      "editorial": false,
+      "what": "Some pages still have “Lorem ipsum” placeholder text.",
+      "why": "Placeholder text tells visitors the page isn’t finished.",
+      "todo": "Replace the placeholder text with real content, or unpublish the page until it’s ready.",
+      "siteimproveIds": [
+        "policy:25412163041"
+      ],
+      "reviewedBySws": false
+    },
+    {
+      "key": "policy-list-format",
+      "title": "Lists that aren’t set up as lists",
+      "category": "Accessibility",
+      "fixer": "owner",
+      "editorial": false,
+      "what": "Some text looks like a list, with typed bullets or dashes, but isn’t set up as a list.",
+      "why": "Screen readers announce a real list and how many items it has. Typed bullets are read as plain text.",
+      "todo": "Select the items and use the bulleted or numbered list button in the editor.",
+      "siteimproveIds": [
+        "policy:25412163109"
+      ],
+      "reviewedBySws": false
+    },
+    {
+      "key": "policy-time-format",
+      "title": "Times written in a different format",
+      "category": "Content quality",
+      "fixer": "owner",
+      "editorial": false,
+      "what": "A time isn’t written in the site’s standard format, such as “3:45 p.m.”",
+      "why": "Writing times the same way everywhere makes them easier to read.",
+      "todo": "Rewrite each time in the standard format, with a colon between the hour and minutes.",
+      "siteimproveIds": [
+        "policy:25412163083"
+      ],
+      "reviewedBySws": false
+    },
+    {
+      "key": "policy-long-title",
+      "title": "Page title is too long",
+      "category": "Findability",
+      "fixer": "owner",
+      "editorial": false,
+      "what": "This page’s title is longer than 120 characters.",
+      "why": "Long titles are cut off in search results, and they’re tiring to hear with a screen reader.",
+      "todo": "Shorten the title so it names the page in a few words.",
+      "siteimproveIds": [
+        "policy:25412163018"
+      ],
+      "reviewedBySws": false
+    },
+    {
+      "key": "policy-large-pictures",
+      "title": "Images are very large",
+      "category": "Findability",
+      "fixer": "owner",
+      "editorial": false,
+      "what": "Some images are wider than 2,000 pixels or taller than 1,000 pixels.",
+      "why": "Oversized images make pages slow to load, especially on phones.",
+      "todo": "Upload a smaller version of each image.",
+      "siteimproveIds": [
+        "policy:25412162958"
+      ],
+      "reviewedBySws": false
+    },
+    {
+      "key": "policy-images-1mb",
+      "title": "Image files are larger than 1 MB",
+      "category": "Content quality",
+      "fixer": "owner",
+      "editorial": false,
+      "what": "Some image files are larger than 1 MB.",
+      "why": "Large files make pages slow to load, especially on phones and slow connections.",
+      "todo": "Replace each image with a smaller, compressed version.",
+      "siteimproveIds": [
+        "policy:25412162974"
+      ],
+      "reviewedBySws": false
+    },
+    {
+      "key": "policy-animated-gif",
+      "title": "Images that may be animated",
+      "category": "Accessibility",
+      "fixer": "owner",
+      "editorial": false,
+      "what": "Some GIF images are larger than 500 KB, so they may be animated.",
+      "why": "Moving images can distract visitors and cause problems for people with some disabilities. Motion that lasts more than 5 seconds needs a way to pause it.",
+      "todo": "Check each GIF. If it moves, replace it with a still image, or with a video visitors can pause.",
+      "siteimproveIds": [
+        "policy:25412163110"
+      ],
       "reviewedBySws": false
     }
   ]

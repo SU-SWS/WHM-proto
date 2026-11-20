@@ -1,0 +1,63 @@
+{
+  "items": [
+    {
+      "id": 1744869342,
+      "url": "https://sitesuserguide.stanford.edu/sites/g/files/sbiybj29381/files/media/file/samplepdf20250323_0.pdf",
+      "clicks": 6,
+      "referring_documents": 0,
+      "referring_pages": 1,
+      "violated_date": "2026-03-27 03:02:58Z",
+      "_links": {
+        "referring_pages": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/links/1744869342/referring_pages"
+        }
+      }
+    },
+    {
+      "id": 1745015436,
+      "url": "https://sitesuserguide.stanford.edu/sites/g/files/sbiybj29381/files/media/file/samplepdf20250323.pdf",
+      "clicks": 0,
+      "referring_documents": 0,
+      "referring_pages": 1,
+      "violated_date": "2026-03-27 03:02:58Z",
+      "_links": {
+        "referring_pages": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/links/1745015436/referring_pages"
+        }
+      }
+    },
+    {
+      "id": 231081639,
+      "url": "https://sitesuserguide.stanford.edu/sitemap.xml",
+      "clicks": 0,
+      "referring_documents": 0,
+      "referring_pages": 1,
+      "violated_date": "2025-12-12 01:29:09Z",
+      "_links": {
+        "referring_pages": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/links/231081639/referring_pages"
+        }
+      }
+    },
+    {
+      "id": 231081758,
+      "url": "https://your-site/sitemap.xml",
+      "clicks": 0,
+      "referring_documents": 0,
+      "referring_pages": 1,
+      "violated_date": "2025-12-12 01:29:09Z",
+      "_links": {
+        "referring_pages": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/links/231081758/referring_pages"
+        }
+      }
+    }
+  ],
+  "total_items": 4,
+  "total_pages": 1,
+  "links": {
+    "self": {
+      "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies/25412163135/documents?page_size=10"
+    }
+  }
+}
