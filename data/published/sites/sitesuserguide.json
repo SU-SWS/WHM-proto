@@ -150,197 +150,503 @@
         {
           "path": "/build/media-library/alternative-text-alt-text-images-and-other-media",
           "views": 47,
-          "count": 1
+          "count": 1,
+          "links": [
+            {
+              "url": "http://diagramcenter.org/general-guidelines-final-draft.html",
+              "status": 404
+            }
+          ]
         },
         {
           "path": "/get-started/site-settings/enter-site-ownership-information",
           "views": 27,
-          "count": 1
+          "count": 1,
+          "links": [
+            {
+              "url": "https://www.stanford.edu/site/accessibility/",
+              "status": 404
+            }
+          ]
         },
         {
           "path": "/about-stanford-sites/personal-sites-faculty-stanford-sites",
           "views": 25,
-          "count": 1
+          "count": 1,
+          "links": [
+            {
+              "url": "http://web.stanford.edu/people/name",
+              "status": 404
+            }
+          ]
         },
         {
           "path": "/build/create-and-edit-pages/text-editing-basics/create-links",
           "views": 23,
-          "count": 1
+          "count": 1,
+          "links": [
+            {
+              "url": "https://sitesuserguide.stanford.edu/build/create-and-edit-pages/text-editing-basics/%3Cnolink%3E",
+              "status": 404
+            }
+          ]
         },
         {
           "path": "/release-notes/stanford-sites-roadmap",
           "views": 23,
-          "count": 2
+          "count": 2,
+          "links": [
+            {
+              "url": "http:///node/661",
+              "status": null
+            },
+            {
+              "url": "http:///node/311",
+              "status": null
+            }
+          ]
         },
         {
           "path": "/build/create-and-edit-pages/text-editing-basics/create-links/create-buttons-and-action-links",
           "views": 22,
-          "count": 2
+          "count": 2,
+          "links": [
+            {
+              "url": "https://userguide.sites.stanford.edu/tour/paragraphs/text-area/how-do-i-add-links-text",
+              "status": 503
+            },
+            {
+              "url": "https://userguide.sites.stanford.edu/typography-styles",
+              "status": 503
+            }
+          ]
         },
         {
           "path": "/build/paragraphs/image-gallery-paragraph",
           "views": 20,
-          "count": 1
+          "count": 1,
+          "links": [
+            {
+              "url": "https://userguide.sites.stanford.edu/build-and-design/media-library/images/image-alt-text",
+              "status": 503
+            }
+          ]
         },
         {
           "path": "/support/accessibility-support",
           "views": 16,
-          "count": 3
+          "count": 3,
+          "links": [
+            {
+              "url": "https://www.ed.gov/about/ed-organization/functional-statements/ocr-functional-statements",
+              "status": 403
+            },
+            {
+              "url": "https://uit.stanford.edu/accessibility/help/global-accessibility-awareness-day",
+              "status": null
+            },
+            {
+              "url": "https://adata.org/ocr-videos",
+              "status": null
+            }
+          ]
         },
         {
           "path": "/build/publications-content-type/publication-taxonomy",
           "views": 15,
-          "count": 1
+          "count": 1,
+          "links": [
+            {
+              "url": "https://userguide.sites.stanford.edu/tour/publications",
+              "status": 503
+            }
+          ]
         },
         {
           "path": "/build/lists-and-filtered-lists/filtered-lists-paragraph/example-filtered-list-opportunities-default",
           "views": 15,
-          "count": 1
+          "count": 1,
+          "links": [
+            {
+              "url": "https://stanfordvideo.stanford.edu/",
+              "status": 504
+            }
+          ]
         },
         {
           "path": "/build/lists-and-filtered-lists/filtered-lists-paragraph/example-filtered-list-opportunities-card",
           "views": 15,
-          "count": 1
+          "count": 1,
+          "links": [
+            {
+              "url": "https://stanfordvideo.stanford.edu/",
+              "status": 504
+            }
+          ]
         },
         {
           "path": "/support/resources-digital-communicators",
           "views": 15,
-          "count": 1
+          "count": 1,
+          "links": [
+            {
+              "url": "https://stanfordvideo.stanford.edu/",
+              "status": 504
+            }
+          ]
         },
         {
           "path": "/build-and-design/site-organization-menus/manage-site-search/add-metadata-basic-page",
           "views": 15,
-          "count": 1
+          "count": 1,
+          "links": [
+            {
+              "url": "https://userguide.sites.stanford.edu/build-and-design/taxonomy/basic-page-type",
+              "status": 503
+            }
+          ]
         },
         {
           "path": "/build/event-content-type/import-events-stanford-events-calendar",
           "views": 15,
-          "count": 2
+          "count": 2,
+          "links": [
+            {
+              "url": "https://userguide.sites.stanford.edu/build-and-design/manage-site-content/edit-delete-unpublish-content",
+              "status": 503
+            },
+            {
+              "url": "https://userguide.sites.stanford.edu/build-and-design/manage-site-content/bulk-edit-content",
+              "status": 503
+            }
+          ]
         },
         {
           "path": "/build/create-and-edit-pages/basic-page-content-type/create-list-basic-pages-basic-page-type",
           "views": 14,
-          "count": 1
+          "count": 1,
+          "links": [
+            {
+              "url": "https://userguide.sites.stanford.edu/build-and-design/taxonomy/basic-page-type",
+              "status": 503
+            }
+          ]
         },
         {
           "path": "/build/event-content-type/event-series",
           "views": 14,
-          "count": 1
+          "count": 1,
+          "links": [
+            {
+              "url": "https://userguide.sites.stanford.edu/tour/pages/add-new-basic-page/adding-basic-page-main-menu-navigation",
+              "status": 503
+            }
+          ]
         },
         {
           "path": "/support/accessibility-support/accessibility-testing",
           "views": 13,
-          "count": 1
+          "count": 1,
+          "links": [
+            {
+              "url": "https://stanford.link/soda-help.",
+              "status": null
+            }
+          ]
         },
         {
           "path": "/manage-your-site/domains-and-urls/how-bulk-upload-redirects",
           "views": 13,
-          "count": 1
+          "count": 1,
+          "links": [
+            {
+              "url": "https://your-site/sitemap.xml",
+              "status": null
+            }
+          ]
         },
         {
           "path": "/build/taxonomy/shared-tags",
           "views": 13,
-          "count": 1
+          "count": 1,
+          "links": [
+            {
+              "url": "https://userguide.stanford.edu/user",
+              "status": null
+            }
+          ]
         },
         {
           "path": "/build/taxonomy/courses-taxonomy",
           "views": 13,
-          "count": 1
+          "count": 1,
+          "links": [
+            {
+              "url": "https://userguide.sites.stanford.edu/tour/manage-site-content/courses-importer",
+              "status": 503
+            }
+          ]
         },
         {
           "path": "/build/lists-and-filtered-lists/lists-paragraph/lists-paragraph-examples",
           "views": 8,
-          "count": 1
+          "count": 1,
+          "links": [
+            {
+              "url": "https://sitesuserguide.stanford.edu/publications/other-publication-example",
+              "status": 404
+            }
+          ]
         },
         {
           "path": "/people/example-person",
           "views": 8,
-          "count": 1
+          "count": 1,
+          "links": [
+            {
+              "url": "https://devguide.stanford.edu/",
+              "status": null
+            }
+          ]
         },
         {
           "path": "/publications/ill-winds",
           "views": 7,
-          "count": 2
+          "count": 2,
+          "links": [
+            {
+              "url": "https://sitesuserguide.stanford.edu/publications/other-publication-example",
+              "status": 404
+            },
+            {
+              "url": "https://sitesuserguide.stanford.edu/publications/newspapermagazine-publication",
+              "status": 404
+            }
+          ]
         },
         {
           "path": "/news/stanford-sites-v23-released-12092021",
           "views": 7,
-          "count": 1
+          "count": 1,
+          "links": [
+            {
+              "url": "https://userguide.sites.stanford.edu/build-and-design/publications/publications-importer-experimental",
+              "status": 503
+            }
+          ]
         },
         {
           "path": "/people/sara-worrell-berg",
           "views": 7,
-          "count": 1
+          "count": 1,
+          "links": [
+            {
+              "url": "https://userguide.sites.stanford.edu/",
+              "status": 503
+            }
+          ]
         },
         {
           "path": "/news/site-ownership-information-required-stanford-sites",
           "views": 4,
-          "count": 1
+          "count": 1,
+          "links": [
+            {
+              "url": "https://www.stanford.edu/site/accessibility/",
+              "status": 404
+            }
+          ]
         },
         {
           "path": "/publications/thesis-example-publication",
           "views": 4,
-          "count": 1
+          "count": 1,
+          "links": [
+            {
+              "url": "https://sitesuserguide.stanford.edu/publications/newspapermagazine-publication",
+              "status": 404
+            }
+          ]
         },
         {
           "path": "/publications/journal-article-example-publication",
           "views": 4,
-          "count": 1
+          "count": 1,
+          "links": [
+            {
+              "url": "https://sitesuserguide.stanford.edu/publications/newspapermagazine-publication",
+              "status": 404
+            }
+          ]
         },
         {
           "path": "/about-stanford-sites/stanford-sites-policies/university-policies-related-website-ownership/digital",
           "views": 3,
-          "count": 1
+          "count": 1,
+          "links": [
+            {
+              "url": "https://www.stanford.edu/site/accessibility/",
+              "status": 404
+            }
+          ]
         },
         {
           "path": "/news/stanford-sites-v22-released-10212021",
           "views": 2,
-          "count": 4
+          "count": 4,
+          "links": [
+            {
+              "url": "https://userguide.sites.stanford.edu/tour/publications/how-import-publications-experimental",
+              "status": 503
+            },
+            {
+              "url": "https://userguide.sites.stanford.edu/tour/media-library/image-metadata",
+              "status": 503
+            },
+            {
+              "url": "https://userguide.sites.stanford.edu/how-do-i-clone-content",
+              "status": 503
+            },
+            {
+              "url": "https://userguide.sites.stanford.edu/how-do-i-bulk-edit-content",
+              "status": 503
+            }
+          ]
         },
         {
           "path": "/news/stanford-sites-v201-released-03182021",
           "views": 0,
-          "count": 3
+          "count": 3,
+          "links": [
+            {
+              "url": "https://userguide.sites.stanford.edu/tour/publications",
+              "status": 503
+            },
+            {
+              "url": "https://userguide.sites.stanford.edu/tour/site-organization-menus/main-navigation/drop-down-menus",
+              "status": 503
+            },
+            {
+              "url": "http://userguide.sites.stanford.edu/tour/events/event-list-pages",
+              "status": 503
+            }
+          ]
         },
         {
           "path": "/news/stanford-sites-v200-released-02182021",
           "views": 0,
-          "count": 3
+          "count": 3,
+          "links": [
+            {
+              "url": "https://userguide.sites.stanford.edu/tour/publications",
+              "status": 503
+            },
+            {
+              "url": "https://userguide.sites.stanford.edu/tour/site-organization-menus/main-navigation/drop-down-menus",
+              "status": 503
+            },
+            {
+              "url": "https://userguide.sites.stanford.edu/tour/paragraphs/image-gallery",
+              "status": 503
+            }
+          ]
         },
         {
           "path": "/news/stanford-sites-v210-released-04222021",
           "views": 0,
-          "count": 1
+          "count": 1,
+          "links": [
+            {
+              "url": "https://userguide.sites.stanford.edu/tour/publications",
+              "status": 503
+            }
+          ]
         },
         {
           "path": "/news/stanford-sites-v140-released-09142020",
           "views": 0,
-          "count": 4
+          "count": 4,
+          "links": [
+            {
+              "url": "https://userguide.sites.stanford.edu/tour/site-organization-menus/branding-and-logo-lockup-options",
+              "status": 503
+            },
+            {
+              "url": "https://userguide.sites.stanford.edu/tour/site-organization-menus/modifying-super-footer",
+              "status": 503
+            },
+            {
+              "url": "https://userguide.sites.stanford.edu/tour/site-organization-menus/managing-global-message",
+              "status": 503
+            },
+            {
+              "url": "https://userguide.sites.stanford.edu/tour/media-library/how-add-media/adding-embeddable-media",
+              "status": 503
+            }
+          ]
         },
         {
           "path": "/news/stanford-sites-v132-released-08132020",
           "views": 0,
-          "count": 1
+          "count": 1,
+          "links": [
+            {
+              "url": "https://userguide.sites.stanford.edu/tour/site-organization-menus/branding-and-logo-lockup-options",
+              "status": 503
+            }
+          ]
         },
         {
           "path": "/news/stanford-sites-v110-released-04232020",
           "views": 0,
-          "count": 1
+          "count": 1,
+          "links": [
+            {
+              "url": "https://userguide.sites.stanford.edu/tour/paragraphs/spacer",
+              "status": 503
+            }
+          ]
         },
         {
           "path": "/news/stanford-sites-v120-released-05212020",
           "views": 0,
-          "count": 2
+          "count": 2,
+          "links": [
+            {
+              "url": "https://userguide.sites.stanford.edu/tour/person",
+              "status": 503
+            },
+            {
+              "url": "https://userguide.sites.stanford.edu/tour/news",
+              "status": 503
+            }
+          ]
         },
         {
           "path": "/news/stanford-sites-v130-released-06182020",
           "views": 0,
-          "count": 2
+          "count": 2,
+          "links": [
+            {
+              "url": "https://userguide.sites.stanford.edu/tour/person/person-importer",
+              "status": 503
+            },
+            {
+              "url": "https://userguide.sites.stanford.edu/tour/events",
+              "status": 503
+            }
+          ]
         },
         {
           "path": "/about-stanford-sites/stanford-sites-design/text-typography-choices-stanford-sites",
           "views": 0,
-          "count": 1
+          "count": 1,
+          "links": [
+            {
+              "url": "https://userguide.sites.stanford.edu/typography-styles",
+              "status": 503
+            }
+          ]
         }
       ]
     },
@@ -705,27 +1011,157 @@
         {
           "path": "/",
           "views": 506,
-          "count": 6
+          "count": 6,
+          "links": [
+            {
+              "url": "https://www.stanford.edu/accessibility",
+              "status": 404
+            },
+            {
+              "url": "https://www.stanford.edu/site/terms/",
+              "status": 404
+            },
+            {
+              "url": "https://www.stanford.edu/site/privacy/",
+              "status": 404
+            },
+            {
+              "url": "https://www.stanford.edu/search/",
+              "status": 404
+            },
+            {
+              "url": "https://www.stanford.edu/",
+              "status": 404
+            },
+            {
+              "url": "https://emergency.stanford.edu/",
+              "status": 404
+            }
+          ]
         },
         {
           "path": "/build/working-text-editor/create-links/create-jump-links-using-id-tags",
           "views": 140,
-          "count": 6
+          "count": 6,
+          "links": [
+            {
+              "url": "https://www.stanford.edu/accessibility",
+              "status": 404
+            },
+            {
+              "url": "https://www.stanford.edu/site/terms/",
+              "status": 404
+            },
+            {
+              "url": "https://www.stanford.edu/site/privacy/",
+              "status": 404
+            },
+            {
+              "url": "https://www.stanford.edu/search/",
+              "status": 404
+            },
+            {
+              "url": "https://www.stanford.edu/",
+              "status": 404
+            },
+            {
+              "url": "https://emergency.stanford.edu/",
+              "status": 404
+            }
+          ]
         },
         {
           "path": "/support/launch-your-site",
           "views": 84,
-          "count": 6
+          "count": 6,
+          "links": [
+            {
+              "url": "https://www.stanford.edu/accessibility",
+              "status": 404
+            },
+            {
+              "url": "https://www.stanford.edu/site/terms/",
+              "status": 404
+            },
+            {
+              "url": "https://www.stanford.edu/site/privacy/",
+              "status": 404
+            },
+            {
+              "url": "https://www.stanford.edu/search/",
+              "status": 404
+            },
+            {
+              "url": "https://www.stanford.edu/",
+              "status": 404
+            },
+            {
+              "url": "https://emergency.stanford.edu/",
+              "status": 404
+            }
+          ]
         },
         {
           "path": "/build/stanford-only-sites",
           "views": 75,
-          "count": 6
+          "count": 6,
+          "links": [
+            {
+              "url": "https://www.stanford.edu/accessibility",
+              "status": 404
+            },
+            {
+              "url": "https://www.stanford.edu/site/terms/",
+              "status": 404
+            },
+            {
+              "url": "https://www.stanford.edu/site/privacy/",
+              "status": 404
+            },
+            {
+              "url": "https://www.stanford.edu/search/",
+              "status": 404
+            },
+            {
+              "url": "https://www.stanford.edu/",
+              "status": 404
+            },
+            {
+              "url": "https://emergency.stanford.edu/",
+              "status": 404
+            }
+          ]
         },
         {
           "path": "/manage-your-site/menus-other-sitewide-features/main-navigation-menu",
           "views": 62,
-          "count": 6
+          "count": 6,
+          "links": [
+            {
+              "url": "https://www.stanford.edu/accessibility",
+              "status": 404
+            },
+            {
+              "url": "https://www.stanford.edu/site/terms/",
+              "status": 404
+            },
+            {
+              "url": "https://www.stanford.edu/site/privacy/",
+              "status": 404
+            },
+            {
+              "url": "https://www.stanford.edu/search/",
+              "status": 404
+            },
+            {
+              "url": "https://www.stanford.edu/",
+              "status": 404
+            },
+            {
+              "url": "https://emergency.stanford.edu/",
+              "status": 404
+            }
+          ]
         }
       ]
     },
