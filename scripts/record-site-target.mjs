@@ -33,8 +33,11 @@ const fixturesDir = fixturesArg > -1 ? path.resolve(process.argv[fixturesArg + 1
 
 /** GET a Siteimprove path, retrying rate limits and server errors with backoff. */
 async function get(apiPath) {
+  // Accepts a path, or a full href from a response's _links (same API only).
+  const url = apiPath.startsWith("http") ? apiPath : `${BASE_URL}${apiPath}`;
+  if (!url.startsWith(BASE_URL)) throw new Error(`Refusing to call ${url}: not the Siteimprove API`);
   for (let attempt = 1; ; attempt++) {
-    const res = await fetch(`${BASE_URL}${apiPath}`, {
+    const res = await fetch(url, {
       headers: { Authorization: auth, Accept: "application/json" },
     });
     if (res.ok) return res.json();
@@ -55,36 +58,53 @@ async function saveFixture(name, data) {
   console.log(`Saved fixture ${name}`);
 }
 
-// Endpoints to verify for task 6, taken from the `_links` in GET /sites/{id}
-// (data/fixtures/siteimprove/site-sitesuserguide.json). Lists are kept short.
+// Second round of endpoints to verify for task 6 (round one is saved in
+// data/fixtures/siteimprove/probe-*.json). Some follow `_links` from earlier
+// responses, so they hit the exact detail endpoints the fetch will use.
 // Left out on purpose: policies (may include SWS-only items, AD-7), and
 // personal ID numbers, email addresses and phone numbers (personal data).
 const PROBES = [
-  "a11y/overview/site_target/history",
-  "a11y/overview/summary",
-  "a11y/overview/progress/history",
-  "a11y/issue_kinds/confirmed/issues?page_size=10",
-  "dci/overview",
-  "dci/history?page_size=10",
-  "quality_assurance/overview/check_history?page_size=10",
-  "quality_assurance/links/history?page_size=10",
-  "quality_assurance/links/broken_links?page_size=10",
-  "quality_assurance/links/pages_with_broken_links?page_size=10",
-  "analytics/overview/history",
-  "analytics/content/most_popular_pages?page_size=10",
-  "content/crawl",
+  ["site_target-history-page_size_500", "a11y/overview/site_target/history?page_size=500"],
+  ["seov2-overview-score", "seov2/overview/score"],
+  ["seov2-issues", "seov2/issues?page_size=50"],
+  ["qa-overview-summary", "quality_assurance/overview/summary"],
+  ["qa-inventory-pages", "quality_assurance/inventory/pages?page_size=10"],
 ];
 
 /** Saves each probe's response, or its HTTP error, without failing the run. */
 async function probe(id) {
-  for (const p of PROBES) {
-    const name = `probe-${p.split("?")[0].replaceAll("/", "-")}.json`;
+  const save = async (name, target) => {
     try {
-      await saveFixture(name, await get(`/sites/${id}/${p}`));
+      const data = await get(target);
+      await saveFixture(`probe2-${name}.json`, data);
+      return data;
     } catch (err) {
-      await saveFixture(name, { _whm_error: err.message });
+      await saveFixture(`probe2-${name}.json`, { _whm_error: err.message });
+      return null;
     }
-  }
+  };
+  for (const [name, p] of PROBES) await save(name, `/sites/${id}/${p}`);
+
+  const fewest = (items) => [...(items ?? [])].sort((a, b) => a.pages - b.pages)[0];
+  const limit = (href, n) => `${href}${href.includes("?") ? "&" : "?"}page_size=${n}`;
+
+  // Broken links found by the latest check, and the pages one link is on.
+  const checks = await get(`/sites/${id}/quality_assurance/overview/check_history?page_size=1`).catch(() => null);
+  const check = checks?.items?.[0];
+  if (check?._links?.broken_links) await save("check-broken_links", limit(check._links.broken_links.href, 100));
+  const links = await get(`/sites/${id}/quality_assurance/links/broken_links?page_size=100`).catch(() => null);
+  const link = fewest(links?.items);
+  if (link?._links?.pages) await save("broken_link-pages", limit(link._links.pages.href, 20));
+  const pages = await get(`/sites/${id}/quality_assurance/links/pages_with_broken_links?page_size=1`).catch(() => null);
+  const page = pages?.items?.[0];
+  if (page?._links?.broken_links) await save("page-broken_links", limit(page._links.broken_links.href, 20));
+
+  // Pages for an accessibility issue: one on a few pages, one on every page.
+  const issues = await get(`/sites/${id}/a11y/issue_kinds/confirmed/issues?page_size=50`).catch(() => null);
+  const few = fewest(issues?.items);
+  if (few?._links?.pages) await save("a11y-issue-pages-few", limit(few._links.pages.href, 20));
+  const most = [...(issues?.items ?? [])].sort((a, b) => b.pages - a.pages)[0];
+  if (most?._links?.pages) await save("a11y-issue-pages-most", limit(most._links.pages.href, 5));
 }
 
 async function readHistory(siteKey) {
