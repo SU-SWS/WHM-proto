@@ -161,8 +161,12 @@ export async function buildLiveSite({ site, sample, previous, issueTypes, client
     "brokenLinks",
     async () => {
       const list = await client.getAll(`${base}/quality_assurance/overview/check_history/${latest.id}/broken_links?page_size=500`);
-      const countFor = async (check) =>
-        (await client.get(`${base}/quality_assurance/overview/check_history/${check.id}/broken_links?page_size=1`)).total_items;
+      // Siteimprove empties the link lists of older checks. An empty list for a check
+      // whose summary reports broken links means "no data", not zero.
+      const countFor = async (check) => {
+        const n = (await client.get(`${base}/quality_assurance/overview/check_history/${check.id}/broken_links?page_size=1`)).total_items;
+        return n === 0 && check.broken_links > 0 ? null : n;
+      };
       const prevCount = prevCheck ? await countFor(prevCheck) : null;
       const trend = [];
       for (const m of months) {

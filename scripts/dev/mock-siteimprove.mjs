@@ -31,7 +31,9 @@ const pick = (id, n) =>
 const routes = [
   [/\/quality_assurance\/overview\/check_history\/(\d+)\/broken_links\?page_size=1$/, ([, id]) => {
     const c = checks.items.find((x) => String(x.id) === id);
-    return { items: [], total_items: c ? c.broken_links - 11 : 0, total_pages: 1, links: {} };
+    // Like the real API (Nov 20): older checks' link lists come back empty.
+    const purged = !c || c.check_date < "2026-10-20";
+    return { items: [], total_items: purged ? 0 : c.broken_links - 11, total_pages: 1, links: {} };
   }],
   [/\/quality_assurance\/overview\/check_history\/\d+\/broken_links/, () => load("probe2-check-broken_links.json")],
   [/\/quality_assurance\/overview\/check_history/, () => checks],
