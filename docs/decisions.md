@@ -11,6 +11,7 @@ Newest decisions take priority over anything in the exported docs. Dates are 202
 | Nov 13 | Traffic in the prototype comes from **Siteimprove Analytics**, which is confirmed on for sitesuserguide. |
 | Nov 19 | The Site Target Score comes from `GET /sites/{site_id}/a11y/overview/site_target/overview` (field `site_target_percentage`), as used by an earlier SWS script. To be confirmed with a saved fixture. |
 | Nov 19 | The Siteimprove API is believed to have no Site Target Score history. WHM builds its own history by saving the score on every data run. |
+| Nov 20 | First fixtures saved. The base URL is confirmed, and `site_target_percentage` is on a 0–100 scale (98.38). `GET /sites/{id}` links to `a11y/overview/site_target/history`, so the API may have history after all. The daily recorder keeps running until that response is checked. |
 | Nov 19 | Unreviewed SWS notes show a “Draft, not yet reviewed by SWS” label until `reviewedBySws` is true. |
 | Nov 19 | The Siteimprove API base URL for Stanford's account is **`https://api.us.siteimprove.com/v2`**, not the one in the exported prototype plan. To be confirmed with the first live call. |
 | Nov 13 | The **Site Target Score** is the primary score (goal 100); the accessibility score is second. Its API location is still to be found. |
@@ -43,5 +44,5 @@ Newest decisions take priority over anything in the exported docs. Dates are 202
 
 ## Still open
 
-- How the Site Target Score trend is shown before WHM has collected enough of its own history.
+- Whether `a11y/overview/site_target/history` gives the Site Target Score history, and how far back. Until then, the trend shows only the points WHM has recorded.
 - What happens when a "Set aside" revisit date arrives (a Phase 1 interview question).

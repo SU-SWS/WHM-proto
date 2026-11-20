@@ -1,0 +1,14 @@
+{
+  "items": [],
+  "total_items": 2767,
+  "total_pages": 6,
+  "links": {
+    "next": {
+      "href": "https://api.us.siteimprove.com/v2/sites?page=2&page_size=500"
+    },
+    "self": {
+      "href": "https://api.us.siteimprove.com/v2/sites?page=1&page_size=500"
+    }
+  },
+  "_whm_note": "items trimmed to this site only"
+}

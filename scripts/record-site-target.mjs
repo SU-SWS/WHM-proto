@@ -55,6 +55,38 @@ async function saveFixture(name, data) {
   console.log(`Saved fixture ${name}`);
 }
 
+// Endpoints to verify for task 6, taken from the `_links` in GET /sites/{id}
+// (data/fixtures/siteimprove/site-sitesuserguide.json). Lists are kept short.
+// Left out on purpose: policies (may include SWS-only items, AD-7), and
+// personal ID numbers, email addresses and phone numbers (personal data).
+const PROBES = [
+  "a11y/overview/site_target/history",
+  "a11y/overview/summary",
+  "a11y/overview/progress/history",
+  "a11y/issue_kinds/confirmed/issues?page_size=10",
+  "dci/overview",
+  "dci/history?page_size=10",
+  "quality_assurance/overview/check_history?page_size=10",
+  "quality_assurance/links/history?page_size=10",
+  "quality_assurance/links/broken_links?page_size=10",
+  "quality_assurance/links/pages_with_broken_links?page_size=10",
+  "analytics/overview/history",
+  "analytics/content/most_popular_pages?page_size=10",
+  "content/crawl",
+];
+
+/** Saves each probe's response, or its HTTP error, without failing the run. */
+async function probe(id) {
+  for (const p of PROBES) {
+    const name = `probe-${p.split("?")[0].replaceAll("/", "-")}.json`;
+    try {
+      await saveFixture(name, await get(`/sites/${id}/${p}`));
+    } catch (err) {
+      await saveFixture(name, { _whm_error: err.message });
+    }
+  }
+}
+
 async function readHistory(siteKey) {
   try {
     return JSON.parse(await readFile(path.join(HISTORY_DIR, `${siteKey}.json`), "utf8"));
@@ -84,6 +116,7 @@ for (const site of sites) {
       const items = Array.isArray(list.items) ? list.items.filter((i) => i.id === id) : list.items;
       await saveFixture("sites.json", { ...list, items, _whm_note: "items trimmed to this site only" });
       await saveFixture(`site-${site.key}.json`, await get(`/sites/${id}`));
+      await probe(id);
     }
 
     const overview = await get(`/sites/${id}/a11y/overview/site_target/overview`);

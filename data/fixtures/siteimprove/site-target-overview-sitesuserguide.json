@@ -1,0 +1,10 @@
+{
+  "accessibility_dci_score": 93,
+  "accessibility_dci_target_score": 94.31,
+  "site_target_percentage": 98.38,
+  "_links": {
+    "self": {
+      "href": "https://api.us.siteimprove.com/v2/sites/25412155164/a11y/overview/site_target/overview"
+    }
+  }
+}

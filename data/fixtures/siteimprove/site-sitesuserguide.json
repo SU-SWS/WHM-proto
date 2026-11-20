@@ -1,0 +1,514 @@
+{
+  "id": 25412155164,
+  "site_name": "[UIT] Site User Guides",
+  "url": "https://sitesuserguide.stanford.edu/",
+  "_links": {
+    "dci": {
+      "overview": {
+        "href": "https://api.us.siteimprove.com/v2/sites/25412155164/dci/overview"
+      }
+    },
+    "a11y": {
+      "overview": {
+        "summary": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/a11y/overview/summary"
+        },
+        "groups": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/a11y/overview/groups"
+        },
+        "progress": {
+          "history": {
+            "href": "https://api.us.siteimprove.com/v2/sites/25412155164/a11y/overview/progress/history"
+          }
+        },
+        "site_target": {
+          "history": {
+            "href": "https://api.us.siteimprove.com/v2/sites/25412155164/a11y/overview/site_target/history"
+          }
+        }
+      },
+      "issue_kinds": {
+        "confirmed": {
+          "issues": {
+            "href": "https://api.us.siteimprove.com/v2/sites/25412155164/a11y/issue_kinds/confirmed/issues"
+          },
+          "pages": {
+            "href": "https://api.us.siteimprove.com/v2/sites/25412155164/a11y/issue_kinds/confirmed/pages"
+          }
+        },
+        "passed": {
+          "issues": {
+            "href": "https://api.us.siteimprove.com/v2/sites/25412155164/a11y/issue_kinds/passed/issues"
+          },
+          "pages": {
+            "href": "https://api.us.siteimprove.com/v2/sites/25412155164/a11y/issue_kinds/passed/pages"
+          }
+        },
+        "potential": {
+          "issues": {
+            "href": "https://api.us.siteimprove.com/v2/sites/25412155164/a11y/issue_kinds/potential/issues"
+          },
+          "pages": {
+            "href": "https://api.us.siteimprove.com/v2/sites/25412155164/a11y/issue_kinds/potential/pages"
+          }
+        }
+      },
+      "validation": {
+        "pdfs": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/a11y/validation/pdfs"
+        }
+      }
+    },
+    "accessibility": {
+      "overview": {
+        "summary": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/accessibility/overview/summary"
+        },
+        "groups": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/accessibility/overview/groups"
+        },
+        "progress": {
+          "instances": {
+            "history": {
+              "href": "https://api.us.siteimprove.com/v2/sites/25412155164/accessibility/overview/progress/instances/history"
+            }
+          },
+          "issues": {
+            "history": {
+              "href": "https://api.us.siteimprove.com/v2/sites/25412155164/accessibility/overview/progress/issues/history"
+            }
+          }
+        }
+      },
+      "decision": {
+        "issues": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/accessibility/decision/issues"
+        },
+        "items": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/accessibility/decision/items"
+        }
+      },
+      "issues": {
+        "all": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/accessibility/issues"
+        }
+      },
+      "pages": {
+        "all": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/accessibility/pages"
+        }
+      },
+      "validation": {
+        "css": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/accessibility/validation/css"
+        },
+        "html": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/accessibility/validation/html"
+        },
+        "pdf": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/accessibility/validation/pdf"
+        }
+      }
+    },
+    "analytics": {
+      "campaigns": {
+        "summary": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/analytics/campaigns/summary"
+        },
+        "contents": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/analytics/campaigns/contents"
+        },
+        "mediums": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/analytics/campaigns/mediums"
+        },
+        "pages": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/analytics/campaigns/pages"
+        },
+        "sources": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/analytics/campaigns/sources"
+        },
+        "terms": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/analytics/campaigns/terms"
+        }
+      },
+      "overview": {
+        "summary": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/analytics/overview/summary"
+        },
+        "groups": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/analytics/overview/groups"
+        },
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/analytics/overview/history"
+        }
+      },
+      "content": {
+        "all_pages": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/analytics/content/all_pages"
+        },
+        "entry_pages": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/analytics/content/entry_pages"
+        },
+        "exit_pages": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/analytics/content/exit_pages"
+        },
+        "least_popular_pages": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/analytics/content/least_popular_pages"
+        },
+        "most_popular_pages": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/analytics/content/most_popular_pages"
+        },
+        "navigation_depth": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/analytics/content/navigation_depth"
+        },
+        "outbound_links": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/analytics/content/outbound_links"
+        },
+        "page_load_time": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/analytics/content/page_load_time"
+        },
+        "pages_without_visits": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/analytics/content/pages_without_visits"
+        },
+        "parameters": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/analytics/content/parameters"
+        }
+      },
+      "entries_exits": {
+        "bounce_rates": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/analytics/entries_exits/bounce_rates"
+        },
+        "entry_exit_rates": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/analytics/entries_exits/entry_exit_rates"
+        }
+      },
+      "event_tracking": {
+        "actions": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/analytics/event_tracking/actions"
+        },
+        "categories": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/analytics/event_tracking/categories"
+        },
+        "events": {
+          "all": {
+            "href": "https://api.us.siteimprove.com/v2/sites/25412155164/analytics/event_tracking/events"
+          },
+          "pages": {
+            "href": "https://api.us.siteimprove.com/v2/sites/25412155164/analytics/event_tracking/events/pages"
+          }
+        },
+        "labels": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/analytics/event_tracking/labels"
+        },
+        "pages": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/analytics/event_tracking/pages"
+        }
+      },
+      "internal_searches": {
+        "all": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/analytics/internal_searches"
+        }
+      },
+      "keymetrics": {
+        "categories": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/analytics/keymetrics/categories"
+        },
+        "kpis": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/analytics/keymetrics/kpis"
+        },
+        "metrics": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/analytics/keymetrics/metrics"
+        }
+      },
+      "traffic_sources": {
+        "direct_traffic_entry_pages": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/analytics/traffic_sources/direct_traffic_entry_pages"
+        },
+        "external_referring_domains": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/analytics/traffic_sources/external_referring_domains"
+        },
+        "external_referring_pages": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/analytics/traffic_sources/external_referring_pages"
+        },
+        "search_engines": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/analytics/traffic_sources/search_engines"
+        },
+        "social_media_organisations": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/analytics/traffic_sources/social_media_organisations"
+        }
+      },
+      "user_feedback": {
+        "surveys": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/analytics/user_feedback/surveys"
+        }
+      },
+      "visitors": {
+        "browsers": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/analytics/visitors/browsers"
+        },
+        "countries": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/analytics/visitors/countries"
+        },
+        "devices": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/analytics/visitors/devices"
+        },
+        "operating_systems": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/analytics/visitors/operating_systems"
+        },
+        "organisations": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/analytics/visitors/organisations"
+        },
+        "screen_resolutions": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/analytics/visitors/screen_resolutions"
+        }
+      }
+    },
+    "quality_assurance": {
+      "overview": {
+        "summary": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/overview/summary"
+        },
+        "check_history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/overview/check_history"
+        },
+        "groups": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/overview/groups"
+        },
+        "priority_pages": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/overview/priority_pages"
+        }
+      },
+      "inventory": {
+        "capture_tags": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/inventory/capture_tags"
+        },
+        "css": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/inventory/css"
+        },
+        "documents": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/inventory/documents"
+        },
+        "email_addresses": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/inventory/email_addresses"
+        },
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/inventory/history"
+        },
+        "link_texts": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/inventory/link_texts"
+        },
+        "links": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/inventory/links"
+        },
+        "media": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/inventory/media"
+        },
+        "meta_tags": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/inventory/meta_tags"
+        },
+        "pages": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/inventory/pages"
+        },
+        "personal_id_numbers": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/inventory/personal_id_numbers"
+        },
+        "phone_numbers": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/inventory/phone_numbers"
+        },
+        "scripts": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/inventory/scripts"
+        }
+      },
+      "links": {
+        "broken_links": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/links/broken_links"
+        },
+        "broken_links_in_documents": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/links/broken_links_in_documents"
+        },
+        "documents_with_broken_links": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/links/documents_with_broken_links"
+        },
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/links/history"
+        },
+        "ignored_links": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/links/ignored_links"
+        },
+        "pages_with_broken_links": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/links/pages_with_broken_links"
+        },
+        "unsafe_domains": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/links/unsafe_domains"
+        }
+      },
+      "readability": {
+        "accepted_words": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/readability/accepted_words"
+        },
+        "tests": {
+          "automated_readability": {
+            "excluded_pages": {
+              "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/readability/tests/automated_readability/excluded_pages"
+            },
+            "pages": {
+              "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/readability/tests/automated_readability/pages"
+            },
+            "scores": {
+              "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/readability/tests/automated_readability/scores"
+            }
+          },
+          "coleman_liau": {
+            "excluded_pages": {
+              "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/readability/tests/coleman_liau/excluded_pages"
+            },
+            "pages": {
+              "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/readability/tests/coleman_liau/pages"
+            },
+            "scores": {
+              "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/readability/tests/coleman_liau/scores"
+            }
+          },
+          "flesch_kincaid_grade_level": {
+            "excluded_pages": {
+              "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/readability/tests/flesch_kincaid_grade_level/excluded_pages"
+            },
+            "pages": {
+              "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/readability/tests/flesch_kincaid_grade_level/pages"
+            },
+            "scores": {
+              "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/readability/tests/flesch_kincaid_grade_level/scores"
+            }
+          },
+          "flesch_kincaid_reading_ease": {
+            "excluded_pages": {
+              "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/readability/tests/flesch_kincaid_reading_ease/excluded_pages"
+            },
+            "pages": {
+              "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/readability/tests/flesch_kincaid_reading_ease/pages"
+            },
+            "scores": {
+              "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/readability/tests/flesch_kincaid_reading_ease/scores"
+            }
+          },
+          "gunning_fog": {
+            "excluded_pages": {
+              "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/readability/tests/gunning_fog/excluded_pages"
+            },
+            "pages": {
+              "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/readability/tests/gunning_fog/pages"
+            },
+            "scores": {
+              "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/readability/tests/gunning_fog/scores"
+            }
+          },
+          "lix": {
+            "excluded_pages": {
+              "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/readability/tests/lix/excluded_pages"
+            },
+            "pages": {
+              "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/readability/tests/lix/pages"
+            },
+            "scores": {
+              "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/readability/tests/lix/scores"
+            }
+          },
+          "smog": {
+            "excluded_pages": {
+              "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/readability/tests/smog/excluded_pages"
+            },
+            "pages": {
+              "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/readability/tests/smog/pages"
+            },
+            "scores": {
+              "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/readability/tests/smog/scores"
+            }
+          }
+        }
+      },
+      "spelling": {
+        "approved_words": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/spelling/approved_words"
+        },
+        "history": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/spelling/history"
+        },
+        "misspellings": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/spelling/misspellings"
+        },
+        "pages": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/spelling/pages"
+        },
+        "potential_misspellings": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/spelling/potential_misspellings"
+        },
+        "words_to_review": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/spelling/words_to_review"
+        }
+      }
+    },
+    "content": {
+      "crawl": {
+        "href": "https://api.us.siteimprove.com/v2/sites/25412155164/content/crawl"
+      },
+      "pages": {
+        "href": "https://api.us.siteimprove.com/v2/sites/25412155164/content/pages"
+      }
+    },
+    "policy": {
+      "matches": {
+        "content": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/matches/content"
+        }
+      },
+      "policies": {
+        "all": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/policy/policies"
+        }
+      }
+    },
+    "seo": {
+      "decisions": {
+        "ignored_issues": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/seo/decisions/ignored_issues"
+        },
+        "ignored_pages": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/seo/decisions/ignored_pages"
+        }
+      }
+    },
+    "seov2": {
+      "issues": {
+        "all": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/seov2/issues"
+        }
+      },
+      "overview": {
+        "groups": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/seov2/overview/groups"
+        },
+        "score": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/seov2/overview/score"
+        }
+      },
+      "pages": {
+        "all": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/seov2/pages"
+        }
+      }
+    },
+    "self": {
+      "href": "https://api.us.siteimprove.com/v2/sites/25412155164"
+    }
+  },
+  "pages": 351,
+  "policies": 114,
+  "product": [
+    "quality_assurance",
+    "accessibility",
+    "seo",
+    "analytics",
+    "policy"
+  ],
+  "visits": 2282
+}
