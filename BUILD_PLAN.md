@@ -59,7 +59,7 @@ Ordered tasks for the December 8, 2026 prototype. Each task lists what "done" me
 
 Verify each endpoint first: call it once, save the real response to `data/fixtures/siteimprove/`, then write code against the fixture. See `docs/siteimprove-endpoints.md`. In order:
 
-1. Site Target Score and its history: endpoint unknown, `[CONFIRM ENDPOINT]`.
+1. Site Target Score: `GET /sites/{site_id}/a11y/overview/site_target/overview` (used by an earlier SWS script; save a fixture first). History: `[CONFIRM ENDPOINT]`.
 2. Accessibility and other headline scores with history (SI-02 to SI-04).
 3. Traffic and top pages from Siteimprove Analytics (SI-27, SI-28).
 4. Broken links count, trend and list (SI-11, SI-13).

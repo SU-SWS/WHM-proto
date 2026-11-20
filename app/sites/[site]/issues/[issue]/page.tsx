@@ -59,6 +59,7 @@ export default async function IssuePage({ params }: PageProps<"/sites/[site]/iss
           {notes.map((n) => (
             <div key={n.note} className="note-sws">
               <strong className="text-plum">Note from the {n.author}</strong>
+              {!n.reviewedBySws && <span className="tag tag-sample ml-8 align-middle">Draft, not yet reviewed by SWS</span>}
               <p className="mb-0 mt-4">{n.note}</p>
             </div>
           ))}

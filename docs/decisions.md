@@ -9,6 +9,8 @@ Newest decisions take priority over anything in the exported docs. Dates are 202
 | Nov 13 | Live data in the prototype comes from **Siteimprove only**. Google Analytics data and the AI content report are labeled samples until the MVP. |
 | Nov 13 | The live site is **sitesuserguide.stanford.edu**, switched from webservices.stanford.edu. The other two demo sites use sample data. |
 | Nov 13 | Traffic in the prototype comes from **Siteimprove Analytics**, which is confirmed on for sitesuserguide. |
+| Nov 19 | The Site Target Score comes from `GET /sites/{site_id}/a11y/overview/site_target/overview` (field `site_target_percentage`), as used by an earlier SWS script. To be confirmed with a saved fixture. |
+| Nov 19 | Unreviewed SWS notes show a “Draft, not yet reviewed by SWS” label until `reviewedBySws` is true. |
 | Nov 19 | The Siteimprove API base URL for Stanford's account is **`https://api.us.siteimprove.com/v2`**, not the one in the exported prototype plan. To be confirmed with the first live call. |
 | Nov 13 | The **Site Target Score** is the primary score (goal 100); the accessibility score is second. Its API location is still to be found. |
 | Nov 13 | Source roles: Siteimprove for health scores, issues and checks; GA4 (from the MVP) for traffic, engagement, landing pages and site search. One source per metric. |
@@ -40,5 +42,5 @@ Newest decisions take priority over anything in the exported docs. Dates are 202
 
 ## Still open
 
-- Where the Site Target Score is in the Siteimprove API, and whether its history is available.
+- Whether the Site Target Score's history is available from the API.
 - What happens when a "Set aside" revisit date arrives (a Phase 1 interview question).
