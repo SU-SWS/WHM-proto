@@ -61,9 +61,24 @@ async function saveFixture(name, data) {
 // Second round of endpoints to verify for task 6 (round one is saved in
 // data/fixtures/siteimprove/probe-*.json). Some follow `_links` from earlier
 // responses, so they hit the exact detail endpoints the fetch will use.
-// Left out on purpose: policies (may include SWS-only items, AD-7), and
-// personal ID numbers, email addresses and phone numbers (personal data).
+// The policy list is saved for review: it may include SWS-only policies, which
+// must never reach published data (AD-7). Left out on purpose: personal ID
+// numbers, email addresses and phone numbers (personal data).
+//
+// Analytics periods: the `period` parameter (from Siteimprove's API docs,
+// Nov 20) takes YYYYMMDD, YYYYMMDD_YYYYMMDD (both days included), or one of
+// now, today, yesterday, last_seven_days, last_week, last_month, this_month,
+// this_year. The default is the last 7 days. Only whole dates are allowed.
+const ymd = (d) => d.toISOString().slice(0, 10).replaceAll("-", "");
+const yesterday = new Date(Date.now() - 86_400_000);
+const last30 = `${ymd(new Date(Date.now() - 30 * 86_400_000))}_${ymd(yesterday)}`;
+const sinceApril = `${yesterday.getUTCFullYear()}0401_${ymd(yesterday)}`;
+
 const PROBES = [
+  ["analytics-most_popular_pages-30_days", `analytics/content/most_popular_pages?period=${last30}&page_size=10`],
+  ["analytics-overview-history-since_april", `analytics/overview/history?period=${sinceApril}`],
+  ["analytics-overview-history-last_month", "analytics/overview/history?period=last_month"],
+  ["policy-policies", "policy/policies?page_size=200"],
   ["site_target-history-page_size_500", "a11y/overview/site_target/history?page_size=500"],
   ["seov2-overview-score", "seov2/overview/score"],
   ["seov2-issues", "seov2/issues?page_size=50"],

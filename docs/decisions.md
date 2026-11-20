@@ -16,6 +16,10 @@ Newest decisions take priority over anything in the exported docs. Dates are 202
 | Nov 20 | The accessibility score comes from the same response as the Site Target Score (`accessibility_dci_score`), so both have one source and matching dates (Q-4). DCI history isn't used for it. |
 | Nov 20 | “Siteimprove check of [date]” uses the latest `check_date` from the QA check history. |
 | Nov 20 | Issues that come from the shared template are shown as **“SWS is handling this”**, not as owner issues. That covers rules found on all or nearly all pages (such as the AAA target size, line height and enhanced contrast rules) and broken links in the shared Stanford header or footer. |
+| Nov 20 | Live sites get their state, verdict and lede from fixed rules in `docs/verdict-rules.md` (draft for SWS review). Sample sites keep their hand-written text. |
+| Nov 20 | “Nearly all pages” for template issues means **at least 90%** of the site’s pages. |
+| Nov 20 | Siteimprove Analytics takes a `period` parameter; page views use the last 30 days, to match the page’s wording. |
+| Nov 20 | Stanford policies are in scope for the fair. The policy list is saved for review first, and SWS-only policies are agreed by name before any match is published (AD-7). |
 | Nov 20 | `_siteimprove` deep links carry an `impmd=` value. Fixtures store it redacted, and no deep link is published until SWS confirms it isn't a credential. |
 | Nov 19 | Unreviewed SWS notes show a “Draft, not yet reviewed by SWS” label until `reviewedBySws` is true. |
 | Nov 19 | The Siteimprove API base URL for Stanford's account is **`https://api.us.siteimprove.com/v2`**, not the one in the exported prototype plan. To be confirmed with the first live call. |
@@ -50,6 +54,6 @@ Newest decisions take priority over anything in the exported docs. Dates are 202
 ## Still open
 
 - Whether `impmd` in Siteimprove deep links is safe to publish.
-- The period parameter for Siteimprove Analytics, so page views cover the last 30 days.
-- The cutoff for “nearly all pages” when marking an issue as coming from the template.
+- The verdict rules in `docs/verdict-rules.md`, including whether an accessibility score drop should also mean “needs attention.”
+- Which policy name prefixes are SWS-only.
 - What happens when a "Set aside" revisit date arrives (a Phase 1 interview question).
