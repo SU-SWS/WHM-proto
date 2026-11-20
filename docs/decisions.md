@@ -20,6 +20,12 @@ Newest decisions take priority over anything in the exported docs. Dates are 202
 | Nov 20 | “Nearly all pages” for template issues means **at least 90%** of the site’s pages. |
 | Nov 20 | Siteimprove Analytics takes a `period` parameter; page views use the last 30 days, to match the page’s wording. |
 | Nov 20 | Stanford policies are in scope for the fair. The policy list is saved for review first, and SWS-only policies are agreed by name before any match is published (AD-7). |
+| Nov 20 | Policies are published only from an **allowlist**: names starting with `[QA]`, `[A11y]` or `[SEO]` (in any combination, so `[QA][SOM]` counts), `QA:` or `A11y:`. Everything else is dropped (AD-7). |
+| Nov 20 | Broken links use the **per-check link list** for the reading, the trend and the issue, so they always agree (Q-4). |
+| Nov 20 | A live site shows **live issues only**. Sample issues name sample pages, so they come back only if their whole section falls back to sample. Pages not updated in a year stays a labeled, simulated reading. |
+| Nov 20 | A Siteimprove accessibility rule with no WHM issue type is left out and noted in `status.json`, rather than published in Siteimprove's own wording. |
+| Nov 20 | Site data files move to `schemaVersion: 2`: changes and trend values can be empty (no earlier check, or no data that month), and an issue can be marked SWS-handled on its own. |
+| Nov 20 | The first live data run is reviewed before it's published: the Data run workflow has a `publish` checkbox that, when unticked, saves the result as a download instead of committing and deploying it. |
 | Nov 20 | `_siteimprove` deep links carry an `impmd=` value. Fixtures store it redacted, and no deep link is published until SWS confirms it isn't a credential. |
 | Nov 19 | Unreviewed SWS notes show a “Draft, not yet reviewed by SWS” label until `reviewedBySws` is true. |
 | Nov 19 | The Siteimprove API base URL for Stanford's account is **`https://api.us.siteimprove.com/v2`**, not the one in the exported prototype plan. To be confirmed with the first live call. |

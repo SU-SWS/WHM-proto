@@ -33,7 +33,7 @@ export default async function SitePage({ params }: PageProps<"/sites/[site]">) {
     type: v.issue.type,
     title: v.type.title,
     category: v.type.category,
-    fixer: v.type.fixer,
+    fixer: v.fixer,
     summary: `${v.issue.scope} ${v.issue.reason}`,
     sample: site.source === "live" && v.issue.source === "sample",
   });

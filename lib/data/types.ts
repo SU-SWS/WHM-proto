@@ -60,13 +60,13 @@ export interface Annotation {
 // data/{sample|published}/sites/<siteKey>.json
 export interface Reading {
   value: number;
-  change: number;
+  change: number | null; // null when there's no earlier check to compare with
   source: Source;
 }
 
 export interface Series {
   source: Source;
-  values: number[];
+  values: (number | null)[]; // null: no data for that month (before tracking began, or not complete yet)
 }
 
 export interface IssuePageCount {
@@ -88,6 +88,7 @@ export interface SiteIssue {
   scope: string;
   reason: string;
   rank: number | null; // owner-fixable issues are ranked; SWS-handled issues are null
+  fixer?: "owner" | "sws"; // overrides the type's fixer, e.g. "sws" when the issue comes from the template
   siteimproveUrl: string | null;
   source: Source;
   pages: IssuePage[];
@@ -96,7 +97,7 @@ export interface SiteIssue {
 export type SiteState = "attention" | "ok" | "good";
 
 export interface SiteData {
-  schemaVersion: 1;
+  schemaVersion: 2;
   siteKey: string;
   name: string;
   url: string;

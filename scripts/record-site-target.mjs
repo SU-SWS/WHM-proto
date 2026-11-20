@@ -114,6 +114,13 @@ async function probe(id) {
   const page = pages?.items?.[0];
   if (page?._links?.broken_links) await save("page-broken_links", limit(page._links.broken_links.href, 20));
 
+  // Matches for one allowlisted policy (decisions, Nov 20), to see the response shape.
+  const policies = await get(`/sites/${id}/policy/policies?page_size=200`).catch(() => null);
+  const allowed = (policies?.items ?? []).find(
+    (p) => p.matches > 0 && p.matches < 50 && /^(\[(qa|a11y|seo)\])+|^(qa|a11y):/i.test(p.name),
+  );
+  if (allowed?._links?.matches) await save("policy-matches", limit(allowed._links.matches.href, 10));
+
   // Pages for an accessibility issue: one on a few pages, one on every page.
   const issues = await get(`/sites/${id}/a11y/issue_kinds/confirmed/issues?page_size=50`).catch(() => null);
   const few = fewest(issues?.items);

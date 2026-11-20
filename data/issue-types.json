@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "note": "Seed text written for the demo; not yet reviewed by SWS (OT-04). Keyed for now by WHM issue type; map to Siteimprove rule or policy IDs once known.",
+  "note": "Seed text written for the demo; not yet reviewed by SWS (OT-04). Keyed for now by WHM issue type; map to Siteimprove rule or policy IDs once known. Types for live Siteimprove rules (Nov 20) map through siteimproveIds such as \"a11y-rule:113\".",
   "types": [
     {
       "key": "alt",
@@ -107,6 +107,116 @@
       "what": "These pages use a name that Stanford has replaced.",
       "why": "A Stanford content policy checks for retired names so messages stay consistent across sites.",
       "todo": "Replace the old name with the current one on each page.",
+      "siteimproveIds": [],
+      "reviewedBySws": false
+    },
+    {
+      "key": "a11y-target-size",
+      "title": "Some buttons or links are too small to tap easily",
+      "category": "Accessibility",
+      "fixer": "owner",
+      "editorial": false,
+      "what": "Some buttons or links are smaller than 24 by 24 pixels and sit close to other controls.",
+      "why": "Small, crowded controls are hard to tap for people with limited hand movement and for anyone on a phone. WCAG level AA asks for this size or enough space around it.",
+      "todo": "Make each listed button or link bigger, or add space around it.",
+      "siteimproveIds": [
+        "a11y-rule:113"
+      ],
+      "reviewedBySws": false
+    },
+    {
+      "key": "a11y-content-after-heading",
+      "title": "Some headings have nothing under them",
+      "category": "Accessibility",
+      "fixer": "owner",
+      "editorial": false,
+      "what": "Some headings are followed right away by another heading or by the end of the page.",
+      "why": "People who skim by headings expect each one to introduce something. Empty headings are confusing, especially with a screen reader.",
+      "todo": "Add content under each listed heading, or remove the heading if it isn’t needed.",
+      "siteimproveIds": [
+        "a11y-rule:78"
+      ],
+      "reviewedBySws": false
+    },
+    {
+      "key": "a11y-h1-missing",
+      "title": "Pages don’t start with a main heading",
+      "category": "Accessibility",
+      "fixer": "owner",
+      "editorial": false,
+      "what": "These pages don’t begin with a level 1 heading.",
+      "why": "The main heading tells visitors and screen readers what the page is about before they read further.",
+      "todo": "Make sure each listed page starts with one level 1 heading that names the page.",
+      "siteimproveIds": [
+        "a11y-rule:61"
+      ],
+      "reviewedBySws": false
+    },
+    {
+      "key": "a11y-heading-order",
+      "title": "Headings skip levels",
+      "category": "Accessibility",
+      "fixer": "owner",
+      "editorial": false,
+      "what": "Some pages jump from one heading level to a lower one, such as from Heading 2 to Heading 4.",
+      "why": "Screen reader users rely on heading levels to understand how a page is organized. Skipped levels make that harder.",
+      "todo": "Change the headings so each level follows the one above it without skipping.",
+      "siteimproveIds": [
+        "a11y-rule:53"
+      ],
+      "reviewedBySws": false
+    },
+    {
+      "key": "a11y-target-size-enhanced",
+      "title": "Buttons and links are smaller than the recommended size",
+      "category": "Accessibility",
+      "fixer": "sws",
+      "editorial": false,
+      "what": "Buttons and links are smaller than 44 by 44 pixels, the size recommended at WCAG level AAA.",
+      "why": "Larger controls are easier for everyone to tap, especially on phones.",
+      "todo": "No action needed from you. This comes from the site template, and SWS is handling it.",
+      "siteimproveIds": [
+        "a11y-rule:111"
+      ],
+      "reviewedBySws": false
+    },
+    {
+      "key": "a11y-line-height",
+      "title": "Lines of text are close together",
+      "category": "Accessibility",
+      "fixer": "sws",
+      "editorial": false,
+      "what": "The space between lines in paragraphs is less than 1.5 times the text size, the level recommended at WCAG level AAA.",
+      "why": "More space between lines makes long text easier to read, especially for people with dyslexia or low vision.",
+      "todo": "No action needed from you. This comes from the site template, and SWS is handling it.",
+      "siteimproveIds": [
+        "a11y-rule:73"
+      ],
+      "reviewedBySws": false
+    },
+    {
+      "key": "a11y-contrast-enhanced",
+      "title": "Some text doesn’t meet the higher contrast level",
+      "category": "Accessibility",
+      "fixer": "sws",
+      "editorial": false,
+      "what": "Some text has enough contrast for WCAG level AA but not for the stricter level AAA.",
+      "why": "Higher contrast helps people with low vision read more easily.",
+      "todo": "No action needed from you. This comes from the site template, and SWS is handling it.",
+      "siteimproveIds": [
+        "a11y-rule:66"
+      ],
+      "reviewedBySws": false
+    },
+    {
+      "key": "broken-template",
+      "title": "Links in the shared footer are reported broken",
+      "category": "Content quality",
+      "fixer": "sws",
+      "editorial": false,
+      "what": "Siteimprove reports some links in the shared Stanford header or footer as broken on every page.",
+      "why": "These links come from the site template, not from your content. They may be false alarms caused by how the check visits those sites.",
+      "todo": "No action needed from you. SWS is looking into it.",
       "siteimproveIds": [],
       "reviewedBySws": false
     }

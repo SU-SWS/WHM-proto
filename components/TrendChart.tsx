@@ -7,7 +7,7 @@ import { formatNumber, monthName } from "@/lib/format";
 export interface TrendMetric {
   key: string;
   label: string; // "Site Target Score"
-  values: number[];
+  values: (number | null)[]; // null: no data that month
   /** Scores are capped at 100 on the axis. */
   maxIs100?: boolean;
   /** Draws a goal line (Site Target Score: 100). */
@@ -41,16 +41,34 @@ export function TrendChart({ months, metrics }: { months: string[]; metrics: Tre
   const metric = metrics.find((m) => m.key === metricKey) ?? metrics[0];
   const values = metric.values;
   const last = values.length - 1;
+  // Months with no data (before tracking began, or not complete yet) leave a gap in the line.
+  const firstData = values.findIndex((v) => v !== null);
+  const lastData = values.findLastIndex((v) => v !== null);
+  const known = values.filter((v): v is number => v !== null);
 
-  const { lo, hi, ticks } = scale(values, metric);
+  const { lo, hi, ticks } = scale(known.length ? known : [0], metric);
   const x = (i: number) => M.left + (i * (W - M.left - M.right)) / last;
   const y = (v: number) => M.top + ((hi - v) * (H - M.top - M.bottom)) / (hi - lo);
-  const points = values.map((v, i) => `${x(i)},${y(v)}`).join(" ");
+  const runs: number[][] = [];
+  values.forEach((v, i) => {
+    if (v === null) return;
+    if (i > 0 && values[i - 1] !== null && runs.length) runs[runs.length - 1].push(i);
+    else runs.push([i]);
+  });
 
-  const first = `${monthName(months[0])}${sameYear(months) ? "" : ` ${months[0].slice(0, 4)}`}`;
-  const lastMonth = `${monthName(months[last])}${sameYear(months) ? "" : ` ${months[last].slice(0, 4)}`}`;
-  const summary = `${metric.label} went from ${formatNumber(values[0])} in ${first} to ${formatNumber(values[last])} in ${lastMonth}.`;
-  const readout = (i: number) => `${monthName(months[i], "short")} ${months[i].slice(0, 4)}: ${formatNumber(values[i])}`;
+  const when = (i: number) => `${monthName(months[i])}${sameYear(months) ? "" : ` ${months[i].slice(0, 4)}`}`;
+  const fmt = (v: number | null) => (v === null ? "No data" : formatNumber(v));
+  const summary =
+    firstData < 0
+      ? `There’s no ${metric.label.toLowerCase()} data for these months yet.`
+      : [
+          `${metric.label} went from ${fmt(values[firstData])} in ${when(firstData)} to ${fmt(values[lastData])} in ${when(lastData)}.`,
+          firstData > 0 ? `Data starts in ${when(firstData)}.` : "",
+          lastData < last ? `${when(last)} isn’t included yet.` : "",
+        ]
+          .filter(Boolean)
+          .join(" ");
+  const readout = (i: number) => `${monthName(months[i], "short")} ${months[i].slice(0, 4)}: ${fmt(values[i])}`;
 
   function pick(clientX: number, rect: DOMRect) {
     const px = ((clientX - rect.left) / rect.width) * W;
@@ -136,20 +154,29 @@ export function TrendChart({ months, metrics }: { months: string[]; metrics: Tre
           {active !== null && (
             <line x1={x(active)} x2={x(active)} y1={M.top} y2={H - M.bottom} className="stroke-black-70" strokeWidth={1} />
           )}
-          <polyline
-            points={points}
-            fill="none"
-            className="stroke-cardinal-red"
-            strokeWidth={2}
-            strokeLinejoin="round"
-            strokeLinecap="round"
-          />
-          {[last, ...(active !== null && active !== last ? [active] : [])].map((i) => (
-            <circle key={i} cx={x(i)} cy={y(values[i])} r={4} className="fill-cardinal-red stroke-white" strokeWidth={2} />
+          {runs.map((run) => (
+            <polyline
+              key={run[0]}
+              points={run.map((i) => `${x(i)},${y(values[i] as number)}`).join(" ")}
+              fill="none"
+              className="stroke-cardinal-red"
+              strokeWidth={2}
+              strokeLinejoin="round"
+              strokeLinecap="round"
+            />
           ))}
-          <text x={x(last) + 8} y={y(values[last]) + 4} className="fill-black text-[13px] font-semibold">
-            {formatNumber(values[last])}
-          </text>
+          {[
+            ...runs.filter((r) => r.length === 1).map((r) => r[0]), // a lone month still shows as a dot
+            ...(lastData >= 0 ? [lastData] : []),
+            ...(active !== null && values[active] !== null && active !== lastData ? [active] : []),
+          ].map((i, n) => (
+            <circle key={`${i}-${n}`} cx={x(i)} cy={y(values[i] as number)} r={4} className="fill-cardinal-red stroke-white" strokeWidth={2} />
+          ))}
+          {lastData >= 0 && (
+            <text x={x(lastData) + 8} y={y(values[lastData] as number) + 4} className="fill-black text-[13px] font-semibold">
+              {formatNumber(values[lastData] as number)}
+            </text>
+          )}
         </svg>
         {active !== null && (
           <div
@@ -160,7 +187,7 @@ export function TrendChart({ months, metrics }: { months: string[]; metrics: Tre
               transform: `translateX(${active > last / 2 ? "calc(-100% - 8px)" : "8px"})`,
             }}
           >
-            <strong>{formatNumber(values[active])}</strong>{" "}
+            <strong>{fmt(values[active])}</strong>{" "}
             <span className="text-black-80">
               {monthName(months[active], "short")} {months[active].slice(0, 4)}
             </span>
@@ -195,7 +222,7 @@ export function TrendChart({ months, metrics }: { months: string[]; metrics: Tre
                   <td>
                     {monthName(months[i])} {months[i].slice(0, 4)}
                   </td>
-                  <td className="num">{formatNumber(v)}</td>
+                  <td className="num">{fmt(v)}</td>
                 </tr>
               ))}
             </tbody>

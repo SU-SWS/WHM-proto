@@ -29,7 +29,9 @@ export default async function IssuePage({ params }: PageProps<"/sites/[site]/iss
   if (!issue) notFound();
   const type = getIssueType(issue.type);
   const notes = notesFor(siteKey, issue.type);
-  const owner = type.fixer === "owner";
+  const owner = (issue.fixer ?? type.fixer) === "owner";
+  // An owner-type issue moved to SWS because it's on nearly every page (template).
+  const fromTemplate = issue.fixer === "sws" && type.fixer === "owner";
   const isStale = issue.pages.some((p) => "monthsSinceUpdate" in p);
 
   return (
@@ -54,7 +56,11 @@ export default async function IssuePage({ params }: PageProps<"/sites/[site]/iss
           <h2 className="subheading">Why it matters</h2>
           <p>{type.why}</p>
           <h2 className="subheading">What to do</h2>
-          <p>{type.todo}</p>
+          <p>
+            {fromTemplate
+              ? "No action needed from you. This is on nearly every page, so it comes from the site template, and SWS is handling it."
+              : type.todo}
+          </p>
 
           {notes.map((n) => (
             <div key={n.note} className="note-sws">
@@ -104,7 +110,9 @@ export default async function IssuePage({ params }: PageProps<"/sites/[site]/iss
           <a href={issue.siteimproveUrl}>Open this issue in Siteimprove</a>
         ) : (
           <span className="text-black-80">
-            “Open in Siteimprove” links appear here once this site’s data comes from Siteimprove.
+            {issue.source === "live"
+              ? "“Open in Siteimprove” links are turned off for now, while SWS checks that they’re safe to publish."
+              : "“Open in Siteimprove” links appear here once this site’s data comes from Siteimprove."}
           </span>
         )}
       </p>

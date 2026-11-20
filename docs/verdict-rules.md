@@ -35,14 +35,14 @@ Checked in this order; the first match wins.
 
 Built from these parts, in this order, skipping any that don't apply:
 
-1. **Score:** "Your Site Target Score is {score}, {up/down} {change} since the last check." If the change is under 0.1: "Your Site Target Score is {score}, the same as the last check."
+1. **Score:** "Your Site Target Score is {score}, {up/down} {change} since the last check." If the change is under 0.1: "Your Site Target Score is {score}, the same as the last check." With no earlier check: "Your Site Target Score is {score}." Scores use two decimals, as on the page.
 2. **Where to start:** with 2 or more owner issues, "Fixing the first two items helps the most visitors." With 1: "Fixing the item below helps the most visitors."
 3. **SWS:** "{n} {item is / items are} being handled by SWS." (Leave out if none.)
 
 Illustration only, using today's sitesuserguide score and made-up changes and counts:
 
 > **Needs attention: your Site Target Score dropped since the last check, and issues sit on your busiest pages.**
-> Your Site Target Score is 98.4, down 0.2 since the last check. Fixing the first two items helps the most visitors. 4 items are being handled by SWS.
+> Your Site Target Score is 98.38, down 0.2 since the last check. Fixing the first two items helps the most visitors. 4 items are being handled by SWS.
 
 ## Questions for SWS
 

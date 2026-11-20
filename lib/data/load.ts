@@ -21,7 +21,7 @@ const cache = new Map<string, unknown>();
 
 // Reads a JSON file once per build and fails the build on a schema mismatch,
 // so a bad data file never reaches the published site.
-function readJson<T extends { schemaVersion: number }>(file: string): T {
+function readJson<T extends { schemaVersion: number }>(file: string, expected = 1): T {
   if (cache.has(file)) return cache.get(file) as T;
   let data: T;
   try {
@@ -29,9 +29,9 @@ function readJson<T extends { schemaVersion: number }>(file: string): T {
   } catch (err) {
     throw new Error(`Couldn't read ${path.relative(process.cwd(), file)}: ${(err as Error).message}`);
   }
-  if (data.schemaVersion !== 1) {
+  if (data.schemaVersion !== expected) {
     throw new Error(
-      `${path.relative(process.cwd(), file)} has schemaVersion ${data.schemaVersion}; this build expects 1. See docs/data-contract.md.`,
+      `${path.relative(process.cwd(), file)} has schemaVersion ${data.schemaVersion}; this build expects ${expected}. See docs/data-contract.md.`,
     );
   }
   cache.set(file, data);
@@ -64,7 +64,7 @@ export function getSiteKeys(): string[] {
 }
 
 export function getSite(siteKey: string): SiteData {
-  const site = readJson<SiteData>(path.join(PUBLISHED_DIR, "sites", `${siteKey}.json`));
+  const site = readJson<SiteData>(path.join(PUBLISHED_DIR, "sites", `${siteKey}.json`), 2);
   if (site.siteKey !== siteKey) {
     throw new Error(`data/published/sites/${siteKey}.json has siteKey "${site.siteKey}".`);
   }

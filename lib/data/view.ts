@@ -25,19 +25,24 @@ export function getIssueType(key: string): IssueType {
 export interface IssueView {
   issue: SiteIssue;
   type: IssueType;
+  /** Who fixes it: the issue's own override (template issues), else its type's. */
+  fixer: "owner" | "sws";
 }
 
 export function issueViews(site: SiteData): IssueView[] {
-  return site.issues.map((issue) => ({ issue, type: getIssueType(issue.type) }));
+  return site.issues.map((issue) => {
+    const type = getIssueType(issue.type);
+    return { issue, type, fixer: issue.fixer ?? type.fixer };
+  });
 }
 
 /** "Prioritized for me": owner-fixable issues in rank order, then SWS-handled ones (SP-3, SP-5). */
 export function prioritized(site: SiteData): { owner: IssueView[]; sws: IssueView[] } {
   const views = issueViews(site);
   const owner = views
-    .filter((v) => v.type.fixer === "owner")
+    .filter((v) => v.fixer === "owner")
     .sort((a, b) => (a.issue.rank ?? Infinity) - (b.issue.rank ?? Infinity));
-  return { owner, sws: views.filter((v) => v.type.fixer === "sws") };
+  return { owner, sws: views.filter((v) => v.fixer === "sws") };
 }
 
 /** "Show everything plainly": every issue, grouped by category, no ranking (SP-4). */

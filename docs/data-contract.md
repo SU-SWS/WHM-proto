@@ -58,8 +58,10 @@ interface Annotations {
 }
 
 // data/{sample|published}/sites/<siteKey>.json
+// schemaVersion 2 (Nov 20): Reading.change and Series values may be null, and
+// an issue may override its type's fixer.
 interface SiteData {
-  schemaVersion: 1;
+  schemaVersion: 2;
   siteKey: string; name: string; url: string;
   source: Source;              // "live" if any section is live
   checkedAt: IsoDate;          // date of the Siteimprove check the data comes from
@@ -85,6 +87,7 @@ interface SiteData {
     type: string;              // key into issue-types.json
     scope: string; reason: string;
     rank: number | null;       // owner-fixable issues are ranked; SWS-handled issues are null
+    fixer?: "owner" | "sws";   // overrides the type's fixer; "sws" for issues from the template
     siteimproveUrl: string | null;
     source: Source;
     pages: ({ path: string; views: number; count: number } |
@@ -93,8 +96,8 @@ interface SiteData {
   siteSearch: { source: Source; terms: { term: string; count: number }[] };   // GA4, sample until the MVP
   speed:      { source: Source; pages: { path: string; score: number }[] };  // optional
 }
-interface Reading { value: number; change: number; source: Source }
-interface Series  { source: Source; values: number[] }
+interface Reading { value: number; change: number | null; source: Source }   // null: nothing to compare with
+interface Series  { source: Source; values: (number | null)[] }              // null: no data that month
 
 // data/{sample|published}/reports/<siteKey>.json
 interface Report {

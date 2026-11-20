@@ -17,6 +17,10 @@ on:
           - sitesuserguide
           - webservices
           - decanter
+      publish:
+        description: "Publish the result (untick to review it first: the files are saved under this run's Artifacts and nothing is committed or deployed)"
+        type: boolean
+        default: true
   schedule:
     - cron: "0 13 * * 1" # Mondays, about 5 a.m. Pacific
 
@@ -46,7 +50,16 @@ jobs:
           SITEIMPROVE_API_KEY: ${{ secrets.SITEIMPROVE_API_KEY }}
         run: node scripts/refresh.mjs --site "${{ inputs.site || 'all' }}"
 
+      - name: Save the result for review
+        if: ${{ inputs.publish == false }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: data-run-preview
+          path: data/published
+          retention-days: 3
+
       - name: Commit published data
+        if: ${{ inputs.publish != false }}
         run: |
           git add data/published
           if git diff --cached --quiet; then
@@ -60,14 +73,20 @@ jobs:
           fi
 
       - run: npm ci
+        if: ${{ inputs.publish != false }}
       - run: npx next build
+        if: ${{ inputs.publish != false }}
       - uses: actions/configure-pages@v5
+        if: ${{ inputs.publish != false }}
       - uses: actions/upload-pages-artifact@v3
+        if: ${{ inputs.publish != false }}
         with:
           path: out
 
   deploy:
     needs: refresh
+    # The schedule has no inputs, so a scheduled run always publishes.
+    if: ${{ inputs.publish != false }}
     runs-on: ubuntu-latest
     environment:
       name: github-pages

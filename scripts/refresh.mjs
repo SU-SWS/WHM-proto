@@ -2,16 +2,19 @@
 //
 // Usage: node scripts/refresh.mjs [--site <siteKey>|all]
 //
-// Sample mode (task 5): each chosen site's files are copied from data/sample/.
-// Live mode (task 6) will start from the same sample file and replace each
-// section it fetches successfully (docs/data-contract.md, "How the refresh
-// merges data"). Sites not chosen keep their published files and status.
+// Sites with `live: true` in the registry are fetched from Siteimprove
+// (scripts/lib/live-site.mjs), starting from their sample file and replacing
+// each section fetched successfully (docs/data-contract.md, "How the refresh
+// merges data"). Other sites copy their files from data/sample/. Sites not
+// chosen keep their published files and status.
 //
 // portfolio.json is rebuilt from the published site files every run, so the
 // rollup can never disagree with the site pages (Q-4).
 
 import { copyFile, mkdir, readFile, rename, writeFile } from "node:fs/promises";
 import path from "node:path";
+import { buildLiveSite } from "./lib/live-site.mjs";
+import { createClient } from "./lib/siteimprove.mjs";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const DATA = path.join(ROOT, "data");
@@ -53,23 +56,47 @@ const startedAt = new Date().toISOString();
 const previous = await readJsonOr(path.join(PUBLISHED, "status.json"), { sites: {} });
 const siteStatus = { ...previous.sites };
 
+const client = createClient();
+
 for (const site of chosen) {
-  const finishedAt = new Date().toISOString();
   try {
-    await copyFile(path.join(SAMPLE, "sites", `${site.key}.json`), path.join(PUBLISHED, "sites", `${site.key}.json`));
+    // The AI report is a labeled sample for every site until the MVP.
     await copyFile(path.join(SAMPLE, "reports", `${site.key}.json`), path.join(PUBLISHED, "reports", `${site.key}.json`));
-    siteStatus[site.key] = { result: "sample", reason: null, finishedAt, source: "sample" };
-    console.log(`${site.key}: sample data published`);
+    if (site.live) {
+      siteStatus[site.key] = await refreshLive(site);
+    } else {
+      await copyFile(path.join(SAMPLE, "sites", `${site.key}.json`), path.join(PUBLISHED, "sites", `${site.key}.json`));
+      siteStatus[site.key] = { result: "sample", reason: null, finishedAt: new Date().toISOString(), source: "sample" };
+      console.log(`${site.key}: sample data published`);
+    }
   } catch (err) {
     // Keep whatever was published before; never show old numbers as current (Q-7).
     siteStatus[site.key] = {
       result: "failed",
-      reason: `Couldn’t copy sample data: ${err.code ?? err.message}`,
-      finishedAt,
+      reason: err.message,
+      finishedAt: new Date().toISOString(),
       source: previous.sites?.[site.key]?.source ?? "sample",
     };
-    console.error(`${site.key}: ${err.message}`);
+    console.error(`${site.key}: ${err.message}. Its last published data is kept.`);
   }
+}
+
+/** Fetches a live site. Throws (and keeps the published file) if it can't get a check date. */
+async function refreshLive(site) {
+  if (!client) throw new Error("Siteimprove credentials aren’t set, so live data couldn’t be fetched");
+  if (!site.siteimproveSiteId) throw new Error("The registry has no Siteimprove site ID for this site");
+  const sample = await readJson(path.join(SAMPLE, "sites", `${site.key}.json`));
+  const published = await readJsonOr(path.join(PUBLISHED, "sites", `${site.key}.json`), null);
+  const { data, sections, notes } = await buildLiveSite({ site, sample, previous: published, issueTypes, client });
+  await writeJson(path.join(PUBLISHED, "sites", `${site.key}.json`), data);
+
+  const fellBack = Object.entries(sections).filter(([, s]) => s.source !== "live");
+  const reason = [
+    ...fellBack.map(([name, s]) => `${name}: ${s.reason} (showing ${s.source === "kept" ? "last good" : "sample"} data)`),
+    ...notes,
+  ].join("; ");
+  console.log(`${site.key}: live data published (${client.calls()} API calls)${reason ? `. ${reason}` : ""}`);
+  return { result: "complete", reason: reason || null, finishedAt: new Date().toISOString(), source: "live" };
 }
 
 // Rebuild the rollup from what's now published, in registry order.
@@ -87,7 +114,7 @@ for (const key of known) {
     siteTargetScore: s.readings.siteTargetScore.value,
     accessibilityScore: s.readings.accessibilityScore.value,
     brokenLinks: s.readings.brokenLinks.value,
-    openOwnerIssues: s.issues.filter((i) => ownerFixable.has(i.type)).length,
+    openOwnerIssues: s.issues.filter((i) => (i.fixer ? i.fixer === "owner" : ownerFixable.has(i.type))).length,
     checkedAt: s.checkedAt,
     source: s.source,
   });
