@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "runId": "44796593987",
-  "startedAt": "2026-11-20T18:51:27.711Z",
-  "finishedAt": "2026-11-20T18:51:33.392Z",
+  "runId": "44804372248",
+  "startedAt": "2026-11-20T19:40:57.236Z",
+  "finishedAt": "2026-11-20T19:41:06.785Z",
   "sites": {
     "sitesuserguide": {
       "result": "complete",
-      "reason": null,
-      "finishedAt": "2026-11-20T18:51:33.390Z",
+      "reason": "policy “[QA] Google Docs” has no WHM issue type; policy “[QA] Homepages (High-level pages) with broken links” has no WHM issue type; policy “[QA] Google Docs Forms” has no WHM issue type; policy “[QA] Links to Stanford Digital Repository (sdr.stanford.edu)” has no WHM issue type; policy “[A11y] Captions Project: YouTube Links” has no WHM issue type; policy “[A11y] [QA] Documents” has no WHM issue type",
+      "finishedAt": "2026-11-20T19:41:06.783Z",
       "source": "live"
     },
     "webservices": {
