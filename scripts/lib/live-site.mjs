@@ -15,6 +15,14 @@ const TEMPLATE_SHARE = 0.9;
 /** A check covering fewer pages than this share of the usual count is partial and skipped. */
 const PARTIAL_CHECK = 0.95;
 const BUSIEST = 5;
+/**
+ * Stanford Sites platform pages, shared by every site on the platform: search
+ * and sign-in/account pages. They're left out when picking a site's busiest
+ * pages, because the owner doesn't write them. Open question (decisions,
+ * Nov 20): they still matter to visitors, so platform-wide reporting is needed later.
+ */
+export const PLATFORM_PAGES = [/^\/search(\/|$)/, /^\/user(\/|$)/];
+const isPlatformPage = (path) => PLATFORM_PAGES.some((re) => re.test(path));
 const TEMPLATE_PAGES_KEPT = 20;
 
 const round = (n, dp = 2) => Math.round(n * 10 ** dp) / 10 ** dp;
@@ -143,7 +151,11 @@ export async function buildLiveSite({ site, sample, previous, issueTypes, client
   );
   const views = traffic.views ?? new Map();
   const viewsOf = (path, fallback = 0) => views.get(path) ?? fallback;
-  const busiest = [...views.entries()].sort((a, b) => b[1] - a[1]).slice(0, BUSIEST).map(([p]) => p);
+  const busiest = [...views.entries()]
+    .filter(([p]) => !isPlatformPage(p))
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, BUSIEST)
+    .map(([p]) => p);
 
   /** "Includes your busiest page." / "Includes 2 of your 5 busiest pages." / "None are on your 5 busiest pages." */
   const busiestNote = (paths) => {

@@ -26,6 +26,8 @@ Newest decisions take priority over anything in the exported docs. Dates are 202
 | Nov 20 | A Siteimprove accessibility rule with no WHM issue type is left out and noted in `status.json`, rather than published in Siteimprove's own wording. |
 | Nov 20 | Site data files move to `schemaVersion: 2`: changes and trend values can be empty (no earlier check, or no data that month), and an issue can be marked SWS-handled on its own. |
 | Nov 20 | The first live data run is reviewed before it's published: the Data run workflow has a `publish` checkbox that, when unticked, saves the result as a download instead of committing and deploying it. |
+| Nov 20 | The broken-links trend shows only months whose per-check link list Siteimprove still keeps (October on, for now), leaving earlier months as no data. It grows as new checks come in. |
+| Nov 20 | **Platform pages are left out of owner reports (temporary).** Stanford Sites search and sign-in/account pages (`/search`, `/user/…`) are shared by every site on the platform, so they're excluded when picking a site's busiest pages: the "Most visited pages" table, the "busiest pages" notes, and the busiest-pages test in the verdict. Issues found on those pages are still listed. The site page says they're left out. See "Still open". |
 | Nov 20 | `_siteimprove` deep links carry an `impmd=` value. Fixtures store it redacted, and no deep link is published until SWS confirms it isn't a credential. |
 | Nov 19 | Unreviewed SWS notes show a “Draft, not yet reviewed by SWS” label until `reviewedBySws` is true. |
 | Nov 19 | The Siteimprove API base URL for Stanford's account is **`https://api.us.siteimprove.com/v2`**, not the one in the exported prototype plan. To be confirmed with the first live call. |
@@ -58,6 +60,8 @@ Newest decisions take priority over anything in the exported docs. Dates are 202
 | Nov 13 | Pilot measures: email opens, issues confirmed fixed, owners' rating of usefulness, and the change in support requests. Targets are set at Gate 2. |
 
 ## Still open
+
+- **Platform pages (flagged Nov 20, to address after the fair).** Search and sign-in pages get real traffic (on sitesuserguide, `/search` was the 3rd most visited page and `/user/login` the 5th, last 30 days) and they matter to visitors, but no single site owner can fix them. They're left out of owner reports for now. Still to decide: who sees problems on platform pages (SWS, a platform-wide report, or both), whether the list of platform paths (`PLATFORM_PAGES` in `scripts/lib/live-site.mjs`) is complete, and whether it differs between platforms.
 
 - Whether `impmd` in Siteimprove deep links is safe to publish.
 - The verdict rules in `docs/verdict-rules.md`, including whether an accessibility score drop should also mean “needs attention.”

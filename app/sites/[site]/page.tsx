@@ -87,7 +87,10 @@ export default async function SitePage({ params }: PageProps<"/sites/[site]">) {
           </tbody>
         </table>
       </TableWrap>
-      <SourceNote className="meta mb-4 mt-8" provider="siteimproveAnalytics" source={site.topPages.viewsSource} date={checked} />
+      <SourceNote className="meta mb-4 mt-8" provider="siteimproveAnalytics" source={site.topPages.viewsSource} date={checked}>
+        {site.topPages.viewsSource === "live" &&
+          "Search and sign-in pages are left out, because they’re part of the Stanford Sites platform rather than your content."}
+      </SourceNote>
       <SourceNote provider="ga4" source={site.topPages.engagementSource} date={checked}>
         Engagement rate is the share of visits that lasted over 10 seconds, viewed 2 or more pages, or completed
         a key event.
