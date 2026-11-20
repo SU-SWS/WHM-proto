@@ -1,0 +1,6 @@
+# Asks search engines not to index this site.
+# Note: crawlers only read robots.txt at the root of a host. This file is served
+# at su-sws.github.io/WHM-proto/robots.txt, so it has no effect there. The
+# noindex meta tag on every page is what keeps pages out of search results.
+User-agent: *
+Disallow: /

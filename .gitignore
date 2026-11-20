@@ -7,3 +7,7 @@ out/
 .DS_Store
 # Never commit survey responses or anything with respondent names or emails.
 survey*/
+
+# Next.js generated
+next-env.d.ts
+*.tsbuildinfo
