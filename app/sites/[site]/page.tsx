@@ -78,7 +78,14 @@ export default async function SitePage({ params }: PageProps<"/sites/[site]">) {
           <tbody>
             {site.topPages.pages.map((p) => (
               <tr key={p.path}>
-                <td>{displayPath(p.path)}</td>
+                <td>
+                  {/* Live paths are real pages; sample paths are made up, so they stay plain text. */}
+                  {site.topPages.viewsSource === "live" ? (
+                    <a href={new URL(p.path, site.url).href}>{displayPath(p.path)}</a>
+                  ) : (
+                    displayPath(p.path)
+                  )}
+                </td>
                 <td className="num">{formatNumber(p.views)}</td>
                 <td className="num">{p.engagementRate === null ? "Not available" : formatPercent(p.engagementRate)}</td>
                 <td className="num">{p.openIssues}</td>
