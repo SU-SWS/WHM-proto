@@ -1,25 +1,25 @@
 {
   "schemaVersion": 1,
-  "runId": null,
-  "startedAt": null,
-  "finishedAt": null,
+  "runId": "44655023296",
+  "startedAt": "2026-11-20T01:38:10.832Z",
+  "finishedAt": "2026-11-20T01:38:10.839Z",
   "sites": {
     "sitesuserguide": {
       "result": "sample",
       "reason": null,
-      "finishedAt": null,
+      "finishedAt": "2026-11-20T01:38:10.832Z",
       "source": "sample"
     },
     "webservices": {
       "result": "sample",
       "reason": null,
-      "finishedAt": null,
+      "finishedAt": "2026-11-20T01:38:10.836Z",
       "source": "sample"
     },
     "decanter": {
       "result": "sample",
       "reason": null,
-      "finishedAt": null,
+      "finishedAt": "2026-11-20T01:38:10.836Z",
       "source": "sample"
     }
   }
