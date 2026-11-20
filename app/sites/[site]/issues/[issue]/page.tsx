@@ -104,7 +104,8 @@ export default async function IssuePage({ params }: PageProps<"/sites/[site]/iss
             {issue.pages.map((p) => (
               <tr key={p.path}>
                 <td>
-                  {displayPath(p.path)}
+                  {/* Live paths are real pages on the site. Sample paths are made up, so they stay plain text. */}
+                  {issue.source === "live" ? <a href={new URL(p.path, site.url).href}>{displayPath(p.path)}</a> : displayPath(p.path)}
                   {"links" in p && p.links && p.links.length > 0 && (
                     <ul className="mb-0 mt-6 list-none p-0 text-16">
                       {p.links.map((l) => (
