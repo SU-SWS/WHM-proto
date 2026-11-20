@@ -3,27 +3,27 @@
   "siteKey": "sitesuserguide",
   "name": "Stanford Sites user guide",
   "url": "https://sitesuserguide.stanford.edu",
-  "source": "sample",
-  "checkedAt": "2026-11-10",
-  "state": "attention",
-  "verdict": "Needs attention: accessibility has slipped each month, and issues sit on your busiest pages.",
-  "lede": "Fixing the first two items helps the most visitors. Most items are yours to fix; one is being handled by SWS.",
+  "source": "live",
+  "checkedAt": "2026-11-16",
+  "state": "ok",
+  "verdict": "In good shape, with 5 fixes worth making.",
+  "lede": "Your Site Target Score is 98.38, up 0.94 since the last check. Fixing the first two items helps the most visitors. 4 items are being handled by SWS.",
   "readings": {
     "siteTargetScore": {
-      "value": 98.3,
-      "change": -0.4,
-      "goal": 100,
-      "source": "sample"
+      "value": 98.38,
+      "change": 0.94,
+      "source": "live",
+      "goal": 100
     },
     "accessibilityScore": {
-      "value": 92.8,
-      "change": -0.6,
-      "source": "sample"
+      "value": 93,
+      "change": 0.02,
+      "source": "live"
     },
     "brokenLinks": {
-      "value": 14,
-      "change": 3,
-      "source": "sample"
+      "value": 54,
+      "change": 28,
+      "source": "live"
     },
     "stalePages": {
       "value": 38,
@@ -33,9 +33,9 @@
       "source": "sample"
     },
     "missingSearchDescriptions": {
-      "value": 61,
-      "change": -2,
-      "source": "sample"
+      "value": 73,
+      "change": null,
+      "source": "live"
     }
   },
   "trends": {
@@ -50,502 +50,1012 @@
       "2026-11"
     ],
     "siteTargetScore": {
-      "source": "sample",
+      "source": "live",
       "values": [
-        99.4,
-        99.2,
-        99.1,
-        98.9,
-        98.8,
-        98.7,
-        98.7,
-        98.3
+        98.75,
+        98.78,
+        98.63,
+        98.78,
+        98.67,
+        98.22,
+        97.87,
+        98.38
       ]
     },
     "accessibilityScore": {
-      "source": "sample",
+      "source": "live",
       "values": [
-        94.3,
-        94.1,
-        93.9,
-        93.6,
-        93.5,
-        93.4,
-        93.2,
-        92.8
+        93.67,
+        93.44,
+        93.41,
+        93.36,
+        93.43,
+        92.72,
+        92.73,
+        93
       ]
     },
     "brokenLinks": {
-      "source": "sample",
+      "source": "live",
       "values": [
-        8,
-        9,
-        9,
-        10,
-        11,
-        11,
-        11,
-        14
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        13,
+        54
       ]
     },
     "pageViews": {
-      "source": "sample",
+      "source": "live",
       "values": [
-        10200,
-        9800,
-        9100,
-        11800,
-        12400,
-        13100,
-        12900,
-        11350
+        null,
+        null,
+        5494,
+        4683,
+        5889,
+        7946,
+        6807,
+        null
       ]
     }
   },
   "topPages": {
-    "viewsSource": "sample",
+    "viewsSource": "live",
     "engagementSource": "sample",
     "pages": [
       {
         "path": "/",
-        "views": 1980,
-        "engagementRate": 0.48,
-        "openIssues": 1
-      },
-      {
-        "path": "/add-a-page",
-        "views": 1240,
-        "engagementRate": 0.71,
-        "openIssues": 3
-      },
-      {
-        "path": "/update-a-menu",
-        "views": 870,
-        "engagementRate": 0.66,
+        "views": 506,
+        "engagementRate": null,
         "openIssues": 0
       },
       {
-        "path": "/accessibility-basics",
-        "views": 760,
-        "engagementRate": 0.58,
-        "openIssues": 2
+        "path": "/build/working-text-editor/create-links/create-jump-links-using-id-tags",
+        "views": 140,
+        "engagementRate": null,
+        "openIssues": 0
       },
       {
-        "path": "/contact-and-support",
-        "views": 540,
-        "engagementRate": 0.31,
-        "openIssues": 4
+        "path": "/support/launch-your-site",
+        "views": 84,
+        "engagementRate": null,
+        "openIssues": 0
+      },
+      {
+        "path": "/build/stanford-only-sites",
+        "views": 75,
+        "engagementRate": null,
+        "openIssues": 0
+      },
+      {
+        "path": "/manage-your-site/menus-other-sitewide-features/main-navigation-menu",
+        "views": 62,
+        "engagementRate": null,
+        "openIssues": 0
       }
     ]
   },
   "issues": [
     {
-      "type": "alt",
-      "scope": "12 images on 5 pages, up from 9.",
-      "reason": "Includes 2 of your 5 busiest pages.",
+      "type": "broken",
+      "scope": "48 broken links on 39 pages.",
+      "reason": "None are on your 5 busiest pages.",
       "rank": 1,
       "siteimproveUrl": null,
-      "source": "sample",
+      "source": "live",
       "pages": [
         {
-          "path": "/add-a-page",
-          "views": 1240,
-          "count": 3
-        },
-        {
-          "path": "/accessibility-basics",
-          "views": 760,
-          "count": 2
-        },
-        {
-          "path": "/getting-started",
-          "views": 410,
-          "count": 3
-        },
-        {
-          "path": "/layout-tips",
-          "views": 220,
-          "count": 2
-        },
-        {
-          "path": "/media-library",
-          "views": 140,
-          "count": 2
-        }
-      ]
-    },
-    {
-      "type": "broken",
-      "scope": "14 broken links on 9 pages, up from 11.",
-      "reason": "3 are on the Contact and support page.",
-      "rank": 2,
-      "siteimproveUrl": null,
-      "source": "sample",
-      "pages": [
-        {
-          "path": "/contact-and-support",
-          "views": 540,
-          "count": 3
-        },
-        {
-          "path": "/people-profiles",
-          "views": 300,
-          "count": 2
-        },
-        {
-          "path": "/getting-started",
-          "views": 410,
-          "count": 1
-        },
-        {
-          "path": "/faq",
-          "views": 330,
-          "count": 1
-        },
-        {
-          "path": "/training-schedule",
-          "views": 190,
-          "count": 1
-        },
-        {
-          "path": "/events/calendar-feed",
-          "views": 58,
-          "count": 2
-        },
-        {
-          "path": "/news/tags",
-          "views": 66,
-          "count": 1
-        },
-        {
-          "path": "/policies/site-retirement",
-          "views": 33,
-          "count": 1
-        },
-        {
-          "path": "/archive/2023",
-          "views": 40,
-          "count": 2
-        }
-      ]
-    },
-    {
-      "type": "stale",
-      "scope": "38 of 352 pages, up 5.",
-      "reason": "Contact and support is your 5th busiest page and was last updated 14 months ago.",
-      "rank": 3,
-      "siteimproveUrl": null,
-      "source": "sample",
-      "pages": [
-        {
-          "path": "/contact-and-support",
-          "views": 540,
-          "monthsSinceUpdate": 14
-        },
-        {
-          "path": "/training-schedule",
-          "views": 190,
-          "monthsSinceUpdate": 13
-        },
-        {
-          "path": "/getting-started/request-a-site",
-          "views": 180,
-          "monthsSinceUpdate": 15
-        },
-        {
-          "path": "/getting-started/site-owner-roles",
-          "views": 150,
-          "monthsSinceUpdate": 16
-        },
-        {
-          "path": "/layout-tips/columns",
-          "views": 120,
-          "monthsSinceUpdate": 13
-        },
-        {
-          "path": "/layout-tips/spacing",
-          "views": 110,
-          "monthsSinceUpdate": 18
-        },
-        {
-          "path": "/media-library/upload-files",
-          "views": 105,
-          "monthsSinceUpdate": 14
-        },
-        {
-          "path": "/media-library/image-sizes",
-          "views": 98,
-          "monthsSinceUpdate": 20
-        },
-        {
-          "path": "/menus/secondary-menu",
-          "views": 92,
-          "monthsSinceUpdate": 13
-        },
-        {
-          "path": "/menus/footer-links",
-          "views": 88,
-          "monthsSinceUpdate": 17
-        },
-        {
-          "path": "/people/profile-fields",
-          "views": 80,
-          "monthsSinceUpdate": 22
-        },
-        {
-          "path": "/people/import-profiles",
-          "views": 74,
-          "monthsSinceUpdate": 15
-        },
-        {
-          "path": "/news/news-listing",
-          "views": 70,
-          "monthsSinceUpdate": 13
-        },
-        {
-          "path": "/news/tags",
-          "views": 66,
-          "monthsSinceUpdate": 19
-        },
-        {
-          "path": "/release-notes-2024",
-          "views": 60,
-          "monthsSinceUpdate": 23
-        },
-        {
-          "path": "/events/event-series",
-          "views": 61,
-          "monthsSinceUpdate": 14
-        },
-        {
-          "path": "/events/calendar-feed",
-          "views": 58,
-          "monthsSinceUpdate": 25
-        },
-        {
-          "path": "/forms/webforms",
-          "views": 55,
-          "monthsSinceUpdate": 13
-        },
-        {
-          "path": "/forms/spam-protection",
-          "views": 51,
-          "monthsSinceUpdate": 16
-        },
-        {
-          "path": "/accessibility/headings",
-          "views": 49,
-          "monthsSinceUpdate": 18
-        },
-        {
-          "path": "/accessibility/link-text",
+          "path": "/build/media-library/alternative-text-alt-text-images-and-other-media",
           "views": 47,
-          "monthsSinceUpdate": 14
+          "count": 1
         },
         {
-          "path": "/accessibility/color-contrast",
-          "views": 45,
-          "monthsSinceUpdate": 21
+          "path": "/get-started/site-settings/enter-site-ownership-information",
+          "views": 27,
+          "count": 1
         },
         {
-          "path": "/seo/search-descriptions",
-          "views": 42,
-          "monthsSinceUpdate": 13
+          "path": "/about-stanford-sites/personal-sites-faculty-stanford-sites",
+          "views": 25,
+          "count": 1
         },
         {
-          "path": "/seo/page-titles",
-          "views": 40,
-          "monthsSinceUpdate": 15
+          "path": "/build/create-and-edit-pages/text-editing-basics/create-links",
+          "views": 23,
+          "count": 1
         },
         {
-          "path": "/analytics/google-analytics",
-          "views": 38,
-          "monthsSinceUpdate": 27
+          "path": "/release-notes/stanford-sites-roadmap",
+          "views": 23,
+          "count": 2
         },
         {
-          "path": "/analytics/siteimprove",
-          "views": 36,
-          "monthsSinceUpdate": 14
+          "path": "/build/create-and-edit-pages/text-editing-basics/create-links/create-buttons-and-action-links",
+          "views": 22,
+          "count": 2
         },
         {
-          "path": "/policies/site-retirement",
-          "views": 33,
-          "monthsSinceUpdate": 30
+          "path": "/build/paragraphs/image-gallery-paragraph",
+          "views": 20,
+          "count": 1
         },
         {
-          "path": "/policies/content-ownership",
-          "views": 31,
-          "monthsSinceUpdate": 19
+          "path": "/support/accessibility-support",
+          "views": 16,
+          "count": 3
         },
         {
-          "path": "/policies/accessibility-statement",
-          "views": 29,
-          "monthsSinceUpdate": 13
-        },
-        {
-          "path": "/archive/2023/launch-notes",
-          "views": 24,
-          "monthsSinceUpdate": 24
-        },
-        {
-          "path": "/archive/2023/survey",
-          "views": 21,
-          "monthsSinceUpdate": 26
-        },
-        {
-          "path": "/archive/2022/training",
-          "views": 18,
-          "monthsSinceUpdate": 34
-        },
-        {
-          "path": "/archive/2022/office-hours",
+          "path": "/build/publications-content-type/publication-taxonomy",
           "views": 15,
-          "monthsSinceUpdate": 35
+          "count": 1
         },
         {
-          "path": "/faq/billing",
+          "path": "/build/lists-and-filtered-lists/filtered-lists-paragraph/example-filtered-list-opportunities-default",
+          "views": 15,
+          "count": 1
+        },
+        {
+          "path": "/build/lists-and-filtered-lists/filtered-lists-paragraph/example-filtered-list-opportunities-card",
+          "views": 15,
+          "count": 1
+        },
+        {
+          "path": "/support/resources-digital-communicators",
+          "views": 15,
+          "count": 1
+        },
+        {
+          "path": "/build-and-design/site-organization-menus/manage-site-search/add-metadata-basic-page",
+          "views": 15,
+          "count": 1
+        },
+        {
+          "path": "/build/event-content-type/import-events-stanford-events-calendar",
+          "views": 15,
+          "count": 2
+        },
+        {
+          "path": "/build/create-and-edit-pages/basic-page-content-type/create-list-basic-pages-basic-page-type",
           "views": 14,
-          "monthsSinceUpdate": 17
+          "count": 1
         },
         {
-          "path": "/faq/domains",
-          "views": 12,
-          "monthsSinceUpdate": 13
+          "path": "/build/event-content-type/event-series",
+          "views": 14,
+          "count": 1
         },
         {
-          "path": "/faq/hosting",
-          "views": 11,
-          "monthsSinceUpdate": 20
+          "path": "/support/accessibility-support/accessibility-testing",
+          "views": 13,
+          "count": 1
         },
         {
-          "path": "/help/office-hours",
-          "views": 9,
-          "monthsSinceUpdate": 15
+          "path": "/manage-your-site/domains-and-urls/how-bulk-upload-redirects",
+          "views": 13,
+          "count": 1
         },
         {
-          "path": "/help/workshops",
+          "path": "/build/taxonomy/shared-tags",
+          "views": 13,
+          "count": 1
+        },
+        {
+          "path": "/build/taxonomy/courses-taxonomy",
+          "views": 13,
+          "count": 1
+        },
+        {
+          "path": "/build/lists-and-filtered-lists/lists-paragraph/lists-paragraph-examples",
+          "views": 8,
+          "count": 1
+        },
+        {
+          "path": "/people/example-person",
+          "views": 8,
+          "count": 1
+        },
+        {
+          "path": "/publications/ill-winds",
           "views": 7,
-          "monthsSinceUpdate": 28
-        }
-      ]
-    },
-    {
-      "type": "linktext",
-      "scope": "28 links on 11 pages, down from 30.",
-      "reason": "Mostly “click here.”",
-      "rank": 4,
-      "siteimproveUrl": null,
-      "source": "sample",
-      "pages": [
-        {
-          "path": "/add-a-page",
-          "views": 1240,
-          "count": 6
+          "count": 2
         },
         {
-          "path": "/update-a-menu",
-          "views": 870,
+          "path": "/news/stanford-sites-v23-released-12092021",
+          "views": 7,
+          "count": 1
+        },
+        {
+          "path": "/people/sara-worrell-berg",
+          "views": 7,
+          "count": 1
+        },
+        {
+          "path": "/news/site-ownership-information-required-stanford-sites",
+          "views": 4,
+          "count": 1
+        },
+        {
+          "path": "/publications/thesis-example-publication",
+          "views": 4,
+          "count": 1
+        },
+        {
+          "path": "/publications/journal-article-example-publication",
+          "views": 4,
+          "count": 1
+        },
+        {
+          "path": "/about-stanford-sites/stanford-sites-policies/university-policies-related-website-ownership/digital",
+          "views": 3,
+          "count": 1
+        },
+        {
+          "path": "/news/stanford-sites-v22-released-10212021",
+          "views": 2,
           "count": 4
         },
         {
-          "path": "/accessibility-basics",
-          "views": 760,
-          "count": 2
-        },
-        {
-          "path": "/contact-and-support",
-          "views": 540,
-          "count": 1
-        },
-        {
-          "path": "/getting-started",
-          "views": 410,
+          "path": "/news/stanford-sites-v201-released-03182021",
+          "views": 0,
           "count": 3
         },
         {
-          "path": "/faq",
-          "views": 330,
-          "count": 5
+          "path": "/news/stanford-sites-v200-released-02182021",
+          "views": 0,
+          "count": 3
         },
         {
-          "path": "/people-profiles",
-          "views": 300,
+          "path": "/news/stanford-sites-v210-released-04222021",
+          "views": 0,
           "count": 1
         },
         {
-          "path": "/layout-tips",
-          "views": 220,
-          "count": 2
+          "path": "/news/stanford-sites-v140-released-09142020",
+          "views": 0,
+          "count": 4
         },
         {
-          "path": "/media-library",
-          "views": 140,
-          "count": 2
-        },
-        {
-          "path": "/news/news-listing",
-          "views": 70,
+          "path": "/news/stanford-sites-v132-released-08132020",
+          "views": 0,
           "count": 1
         },
         {
-          "path": "/events/event-series",
-          "views": 61,
+          "path": "/news/stanford-sites-v110-released-04232020",
+          "views": 0,
+          "count": 1
+        },
+        {
+          "path": "/news/stanford-sites-v120-released-05212020",
+          "views": 0,
+          "count": 2
+        },
+        {
+          "path": "/news/stanford-sites-v130-released-06182020",
+          "views": 0,
+          "count": 2
+        },
+        {
+          "path": "/about-stanford-sites/stanford-sites-design/text-typography-choices-stanford-sites",
+          "views": 0,
           "count": 1
         }
       ]
     },
     {
-      "type": "pdf",
-      "scope": "5 of your 7 PDFs.",
-      "reason": "No change since last check.",
-      "rank": 5,
+      "type": "a11y-h1-missing",
+      "scope": "Found 18 times on 18 pages.",
+      "reason": "None are on your 5 busiest pages.",
+      "rank": 2,
       "siteimproveUrl": null,
-      "source": "sample",
+      "source": "live",
       "pages": [
         {
-          "path": "/files/editor-checklist.pdf",
-          "views": 95,
+          "path": "/about-stanford-sites/stanford-sites-policies",
+          "views": 23,
           "count": 1
         },
         {
-          "path": "/files/style-guide.pdf",
-          "views": 80,
+          "path": "/about-stanford-sites/stanford-sites-policies/embeddable-content-policy",
+          "views": 13,
           "count": 1
         },
         {
-          "path": "/files/training-handout.pdf",
-          "views": 40,
+          "path": "/about-stanford-sites/stanford-sites-policies/university-policies-related-website-ownership",
+          "views": 11,
           "count": 1
         },
         {
-          "path": "/files/accessibility-checklist.pdf",
-          "views": 32,
+          "path": "/about-stanford-sites/stanford-sites-policies/automated-scanning-tools",
+          "views": 11,
           "count": 1
         },
         {
-          "path": "/files/launch-checklist.pdf",
-          "views": 18,
+          "path": "/about-stanford-sites/stanford-sites-policies/personal-sites-stanford-sites",
+          "views": 9,
+          "count": 1
+        },
+        {
+          "path": "/about-stanford-sites/stanford-sites-policies/stanford-sites-renewal-and-retirement/site-retirement",
+          "views": 9,
+          "count": 1
+        },
+        {
+          "path": "/about-stanford-sites/stanford-sites-policies/stanford-sites-renewal-and-retirement",
+          "views": 9,
+          "count": 1
+        },
+        {
+          "path": "/about-stanford-sites/stanford-sites-policies/security-standards",
+          "views": 8,
+          "count": 1
+        },
+        {
+          "path": "/about-stanford-sites/stanford-sites-policies/personal-sites-stanford-sites/themes-personal-sites",
+          "views": 5,
+          "count": 1
+        },
+        {
+          "path": "/about-stanford-sites/stanford-sites-policies/university-policies-related-website-ownership/social",
+          "views": 5,
+          "count": 1
+        },
+        {
+          "path": "/about-stanford-sites/stanford-sites-policies/university-policies-related-website-ownership/online",
+          "views": 5,
+          "count": 1
+        },
+        {
+          "path": "/about-stanford-sites/stanford-sites-policies/university-policies-related-website-ownership-0",
+          "views": 5,
+          "count": 1
+        },
+        {
+          "path": "/about-stanford-sites/stanford-sites-policies/university-policies-related-website-ownership-1",
+          "views": 5,
+          "count": 1
+        },
+        {
+          "path": "/about-stanford-sites/stanford-sites-policies/university-policies-related-website-ownership-3",
+          "views": 5,
+          "count": 1
+        },
+        {
+          "path": "/about-stanford-sites/stanford-sites-policies/stanford-sites-renewal-and-retirement/annual-renewal",
+          "views": 4,
+          "count": 1
+        },
+        {
+          "path": "/about-stanford-sites/stanford-sites-policies/university-policies-related-website-ownership/stanford",
+          "views": 3,
+          "count": 1
+        },
+        {
+          "path": "/about-stanford-sites/stanford-sites-policies/university-policies-related-website-ownership/terms",
+          "views": 3,
+          "count": 1
+        },
+        {
+          "path": "/about-stanford-sites/stanford-sites-policies/university-policies-related-website-ownership/digital",
+          "views": 3,
           "count": 1
         }
       ]
     },
     {
-      "type": "contrast",
-      "scope": "6 places.",
-      "reason": "Comes from the site template.",
+      "type": "a11y-heading-order",
+      "scope": "Found 11 times on 11 pages.",
+      "reason": "None are on your 5 busiest pages.",
+      "rank": 3,
+      "siteimproveUrl": null,
+      "source": "live",
+      "pages": [
+        {
+          "path": "/news/release-notes/7x",
+          "views": 14,
+          "count": 1
+        },
+        {
+          "path": "/events/stanford-sites-onboarding-sessions",
+          "views": 14,
+          "count": 1
+        },
+        {
+          "path": "/news/accessibility",
+          "views": 12,
+          "count": 1
+        },
+        {
+          "path": "/news/release-notes/6x",
+          "views": 11,
+          "count": 1
+        },
+        {
+          "path": "/news/release-notes/5x",
+          "views": 11,
+          "count": 1
+        },
+        {
+          "path": "/news/stanford-sites-news",
+          "views": 10,
+          "count": 1
+        },
+        {
+          "path": "/news/release-notes/4x",
+          "views": 10,
+          "count": 1
+        },
+        {
+          "path": "/news/user-experience",
+          "views": 6,
+          "count": 1
+        },
+        {
+          "path": "/news/design",
+          "views": 6,
+          "count": 1
+        },
+        {
+          "path": "/news/sws-service-news",
+          "views": 6,
+          "count": 1
+        },
+        {
+          "path": "/news/related-news",
+          "views": 6,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "type": "a11y-content-after-heading",
+      "scope": "Found 28 times on 28 pages.",
+      "reason": "None are on your 5 busiest pages.",
+      "rank": 4,
+      "siteimproveUrl": null,
+      "source": "live",
+      "pages": [
+        {
+          "path": "/news/stanford-sites-v510-released-1272023",
+          "views": 12,
+          "count": 1
+        },
+        {
+          "path": "/news/stanford-sites-v250-released-5182022",
+          "views": 10,
+          "count": 1
+        },
+        {
+          "path": "/news/stanford-sites-v310-released-10272022",
+          "views": 10,
+          "count": 1
+        },
+        {
+          "path": "/news/stanford-sites-v251-released-7212022",
+          "views": 10,
+          "count": 1
+        },
+        {
+          "path": "/news/stanford-sites-v311-released-1212022",
+          "views": 10,
+          "count": 1
+        },
+        {
+          "path": "/news/stanford-sites-v240-released-3312022",
+          "views": 10,
+          "count": 1
+        },
+        {
+          "path": "/news/stanford-sites-v32-released-6222023",
+          "views": 9,
+          "count": 1
+        },
+        {
+          "path": "/news/stanford-sites-v300-released-8242022",
+          "views": 9,
+          "count": 1
+        },
+        {
+          "path": "/news/stanford-sites-v231-released-2102022",
+          "views": 5,
+          "count": 1
+        },
+        {
+          "path": "/news/stanford-sites-v23-released-12092021",
+          "views": 0,
+          "count": 1
+        },
+        {
+          "path": "/news/stanford-sites-v22-released-10212021",
+          "views": 0,
+          "count": 1
+        },
+        {
+          "path": "/news/stanford-sites-v132-released-08132020",
+          "views": 0,
+          "count": 1
+        },
+        {
+          "path": "/news/stanford-sites-v131-released-07162020",
+          "views": 0,
+          "count": 1
+        },
+        {
+          "path": "/news/stanford-sites-v130-released-06182020",
+          "views": 0,
+          "count": 1
+        },
+        {
+          "path": "/news/stanford-sites-v120-released-05212020",
+          "views": 0,
+          "count": 1
+        },
+        {
+          "path": "/news/stanford-sites-v110-released-04232020",
+          "views": 0,
+          "count": 1
+        },
+        {
+          "path": "/news/stanford-sites-v140-released-09142020",
+          "views": 0,
+          "count": 1
+        },
+        {
+          "path": "/news/stanford-sites-v141-released-10082020",
+          "views": 0,
+          "count": 1
+        },
+        {
+          "path": "/news/stanford-sites-v150-released-11182020",
+          "views": 0,
+          "count": 1
+        },
+        {
+          "path": "/news/stanford-sites-v151-released-12102020",
+          "views": 0,
+          "count": 1
+        },
+        {
+          "path": "/news/stanford-sites-v200-released-02182021",
+          "views": 0,
+          "count": 1
+        },
+        {
+          "path": "/news/stanford-sites-v201-released-03182021",
+          "views": 0,
+          "count": 1
+        },
+        {
+          "path": "/news/stanford-sites-v210-released-04222021",
+          "views": 0,
+          "count": 1
+        },
+        {
+          "path": "/news/stanford-sites-v211-released-05202021",
+          "views": 0,
+          "count": 1
+        },
+        {
+          "path": "/news/stanford-sites-v101-released-03272020",
+          "views": 0,
+          "count": 1
+        },
+        {
+          "path": "/news/stanford-sites-v213-release-07222021",
+          "views": 0,
+          "count": 1
+        },
+        {
+          "path": "/news/stanford-sites-v214-released-09162021",
+          "views": 0,
+          "count": 1
+        },
+        {
+          "path": "/news/stanford-sites-v212-released-06242021",
+          "views": 0,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "type": "a11y-target-size",
+      "scope": "Found 29 times on 8 pages.",
+      "reason": "None are on your 5 busiest pages.",
+      "rank": 5,
+      "siteimproveUrl": null,
+      "source": "live",
+      "pages": [
+        {
+          "path": "/events/stanford-sites-onboarding-sessions",
+          "views": 14,
+          "count": 1
+        },
+        {
+          "path": "/events/past",
+          "views": 6,
+          "count": 25
+        },
+        {
+          "path": "/events/example-event",
+          "views": 3,
+          "count": 1
+        },
+        {
+          "path": "/events/introduction-stanford-sites-july-2025",
+          "views": 0,
+          "count": 1
+        },
+        {
+          "path": "/events/solar-eclipse",
+          "views": 0,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "type": "broken-template",
+      "scope": "6 links in the shared Stanford header or footer are reported broken on every page.",
+      "reason": "They come from the site template.",
       "rank": null,
       "siteimproveUrl": null,
-      "source": "sample",
+      "source": "live",
       "pages": [
         {
           "path": "/",
-          "views": 1980,
+          "views": 506,
+          "count": 6
+        },
+        {
+          "path": "/build/working-text-editor/create-links/create-jump-links-using-id-tags",
+          "views": 140,
+          "count": 6
+        },
+        {
+          "path": "/support/launch-your-site",
+          "views": 84,
+          "count": 6
+        },
+        {
+          "path": "/build/stanford-only-sites",
+          "views": 75,
+          "count": 6
+        },
+        {
+          "path": "/manage-your-site/menus-other-sitewide-features/main-navigation-menu",
+          "views": 62,
+          "count": 6
+        }
+      ]
+    },
+    {
+      "type": "a11y-target-size-enhanced",
+      "scope": "Found 11,893 times on 351 pages.",
+      "reason": "It’s on nearly every page, so it comes from the site template.",
+      "rank": null,
+      "siteimproveUrl": null,
+      "source": "live",
+      "pages": [
+        {
+          "path": "/",
+          "views": 506,
+          "count": 33
+        },
+        {
+          "path": "/build/working-text-editor/create-links/create-jump-links-using-id-tags",
+          "views": 140,
+          "count": 47
+        },
+        {
+          "path": "/support/launch-your-site",
+          "views": 84,
+          "count": 31
+        },
+        {
+          "path": "/manage-your-site/menus-other-sitewide-features/main-navigation-menu",
+          "views": 62,
+          "count": 31
+        },
+        {
+          "path": "/build",
+          "views": 56,
+          "count": 29
+        },
+        {
+          "path": "/manage-your-site",
+          "views": 53,
+          "count": 27
+        },
+        {
+          "path": "/support",
+          "views": 52,
+          "count": 28
+        },
+        {
+          "path": "/manage-your-site/user-accounts-and-roles/manage-user-accounts-and-permissions",
+          "views": 50,
+          "count": 27
+        },
+        {
+          "path": "/build/media-library/alternative-text-alt-text-images-and-other-media",
+          "views": 47,
+          "count": 35
+        },
+        {
+          "path": "/build/create-and-edit-pages/basic-page-content-type",
+          "views": 47,
+          "count": 35
+        },
+        {
+          "path": "/tour/site-organization-menus/branding-and-logo-lockup-options",
+          "views": 46,
+          "count": 32
+        },
+        {
+          "path": "/support/attend-office-hours",
+          "views": 45,
+          "count": 27
+        },
+        {
+          "path": "/release-notes",
+          "views": 43,
+          "count": 35
+        },
+        {
+          "path": "/manage-your-site/find-manage-site-content",
+          "views": 42,
+          "count": 32
+        },
+        {
+          "path": "/build/lists-and-filtered-lists/lists-paragraph",
+          "views": 41,
+          "count": 35
+        },
+        {
+          "path": "/build/create-and-edit-pages/add-anchor-navigation",
+          "views": 39,
+          "count": 33
+        },
+        {
+          "path": "/build/best-practices/write-web",
+          "views": 38,
+          "count": 43
+        },
+        {
+          "path": "/build/media-library/embeddable-media",
+          "views": 38,
+          "count": 36
+        },
+        {
+          "path": "/build/media-library/stanford-digital-repository",
+          "views": 37,
+          "count": 32
+        },
+        {
+          "path": "/build/create-and-edit-web-pages",
+          "views": 37,
+          "count": 32
+        }
+      ]
+    },
+    {
+      "type": "a11y-line-height",
+      "scope": "Found 872 times on 351 pages.",
+      "reason": "It’s on nearly every page, so it comes from the site template.",
+      "rank": null,
+      "siteimproveUrl": null,
+      "source": "live",
+      "pages": [
+        {
+          "path": "/",
+          "views": 506,
+          "count": 4
+        },
+        {
+          "path": "/build/working-text-editor/create-links/create-jump-links-using-id-tags",
+          "views": 140,
           "count": 2
         },
         {
-          "path": "/add-a-page",
-          "views": 1240,
+          "path": "/support/launch-your-site",
+          "views": 84,
+          "count": 3
+        },
+        {
+          "path": "/manage-your-site/menus-other-sitewide-features/main-navigation-menu",
+          "views": 62,
+          "count": 2
+        },
+        {
+          "path": "/build",
+          "views": 56,
+          "count": 2
+        },
+        {
+          "path": "/manage-your-site",
+          "views": 53,
+          "count": 2
+        },
+        {
+          "path": "/support",
+          "views": 52,
+          "count": 5
+        },
+        {
+          "path": "/manage-your-site/user-accounts-and-roles/manage-user-accounts-and-permissions",
+          "views": 50,
+          "count": 2
+        },
+        {
+          "path": "/build/media-library/alternative-text-alt-text-images-and-other-media",
+          "views": 47,
           "count": 4
+        },
+        {
+          "path": "/build/create-and-edit-pages/basic-page-content-type",
+          "views": 47,
+          "count": 2
+        },
+        {
+          "path": "/tour/site-organization-menus/branding-and-logo-lockup-options",
+          "views": 46,
+          "count": 2
+        },
+        {
+          "path": "/support/attend-office-hours",
+          "views": 45,
+          "count": 2
+        },
+        {
+          "path": "/release-notes",
+          "views": 43,
+          "count": 2
+        },
+        {
+          "path": "/manage-your-site/find-manage-site-content",
+          "views": 42,
+          "count": 2
+        },
+        {
+          "path": "/build/lists-and-filtered-lists/lists-paragraph",
+          "views": 41,
+          "count": 4
+        },
+        {
+          "path": "/build/create-and-edit-pages/add-anchor-navigation",
+          "views": 39,
+          "count": 2
+        },
+        {
+          "path": "/build/media-library/embeddable-media",
+          "views": 38,
+          "count": 4
+        },
+        {
+          "path": "/build/best-practices/write-web",
+          "views": 38,
+          "count": 4
+        },
+        {
+          "path": "/build/media-library/stanford-digital-repository",
+          "views": 37,
+          "count": 2
+        },
+        {
+          "path": "/build/create-and-edit-web-pages",
+          "views": 37,
+          "count": 2
+        }
+      ]
+    },
+    {
+      "type": "a11y-contrast-enhanced",
+      "scope": "Found 3,245 times on 351 pages.",
+      "reason": "It’s on nearly every page, so it comes from the site template.",
+      "rank": null,
+      "siteimproveUrl": null,
+      "source": "live",
+      "pages": [
+        {
+          "path": "/",
+          "views": 506,
+          "count": 12
+        },
+        {
+          "path": "/build/working-text-editor/create-links/create-jump-links-using-id-tags",
+          "views": 140,
+          "count": 21
+        },
+        {
+          "path": "/support/launch-your-site",
+          "views": 84,
+          "count": 20
+        },
+        {
+          "path": "/manage-your-site/menus-other-sitewide-features/main-navigation-menu",
+          "views": 62,
+          "count": 6
+        },
+        {
+          "path": "/build",
+          "views": 56,
+          "count": 8
+        },
+        {
+          "path": "/manage-your-site",
+          "views": 53,
+          "count": 5
+        },
+        {
+          "path": "/support",
+          "views": 52,
+          "count": 9
+        },
+        {
+          "path": "/manage-your-site/user-accounts-and-roles/manage-user-accounts-and-permissions",
+          "views": 50,
+          "count": 10
+        },
+        {
+          "path": "/build/media-library/alternative-text-alt-text-images-and-other-media",
+          "views": 47,
+          "count": 23
+        },
+        {
+          "path": "/build/create-and-edit-pages/basic-page-content-type",
+          "views": 47,
+          "count": 10
+        },
+        {
+          "path": "/tour/site-organization-menus/branding-and-logo-lockup-options",
+          "views": 46,
+          "count": 10
+        },
+        {
+          "path": "/support/attend-office-hours",
+          "views": 45,
+          "count": 10
+        },
+        {
+          "path": "/release-notes",
+          "views": 43,
+          "count": 8
+        },
+        {
+          "path": "/manage-your-site/find-manage-site-content",
+          "views": 42,
+          "count": 7
+        },
+        {
+          "path": "/build/lists-and-filtered-lists/lists-paragraph",
+          "views": 41,
+          "count": 12
+        },
+        {
+          "path": "/build/create-and-edit-pages/add-anchor-navigation",
+          "views": 39,
+          "count": 8
+        },
+        {
+          "path": "/build/best-practices/write-web",
+          "views": 38,
+          "count": 31
+        },
+        {
+          "path": "/build/media-library/embeddable-media",
+          "views": 38,
+          "count": 22
+        },
+        {
+          "path": "/build/media-library/stanford-digital-repository",
+          "views": 37,
+          "count": 9
+        },
+        {
+          "path": "/build/create-and-edit-web-pages",
+          "views": 37,
+          "count": 5
         }
       ]
     }

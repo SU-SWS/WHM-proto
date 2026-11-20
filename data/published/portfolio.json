@@ -6,14 +6,14 @@
       "key": "sitesuserguide",
       "name": "Stanford Sites user guide",
       "url": "https://sitesuserguide.stanford.edu",
-      "state": "attention",
-      "verdict": "Needs attention: accessibility has slipped each month, and issues sit on your busiest pages.",
-      "siteTargetScore": 98.3,
-      "accessibilityScore": 92.8,
-      "brokenLinks": 14,
+      "state": "ok",
+      "verdict": "In good shape, with 5 fixes worth making.",
+      "siteTargetScore": 98.38,
+      "accessibilityScore": 93,
+      "brokenLinks": 54,
       "openOwnerIssues": 5,
-      "checkedAt": "2026-11-10",
-      "source": "sample"
+      "checkedAt": "2026-11-16",
+      "source": "live"
     },
     {
       "key": "webservices",
