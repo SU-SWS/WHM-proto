@@ -9,11 +9,22 @@ You need:
 
 ## 1. Create the GitHub token
 
-1. In GitHub, open **Settings → Developer settings → Personal access tokens → Fine-grained tokens → Generate new token**.
-2. **Resource owner:** SU-SWS. **Repository access:** Only select repositories → **WHM-proto**.
-3. **Repository permissions:** **Contents: Read and write**. Leave everything else as No access.
-4. **Expiration:** pick a date after the fair, such as 90 days.
-5. Generate it and copy it. If the SU-SWS organization requires approval for fine-grained tokens, an org owner has to approve it before it works.
+1. In GitHub, select your **profile picture** (top right), then **Settings**.
+2. At the bottom of the left sidebar, select **Developer settings**.
+3. Select **Personal access tokens → Fine-grained tokens → Generate new token**.
+4. Fill in the form:
+   - **Token name:** `WHM GA4 export`
+   - **Description:** `Apps Script commits data/ga4/ to WHM-proto`
+   - **Resource owner:** **SU-SWS**. A token owned by your personal account can't write to the org's repo.
+   - **Expiration:** a custom date after the fair, such as Feb 28, 2027.
+   - **Repository access:** **Only select repositories**, then **SU-SWS/WHM-proto**.
+   - **Permissions → Repository permissions:** set **Contents** to **Read and write**. GitHub adds **Metadata: Read-only** by itself; that's required. Leave everything else at **No access**.
+5. Select **Generate token** (it may say **Generate token and request access** if the org requires approval).
+6. **Copy the token now.** It starts with `github_pat_`, and GitHub shows it only once. It goes only into the Apps Script's Script properties (step 2.4): never into the repo, email or chat.
+
+If **SU-SWS isn't in the Resource owner list**, the org has turned off fine-grained tokens; an org owner can turn them on under the org's **Settings → Personal access tokens**. If the token shows as **pending**, an org owner approves it under the org's **Settings → Personal access tokens → Pending requests**; until then commits fail with HTTP 403. Don't use a classic token instead: it can write to every repo you have access to.
+
+When the token nears expiry, GitHub emails you. Generate a new one the same way and replace `GITHUB_TOKEN` in Script properties. If it's ever exposed, delete it on the same GitHub page and make a new one.
 
 ## 2. Create the Apps Script project
 
