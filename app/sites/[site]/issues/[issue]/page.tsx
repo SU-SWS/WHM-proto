@@ -33,6 +33,8 @@ export default async function IssuePage({ params }: PageProps<"/sites/[site]/iss
   // An owner-type issue moved to SWS because it's on nearly every page (template).
   const fromTemplate = issue.fixer === "sws" && type.fixer === "owner";
   const isStale = issue.pages.some((p) => "monthsSinceUpdate" in p);
+  // Broken-link issues from live data carry the broken addresses on each page.
+  const hasLinks = issue.pages.some((p) => "links" in p && (p.links?.length ?? 0) > 0);
 
   return (
     <>
@@ -82,6 +84,12 @@ export default async function IssuePage({ params }: PageProps<"/sites/[site]/iss
       </div>
 
       <h2 className="section-heading">Where it is</h2>
+      {hasLinks && (
+        <p className="mb-12 max-w-[62ch]">
+          Each page shows the broken addresses it links to. Find each link on the page by its address, then update it or
+          remove it.
+        </p>
+      )}
       <TableWrap label="Pages with this issue">
         <table className="data-table">
           <caption className="sr-only">Pages with this issue</caption>
@@ -89,13 +97,25 @@ export default async function IssuePage({ params }: PageProps<"/sites/[site]/iss
             <tr>
               <th scope="col">Page</th>
               <th scope="col" className="num">Page views, last 30 days</th>
-              <th scope="col" className="num">{isStale ? "Last updated" : "Times found"}</th>
+              <th scope="col" className="num">{isStale ? "Last updated" : hasLinks ? "Broken links" : "Times found"}</th>
             </tr>
           </thead>
           <tbody>
             {issue.pages.map((p) => (
               <tr key={p.path}>
-                <td>{displayPath(p.path)}</td>
+                <td>
+                  {displayPath(p.path)}
+                  {"links" in p && p.links && p.links.length > 0 && (
+                    <ul className="mb-0 mt-6 list-none p-0 text-16">
+                      {p.links.map((l) => (
+                        <li key={l.url} className="mb-4 text-black-80">
+                          <span className="break-all">{l.url}</span>
+                          {l.status !== null && <span className="ml-6 whitespace-nowrap">({statusText(l.status)})</span>}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </td>
                 <td className="num">{formatNumber(p.views)}</td>
                 <td className="num">{third(p)}</td>
               </tr>
@@ -124,6 +144,15 @@ export default async function IssuePage({ params }: PageProps<"/sites/[site]/iss
       </p>
     </>
   );
+}
+
+/** HTTP status in words: 404 → "not found". */
+function statusText(status: number): string {
+  if (status === 404) return "not found";
+  if (status === 410) return "removed";
+  if (status === 401 || status === 403) return "access denied";
+  if (status >= 500) return `server error ${status}`;
+  return `error ${status}`;
 }
 
 function third(p: IssuePage): string {

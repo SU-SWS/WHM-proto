@@ -41,6 +41,7 @@ const routes = [
     const items = pick(id, 1 + (Number(id) % 3)).map((p) => ({ ...p, broken_links: 1 }));
     return { items, total_items: items.length, total_pages: 1, links: {} };
   }],
+  [/\/quality_assurance\/links\/broken_links\?/, () => load("probe-quality_assurance-links-broken_links.json")],
   [/\/a11y\/overview\/site_target\/history/, () => load("probe2-site_target-history-page_size_500.json")],
   [/\/analytics\/content\/most_popular_pages/, () => load("probe2-analytics-most_popular_pages-30_days.json")],
   [/\/analytics\/overview\/history/, () => load("probe2-analytics-overview-history-since_april.json")],

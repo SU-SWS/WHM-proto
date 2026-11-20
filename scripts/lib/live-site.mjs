@@ -188,6 +188,17 @@ export async function buildLiveSite({ site, sample, previous, issueTypes, client
 
       const template = list.filter((l) => l.pages >= sitePages * TEMPLATE_SHARE);
       const owner = list.filter((l) => l.pages < sitePages * TEMPLATE_SHARE);
+      // HTTP status for each link, from the current broken-links list. Optional:
+      // the per-check list has no status, and a missing one just isn't shown.
+      const status = new Map();
+      try {
+        for (const l of await client.getAll(`${base}/quality_assurance/links/broken_links?page_size=500`)) {
+          status.set(l.id, l.http_status ?? null);
+        }
+      } catch (err) {
+        notes.push(`broken link statuses unavailable (${err.message})`);
+      }
+      const linkInfo = (l) => ({ url: l.url, status: status.get(l.id) ?? null });
       const pages = new Map();
       for (const link of owner) {
         let on;
@@ -200,8 +211,9 @@ export async function buildLiveSite({ site, sample, previous, issueTypes, client
         for (const p of on) {
           const path = normalizePath(p.url, site.url);
           if (!path) continue;
-          const entry = pages.get(path) ?? { path, views: viewsOf(path, p.page_views ?? 0), count: 0 };
+          const entry = pages.get(path) ?? { path, views: viewsOf(path, p.page_views ?? 0), count: 0, links: [] };
           entry.count++;
+          entry.links.push(linkInfo(link));
           pages.set(path, entry);
         }
       }
@@ -226,7 +238,7 @@ export async function buildLiveSite({ site, sample, previous, issueTypes, client
           rank: null,
           siteimproveUrl: null,
           source: "live",
-          pages: busiest.map((path) => ({ path, views: viewsOf(path), count: template.length })),
+          pages: busiest.map((path) => ({ path, views: viewsOf(path), count: template.length, links: template.map(linkInfo) })),
         });
       }
       return {

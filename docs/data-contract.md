@@ -90,7 +90,8 @@ interface SiteData {
     fixer?: "owner" | "sws";   // overrides the type's fixer; "sws" for issues from the template
     siteimproveUrl: string | null;
     source: Source;
-    pages: ({ path: string; views: number; count: number } |
+    pages: ({ path: string; views: number; count: number;
+              links?: { url: string; status: number | null }[] } |   // broken links: the addresses on this page
              { path: string; views: number; monthsSinceUpdate: number })[];
   }[];
   siteSearch: { source: Source; terms: { term: string; count: number }[] };   // GA4, sample until the MVP

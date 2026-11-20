@@ -73,6 +73,8 @@ export interface IssuePageCount {
   path: string;
   views: number;
   count: number;
+  /** Broken-link issues only: the broken addresses on this page, with their HTTP status if known. */
+  links?: { url: string; status: number | null }[];
 }
 
 export interface IssuePageStale {
