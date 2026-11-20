@@ -67,5 +67,4 @@ Newest decisions take priority over anything in the exported docs. Dates are 202
 
 - Whether `impmd` in Siteimprove deep links is safe to publish.
 - The verdict rules in `docs/verdict-rules.md`, including whether an accessibility score drop should also mean “needs attention.”
-- Which policy name prefixes are SWS-only.
 - What happens when a "Set aside" revisit date arrives (a Phase 1 interview question).
