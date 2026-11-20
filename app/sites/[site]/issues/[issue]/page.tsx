@@ -3,6 +3,8 @@ import { TableWrap } from "@/components/TableWrap";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { SourceNote } from "@/components/SourceNote";
+import { SiteGate } from "@/components/Viewer";
+import { Notes, ProgressPanel, TrackedTable, type TrackedPage } from "@/components/Tracking";
 import { getSite, getSiteKeys, getStatus } from "@/lib/data/load";
 import { displayPath } from "@/lib/data/paths";
 import type { IssuePage } from "@/lib/data/types";
@@ -35,9 +37,21 @@ export default async function IssuePage({ params }: PageProps<"/sites/[site]/iss
   const isStale = issue.pages.some((p) => "monthsSinceUpdate" in p);
   // Per-page reports in Siteimprove, from live data (impmd stripped on ingestion).
   const hasReports = issue.pages.some((p) => "siteimproveUrl" in p && p.siteimproveUrl);
+  const thirdHeader = isStale ? "Last updated" : issue.type === "broken" ? "Broken links" : "Times found";
+  // Owners track progress page by page (TR-1); SWS-handled issues are read-only.
+  const tracked: TrackedPage[] = issue.pages.map((p) => ({
+    path: p.path,
+    label: displayPath(p.path),
+    // Live paths are real pages on the site. Sample paths are made up, so they stay plain text.
+    href: issue.source === "live" ? new URL(p.path, site.url).href : null,
+    views: p.views,
+    third: third(p),
+    siteimproveUrl: ("siteimproveUrl" in p && p.siteimproveUrl) || null,
+  }));
+  const trackProps = { siteKey, issueType: issue.type, editorial: type.editorial, checkedAt: site.checkedAt, pages: tracked };
 
   return (
-    <>
+    <SiteGate siteKey={siteKey} siteName={site.name}>
       <p className="crumbs">
         <Link href="/">Your sites</Link> / <Link href={`/sites/${siteKey}/`}>{site.name}</Link> / {type.title}
       </p>
@@ -51,7 +65,7 @@ export default async function IssuePage({ params }: PageProps<"/sites/[site]/iss
         {owner ? <span className="tag tag-you">You can fix this</span> : <span className="tag tag-sws">SWS is handling this</span>}
       </p>
 
-      <div className={owner ? "" : "grid gap-32 lg:grid-cols-[minmax(0,3fr)_minmax(0,1fr)]"}>
+      <div className="grid gap-32 lg:grid-cols-[minmax(0,3fr)_minmax(0,1fr)]">
         <div className="max-w-[768px]">
           <h2 className="subheading">What it is</h2>
           <p>{type.what}</p>
@@ -73,14 +87,21 @@ export default async function IssuePage({ params }: PageProps<"/sites/[site]/iss
           ))}
         </div>
 
-        {!owner && (
-          <aside className="self-start rounded bg-fog-light px-18 py-16" aria-labelledby="who-fixes">
-            <h2 id="who-fixes" className="mb-6 mt-0 text-18 font-bold">
-              Your progress
-            </h2>
-            <p className="mb-0">Nothing for you to do. This item stays in the “Being handled by SWS” list until the fix ships.</p>
-          </aside>
-        )}
+        <aside className="self-start rounded bg-fog-light px-18 py-16" aria-label="Your progress and notes">
+          {owner && issue.pages.length > 0 ? (
+            <ProgressPanel {...trackProps} />
+          ) : (
+            <>
+              <h2 className="mb-6 mt-0 text-18 font-bold">Your progress</h2>
+              <p className="mb-0">
+                {owner
+                  ? "Siteimprove tracks each item for this issue. Mark them as fixed there."
+                  : "Nothing for you to do. This item stays in the “Being handled by SWS” list until the fix ships."}
+              </p>
+            </>
+          )}
+          <Notes siteKey={siteKey} issueType={issue.type} />
+        </aside>
       </div>
 
       <h2 className="section-heading">Where it is</h2>
@@ -90,6 +111,11 @@ export default async function IssuePage({ params }: PageProps<"/sites/[site]/iss
             ? "Siteimprove lists each item for this issue. Open Siteimprove to see them and fix them."
             : "It’s on nearly every page of the site, so the pages aren’t listed one by one. SWS is handling it."}
         </p>
+      ) : owner ? (
+        <>
+          <TrackedTable {...trackProps} thirdHeader={thirdHeader} viewsHeader="Page views, last 30 days" />
+          <SourceNote className="meta mt-8" provider="siteimproveAnalytics" source={site.topPages.viewsSource} date={site.checkedAt} />
+        </>
       ) : (
       <>
       <TableWrap label="Pages with this issue">
@@ -99,7 +125,7 @@ export default async function IssuePage({ params }: PageProps<"/sites/[site]/iss
             <tr>
               <th scope="col">Page</th>
               <th scope="col" className="num">Page views, last 30 days</th>
-              <th scope="col" className="num">{isStale ? "Last updated" : issue.type === "broken" ? "Broken links" : "Times found"}</th>
+              <th scope="col" className="num">{thirdHeader}</th>
             </tr>
           </thead>
           <tbody>
@@ -146,7 +172,7 @@ export default async function IssuePage({ params }: PageProps<"/sites/[site]/iss
           Back to {site.name}
         </Link>
       </p>
-    </>
+    </SiteGate>
   );
 }
 

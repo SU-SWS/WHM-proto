@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Source_Sans_3, Source_Serif_4 } from "next/font/google";
 import { MainNav } from "@/components/MainNav";
 import { StanfordLogo } from "@/components/StanfordLogo";
-import { getAllSites } from "@/lib/data/load";
+import { ADMIN, ViewerProvider, ViewingAs, type ViewerOption } from "@/components/Viewer";
+import { getAllSites, getRegistry } from "@/lib/data/load";
 import "./globals.css";
 
 // Self-hosted at build time, so pages make no requests to Google.
@@ -24,27 +25,38 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   const anyLive = getAllSites().some((s) => s.source === "live");
+  const registry = getRegistry();
+  const viewers: ViewerOption[] = [
+    ...registry.owners.map((o) => ({
+      key: o.key,
+      label: o.label,
+      sites: registry.sites.filter((s) => s.owners.includes(o.key)).map((s) => s.key),
+    })),
+    { key: ADMIN, label: "SWS administrator", sites: registry.sites.map((s) => s.key) },
+  ];
   return (
     <html lang="en" className={`${sourceSans.variable} ${sourceSerif.variable}`}>
       <body className="bg-white font-sans text-black">
-        <a href="#main-content" className="skiplink">
+        <ViewerProvider options={viewers}>
+        <a href="#main-content" className="skiplink print:hidden">
           Skip to main content
         </a>
-        <div className="bg-cardinal-red px-20 py-6 text-white">
+        <div className="bg-cardinal-red px-20 py-6 text-white print:hidden">
           <a href="https://www.stanford.edu" className="inline-block text-white hocus:text-white focus-visible:outline-white">
             <StanfordLogo />
           </a>
         </div>
-        <header className="border-b border-black-20">
+        <header className="border-b border-black-20 print:hidden">
           <div className="mx-auto flex max-w-[1152px] flex-wrap items-center gap-x-24 gap-y-12 px-20 py-14">
             <p className="m-0 mr-auto font-serif text-23 font-semibold leading-tight">
               Website Health{" "}
               <small className="ml-8 font-sans text-15 font-normal text-black-80">Stanford Web Services</small>
             </p>
             <MainNav />
+            <ViewingAs />
           </div>
         </header>
-        <aside aria-label="About this data" className="border-l-[6px] border-poppy bg-sample-tint">
+        <aside aria-label="About this data" className="border-l-[6px] border-poppy bg-sample-tint print:hidden">
           <div className="mx-auto max-w-[1152px] px-20 py-9 text-16">
             {anyLive ? (
               <>
@@ -56,17 +68,21 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
                 <strong>Demo with sample data.</strong> Numbers and issues are illustrations, not
                 measurements of these sites.
               </>
-            )}
+            )}{" "}
+            <span id="viewas-help">
+              Sign-in isn’t set up; “Viewing as” shows how each person would see only their own sites.
+            </span>
           </div>
         </aside>
         <main id="main-content" tabIndex={-1} className="page focus:outline-none">
           {children}
         </main>
-        <footer className="border-t border-black-20">
+        <footer className="border-t border-black-20 print:hidden">
           <div className="mx-auto max-w-[1152px] px-20 py-14 text-15 text-black-80">
             WHM prototype, Stanford Web Services.{anyLive ? "" : " Sample data only."}
           </div>
         </footer>
+        </ViewerProvider>
       </body>
     </html>
   );

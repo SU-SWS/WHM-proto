@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { RunStatus } from "@/components/RunStatus";
 import { TableWrap } from "@/components/TableWrap";
-import { getRegistry, getStatus } from "@/lib/data/load";
-import { ownerLabels } from "@/lib/data/view";
+import { AdminGate } from "@/components/Viewer";
+import { getAnnotations, getRegistry, getStatus } from "@/lib/data/load";
+import { getIssueType, ownerLabels } from "@/lib/data/view";
 import { hostOf } from "@/lib/format";
 
 export const metadata: Metadata = { title: "Admin" };
@@ -12,9 +13,11 @@ export const metadata: Metadata = { title: "Admin" };
 export default function AdminPage() {
   const registry = getRegistry();
   const status = getStatus();
+  const notes = getAnnotations().annotations;
+  const siteName = (key: string) => registry.sites.find((s) => s.key === key)?.name ?? key;
 
   return (
-    <>
+    <AdminGate title="Admin">
       <h1 className="eyebrow">Admin</h1>
       <p className="verdict">Register sites, start a data run, and check that it finished.</p>
       <p className="lede">
@@ -72,7 +75,39 @@ export default function AdminPage() {
           </tbody>
         </table>
       </TableWrap>
-    </>
+
+      <h2 className="section-heading">Accessibility specialist notes</h2>
+      <p className="meta mb-12">
+        From <code>data/annotations.json</code>. Notes are attached to an issue type, so they carry over from one check to
+        the next. Owners see them on the issue page (TR-4, TR-5).
+      </p>
+      <TableWrap label="Accessibility specialist notes">
+        <table className="data-table">
+          <thead>
+            <tr>
+              <th scope="col">Issue type</th>
+              <th scope="col">Applies to</th>
+              <th scope="col">Note shown to owners</th>
+              <th scope="col">Who fixes</th>
+              <th scope="col">Review</th>
+            </tr>
+          </thead>
+          <tbody>
+            {notes.map((n) => (
+              <tr key={`${n.issueType}-${n.appliesTo}`}>
+                <th scope="row" className="!bg-transparent font-normal">
+                  {getIssueType(n.issueType).title}
+                </th>
+                <td>{n.appliesTo === "all" ? "All sites" : siteName(n.appliesTo)}</td>
+                <td className="min-w-[256px]">{n.note}</td>
+                <td>{n.swsHandling ? "SWS is handling this" : "Owner fixes"}</td>
+                <td>{n.reviewedBySws ? "Reviewed" : "Draft, not yet reviewed by SWS"}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </TableWrap>
+    </AdminGate>
   );
 }
 

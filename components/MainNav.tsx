@@ -2,20 +2,23 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useViewer } from "./Viewer";
 
 // Site pages, issue pages and reports all sit under "My sites".
 const ITEMS = [
   { href: "/", label: "My sites", match: (p: string) => p === "/" || p.startsWith("/sites/") },
-  { href: "/sws/", label: "All client sites", match: (p: string) => p.startsWith("/sws") },
+  { href: "/email/", label: "Email preview", match: (p: string) => p.startsWith("/email") },
+  { href: "/sws/", label: "All client sites", match: (p: string) => p.startsWith("/sws"), adminOnly: true },
   { href: "/admin/", label: "Admin", match: (p: string) => p.startsWith("/admin") },
 ];
 
 export function MainNav() {
   const pathname = usePathname();
+  const { isAdmin } = useViewer();
   return (
     <nav aria-label="Main">
       <ul className="m-0 flex list-none flex-wrap gap-4 p-0">
-        {ITEMS.map((item) => {
+        {ITEMS.filter((item) => !("adminOnly" in item) || isAdmin).map((item) => {
           const current = item.match(pathname);
           return (
             <li key={item.href} className="mb-0">

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { SourceNote } from "@/components/SourceNote";
 import { TableWrap } from "@/components/TableWrap";
+import { AdminGate } from "@/components/Viewer";
 import { getPortfolio, getStatus } from "@/lib/data/load";
 import { byNeed, ownerLabels } from "@/lib/data/view";
 import { formatNumber, hostOf } from "@/lib/format";
@@ -17,7 +18,7 @@ export default function SwsPage() {
   const need = sites.filter((s) => s.state === "attention").length;
 
   return (
-    <>
+    <AdminGate title="All client sites">
       <h1 className="eyebrow">All client sites</h1>
       <p className="verdict">
         {need} of {sites.length} client sites {need === 1 ? "needs" : "need"} attention.
@@ -68,6 +69,6 @@ export default function SwsPage() {
           </tbody>
         </table>
       </TableWrap>
-    </>
+    </AdminGate>
   );
 }

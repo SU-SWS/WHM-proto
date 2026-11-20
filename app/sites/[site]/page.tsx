@@ -4,6 +4,7 @@ import Link from "next/link";
 import { IssueList, type IssueRow } from "@/components/IssueList";
 import { Readings } from "@/components/Readings";
 import { SourceNote } from "@/components/SourceNote";
+import { SiteGate } from "@/components/Viewer";
 import { TrendChart, type TrendMetric } from "@/components/TrendChart";
 import { getReport, getSite, getSiteKeys, getStatus } from "@/lib/data/load";
 import { describeSection } from "@/lib/data/provenance";
@@ -40,7 +41,7 @@ export default async function SitePage({ params }: PageProps<"/sites/[site]">) {
   const checked = site.checkedAt;
 
   return (
-    <>
+    <SiteGate siteKey={siteKey} siteName={site.name}>
       <p className="crumbs">
         <Link href="/">Your sites</Link> / {site.name}
       </p>
@@ -52,6 +53,14 @@ export default async function SitePage({ params }: PageProps<"/sites/[site]">) {
       <SourceNote provider="siteimprove" source={site.readings.siteTargetScore.source} date={checked} run={run} showAge />
 
       <Readings site={site} />
+      <p className="mt-16 flex flex-wrap gap-10">
+        <Link className="btn-secondary" href={`/sites/${siteKey}/share/`}>
+          Share a summary
+        </Link>
+        <Link className="btn-secondary" href={`/email/${siteKey}/`}>
+          Preview the email
+        </Link>
+      </p>
 
       <h2 className="section-heading">What to fix</h2>
       <IssueList
@@ -172,7 +181,7 @@ export default async function SitePage({ params }: PageProps<"/sites/[site]">) {
           <SourceNote className="meta mt-8" provider="pagespeed" source={site.speed.source} date={checked} />
         </>
       )}
-    </>
+    </SiteGate>
   );
 }
 

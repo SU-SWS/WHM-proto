@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SourceNote } from "@/components/SourceNote";
+import { SiteGate } from "@/components/Viewer";
 import { getReport, getSite, getSiteKeys } from "@/lib/data/load";
 import { hostOf } from "@/lib/format";
 
@@ -23,7 +24,7 @@ export default async function ReportPage({ params }: PageProps<"/sites/[site]/re
   const sample = report.source === "sample";
 
   return (
-    <>
+    <SiteGate siteKey={siteKey} siteName={site.name}>
       <p className="crumbs">
         <Link href="/">Your sites</Link> / <Link href={`/sites/${siteKey}/`}>{site.name}</Link> / Content report
       </p>
@@ -60,6 +61,6 @@ export default async function ReportPage({ params }: PageProps<"/sites/[site]/re
           Back to {site.name}
         </Link>
       </p>
-    </>
+    </SiteGate>
   );
 }

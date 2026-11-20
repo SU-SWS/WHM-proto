@@ -1,35 +1,29 @@
 import Link from "next/link";
+import { PortfolioHeadline, VisibleSite } from "@/components/PortfolioViews";
 import { SourceNote } from "@/components/SourceNote";
 import { getPortfolio, getStatus } from "@/lib/data/load";
 import { byNeed } from "@/lib/data/view";
 import { formatNumber, hostOf } from "@/lib/format";
 
-// Portfolio rollup, ordered by need (AC-3). Until "Viewing as" (AC-2) exists,
-// it lists every site in the registry.
+// Portfolio rollup, ordered by need (AC-3), showing the sites the current
+// "Viewing as" person owns (AC-2).
 export default function Portfolio() {
   const portfolio = getPortfolio();
   const status = getStatus();
   const sites = [...portfolio.sites].sort(byNeed);
-  const need = sites.filter((s) => s.state === "attention").length;
-  const headline =
-    need === 0
-      ? "All of your sites are in good shape this week."
-      : need === 1
-        ? `One of your ${sites.length} sites needs attention this week.`
-        : `${need} of your sites need attention this week.`;
 
   return (
     <>
       <h1 className="eyebrow">Your sites</h1>
-      <p className="verdict">{headline}</p>
+      <PortfolioHeadline sites={sites.map((s) => ({ key: s.key, state: s.state }))} />
       <p className="meta">
         Sites are listed with the one that needs the most attention first. Each line comes from that site’s
         latest Siteimprove check.
       </p>
       <ul className="m-0 list-none p-0">
         {sites.map((s) => (
+          <VisibleSite key={s.key} siteKey={s.key}>
           <li
-            key={s.key}
             className="mb-0 grid gap-x-24 gap-y-8 border-t border-black-20 py-18 last:border-b md:grid-cols-[1fr_auto]"
           >
             <div>
@@ -58,6 +52,7 @@ export default function Portfolio() {
               </Link>
             </div>
           </li>
+          </VisibleSite>
         ))}
       </ul>
     </>
