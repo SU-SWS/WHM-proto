@@ -17,7 +17,7 @@ Stanford Web Services (SWS) innovation project. A dashboard that turns Siteimpro
 - Tailwind CSS **3.4** with the **`decanter@7.5.3`** preset (Stanford's design system). Do not use Decanter v8 or Tailwind v4.
 - Fonts: Source Sans 3 (body) and Source Serif 4 (headings and verdicts). Stanford cardinal `#8C1515`.
 - Data gathering runs in GitHub Actions (`scripts/refresh.mjs`). The browser never calls Siteimprove.
-- `basePath` is `/[INSERT REPO NAME]` until the repo is named.
+- `basePath` is `/WHM-proto` (repo `SU-SWS/WHM-proto`). The site is at https://su-sws.github.io/WHM-proto/.
 
 ## Data rules
 

@@ -4,7 +4,7 @@ Drawn from the SWS data inventory (Oct 15, 2026) and the prototype plan. "Confir
 
 ## Access
 
-- **Base URL:** `https://api.siteimprove.com/v2`. The documentation also shows `https://api.eu.siteimprove.com/v2`. `[CONFIRM BASE URL FOR STANFORD'S ACCOUNT]`
+- **Base URL:** `https://api.us.siteimprove.com/v2` for Stanford's account (Nov 19). This differs from the `https://api.siteimprove.com/v2` and `https://api.eu.siteimprove.com/v2` shown in Siteimprove's documentation. Confirm it with the first call (`GET /sites`) and save that response as a fixture. Keep the base URL in one place in the fetch script so it can be changed easily.
 - **Auth:** HTTP Basic, with the API user's email as the username and the API key as the password. The API user has the same permissions as that user has in the platform, so it must have access to sitesuserguide.stanford.edu.
 - **Paging:** `page` and `page_size` query parameters.
 - **Deep links:** responses include a `_siteimprove` section with links into the Siteimprove web app. Use these for "Open in Siteimprove" (SP-2).

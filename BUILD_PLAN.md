@@ -4,10 +4,10 @@ Ordered tasks for the December 8, 2026 prototype. Each task lists what "done" me
 
 ## 0. Setup (Shane)
 
-- [ ] Repo created in SU-SWS: `[INSERT REPO NAME]`. Settings → Pages → Source: "GitHub Actions".
-- [ ] Actions secrets added: `SITEIMPROVE_API_USER`, `SITEIMPROVE_API_KEY`.
-- [ ] `siteimproveSiteId` filled in for sitesuserguide in `data/registry.json`.
-- [ ] The four project docs exported into `docs/` (see `docs/README.md`).
+- [x] Repo created in SU-SWS: `WHM-proto`. Settings → Pages → Source: "GitHub Actions".
+- [x] Actions secrets added: `SITEIMPROVE_API_USER`, `SITEIMPROVE_API_KEY`.
+- [x] `siteimproveSiteId` filled in for sitesuserguide in `data/registry.json`.
+- [x] The four project docs exported into `docs/` (see `docs/README.md`).
 
 ## 1. Scaffold and stack check
 
