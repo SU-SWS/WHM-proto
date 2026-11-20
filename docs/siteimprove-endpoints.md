@@ -35,6 +35,7 @@ Drawn from the SWS data inventory (Oct 15, 2026) and the prototype plan. "Confir
 | 6 | Policy list | `GET /sites/{site_id}/policy/policies` | SI-23 | Linked | 109 Stanford policies in the inventory; the site reports 114 (Nov 20). In a sample, every priority was "high", so priority can't rank them. Name prefixes such as [QA], [A11y], [SWS], ADMIN and TEMP can drive categories. |
 | 6 | Policy matches | `GET /sites/{site_id}/policy/policies/{policy_id}/content` (or `/media`) | SI-24 | Confirmed | The path depends on the policy's category |
 | – | Crawl status | `GET /sites/{site_id}/content/crawl` | SI-33 | Fixture | `last_crawl`, `next_crawl`, `is_crawl_running`, `is_crawl_enabled`. `last_crawl` (Nov 15) is a day earlier than the check history's latest `check_date` (Nov 16); use the check date for data age. |
+| – | Link text | `GET /sites/{site_id}/quality_assurance/inventory/link_texts` | none | Linked | Not called yet. Possible source of the words each broken link is attached to; see "Link text for broken links" in decisions.md, Still open. |
 | – | Page inventory | `GET /sites/{site_id}/quality_assurance/inventory/pages` | SI-16 | Confirmed | Check whether it returns a last-modified date. That would answer content freshness (SI-17), which is unknown. |
 
 ## Second probe findings (Nov 20)

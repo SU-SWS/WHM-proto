@@ -61,6 +61,7 @@ Newest decisions take priority over anything in the exported docs. Dates are 202
 
 ## Still open
 
+- **Link text for broken links (flagged Nov 20).** The broken-links issue page shows each broken link's address and status, but not the words it's attached to on the page, so on a long page an owner has to search for the address. *Possible fix:* Siteimprove's link-text inventory, `GET /sites/{site_id}/quality_assurance/inventory/link_texts` (listed in `_links`, not yet called). Save one response in a fixtures run; if it gives the text for each link on each page, add it to the `links` entries and show it on the page, such as “Event list pages” (`http://userguide.sites.stanford.edu/tour/events/event-list-pages`). Not started, by decision (Nov 20).
 - **Platform pages (flagged Nov 20, to address after the fair).** Search and sign-in pages get real traffic (on sitesuserguide, `/search` was the 3rd most visited page and `/user/login` the 5th, last 30 days) and they matter to visitors, but no single site owner can fix them. They're left out of owner reports for now. Still to decide: who sees problems on platform pages (SWS, a platform-wide report, or both), whether the list of platform paths (`PLATFORM_PAGES` in `scripts/lib/live-site.mjs`) is complete, and whether it differs between platforms.
 
 - Whether `impmd` in Siteimprove deep links is safe to publish.
