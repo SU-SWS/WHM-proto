@@ -51,6 +51,9 @@ function installWeeklyTrigger() {
 }
 
 function buildFile_() {
+  if (typeof AnalyticsData === "undefined") {
+    throw new Error("Add the Google Analytics Data API service: Services → + → Google Analytics Data API, identifier AnalyticsData. See docs/ga4-setup.md.");
+  }
   var propertyId = prop_("GA4_PROPERTY_ID");
   var property = "properties/" + propertyId;
   var range = { startDate: "30daysAgo", endDate: "yesterday" };

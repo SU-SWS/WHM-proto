@@ -55,6 +55,7 @@ When the token nears expiry, GitHub emails you. Generate a new one the same way 
 
 ## If something goes wrong
 
+- **“AnalyticsData is not defined”** (or “Add the Google Analytics Data API service”): the advanced service is missing or has a different identifier. Under **Services**, add **Google Analytics Data API** with identifier exactly `AnalyticsData`. The similarly named **Google Analytics API** (`Analytics`) and **Google Analytics Admin API** (`AnalyticsAdmin`) are different services. If it isn't listed, turn on **Show "appsscript.json" manifest file** in Project settings and add `"dependencies": { "enabledAdvancedServices": [ { "userSymbol": "AnalyticsData", "serviceId": "analyticsdata", "version": "v1beta" } ] }` at the top level.
 - **“Set the script property …”**: a property in step 2.4 is missing or misspelled.
 - **“GitHub commit failed: HTTP 401 or 403”**: the token is wrong, has expired, lacks Contents write access, or is waiting for org approval.
 - **“GitHub commit failed: HTTP 409”**: someone else committed the file at the same moment. Run it again.
