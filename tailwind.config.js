@@ -12,5 +12,15 @@ module.exports = {
       sans: ["var(--font-source-sans)", ...decanter.theme.fontFamily.sans],
       serif: ["var(--font-source-serif)", ...decanter.theme.fontFamily.serif],
     },
+    extend: {
+      // Tints from the reference demo that Decanter doesn't have. Each pairs
+      // with a Decanter color: palo-alto, digital-red, plum, poppy.
+      colors: {
+        "good-tint": "#E6F0EE",
+        "warn-tint": "#FBEAEA",
+        "sws-tint": "#F3E8F2",
+        "sample-tint": "#FFF7DB",
+      },
+    },
   },
 };

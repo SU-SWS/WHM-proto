@@ -22,6 +22,8 @@ export interface Provenance {
 export interface ProvenanceText {
   /** e.g. "Siteimprove check of Nov 10, 2026. Live data." */
   text: string;
+  /** The first half of `text`: "Siteimprove check of Nov 10, 2026." */
+  origin: string;
   /** "Live data" or "Sample data", for a badge. */
   sourceLabel: string;
   /** Set when the latest run failed and this is the last good data. */
@@ -78,8 +80,10 @@ export function describeSection({ provider, source, date, run }: Provenance): Pr
     run?.result === "failed"
       ? `The latest data run couldn’t update this site, so this is the last good data, from ${formatDate(date)}.`
       : null;
+  const origin = originText(provider, formatDate(date));
   return {
-    text: `${originText(provider, formatDate(date))} ${label}.`,
+    text: `${origin} ${label}.`,
+    origin,
     sourceLabel: label,
     warning,
   };

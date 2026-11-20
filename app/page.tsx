@@ -1,39 +1,65 @@
-import { getAllSites } from "@/lib/data/load";
-import { describeSection } from "@/lib/data/provenance";
+import Link from "next/link";
+import { SourceNote } from "@/components/SourceNote";
+import { getPortfolio, getStatus } from "@/lib/data/load";
+import { byNeed } from "@/lib/data/view";
+import { formatNumber, hostOf } from "@/lib/format";
 
-// Placeholder for task 2: proves the build reads every site's published data.
-// Task 3 replaces this with the portfolio rollup.
-export default function Home() {
-  const sites = getAllSites();
+// Portfolio rollup, ordered by need (AC-3). Until "Viewing as" (AC-2) exists,
+// it lists every site in the registry.
+export default function Portfolio() {
+  const portfolio = getPortfolio();
+  const status = getStatus();
+  const sites = [...portfolio.sites].sort(byNeed);
+  const need = sites.filter((s) => s.state === "attention").length;
+  const headline =
+    need === 0
+      ? "All of your sites are in good shape this week."
+      : need === 1
+        ? `One of your ${sites.length} sites needs attention this week.`
+        : `${need} of your sites need attention this week.`;
+
   return (
     <>
-      <header className="bg-cardinal-red py-10">
-        <div className="centered-container">
-          <a className="logo text-white hocus:text-white text-20" href="https://www.stanford.edu">
-            Stanford University
-          </a>
-        </div>
-      </header>
-      <main id="main-content" className="centered-container py-50">
-        <h1 className="font-serif type-5 mb-20">Website Health Monitoring</h1>
-        <ul className="list-none p-0">
-          {sites.map((site) => {
-            const score = site.readings.siteTargetScore;
-            const origin = describeSection({
-              provider: "siteimprove",
-              source: score.source,
-              date: site.checkedAt,
-            });
-            return (
-              <li key={site.siteKey} className="mb-20">
-                <h2 className="type-2 mb-4">{site.name}</h2>
-                <p className="mb-4">Site Target Score: {score.value} (goal {score.goal})</p>
-                <p className="text-black-70">{origin.text}</p>
-              </li>
-            );
-          })}
-        </ul>
-      </main>
+      <h1 className="eyebrow">Your sites</h1>
+      <p className="verdict">{headline}</p>
+      <p className="meta">
+        Sites are listed with the one that needs the most attention first. Each line comes from that site’s
+        latest Siteimprove check.
+      </p>
+      <ul className="m-0 list-none p-0">
+        {sites.map((s) => (
+          <li
+            key={s.key}
+            className="mb-0 grid gap-x-24 gap-y-8 border-t border-black-20 py-18 last:border-b md:grid-cols-[1fr_auto]"
+          >
+            <div>
+              <h2 className="m-0 text-20 font-bold leading-tight">{s.name}</h2>
+              <span className="text-15 text-black-80">{hostOf(s.url)}</span>
+              <p className="my-6 max-w-[60ch] font-serif text-19">{s.verdict}</p>
+              <ul className="m-0 flex list-none flex-wrap gap-x-20 gap-y-4 p-0 text-16 text-black-80">
+                <li className="mb-0">Site Target Score {formatNumber(s.siteTargetScore)}</li>
+                <li className="mb-0">Accessibility {formatNumber(s.accessibilityScore)}</li>
+                <li className="mb-0">{formatNumber(s.brokenLinks)} broken links</li>
+                <li className="mb-0">
+                  {s.openOwnerIssues} {s.openOwnerIssues === 1 ? "item" : "items"} for you to review
+                </li>
+              </ul>
+              <SourceNote
+                className="mb-0 mt-4 text-15 text-black-80"
+                provider="siteimprove"
+                source={s.source}
+                date={s.checkedAt}
+                run={status.sites[s.key]}
+              />
+            </div>
+            <div>
+              <Link className="btn" href={`/sites/${s.key}/`}>
+                Open {s.name}
+              </Link>
+            </div>
+          </li>
+        ))}
+      </ul>
     </>
   );
 }

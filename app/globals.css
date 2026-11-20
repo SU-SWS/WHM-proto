@@ -1,3 +1,106 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Shared patterns from reference/whm-demo.html. Page-specific layout stays in
+   utility classes; anything used on more than one screen lives here. */
+@layer base {
+  body {
+    @apply text-18 leading-normal;
+  }
+  :focus-visible {
+    @apply outline outline-[3px] outline-offset-2 outline-digital-blue;
+  }
+  a {
+    @apply text-digital-blue;
+  }
+}
+
+@layer components {
+  .page {
+    @apply mx-auto max-w-[1152px] px-20 pb-48 pt-24;
+  }
+  .eyebrow {
+    @apply mb-6 text-18 font-semibold leading-tight text-black-80;
+  }
+  .verdict {
+    @apply mb-10 max-w-[34ch] font-serif font-semibold leading-tight;
+    font-size: clamp(2.6rem, 3.4vw, 3.8rem);
+  }
+  .lede {
+    @apply mb-16 max-w-[62ch];
+  }
+  .meta {
+    @apply mb-24 text-16 text-black-80;
+  }
+  .section-heading {
+    @apply mb-12 mt-36 border-t border-black-20 pt-14 text-22 font-bold leading-tight;
+  }
+  .subheading {
+    @apply mb-6 mt-20 text-18 font-bold leading-tight;
+  }
+  .crumbs {
+    @apply mb-12 text-16;
+  }
+  .btn {
+    @apply inline-block cursor-pointer rounded border-2 border-cardinal-red bg-cardinal-red px-16 py-8 font-semibold text-white no-underline hocus:border-cardinal-red-dark hocus:bg-cardinal-red-dark hocus:text-white;
+  }
+  .btn-secondary {
+    @apply inline-block cursor-pointer rounded border-2 border-black-80 bg-transparent px-16 py-8 font-semibold text-black no-underline hocus:bg-fog-light hocus:text-black;
+  }
+  .link-button {
+    @apply cursor-pointer border-0 bg-transparent p-0 text-digital-blue underline;
+  }
+  .segmented {
+    @apply mb-16 inline-flex flex-wrap overflow-hidden rounded border border-black-80;
+  }
+  .segmented button {
+    @apply cursor-pointer border-0 bg-white px-14 py-6 text-black;
+  }
+  .segmented button[aria-pressed="true"] {
+    @apply bg-black font-semibold text-white;
+  }
+  .tag {
+    @apply whitespace-nowrap rounded-sm border border-current px-7 py-1 text-14 font-semibold;
+  }
+  .tag-you {
+    @apply bg-good-tint text-palo-alto;
+  }
+  .tag-sws {
+    @apply bg-sws-tint text-plum;
+  }
+  .tag-cat {
+    @apply border-black-20 bg-transparent font-normal text-black-80;
+  }
+  .tag-sample {
+    @apply border-poppy bg-sample-tint font-normal text-black;
+  }
+  .table-wrap {
+    @apply overflow-x-auto;
+  }
+  .data-table {
+    @apply w-full border-collapse text-17;
+  }
+  .data-table th,
+  .data-table td {
+    @apply border-b border-black-20 px-10 py-7 text-left align-top;
+  }
+  .data-table th {
+    @apply bg-fog-light font-semibold;
+  }
+  .data-table .num {
+    @apply text-right tabular-nums;
+  }
+  .note-sws {
+    @apply my-16 border-l-4 border-plum bg-sws-tint px-16 py-12;
+  }
+  .note-sample {
+    @apply my-16 border-l-4 border-poppy bg-sample-tint px-16 py-12;
+  }
+  .worse {
+    @apply text-digital-red;
+  }
+  .better {
+    @apply text-palo-alto;
+  }
+}
