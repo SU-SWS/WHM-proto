@@ -10,6 +10,7 @@ import { displayPath } from "@/lib/data/paths";
 import type { IssuePage } from "@/lib/data/types";
 import { getIssueType, notesFor } from "@/lib/data/view";
 import { formatNumber } from "@/lib/format";
+import { formatDate } from "@/lib/data/provenance";
 
 export const dynamicParams = false;
 
@@ -38,7 +39,9 @@ export default async function IssuePage({ params }: PageProps<"/sites/[site]/iss
   // Per-page reports in Siteimprove, from live data (impmd stripped on ingestion).
   const hasReports = issue.pages.some((p) => "siteimproveUrl" in p && p.siteimproveUrl);
   const thirdHeader = isStale ? "Last updated" : issue.type === "broken" ? "Broken links" : "Times found";
-  // Owners track progress page by page (TR-1); SWS-handled issues are read-only.
+  // Owners review editorial issues page by page here (TR-2, revised). Issues
+  // Siteimprove detects are fixed and rechecked in Siteimprove (TR-1, revised).
+  const tracksHere = owner && type.editorial && issue.pages.length > 0;
   const tracked: TrackedPage[] = issue.pages.map((p) => ({
     path: p.path,
     label: displayPath(p.path),
@@ -48,7 +51,8 @@ export default async function IssuePage({ params }: PageProps<"/sites/[site]/iss
     third: third(p),
     siteimproveUrl: ("siteimproveUrl" in p && p.siteimproveUrl) || null,
   }));
-  const trackProps = { siteKey, issueType: issue.type, editorial: type.editorial, checkedAt: site.checkedAt, pages: tracked };
+  const trackProps = { siteKey, issueType: issue.type, checkedAt: site.checkedAt, pages: tracked };
+  const progress = issue.progress;
 
   return (
     <SiteGate siteKey={siteKey} siteName={site.name}>
@@ -88,16 +92,31 @@ export default async function IssuePage({ params }: PageProps<"/sites/[site]/iss
         </div>
 
         <aside className="self-start rounded bg-fog-light px-18 py-16" aria-label="Your progress and notes">
-          {owner && issue.pages.length > 0 ? (
+          {tracksHere ? (
             <ProgressPanel {...trackProps} />
           ) : (
             <>
-              <h2 className="mb-6 mt-0 text-18 font-bold">Your progress</h2>
-              <p className="mb-0">
-                {owner
-                  ? "Siteimprove tracks each item for this issue. Mark them as fixed there."
-                  : "Nothing for you to do. This item stays in the “Being handled by SWS” list until the fix ships."}
-              </p>
+              <h2 className="mb-6 mt-0 text-18 font-bold">Progress</h2>
+              {!owner ? (
+                <p className="mb-0">Nothing for you to do. This item stays in the “Being handled by SWS” list until the fix ships.</p>
+              ) : (
+                <>
+                  {progress ? (
+                    <p className="mb-8">
+                      <strong>
+                        Since the check of {formatDate(progress.since)}: {progress.fixed}{" "}
+                        {progress.fixed === 1 ? "page" : "pages"} fixed, {progress.added} new.
+                      </strong>
+                    </p>
+                  ) : (
+                    <p className="mb-8">Progress shows here once two Siteimprove checks can be compared.</p>
+                  )}
+                  <p className="mb-0 text-16">
+                    Fix these in Siteimprove and recheck the page there. Siteimprove keeps track of each item, and this
+                    page updates after the next check.
+                  </p>
+                </>
+              )}
             </>
           )}
           <Notes siteKey={siteKey} issueType={issue.type} />
@@ -111,7 +130,7 @@ export default async function IssuePage({ params }: PageProps<"/sites/[site]/iss
             ? "Siteimprove lists each item for this issue. Open Siteimprove to see them and fix them."
             : "It’s on nearly every page of the site, so the pages aren’t listed one by one. SWS is handling it."}
         </p>
-      ) : owner ? (
+      ) : tracksHere ? (
         <>
           <TrackedTable {...trackProps} thirdHeader={thirdHeader} viewsHeader="Page views, last 30 days" />
           <SourceNote className="meta mt-8" provider="siteimproveAnalytics" source={site.topPages.viewsSource} date={site.checkedAt} />

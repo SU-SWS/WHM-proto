@@ -422,6 +422,29 @@ export async function buildLiveSite({ site, sample, previous, issueTypes, client
         ? previous.topPages
         : sample.topPages;
 
+  // --- Progress from Siteimprove's own checks (TR-1, revised Nov 20): compare each
+  // issue's pages with the last published run. No fix status is kept by WHM.
+  if (previous?.source === "live") {
+    for (const issue of ordered) {
+      if (issue.source !== "live" || !issue.pages.length) continue;
+      const before = previous.issues.find((i) => i.type === issue.type && i.source === "live");
+      if (!before) continue;
+      if (previous.checkedAt === checkedAt) {
+        // Same Siteimprove check as last run: keep what that run worked out.
+        if (before.progress) issue.progress = before.progress;
+        continue;
+      }
+      if (!before.pages.length) continue;
+      const was = new Set(before.pages.map((p) => p.path));
+      const now = new Set(issue.pages.map((p) => p.path));
+      issue.progress = {
+        since: previous.checkedAt,
+        fixed: [...was].filter((p) => !now.has(p)).length,
+        added: [...now].filter((p) => !was.has(p)).length,
+      };
+    }
+  }
+
   const onBusiest = owner.some((i) => i.source === "live" && i.pages.some((p) => busiest.includes(p.path)));
   const { state, verdict, lede } = verdictFor({
     score: scores.siteTargetScore.value,

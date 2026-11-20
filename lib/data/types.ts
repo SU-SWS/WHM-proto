@@ -91,6 +91,8 @@ export interface SiteIssue {
   reason: string;
   rank: number | null; // owner-fixable issues are ranked; SWS-handled issues are null
   fixer?: "owner" | "sws"; // overrides the type's fixer, e.g. "sws" when the issue comes from the template
+  /** Pages that left or joined this issue since the previous Siteimprove check (TR-1, revised). */
+  progress?: { since: IsoDate; fixed: number; added: number };
   siteimproveUrl: string | null;
   source: Source;
   pages: IssuePage[];

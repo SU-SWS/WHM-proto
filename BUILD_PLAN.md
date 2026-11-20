@@ -90,7 +90,7 @@ Then:
 - "Viewing as" switch driven by registry owners (AC-2).
 - Static email view (AC-4) and share view (AC-6).
 
-**Status (Nov 20):** built. Tracking and notes are in `components/Tracking.tsx`, saved in the browser only (`lib/client/store.ts`, with try/catch). With live data, a page marked “Waiting for next check” is confirmed fixed once a newer check no longer finds it, and goes back to To do if a newer check still does. “Viewing as” (`components/Viewer.tsx`) starts as the SWS administrator, filters “Your sites”, and gates site, SWS and admin pages. The admin page lists the SWS specialist notes. Email view: `/email/[site]`. Share view: `/sites/[site]/share`, printable, top 5 changes.
+**Status (Nov 20):** built, then revised to keep one system of record (TR-1 and TR-2 revised, decisions Nov 20). Editorial issues (content freshness) are reviewed page by page in `components/Tracking.tsx`, saved in the browser only. Issues Siteimprove detects have no WHM fix status: the data run compares each check with the last and shows “N pages fixed since the check of [date], N new,” and owners fix and recheck in Siteimprove. Notes stay on every issue. “Viewing as” (`components/Viewer.tsx`) starts as the SWS administrator, filters “Your sites”, and gates site, SWS and admin pages. The admin page lists the SWS specialist notes. Email view: `/email/[site]`. Share view: `/sites/[site]/share`, printable, top 5 changes.
 
 ## Parallel work
 

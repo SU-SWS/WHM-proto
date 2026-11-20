@@ -88,6 +88,7 @@ interface SiteData {
     rank: number | null;       // owner-fixable issues are ranked; SWS-handled issues are null
     // pages may be empty: template issues (on every page) and file-based policies aren't listed page by page
     fixer?: "owner" | "sws";   // overrides the type's fixer; "sws" for issues from the template
+    progress?: { since: IsoDate; fixed: number; added: number };  // pages that left / joined since the previous check (TR-1, revised)
     siteimproveUrl: string | null;
     source: Source;
     pages: ({ path: string; views: number; count: number;

@@ -1,8 +1,10 @@
 "use client";
 
-// Per-page progress on an issue (TR-1, TR-2) and owner notes (TR-3). Saved in
-// this browser only for the prototype (lib/client/store.ts), keyed by site,
-// issue type and normalized page path.
+// Per-page review of editorial issues (TR-2, revised Nov 20) and owner notes
+// (TR-3). Only editorial issues, which Siteimprove doesn't manage, are tracked
+// here: issues Siteimprove detects are fixed and rechecked in Siteimprove, the
+// single system of record. Saved in this browser only for the prototype
+// (lib/client/store.ts), keyed by site, issue type and normalized page path.
 
 import { useId, useState } from "react";
 import { useStored } from "@/lib/client/store";
@@ -26,7 +28,6 @@ export interface TrackedPage {
 interface Props {
   siteKey: string;
   issueType: string;
-  editorial: boolean;
   checkedAt: IsoDate; // the Siteimprove check this page shows
   pages: TrackedPage[];
   thirdHeader: string;
@@ -39,34 +40,26 @@ const today = (): IsoDate => {
 };
 
 /**
- * A page's status, after the latest check is taken into account: "Waiting for
- * next check" becomes confirmed (the page left the issue) or goes back to To do
- * (a later check still found it). Marks made on or after the check date wait.
+ * A page's status. A page marked updated that a later check still lists keeps
+ * its status but says so; it isn't silently reopened.
  */
 function statusOf(mark: Mark | undefined, checkedAt: IsoDate): { status: Status; stillFound: boolean } {
   if (!mark) return { status: "todo", stillFound: false };
-  if (mark.state === "addressed" && mark.date < checkedAt) return { status: "todo", stillFound: true };
-  return { status: mark.state, stillFound: false };
+  return { status: mark.state, stillFound: mark.state === "addressed" && mark.date < checkedAt };
 }
 
 export function useTracking(siteKey: string, issueType: string) {
   return useStored<Marks>(`track:${siteKey}:${issueType}`, {});
 }
 
-/** Pages marked fixed that the latest check no longer finds: confirmed fixed. */
-function confirmedFixed(marks: Marks, pages: TrackedPage[], checkedAt: IsoDate) {
-  const current = new Set(pages.map((p) => p.path));
-  return Object.entries(marks).filter(([path, m]) => m.state === "addressed" && m.date < checkedAt && !current.has(path));
-}
-
 const LABEL: Record<Status, string> = {
   todo: "To do",
-  addressed: "Waiting for next check",
+  addressed: "Updated",
   keep: "Still correct",
   later: "Set aside",
 };
 
-export function TrackedTable({ siteKey, issueType, editorial, checkedAt, pages, thirdHeader, viewsHeader }: Props) {
+export function TrackedTable({ siteKey, issueType, checkedAt, pages, thirdHeader, viewsHeader }: Props) {
   const [marks, setMarks] = useTracking(siteKey, issueType);
   const [selected, setSelected] = useState<Set<string>>(new Set());
   const [filter, setFilter] = useState<Status | "all">("all");
@@ -101,13 +94,9 @@ export function TrackedTable({ siteKey, issueType, editorial, checkedAt, pages, 
   const options: [Status | "all", string][] = [
     ["all", `All pages (${rows.length})`],
     ["todo", `To do (${count("todo")})`],
-    ["addressed", `Waiting for next check (${count("addressed")})`],
-    ...(editorial
-      ? ([
-          ["keep", `Still correct (${count("keep")})`],
-          ["later", `Set aside (${count("later")})`],
-        ] as [Status, string][])
-      : []),
+    ["addressed", `Updated (${count("addressed")})`],
+    ["keep", `Still correct (${count("keep")})`],
+    ["later", `Set aside (${count("later")})`],
   ];
 
   return (
@@ -134,31 +123,27 @@ export function TrackedTable({ siteKey, issueType, editorial, checkedAt, pages, 
       </p>
       <div role="group" aria-label="Mark the selected pages" className="mb-6 flex flex-wrap items-center gap-8">
         <button type="button" className="btn" onClick={() => apply("addressed")}>
-          {editorial ? "I updated these pages" : "I fixed these pages"}
+          I updated these pages
         </button>
-        {editorial && (
-          <>
-            <button type="button" className="btn-secondary" onClick={() => apply("keep")}>
-              They’re still correct
-            </button>
-            <span className="flex flex-wrap items-center gap-6">
-              <label htmlFor={`${id}-until`} className="text-16">
-                Revisit by
-              </label>
-              <input
-                id={`${id}-until`}
-                type="date"
-                min={today()}
-                value={until}
-                onChange={(e) => setUntil(e.target.value)}
-                className="rounded border border-black-80 px-8 py-4 text-16"
-              />
-              <button type="button" className="btn-secondary" onClick={() => apply("later")}>
-                Set aside
-              </button>
-            </span>
-          </>
-        )}
+        <button type="button" className="btn-secondary" onClick={() => apply("keep")}>
+          They’re still correct
+        </button>
+        <span className="flex flex-wrap items-center gap-6">
+          <label htmlFor={`${id}-until`} className="text-16">
+            Revisit by
+          </label>
+          <input
+            id={`${id}-until`}
+            type="date"
+            min={today()}
+            value={until}
+            onChange={(e) => setUntil(e.target.value)}
+            className="rounded border border-black-80 px-8 py-4 text-16"
+          />
+          <button type="button" className="btn-secondary" onClick={() => apply("later")}>
+            Set aside
+          </button>
+        </span>
         <button type="button" className="btn-secondary" onClick={() => apply("todo")}>
           Move back to To do
         </button>
@@ -227,7 +212,7 @@ export function TrackedTable({ siteKey, issueType, editorial, checkedAt, pages, 
                   <td className="num">{r.third}</td>
                   <td>
                     {r.status === "later" && mark?.until ? `Set aside until ${formatDate(mark.until)}` : LABEL[r.status]}
-                    {r.stillFound && <span className="block text-15 text-black-80">Still found by the latest check</span>}
+                    {r.stillFound && <span className="block text-15 text-black-80">The latest check still lists this page</span>}
                     {mark && !r.stillFound && <span className="block text-15 text-black-80">Marked {formatDate(mark.date)}</span>}
                   </td>
                 </tr>
@@ -240,68 +225,39 @@ export function TrackedTable({ siteKey, issueType, editorial, checkedAt, pages, 
   );
 }
 
-/** "Your progress" for an owner issue: counts and what each status means. */
-export function ProgressPanel({ siteKey, issueType, editorial, checkedAt, pages }: Omit<Props, "thirdHeader" | "viewsHeader">) {
+/** "Your progress" for an editorial issue: counts and what each status means. */
+export function ProgressPanel({ siteKey, issueType, checkedAt, pages }: Omit<Props, "thirdHeader" | "viewsHeader">) {
   const [marks] = useTracking(siteKey, issueType);
   const rows = pages.map((p) => statusOf(marks[p.path], checkedAt).status);
   const n = (s: Status) => rows.filter((r) => r === s).length;
-  const marked = rows.length - n("todo");
-  const fixed = confirmedFixed(marks, pages, checkedAt);
+  const reviewed = rows.length - n("todo");
   return (
     <>
       <h2 className="mb-6 mt-0 text-18 font-bold">Your progress</h2>
       <p className="mb-6">
         <strong>
-          {marked} of {rows.length} {rows.length === 1 ? "page" : "pages"} marked.
+          {reviewed} of {rows.length} {rows.length === 1 ? "page" : "pages"} reviewed.
         </strong>
       </p>
       <ul className="mb-10 pl-20">
         <li className="mb-2">To do: {n("todo")}</li>
-        <li className="mb-2">Waiting for next check: {n("addressed")}</li>
-        {editorial && (
-          <>
-            <li className="mb-2">Still correct: {n("keep")}</li>
-            <li className="mb-2">Set aside: {n("later")}</li>
-          </>
-        )}
+        <li className="mb-2">Updated: {n("addressed")}</li>
+        <li className="mb-2">Still correct: {n("keep")}</li>
+        <li className="mb-2">Set aside: {n("later")}</li>
       </ul>
-      {fixed.length > 0 && (
-        <p className="mb-10 border-l-4 border-palo-alto bg-good-tint px-10 py-6">
-          <strong>
-            {fixed.length} {fixed.length === 1 ? "page" : "pages"} confirmed fixed
-          </strong>{" "}
-          by the Siteimprove check of {formatDate(checkedAt)}.
-        </p>
-      )}
       <details className="mt-12">
         <summary className="cursor-pointer text-17 font-bold">What each status means</summary>
-      <dl className="m-0 mt-6 text-16">
-        <dt className="font-semibold">To do</dt>
-        <dd className="mb-6 ml-0">
-          {editorial ? "You haven’t reviewed this page yet." : "The problem is still on this page."}
-        </dd>
-        <dt className="font-semibold">Waiting for next check</dt>
-        <dd className="mb-6 ml-0">
-          {editorial
-            ? "You updated the page. The next Siteimprove check confirms it."
-            : "You fixed it. The next Siteimprove check confirms it. If the problem is gone, the page leaves this list. If it’s still found, the page goes back to To do."}
-        </dd>
-        {editorial && (
-          <>
-            <dt className="font-semibold">Still correct</dt>
-            <dd className="mb-6 ml-0">You reviewed the page, and it doesn’t need an update right now.</dd>
-            <dt className="font-semibold">Set aside</dt>
-            <dd className="mb-6 ml-0">You’ll decide later. The revisit date reminds you when to come back to it.</dd>
-          </>
-        )}
-      </dl>
+        <dl className="m-0 mt-6 text-16">
+          <dt className="font-semibold">To do</dt>
+          <dd className="mb-6 ml-0">You haven’t reviewed this page yet.</dd>
+          <dt className="font-semibold">Updated</dt>
+          <dd className="mb-6 ml-0">You updated the page. The next check should show its new date.</dd>
+          <dt className="font-semibold">Still correct</dt>
+          <dd className="mb-6 ml-0">You reviewed the page, and it doesn’t need an update right now.</dd>
+          <dt className="font-semibold">Set aside</dt>
+          <dd className="mb-6 ml-0">You’ll decide later. The revisit date reminds you when to come back to it.</dd>
+        </dl>
       </details>
-      {!editorial && (
-        <p className="mb-0 mt-6 text-15 text-black-80">
-          Only content choices, like whether an older page is still correct, can be set aside. Accessibility problems,
-          broken links and Stanford standards can’t.
-        </p>
-      )}
     </>
   );
 }
