@@ -8,6 +8,9 @@ Stanford Web Services (SWS) innovation project. A dashboard that turns Siteimpro
 - `docs/decisions.md`: the latest decisions. Where it disagrees with the exported docs, it is newer and wins.
 - `docs/data-contract.md`: the JSON structure every part of the app shares. Change it only on purpose, and update the doc in the same change.
 - `docs/siteimprove-endpoints.md`: what is known about each Siteimprove endpoint and what is still unverified.
+- `docs/verdict-rules.md`: how live sites' state, verdict and lede are decided. Change the wording there and in `scripts/lib/verdict.mjs` together.
+- `docs/how-it-works.md`: plain-language overview for people outside the build. Keep it current when sources or behavior change.
+- `docs/ga4-setup.md`: the GA4 Apps Script export.
 - `docs/requirements.md`, `docs/prototype-plan.md`, `docs/roadmap.md`, `docs/personas.md`: exported project docs. Requirement IDs (SP-, TR-, AC-, AD-, CT-, Q-) come from `requirements.md`.
 - `reference/whm-demo.html`: the clickable demo. It is the UI and content reference. Match its screens, flows and wording, not its code.
 

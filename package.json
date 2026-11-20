@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "refresh": "node scripts/refresh.mjs"
+    "refresh": "node scripts/refresh.mjs",
+    "mock": "node scripts/dev/mock-siteimprove.mjs",
+    "refresh:mock": "SITEIMPROVE_BASE_URL=http://localhost:8899 SITEIMPROVE_API_USER=mock SITEIMPROVE_API_KEY=mock node scripts/refresh.mjs"
   },
   "dependencies": {
     "next": "16.4.6",
