@@ -52,6 +52,7 @@ From GA4 engagement rates, over the same rolling 90 days as page views.
 - **Flagged:** one of the 10 most visited pages (platform pages left out) with at least 30 sessions and an engagement rate at least 20 points below the typical rate.
 - **In “Most visited pages”:** the rate shows with “Fewer stay than on most pages,” and the note under the table gives the typical rate.
 - **In the lede:** for the most visited flagged page, after the score sentence: “Fewer visitors stay on “{page name}” than on most of your pages.” (“your home page” for `/`.)
+- The home page is included, for now (Nov 20), even though home pages often have lower engagement because visitors use them to move on.
 - It doesn't change the state or verdict. Sessions are used only for the threshold and are never shown; page views stay with Siteimprove (Q-4).
 
 ## Questions for SWS

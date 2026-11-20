@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "siteKey": "sitesuserguide",
   "propertyId": "331314616",
-  "generatedAt": "2026-11-20T22:08:10.111Z",
+  "generatedAt": "2026-11-20T22:42:09.965Z",
   "periodDays": 90,
   "period": {
     "start": "2026-08-22",
@@ -11,1743 +11,2183 @@
   "pages": [
     {
       "path": "/",
-      "engagementRate": 0.5312
+      "engagementRate": 0.5312,
+      "sessions": 1570
     },
     {
       "path": "/search",
-      "engagementRate": 0.9423
+      "engagementRate": 0.9423,
+      "sessions": 381
     },
     {
       "path": "/build/working-text-editor/create-links/create-jump-links-using-id-tags",
-      "engagementRate": 0.4149
+      "engagementRate": 0.4149,
+      "sessions": 429
     },
     {
       "path": "/support/launch-your-site",
-      "engagementRate": 0.6951
+      "engagementRate": 0.6951,
+      "sessions": 246
     },
     {
       "path": "/404.html",
-      "engagementRate": 0.1676
+      "engagementRate": 0.1676,
+      "sessions": 185
     },
     {
       "path": "/build/stanford-only-sites",
-      "engagementRate": 0.5943
+      "engagementRate": 0.5943,
+      "sessions": 175
     },
     {
       "path": "/user/login",
-      "engagementRate": 0.3851
+      "engagementRate": 0.3851,
+      "sessions": 148
     },
     {
       "path": "/get-started/request-new-site",
-      "engagementRate": 0.6899
+      "engagementRate": 0.6899,
+      "sessions": 158
     },
     {
       "path": "/support",
-      "engagementRate": 0.7688
+      "engagementRate": 0.7688,
+      "sessions": 160
     },
     {
       "path": "/build",
-      "engagementRate": 0.9167
+      "engagementRate": 0.9167,
+      "sessions": 144
     },
     {
       "path": "/build/people",
-      "engagementRate": 0.7692
+      "engagementRate": 0.7692,
+      "sessions": 91
     },
     {
       "path": "/build/media-library/alternative-text-alt-text-images-and-other-media",
-      "engagementRate": 0.4661
+      "engagementRate": 0.4661,
+      "sessions": 118
     },
     {
       "path": "/support/take-stanford-sites-onboarding-session",
-      "engagementRate": 0.7286
+      "engagementRate": 0.7286,
+      "sessions": 140
     },
     {
       "path": "/get-started",
-      "engagementRate": 0.8667
+      "engagementRate": 0.8667,
+      "sessions": 120
     },
     {
       "path": "/build/media-library/add-and-use-files-media-library",
-      "engagementRate": 0.7071
+      "engagementRate": 0.7071,
+      "sessions": 99
     },
     {
       "path": "/build/create-and-edit-pages",
-      "engagementRate": 0.9135
+      "engagementRate": 0.9135,
+      "sessions": 104
     },
     {
       "path": "/manage-your-site",
-      "engagementRate": 0.9135
+      "engagementRate": 0.9135,
+      "sessions": 104
     },
     {
       "path": "/get-started/log-your-site",
-      "engagementRate": 0.8556
+      "engagementRate": 0.8556,
+      "sessions": 90
     },
     {
       "path": "/stanford-only-sites/stanford-sites-intranet-guide",
-      "engagementRate": 0.8932
+      "engagementRate": 0.8932,
+      "sessions": 103
     },
     {
       "path": "/manage-your-site/menus-other-sitewide-features/main-navigation-menu",
-      "engagementRate": 0.6962
+      "engagementRate": 0.6962,
+      "sessions": 79
     },
     {
       "path": "/build/lists-and-filtered-lists/lists-paragraph",
-      "engagementRate": 0.6667
+      "engagementRate": 0.6667,
+      "sessions": 90
     },
     {
       "path": "/build/create-and-edit-pages/basic-page-content-type",
-      "engagementRate": 0.5888
+      "engagementRate": 0.5888,
+      "sessions": 107
     },
     {
       "path": "/build/event-content-type",
-      "engagementRate": 0.7368
+      "engagementRate": 0.7368,
+      "sessions": 95
     },
     {
       "path": "/manage-your-site/find-manage-site-content",
-      "engagementRate": 0.9149
+      "engagementRate": 0.9149,
+      "sessions": 94
     },
     {
       "path": "/release-notes",
-      "engagementRate": 0.75
+      "engagementRate": 0.75,
+      "sessions": 80
     },
     {
       "path": "/get-started/site-settings/enter-site-ownership-information",
-      "engagementRate": 0.4944
+      "engagementRate": 0.4944,
+      "sessions": 89
     },
     {
       "path": "/build/create-and-edit-pages/create-layouts-sections-and-paragraphs",
-      "engagementRate": 0.8132
+      "engagementRate": 0.8132,
+      "sessions": 91
     },
     {
       "path": "/manage-your-site/user-accounts-and-roles/manage-user-accounts-and-permissions",
-      "engagementRate": 0.7474
+      "engagementRate": 0.7474,
+      "sessions": 95
     },
     {
       "path": "/manage-your-site/user-accounts-and-roles",
-      "engagementRate": 0.8241
+      "engagementRate": 0.8241,
+      "sessions": 108
     },
     {
       "path": "/build-and-design/manage-site-content/edit-delete-revert-and-unpublish-content",
-      "engagementRate": 0.6923
+      "engagementRate": 0.6923,
+      "sessions": 91
     },
     {
       "path": "/build/media-library/images/image-sizes-and-specifications",
-      "engagementRate": 0.6449
+      "engagementRate": 0.6449,
+      "sessions": 107
     },
     {
       "path": "/tour/site-organization-menus/branding-and-logo-lockup-options",
-      "engagementRate": 0.7386
+      "engagementRate": 0.7386,
+      "sessions": 88
     },
     {
       "path": "/support/attend-office-hours",
-      "engagementRate": 0.7872
+      "engagementRate": 0.7872,
+      "sessions": 94
     },
     {
       "path": "/build/media-library/images",
-      "engagementRate": 0.6364
+      "engagementRate": 0.6364,
+      "sessions": 99
     },
     {
       "path": "/build/publications-content-type",
-      "engagementRate": 0.8261
+      "engagementRate": 0.8261,
+      "sessions": 69
     },
     {
       "path": "/build/taxonomy",
-      "engagementRate": 0.8028
+      "engagementRate": 0.8028,
+      "sessions": 71
     },
     {
       "path": "/build/media-library/embeddable-media",
-      "engagementRate": 0.642
+      "engagementRate": 0.642,
+      "sessions": 81
     },
     {
       "path": "/manage-your-site/domains-and-urls",
-      "engagementRate": 0.6111
+      "engagementRate": 0.6111,
+      "sessions": 90
     },
     {
       "path": "/build/media-library/images/image-metadata",
-      "engagementRate": 0.4186
+      "engagementRate": 0.4186,
+      "sessions": 86
     },
     {
       "path": "/manage-your-site/menus-other-sitewide-features",
-      "engagementRate": 0.8143
+      "engagementRate": 0.8143,
+      "sessions": 70
     },
     {
       "path": "/meet-sws-team",
-      "engagementRate": 0.9412
+      "engagementRate": 0.9412,
+      "sessions": 51
     },
     {
       "path": "/build/create-and-edit-pages/add-anchor-navigation",
-      "engagementRate": 0.5435
+      "engagementRate": 0.5435,
+      "sessions": 92
     },
     {
       "path": "/build/best-practices/create-accessible-headings",
-      "engagementRate": 0.3289
+      "engagementRate": 0.3289,
+      "sessions": 76
     },
     {
       "path": "/build/paragraphs",
-      "engagementRate": 0.7722
+      "engagementRate": 0.7722,
+      "sessions": 79
     },
     {
       "path": "/manage-your-site/menus-other-sitewide-features/utility-navigation",
-      "engagementRate": 0.5618
+      "engagementRate": 0.5618,
+      "sessions": 89
     },
     {
       "path": "/build/best-practices/write-web",
-      "engagementRate": 0.4819
+      "engagementRate": 0.4819,
+      "sessions": 83
     },
     {
       "path": "/about-stanford-sites/design/stanford-basic-theme",
-      "engagementRate": 0.7632
+      "engagementRate": 0.7632,
+      "sessions": 76
     },
     {
       "path": "/about-stanford-sites/stanford-sites-designs",
-      "engagementRate": 0.7576
+      "engagementRate": 0.7576,
+      "sessions": 66
     },
     {
       "path": "/news-new",
-      "engagementRate": 0.8333
+      "engagementRate": 0.8333,
+      "sessions": 66
     },
     {
       "path": "/build/paragraphs/text-area-paragraph",
-      "engagementRate": 0.7857
+      "engagementRate": 0.7857,
+      "sessions": 56
     },
     {
       "path": "/build/publications-content-type/publications-list-page",
-      "engagementRate": 0.6071
+      "engagementRate": 0.6071,
+      "sessions": 56
     },
     {
       "path": "/build/create-and-edit-pages/text-editing-basics",
-      "engagementRate": 0.9016
+      "engagementRate": 0.9016,
+      "sessions": 61
     },
     {
       "path": "/about-stanford-sites",
-      "engagementRate": 0.7
+      "engagementRate": 0.7,
+      "sessions": 60
     },
     {
       "path": "/build/media-library",
-      "engagementRate": 0.8305
+      "engagementRate": 0.8305,
+      "sessions": 59
     },
     {
       "path": "/build/working-text-editor/add-icons-text-area",
-      "engagementRate": 0.4923
+      "engagementRate": 0.4923,
+      "sessions": 65
     },
     {
       "path": "/build/working-text-editor/work-images-and-other-media-text-area",
-      "engagementRate": 0.6721
+      "engagementRate": 0.6721,
+      "sessions": 61
     },
     {
       "path": "/manage-your-site/marketing-and-analytics/use-google-analytics-your-site",
-      "engagementRate": 0.6269
+      "engagementRate": 0.6269,
+      "sessions": 67
     },
     {
       "path": "/build/paragraphs/teaser-paragraph",
-      "engagementRate": 0.6552
+      "engagementRate": 0.6552,
+      "sessions": 58
     },
     {
       "path": "/build/paragraphs/image-banner-paragraph",
-      "engagementRate": 0.7903
+      "engagementRate": 0.7903,
+      "sessions": 62
     },
     {
       "path": "/build/people/people-list-page",
-      "engagementRate": 0.7719
+      "engagementRate": 0.7719,
+      "sessions": 57
     },
     {
       "path": "/manage-your-site/domains-and-urls/url-redirects",
-      "engagementRate": 0.6429
+      "engagementRate": 0.6429,
+      "sessions": 56
     },
     {
       "path": "/build/media-library/google-forms",
-      "engagementRate": 0.6182
+      "engagementRate": 0.6182,
+      "sessions": 55
     },
     {
       "path": "/build/lists-and-filtered-lists",
-      "engagementRate": 0.9423
+      "engagementRate": 0.9423,
+      "sessions": 52
     },
     {
       "path": "/build/working-text-editor/tables",
-      "engagementRate": 0.7381
+      "engagementRate": 0.7381,
+      "sessions": 42
     },
     {
       "path": "/about-stanford-sites/about-stanford-sites-platform/accessibility-commitment",
-      "engagementRate": 0.6579
+      "engagementRate": 0.6579,
+      "sessions": 38
     },
     {
       "path": "/release-notes/list-known-issues",
-      "engagementRate": 0.6429
+      "engagementRate": 0.6429,
+      "sessions": 56
     },
     {
       "path": "/get-started/site-settings",
-      "engagementRate": 0.9216
+      "engagementRate": 0.9216,
+      "sessions": 51
     },
     {
       "path": "/build/create-and-edit-pages/add-page-main-menu",
-      "engagementRate": 0.7857
+      "engagementRate": 0.7857,
+      "sessions": 56
     },
     {
       "path": "/build/person-profile-page/person-taxonomy",
-      "engagementRate": 0.7917
+      "engagementRate": 0.7917,
+      "sessions": 48
     },
     {
       "path": "/build/build-ai-ready-site",
-      "engagementRate": 0.8246
+      "engagementRate": 0.8246,
+      "sessions": 57
     },
     {
       "path": "/build/paragraphs/card-paragraph",
-      "engagementRate": 0.8222
+      "engagementRate": 0.8222,
+      "sessions": 45
     },
     {
       "path": "/about-stanford-sites/personal-sites-faculty-stanford-sites",
-      "engagementRate": 0.7174
+      "engagementRate": 0.7174,
+      "sessions": 46
     },
     {
       "path": "/build/person-profile-page/person-profile-importer",
-      "engagementRate": 0.6579
+      "engagementRate": 0.6579,
+      "sessions": 38
     },
     {
       "path": "/manage-your-site/menus-other-sitewide-features/main-navigation-menu/enable-drop-down-navigation",
-      "engagementRate": 0.6038
+      "engagementRate": 0.6038,
+      "sessions": 53
     },
     {
       "path": "/release-notes/stanford-sites-roadmap",
-      "engagementRate": 0.7091
+      "engagementRate": 0.7091,
+      "sessions": 55
     },
     {
       "path": "/about-stanford-sites/about-stanford-sites-platform/web-application-firewall-waf",
-      "engagementRate": 0.5849
+      "engagementRate": 0.5849,
+      "sessions": 53
     },
     {
       "path": "/build/best-practices/create-accessible-headings/heading-examples",
-      "engagementRate": 0.5532
+      "engagementRate": 0.5532,
+      "sessions": 47
     },
     {
       "path": "/about-stanford-sites/stanford-sites-policies/stanford-sites-renewal-and-retirement",
-      "engagementRate": 0.2885
+      "engagementRate": 0.2885,
+      "sessions": 52
     },
     {
       "path": "/build/working-text-editor/create-links",
-      "engagementRate": 0.5349
+      "engagementRate": 0.5349,
+      "sessions": 43
     },
     {
       "path": "/build/paragraphs/page-title-banner",
-      "engagementRate": 0.7273
+      "engagementRate": 0.7273,
+      "sessions": 44
     },
     {
       "path": "/build/working-text-editor/do-more-text-editor",
-      "engagementRate": 0.7273
+      "engagementRate": 0.7273,
+      "sessions": 33
     },
     {
       "path": "/news/stanford-sites-v700-released-942026",
-      "engagementRate": 0.5536
+      "engagementRate": 0.5536,
+      "sessions": 56
     },
     {
       "path": "/manage-your-site/menus-other-sitewide-features/local-footer-modifications",
-      "engagementRate": 0.7407
+      "engagementRate": 0.7407,
+      "sessions": 54
     },
     {
       "path": "/build/event-content-type/event-list-pages",
-      "engagementRate": 0.5745
+      "engagementRate": 0.5745,
+      "sessions": 47
     },
     {
       "path": "/build/working-text-editor/mathjax-displaying-math-notation-your-page",
-      "engagementRate": 0.4468
+      "engagementRate": 0.4468,
+      "sessions": 47
     },
     {
       "path": "/build/courses-content-type-and-importer",
-      "engagementRate": 0.6667
+      "engagementRate": 0.6667,
+      "sessions": 45
     },
     {
       "path": "/build/page-types/publications-content-type/publications-importer",
-      "engagementRate": 0.5714
+      "engagementRate": 0.5714,
+      "sessions": 56
     },
     {
       "path": "/build/media-library/add-and-use-files-media-library/ensure-accessible-documents",
-      "engagementRate": 0.5333
+      "engagementRate": 0.5333,
+      "sessions": 45
     },
     {
       "path": "/about-stanford-sites/design/typography",
-      "engagementRate": 0.5106
+      "engagementRate": 0.5106,
+      "sessions": 47
     },
     {
       "path": "/design/custom-subthemes-stanford-sites",
-      "engagementRate": 0.8718
+      "engagementRate": 0.8718,
+      "sessions": 39
     },
     {
       "path": "/build/opportunity-content-type",
-      "engagementRate": 0.8485
+      "engagementRate": 0.8485,
+      "sessions": 33
     },
     {
       "path": "/design/minimally-branded-subtheme",
-      "engagementRate": 0.8125
+      "engagementRate": 0.8125,
+      "sessions": 48
     },
     {
       "path": "/build/media-library/embeddable-media/add-transcripts-or-longer-descriptions",
-      "engagementRate": 0.6207
+      "engagementRate": 0.6207,
+      "sessions": 29
     },
     {
       "path": "/build/media-library/stanford-digital-repository",
-      "engagementRate": 0.4808
+      "engagementRate": 0.4808,
+      "sessions": 52
     },
     {
       "path": "/build/video",
-      "engagementRate": 0.8222
+      "engagementRate": 0.8222,
+      "sessions": 45
     },
     {
       "path": "/about-stanford-sites/stanford-sites-policies",
-      "engagementRate": 0.7647
+      "engagementRate": 0.7647,
+      "sessions": 34
     },
     {
       "path": "/about-stanford-sites/about-stanford-sites-platform/included-modules",
-      "engagementRate": 0.6957
+      "engagementRate": 0.6957,
+      "sessions": 46
     },
     {
       "path": "/build/paragraphs/image-gallery-paragraph",
-      "engagementRate": 0.6042
+      "engagementRate": 0.6042,
+      "sessions": 48
     },
     {
       "path": "/manage-your-site/menus-other-sitewide-features/manage-global-message",
-      "engagementRate": 0.7174
+      "engagementRate": 0.7174,
+      "sessions": 46
     },
     {
       "path": "/build/create-and-edit-pages/basic-page-content-type/basic-page-layout-options",
-      "engagementRate": 0.8333
+      "engagementRate": 0.8333,
+      "sessions": 42
     },
     {
       "path": "/get-started/site-settings/update-site-name",
-      "engagementRate": 0.7561
+      "engagementRate": 0.7561,
+      "sessions": 41
     },
     {
       "path": "/news",
-      "engagementRate": 0.85
+      "engagementRate": 0.85,
+      "sessions": 40
     },
     {
       "path": "/build/best-practices",
-      "engagementRate": 0.8409
+      "engagementRate": 0.8409,
+      "sessions": 44
     },
     {
       "path": "/manage-your-site/menus-other-sitewide-features/main-navigation-menu/add-custom-menu-item",
-      "engagementRate": 0.8125
+      "engagementRate": 0.8125,
+      "sessions": 32
     },
     {
       "path": "/support/accessibility-support/make-content-accessible/interactive-element-does-not-meet-minimum",
-      "engagementRate": 0.6585
+      "engagementRate": 0.6585,
+      "sessions": 41
     },
     {
       "path": "/build-and-design/site-organization-menus/manage-site-search",
-      "engagementRate": 0.8919
+      "engagementRate": 0.8919,
+      "sessions": 37
     },
     {
       "path": "/manage-your-site/find-manage-site-content/bulk-edit-content",
-      "engagementRate": 0.619
+      "engagementRate": 0.619,
+      "sessions": 42
     },
     {
       "path": "/build/working-text-editor/create-links/creating-buttons-and-action-links",
-      "engagementRate": 0.6047
+      "engagementRate": 0.6047,
+      "sessions": 43
     },
     {
       "path": "/get-started/request-new-site/about-your-unlaunched-site",
-      "engagementRate": 0.8462
+      "engagementRate": 0.8462,
+      "sessions": 39
     },
     {
       "path": "/build/person-profile-page/individual-person-profile-pages",
-      "engagementRate": 0.7857
+      "engagementRate": 0.7857,
+      "sessions": 42
     },
     {
       "path": "/news-new/news-rss-feed",
-      "engagementRate": 0.7222
+      "engagementRate": 0.7222,
+      "sessions": 36
     },
     {
       "path": "/build/create-and-edit-pages/text-editing-basics/add-text-styles",
-      "engagementRate": 0.7
+      "engagementRate": 0.7,
+      "sessions": 40
     },
     {
       "path": "/get-started/site-settings/block-search-engines",
-      "engagementRate": 0.7222
+      "engagementRate": 0.7222,
+      "sessions": 36
     },
     {
       "path": "/build/create-and-edit-pages/text-editing-basics/text-editing-toolbar",
-      "engagementRate": 0.7
+      "engagementRate": 0.7,
+      "sessions": 40
     },
     {
       "path": "/build/publications-content-type/publication-taxonomy",
-      "engagementRate": 0.7742
+      "engagementRate": 0.7742,
+      "sessions": 31
     },
     {
       "path": "/support/accessibility-support/make-content-accessible",
-      "engagementRate": 0.76
+      "engagementRate": 0.76,
+      "sessions": 25
     },
     {
       "path": "/build-and-design/site-organization-menus/manage-site-search/enhance-site-search",
-      "engagementRate": 0.7436
+      "engagementRate": 0.7436,
+      "sessions": 39
     },
     {
       "path": "/build/video/add-video-card-or-text-area",
-      "engagementRate": 0.7037
+      "engagementRate": 0.7037,
+      "sessions": 27
     },
     {
       "path": "/manage-your-site/marketing-and-analytics",
-      "engagementRate": 0.6905
+      "engagementRate": 0.6905,
+      "sessions": 42
     },
     {
       "path": "/build/create-and-edit-web-pages",
-      "engagementRate": 0.8235
+      "engagementRate": 0.8235,
+      "sessions": 34
     },
     {
       "path": "/support/accessibility-support/fix-issues-siteimprove",
-      "engagementRate": 0.4737
+      "engagementRate": 0.4737,
+      "sessions": 38
     },
     {
       "path": "/get-started/replace-or-remove-default-content",
-      "engagementRate": 0.7879
+      "engagementRate": 0.7879,
+      "sessions": 33
     },
     {
       "path": "/support/site-content-health-checklist",
-      "engagementRate": 0.75
+      "engagementRate": 0.75,
+      "sessions": 36
     },
     {
       "path": "/build/lists-and-filtered-lists/filtered-lists-paragraph",
-      "engagementRate": 0.7436
+      "engagementRate": 0.7436,
+      "sessions": 39
     },
     {
       "path": "/build/page-types/event-content-type/use-stanford-events-widget-display-events",
-      "engagementRate": 0.6486
+      "engagementRate": 0.6486,
+      "sessions": 37
     },
     {
       "path": "/about-stanford-sites/glossary-terms",
-      "engagementRate": 0.5862
+      "engagementRate": 0.5862,
+      "sessions": 29
     },
     {
       "path": "/build/media-library/embeddable-media/find-media-and-embeddables",
-      "engagementRate": 0.5385
+      "engagementRate": 0.5385,
+      "sessions": 26
     },
     {
       "path": "/news-new/news-article-display",
-      "engagementRate": 0.8857
+      "engagementRate": 0.8857,
+      "sessions": 35
     },
     {
       "path": "/manage-your-site/find-manage-site-content/manage-content-type",
-      "engagementRate": 0.8788
+      "engagementRate": 0.8788,
+      "sessions": 33
     },
     {
       "path": "/build/paragraphs/lists-paragraph/lists-paragraph-examples",
-      "engagementRate": 0.6757
+      "engagementRate": 0.6757,
+      "sessions": 37
     },
     {
       "path": "/build/lists-and-filtered-lists/filtered-lists-paragraph/set-filters-filtered-list-paragraph",
-      "engagementRate": 0.6538
+      "engagementRate": 0.6538,
+      "sessions": 26
     },
     {
       "path": "/manage-your-site/find-manage-site-content/access-denied-and-page-not-found-pages",
-      "engagementRate": 0.6053
+      "engagementRate": 0.6053,
+      "sessions": 38
     },
     {
       "path": "/stanford-only-sites/stanford-sites-intranet-guide/access-security-intranets",
-      "engagementRate": 0.6
+      "engagementRate": 0.6,
+      "sessions": 35
     },
     {
       "path": "/support/your-questions-answered",
-      "engagementRate": 0.8421
+      "engagementRate": 0.8421,
+      "sessions": 38
     },
     {
       "path": "/release-notes/requested-features",
-      "engagementRate": 0.8286
+      "engagementRate": 0.8286,
+      "sessions": 35
     },
     {
       "path": "/build/policy-content-type",
-      "engagementRate": 0.8148
+      "engagementRate": 0.8148,
+      "sessions": 27
     },
     {
       "path": "/build/add-content-page/working-sections/section-options",
-      "engagementRate": 0.8
+      "engagementRate": 0.8,
+      "sessions": 40
     },
     {
       "path": "/build/page-types/event-content-type/import-events-stanford-events-calendar",
-      "engagementRate": 0.7436
+      "engagementRate": 0.7436,
+      "sessions": 39
     },
     {
       "path": "/build/video/audiovisual-content-type",
-      "engagementRate": 0.7436
+      "engagementRate": 0.7436,
+      "sessions": 39
     },
     {
       "path": "/build/build-ai-ready-site/use-meta-tags-ai-friendly-pages",
-      "engagementRate": 0.5
+      "engagementRate": 0.5,
+      "sessions": 36
     },
     {
       "path": "/build/paragraphs/stat-card",
-      "engagementRate": 0.8
+      "engagementRate": 0.8,
+      "sessions": 30
     },
     {
       "path": "/build/media-library/alternative-text-alt-text-images-and-other-media/alt-text-best-practices",
-      "engagementRate": 0.7333
+      "engagementRate": 0.7333,
+      "sessions": 30
     },
     {
       "path": "/build/build-ai-ready-site/make-your-content-machine-readable-schemaorg-metadata",
-      "engagementRate": 0.5588
+      "engagementRate": 0.5588,
+      "sessions": 34
     },
     {
       "path": "/news/stanford-sites-v623-released-6182026",
-      "engagementRate": 0.8571
+      "engagementRate": 0.8571,
+      "sessions": 28
     },
     {
       "path": "/news-new/news-spotlight-display",
-      "engagementRate": 0.7941
+      "engagementRate": 0.7941,
+      "sessions": 34
     },
     {
       "path": "/manage-your-site/find-manage-site-content/clone-pages",
-      "engagementRate": 0.7353
+      "engagementRate": 0.7353,
+      "sessions": 34
     },
     {
       "path": "/build/page-types/basic-page-content-type-0/create-list-basic-pages-basic-page-type",
-      "engagementRate": 0.7241
+      "engagementRate": 0.7241,
+      "sessions": 29
     },
     {
       "path": "/build/paragraphs/faq-accordion-list",
-      "engagementRate": 0.7222
+      "engagementRate": 0.7222,
+      "sessions": 36
     },
     {
       "path": "/build/taxonomy/taxonomy-best-practices",
-      "engagementRate": 0.8387
+      "engagementRate": 0.8387,
+      "sessions": 31
     },
     {
       "path": "/events",
-      "engagementRate": 0.8276
+      "engagementRate": 0.8276,
+      "sessions": 29
     },
     {
       "path": "/build/paragraphs/lists-paragraph",
-      "engagementRate": 0.8182
+      "engagementRate": 0.8182,
+      "sessions": 22
     },
     {
       "path": "/build/event-content-type/event-taxonomies",
-      "engagementRate": 0.7742
+      "engagementRate": 0.7742,
+      "sessions": 31
     },
     {
       "path": "/build-and-design/site-organization-menus/manage-site-search/add-metadata-basic-page",
-      "engagementRate": 0.7353
+      "engagementRate": 0.7353,
+      "sessions": 34
     },
     {
       "path": "/build/video/media-caption-paragraph",
-      "engagementRate": 0.6333
+      "engagementRate": 0.6333,
+      "sessions": 30
     },
     {
       "path": "/manage-your-site/marketing-and-analytics/view-google-search-console",
-      "engagementRate": 0.625
+      "engagementRate": 0.625,
+      "sessions": 32
     },
     {
       "path": "/design/faculty-subtheme",
-      "engagementRate": 0.8065
+      "engagementRate": 0.8065,
+      "sessions": 31
     },
     {
       "path": "/manage-your-site/menus-other-sitewide-features/manage-super-footer",
-      "engagementRate": 0.7188
+      "engagementRate": 0.7188,
+      "sessions": 32
     },
     {
       "path": "/build/working-text-editor/tables/customize-tables",
-      "engagementRate": 0.697
+      "engagementRate": 0.697,
+      "sessions": 33
     },
     {
       "path": "/news-new/pre-built-news-list-page",
-      "engagementRate": 0.5625
+      "engagementRate": 0.5625,
+      "sessions": 32
     },
     {
       "path": "/manage-your-site/sitewide-features",
-      "engagementRate": 0.75
+      "engagementRate": 0.75,
+      "sessions": 12
     },
     {
       "path": "/build/taxonomy/basic-page-type",
-      "engagementRate": 0.6333
+      "engagementRate": 0.6333,
+      "sessions": 30
     },
     {
       "path": "/news/stanford-sites-v702-released-9232026",
-      "engagementRate": 0.5862
+      "engagementRate": 0.5862,
+      "sessions": 29
     },
     {
       "path": "/get-started-stanford-sites",
-      "engagementRate": 0.8462
+      "engagementRate": 0.8462,
+      "sessions": 26
     },
     {
       "path": "/get-started-stanford-sites/log-edit-your-site",
-      "engagementRate": 0.84
+      "engagementRate": 0.84,
+      "sessions": 25
     },
     {
       "path": "/manage-your-site/domains-and-urls/manage-page-paths",
-      "engagementRate": 0.75
+      "engagementRate": 0.75,
+      "sessions": 28
     },
     {
       "path": "/manage-your-site/menus-other-sitewide-features/local-footer-modifications/add-emails-and-phone",
-      "engagementRate": 0.7097
+      "engagementRate": 0.7097,
+      "sessions": 31
     },
     {
       "path": "/support/site-launch-checklist/about-subdomains",
-      "engagementRate": 0.7083
+      "engagementRate": 0.7083,
+      "sessions": 24
     },
     {
       "path": "/courses",
-      "engagementRate": 0.9259
+      "engagementRate": 0.9259,
+      "sessions": 27
     },
     {
       "path": "/publications/ill-winds",
-      "engagementRate": 0.8519
+      "engagementRate": 0.8519,
+      "sessions": 27
     },
     {
       "path": "/manage-your-site/user-accounts-and-roles/workgroup-mapping-and-user-roles",
-      "engagementRate": 0.7143
+      "engagementRate": 0.7143,
+      "sessions": 28
     },
     {
       "path": "/support/accessibility-support/accessibility-testing/checking-page-accessibility",
-      "engagementRate": 0.7143
+      "engagementRate": 0.7143,
+      "sessions": 28
     },
     {
       "path": "/build-and-design/manage-site-content/hide-external-link-icons",
-      "engagementRate": 0.6667
+      "engagementRate": 0.6667,
+      "sessions": 30
     },
     {
       "path": "/manage-your-site/domains-and-urls/how-bulk-upload-redirects",
-      "engagementRate": 0.6552
+      "engagementRate": 0.6552,
+      "sessions": 29
     },
     {
       "path": "/build/lists-and-filtered-lists/comparing-teaser-and-lists",
-      "engagementRate": 0.6296
+      "engagementRate": 0.6296,
+      "sessions": 27
     },
     {
       "path": "/build/working-text-editor/create-links/link-external-documents",
-      "engagementRate": 0.6071
+      "engagementRate": 0.6071,
+      "sessions": 28
     },
     {
       "path": "/build/event-content-type/event-series",
-      "engagementRate": 0.5714
+      "engagementRate": 0.5714,
+      "sessions": 28
     },
     {
       "path": "/build/create-and-edit-pages/text-editing-basics/add-icons-text-area",
-      "engagementRate": 0.4815
+      "engagementRate": 0.4815,
+      "sessions": 27
     },
     {
       "path": "/build/paragraphs/lists-paragraph/advanced-options-lists-paragraph",
-      "engagementRate": 0.8621
+      "engagementRate": 0.8621,
+      "sessions": 29
     },
     {
       "path": "/support/accessibility-support",
-      "engagementRate": 0.7407
+      "engagementRate": 0.7407,
+      "sessions": 27
     },
     {
       "path": "/support/accessibility-support/accessibility-testing",
-      "engagementRate": 0.6667
+      "engagementRate": 0.6667,
+      "sessions": 27
     },
     {
       "path": "/about-stanford-sites/about-stanford-sites-platform",
-      "engagementRate": 0.875
+      "engagementRate": 0.875,
+      "sessions": 24
     },
     {
       "path": "/build/create-layouts-sections-and-paragraphs/create-columns-sections",
-      "engagementRate": 0.75
+      "engagementRate": 0.75,
+      "sessions": 24
     },
     {
       "path": "/news/stanford-sites-v703-released-10292026",
-      "engagementRate": 0.72
+      "engagementRate": 0.72,
+      "sessions": 25
     },
     {
       "path": "/stanford-only-sites/stanford-sites-intranet-guide/access-security/file-sharing-strategies-intranet",
-      "engagementRate": 0.4
+      "engagementRate": 0.4,
+      "sessions": 25
     },
     {
       "path": "/build/create-and-edit-pages/text-editing-basics/do-more-text-editor",
-      "engagementRate": 0.3684
+      "engagementRate": 0.3684,
+      "sessions": 19
     },
     {
       "path": "/build/create-and-edit-web-pages/create-layouts-sections-and-paragraphs",
-      "engagementRate": 0.7727
+      "engagementRate": 0.7727,
+      "sessions": 22
     },
     {
       "path": "/build/paragraphs/spacer",
-      "engagementRate": 0.7308
+      "engagementRate": 0.7308,
+      "sessions": 26
     },
     {
       "path": "/build/media-library/categorizing-media-your-media-library",
-      "engagementRate": 0.7083
+      "engagementRate": 0.7083,
+      "sessions": 24
     },
     {
       "path": "/build/media-library/images/recommended-image-sizes",
-      "engagementRate": 0.4839
+      "engagementRate": 0.4839,
+      "sessions": 31
     },
     {
       "path": "/build/media-library/alternative-text-alt-text-images-and-other-media/best-practices-writing-alt",
-      "engagementRate": 0.44
+      "engagementRate": 0.44,
+      "sessions": 25
     },
     {
       "path": "/people/examples",
-      "engagementRate": 0.9048
+      "engagementRate": 0.9048,
+      "sessions": 21
     },
     {
       "path": "/build/news-content-type/categorize-news",
-      "engagementRate": 0.875
+      "engagementRate": 0.875,
+      "sessions": 24
     },
     {
       "path": "/build/media-library/images/add-images-media-library",
-      "engagementRate": 0.7917
+      "engagementRate": 0.7917,
+      "sessions": 24
     },
     {
       "path": "/build/taxonomy/courses-taxonomy",
-      "engagementRate": 0.75
+      "engagementRate": 0.75,
+      "sessions": 20
     },
     {
       "path": "/get-started/site-settings/enhancing-site-search/how-set-third-party-search",
-      "engagementRate": 0.7391
+      "engagementRate": 0.7391,
+      "sessions": 23
     },
     {
       "path": "/build/taxonomy/shared-tags",
-      "engagementRate": 0.6667
+      "engagementRate": 0.6667,
+      "sessions": 24
     },
     {
       "path": "/build/lists-and-filtered-lists/filtered-lists-paragraph/example-filtered-list-opportunities-default",
-      "engagementRate": 0.6522
+      "engagementRate": 0.6522,
+      "sessions": 23
     },
     {
       "path": "/people/kerri-augenstein",
-      "engagementRate": 0.8636
+      "engagementRate": 0.8636,
+      "sessions": 22
     },
     {
       "path": "/about-stanford-sites/stanford-sites-policies/personal-sites-stanford-sites",
-      "engagementRate": 0.8571
+      "engagementRate": 0.8571,
+      "sessions": 21
     },
     {
       "path": "/build-and-design/site-organization-menus/manage-site-search/exclude-search",
-      "engagementRate": 0.6957
+      "engagementRate": 0.6957,
+      "sessions": 23
     },
     {
       "path": "/build/create-and-edit-pages/text-editing-basics/identify-non-english-text",
-      "engagementRate": 0.6522
+      "engagementRate": 0.6522,
+      "sessions": 23
     },
     {
       "path": "/build/courses-content-type-and-importer/courses-list-page",
-      "engagementRate": 0.6316
+      "engagementRate": 0.6316,
+      "sessions": 19
     },
     {
       "path": "/about-stanford-sites/stanford-sites-policies/university-policies-related-website-ownership",
-      "engagementRate": 0.9048
+      "engagementRate": 0.9048,
+      "sessions": 21
     },
     {
       "path": "/about-stanford-sites/stanford-sites-policies/embeddable-content-policy",
-      "engagementRate": 0.8571
+      "engagementRate": 0.8571,
+      "sessions": 21
     },
     {
       "path": "/build/paragraphs/card-paragraph/card-paragraph-examples",
-      "engagementRate": 0.8182
+      "engagementRate": 0.8182,
+      "sessions": 22
     },
     {
       "path": "/manage-your-site/marketing-and-analytics/add-social-media-marketing-tools",
-      "engagementRate": 0.8182
+      "engagementRate": 0.8182,
+      "sessions": 22
     },
     {
       "path": "/build/video/accessibility-tips-videos",
-      "engagementRate": 0.8095
+      "engagementRate": 0.8095,
+      "sessions": 21
     },
     {
       "path": "/support/resources-digital-communicators",
-      "engagementRate": 0.6
+      "engagementRate": 0.6,
+      "sessions": 20
     },
     {
       "path": "/build/build-ai-ready-site/use-meta-tags-ai-friendly-pages/default-page-metadata",
-      "engagementRate": 0.5714
+      "engagementRate": 0.5714,
+      "sessions": 21
     },
     {
       "path": "/news/whats-new-stanford-sites-v400",
-      "engagementRate": 0.95
+      "engagementRate": 0.95,
+      "sessions": 20
     },
     {
       "path": "/stanford-only-sites/stanford-sites-intranet-guide/common-questions-about-stanford-sites-intranet",
-      "engagementRate": 0.85
+      "engagementRate": 0.85,
+      "sessions": 20
     },
     {
       "path": "/news/release-notes/6x",
-      "engagementRate": 0.8235
+      "engagementRate": 0.8235,
+      "sessions": 17
     },
     {
       "path": "/manage-your-site/find-manage-site-content/schedule-publish",
-      "engagementRate": 0.6957
+      "engagementRate": 0.6957,
+      "sessions": 23
     },
     {
       "path": "/stanford-only-sites/stanford-sites-intranet-guide/access-security/grant-or-remove-intranet-access",
-      "engagementRate": 0.6522
+      "engagementRate": 0.6522,
+      "sessions": 23
     },
     {
       "path": "/build/create-and-edit-pages/text-editing-basics/create-links",
-      "engagementRate": 0.3571
+      "engagementRate": 0.3571,
+      "sessions": 14
     },
     {
       "path": "/about-stanford-sites/stanford-sites-policies/university-policies-related-website-ownership/social",
-      "engagementRate": 0.8333
+      "engagementRate": 0.8333,
+      "sessions": 18
     },
     {
       "path": "/build/lists-and-filtered-lists/filtered-lists-paragraph/example-filtered-list-opportunities-card",
-      "engagementRate": 0.65
+      "engagementRate": 0.65,
+      "sessions": 20
     },
     {
       "path": "/news/release-notes/7x",
-      "engagementRate": 0.6316
+      "engagementRate": 0.6316,
+      "sessions": 19
     },
     {
       "path": "/stanford-only-sites/stanford-sites-intranet-guide/access-security/page-level-access-role-intranets",
-      "engagementRate": 0.619
+      "engagementRate": 0.619,
+      "sessions": 21
     },
     {
       "path": "/build/create-and-edit-pages/text-editing-basics/create-links/create-buttons-and-action-links",
-      "engagementRate": 0.45
+      "engagementRate": 0.45,
+      "sessions": 20
     },
     {
       "path": "/build/add-content-page/working-sections/vertical-dividers-section",
-      "engagementRate": 0.8889
+      "engagementRate": 0.8889,
+      "sessions": 18
     },
     {
       "path": "/about-stanford-sites/stanford-sites-policies/stanford-sites-renewal-and-retirement/site-retirement",
-      "engagementRate": 0.8421
+      "engagementRate": 0.8421,
+      "sessions": 19
     },
     {
       "path": "/news/stanford-sites-v622-released-5202026",
-      "engagementRate": 0.8333
+      "engagementRate": 0.8333,
+      "sessions": 18
     },
     {
       "path": "/people/customer-experience",
-      "engagementRate": 0.7895
+      "engagementRate": 0.7895,
+      "sessions": 19
     },
     {
       "path": "/build/media-library/embeddable-media/use-embeddable-create-reusable-element-across-multiple-pages",
-      "engagementRate": 0.7778
+      "engagementRate": 0.7778,
+      "sessions": 18
     },
     {
       "path": "/news/stanford-sites-v520-released-3282024",
-      "engagementRate": 0.7778
+      "engagementRate": 0.7778,
+      "sessions": 18
     },
     {
       "path": "/news/stanford-profiles-maintenance",
-      "engagementRate": 0.7222
+      "engagementRate": 0.7222,
+      "sessions": 18
     },
     {
       "path": "/build/lists-and-filtered-lists/update-legacy-version-filtered-page",
-      "engagementRate": 0.6667
+      "engagementRate": 0.6667,
+      "sessions": 18
     },
     {
       "path": "/news/design",
-      "engagementRate": 0.9412
+      "engagementRate": 0.9412,
+      "sessions": 17
     },
     {
       "path": "/courses/physwell",
-      "engagementRate": 0.8824
+      "engagementRate": 0.8824,
+      "sessions": 17
     },
     {
       "path": "/news/stanford-sites-v620-released-2192026",
-      "engagementRate": 0.8824
+      "engagementRate": 0.8824,
+      "sessions": 17
     },
     {
       "path": "/people/catalina-verdu-cano",
-      "engagementRate": 0.8824
+      "engagementRate": 0.8824,
+      "sessions": 17
     },
     {
       "path": "/people/example-person",
-      "engagementRate": 0.8824
+      "engagementRate": 0.8824,
+      "sessions": 17
     },
     {
       "path": "/events/past",
-      "engagementRate": 0.8333
+      "engagementRate": 0.8333,
+      "sessions": 18
     },
     {
       "path": "/news/stanford-sites-v541-released-2132025",
-      "engagementRate": 0.8333
+      "engagementRate": 0.8333,
+      "sessions": 18
     },
     {
       "path": "/av/stanford-design-systemdecanter",
-      "engagementRate": 0.8235
+      "engagementRate": 0.8235,
+      "sessions": 17
     },
     {
       "path": "/news/stanford-sites-v560-released-582025",
-      "engagementRate": 0.8235
+      "engagementRate": 0.8235,
+      "sessions": 17
     },
     {
       "path": "/news/stanford-sites-v570-released-6262025",
-      "engagementRate": 0.8235
+      "engagementRate": 0.8235,
+      "sessions": 17
     },
     {
       "path": "/build/page-types/publications-content-type/publications-list-page",
-      "engagementRate": 0.8
+      "engagementRate": 0.8,
+      "sessions": 15
     },
     {
       "path": "/courses/autumn",
-      "engagementRate": 0.7778
+      "engagementRate": 0.7778,
+      "sessions": 18
     },
     {
       "path": "/build/other-options-stanford-only-sites",
-      "engagementRate": 0.7
+      "engagementRate": 0.7,
+      "sessions": 10
     },
     {
       "path": "/support/accessibility-support/make-content-accessible/container-element-empty",
-      "engagementRate": 0.6316
+      "engagementRate": 0.6316,
+      "sessions": 19
     },
     {
       "path": "/build/taxonomy/basic-page-type-taxonomy",
-      "engagementRate": 0.3889
+      "engagementRate": 0.3889,
+      "sessions": 18
     },
     {
       "path": "/people/developers",
-      "engagementRate": 1
+      "engagementRate": 1,
+      "sessions": 16
     },
     {
       "path": "/news/web-editors-toolkit",
-      "engagementRate": 0.8824
+      "engagementRate": 0.8824,
+      "sessions": 17
     },
     {
       "path": "/about-stanford-sites/about-stanford-sites-platform/help-make-stanford-sites-even-better",
-      "engagementRate": 0.875
+      "engagementRate": 0.875,
+      "sessions": 16
     },
     {
       "path": "/about-stanford-sites/stanford-sites-policies/security-standards",
-      "engagementRate": 0.875
+      "engagementRate": 0.875,
+      "sessions": 16
     },
     {
       "path": "/news/accessibility",
-      "engagementRate": 0.875
+      "engagementRate": 0.875,
+      "sessions": 16
     },
     {
       "path": "/news/stanford-sites-v530-released-9262024",
-      "engagementRate": 0.8667
+      "engagementRate": 0.8667,
+      "sessions": 15
     },
     {
       "path": "/people/sara-worrell-berg",
-      "engagementRate": 0.8235
+      "engagementRate": 0.8235,
+      "sessions": 17
     },
     {
       "path": "/about-stanford-sites/stanford-sites-policies/university-policies-related-website-ownership-0",
-      "engagementRate": 0.8125
+      "engagementRate": 0.8125,
+      "sessions": 16
     },
     {
       "path": "/news/stanford-sites-news",
-      "engagementRate": 0.8125
+      "engagementRate": 0.8125,
+      "sessions": 16
     },
     {
       "path": "/about-stanford-sites/stanford-sites-policies/university-policies-related-website-ownership/stanford",
-      "engagementRate": 0.75
+      "engagementRate": 0.75,
+      "sessions": 16
     },
     {
       "path": "/news/planned-outage-june-19-21-workgroup-access-impacts-stanford-sites-and-stanford-sites-intranet",
-      "engagementRate": 0.75
+      "engagementRate": 0.75,
+      "sessions": 16
     },
     {
       "path": "/news/stanford-sites-v300-released-8242022",
-      "engagementRate": 0.75
+      "engagementRate": 0.75,
+      "sessions": 16
     },
     {
       "path": "/build/taxonomy/shared-tags/create-list-related-content-using-shared-tags",
-      "engagementRate": 0.7222
+      "engagementRate": 0.7222,
+      "sessions": 18
     },
     {
       "path": "/support/launch-your-site/about-subdomains",
-      "engagementRate": 0.6667
+      "engagementRate": 0.6667,
+      "sessions": 21
     },
     {
       "path": "/build/person-profile-page/individual-person-profile-pages/link-profile-external-site",
-      "engagementRate": 0.6471
+      "engagementRate": 0.6471,
+      "sessions": 17
     },
     {
       "path": "/build/media-library/add-and-use-files-media-library/create-accessible-documents",
-      "engagementRate": 0.4
+      "engagementRate": 0.4,
+      "sessions": 15
     },
     {
       "path": "/build/people/person-content-type-profile-pages",
-      "engagementRate": 0.2941
+      "engagementRate": 0.2941,
+      "sessions": 17
     },
     {
       "path": "/about-stanford-sites/stanford-sites-policies/personal-sites-stanford-sites/themes-personal-sites",
-      "engagementRate": 1
+      "engagementRate": 1,
+      "sessions": 15
     },
     {
       "path": "/people/managers",
-      "engagementRate": 1
+      "engagementRate": 1,
+      "sessions": 15
     },
     {
       "path": "/build/person-profile-page/individual-person-profile-pages/add-related-content-profiles",
-      "engagementRate": 0.9333
+      "engagementRate": 0.9333,
+      "sessions": 15
     },
     {
       "path": "/news/stanford-sites-v610-released-1232025",
-      "engagementRate": 0.9333
+      "engagementRate": 0.9333,
+      "sessions": 15
     },
     {
       "path": "/people/kupaamauloa-kekauoha",
-      "engagementRate": 0.9333
+      "engagementRate": 0.9333,
+      "sessions": 15
     },
     {
       "path": "/people/dena-debry",
-      "engagementRate": 0.875
+      "engagementRate": 0.875,
+      "sessions": 16
     },
     {
       "path": "/about-stanford-sites/stanford-sites-policies/automated-scanning-tools",
-      "engagementRate": 0.8667
+      "engagementRate": 0.8667,
+      "sessions": 15
     },
     {
       "path": "/about-stanford-sites/stanford-sites-policies/stanford-sites-renewal-and-retirement/annual-renewal",
-      "engagementRate": 0.8667
+      "engagementRate": 0.8667,
+      "sessions": 15
     },
     {
       "path": "/about-stanford-sites/stanford-sites-policies/university-policies-related-website-ownership/online",
-      "engagementRate": 0.8667
+      "engagementRate": 0.8667,
+      "sessions": 15
     },
     {
       "path": "/build/taxonomy/opportunities-taxonomies",
-      "engagementRate": 0.8667
+      "engagementRate": 0.8667,
+      "sessions": 15
     },
     {
       "path": "/events/uit-tech-training-sessions",
-      "engagementRate": 0.8667
+      "engagementRate": 0.8667,
+      "sessions": 15
     },
     {
       "path": "/news/user-experience",
-      "engagementRate": 0.8667
+      "engagementRate": 0.8667,
+      "sessions": 15
     },
     {
       "path": "/events/sample-events",
-      "engagementRate": 0.8125
+      "engagementRate": 0.8125,
+      "sessions": 16
     },
     {
       "path": "/av/accessibility-web-development-process",
-      "engagementRate": 0.8
+      "engagementRate": 0.8,
+      "sessions": 15
     },
     {
       "path": "/events/other",
-      "engagementRate": 0.8
+      "engagementRate": 0.8,
+      "sessions": 15
     },
     {
       "path": "/news/stanford-sites-v251-released-7212022",
-      "engagementRate": 0.8
+      "engagementRate": 0.8,
+      "sessions": 15
     },
     {
       "path": "/news/stanford-sites-v510-released-1272023",
-      "engagementRate": 0.8
+      "engagementRate": 0.8,
+      "sessions": 15
     },
     {
       "path": "/news/sws-service-news",
-      "engagementRate": 0.8
+      "engagementRate": 0.8,
+      "sessions": 15
     },
     {
       "path": "/people/caryl-westerberg",
-      "engagementRate": 0.8
+      "engagementRate": 0.8,
+      "sessions": 15
     },
     {
       "path": "/people/john-bickar",
-      "engagementRate": 0.8
+      "engagementRate": 0.8,
+      "sessions": 15
     },
     {
       "path": "/support/engage-stanford-sites-community",
-      "engagementRate": 0.8
+      "engagementRate": 0.8,
+      "sessions": 15
     },
     {
       "path": "/av/content-accessibility-and-stanford-sites",
-      "engagementRate": 0.75
+      "engagementRate": 0.75,
+      "sessions": 16
     },
     {
       "path": "/build/page-types/event-content-type/event-rss-feed",
-      "engagementRate": 0.75
+      "engagementRate": 0.75,
+      "sessions": 16
     },
     {
       "path": "/people/wen-yu-fang",
-      "engagementRate": 0.75
+      "engagementRate": 0.75,
+      "sessions": 16
     },
     {
       "path": "/about-stanford-sites/stanford-sites-policies/university-policies-related-website-ownership/digital",
-      "engagementRate": 0.7333
+      "engagementRate": 0.7333,
+      "sessions": 15
     },
     {
       "path": "/news-new/categorize-news-news-type-taxonomy",
-      "engagementRate": 0.4667
+      "engagementRate": 0.4667,
+      "sessions": 15
     },
     {
       "path": "/build/people/person-profile-importer",
-      "engagementRate": 0.4167
+      "engagementRate": 0.4167,
+      "sessions": 12
     },
     {
       "path": "/stanford-only-sites/stanford-sites-intranet-guide/access-security-intranets/file-sharing-strategies",
-      "engagementRate": 0.4
+      "engagementRate": 0.4,
+      "sessions": 15
     },
     {
       "path": "/build/best-practices/best-practices-providing-contact-information",
-      "engagementRate": 0.3125
+      "engagementRate": 0.3125,
+      "sessions": 16
     },
     {
       "path": "/events/related-events",
-      "engagementRate": 1
+      "engagementRate": 1,
+      "sessions": 14
     },
     {
       "path": "/people/melanie-biton",
-      "engagementRate": 1
+      "engagementRate": 1,
+      "sessions": 14
     },
     {
       "path": "/about-stanford-sites/stanford-sites-policies/university-policies-related-website-ownership-3",
-      "engagementRate": 0.9286
+      "engagementRate": 0.9286,
+      "sessions": 14
     },
     {
       "path": "/access-denied",
-      "engagementRate": 0.9286
+      "engagementRate": 0.9286,
+      "sessions": 14
     },
     {
       "path": "/courses/eps",
-      "engagementRate": 0.9286
+      "engagementRate": 0.9286,
+      "sessions": 14
     },
     {
       "path": "/design/faculty-subtheme/faculty-subtheme-features",
-      "engagementRate": 0.9286
+      "engagementRate": 0.9286,
+      "sessions": 14
     },
     {
       "path": "/events/conferencesymposium",
-      "engagementRate": 0.9286
+      "engagementRate": 0.9286,
+      "sessions": 14
     },
     {
       "path": "/events/stanford-sites-onboarding-sessions",
-      "engagementRate": 0.9286
+      "engagementRate": 0.9286,
+      "sessions": 14
     },
     {
       "path": "/news/stanford-sites-v240-released-3312022",
-      "engagementRate": 0.9286
+      "engagementRate": 0.9286,
+      "sessions": 14
     },
     {
       "path": "/news/stanford-sites-v511-released-2222024",
-      "engagementRate": 0.9286
+      "engagementRate": 0.9286,
+      "sessions": 14
     },
     {
       "path": "/news/stanford-sites-v540-released-11212024",
-      "engagementRate": 0.9286
+      "engagementRate": 0.9286,
+      "sessions": 14
     },
     {
       "path": "/news/stanford-sites-v600-released-8282025",
-      "engagementRate": 0.9286
+      "engagementRate": 0.9286,
+      "sessions": 14
     },
     {
       "path": "/node/2656",
-      "engagementRate": 0.9231
+      "engagementRate": 0.9231,
+      "sessions": 13
     },
     {
       "path": "/av/learning-pivot-while-building-momentum",
-      "engagementRate": 0.8571
+      "engagementRate": 0.8571,
+      "sessions": 14
     },
     {
       "path": "/news/accessibility-improvements-are-coming-stanford-sites",
-      "engagementRate": 0.8571
+      "engagementRate": 0.8571,
+      "sessions": 14
     },
     {
       "path": "/news/stanford-sites-v250-released-5182022",
-      "engagementRate": 0.8571
+      "engagementRate": 0.8571,
+      "sessions": 14
     },
     {
       "path": "/news/stanford-sites-v310-released-10272022",
-      "engagementRate": 0.8571
+      "engagementRate": 0.8571,
+      "sessions": 14
     },
     {
       "path": "/news/stanford-sites-v32-released-6222023",
-      "engagementRate": 0.8571
+      "engagementRate": 0.8571,
+      "sessions": 14
     },
     {
       "path": "/news/stanford-sites-v401-released-7282023",
-      "engagementRate": 0.8571
+      "engagementRate": 0.8571,
+      "sessions": 14
     },
     {
       "path": "/news/stanford-sites-v521-released-4182024",
-      "engagementRate": 0.8571
+      "engagementRate": 0.8571,
+      "sessions": 14
     },
     {
       "path": "/news/stanford-sites-v550-released-3132025",
-      "engagementRate": 0.8571
+      "engagementRate": 0.8571,
+      "sessions": 14
     },
     {
       "path": "/node/191",
-      "engagementRate": 0.8571
+      "engagementRate": 0.8571,
+      "sessions": 14
     },
     {
       "path": "/people/amy-taylor",
-      "engagementRate": 0.8571
+      "engagementRate": 0.8571,
+      "sessions": 14
     },
     {
       "path": "/people/kathleen-verani",
-      "engagementRate": 0.8571
+      "engagementRate": 0.8571,
+      "sessions": 14
     },
     {
       "path": "/get-started-stanford-sites/request-new-site",
-      "engagementRate": 0.7143
+      "engagementRate": 0.7143,
+      "sessions": 14
     },
     {
       "path": "/manage-your-site/menus-other-sitewide-features/local-footer",
-      "engagementRate": 0.6429
+      "engagementRate": 0.6429,
+      "sessions": 14
     },
     {
       "path": "/about-stanford-sites/stanford-sites-designs/faculty-subtheme",
-      "engagementRate": 0.6154
+      "engagementRate": 0.6154,
+      "sessions": 13
     },
     {
       "path": "/build/create-and-edit-pages/text-editing-basics/work-images-and-other-media-text-area",
-      "engagementRate": 0.5
+      "engagementRate": 0.5,
+      "sessions": 12
     },
     {
       "path": "/people/affiliates",
-      "engagementRate": 1
+      "engagementRate": 1,
+      "sessions": 13
     },
     {
       "path": "/people/alyssa-hislop",
-      "engagementRate": 1
+      "engagementRate": 1,
+      "sessions": 13
     },
     {
       "path": "/people/jennifer-breese-kauth",
-      "engagementRate": 1
+      "engagementRate": 1,
+      "sessions": 13
     },
     {
       "path": "/people/project-management",
-      "engagementRate": 1
+      "engagementRate": 1,
+      "sessions": 13
     },
     {
       "path": "/people/shane-cyr",
-      "engagementRate": 1
+      "engagementRate": 1,
+      "sessions": 13
     },
     {
       "path": "/people/uxdesign",
-      "engagementRate": 1
+      "engagementRate": 1,
+      "sessions": 13
     },
     {
       "path": "/about-stanford-sites/stanford-sites-policies/university-policies-related-website-ownership-1",
-      "engagementRate": 0.9231
+      "engagementRate": 0.9231,
+      "sessions": 13
     },
     {
       "path": "/courses/geophys",
-      "engagementRate": 0.9231
+      "engagementRate": 0.9231,
+      "sessions": 13
     },
     {
       "path": "/courses/spring",
-      "engagementRate": 0.9231
+      "engagementRate": 0.9231,
+      "sessions": 13
     },
     {
       "path": "/courses/winter",
-      "engagementRate": 0.9231
+      "engagementRate": 0.9231,
+      "sessions": 13
     },
     {
       "path": "/events/lecturepresentationtalk",
-      "engagementRate": 0.9231
+      "engagementRate": 0.9231,
+      "sessions": 13
     },
     {
       "path": "/events/workshop",
-      "engagementRate": 0.9231
+      "engagementRate": 0.9231,
+      "sessions": 13
     },
     {
       "path": "/news/accessibility-scan-changes",
-      "engagementRate": 0.9231
+      "engagementRate": 0.9231,
+      "sessions": 13
     },
     {
       "path": "/news/related-news",
-      "engagementRate": 0.9231
+      "engagementRate": 0.9231,
+      "sessions": 13
     },
     {
       "path": "/news/site-ownership-information-required-stanford-sites",
-      "engagementRate": 0.9231
+      "engagementRate": 0.9231,
+      "sessions": 13
     },
     {
       "path": "/news/stanford-sites-v311-released-1212022",
-      "engagementRate": 0.9231
+      "engagementRate": 0.9231,
+      "sessions": 13
     },
     {
       "path": "/news/stanford-sites-v402-released-1042023",
-      "engagementRate": 0.9231
+      "engagementRate": 0.9231,
+      "sessions": 13
     },
     {
       "path": "/news/stanford-sites-v602-released-992025",
-      "engagementRate": 0.9231
+      "engagementRate": 0.9231,
+      "sessions": 13
     },
     {
       "path": "/people/david-salazar",
-      "engagementRate": 0.9231
+      "engagementRate": 0.9231,
+      "sessions": 13
     },
     {
       "path": "/people/davina-pallone",
-      "engagementRate": 0.9231
+      "engagementRate": 0.9231,
+      "sessions": 13
     },
     {
       "path": "/people/ian-monroe",
-      "engagementRate": 0.9231
+      "engagementRate": 0.9231,
+      "sessions": 13
     },
     {
       "path": "/people/joe-gilliland-lloyd",
-      "engagementRate": 0.9231
+      "engagementRate": 0.9231,
+      "sessions": 13
     },
     {
       "path": "/publications/thesis-example-publication",
-      "engagementRate": 0.9231
+      "engagementRate": 0.9231,
+      "sessions": 13
     },
     {
       "path": "/news/drupal-10-coming-stanford-sites",
-      "engagementRate": 0.8667
+      "engagementRate": 0.8667,
+      "sessions": 15
     },
     {
       "path": "/news/release-notes/4x",
-      "engagementRate": 0.8571
+      "engagementRate": 0.8571,
+      "sessions": 14
     },
     {
       "path": "/about-stanford-sites/stanford-sites-policies/university-policies-related-website-ownership/terms",
-      "engagementRate": 0.8462
+      "engagementRate": 0.8462,
+      "sessions": 13
     },
     {
       "path": "/build/best-practices/copyright-notices-sites",
-      "engagementRate": 0.7857
+      "engagementRate": 0.7857,
+      "sessions": 14
     },
     {
       "path": "/build/stanford-sites-intranet-guide",
-      "engagementRate": 0.6923
+      "engagementRate": 0.6923,
+      "sessions": 13
     },
     {
       "path": "/events/exhibition",
-      "engagementRate": 1
+      "engagementRate": 1,
+      "sessions": 12
     },
     {
       "path": "/news/release-notes/5x",
-      "engagementRate": 1
+      "engagementRate": 1,
+      "sessions": 12
     },
     {
       "path": "/news/stanford-sites-v400-released-7122023-7162023",
-      "engagementRate": 1
+      "engagementRate": 1,
+      "sessions": 12
     },
     {
       "path": "/people/cynthia-mijares",
-      "engagementRate": 1
+      "engagementRate": 1,
+      "sessions": 12
     },
     {
       "path": "/people/interns",
-      "engagementRate": 1
+      "engagementRate": 1,
+      "sessions": 12
     },
     {
       "path": "/publications/journal-article-example-publication",
-      "engagementRate": 1
+      "engagementRate": 1,
+      "sessions": 12
     },
     {
       "path": "/build/paragraphs/filtered-lists-paragraph/set-filters-filtered-list-paragraph",
-      "engagementRate": 0.8333
+      "engagementRate": 0.8333,
+      "sessions": 12
     },
     {
       "path": "/support/feedback-and-bug-reports",
-      "engagementRate": 0.7273
+      "engagementRate": 0.7273,
+      "sessions": 11
     },
     {
       "path": "/about-stanford-sites/stanford-sites-designs/custom-subthemes-stanford-sites",
-      "engagementRate": 0.6667
+      "engagementRate": 0.6667,
+      "sessions": 12
     },
     {
       "path": "/build/event-content-type/import-events-stanford-events-calendar",
-      "engagementRate": 0.5
+      "engagementRate": 0.5,
+      "sessions": 12
     },
     {
       "path": "/build/media-library/categorize-images-videos-and-other-media",
-      "engagementRate": 0.4167
+      "engagementRate": 0.4167,
+      "sessions": 12
     },
     {
       "path": "/support/give-feedback-stanford-sites",
-      "engagementRate": 0.4167
+      "engagementRate": 0.4167,
+      "sessions": 12
     },
     {
       "path": "/stanford-only-sites/stanford-sites-intranet-guide/stanford-sites-intranet-faqs",
-      "engagementRate": 0.3333
+      "engagementRate": 0.3333,
+      "sessions": 12
     },
     {
       "path": "/403.html",
-      "engagementRate": 1
+      "engagementRate": 1,
+      "sessions": 9
     },
     {
       "path": "/events/example-event",
-      "engagementRate": 1
+      "engagementRate": 1,
+      "sessions": 11
     },
     {
       "path": "/get-started/site-settings/enhancing-site-search/federated-search",
-      "engagementRate": 0.8182
+      "engagementRate": 0.8182,
+      "sessions": 11
     },
     {
       "path": "/manage-your-site/analytics-and-marketing-tools",
-      "engagementRate": 0.6
+      "engagementRate": 0.6,
+      "sessions": 10
     },
     {
       "path": "/build/lists-and-filtered-lists/lists-paragraph/advanced-options-lists-and-filtered-lists-paragraph",
-      "engagementRate": 0.4167
+      "engagementRate": 0.4167,
+      "sessions": 12
     },
     {
       "path": "/build/paragraphs/filtered-lists-paragraph",
-      "engagementRate": 0.9091
+      "engagementRate": 0.9091,
+      "sessions": 11
     },
     {
       "path": "/support/related-resources",
-      "engagementRate": 0.8182
+      "engagementRate": 0.8182,
+      "sessions": 11
     },
     {
       "path": "/build/create-and-edit-pages/create-layouts-sections-and-paragraphs/create-columns-sections",
-      "engagementRate": 0.6667
+      "engagementRate": 0.6667,
+      "sessions": 9
     },
     {
       "path": "/about-stanford-sites/stanford-sites-designs/minimally-branded-subtheme",
-      "engagementRate": 0.6
+      "engagementRate": 0.6,
+      "sessions": 10
     },
     {
       "path": "/build/create-and-edit-pages/basic-page-content-type/create-list-basic-pages-basic-page-type",
-      "engagementRate": 0.5556
+      "engagementRate": 0.5556,
+      "sessions": 9
     },
     {
       "path": "/build/create-and-edit-pages/text-editing-basics/add-math-notation-mathjax",
-      "engagementRate": 0.3
+      "engagementRate": 0.3,
+      "sessions": 10
     },
     {
       "path": "/build/people/person-content-type-profile-pages/link-person-profile-external-site",
-      "engagementRate": 0.3
+      "engagementRate": 0.3,
+      "sessions": 10
     },
     {
       "path": "/news/stanford-sites-v231-released-2102022",
-      "engagementRate": 1
+      "engagementRate": 1,
+      "sessions": 9
     },
     {
       "path": "/build-and-design/site-organization-menus/manage-site-search/enhance-site-search/set-third-party",
-      "engagementRate": 0.625
+      "engagementRate": 0.625,
+      "sessions": 8
     },
     {
       "path": "/stanford-only-sites/stanford-sites-intranet-guide/access-security-intranets/grant-or-remove",
-      "engagementRate": 0.5556
+      "engagementRate": 0.5556,
+      "sessions": 9
     },
     {
       "path": "/build/lists-and-filtered-lists/lists-paragraph/lists-paragraph-examples",
-      "engagementRate": 0.5
+      "engagementRate": 0.5,
+      "sessions": 10
     },
     {
       "path": "/support/accessibility-support/make-content-accessible/fixing-common-accessibility-issues-container",
-      "engagementRate": 0.4444
+      "engagementRate": 0.4444,
+      "sessions": 9
     },
     {
       "path": "/build/courses-content-type-and-importer/pre-built-courses-list-page",
-      "engagementRate": 0.4
+      "engagementRate": 0.4,
+      "sessions": 10
     },
     {
       "path": "/build/paragraphs/page-title-banner-paragraph",
-      "engagementRate": 0.5714
+      "engagementRate": 0.5714,
+      "sessions": 7
     },
     {
       "path": "/build/create-and-edit-pages/text-editing-basics/create-links/link-external-documents",
-      "engagementRate": 0.25
+      "engagementRate": 0.25,
+      "sessions": 8
     },
     {
       "path": "/news/release-notes",
-      "engagementRate": 0.8571
+      "engagementRate": 0.8571,
+      "sessions": 7
     },
     {
       "path": "/build/publication-content-type",
-      "engagementRate": 0.6
+      "engagementRate": 0.6,
+      "sessions": 5
     },
     {
       "path": "/get-started-stanford-sites/replace-or-remove-default-content",
-      "engagementRate": 0.6
+      "engagementRate": 0.6,
+      "sessions": 5
     },
     {
       "path": "/news/stanford-sites-v23-released-12092021",
-      "engagementRate": 0.5714
+      "engagementRate": 0.5714,
+      "sessions": 7
     },
     {
       "path": "/build/create-and-edit-pages/text-editing-basics/tables",
-      "engagementRate": 0.5
+      "engagementRate": 0.5,
+      "sessions": 4
     },
     {
       "path": "/build-and-design/site-organization-menus/manage-site-search/enhance-site-search/federated-search",
-      "engagementRate": 0.4286
+      "engagementRate": 0.4286,
+      "sessions": 7
     },
     {
       "path": "/about-stanford-sites/stanford-sites-policies/university-policies-related-website-ownership-2",
-      "engagementRate": 1
+      "engagementRate": 1,
+      "sessions": 6
     },
     {
       "path": "/build/news-content-type/pre-built-news-list-page",
-      "engagementRate": 1
+      "engagementRate": 1,
+      "sessions": 6
     },
     {
       "path": "/support/feedback",
-      "engagementRate": 0.8571
+      "engagementRate": 0.8571,
+      "sessions": 7
     },
     {
       "path": "/build/paragraphs/comparing-teaser-and-lists",
-      "engagementRate": 0.8
+      "engagementRate": 0.8,
+      "sessions": 5
     },
     {
       "path": "/build/people/pre-built-people-list-page",
-      "engagementRate": 0.5
+      "engagementRate": 0.5,
+      "sessions": 6
     },
     {
       "path": "/people/hannah-dimock",
-      "engagementRate": 0.8
+      "engagementRate": 0.8,
+      "sessions": 5
     },
     {
       "path": "/build/page-types/filtered-list-pages/update-legacy-version-filtered-page",
-      "engagementRate": 0.75
+      "engagementRate": 0.75,
+      "sessions": 4
     },
     {
       "path": "/news/stanford-sites-v22-released-10212021",
-      "engagementRate": 0.6
+      "engagementRate": 0.6,
+      "sessions": 5
     },
     {
       "path": "/build/event-content-type/event-rss-feed",
-      "engagementRate": 0.5
+      "engagementRate": 0.5,
+      "sessions": 6
     },
     {
       "path": "/build/people/person-taxonomy",
-      "engagementRate": 0.5
+      "engagementRate": 0.5,
+      "sessions": 6
     },
     {
       "path": "/stanford-only-sites/stanford-sites-intranet-guide/access-security-intranets/page-level-access-role",
-      "engagementRate": 0.4
+      "engagementRate": 0.4,
+      "sessions": 5
     },
     {
       "path": "/build/page-types/basic-page-content-type-0/add-metadata-basic-page",
-      "engagementRate": 1
+      "engagementRate": 1,
+      "sessions": 4
     },
     {
       "path": "/about-stanford-sites/stanford-sites-designs/stanford-basic-theme",
-      "engagementRate": 0.75
+      "engagementRate": 0.75,
+      "sessions": 4
     },
     {
       "path": "/build/create-and-edit-pages/create-layouts-sections-and-paragraphs/create-columns-sections/section",
-      "engagementRate": 0.75
+      "engagementRate": 0.75,
+      "sessions": 4
     },
     {
       "path": "/support/stanford-sites-onboarding-session",
-      "engagementRate": 0.6667
+      "engagementRate": 0.6667,
+      "sessions": 3
     },
     {
       "path": "/get-started-stanford-sites/site-settings",
-      "engagementRate": 0.6
+      "engagementRate": 0.6,
+      "sessions": 5
     },
     {
       "path": "/about-stanford-sites/stanford-sites-policies/embeddable-content",
-      "engagementRate": 0.5
+      "engagementRate": 0.5,
+      "sessions": 4
     },
     {
       "path": "/build/publication-content-type/publications-importer",
-      "engagementRate": 0.25
+      "engagementRate": 0.25,
+      "sessions": 4
     },
     {
       "path": "/stanford-only-sites/stanford-sites-intranet-guide/frequently-asked-questions-about-stanford-sites",
-      "engagementRate": 0.25
+      "engagementRate": 0.25,
+      "sessions": 4
     },
     {
       "path": "/build/page-types/courses-content-type-and-importer/courses-list-page",
-      "engagementRate": 1
+      "engagementRate": 1,
+      "sessions": 3
     },
     {
       "path": "/news/stanford-sites-v200-released-02182021",
-      "engagementRate": 0.6667
+      "engagementRate": 0.6667,
+      "sessions": 3
     },
     {
       "path": "/build/publication-content-type/pre-built-publications-list-page",
-      "engagementRate": 0.3333
+      "engagementRate": 0.3333,
+      "sessions": 3
     },
     {
       "path": "/index.php/user/login",
-      "engagementRate": 0
+      "engagementRate": 0,
+      "sessions": 3
     },
     {
       "path": "/build/paragraphs/filtered-lists-paragraph/example-filtered-list-opportunities-card-grid-display",
-      "engagementRate": 1
+      "engagementRate": 1,
+      "sessions": 2
     },
     {
       "path": "/build/paragraphs/filtered-lists-paragraph/example-filtered-list-opportunities-default-list-display",
-      "engagementRate": 1
+      "engagementRate": 1,
+      "sessions": 2
     },
     {
       "path": "/about-stanford-sites/university-policies/stanford-identity-guide",
-      "engagementRate": 0.5
+      "engagementRate": 0.5,
+      "sessions": 2
     },
     {
       "path": "/events/solar-eclipse",
-      "engagementRate": 0
+      "engagementRate": 0,
+      "sessions": 2
     },
     {
       "path": "/news/stanford-sites-v201-released-03182021",
-      "engagementRate": 0
+      "engagementRate": 0,
+      "sessions": 2
     },
     {
       "path": "/news/stanford-sites-v213-release-07222021",
-      "engagementRate": 0
+      "engagementRate": 0,
+      "sessions": 2
     },
     {
       "path": "/about-stanford-sites/stanford-sites-design",
-      "engagementRate": 1
+      "engagementRate": 1,
+      "sessions": 1
     },
     {
       "path": "/search/node/menu",
-      "engagementRate": 1
+      "engagementRate": 1,
+      "sessions": 1
     },
     {
       "path": "/what-were-considering-stanford-sites-theme-redesign",
-      "engagementRate": 1
+      "engagementRate": 1,
+      "sessions": 1
     },
     {
       "path": "//checkout/",
-      "engagementRate": 0
+      "engagementRate": 0,
+      "sessions": 1
     },
     {
       "path": "/build-and-design/working-text-editor/doing-more-text-editor",
-      "engagementRate": 0
+      "engagementRate": 0,
+      "sessions": 1
     },
     {
       "path": "/events/introduction-stanford-sites-july-2025",
-      "engagementRate": 0
+      "engagementRate": 0,
+      "sessions": 1
     },
     {
       "path": "/news/stanford-sites-v101-released-03272020",
-      "engagementRate": 0
+      "engagementRate": 0,
+      "sessions": 1
     },
     {
       "path": "/news/stanford-sites-v110-released-04232020",
-      "engagementRate": 0
+      "engagementRate": 0,
+      "sessions": 1
     },
     {
       "path": "/news/stanford-sites-v130-released-06182020",
-      "engagementRate": 0
+      "engagementRate": 0,
+      "sessions": 1
     },
     {
       "path": "/news/stanford-sites-v131-released-07162020",
-      "engagementRate": 0
+      "engagementRate": 0,
+      "sessions": 2
     },
     {
       "path": "/news/stanford-sites-v132-released-08132020",
-      "engagementRate": 0
+      "engagementRate": 0,
+      "sessions": 1
     },
     {
       "path": "/news/stanford-sites-v140-released-09142020",
-      "engagementRate": 0
+      "engagementRate": 0,
+      "sessions": 1
     },
     {
       "path": "/news/stanford-sites-v141-released-10082020",
-      "engagementRate": 0
+      "engagementRate": 0,
+      "sessions": 1
     },
     {
       "path": "/news/stanford-sites-v150-released-11182020",
-      "engagementRate": 0
+      "engagementRate": 0,
+      "sessions": 1
     },
     {
       "path": "/news/stanford-sites-v151-released-12102020",
-      "engagementRate": 0
+      "engagementRate": 0,
+      "sessions": 1
     },
     {
       "path": "/news/stanford-sites-v210-released-04222021",
-      "engagementRate": 0
+      "engagementRate": 0,
+      "sessions": 1
     },
     {
       "path": "/news/stanford-sites-v211-released-05202021",
-      "engagementRate": 0
+      "engagementRate": 0,
+      "sessions": 1
     },
     {
       "path": "/news/stanford-sites-v212-released-06242021",
-      "engagementRate": 0
+      "engagementRate": 0,
+      "sessions": 1
     },
     {
       "path": "/news/stanford-sites-v214-released-09162021",
-      "engagementRate": 0
+      "engagementRate": 0,
+      "sessions": 1
     },
     {
       "path": "/taxonomy/term/9586",
-      "engagementRate": 0
+      "engagementRate": 0,
+      "sessions": 1
     },
     {
       "path": "/test-people-filter",
-      "engagementRate": 0
+      "engagementRate": 0,
+      "sessions": 1
     },
     {
       "path": "/tour/people",
-      "engagementRate": 0
+      "engagementRate": 0,
+      "sessions": 1
+    },
+    {
+      "path": "/news/stanford-sites-v120-released-05212020",
+      "engagementRate": 0,
+      "sessions": 1
     }
   ],
   "searchTerms": [
