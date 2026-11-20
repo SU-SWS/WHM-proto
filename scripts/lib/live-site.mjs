@@ -8,6 +8,7 @@
 // no check date to show, so the whole site fails and keeps its published file.
 
 import { normalizePath } from "./normalize.mjs";
+import { siteimproveLink } from "./siteimprove.mjs";
 import { verdictFor } from "./verdict.mjs";
 
 /** Share of a site's pages at which an issue counts as coming from the template (decisions, Nov 20). */
@@ -211,7 +212,13 @@ export async function buildLiveSite({ site, sample, previous, issueTypes, client
         for (const p of on) {
           const path = normalizePath(p.url, site.url);
           if (!path) continue;
-          const entry = pages.get(path) ?? { path, views: viewsOf(path, p.page_views ?? 0), count: 0, links: [] };
+          const entry = pages.get(path) ?? {
+            path,
+            views: viewsOf(path, p.page_views ?? 0),
+            count: 0,
+            links: [],
+            siteimproveUrl: siteimproveLink(p._siteimprove?.page_report?.href),
+          };
           entry.count++;
           entry.links.push(linkInfo(link));
           pages.set(path, entry);
@@ -279,7 +286,12 @@ export async function buildLiveSite({ site, sample, previous, issueTypes, client
         for (const p of found) {
           const path = normalizePath(p.url, site.url);
           if (!path) continue;
-          const entry = pages.get(path) ?? { path, views: viewsOf(path), count: 0 };
+          const entry = pages.get(path) ?? {
+            path,
+            views: viewsOf(path),
+            count: 0,
+            siteimproveUrl: siteimproveLink(p._siteimprove?.page_report?.href),
+          };
           entry.count += p.occurrences ?? 1;
           pages.set(path, entry);
         }

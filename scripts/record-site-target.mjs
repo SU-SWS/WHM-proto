@@ -14,6 +14,7 @@
 
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
+import { scrubImpmd } from "./lib/siteimprove.mjs";
 
 // docs/siteimprove-endpoints.md. The override is for testing against a mock server.
 const BASE_URL = process.env.SITEIMPROVE_BASE_URL ?? "https://api.us.siteimprove.com/v2";
@@ -54,7 +55,8 @@ async function get(apiPath) {
 async function saveFixture(name, data) {
   if (!fixturesDir) return;
   await mkdir(fixturesDir, { recursive: true });
-  await writeFile(path.join(fixturesDir, name), JSON.stringify(data, null, 2) + "\n");
+  // Siteimprove app links carry an impmd value that is stripped everywhere (decisions, Nov 20).
+  await writeFile(path.join(fixturesDir, name), JSON.stringify(scrubImpmd(data), null, 2) + "\n");
   console.log(`Saved fixture ${name}`);
 }
 

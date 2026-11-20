@@ -3,6 +3,44 @@
 
 export const BASE_URL = process.env.SITEIMPROVE_BASE_URL ?? "https://api.us.siteimprove.com/v2";
 
+/**
+ * A Siteimprove web app link ("Open in Siteimprove", SP-2), cleaned for publishing.
+ * Removes the `impmd` parameter Siteimprove adds: the links work without it, and
+ * it may carry session or account context that shouldn't be passed on or made
+ * public (decisions, Nov 20). Returns null for anything not on siteimprove.com.
+ */
+export function siteimproveLink(href) {
+  if (!href) return null;
+  let u;
+  try {
+    u = new URL(href);
+  } catch {
+    return null;
+  }
+  if (u.protocol !== "https:" || !/(^|\.)siteimprove\.com$/.test(u.hostname)) return null;
+  return stripImpmd(href);
+}
+
+/** Removes any impmd parameter from a URL string; leaves anything else unchanged. */
+export function stripImpmd(text) {
+  if (!/impmd=/i.test(text)) return text;
+  try {
+    const u = new URL(text);
+    for (const key of [...u.searchParams.keys()]) if (key.toLowerCase() === "impmd") u.searchParams.delete(key);
+    return u.toString();
+  } catch {
+    return text.replace(/impmd=[^&#"\s]*/gi, "impmd=[REDACTED]");
+  }
+}
+
+/** A copy of an API response with impmd stripped from every string (for fixtures). */
+export function scrubImpmd(value) {
+  if (typeof value === "string") return stripImpmd(value);
+  if (Array.isArray(value)) return value.map(scrubImpmd);
+  if (value && typeof value === "object") return Object.fromEntries(Object.entries(value).map(([k, v]) => [k, scrubImpmd(v)]));
+  return value;
+}
+
 export function createClient({ user = process.env.SITEIMPROVE_API_USER, key = process.env.SITEIMPROVE_API_KEY } = {}) {
   if (!user || !key) return null;
   const auth = `Basic ${Buffer.from(`${user}:${key}`).toString("base64")}`;

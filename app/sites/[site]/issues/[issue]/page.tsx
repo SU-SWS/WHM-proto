@@ -35,6 +35,8 @@ export default async function IssuePage({ params }: PageProps<"/sites/[site]/iss
   const isStale = issue.pages.some((p) => "monthsSinceUpdate" in p);
   // Broken-link issues from live data carry the broken addresses on each page.
   const hasLinks = issue.pages.some((p) => "links" in p && (p.links?.length ?? 0) > 0);
+  // Per-page reports in Siteimprove, from live data (impmd stripped on ingestion).
+  const hasReports = issue.pages.some((p) => "siteimproveUrl" in p && p.siteimproveUrl);
 
   return (
     <>
@@ -116,6 +118,11 @@ export default async function IssuePage({ params }: PageProps<"/sites/[site]/iss
                       ))}
                     </ul>
                   )}
+                  {"siteimproveUrl" in p && p.siteimproveUrl && (
+                    <a href={p.siteimproveUrl} className="mt-4 block text-16">
+                      Open in Siteimprove<span className="sr-only">: report for {displayPath(p.path)}</span>
+                    </a>
+                  )}
                 </td>
                 <td className="num">{formatNumber(p.views)}</td>
                 <td className="num">{third(p)}</td>
@@ -129,6 +136,10 @@ export default async function IssuePage({ params }: PageProps<"/sites/[site]/iss
       <p>
         {issue.siteimproveUrl ? (
           <a href={issue.siteimproveUrl}>Open this issue in Siteimprove</a>
+        ) : hasReports ? (
+          <span className="text-black-80">
+            “Open in Siteimprove” opens that page’s report in Siteimprove. You need a Siteimprove account to see it.
+          </span>
         ) : (
           <span className="text-black-80">
             {issue.source === "live"

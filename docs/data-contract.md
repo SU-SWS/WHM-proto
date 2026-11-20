@@ -91,7 +91,8 @@ interface SiteData {
     siteimproveUrl: string | null;
     source: Source;
     pages: ({ path: string; views: number; count: number;
-              links?: { url: string; status: number | null }[] } |   // broken links: the addresses on this page
+              links?: { url: string; status: number | null }[];      // broken links: the addresses on this page
+              siteimproveUrl?: string | null } |                     // this page's report in Siteimprove, impmd stripped
              { path: string; views: number; monthsSinceUpdate: number })[];
   }[];
   siteSearch: { source: Source; terms: { term: string; count: number }[] };   // GA4, sample until the MVP
