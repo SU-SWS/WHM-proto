@@ -53,6 +53,16 @@ When the token nears expiry, GitHub emails you. Generate a new one the same way 
 2. Choose **installWeeklyTrigger** and select **Run** once. The script then exports every Sunday evening, ahead of Monday's data run.
 3. Run **Data run** in GitHub Actions (or wait for Monday). The site page should then show engagement rates and search terms labeled “From Google Analytics 4, as of [date]. Live data.”
 
+## Without the token (by hand)
+
+While the GitHub token is waiting for approval, or if you'd rather not use one:
+
+1. Run **exportToDrive**. It builds the same file as **exportAndCommit**, with the same filters, and saves it to your Google Drive as `whm-ga4-sitesuserguide.json`. The log shows its link. Running it again overwrites the same file.
+2. Download it and save it in the repo as `data/ga4/sitesuserguide.json`, replacing any older copy.
+3. Commit and push it, then run **Data run**.
+
+The data run accepts the file for 14 days from when it was made, so repeat this at least every two weeks until the weekly trigger takes over.
+
 ## If something goes wrong
 
 - **“AnalyticsData is not defined”** (or “Add the Google Analytics Data API service”): the advanced service is missing or has a different identifier. Under **Services**, add **Google Analytics Data API** with identifier exactly `AnalyticsData`. The similarly named **Google Analytics API** (`Analytics`) and **Google Analytics Admin API** (`AnalyticsAdmin`) are different services. If it isn't listed, turn on **Show "appsscript.json" manifest file** in Project settings and add `"dependencies": { "enabledAdvancedServices": [ { "userSymbol": "AnalyticsData", "serviceId": "analyticsdata", "version": "v1beta" } ] }` at the top level.

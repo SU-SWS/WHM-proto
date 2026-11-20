@@ -18,6 +18,8 @@
  * Functions to run:
  *   dryRun()           builds the file and logs it. Commits nothing. Run this first.
  *   exportAndCommit()  builds the file and commits it to the repo.
+ *   exportToDrive()    builds the file and saves it to your Google Drive, for
+ *                      committing by hand (for example while the token awaits approval).
  *   installWeeklyTrigger()  runs exportAndCommit every Sunday, before Monday's data run.
  */
 
@@ -54,6 +56,17 @@ function exportAndCommit() {
   commit_("data/ga4/" + SITE_KEY + ".json", JSON.stringify(file, null, 2) + "\n",
     "GA4 export for " + SITE_KEY + ", " + file.period.start + " to " + file.period.end);
   Logger.log("Committed: " + String(file.pages.length) + " pages, " + String(file.searchTerms.length) + " search terms.");
+}
+
+function exportToDrive() {
+  var file = buildFile_();
+  var name = "whm-ga4-" + SITE_KEY + ".json";
+  var text = JSON.stringify(file, null, 2) + "\n";
+  var existing = DriveApp.getFilesByName(name);
+  var saved = existing.hasNext() ? existing.next().setContent(text) : DriveApp.createFile(name, text, "application/json");
+  Logger.log("Saved " + name + " to your Google Drive: " + saved.getUrl() +
+    "\nDownload it, save it in the repo as data/ga4/" + SITE_KEY + ".json, then commit and push." +
+    "\n" + String(file.pages.length) + " pages, " + String(file.searchTerms.length) + " search terms.");
 }
 
 function installWeeklyTrigger() {
