@@ -1,0 +1,74 @@
+{
+  "items": [
+    {
+      "bounce_rate": 54.12,
+      "new_visitors": 58,
+      "page_views": 248,
+      "returning_visitors": 18,
+      "timestamp": "2026-11-13T00:00:00-05:00",
+      "unique_visitors": 76,
+      "visits": 85
+    },
+    {
+      "bounce_rate": 65.22,
+      "new_visitors": 34,
+      "page_views": 111,
+      "returning_visitors": 0,
+      "timestamp": "2026-11-14T00:00:00-05:00",
+      "unique_visitors": 34,
+      "visits": 46
+    },
+    {
+      "bounce_rate": 58.33,
+      "new_visitors": 27,
+      "page_views": 91,
+      "returning_visitors": 4,
+      "timestamp": "2026-11-15T00:00:00-05:00",
+      "unique_visitors": 31,
+      "visits": 36
+    },
+    {
+      "bounce_rate": 68.18,
+      "new_visitors": 40,
+      "page_views": 574,
+      "returning_visitors": 14,
+      "timestamp": "2026-11-16T00:00:00-05:00",
+      "unique_visitors": 54,
+      "visits": 66
+    },
+    {
+      "bounce_rate": 66.67,
+      "new_visitors": 61,
+      "page_views": 139,
+      "returning_visitors": 11,
+      "timestamp": "2026-11-17T00:00:00-05:00",
+      "unique_visitors": 72,
+      "visits": 75
+    },
+    {
+      "bounce_rate": 84.48,
+      "new_visitors": 97,
+      "page_views": 166,
+      "returning_visitors": 12,
+      "timestamp": "2026-11-18T00:00:00-05:00",
+      "unique_visitors": 109,
+      "visits": 116
+    },
+    {
+      "bounce_rate": 83.01,
+      "new_visitors": 128,
+      "page_views": 221,
+      "returning_visitors": 16,
+      "timestamp": "2026-11-19T00:00:00-05:00",
+      "unique_visitors": 144,
+      "visits": 153
+    }
+  ],
+  "total_items": 7,
+  "total_pages": 1,
+  "links": {
+    "self": {
+      "href": "https://api.us.siteimprove.com/v2/sites/25412155164/analytics/overview/history"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "a11y": {
+    "a": 98.74,
+    "aa": 96.82,
+    "aaa": 60.05,
+    "aria": 100,
+    "si": 90.61,
+    "total": 93
+  },
+  "accessibility": {
+    "errorpages": 0,
+    "errors": 0,
+    "total": 0,
+    "warnings": 0
+  },
+  "qa": {
+    "content": 92.8,
+    "freshness": 96.88,
+    "security": 100,
+    "total": 62.41,
+    "ux": 48.07
+  },
+  "seo": {
+    "content": 91.31,
+    "mobile": 61,
+    "technical": 90.26,
+    "total": 84.48,
+    "ux": 88.34
+  },
+  "total": 79.97,
+  "_links": {
+    "history": {
+      "href": "https://api.us.siteimprove.com/v2/sites/25412155164/dci/history"
+    },
+    "self": {
+      "href": "https://api.us.siteimprove.com/v2/sites/25412155164/dci/overview"
+    }
+  }
+}

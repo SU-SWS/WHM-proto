@@ -1,0 +1,61 @@
+{
+  "items": [
+    {
+      "broken_links": 35,
+      "pages": 352,
+      "timestamp": "2026-10-07 01:26:47Z"
+    },
+    {
+      "broken_links": 135,
+      "pages": 352,
+      "timestamp": "2026-10-12 05:13:54Z"
+    },
+    {
+      "broken_links": 26,
+      "pages": 344,
+      "timestamp": "2026-10-17 03:49:31Z"
+    },
+    {
+      "broken_links": 24,
+      "pages": 30,
+      "timestamp": "2026-10-22 00:17:26Z"
+    },
+    {
+      "broken_links": 24,
+      "pages": 26,
+      "timestamp": "2026-10-27 01:45:43Z"
+    },
+    {
+      "broken_links": 40,
+      "pages": 46,
+      "timestamp": "2026-11-01 02:56:10Z"
+    },
+    {
+      "broken_links": 36,
+      "pages": 352,
+      "timestamp": "2026-11-06 06:46:11Z"
+    },
+    {
+      "broken_links": 193,
+      "pages": 320,
+      "timestamp": "2026-11-11 18:23:26Z"
+    },
+    {
+      "broken_links": 65,
+      "pages": 351,
+      "timestamp": "2026-11-16 06:50:38Z"
+    },
+    {
+      "broken_links": 61,
+      "pages": 351,
+      "timestamp": "2026-11-20 09:14:54Z"
+    }
+  ],
+  "total_items": 10,
+  "total_pages": 1,
+  "links": {
+    "self": {
+      "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/links/history?page_size=10"
+    }
+  }
+}

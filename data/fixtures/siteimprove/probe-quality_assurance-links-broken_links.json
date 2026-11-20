@@ -1,0 +1,154 @@
+{
+  "items": [
+    {
+      "id": 1224666220,
+      "url": "http://web.stanford.edu/people/name",
+      "http_status": 404,
+      "is_confirmed": true,
+      "last_checked": "2026-11-20 07:35:36Z",
+      "link_status_changed": "2026-07-04 04:15:42Z",
+      "pages": 1,
+      "_links": {
+        "pages": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/links/broken_links/1224666220/pages"
+        }
+      }
+    },
+    {
+      "id": 226730528,
+      "url": "https://emergency.stanford.edu/",
+      "http_status": 404,
+      "is_confirmed": true,
+      "last_checked": "2026-11-20 07:13:21Z",
+      "link_status_changed": "2026-11-06 06:46:09Z",
+      "pages": 351,
+      "_links": {
+        "pages": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/links/broken_links/226730528/pages"
+        }
+      }
+    },
+    {
+      "id": 226730843,
+      "url": "https://www.stanford.edu/",
+      "http_status": 404,
+      "is_confirmed": true,
+      "last_checked": "2026-11-20 07:32:17Z",
+      "link_status_changed": "2026-11-06 06:46:09Z",
+      "pages": 351,
+      "_links": {
+        "pages": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/links/broken_links/226730843/pages"
+        }
+      }
+    },
+    {
+      "id": 226730844,
+      "url": "https://www.stanford.edu/search/",
+      "http_status": 404,
+      "is_confirmed": true,
+      "last_checked": "2026-11-20 07:35:01Z",
+      "link_status_changed": "2026-11-06 06:46:09Z",
+      "pages": 351,
+      "_links": {
+        "pages": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/links/broken_links/226730844/pages"
+        }
+      }
+    },
+    {
+      "id": 226730846,
+      "url": "https://www.stanford.edu/site/privacy/",
+      "http_status": 404,
+      "is_confirmed": true,
+      "last_checked": "2026-11-20 07:35:01Z",
+      "link_status_changed": "2026-11-06 06:46:09Z",
+      "pages": 351,
+      "_links": {
+        "pages": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/links/broken_links/226730846/pages"
+        }
+      }
+    },
+    {
+      "id": 226730847,
+      "url": "https://www.stanford.edu/site/terms/",
+      "http_status": 404,
+      "is_confirmed": true,
+      "last_checked": "2026-11-20 07:09:36Z",
+      "link_status_changed": "2026-11-06 06:46:09Z",
+      "pages": 351,
+      "_links": {
+        "pages": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/links/broken_links/226730847/pages"
+        }
+      }
+    },
+    {
+      "id": 226904557,
+      "url": "https://www.stanford.edu/site/accessibility/",
+      "http_status": 404,
+      "is_confirmed": true,
+      "last_checked": "2026-11-20 07:27:21Z",
+      "link_status_changed": "2026-11-06 06:46:09Z",
+      "pages": 3,
+      "_links": {
+        "pages": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/links/broken_links/226904557/pages"
+        }
+      }
+    },
+    {
+      "id": 227154450,
+      "url": "https://userguide.sites.stanford.edu/build-and-design/taxonomy/basic-page-type",
+      "http_status": 503,
+      "is_confirmed": false,
+      "last_checked": "2026-11-20 00:02:34Z",
+      "link_status_changed": "2026-11-16 01:31:57Z",
+      "pages": 2,
+      "_links": {
+        "pages": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/links/broken_links/227154450/pages"
+        }
+      }
+    },
+    {
+      "id": 227154878,
+      "url": "https://lh3.googleusercontent.com/YEhamZ3HttUZeSq5OThzn4K1O8KptMxJsoFJgoNTzKVJVrULBNjptw1gz4Tr3_DdeXFVzxqN90jIUo5CrGX2fb8fZvVAJ7aqQwbBs_IlavcuPbrOBCDzSXUHVPD2HPUdaBRC8LqV_GFDYWve0A",
+      "http_status": 404,
+      "is_confirmed": true,
+      "last_checked": "2026-11-20 07:35:36Z",
+      "link_status_changed": "2026-11-12 11:44:11Z",
+      "pages": 1,
+      "_links": {
+        "pages": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/links/broken_links/227154878/pages"
+        }
+      }
+    },
+    {
+      "id": 227326073,
+      "url": "https://sitesuserguide.stanford.edu/search%20aria-label=",
+      "http_status": 404,
+      "is_confirmed": true,
+      "last_checked": "2026-11-20 07:35:39Z",
+      "link_status_changed": "2026-07-22 02:37:21Z",
+      "pages": 1,
+      "_links": {
+        "pages": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/links/broken_links/227326073/pages"
+        }
+      }
+    }
+  ],
+  "total_items": 61,
+  "total_pages": 7,
+  "links": {
+    "next": {
+      "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/links/broken_links?page_size=10&page=2"
+    },
+    "self": {
+      "href": "https://api.us.siteimprove.com/v2/sites/25412155164/quality_assurance/links/broken_links?page_size=10"
+    }
+  }
+}

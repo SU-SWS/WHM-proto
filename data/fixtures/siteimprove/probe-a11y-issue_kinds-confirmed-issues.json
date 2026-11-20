@@ -1,0 +1,158 @@
+{
+  "items": [
+    {
+      "conformance": "aaa",
+      "difficulty": 2,
+      "help": {
+        "description": "Interactive elements, like buttons or links, should be at least 44 by 44 pixels, so they can easily be clicked or tapped by all users.",
+        "title": "Interactive element does not meet enhanced size"
+      },
+      "occurrences": 11847,
+      "pages": 351,
+      "rule_id": 111,
+      "_links": {
+        "pages": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/a11y/issue_kinds/confirmed/issues/111/pages"
+        },
+        "progress": {
+          "history": {
+            "href": "https://api.us.siteimprove.com/v2/sites/25412155164/a11y/issue_kinds/confirmed/issues/111/progress/history"
+          }
+        }
+      }
+    },
+    {
+      "conformance": "aaa",
+      "difficulty": 2,
+      "help": {
+        "description": "The `line-height` for paragraphs should be at least 1.5 times the font size. ",
+        "title": "Line height is below minimum value"
+      },
+      "occurrences": 876,
+      "pages": 351,
+      "rule_id": 73,
+      "_links": {
+        "pages": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/a11y/issue_kinds/confirmed/issues/73/pages"
+        },
+        "progress": {
+          "history": {
+            "href": "https://api.us.siteimprove.com/v2/sites/25412155164/a11y/issue_kinds/confirmed/issues/73/progress/history"
+          }
+        }
+      }
+    },
+    {
+      "conformance": "aaa",
+      "difficulty": 2,
+      "help": {
+        "description": "There is insufficient color contrast between the text and background on this page to meet the enhanced contrast requirement.",
+        "title": "Color contrast does not meet enhanced requirement"
+      },
+      "occurrences": 3258,
+      "pages": 351,
+      "rule_id": 66,
+      "_links": {
+        "pages": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/a11y/issue_kinds/confirmed/issues/66/pages"
+        },
+        "progress": {
+          "history": {
+            "href": "https://api.us.siteimprove.com/v2/sites/25412155164/a11y/issue_kinds/confirmed/issues/66/progress/history"
+          }
+        }
+      }
+    },
+    {
+      "conformance": "si",
+      "difficulty": 2,
+      "help": {
+        "description": "Headings are used to structure content in a hierarchy. This helps users to know where to start and how content sections relate to one another.\n\nContent should appear as expected including between headings of the same level and after the last section or page heading.",
+        "title": "Content missing after heading"
+      },
+      "occurrences": 28,
+      "pages": 28,
+      "rule_id": 78,
+      "_links": {
+        "pages": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/a11y/issue_kinds/confirmed/issues/78/pages"
+        },
+        "progress": {
+          "history": {
+            "href": "https://api.us.siteimprove.com/v2/sites/25412155164/a11y/issue_kinds/confirmed/issues/78/progress/history"
+          }
+        }
+      }
+    },
+    {
+      "conformance": "si",
+      "difficulty": 2,
+      "help": {
+        "description": "A level 1 heading `h1` tells the user what the page is about before they decide to navigate through the content. \n\nHeadings are used to structure content into a hierarchy of importance. If a page starts with a different heading level, it can cause confusion for the user.",
+        "title": "Page does not start with a level 1 heading"
+      },
+      "occurrences": 18,
+      "pages": 18,
+      "rule_id": 61,
+      "_links": {
+        "pages": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/a11y/issue_kinds/confirmed/issues/61/pages"
+        },
+        "progress": {
+          "history": {
+            "href": "https://api.us.siteimprove.com/v2/sites/25412155164/a11y/issue_kinds/confirmed/issues/61/progress/history"
+          }
+        }
+      }
+    },
+    {
+      "conformance": "si",
+      "difficulty": 2,
+      "help": {
+        "description": "One or more heading levels have been skipped. \n\n",
+        "title": "Headings are not structured"
+      },
+      "occurrences": 11,
+      "pages": 11,
+      "rule_id": 53,
+      "_links": {
+        "pages": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/a11y/issue_kinds/confirmed/issues/53/pages"
+        },
+        "progress": {
+          "history": {
+            "href": "https://api.us.siteimprove.com/v2/sites/25412155164/a11y/issue_kinds/confirmed/issues/53/progress/history"
+          }
+        }
+      }
+    },
+    {
+      "conformance": "aa",
+      "difficulty": 4,
+      "help": {
+        "description": "Interactive elements, like buttons or links, should be large enough or be positioned, so they can easily be clicked or tapped by users.\n\nElements should be at least 24 by 24 pixels, or if smaller, be positioned with enough spacing to not intersect with other interactive elements.",
+        "title": "Interactive element does not meet minimum size nor spacing"
+      },
+      "occurrences": 30,
+      "pages": 9,
+      "rule_id": 113,
+      "_links": {
+        "pages": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/a11y/issue_kinds/confirmed/issues/113/pages"
+        },
+        "progress": {
+          "history": {
+            "href": "https://api.us.siteimprove.com/v2/sites/25412155164/a11y/issue_kinds/confirmed/issues/113/progress/history"
+          }
+        }
+      }
+    }
+  ],
+  "total_items": 7,
+  "total_pages": 1,
+  "links": {
+    "self": {
+      "href": "https://api.us.siteimprove.com/v2/sites/25412155164/a11y/issue_kinds/confirmed/issues?page_size=10"
+    }
+  }
+}

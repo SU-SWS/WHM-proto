@@ -1,0 +1,111 @@
+{
+  "items": [
+    {
+      "conformance": "a",
+      "issue_kind": "potential",
+      "issues": 1,
+      "_links": {
+        "issues": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/a11y/issue_kinds/potential/issues?conformance=a"
+        }
+      }
+    },
+    {
+      "conformance": "a",
+      "issue_kind": "passed",
+      "issues": 24,
+      "_links": {
+        "issues": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/a11y/issue_kinds/passed/issues?conformance=a"
+        }
+      }
+    },
+    {
+      "conformance": "aa",
+      "issue_kind": "confirmed",
+      "issues": 1,
+      "_links": {
+        "issues": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/a11y/issue_kinds/confirmed/issues?conformance=aa"
+        }
+      }
+    },
+    {
+      "conformance": "aa",
+      "issue_kind": "passed",
+      "issues": 4,
+      "_links": {
+        "issues": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/a11y/issue_kinds/passed/issues?conformance=aa"
+        }
+      }
+    },
+    {
+      "conformance": "aaa",
+      "issue_kind": "potential",
+      "issues": 1,
+      "_links": {
+        "issues": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/a11y/issue_kinds/potential/issues?conformance=aaa"
+        }
+      }
+    },
+    {
+      "conformance": "aaa",
+      "issue_kind": "confirmed",
+      "issues": 3,
+      "_links": {
+        "issues": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/a11y/issue_kinds/confirmed/issues?conformance=aaa"
+        }
+      }
+    },
+    {
+      "conformance": "aaa",
+      "issue_kind": "passed",
+      "issues": 7,
+      "_links": {
+        "issues": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/a11y/issue_kinds/passed/issues?conformance=aaa"
+        }
+      }
+    },
+    {
+      "conformance": "aria",
+      "issue_kind": "passed",
+      "issues": 5,
+      "_links": {
+        "issues": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/a11y/issue_kinds/passed/issues?conformance=aria"
+        }
+      }
+    },
+    {
+      "conformance": "si",
+      "issue_kind": "confirmed",
+      "issues": 3,
+      "_links": {
+        "issues": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/a11y/issue_kinds/confirmed/issues?conformance=si"
+        }
+      }
+    },
+    {
+      "conformance": "si",
+      "issue_kind": "passed",
+      "issues": 13,
+      "_links": {
+        "issues": {
+          "href": "https://api.us.siteimprove.com/v2/sites/25412155164/a11y/issue_kinds/passed/issues?conformance=si"
+        }
+      }
+    }
+  ],
+  "total_items": 10,
+  "total_pages": 1,
+  "links": {
+    "self": {
+      "href": "https://api.us.siteimprove.com/v2/sites/25412155164/a11y/overview/summary"
+    }
+  }
+}

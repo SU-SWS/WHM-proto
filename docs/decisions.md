@@ -12,6 +12,10 @@ Newest decisions take priority over anything in the exported docs. Dates are 202
 | Nov 19 | The Site Target Score comes from `GET /sites/{site_id}/a11y/overview/site_target/overview` (field `site_target_percentage`), as used by an earlier SWS script. To be confirmed with a saved fixture. |
 | Nov 19 | The Siteimprove API is believed to have no Site Target Score history. WHM builds its own history by saving the score on every data run. |
 | Nov 20 | First fixtures saved. The base URL is confirmed, and `site_target_percentage` is on a 0–100 scale (98.38). `GET /sites/{id}` links to `a11y/overview/site_target/history`, so the API may have history after all. The daily recorder keeps running until that response is checked. |
+| Nov 20 | **The Site Target Score history is in the API**: `a11y/overview/site_target/history`, daily from Aug 25, 2025. The trend uses it, so the “live points only” fallback isn’t needed. The daily recorder stays as a backup until task 6 reads the API history, then it can be retired. |
+| Nov 20 | The accessibility score comes from the same response as the Site Target Score (`accessibility_dci_score`), so both have one source and matching dates (Q-4). DCI history isn't used for it. |
+| Nov 20 | “Siteimprove check of [date]” uses the latest `check_date` from the QA check history. |
+| Nov 20 | `_siteimprove` deep links carry an `impmd=` value. Fixtures store it redacted, and no deep link is published until SWS confirms it isn't a credential. |
 | Nov 19 | Unreviewed SWS notes show a “Draft, not yet reviewed by SWS” label until `reviewedBySws` is true. |
 | Nov 19 | The Siteimprove API base URL for Stanford's account is **`https://api.us.siteimprove.com/v2`**, not the one in the exported prototype plan. To be confirmed with the first live call. |
 | Nov 13 | The **Site Target Score** is the primary score (goal 100); the accessibility score is second. Its API location is still to be found. |
@@ -44,5 +48,7 @@ Newest decisions take priority over anything in the exported docs. Dates are 202
 
 ## Still open
 
-- Whether `a11y/overview/site_target/history` gives the Site Target Score history, and how far back. Until then, the trend shows only the points WHM has recorded.
+- Whether `impmd` in Siteimprove deep links is safe to publish.
+- The period parameter for Siteimprove Analytics, so page views cover the last 30 days.
+- How to classify live issues that come from the shared template, such as AAA rules on every page and footer links reported broken on every page: as SWS-handled, or hidden as likely false alarms.
 - What happens when a "Set aside" revisit date arrives (a Phase 1 interview question).

@@ -1,0 +1,12 @@
+{
+  "is_crawl_enabled": true,
+  "is_crawl_running": true,
+  "last_crawl": "2026-11-15 11:38:59Z",
+  "next_crawl": "2026-11-20 05:10:00Z",
+  "permission": "allowed",
+  "_links": {
+    "self": {
+      "href": "https://api.us.siteimprove.com/v2/sites/25412155164/content/crawl"
+    }
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "items": [
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.33,
+      "site_target_percentage": 0,
+      "timestamp": "2025-08-25 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.33,
+      "site_target_percentage": 0,
+      "timestamp": "2025-08-26 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.33,
+      "site_target_percentage": 0,
+      "timestamp": "2025-08-27 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 87.32,
+      "site_target_percentage": 0,
+      "timestamp": "2025-08-28 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 85.72,
+      "site_target_percentage": 0,
+      "timestamp": "2025-08-29 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 85.72,
+      "site_target_percentage": 0,
+      "timestamp": "2025-08-30 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 85.72,
+      "site_target_percentage": 0,
+      "timestamp": "2025-08-31 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 85.72,
+      "site_target_percentage": 0,
+      "timestamp": "2025-09-01 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 85.73,
+      "site_target_percentage": 0,
+      "timestamp": "2025-09-02 07:00:00Z"
+    },
+    {
+      "accessibility_dci_score": 0,
+      "accessibility_dci_target_score": 0,
+      "accessibility_industry_benchmark_score": 85.78,
+      "site_target_percentage": 0,
+      "timestamp": "2025-09-03 07:00:00Z"
+    }
+  ],
+  "total_items": 453,
+  "total_pages": 46,
+  "links": {
+    "next": {
+      "href": "https://api.us.siteimprove.com/v2/sites/25412155164/a11y/overview/site_target/history?page=2"
+    },
+    "self": {
+      "href": "https://api.us.siteimprove.com/v2/sites/25412155164/a11y/overview/site_target/history"
+    }
+  }
+}
