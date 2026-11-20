@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "runId": null,
+  "startedAt": null,
+  "finishedAt": null,
+  "sites": {
+    "sitesuserguide": {
+      "result": "sample",
+      "reason": null,
+      "finishedAt": null,
+      "source": "sample"
+    },
+    "webservices": {
+      "result": "sample",
+      "reason": null,
+      "finishedAt": null,
+      "source": "sample"
+    },
+    "decanter": {
+      "result": "sample",
+      "reason": null,
+      "finishedAt": null,
+      "source": "sample"
+    }
+  }
+}

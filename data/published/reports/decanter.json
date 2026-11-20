@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "siteKey": "decanter",
+  "source": "sample",
+  "status": "Not yet reviewed by SWS",
+  "generatedAt": "2026-11-09",
+  "findings": [
+    {
+      "title": "Upgrade help is the most searched topic without a page",
+      "evidence": "“v8” (44) and “upgrade” (31) are the top two site searches. None of the 10 most visited pages cover upgrading.",
+      "recommendation": "Add an upgrade page, or a clearly labeled section on the installation page."
+    },
+    {
+      "title": "Installation guidance is working",
+      "evidence": "The installation page has 74% engagement, the highest on the site, and is the 2nd most visited page.",
+      "recommendation": "No change needed. Linking to it from the FAQ would help visitors who start there."
+    }
+  ]
+}

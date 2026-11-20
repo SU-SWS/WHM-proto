@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "siteKey": "sitesuserguide",
+  "source": "sample",
+  "status": "Not yet reviewed by SWS",
+  "generatedAt": "2026-11-10",
+  "findings": [
+    {
+      "title": "Visitors looking for help may reach outdated contact details",
+      "evidence": "“contact support” is the 3rd most common site search (58 searches). The Contact and support page has a 31% engagement rate, the lowest of the 5 most visited pages, and was last updated 14 months ago.",
+      "recommendation": "Update the Contact and support page, and put the current way to get help in its first paragraph."
+    },
+    {
+      "title": "Image help is hard to find from the pages that need it",
+      "evidence": "“image alt text” was searched 33 times. The Add a page guide (1,240 views) mentions images but doesn’t link to alt-text guidance.",
+      "recommendation": "Add a short alt-text section or link on Add a page, next to the image steps."
+    },
+    {
+      "title": "The home page sends visitors onward without answering much itself",
+      "evidence": "The home page is the top landing page, with 48% engagement. Most engaged visits continue to Add a page or Update a menu.",
+      "recommendation": "Link the two most-used tasks from the top of the home page."
+    }
+  ]
+}

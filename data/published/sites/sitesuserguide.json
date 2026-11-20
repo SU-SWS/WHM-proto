@@ -1,0 +1,595 @@
+{
+  "schemaVersion": 1,
+  "siteKey": "sitesuserguide",
+  "name": "Stanford Sites user guide",
+  "url": "https://sitesuserguide.stanford.edu",
+  "source": "sample",
+  "checkedAt": "2026-11-10",
+  "state": "attention",
+  "verdict": "Needs attention: accessibility has slipped each month, and issues sit on your busiest pages.",
+  "lede": "Fixing the first two items helps the most visitors. Most items are yours to fix; one is being handled by SWS.",
+  "readings": {
+    "siteTargetScore": {
+      "value": 98.3,
+      "change": -0.4,
+      "goal": 100,
+      "source": "sample"
+    },
+    "accessibilityScore": {
+      "value": 92.8,
+      "change": -0.6,
+      "source": "sample"
+    },
+    "brokenLinks": {
+      "value": 14,
+      "change": 3,
+      "source": "sample"
+    },
+    "stalePages": {
+      "value": 38,
+      "change": 5,
+      "total": 352,
+      "simulated": true,
+      "source": "sample"
+    },
+    "missingSearchDescriptions": {
+      "value": 61,
+      "change": -2,
+      "source": "sample"
+    }
+  },
+  "trends": {
+    "months": [
+      "2026-04",
+      "2026-05",
+      "2026-06",
+      "2026-07",
+      "2026-08",
+      "2026-09",
+      "2026-10",
+      "2026-11"
+    ],
+    "siteTargetScore": {
+      "source": "sample",
+      "values": [
+        99.4,
+        99.2,
+        99.1,
+        98.9,
+        98.8,
+        98.7,
+        98.7,
+        98.3
+      ]
+    },
+    "accessibilityScore": {
+      "source": "sample",
+      "values": [
+        94.3,
+        94.1,
+        93.9,
+        93.6,
+        93.5,
+        93.4,
+        93.2,
+        92.8
+      ]
+    },
+    "brokenLinks": {
+      "source": "sample",
+      "values": [
+        8,
+        9,
+        9,
+        10,
+        11,
+        11,
+        11,
+        14
+      ]
+    },
+    "pageViews": {
+      "source": "sample",
+      "values": [
+        10200,
+        9800,
+        9100,
+        11800,
+        12400,
+        13100,
+        12900,
+        11350
+      ]
+    }
+  },
+  "topPages": {
+    "viewsSource": "sample",
+    "engagementSource": "sample",
+    "pages": [
+      {
+        "path": "/ (home)",
+        "views": 1980,
+        "engagementRate": 0.48,
+        "openIssues": 1
+      },
+      {
+        "path": "/add-a-page",
+        "views": 1240,
+        "engagementRate": 0.71,
+        "openIssues": 3
+      },
+      {
+        "path": "/update-a-menu",
+        "views": 870,
+        "engagementRate": 0.66,
+        "openIssues": 0
+      },
+      {
+        "path": "/accessibility-basics",
+        "views": 760,
+        "engagementRate": 0.58,
+        "openIssues": 2
+      },
+      {
+        "path": "/contact-and-support",
+        "views": 540,
+        "engagementRate": 0.31,
+        "openIssues": 4
+      }
+    ]
+  },
+  "issues": [
+    {
+      "type": "alt",
+      "scope": "12 images on 5 pages, up from 9.",
+      "reason": "Includes 2 of your 5 busiest pages.",
+      "rank": 1,
+      "siteimproveUrl": null,
+      "source": "sample",
+      "pages": [
+        {
+          "path": "/add-a-page",
+          "views": 1240,
+          "count": 3
+        },
+        {
+          "path": "/accessibility-basics",
+          "views": 760,
+          "count": 2
+        },
+        {
+          "path": "/getting-started",
+          "views": 410,
+          "count": 3
+        },
+        {
+          "path": "/layout-tips",
+          "views": 220,
+          "count": 2
+        },
+        {
+          "path": "/media-library",
+          "views": 140,
+          "count": 2
+        }
+      ]
+    },
+    {
+      "type": "broken",
+      "scope": "14 broken links on 9 pages, up from 11.",
+      "reason": "3 are on the Contact and support page.",
+      "rank": 2,
+      "siteimproveUrl": null,
+      "source": "sample",
+      "pages": [
+        {
+          "path": "/contact-and-support",
+          "views": 540,
+          "count": 3
+        },
+        {
+          "path": "/people-profiles",
+          "views": 300,
+          "count": 2
+        },
+        {
+          "path": "/getting-started",
+          "views": 410,
+          "count": 1
+        },
+        {
+          "path": "/faq",
+          "views": 330,
+          "count": 1
+        },
+        {
+          "path": "/training-schedule",
+          "views": 190,
+          "count": 1
+        },
+        {
+          "path": "/events/calendar-feed",
+          "views": 58,
+          "count": 2
+        },
+        {
+          "path": "/news/tags",
+          "views": 66,
+          "count": 1
+        },
+        {
+          "path": "/policies/site-retirement",
+          "views": 33,
+          "count": 1
+        },
+        {
+          "path": "/archive/2023",
+          "views": 40,
+          "count": 2
+        }
+      ]
+    },
+    {
+      "type": "stale",
+      "scope": "38 of 352 pages, up 5.",
+      "reason": "Contact and support is your 5th busiest page and was last updated 14 months ago.",
+      "rank": 3,
+      "siteimproveUrl": null,
+      "source": "sample",
+      "pages": [
+        {
+          "path": "/contact-and-support",
+          "views": 540,
+          "monthsSinceUpdate": 14
+        },
+        {
+          "path": "/training-schedule",
+          "views": 190,
+          "monthsSinceUpdate": 13
+        },
+        {
+          "path": "/getting-started/request-a-site",
+          "views": 180,
+          "monthsSinceUpdate": 15
+        },
+        {
+          "path": "/getting-started/site-owner-roles",
+          "views": 150,
+          "monthsSinceUpdate": 16
+        },
+        {
+          "path": "/layout-tips/columns",
+          "views": 120,
+          "monthsSinceUpdate": 13
+        },
+        {
+          "path": "/layout-tips/spacing",
+          "views": 110,
+          "monthsSinceUpdate": 18
+        },
+        {
+          "path": "/media-library/upload-files",
+          "views": 105,
+          "monthsSinceUpdate": 14
+        },
+        {
+          "path": "/media-library/image-sizes",
+          "views": 98,
+          "monthsSinceUpdate": 20
+        },
+        {
+          "path": "/menus/secondary-menu",
+          "views": 92,
+          "monthsSinceUpdate": 13
+        },
+        {
+          "path": "/menus/footer-links",
+          "views": 88,
+          "monthsSinceUpdate": 17
+        },
+        {
+          "path": "/people/profile-fields",
+          "views": 80,
+          "monthsSinceUpdate": 22
+        },
+        {
+          "path": "/people/import-profiles",
+          "views": 74,
+          "monthsSinceUpdate": 15
+        },
+        {
+          "path": "/news/news-listing",
+          "views": 70,
+          "monthsSinceUpdate": 13
+        },
+        {
+          "path": "/news/tags",
+          "views": 66,
+          "monthsSinceUpdate": 19
+        },
+        {
+          "path": "/release-notes-2024",
+          "views": 60,
+          "monthsSinceUpdate": 23
+        },
+        {
+          "path": "/events/event-series",
+          "views": 61,
+          "monthsSinceUpdate": 14
+        },
+        {
+          "path": "/events/calendar-feed",
+          "views": 58,
+          "monthsSinceUpdate": 25
+        },
+        {
+          "path": "/forms/webforms",
+          "views": 55,
+          "monthsSinceUpdate": 13
+        },
+        {
+          "path": "/forms/spam-protection",
+          "views": 51,
+          "monthsSinceUpdate": 16
+        },
+        {
+          "path": "/accessibility/headings",
+          "views": 49,
+          "monthsSinceUpdate": 18
+        },
+        {
+          "path": "/accessibility/link-text",
+          "views": 47,
+          "monthsSinceUpdate": 14
+        },
+        {
+          "path": "/accessibility/color-contrast",
+          "views": 45,
+          "monthsSinceUpdate": 21
+        },
+        {
+          "path": "/seo/search-descriptions",
+          "views": 42,
+          "monthsSinceUpdate": 13
+        },
+        {
+          "path": "/seo/page-titles",
+          "views": 40,
+          "monthsSinceUpdate": 15
+        },
+        {
+          "path": "/analytics/google-analytics",
+          "views": 38,
+          "monthsSinceUpdate": 27
+        },
+        {
+          "path": "/analytics/siteimprove",
+          "views": 36,
+          "monthsSinceUpdate": 14
+        },
+        {
+          "path": "/policies/site-retirement",
+          "views": 33,
+          "monthsSinceUpdate": 30
+        },
+        {
+          "path": "/policies/content-ownership",
+          "views": 31,
+          "monthsSinceUpdate": 19
+        },
+        {
+          "path": "/policies/accessibility-statement",
+          "views": 29,
+          "monthsSinceUpdate": 13
+        },
+        {
+          "path": "/archive/2023/launch-notes",
+          "views": 24,
+          "monthsSinceUpdate": 24
+        },
+        {
+          "path": "/archive/2023/survey",
+          "views": 21,
+          "monthsSinceUpdate": 26
+        },
+        {
+          "path": "/archive/2022/training",
+          "views": 18,
+          "monthsSinceUpdate": 34
+        },
+        {
+          "path": "/archive/2022/office-hours",
+          "views": 15,
+          "monthsSinceUpdate": 35
+        },
+        {
+          "path": "/faq/billing",
+          "views": 14,
+          "monthsSinceUpdate": 17
+        },
+        {
+          "path": "/faq/domains",
+          "views": 12,
+          "monthsSinceUpdate": 13
+        },
+        {
+          "path": "/faq/hosting",
+          "views": 11,
+          "monthsSinceUpdate": 20
+        },
+        {
+          "path": "/help/office-hours",
+          "views": 9,
+          "monthsSinceUpdate": 15
+        },
+        {
+          "path": "/help/workshops",
+          "views": 7,
+          "monthsSinceUpdate": 28
+        }
+      ]
+    },
+    {
+      "type": "linktext",
+      "scope": "28 links on 11 pages, down from 30.",
+      "reason": "Mostly “click here.”",
+      "rank": 4,
+      "siteimproveUrl": null,
+      "source": "sample",
+      "pages": [
+        {
+          "path": "/add-a-page",
+          "views": 1240,
+          "count": 6
+        },
+        {
+          "path": "/update-a-menu",
+          "views": 870,
+          "count": 4
+        },
+        {
+          "path": "/accessibility-basics",
+          "views": 760,
+          "count": 2
+        },
+        {
+          "path": "/contact-and-support",
+          "views": 540,
+          "count": 1
+        },
+        {
+          "path": "/getting-started",
+          "views": 410,
+          "count": 3
+        },
+        {
+          "path": "/faq",
+          "views": 330,
+          "count": 5
+        },
+        {
+          "path": "/people-profiles",
+          "views": 300,
+          "count": 1
+        },
+        {
+          "path": "/layout-tips",
+          "views": 220,
+          "count": 2
+        },
+        {
+          "path": "/media-library",
+          "views": 140,
+          "count": 2
+        },
+        {
+          "path": "/news/news-listing",
+          "views": 70,
+          "count": 1
+        },
+        {
+          "path": "/events/event-series",
+          "views": 61,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "type": "pdf",
+      "scope": "5 of your 7 PDFs.",
+      "reason": "No change since last check.",
+      "rank": 5,
+      "siteimproveUrl": null,
+      "source": "sample",
+      "pages": [
+        {
+          "path": "/files/editor-checklist.pdf",
+          "views": 95,
+          "count": 1
+        },
+        {
+          "path": "/files/style-guide.pdf",
+          "views": 80,
+          "count": 1
+        },
+        {
+          "path": "/files/training-handout.pdf",
+          "views": 40,
+          "count": 1
+        },
+        {
+          "path": "/files/accessibility-checklist.pdf",
+          "views": 32,
+          "count": 1
+        },
+        {
+          "path": "/files/launch-checklist.pdf",
+          "views": 18,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "type": "contrast",
+      "scope": "6 places.",
+      "reason": "Comes from the site template.",
+      "rank": null,
+      "siteimproveUrl": null,
+      "source": "sample",
+      "pages": [
+        {
+          "path": "/ (home)",
+          "views": 1980,
+          "count": 2
+        },
+        {
+          "path": "/add-a-page",
+          "views": 1240,
+          "count": 4
+        }
+      ]
+    }
+  ],
+  "siteSearch": {
+    "source": "sample",
+    "terms": [
+      {
+        "term": "add a page",
+        "count": 142
+      },
+      {
+        "term": "menu",
+        "count": 96
+      },
+      {
+        "term": "contact support",
+        "count": 58
+      },
+      {
+        "term": "accessibility checker",
+        "count": 41
+      },
+      {
+        "term": "image alt text",
+        "count": 33
+      }
+    ]
+  },
+  "speed": {
+    "source": "sample",
+    "pages": [
+      {
+        "path": "/ (home)",
+        "score": 72
+      },
+      {
+        "path": "/add-a-page",
+        "score": 64
+      },
+      {
+        "path": "/update-a-menu",
+        "score": 81
+      }
+    ]
+  }
+}

@@ -1,6 +1,10 @@
-// Placeholder for task 1: proves the Decanter preset and fonts work after
-// deploy. Task 3 replaces this with the portfolio rollup.
+import { getAllSites } from "@/lib/data/load";
+import { describeSection } from "@/lib/data/provenance";
+
+// Placeholder for task 2: proves the build reads every site's published data.
+// Task 3 replaces this with the portfolio rollup.
 export default function Home() {
+  const sites = getAllSites();
   return (
     <>
       <header className="bg-cardinal-red py-10">
@@ -12,10 +16,23 @@ export default function Home() {
       </header>
       <main id="main-content" className="centered-container py-50">
         <h1 className="font-serif type-5 mb-20">Website Health Monitoring</h1>
-        <p className="type-1 max-w-prose">
-          This is the starting point for the WHM prototype. The site health
-          pages come next.
-        </p>
+        <ul className="list-none p-0">
+          {sites.map((site) => {
+            const score = site.readings.siteTargetScore;
+            const origin = describeSection({
+              provider: "siteimprove",
+              source: score.source,
+              date: site.checkedAt,
+            });
+            return (
+              <li key={site.siteKey} className="mb-20">
+                <h2 className="type-2 mb-4">{site.name}</h2>
+                <p className="mb-4">Site Target Score: {score.value} (goal {score.goal})</p>
+                <p className="text-black-70">{origin.text}</p>
+              </li>
+            );
+          })}
+        </ul>
       </main>
     </>
   );
