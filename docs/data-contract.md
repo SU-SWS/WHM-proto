@@ -127,5 +127,5 @@ interface Status {
 
 - Increase `schemaVersion` when a field's meaning changes, and update this document in the same change.
 - Never write owner names, emails or secrets into any data file.
-- Page paths are normalized: lowercase host, no query string, consistent trailing slash (Q-5).
+- Page paths are normalized: lowercase host, no query string, consistent trailing slash (Q-5). The home page is stored as `/`; screens label it “/ (home)”.
 - Browser-side per-page tracking state is not part of this contract. It lives in `localStorage`, keyed by site key, issue type and normalized page path (TR-1).

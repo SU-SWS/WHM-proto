@@ -107,7 +107,7 @@
     "engagementSource": "sample",
     "pages": [
       {
-        "path": "/ (home)",
+        "path": "/",
         "views": 1650,
         "engagementRate": 0.55,
         "openIssues": 0
@@ -204,7 +204,7 @@
     "source": "sample",
     "pages": [
       {
-        "path": "/ (home)",
+        "path": "/",
         "score": 91
       },
       {
