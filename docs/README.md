@@ -15,6 +15,7 @@
 | [siteimprove-endpoints.md](siteimprove-endpoints.md) | Each Siteimprove endpoint: what's verified against a saved response, field notes, and rules for the fetch |
 | [verdict-rules.md](verdict-rules.md) | How a live site's state, verdict and lede are worked out, including the low-engagement rule. Draft for SWS review |
 | [ga4-setup.md](ga4-setup.md) | Setting up the GA4 Apps Script export, the GitHub token, and doing it by hand |
+| [editing-issue-text.md](editing-issue-text.md) | For the SWS owner of the issue wording: which files to edit, writing rules, and making the change on GitHub |
 
 ## Exported project docs
 

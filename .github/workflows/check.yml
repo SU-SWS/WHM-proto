@@ -1,0 +1,27 @@
+name: Check
+
+# Builds the site for every pull request, so an edit to the issue text (or
+# anything else) shows a pass or fail before it's merged and published.
+# Publishing still happens only from main (deploy.yml, refresh-data.yml).
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Check the data files are valid JSON
+        run: |
+          for f in data/issue-types.json data/annotations.json data/registry.json; do
+            node -e "JSON.parse(require('fs').readFileSync('$f','utf8'))" || { echo "::error file=$f::$f isn't valid JSON. Look for a missing comma, a missing quote, or a straight double quote (\") inside the text."; exit 1; }
+          done
+      - run: npx next build
