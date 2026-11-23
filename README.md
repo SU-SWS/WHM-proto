@@ -56,5 +56,5 @@ This overwrites `data/published/`. Put it back with `git checkout data/published
 | `data/published/` | What the site builds from. Written by the data run |
 | `data/ga4/` | GA4 exports from the Apps Script |
 | `data/fixtures/siteimprove/` | Reviewed real Siteimprove responses, for writing and testing code |
-| `docs/` | Decisions, data contract, endpoint notes, verdict rules, setup guides and the exported project docs ([index](docs/README.md)) |
+| `docs/` | Decisions, data contract, endpoint notes, verdict rules, setup guides and the project docs: requirements, plan, roadmap, personas ([index](docs/README.md)) |
 | `reference/whm-demo.html` | The original clickable demo: the UI and wording reference |

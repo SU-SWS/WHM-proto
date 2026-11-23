@@ -6,7 +6,7 @@
 | --- | --- |
 | [demo-prep.md](demo-prep.md) | Getting the data ready for the fair: what to check and when, updating the GA4 export by hand through Google Drive, running and checking a data run |
 | [how-it-works.md](how-it-works.md) | Plain-language overview of the prototype: data sources, how it decides what matters, privacy, prototype vs. MVP |
-| [decisions.md](decisions.md) | Dated decision log, plus the open questions. **It wins where it disagrees with any other doc**, including the exports below |
+| [decisions.md](decisions.md) | Dated decision log, plus the open questions. **It wins where it disagrees with any other doc** |
 
 ## For building and running WHM
 
@@ -18,17 +18,17 @@
 | [ga4-setup.md](ga4-setup.md) | Setting up the GA4 Apps Script export, the GitHub token, and doing it by hand |
 | [editing-issue-text.md](editing-issue-text.md) | For the SWS owner of the issue wording: which files to edit, writing rules, and making the change on GitHub |
 
-## Exported project docs
+## Project docs
 
-These live in Claude Docs. After any change there, export again: open the menu under the doc's name, choose **Export**, then **Markdown**, and save over the file below (not the default filename).
+These started in Claude Docs. **Since Nov 23, the files here are the place of record**: edit them in the repo, not in Claude Docs. The Claude Docs copies are no longer kept in step.
 
-| Doc | Save as |
+| Doc | What it is |
 | --- | --- |
-| [WHM Requirements](https://claude.ai/artifact/GSUPnwH12SYFXNmabCQB2i) | `docs/requirements.md` |
-| [WHM Prototype Plan](https://claude.ai/artifact/Nfs6VkeSqgZG9xckVUphPs) | `docs/prototype-plan.md` |
-| [WHM Roadmap](https://claude.ai/artifact/FHQrJbt2DQdmtpWiHAoQ2Z) | `docs/roadmap.md` |
-| [WHM Personas](https://claude.ai/artifact/HC3VUxnrg1zL4Ds8B46Y5L) | `docs/personas.md` |
+| [requirements.md](requirements.md) | Use scenarios and requirements, with IDs (SP-, TR-, AC-, AD-, CT-, Q-) |
+| [prototype-plan.md](prototype-plan.md) | Architecture, components, the run button, and how live data was added |
+| [roadmap.md](roadmap.md) | Phases, dates and gates from the prototype to the MVP |
+| [personas.md](personas.md) | The six personas and the survey evidence behind them |
 
-Diagrams in these docs come through as text placeholders. Some exported wording is out of date; `decisions.md` records what replaced it (for example, live GA4 data and the revised TR-1 and TR-2).
+Diagrams from the original export appear as text placeholders. When a decision changes one of these docs, update the doc and log the reason in `decisions.md`.
 
 The original clickable demo is at https://claude.ai/artifact/CqAhjXJWekFfpv6rVwRooa, with a copy in `reference/whm-demo.html`.

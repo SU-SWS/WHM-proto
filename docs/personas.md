@@ -2,6 +2,8 @@
 
 Nov 12, 2026 · @Someone
 
+*The repo copy is the place of record (Nov 23). Last updated Nov 23, 2026; `decisions.md` has the reasons for each change.*
+
 ## About these personas
 
 Six personas: four site-side user personas built from 14 survey responses, and two SWS internal roles built from the project brief and the data inventory.
@@ -161,7 +163,7 @@ Sets up each client site in WHM, links it to its data sources and owners, and ne
 - Scale. Stanford Sites alone hosts more than 1,200 sites (per webservices.stanford.edu). The prototype needs only one to three sites, but the registry design affects later scale.
 - API permissions. The Siteimprove API user inherits that user's access, so it needs a service user that can see every client site (SI-01).
 - Admin-only content. Some Siteimprove policies are SWS admin tasks and must not appear in owner views (SI-23).
-- Data source choice. Siteimprove is the primary source. GA4 is used only where it answers a question Siteimprove can't, so the administrator should not have to reconcile two traffic numbers.
+- Data source choice. Each metric has one source, so the administrator never has to reconcile two traffic numbers. A site with a GA4 property gets its traffic from GA4; Siteimprove Analytics covers sites without one (decisions, Nov 23).
 
 **What this persona needs from WHM**
 
@@ -191,7 +193,7 @@ Reviews flagged accessibility issues and adds context, so owners act only on iss
 
 **What this persona needs from WHM**
 
-- Notes attached to an issue type or rule, so they carry over from one crawl to the next.
+- Notes attached to an issue type or rule, so they carry over from one check to the next.
 - A clear visual difference between a specialist note (shown to owners) and an owner's private note (shown only to that owner).
 - A way to move an issue out of the owner's fix list into an "SWS is handling this" state.
 

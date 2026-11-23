@@ -2,6 +2,8 @@
 
 Nov 12, 2026 · @Someone
 
+*The repo copy is the place of record (Nov 23). Last updated Nov 23, 2026; `decisions.md` has the reasons for each change.*
+
 ## How to read this
 
 WHM should give each site owner a short, prioritized account of their site's health that they can act on, track and share. Each requirement below says who needs it, why, what data supports it, and in which phase it lands.
@@ -11,7 +13,7 @@ WHM should give each site owner a short, prioritized account of their site's hea
 - **Personas.** P1 portfolio site manager, P2 single-site owner, P3 contributor who needs sign-off, P4 self-directed analyst, P5 SWS administrator, P6 SWS accessibility specialist.
 - **Evidence.** Survey respondents are R1 to R14 (n=14), as in the personas doc. Data element IDs (SI-, GA-, X-, OT-) refer to the Oct 15 data inventory.
 - **Wording.** Following the Pragmatic Framework, scenarios describe the problem without prescribing a solution. Requirements state what a user must be able to do or know, not how the screen looks.
-- **Data source roles.** Each source has a defined role. Siteimprove covers health scores, issues and crawl data. GA4 covers traffic, engagement, landing pages and site search. Each metric comes from one source only. In the prototype, only Siteimprove data is live (decision, Nov 13): traffic comes from Siteimprove Analytics if it is on for the site, and Google Analytics data and the AI report are labeled samples until the MVP.
+- **Data source roles.** Each source has a defined role. Siteimprove covers health scores, issues and check data. GA4 covers traffic, engagement, landing pages and site search. Each metric comes from one source only. In the prototype, Siteimprove and GA4 data are live for one site (decisions, Nov 20 and Nov 23). A site with a GA4 property gets all its traffic, engagement and site search from GA4; Siteimprove Analytics is used only for a site with no GA4 property. The AI report is a labeled sample until the MVP.
 
 ## Use scenarios
 
@@ -40,10 +42,10 @@ Owners first get a plain verdict on each site's health, with detail and source d
 | --- | --- | --- | --- | --- | --- |
 | SP-1 | Each site has a one-sentence health verdict, plus a small set of indicators: the Site Target Score first, then the accessibility score, then content quality, findability and content freshness. | 13 of 14 want a headline with drill-down; US1, US3. The Site Target Score is Stanford's own bar, so it leads. | P1, P2, P3 | Site Target Score (API location to confirm); SI-02, SI-04, SI-11, SI-13 | Prototype |
 | SP-2 | Every headline item opens its detail, and every detail links to the matching page in Siteimprove or GA4. | Approved description (direct links to third-party systems); US9 | All | SI-08, SI-24 | Prototype |
-| SP-3 | The default view ranks issues by visitor impact (traffic on affected pages) and by whether the owner can fix them. | 9 of 14 want prioritization; US1 | P1, P2, P3 | X-01, X-06; prototype: SI-27 (Siteimprove Analytics) if on; MVP: GA-03 | Prototype |
+| SP-3 | The default view ranks issues by visitor impact (traffic on affected pages) and by whether the owner can fix them. | 9 of 14 want prioritization; US1 | P1, P2, P3 | X-01, X-06; GA-03 where the site has a GA4 property, otherwise SI-27 (Siteimprove Analytics) | Prototype |
 | SP-4 | An owner can switch to a plain view showing the same findings unranked and grouped by category. | 5 of 14 want plain presentation; US9 | P4, P3 | Same as SP-3 | Prototype |
 | SP-5 | Each issue says what it is, why it matters, what to do, and who fixes it (owner or SWS). | Approved description (plain-language summary of issues); US3, US4 | All | OT-04, SI-26, X-06 | Prototype, for the issue types shown |
-| SP-6 | Site Target Score, accessibility score, broken links and traffic each have a trend chart showing whether they are getting better or worse over a chosen period. The Site Target Score chart shows the goal of 100. | Approved description (trend visualizations); project brief | P1, P3, P4 | Site Target Score history (to confirm); SI-03, SI-09, SI-13, GA-02 | Prototype (history may be simulated; traffic live only if Siteimprove Analytics is on) |
+| SP-6 | Site Target Score, accessibility score, broken links and traffic each have a trend chart showing whether they are getting better or worse over a chosen period. The Site Target Score chart shows the goal of 100. | Approved description (trend visualizations); project brief | P1, P3, P4 | Site Target Score history (`a11y/overview/site_target/history`); SI-03, SI-09, SI-13, GA-02 | Prototype (traffic from GA4, or from Siteimprove Analytics for sites without GA4; the period is a fixed 8 months for now) |
 | SP-7 | Content and findability lead the summary; technical performance comes after. | 13 of 14 put content in their top two quality priorities; 3 chose technical performance | All | — | Prototype |
 | SP-8 | A basic speed check for the site's 3 most visited pages, shown after content and findability. | The approved description names performance. The survey ranks it low (3 of 14), so it stays small and secondary. | P4, P1 | OT-01 (PageSpeed Insights); GA-03 to pick the pages | Prototype (optional, live site only); fuller performance later |
 
@@ -56,9 +58,9 @@ Owners can leave and come back to find where they left off. Putting an issue off
 | TR-1 | For issues Siteimprove detects, WHM doesn't keep its own fix status. Owners fix and recheck in Siteimprove. WHM shows progress from Siteimprove's checks: for example, "6 pages fixed since the last check, 2 new". It links each page to Siteimprove. | Project brief; US7 | P1, P2, P3 | WHM's own storage | Prototype |
 | TR-2 | **TR-2 (revised):** For editorial issues only, meaning those Siteimprove doesn't manage (content freshness, duplicate content, low-traffic pages), an owner can mark each page:<br>• "I updated this page"<br>• "still correct"<br>• "set aside until \[date\]"<br>This works one page at a time or several at once, is kept between visits, and the issue shows a summary such as "4 of 38 pages reviewed." | Project brief limits putting off to editorial choices; US8 | P1, P2, P3 | WHM's own storage | Prototype |
 | TR-3 | An owner can add a note to any issue. The note is labeled as their own and as visible to every owner of that site, with who wrote it and when. It is not sent to SWS. | Project brief | P1, P2, P3 | WHM's own storage | Prototype |
-| TR-4 | The accessibility specialist can attach a note to an issue type for all sites or for one site. Owners see it, and it carries over from one crawl to the next. | Project brief; US11 | P6 | Keyed by Siteimprove rule or policy ID (SI-05, SI-23) | Prototype (entered in the registry sheet) |
+| TR-4 | The accessibility specialist can attach a note to an issue type for all sites or for one site. Owners see it, and it carries over from one check to the next. | Project brief; US11 | P6 | Keyed by WHM issue type, which maps to Siteimprove rule or policy IDs (SI-05, SI-23) | Prototype (entered in `data/annotations.json`) |
 | TR-5 | SWS can mark an issue "SWS is handling this," which moves it out of the owner's fix list into a separate, visible list. | US4, US11; X-06 | P6, P2 | X-06 | Prototype |
-| TR-6 | An owner can see progress over a period: issues fixed, put off and still open. | US6, US7 | P1, P3 | WHM's own storage plus crawl history | MVP |
+| TR-6 | An owner can see progress over a period: issues fixed, put off and still open. | US6, US7 | P1, P3 | WHM's own storage plus check history | MVP |
 
 ## Access, multiple sites and delivery
 
@@ -100,7 +102,7 @@ The AI content report is a named deliverable in the approved description. Stale 
 | CT-2 | Well-visited pages that have open issues or low engagement are named in the summary. | Approved description (user engagement); the earlier WHM example | P1, P2, P3 | X-01, X-02, GA-04 | Prototype |
 | CT-3 | Each site's goals are recorded and used to frame its findings. For example, a quick-exit support site is judged differently from a site meant for browsing. | R2, R6, R10 describe different goals per site | P1, P3 | OT-03 | MVP (prototype shows one example) |
 | CT-4 | A report compares the site's public page content with its analytics (top pages, landing pages, engagement, site search), and recommends changes that would close the gap between what visitors look for and what the site offers. It is generated by AI, labeled as AI-generated, and shows its SWS review status. | Named deliverable in the approved description; R13: success is users finding answers "without needing to follow up with a person" | P1, P2, P3 | X-05; SI-16; GA-03, GA-04, GA-05, GA-08; public page text | Prototype (labeled sample); MVP (generated with the Claude API, reviewed by SWS before owners see it) |
-| CT-5 | Owners can see what visitors search for on the site. | Findability appears in 6 of 12 goal answers in the original report | P1, P3, P4 | GA-08 | Prototype (labeled sample); MVP (live) |
+| CT-5 | Owners can see what visitors search for on the site. | Findability appears in 6 of 12 goal answers in the original report | P1, P3, P4 | GA-08 | Prototype (live for sites with a GA4 property; only terms searched at least 5 times, with personal-looking terms removed) |
 | CT-6 | Pages with little or no traffic are listed for review, labeled "review," not "delete." | R9: "There is too much content"; X-03 | P1, P2 | X-03 | Later |
 | CT-7 | WHM points out content repeated in several places on a site. | R14; US12 | P2, P3 | Not in inventory (see Data gaps) | Later |
 | CT-8 | Owners can see visits that come from AI assistants and AI search. | R3 and R5 asked for GEO and AEO data; both existing dashboards already show AI referrals | P4, P1 | GA-07 | Later (prototype optional) |
@@ -126,7 +128,7 @@ The largest gap is content freshness: owners name it most often and the inventor
 
 | Need | Asked by | Inventory coverage | Possible source to investigate |
 | --- | --- | --- | --- |
-| Site Target Score and its history | SWS: Stanford's primary score, set with Siteimprove; every site is expected to reach 100 | Not in the Oct 15 inventory. Shown in the IAIS dashboard (98.04) and the earlier WHM example (98.3) | Locate it in the Siteimprove API, including whether history is available \[CONFIRM ENDPOINT\] |
+| Site Target Score and its history | SWS: Stanford's primary score, set with Siteimprove; every site is expected to reach 100 | Not in the Oct 15 inventory. Shown in the IAIS dashboard (98.04) and the earlier WHM example (98.3) | Found Nov 20: `a11y/overview/site_target/overview`, with daily history from Aug 2025 in `a11y/overview/site_target/history` |
 | Content age or freshness | 13 of 14 (stale-content trigger) | SI-17 unconfirmed | Stanford Sites (Drupal) last-changed date; HTTP Last-Modified header; sitemap lastmod |
 | Public page text for the AI report | Approved description | SI-16 lists pages, not their text | Fetch the public pages directly during the data run |
 | AI service for the report | Approved description | None | Claude API (Anthropic), decided Nov 13; used from the MVP on, not in the prototype |
@@ -152,7 +154,7 @@ The largest gap is content freshness: owners name it most often and the inventor
 - Slack delivery.
 - Bulk administration.
 - Automated freshness detection.
-- Live Google Analytics data and generated AI reports. Both appear as labeled samples.
+- Generated AI reports. They appear as labeled samples.
 - Siteimprove pre-publish checks (SI-34).
 - GA4 realtime data (GA-16).
 
@@ -161,5 +163,5 @@ The largest gap is content freshness: owners name it most often and the inventor
 - Can a site's co-owners edit or delete each other's notes, or only add their own?
 - Can any owner put off an editorial issue, or only the owner with final say?
 - Should "still correct" expire, so the page is flagged again after a set time?
-- What should happen when no crawl has run for a long time and items stay "waiting for the next check"?
+- What should happen when Siteimprove hasn't checked a site for a long time?
 - What do owners mean by report frequency? Interview question 1 in the findings report.

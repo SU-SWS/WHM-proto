@@ -2,6 +2,8 @@
 
 Nov 12, 2026 · @Someone
 
+*The repo copy is the place of record (Nov 23). Last updated Nov 23, 2026; `decisions.md` has the reasons for each change.*
+
 ## At a glance
 
 The roadmap moves from a fair prototype to client discovery, an MVP pilot, and then expansion. Each move depends on a gate being passed. Like any roadmap in the Pragmatic Framework, it is a plan, not a commitment.
@@ -12,9 +14,9 @@ Phase 0 is the current phase. The gate criteria are listed in each phase section
 
 ## Phase 0: Prototype for the Dec 8 fair
 
-By Dec 8, the prototype runs the owner experience end to end with live Siteimprove data for one site, sitesuserguide.stanford.edu, including traffic if Siteimprove Analytics is on for it. Google Analytics data and the AI content report appear as labeled samples and go live in the MVP (decision, Nov 13). This covers part of the approved initial deliverable, and the fair version should say so. The other two demo sites run on labeled sample data. Weekly dates are proposed.
+By Dec 8, the prototype runs the owner experience end to end with live Siteimprove data for one site, sitesuserguide.stanford.edu, with traffic, engagement and site search from Google Analytics 4 through an Apps Script export (decisions, Nov 20 and Nov 23). The AI content report appears as a labeled sample and goes live in the MVP. This covers part of the approved initial deliverable, and the fair version should say so. The other two demo sites run on labeled sample data. Weekly dates are proposed.
 
-**Scope (requirements tagged Prototype):** Built first, because the approved description names them: SP-1 to SP-8, AC-3, AC-8, AD-1 to AD-4, AD-7, CT-2, CT-4 (labeled sample), CT-5 (labeled sample), Q-1 to Q-5, Q-7. Shown in the clickable demo and built after those: TR-1 to TR-5, AC-2 (concept), AC-4 (static email), AC-6, CT-1 (simulated).
+**Scope (requirements tagged Prototype):** Built first, because the approved description names them: SP-1 to SP-8, AC-3, AC-8, AD-1 to AD-4, AD-7, CT-2, CT-4 (labeled sample), CT-5 (live), Q-1 to Q-5, Q-7. Shown in the clickable demo and built after those: TR-1 to TR-5, AC-2 (concept), AC-4 (static email), AC-6, CT-1 (simulated).
 
 | Week of | Focus | Done when |
 | --- | --- | --- |
@@ -25,7 +27,7 @@ By Dec 8, the prototype runs the owner experience end to end with live Siteimpro
 
 **Gate 1, ready for the fair:**
 
-- The live site shows live Siteimprove data, trend charts and the issue feed. Google Analytics data and the AI content report appear as labeled samples.
+- The live site shows live Siteimprove and GA4 data, trend charts and the issue feed. The AI content report appears as a labeled sample.
 - An administrator registers a site in the sheet, starts a run, and sees it complete.
 - SWS can see all demo sites ranked by need.
 - Every view shows data age and source.
@@ -43,13 +45,13 @@ After the fair, the prototype becomes the prop for follow-up interviews. This ph
 - What "frequency" means to them, and what would make an alert worth receiving (AC-5).
 - What an approver needs to see to say yes (AC-6, Persona 3).
 - Whether Persona 4's needs go beyond the plain view (it stays a separate persona, decision Nov 13).
-- Answers to the open questions in the requirements doc: who can edit notes, whether "still correct" expires, what happens when a "set aside" date arrives, and what happens to items left "waiting for the next check."
+- Answers to the open questions in the requirements doc: who can edit notes, whether "still correct" expires, what happens when a "set aside" date arrives, and what WHM should say when Siteimprove hasn't checked a site for a long time.
 
 **What to settle on the data side**
 
 - A source for content freshness (SI-17 or a fallback such as the Stanford Sites last-changed date).
 - Which Siteimprove endpoints exist in practice, including whether Core Wins (SI-31) or dismissed-issue states are exposed.
-- For each metric, whether Siteimprove covers it or GA4 is needed (Q-4). Get GA4 service-account access and a Claude API key in place before the MVP build starts.
+- For each metric, its one source (Q-4): GA4 for sites with a GA4 property, Siteimprove Analytics otherwise (Nov 23). Decide whether the GA4 export stays in Apps Script or moves into the data run, and get a Claude API key in place before the MVP build starts.
 
 **Gate 2, MVP scope agreed:**
 
@@ -68,7 +70,7 @@ The MVP turns the prototype's concepts into working parts for a small set of rea
 | Delivery | Summary email sent on each owner's chosen schedule | AC-4, AC-5 (frequency only) |
 | Tracking | Issue state, notes and history stored by WHM; progress over time | TR-1 to TR-5 (persisted), TR-6, AD-6 |
 | Administration | ID and access checks with clear errors | AD-5 |
-| Content | Real freshness flags if Gate 2 found a source; per-site goals; live Google Analytics data; AI report generated with the Claude API for every pilot site, reviewed by SWS before owners see it | CT-1, CT-3, CT-4, CT-5 |
+| Content | Real freshness flags if Gate 2 found a source; per-site goals; GA4 data for every pilot site; AI report generated with the Claude API for every pilot site, reviewed by SWS before owners see it | CT-1, CT-3, CT-4, CT-5 |
 | Trust | URL normalization for any site; low-noise flags; privacy rules | Q-5, Q-6, Q-8 |
 | Measurement | Usage tracking on WHM itself, so the pilot can be judged | OT-05 |
 
@@ -104,7 +106,7 @@ Rows needed by the week of Nov 16 block the prototype. The rest can wait until t
 | Siteimprove API service user with access to that site (SI-01) | Week of Nov 16 | \[INSERT OWNER\] |
 | Where the Site Target Score is in the Siteimprove API, and whether its history is available | Week of Nov 16 | \[INSERT OWNER\] |
 | Siteimprove Analytics is on for sitesuserguide.stanford.edu (SI-27, SI-28; confirmed Nov 13) | Week of Nov 16 | \[INSERT OWNER\] |
-| GA4 property access through a service account, and a Claude API key (Anthropic) stored as a repo secret | Before the MVP build (Phase 1) | \[INSERT OWNER\] |
+| GA4 access for each pilot site (Apps Script export today; Nov 20), and a Claude API key (Anthropic) stored as a repo secret | Before the MVP build (Phase 1) | \[INSERT OWNER\] |
 | Private Pages not available to SU-SWS (confirmed Nov 13), so the fair site is public | Week of Nov 16 | \[INSERT OWNER\] |
 | Plain-language text for each issue type shown (OT-04) | Week of Nov 30 | \[INSERT OWNER\] |
 | Content freshness source | Gate 2 | \[INSERT OWNER\] |

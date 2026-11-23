@@ -2,6 +2,8 @@
 
 Nov 12, 2026 · @Someone
 
+*The repo copy is the place of record (Nov 23). Last updated Nov 23, 2026; `decisions.md` has the reasons for each change.*
+
 ## Architecture at a glance
 
 A GitHub Actions workflow does all data gathering and writes JSON. The Next.js site on GitHub Pages only reads that JSON, so no credentials reach the browser.
@@ -18,15 +20,15 @@ The prototype is a static Next.js site on GitHub Pages. All secrets and API call
 | --- | --- | --- | --- |
 | Registry | Sites, owners, source IDs, SWS annotations, issue-type text (AD-1, TR-4, OT-04, X-06) | JSON files in the repo (decision, Nov 13): `data/registry.json` for sites, owners (role labels) and source IDs; `data/annotations.json` for SWS notes; `data/issue-types.json` for plain-language issue text. Edited by committing changes. | A database with an admin screen (AD-8) |
 | Data run | Reads the registry, calls the sources, writes JSON and the AI report | GitHub Actions workflow, `workflow_dispatch` with a `site` input, plus a weekly schedule for a continuous picture | Scheduled jobs plus on-demand runs |
-| Source data | Siteimprove: health scores, issues, pages, crawl dates. GA4: traffic, engagement, landing pages, site search. | Siteimprove API v2 (`https://api.siteimprove.com/v2`), Basic auth, including Siteimprove Analytics (SI-27, SI-28) for traffic if it is on for the site. No Google Analytics in the prototype (decision, Nov 13). | Adds the GA4 Data API (`runReport`) through a service account, and a freshness source chosen at Gate 2 |
-| Processing | URL normalization; traffic-weighted priority (Siteimprove issue pages joined to page views from Siteimprove Analytics, or from GA4 once the MVP adds it); owner or SWS fixable; admin-only filter (Q-5, X-01, X-06, AD-7) | Node script in the repo, run by the workflow | Same logic as a service |
+| Source data | Siteimprove: health scores, issues, pages, check dates. GA4: traffic, engagement, landing pages, site search. | Siteimprove API v2 at `https://api.us.siteimprove.com/v2` (Stanford's account), Basic auth. GA4 through a Google Apps Script export committed to the repo (decisions, Nov 20). A site with a GA4 property gets all its analytics from GA4; Siteimprove Analytics (SI-27, SI-28) is used only for a site without one (Nov 23). | Moves the GA4 export into the data run, if a service account or similar becomes available, and adds a freshness source chosen at Gate 2 |
+| Processing | URL normalization; traffic-weighted priority (Siteimprove issue pages joined to GA4 page views, or to Siteimprove Analytics page views for sites without GA4); owner or SWS fixable; admin-only filter (Q-5, X-01, X-06, AD-7) | Node script in the repo, run by the workflow | Same logic as a service |
 | AI content report | Compares public page text with GA4 top pages, landing pages, engagement and search terms; recommends changes (CT-4) | A labeled sample `report.json` (decision, Nov 13); no Claude API call in the prototype | Script fetches the text of the top pages and sends it with GA4 data to Claude Sonnet 5.5 (`claude-sonnet-5-5`) through the Claude API; SWS reviews it before owners see it |
 | Speed check | PageSpeed Insights for the top 3 pages (SP-8) | Optional script step, live site only | Wider coverage (Phase 3) |
 | Published data | One JSON file per site, plus a portfolio file and a status file | Committed to the repo and deployed with the site | API behind sign-in |
 | Web front end | Owner views, SWS all-sites view, share view, email views, admin page | Next.js 16 static export, Tailwind 3.4, `decanter@7.5.3` preset, Source Sans 3 and Source Serif 4 | Next.js with server rendering and Stanford sign-in |
-| Owner state | Status for each affected page (to do, waiting for next check, still correct, set aside), a progress summary per issue, and notes (TR-1 to TR-3) | Browser `localStorage`: one browser only, for demonstration | Database, shared across co-owners |
+| Owner state | For editorial issues only: a status for each page (to do, updated, still correct, set aside until a date) and a progress summary. Notes on any issue. Issues Siteimprove detects show progress between checks instead (TR-1 to TR-3, revised). | Browser `localStorage`: one browser only, for demonstration | Database, shared across co-owners |
 | Access concept | Which owner sees which sites (AC-2) | A "Viewing as" switch driven by the owners in the registry file; not enforced | Stanford SSO plus per-site permissions |
-| Sample mode | Lets the demo run without live data | Sample JSON with `"source": "sample"` for the two non-live sites, and for the live site's Google Analytics sections and AI report, labeled on every screen | Removed |
+| Sample mode | Lets the demo run without live data | Sample JSON with `"source": "sample"` for the two non-live sites, and for the live site's AI report, speed check and content freshness, labeled on every screen | Removed |
 
 **What is public.** A GitHub Pages site from a public repo is visible to anyone, and so are the committed JSON files.
 
@@ -75,7 +77,7 @@ These steps produce a working fair site. Steps 1 to 6 and 9 cover the approved d
    - `/sws`: all client sites ranked by need, with owners and last run (AC-8).
    - `/admin`: registry table, a "Start data run" link to the workflow in GitHub Actions (Option A), run status.
    - `/sites/[site]/share` and `/email/[site]`: share and email views.
-7. **Add tracking state (brief, after the approved items).** A small client-side store saves the status of each affected page, keyed by site, issue and normalized page URL (waiting for next check, still correct, set aside), plus notes, to `localStorage`, wrapped in try/catch. Notes are labeled as visible to all owners of the site.
+7. **Add tracking state (brief, after the approved items).** A small client-side store saves the status of each affected page, keyed by site, issue and normalized page URL (updated, still correct, set aside until a date; editorial issues only), plus notes, to `localStorage`, wrapped in try/catch. Notes are labeled as visible to all owners of the site.
 8. **Deploy.** Add `.github/workflows/deploy.yml`: on push to `main`, run `npm ci`, `next build`, `actions/upload-pages-artifact` (path `out`) and `actions/deploy-pages`.
 9. **Add the data workflow.** Add `.github/workflows/refresh-data.yml` with a `workflow_dispatch` input `site` (default `all`) and a weekly schedule. It runs `scripts/refresh.mjs`, commits `data/`, then builds and deploys. On sample data, the script copies the sample files and writes `status.json`, so the button works before live data exists.
 10. **Check and rehearse.** Run an axe check on every page, test keyboard-only use, and test at phone width. Then do two rehearsals using the demo script.
@@ -84,26 +86,26 @@ These steps produce a working fair site. Steps 1 to 6 and 9 cover the approved d
 
 ## Adding live Siteimprove data
 
-Live data comes in for one site, sitesuserguide.stanford.edu (switched from webservices.stanford.edu, Nov 13), from Siteimprove only, one slice at a time. Each slice works on its own, and any slice that isn't live yet falls back to labeled sample data. Google Analytics data and the AI report stay as labeled samples until the MVP; their slices are kept in the table below for the MVP build.
+Live data comes in for one site, sitesuserguide.stanford.edu (switched from webservices.stanford.edu, Nov 13), from Siteimprove, plus GA4 through the Apps Script export (Nov 20), one slice at a time. Each slice works on its own, and any slice that isn't live yet falls back to labeled sample data. The AI report stays a labeled sample until the MVP.
 
 **Setup (once)**
 
 1. A Siteimprove account owner or administrator creates an API user with access to the live site, and an API key for it. API calls get that user's permissions ([Siteimprove help](https://help.siteimprove.com/support/solutions/articles/80000448206-how-to-connect-to-the-siteimprove-api)).
 2. Add the Siteimprove site ID for sitesuserguide.stanford.edu to `data/registry.json` and commit it. Owner entries hold role labels only, because the repo and site are public.
-3. Store the secrets in the repo: `SITEIMPROVE_API_USER` and `SITEIMPROVE_API_KEY`. A Google service account and `ANTHROPIC_API_KEY` are added for the MVP.
+3. Store the secrets in the repo: `SITEIMPROVE_API_USER` and `SITEIMPROVE_API_KEY`. `ANTHROPIC_API_KEY` is added for the MVP. GA4 uses the Apps Script export, so no Google service account is needed (Nov 20).
 4. Sign in to the Siteimprove API documentation with the API user. Check each endpoint below in Swagger before writing code, and save one real response per endpoint as a test fixture ([API reference](https://developer.siteimprove.com/api-reference.html)).
-5. Confirm the Siteimprove base URL for Stanford's account. The documentation shows both `api.siteimprove.com/v2` and `api.eu.siteimprove.com/v2` ([API docs](https://api.siteimprove.com/v2/documentation)).
+5. Siteimprove base URL: settled Nov 20. Stanford's account uses `https://api.us.siteimprove.com/v2`.
 
 **Slices, in order**
 
 | # | Slice | Source and endpoint (inventory ID) | Feeds | Verified? |
 | --- | --- | --- | --- | --- |
-| 1 | Site Target Score and trend | Siteimprove; endpoint to find \[CONFIRM ENDPOINT\] | SP-1 (primary score), SP-6 | Not in the inventory; SWS confirms it can be retrieved |
-| 2 | Accessibility and other headline scores, with trend | Siteimprove `/sites/{id}/dci/overview` and `/dci/history` (SI-02 to SI-04) | SP-1, SP-6 | History confirmed; overview path inferred |
-| 3 | Traffic trend and top pages | Prototype: Siteimprove Analytics content and traffic sources (SI-27, SI-28), if on for the site. MVP: GA4 `runReport` (GA-02, GA-03) | SP-6, SP-3 weighting | Siteimprove Analytics confirmed on for sitesuserguide.stanford.edu (Nov 13); endpoint paths to verify |
+| 1 | Site Target Score and trend | Siteimprove `a11y/overview/site_target/overview` and `/history` | SP-1 (primary score), SP-6 | Confirmed Nov 20; daily history from Aug 2025 |
+| 2 | Accessibility and other headline scores, with trend | `accessibility_dci_score` from the Site Target Score history, so both scores share one source (Nov 20) | SP-1, SP-6 | Confirmed |
+| 3 | Traffic trend and top pages | GA4 (Apps Script export) for sites with a GA4 property; Siteimprove Analytics (SI-27, SI-28) otherwise | SP-6, SP-3 weighting | Live from GA4 for sitesuserguide (Nov 23); Siteimprove Analytics paths confirmed with fixtures |
 | 4 | Broken links count and trend | Siteimprove QA `check_history` (SI-13); broken links list (SI-11) | SP-1, SP-6, issue feed | History confirmed; list path to verify |
 | 5 | Accessibility issues and pages | Siteimprove `a11y/issue_kinds/confirmed/issues` (SI-05); pages per issue (SI-08) | Issue feed, issue detail | Issues confirmed; pages path inferred |
-| 6 | Engagement, landing pages, site search | GA4 `runReport`: `engagementRate`, `landingPagePlusQueryString`, `searchTerm` (GA-04, GA-05, GA-08) | CT-2, CT-5, AI report | MVP; labeled sample in the prototype |
+| 6 | Engagement, landing pages, site search | GA4 `runReport`: `engagementRate`, `landingPagePlusQueryString`, `searchTerm` (GA-04, GA-05, GA-08) | CT-2, CT-5, AI report | Engagement and site search are live for sitesuserguide (Nov 20); landing pages aren't exported yet |
 | 7 | AI content report | Public page text for the top 10 pages from slice 3, plus slices 3 and 6, sent to the Claude API | CT-4 | MVP; labeled sample in the prototype. Prompt to be written and tested |
 | 8 | Stanford policies | Siteimprove policy list and matches (SI-23, SI-24), with SWS-only policies dropped | Issue feed, AD-7 | Confirmed |
 | 9 | Speed check (optional) | PageSpeed Insights API for the top 3 pages (OT-01) | SP-8 | Not researched in the inventory |
@@ -123,7 +125,7 @@ Live data comes in for one site, sitesuserguide.stanford.edu (switched from webs
 | API user or service account can't see the live site | No live data | Sample data, labeled; switch to another of the three sites |
 | The Site Target Score endpoint isn't found by Nov 30, or has no history | The primary score shows as sample, or with no trend | Show the current score with sample history, labeled; keep looking with Siteimprove support |
 | An endpoint path differs from the inventory's inferred path | A slice is late | Ship the slices already verified; others stay sample |
-| Siteimprove Analytics page URLs don't match the URLs issues are reported on | Issues can't be ranked by visitor impact | Normalize URLs (Q-5); for any still unmatched, rank by how often the issue occurs |
+| Analytics page URLs don't match the URLs issues are reported on | Issues can't be ranked by visitor impact | Normalize URLs (Q-5); for any still unmatched, rank by how often the issue occurs |
 | The AI report states something the data doesn't support | Misleading recommendations | Each finding cites its page and metric; "not yet reviewed by SWS" label until reviewed |
 | The sample AI report is mistaken for real findings about the site | Viewers draw conclusions from sample content | Sample label on the report page and on its summary on the site page; say so in the demo script |
 | Commits made with the workflow's default token don't trigger other workflows | Data commits but the site doesn't redeploy | Build and deploy in the same workflow |
@@ -133,4 +135,4 @@ Live data comes in for one site, sitesuserguide.stanford.edu (switched from webs
 
 **Open questions:** none right now.
 
-**Settled Nov 13:** Siteimprove Analytics is on for sitesuserguide.stanford.edu. For now, only Shane Cyr has write access to the repo, so only he can start data runs (Option A). A public fair site is acceptable: the data it shows isn't sensitive. The registry is a file in the repo rather than a Google Sheet.
+**Settled Nov 13:** Siteimprove Analytics is on for sitesuserguide.stanford.edu. For now, only Shane Cyr has write access to the repo, so only he can start data runs (Option A). A public fair site is acceptable: the data it shows isn't sensitive. The registry is a file in the repo rather than a Google Sheet. *Superseded Nov 23:* GA4 is the analytics source for any site with a GA4 property, including sitesuserguide.
