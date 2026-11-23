@@ -7,7 +7,7 @@
   "checkedAt": "2026-11-20",
   "state": "attention",
   "verdict": "Needs attention: issues sit on some of your busiest pages.",
-  "lede": "Your Site Target Score is 98.37, the same as the last check. Fewer visitors stay on “Create Jump Links Using ID Tags” than on most of your pages. Fixing the first two items helps the most visitors. 6 items are being handled by SWS.",
+  "lede": "Your Site Target Score is 98.37, the same as the last check. Issues sit on “Launch your site”, one of your busiest pages. Fewer visitors stay on “Create Jump Links Using ID Tags” than on most of your pages. Fixing the first two items helps the most visitors. 6 items are being handled by SWS.",
   "readings": {
     "siteTargetScore": {
       "value": 98.37,
@@ -1998,6 +1998,206 @@
       "siteimproveUrl": null,
       "source": "live",
       "pages": []
+    },
+    {
+      "type": "stale",
+      "scope": "38 of 352 pages, up 5.",
+      "reason": "Contact and support is your 5th busiest page and was last updated 14 months ago.",
+      "rank": 20,
+      "siteimproveUrl": null,
+      "source": "sample",
+      "pages": [
+        {
+          "path": "/contact-and-support",
+          "views": 540,
+          "monthsSinceUpdate": 14
+        },
+        {
+          "path": "/training-schedule",
+          "views": 190,
+          "monthsSinceUpdate": 13
+        },
+        {
+          "path": "/getting-started/request-a-site",
+          "views": 180,
+          "monthsSinceUpdate": 15
+        },
+        {
+          "path": "/getting-started/site-owner-roles",
+          "views": 150,
+          "monthsSinceUpdate": 16
+        },
+        {
+          "path": "/layout-tips/columns",
+          "views": 120,
+          "monthsSinceUpdate": 13
+        },
+        {
+          "path": "/layout-tips/spacing",
+          "views": 110,
+          "monthsSinceUpdate": 18
+        },
+        {
+          "path": "/media-library/upload-files",
+          "views": 105,
+          "monthsSinceUpdate": 14
+        },
+        {
+          "path": "/media-library/image-sizes",
+          "views": 98,
+          "monthsSinceUpdate": 20
+        },
+        {
+          "path": "/menus/secondary-menu",
+          "views": 92,
+          "monthsSinceUpdate": 13
+        },
+        {
+          "path": "/menus/footer-links",
+          "views": 88,
+          "monthsSinceUpdate": 17
+        },
+        {
+          "path": "/people/profile-fields",
+          "views": 80,
+          "monthsSinceUpdate": 22
+        },
+        {
+          "path": "/people/import-profiles",
+          "views": 74,
+          "monthsSinceUpdate": 15
+        },
+        {
+          "path": "/news/news-listing",
+          "views": 70,
+          "monthsSinceUpdate": 13
+        },
+        {
+          "path": "/news/tags",
+          "views": 66,
+          "monthsSinceUpdate": 19
+        },
+        {
+          "path": "/release-notes-2024",
+          "views": 60,
+          "monthsSinceUpdate": 23
+        },
+        {
+          "path": "/events/event-series",
+          "views": 61,
+          "monthsSinceUpdate": 14
+        },
+        {
+          "path": "/events/calendar-feed",
+          "views": 58,
+          "monthsSinceUpdate": 25
+        },
+        {
+          "path": "/forms/webforms",
+          "views": 55,
+          "monthsSinceUpdate": 13
+        },
+        {
+          "path": "/forms/spam-protection",
+          "views": 51,
+          "monthsSinceUpdate": 16
+        },
+        {
+          "path": "/accessibility/headings",
+          "views": 49,
+          "monthsSinceUpdate": 18
+        },
+        {
+          "path": "/accessibility/link-text",
+          "views": 47,
+          "monthsSinceUpdate": 14
+        },
+        {
+          "path": "/accessibility/color-contrast",
+          "views": 45,
+          "monthsSinceUpdate": 21
+        },
+        {
+          "path": "/seo/search-descriptions",
+          "views": 42,
+          "monthsSinceUpdate": 13
+        },
+        {
+          "path": "/seo/page-titles",
+          "views": 40,
+          "monthsSinceUpdate": 15
+        },
+        {
+          "path": "/analytics/google-analytics",
+          "views": 38,
+          "monthsSinceUpdate": 27
+        },
+        {
+          "path": "/analytics/siteimprove",
+          "views": 36,
+          "monthsSinceUpdate": 14
+        },
+        {
+          "path": "/policies/site-retirement",
+          "views": 33,
+          "monthsSinceUpdate": 30
+        },
+        {
+          "path": "/policies/content-ownership",
+          "views": 31,
+          "monthsSinceUpdate": 19
+        },
+        {
+          "path": "/policies/accessibility-statement",
+          "views": 29,
+          "monthsSinceUpdate": 13
+        },
+        {
+          "path": "/archive/2023/launch-notes",
+          "views": 24,
+          "monthsSinceUpdate": 24
+        },
+        {
+          "path": "/archive/2023/survey",
+          "views": 21,
+          "monthsSinceUpdate": 26
+        },
+        {
+          "path": "/archive/2022/training",
+          "views": 18,
+          "monthsSinceUpdate": 34
+        },
+        {
+          "path": "/archive/2022/office-hours",
+          "views": 15,
+          "monthsSinceUpdate": 35
+        },
+        {
+          "path": "/faq/billing",
+          "views": 14,
+          "monthsSinceUpdate": 17
+        },
+        {
+          "path": "/faq/domains",
+          "views": 12,
+          "monthsSinceUpdate": 13
+        },
+        {
+          "path": "/faq/hosting",
+          "views": 11,
+          "monthsSinceUpdate": 20
+        },
+        {
+          "path": "/help/office-hours",
+          "views": 9,
+          "monthsSinceUpdate": 15
+        },
+        {
+          "path": "/help/workshops",
+          "views": 7,
+          "monthsSinceUpdate": 28
+        }
+      ]
     },
     {
       "type": "broken-template",
