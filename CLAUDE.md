@@ -24,8 +24,8 @@ Stanford Web Services (SWS) innovation project. A dashboard that turns Siteimpro
 
 ## Data rules
 
-- **Live data is only for sitesuserguide.stanford.edu** (`live: true` in `data/registry.json`): Siteimprove, plus GA4 engagement and site search from an Apps Script export (`data/ga4/`, decisions Nov 20). Everything else uses the committed sample data.
-- Page views come from **Siteimprove Analytics**; GA4 supplies only engagement rate and site search terms (one source per metric). The AI content report is a **labeled sample** until the MVP.
+- **Live data is only for sitesuserguide.stanford.edu** (`live: true` in `data/registry.json`): Siteimprove, plus GA4 analytics from an Apps Script export (`data/ga4/`, decisions Nov 20 and Nov 23). Everything else uses the committed sample data.
+- **A GA4 property in the registry means GA4 is the only analytics source** for that site: page views, the trend, busiest pages, ranking, engagement and search (decisions, Nov 23). Siteimprove Analytics is used only for sites with no GA4 property. An old, missing or broken export never falls back to Siteimprove: use the old export marked out of date, or the last good GA4 data, or labeled samples. The AI content report is a **labeled sample** until the MVP.
 - GA4 site search terms are public once published: only terms searched at least 5 times, with anything that looks like an email, phone or ID number, or web address removed.
 - Every section of every data file carries a `source` of `live` or `sample`. The UI shows it.
 - Every screen shows how old its data is and where it came from (AD-4).

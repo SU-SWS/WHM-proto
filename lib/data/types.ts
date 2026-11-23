@@ -19,7 +19,7 @@ export interface RegistrySite {
   url: string;
   live: boolean; // true only for sitesuserguide in the prototype
   siteimproveSiteId: number | null;
-  ga4PropertyId: string | null; // MVP
+  ga4PropertyId: string | null; // when set, all the site's analytics come from GA4 (decisions, Nov 23)
   owners: string[]; // owner keys
 }
 
@@ -100,6 +100,15 @@ export interface SiteIssue {
 
 export type SiteState = "attention" | "ok" | "good";
 
+/** Where a site's traffic numbers come from: page views, the monthly trend and the most visited pages. */
+export interface AnalyticsInfo {
+  provider: "ga4" | "siteimproveAnalytics"; // GA4 whenever the registry lists a GA4 property
+  source: Source;
+  asOf?: IsoDate; // last day the numbers cover
+  periodDays?: number;
+  stale?: boolean; // out of date: an old GA4 export, or last good data kept after a failed fetch (Q-7)
+}
+
 export interface SiteData {
   schemaVersion: 2;
   siteKey: string;
@@ -107,6 +116,7 @@ export interface SiteData {
   url: string;
   source: Source; // "live" if any section is live
   checkedAt: IsoDate; // date of the Siteimprove check the data comes from
+  analytics?: AnalyticsInfo; // absent in sample files, which use Siteimprove Analytics wording
   state: SiteState;
   verdict: string;
   lede: string;
@@ -132,7 +142,7 @@ export interface SiteData {
     typicalEngagement?: number | null; // the site's median engagement rate, for comparison (CT-2)
     pages: {
       path: string;
-      title?: string; // page name from Siteimprove Analytics
+      title?: string; // page name, from the same provider as the page views
       views: number;
       engagementRate: number | null;
       lowEngagement?: boolean; // well below the site's typical rate, with enough visits to count (CT-2)
@@ -140,7 +150,7 @@ export interface SiteData {
     }[];
   };
   issues: SiteIssue[];
-  siteSearch: { source: Source; asOf?: IsoDate; periodDays?: number; terms: { term: string; count: number }[] }; // GA4; asOf is the last day of its period
+  siteSearch: { source: Source; asOf?: IsoDate; periodDays?: number; stale?: boolean; terms: { term: string; count: number }[] }; // GA4; asOf is the last day of its period
   speed: { source: Source; pages: { path: string; score: number }[] }; // optional
 }
 

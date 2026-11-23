@@ -6,8 +6,8 @@ import type { IsoDate, SiteRunStatus, Source } from "./types";
 /** Where a section's numbers come from (one source per metric, Q-4). */
 export type Provider =
   | "siteimprove" // scores, issues, checks
-  | "siteimproveAnalytics" // page views in the prototype
-  | "ga4" // engagement and site search; sample until the MVP
+  | "siteimproveAnalytics" // page views, only for sites with no GA4 property
+  | "ga4" // all analytics for sites with a GA4 property (decisions, Nov 23)
   | "pagespeed" // speed check
   | "aiReport"; // content report; sample until the MVP
 
@@ -17,6 +17,8 @@ export interface Provenance {
   date: IsoDate;
   /** The site's entry in status.json, so a failed run is never shown as current (Q-7). */
   run?: SiteRunStatus;
+  /** The numbers weren't updated by the latest data run, or come from an old export. */
+  stale?: boolean;
 }
 
 export interface ProvenanceText {
@@ -26,7 +28,7 @@ export interface ProvenanceText {
   origin: string;
   /** "Live data" or "Sample data", for a badge. */
   sourceLabel: string;
-  /** Set when the latest run failed and this is the last good data. */
+  /** Set when the latest run failed, or the data is out of date, and this is the last good data. */
   warning: string | null;
 }
 
@@ -74,12 +76,14 @@ function originText(provider: Provider, date: string): string {
   }
 }
 
-export function describeSection({ provider, source, date, run }: Provenance): ProvenanceText {
+export function describeSection({ provider, source, date, run, stale }: Provenance): ProvenanceText {
   const label = sourceLabel(source);
   const warning =
     run?.result === "failed"
       ? `The latest data run couldn’t update this site, so this is the last good data, from ${formatDate(date)}.`
-      : null;
+      : stale && source === "live"
+        ? `These numbers haven’t been updated since ${formatDate(date)}, so they may be out of date.`
+        : null;
   const origin = originText(provider, formatDate(date));
   return {
     text: `${origin} ${label}.`,

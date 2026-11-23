@@ -1,6 +1,6 @@
 # How the WHM prototype works
 
-*For updating the WHM presentation deck with an appendix. Current as of November 20, 2026. Prototype site: https://su-sws.github.io/WHM-proto/*
+*For updating the WHM presentation deck with an appendix. Current as of November 23, 2026. Prototype site: https://su-sws.github.io/WHM-proto/*
 
 Website Health Monitoring (WHM) turns Siteimprove and Google Analytics data into a short, plain-language picture of each site's health: what's wrong, what to fix first, and who fixes it. It summarizes and links to the source tools rather than replacing them.
 
@@ -9,18 +9,19 @@ Website Health Monitoring (WHM) turns Siteimprove and Google Analytics data into
 | | What it shows | Where it comes from |
 | --- | --- | --- |
 | **Live** (sitesuserguide.stanford.edu only) | Site Target Score and accessibility score, with monthly history; broken links; accessibility issues; Stanford policy issues; pages missing a search description; the date of the latest check | Siteimprove API |
-| **Live** | Page views per page and per month, and the most visited pages | Siteimprove Analytics |
-| **Live** | Engagement rate per page; what visitors search for on the site | Google Analytics 4 |
+| **Live** | Page views per page and per month; the most visited pages; engagement rate per page; what visitors search for on the site | Google Analytics 4 |
 | **Sample, labeled** | Two other demo sites (Stanford Web Services, Decanter) | Written for the demo |
 | **Sample, labeled** | AI content report; speed check | Written for the demo; planned for the MVP |
 | **Simulated, labeled** | Pages not updated in a year (content freshness) | No reliable source yet; kept to start the conversation with owners |
 
 Every section on every page says where its data came from and how old it is, for example “Siteimprove check of Nov 20, 2026. Live data.”
 
+**One analytics source per site.** If a site has a GA4 property, all its visitor numbers come from GA4. Siteimprove Analytics is used only for a site without GA4, so it still gets some numbers. If the GA4 export is late or missing, WHM shows the last GA4 numbers it has and says they may be out of date; it never quietly swaps in Siteimprove's numbers, which are counted differently.
+
 ## 2. How data gets to the page
 
 1. **Data run, weekly or on demand.** A GitHub Actions workflow calls the Siteimprove API with credentials stored as GitHub secrets, builds one data file per site, and publishes the site. An SWS administrator can start an extra run: the Admin page's “Start data run” opens it in GitHub, and the Admin page then follows the run step by step until the new data is live.
-2. **GA4 export, weekly.** A small Google Apps Script, run under an SWS Google account, pulls engagement and site search from GA4 and adds them to the repo. The next data run merges them in.
+2. **GA4 export, weekly.** A small Google Apps Script, run under an SWS Google account, pulls page views, engagement and site search from GA4 and adds them to the repo. The next data run merges them in.
 3. **Static site.** The website is plain files on GitHub Pages. The browser never talks to Siteimprove or Google, so no credentials ever reach a visitor.
 
 If part of a data run fails, that part keeps its last good data and the Admin page says what failed. Old numbers are never shown as current.
@@ -30,7 +31,7 @@ If part of a data run fails, that part keeps its last good data and the Admin pa
 - **One verdict per site.** Rules, written in plain language for SWS review, set each site to “needs attention,” “in good shape, with fixes worth making,” or “in good shape”. For example, a site needs attention if its Site Target Score dropped since the last check, or an issue sits on one of its five busiest pages.
 - **Ranked by visitors.** “Prioritized for me” orders the owner's issues by how many visitors see the affected pages. It shows the top five first. “Show everything plainly” lists every issue, unranked, by category.
 - **Owner or SWS.** An issue found on nearly every page (90% or more) comes from the shared site template, so it moves to “Being handled by SWS” instead of the owner's list. Broken links in the shared Stanford footer are treated the same way.
-- **Noise filtered out.** Incomplete Siteimprove checks are skipped. Platform pages that every Stanford Sites site shares, such as search and sign-in, are left out of “busiest pages.”
+- **Noise filtered out.** Incomplete Siteimprove checks are skipped. Platform pages that every Stanford Sites site shares, such as search, sign-in and “page not found,” are left out of “busiest pages.”
 - **Plain language.** Each issue says what it is, why it matters, what to do, and who fixes it, at about an 8th-grade reading level. Draft wording is marked “not yet reviewed by SWS.”
 - **Low engagement named.** A well-visited page where far fewer visitors stay than on the site's typical page is named in the summary.
 

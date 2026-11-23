@@ -21,12 +21,13 @@ const BUSIEST = 5;
 /** Rows in "Most visited pages"; the low-engagement check looks at these (CT-2). */
 const MOST_VISITED = 10;
 /**
- * Stanford Sites platform pages, shared by every site on the platform: search
- * and sign-in/account pages. They're left out when picking a site's busiest
- * pages, because the owner doesn't write them. Open question (decisions,
- * Nov 20): they still matter to visitors, so platform-wide reporting is needed later.
+ * Stanford Sites platform pages, shared by every site on the platform: search,
+ * sign-in/account pages, and the "page not found" page (GA4 records it as
+ * /404.html). They're left out when picking a site's busiest pages, because the
+ * owner doesn't write them. Open question (decisions, Nov 20): they still matter
+ * to visitors, so platform-wide reporting is needed later.
  */
-export const PLATFORM_PAGES = [/^\/search(\/|$)/, /^\/user(\/|$)/];
+export const PLATFORM_PAGES = [/^\/search(\/|$)/, /^\/user(\/|$)/, /^\/404(\.html)?$/];
 const isPlatformPage = (path) => PLATFORM_PAGES.some((re) => re.test(path));
 /** Policies that may be published: [QA], [A11y], [SEO] in any combination, QA: or A11y: (decisions, Nov 20). */
 export const ALLOWED_POLICY = /^(\[(qa|a11y|seo)\]\s*)+|^(qa|a11y):/i;
@@ -130,37 +131,59 @@ export async function buildLiveSite({ site, sample, previous, issueTypes, client
     },
   );
 
-  // --- Traffic: page views per page over the window, and per month (Siteimprove Analytics).
+  // --- Traffic: page views per page over the window, per month, and page names.
+  // The registry decides the provider (decisions, Nov 23): a site with a GA4
+  // property takes all of its analytics from the GA4 export, even when that
+  // export is old or missing; only a site with no GA4 property uses Siteimprove
+  // Analytics. One provider per site, so numbers never mix (Q-4).
+  const provider = site.ga4PropertyId ? "ga4" : "siteimproveAnalytics";
   const yesterday = new Date(now.getTime() - 86_400_000);
   const windowPeriod = `${ymd(new Date(now.getTime() - WINDOW_DAYS * 86_400_000))}_${ymd(yesterday)}`;
-  const traffic = await section(
-    "traffic",
-    async () => {
-      const top = await client.getAll(`${base}/analytics/content/most_popular_pages?period=${windowPeriod}&page_size=500`);
-      const views = new Map();
-      const titles = new Map();
-      for (const p of top) {
-        const path = normalizePath(p.url, site.url);
-        if (!path) continue;
-        views.set(path, (views.get(path) ?? 0) + p.page_views);
-        // "Create Jump Links Using ID Tags | Stanford Sites User Guide" → the page's own name
-        if (p.title && !titles.has(path)) titles.set(path, p.title.split(" | ")[0].trim());
-      }
-      const history = await client.get(`${base}/analytics/overview/history?period=${months[0].replace("-", "")}01_${ymd(yesterday)}`);
-      const byMonth = new Map((history.items ?? []).map((i) => [i.timestamp.slice(0, 7), i.page_views]));
-      const firstData = months.findIndex((m) => (byMonth.get(m) ?? 0) > 0);
-      const current = now.toISOString().slice(0, 7);
-      // Months before Analytics was on are no data, not zero; the current month isn't complete yet.
-      const values = months.map((m, i) => (firstData < 0 || i < firstData || m === current ? null : (byMonth.get(m) ?? 0)));
-      return { views, titles, pageViews: { source: "live", values } };
-    },
-    () => {
-      const live = previous?.trends?.pageViews?.source === "live";
-      return keepOr(previous && { views: null, titles: null, pageViews: previous.trends.pageViews }, live, { views: null, titles: null, pageViews: sample.trends.pageViews });
-    },
-  );
+  const current = now.toISOString().slice(0, 7);
+  /** Months before analytics was on are no data, not zero; the current month isn't complete yet. */
+  const monthlyValues = (byMonth) => {
+    const firstData = months.findIndex((m) => (byMonth.get(m) ?? 0) > 0);
+    return months.map((m, i) => (firstData < 0 || i < firstData || m === current ? null : (byMonth.get(m) ?? 0)));
+  };
+  const fromSiteimprove = async () => {
+    const top = await client.getAll(`${base}/analytics/content/most_popular_pages?period=${windowPeriod}&page_size=500`);
+    const views = new Map();
+    const titles = new Map();
+    for (const p of top) {
+      const path = normalizePath(p.url, site.url);
+      if (!path) continue;
+      views.set(path, (views.get(path) ?? 0) + p.page_views);
+      // "Create Jump Links Using ID Tags | Stanford Sites User Guide" → the page's own name
+      if (p.title && !titles.has(path)) titles.set(path, p.title.split(" | ")[0].trim());
+    }
+    const history = await client.get(`${base}/analytics/overview/history?period=${months[0].replace("-", "")}01_${ymd(yesterday)}`);
+    const byMonth = new Map((history.items ?? []).map((i) => [i.timestamp.slice(0, 7), i.page_views]));
+    return { views, titles, pageViews: { source: "live", values: monthlyValues(byMonth) }, asOf: day(yesterday.toISOString()), stale: false };
+  };
+  const fromGa4 = async () => {
+    if (!ga4) throw new Error("no usable GA4 export");
+    if (!ga4.views || !ga4.monthly) throw new Error("the GA4 export has no page views");
+    return { views: ga4.views, titles: ga4.titles, pageViews: { source: "live", values: monthlyValues(ga4.monthly) }, asOf: ga4.asOf, stale: ga4.stale };
+  };
+  const traffic = await section("traffic", provider === "ga4" ? fromGa4 : fromSiteimprove, () => {
+    // Keep the last good numbers only if they came from this site's provider.
+    const prevProvider = previous?.analytics?.provider ?? "siteimproveAnalytics"; // files before Nov 23 used Siteimprove
+    const live = previous?.trends?.pageViews?.source === "live" && prevProvider === provider;
+    // Last good page views, so issues still rank by visitors.
+    const views = new Map();
+    for (const p of [...(previous?.topPages?.pages ?? []), ...(previous?.issues ?? []).flatMap((i) => i.pages)]) {
+      if (!views.has(p.path)) views.set(p.path, p.views);
+    }
+    return keepOr(
+      previous && { views, titles: null, pageViews: previous.trends.pageViews, asOf: previous.analytics?.asOf, stale: true, kept: true },
+      live,
+      { views: null, titles: null, pageViews: sample.trends.pageViews, sample: true },
+    );
+  });
   const views = traffic.views ?? new Map();
-  const viewsOf = (path, fallback = 0) => views.get(path) ?? fallback;
+  // For Siteimprove Analytics sites, Siteimprove's per-page count fills gaps (same
+  // provider). For GA4 sites it never does: a page GA4 didn't list counts as 0.
+  const viewsOf = (path, siteimproveViews) => views.get(path) ?? (provider === "siteimproveAnalytics" ? (siteimproveViews ?? 0) : 0);
   const busiest = [...views.entries()]
     .filter(([p]) => !isPlatformPage(p))
     .sort((a, b) => b[1] - a[1])
@@ -212,7 +235,7 @@ export async function buildLiveSite({ site, sample, previous, issueTypes, client
           if (!path) continue;
           const entry = pages.get(path) ?? {
             path,
-            views: viewsOf(path, p.page_views ?? 0),
+            views: viewsOf(path, p.page_views),
             count: 0,
             siteimproveUrl: siteimproveLink(p._siteimprove?.page_report?.href),
           };
@@ -352,7 +375,7 @@ export async function buildLiveSite({ site, sample, previous, issueTypes, client
           for (const m of await client.getAll(`${href}${href.includes("?") ? "&" : "?"}page_size=500`)) {
             const path = normalizePath(m.url, site.url);
             if (!path || pages.has(path)) continue;
-            pages.set(path, { path, views: viewsOf(path, m.page_views ?? 0), count: 1, siteimproveUrl: siteimproveLink(m._siteimprove?.page_report?.href) });
+            pages.set(path, { path, views: viewsOf(path, m.page_views), count: 1, siteimproveUrl: siteimproveLink(m._siteimprove?.page_report?.href) });
           }
         }
         const list = [...pages.values()].sort((a, b) => b.views - a.views);
@@ -405,43 +428,69 @@ export async function buildLiveSite({ site, sample, previous, issueTypes, client
     (links.issues === null && (i.type === "broken" || i.type === "broken-template")) ||
     (a11y === null && categoryOf(i.type) === "Accessibility");
   const issues = [...liveIssues, ...sample.issues.filter(sampleFallback)];
-  // Owner issues ranked by the page views of the pages they're on (SP-3); live first, then sample.
+  // Owner issues ranked by the page views of the pages they're on (SP-3), then by
+  // how many pages; live first, then sample.
   const owner = issues
     .filter((i) => fixerOf(i) === "owner")
-    .sort((a, b) => (a.source === b.source ? sumViews(b.pages) - sumViews(a.pages) : a.source === "live" ? -1 : 1));
+    .sort((a, b) =>
+      a.source === b.source ? sumViews(b.pages) - sumViews(a.pages) || b.pages.length - a.pages.length : a.source === "live" ? -1 : 1,
+    );
   owner.forEach((i, n) => (i.rank = n + 1));
   for (const i of issues) if (fixerOf(i) !== "owner") i.rank = null;
   const ordered = [...owner, ...issues.filter((i) => fixerOf(i) !== "owner")];
 
-  // --- Most visited pages, with how many issues each has, and GA4 engagement
-  // where the Apps Script export has it. Low engagement is flagged (CT-2).
-  const engagement = assessEngagement(ga4);
+  // --- Most visited pages, with how many issues each has, and GA4 engagement.
+  // Low engagement is flagged (CT-2). Kept or sample traffic keeps its own table.
+  const openIssuesOn = (path) => owner.filter((i) => i.pages.some((p) => p.path === path)).length; // the owner's own issues
+  const engagementData = provider === "ga4" ? ga4 : null;
+  const engagement = assessEngagement(engagementData);
   const mostVisited = [...views.entries()]
     .filter(([p]) => !isPlatformPage(p))
     .sort((a, b) => b[1] - a[1])
     .slice(0, MOST_VISITED)
     .map(([p]) => p);
-  const topPages =
-    traffic.views && mostVisited.length
-      ? {
-          viewsSource: "live",
-          periodDays: WINDOW_DAYS,
-          engagementSource: ga4 ? "live" : "sample",
-          ...(ga4 ? { engagementAsOf: ga4.asOf } : {}),
-          typicalEngagement: engagement.typical,
-          pages: mostVisited.map((path) => ({
-            path,
-            ...(traffic.titles?.get(path) ? { title: traffic.titles.get(path) } : {}),
-            views: viewsOf(path),
-            engagementRate: ga4?.engagement.get(path)?.rate ?? null,
-            ...(engagement.isLow(path) ? { lowEngagement: true } : {}),
-            openIssues: owner.filter((i) => i.pages.some((p) => p.path === path)).length, // the owner's own issues
-          })),
-        }
-      : previous?.topPages?.viewsSource === "live"
-        ? previous.topPages
-        : sample.topPages;
-  if (ga4 && engagement.typical === null) notes.push("GA4 export has no session counts, so low engagement isn't checked; re-run the Apps Script export");
+  let topPages;
+  if (traffic.kept) {
+    topPages = { ...previous.topPages, pages: previous.topPages.pages.map((p) => ({ ...p, openIssues: openIssuesOn(p.path) })) };
+  } else if (traffic.sample || !mostVisited.length) {
+    topPages = sample.topPages;
+  } else {
+    topPages = {
+      viewsSource: "live",
+      periodDays: WINDOW_DAYS,
+      engagementSource: engagementData ? "live" : "sample",
+      ...(engagementData ? { engagementAsOf: engagementData.asOf } : {}),
+      typicalEngagement: engagement.typical,
+      pages: mostVisited.map((path) => ({
+        path,
+        ...(traffic.titles?.get(path) ? { title: traffic.titles.get(path) } : {}),
+        views: viewsOf(path),
+        engagementRate: engagementData?.engagement.get(path)?.rate ?? null,
+        ...(engagement.isLow(path) ? { lowEngagement: true } : {}),
+        openIssues: openIssuesOn(path),
+      })),
+    };
+    if (engagementData && engagement.typical === null) notes.push("GA4 export has no session counts, so low engagement isn't checked; re-run the Apps Script export");
+  }
+  // Which provider the traffic numbers come from, how old they are, and whether
+  // they're out of date: an old GA4 export, or last good data kept after a failure (Q-7).
+  const analytics =
+    traffic.sample
+      ? { provider, source: "sample" }
+      : {
+          provider,
+          source: "live",
+          ...(traffic.asOf ? { asOf: traffic.asOf } : {}),
+          periodDays: topPages.periodDays ?? WINDOW_DAYS,
+          ...(traffic.stale ? { stale: true } : {}),
+        };
+  // Site search comes only from GA4. Without a usable export, keep the last good terms.
+  const siteSearch =
+    provider === "ga4" && ga4
+      ? { source: "live", asOf: ga4.asOf, periodDays: WINDOW_DAYS, ...(ga4.stale ? { stale: true } : {}), terms: ga4.terms }
+      : provider === "ga4" && previous?.siteSearch?.source === "live"
+        ? { ...previous.siteSearch, stale: true }
+        : sample.siteSearch;
   const lowPage = topPages.pages.find((p) => p.lowEngagement);
 
   // --- Progress from Siteimprove's own checks (TR-1, revised Nov 20): compare each
@@ -502,9 +551,10 @@ export async function buildLiveSite({ site, sample, previous, issueTypes, client
       brokenLinks: links.trend,
       pageViews: traffic.pageViews,
     },
+    analytics,
     topPages,
     issues: ordered,
-    siteSearch: sample.siteSearch, // GA4, sample until the MVP
+    siteSearch,
     speed: sample.speed, // optional; not fetched in the prototype
   };
   return { data, sections, notes };

@@ -8,7 +8,7 @@ A dashboard from Stanford Web Services (SWS) that turns Siteimprove and Google A
 
 ## What's live
 
-Only **sitesuserguide.stanford.edu** has live data: Siteimprove scores, issues, policies and checks; page views from Siteimprove Analytics; and engagement and site search from Google Analytics 4. The other two sites, the AI content report, the speed check and content freshness are labeled samples or simulations. Every section on the site says which.
+Only **sitesuserguide.stanford.edu** has live data: Siteimprove scores, issues, policies and checks; and page views, engagement and site search from Google Analytics 4 (a site with no GA4 property would use Siteimprove Analytics instead). The other two sites, the AI content report, the speed check and content freshness are labeled samples or simulations. Every section on the site says which.
 
 ## How it runs
 

@@ -9,7 +9,7 @@ import { TrendChart, type TrendMetric } from "@/components/TrendChart";
 import { getReport, getSite, getSiteKeys, getStatus } from "@/lib/data/load";
 import { describeSection } from "@/lib/data/provenance";
 import type { SiteData } from "@/lib/data/types";
-import { byCategory, prioritized, type IssueView } from "@/lib/data/view";
+import { byCategory, prioritized, trafficProvenance, type IssueView } from "@/lib/data/view";
 import { displayPath } from "@/lib/data/paths";
 import { formatNumber, formatPercent, hostOf } from "@/lib/format";
 
@@ -39,6 +39,19 @@ export default async function SitePage({ params }: PageProps<"/sites/[site]">) {
     sample: site.source === "live" && v.issue.source === "sample",
   });
   const checked = site.checkedAt;
+  const traffic = trafficProvenance(site);
+  const platformNote =
+    site.topPages.viewsSource === "live"
+      ? "Search, sign-in and “page not found” pages are left out, because they’re part of the Stanford Sites platform rather than your content."
+      : null;
+  const engagementNote = (
+    <>
+      Engagement rate is the share of visits that lasted over 10 seconds, viewed 2 or more pages, or completed a key
+      event.
+      {typeof site.topPages.typicalEngagement === "number" &&
+        ` The typical page on this site has ${formatPercent(site.topPages.typicalEngagement)}. Pages well below that, with enough visits to count, are marked.`}
+    </>
+  );
 
   return (
     <SiteGate siteKey={siteKey} siteName={site.name}>
@@ -106,16 +119,21 @@ export default async function SitePage({ params }: PageProps<"/sites/[site]">) {
           </tbody>
         </table>
       </TableWrap>
-      <SourceNote className="meta mb-4 mt-8" provider="siteimproveAnalytics" source={site.topPages.viewsSource} date={checked}>
-        {site.topPages.viewsSource === "live" &&
-          "Search and sign-in pages are left out, because they’re part of the Stanford Sites platform rather than your content."}
-      </SourceNote>
-      <SourceNote provider="ga4" source={site.topPages.engagementSource} date={site.topPages.engagementAsOf ?? checked}>
-        Engagement rate is the share of visits that lasted over 10 seconds, viewed 2 or more pages, or completed
-        a key event.
-        {typeof site.topPages.typicalEngagement === "number" &&
-          ` The typical page on this site has ${formatPercent(site.topPages.typicalEngagement)}. Pages well below that, with enough visits to count, are marked.`}
-      </SourceNote>
+      {traffic.provider === "ga4" ? (
+        // Page views and engagement come from the same GA4 export: one note.
+        <SourceNote className="meta mt-8" {...traffic}>
+          {platformNote} {engagementNote}
+        </SourceNote>
+      ) : (
+        <>
+          <SourceNote className="meta mb-4 mt-8" {...traffic}>
+            {platformNote}
+          </SourceNote>
+          <SourceNote provider="ga4" source={site.topPages.engagementSource} date={site.topPages.engagementAsOf ?? checked}>
+            {engagementNote}
+          </SourceNote>
+        </>
+      )}
 
       <h2 className="section-heading">Does the content meet visitor needs?</h2>
       <div className="rounded border border-dashed border-black-80 px-16 py-14">
@@ -161,7 +179,7 @@ export default async function SitePage({ params }: PageProps<"/sites/[site]">) {
         </table>
       </TableWrap>
       )}
-      <SourceNote className="meta mt-8" provider="ga4" source={site.siteSearch.source} date={site.siteSearch.asOf ?? checked}>
+      <SourceNote className="meta mt-8" provider="ga4" source={site.siteSearch.source} date={site.siteSearch.asOf ?? checked} stale={site.siteSearch.stale}>
         {site.siteSearch.source === "live" &&
           "Only terms searched at least 5 times are shown, and anything that looks like an email address, phone number or web address is left out."}
       </SourceNote>
@@ -199,8 +217,8 @@ export default async function SitePage({ params }: PageProps<"/sites/[site]">) {
 
 function trendMetrics(site: SiteData): TrendMetric[] {
   const t = site.trends;
-  const note = (provider: "siteimprove" | "siteimproveAnalytics", source: SiteData["source"]) =>
-    describeSection({ provider, source, date: site.checkedAt }).text;
+  const note = (source: SiteData["source"]) => describeSection({ provider: "siteimprove", source, date: site.checkedAt }).text;
+  const views = describeSection({ ...trafficProvenance(site), source: t.pageViews.source });
   return [
     {
       key: "siteTargetScore",
@@ -208,26 +226,26 @@ function trendMetrics(site: SiteData): TrendMetric[] {
       values: t.siteTargetScore.values,
       maxIs100: true,
       goal: 100,
-      sourceText: note("siteimprove", t.siteTargetScore.source),
+      sourceText: note(t.siteTargetScore.source),
     },
     {
       key: "accessibilityScore",
       label: "Accessibility score",
       values: t.accessibilityScore.values,
       maxIs100: true,
-      sourceText: note("siteimprove", t.accessibilityScore.source),
+      sourceText: note(t.accessibilityScore.source),
     },
     {
       key: "brokenLinks",
       label: "Broken links",
       values: t.brokenLinks.values,
-      sourceText: note("siteimprove", t.brokenLinks.source),
+      sourceText: note(t.brokenLinks.source),
     },
     {
       key: "pageViews",
       label: "Page views per month",
       values: t.pageViews.values,
-      sourceText: note("siteimproveAnalytics", t.pageViews.source),
+      sourceText: views.warning ? `${views.text} ${views.warning}` : views.text,
     },
   ];
 }

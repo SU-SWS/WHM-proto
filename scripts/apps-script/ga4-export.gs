@@ -5,11 +5,13 @@
  * "Google Analytics Data API" advanced service, so no service account or
  * Cloud Console setup is needed (decisions, Nov 20). Setup: docs/ga4-setup.md.
  *
- * Writes data/ga4/<siteKey>.json (shape in docs/data-contract.md):
- *   - engagement rate per page over the last WINDOW_DAYS days (CT-2)
+ * Writes data/ga4/<siteKey>.json (shape in docs/data-contract.md). A site with a
+ * GA4 property takes all of its analytics from this file (decisions, Nov 23):
+ *   - page views, engagement rate and sessions per page over the last WINDOW_DAYS days
+ *   - each page's name (its title, without the site name)
+ *   - page views per month, for the trend chart (the last TREND_MONTHS months)
  *   - site search terms over the same window (CT-5), with anything that looks personal
  *     removed and only terms searched at least MIN_SEARCHES times kept
- * Page views are NOT exported: they come from Siteimprove Analytics (Q-4).
  *
  * Script properties (Project settings → Script properties):
  *   GA4_PROPERTY_ID   numeric GA4 property ID for the site
@@ -32,6 +34,7 @@ var MIN_SEARCHES = 5; // decisions, Nov 20
 var WINDOW_DAYS = 90;
 var MAX_PAGES = 500;
 var MAX_TERMS = 50;
+var TREND_MONTHS = 8; // the months the trend chart shows, including the current one
 
 function dryRun() {
   var file = buildFile_();
@@ -40,8 +43,12 @@ function dryRun() {
   // Dropped terms are counted but never printed.
   Logger.log([
     "Dry run for " + file.siteKey + ", " + file.period.start + " to " + file.period.end + ". Nothing was committed.",
-    "Pages: " + String(file.pages.length) + ". First 10:",
-    file.pages.slice(0, 10).map(function (p) { return "  " + p.path + "  " + String(p.engagementRate); }).join("\n"),
+    "Pages: " + String(file.pages.length) + ". First 10 (page views, engagement rate, name):",
+    file.pages.slice(0, 10).map(function (p) {
+      var t = file.titles.filter(function (x) { return x.path === p.path; })[0];
+      return "  " + p.path + "  " + String(p.views) + "  " + String(p.engagementRate) + "  " + (t ? t.title : "(no name)");
+    }).join("\n"),
+    "Page views by month: " + file.monthly.map(function (m) { return m.month + " " + String(m.views); }).join(", "),
     "Search terms kept: " + String(file.searchTerms.length),
     file.searchTerms.map(function (t) { return "  " + t.term + "  " + String(t.count); }).join("\n"),
     "Search terms dropped: " + String(d.searchTerms) + " (" + String(d.rare) + " searched fewer than " + String(MIN_SEARCHES) +
@@ -55,7 +62,8 @@ function exportAndCommit() {
   var file = buildFile_();
   commit_("data/ga4/" + SITE_KEY + ".json", JSON.stringify(file, null, 2) + "\n",
     "GA4 export for " + SITE_KEY + ", " + file.period.start + " to " + file.period.end);
-  Logger.log("Committed: " + String(file.pages.length) + " pages, " + String(file.searchTerms.length) + " search terms.");
+  Logger.log("Committed: " + String(file.pages.length) + " pages, " + String(file.monthly.length) + " months, " +
+    String(file.searchTerms.length) + " search terms.");
 }
 
 function exportToDrive() {
@@ -89,16 +97,51 @@ function buildFile_() {
     dateRanges: [range],
     dimensions: [{ name: "pagePath" }],
     // sessions is exported only so WHM can ignore rates based on too few visits; it isn't shown.
-    metrics: [{ name: "engagementRate" }, { name: "sessions" }, { name: "screenPageViews" }],
+    metrics: [{ name: "screenPageViews" }, { name: "engagementRate" }, { name: "sessions" }],
     orderBys: [{ metric: { metricName: "screenPageViews" }, desc: true }],
     limit: MAX_PAGES
   }, property);
   var pages = (pageReport.rows || []).map(function (r) {
     return {
       path: r.dimensionValues[0].value,
-      engagementRate: round_(Number(r.metricValues[0].value), 4),
-      sessions: Number(r.metricValues[1].value)
+      views: Number(r.metricValues[0].value),
+      engagementRate: round_(Number(r.metricValues[1].value), 4),
+      sessions: Number(r.metricValues[2].value)
     };
+  });
+
+  // Page names: the title most viewed for each page.
+  var titleReport = AnalyticsData.Properties.runReport({
+    dateRanges: [range],
+    dimensions: [{ name: "pagePath" }, { name: "pageTitle" }],
+    metrics: [{ name: "screenPageViews" }],
+    orderBys: [{ metric: { metricName: "screenPageViews" }, desc: true }],
+    limit: MAX_PAGES * 2
+  }, property);
+  var seen = {};
+  var titles = [];
+  (titleReport.rows || []).forEach(function (r) {
+    var path = r.dimensionValues[0].value;
+    var title = r.dimensionValues[1].value;
+    if (seen[path] || !title || title === "(not set)") return;
+    seen[path] = true;
+    titles.push({ path: path, title: title });
+  });
+
+  // Page views per month, from the first day of the earliest trend month to yesterday.
+  var tz = "America/Los_Angeles";
+  var day = 24 * 60 * 60 * 1000;
+  var today = new Date();
+  var firstMonth = new Date(today.getFullYear(), today.getMonth() - (TREND_MONTHS - 1), 1);
+  var monthReport = AnalyticsData.Properties.runReport({
+    dateRanges: [{ startDate: Utilities.formatDate(firstMonth, tz, "yyyy-MM-dd"), endDate: "yesterday" }],
+    dimensions: [{ name: "yearMonth" }],
+    metrics: [{ name: "screenPageViews" }],
+    orderBys: [{ dimension: { dimensionName: "yearMonth" } }]
+  }, property);
+  var monthly = (monthReport.rows || []).map(function (r) {
+    var ym = r.dimensionValues[0].value; // "202610"
+    return { month: ym.slice(0, 4) + "-" + ym.slice(4), views: Number(r.metricValues[0].value) };
   });
 
   var searchReport = AnalyticsData.Properties.runReport({
@@ -122,10 +165,8 @@ function buildFile_() {
     rareByCount[t.count] = (rareByCount[t.count] || 0) + 1;
   });
 
-  var tz = "America/Los_Angeles";
-  var day = 24 * 60 * 60 * 1000;
   return {
-    schemaVersion: 1,
+    schemaVersion: 2,
     siteKey: SITE_KEY,
     propertyId: propertyId,
     generatedAt: new Date().toISOString(),
@@ -135,6 +176,8 @@ function buildFile_() {
       end: Utilities.formatDate(new Date(Date.now() - day), tz, "yyyy-MM-dd")
     },
     pages: pages,
+    titles: titles,
+    monthly: monthly,
     searchTerms: kept,
     dropped: { searchTerms: all.length - kept.length, rare: rare, personal: personal, rareByCount: rareByCount }
   };

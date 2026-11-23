@@ -6,7 +6,7 @@
 
 - **Owner issue:** an issue whose type has `fixer: "owner"`, after template issues are moved to SWS.
 - **Template issue:** an issue found on at least 90% of the site's pages, or a broken link in the shared Stanford header or footer. Shown as "SWS is handling this" (decisions, Nov 20).
-- **Busiest pages:** the 5 pages with the most page views, from the same page views used to rank issues, leaving out Stanford Sites platform pages (search and sign-in; see decisions, Nov 20).
+- **Busiest pages:** the 5 pages with the most page views, from the same page views used to rank issues, leaving out Stanford Sites platform pages (search, sign-in and “page not found”; see decisions, Nov 20 and Nov 23). Page views come from GA4 for a site with a GA4 property, and from Siteimprove Analytics otherwise.
 - **Fell:** the Site Target Score is lower than at the previous Siteimprove check, by at least 0.1. Smaller moves count as no change.
 
 ## State
@@ -46,14 +46,14 @@ Illustration only, using today's sitesuserguide score and made-up changes and co
 
 ## Low engagement on well-visited pages (CT-2)
 
-From GA4 engagement rates, over the same rolling 90 days as page views.
+From GA4 engagement rates, over the same rolling 90 days as page views. Only for sites with a GA4 property.
 
 - **Typical rate:** the median engagement rate across the site's pages that had at least 30 sessions.
 - **Flagged:** one of the 10 most visited pages (platform pages left out) with at least 30 sessions and an engagement rate at least 20 points below the typical rate.
 - **In “Most visited pages”:** the rate shows with “Fewer stay than on most pages,” and the note under the table gives the typical rate.
 - **In the lede:** for the most visited flagged page, after the score sentence: “Fewer visitors stay on “{page name}” than on most of your pages.” (“your home page” for `/`.)
 - The home page is included, for now (Nov 20), even though home pages often have lower engagement because visitors use them to move on.
-- It doesn't change the state or verdict. Sessions are used only for the threshold and are never shown; page views stay with Siteimprove (Q-4).
+- It doesn't change the state or verdict. Sessions are used only for the threshold and are never shown; page views are shown instead (Q-4).
 
 ## Questions for SWS
 

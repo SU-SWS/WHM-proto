@@ -11,7 +11,7 @@ Every part of the prototype reads or writes these files. The pages, the workflow
 | `data/annotations.json` | People, by commit | SWS accessibility specialist notes (TR-4, TR-5) |
 | `data/sample/` | People, by commit | Sample data. Scripts never write here. |
 | `data/published/` | `scripts/refresh.mjs` | What the site builds from. Starts as a copy of `data/sample/`. |
-| `data/ga4/<siteKey>.json` | The GA4 Apps Script (`scripts/apps-script/ga4-export.gs`), weekly | Engagement rate per page and filtered site search terms, last 30 days. Merged by the data run if under 14 days old. |
+| `data/ga4/<siteKey>.json` | The GA4 Apps Script (`scripts/apps-script/ga4-export.gs`), weekly | For a site with a GA4 property, all its analytics: page views, names and engagement per page, monthly page views, and filtered site search terms, over the data run's window. Used even when old (marked out of date after 14 days); never replaced by Siteimprove Analytics (decisions, Nov 23). |
 | `data/fixtures/siteimprove/` | People, from the Save Siteimprove fixtures workflow | Saved real API responses used to write and test code. Reviewed before they're committed. |
 
 **How the refresh merges data:** for each site, the script starts from that site's sample file. For a site with `live: true`, it replaces each section it fetched successfully and sets that section's `source` to `"live"`. If a section fails, the script keeps that section's last good published version. The result is written to `data/published/`. `portfolio.json` is then rebuilt from the published site files, so the rollup always matches the site pages; `openOwnerIssues` is the number of issues whose type has `fixer: "owner"`. `status.json`'s `runId` is the GitHub Actions run ID, which the admin page matches against GitHub to tell when a run's data is live.
@@ -30,7 +30,7 @@ interface Registry {
     key: string; name: string; url: string;
     live: boolean;                    // true only for sitesuserguide in the prototype
     siteimproveSiteId: number | null; // fill in before the first live run
-    ga4PropertyId: string | null;     // MVP
+    ga4PropertyId: string | null;     // set: all the site's analytics come from GA4 (decisions, Nov 23)
     owners: string[];                 // owner keys
   }[];
 }
@@ -65,6 +65,11 @@ interface SiteData {
   siteKey: string; name: string; url: string;
   source: Source;              // "live" if any section is live
   checkedAt: IsoDate;          // date of the Siteimprove check the data comes from
+  analytics?: {                // where page views, the page views trend and topPages come from (absent in sample files)
+    provider: "ga4" | "siteimproveAnalytics";   // "ga4" whenever the registry lists a GA4 property
+    source: Source; asOf?: IsoDate; periodDays?: number;   // asOf: last day the numbers cover
+    stale?: boolean;           // out of date: GA4 export over 14 days old, or last good data kept after a failure (Q-7)
+  };
   state: "attention" | "ok" | "good";
   verdict: string;             // one sentence
   lede: string;
@@ -81,9 +86,9 @@ interface SiteData {
   };
   topPages: {
     viewsSource: Source; periodDays?: number; engagementSource: Source; engagementAsOf?: IsoDate;   // periodDays: window for page views (sample files: 30)
-    // engagement is GA4 (Apps Script export); engagementAsOf = end of its period
+    // engagement is GA4 (Apps Script export), only for GA4 sites; engagementAsOf = end of its period
     typicalEngagement?: number | null;   // the site's median engagement rate (CT-2)
-    pages: { path: string; title?: string; views: number; engagementRate: number | null;
+    pages: { path: string; title?: string; views: number; engagementRate: number | null;   // title and views from analytics.provider
              lowEngagement?: boolean;    // well below typical, with enough sessions (rule: verdict-rules.md)
              openIssues: number }[];
   };
@@ -100,7 +105,8 @@ interface SiteData {
               siteimproveUrl?: string | null } |                     // this page's report in Siteimprove, impmd stripped
              { path: string; views: number; monthsSinceUpdate: number })[];
   }[];
-  siteSearch: { source: Source; asOf?: IsoDate; periodDays?: number; terms: { term: string; count: number }[] };   // GA4 (Apps Script export), filtered
+  siteSearch: { source: Source; asOf?: IsoDate; periodDays?: number; stale?: boolean;   // GA4 only (Apps Script export), filtered
+                terms: { term: string; count: number }[] };
   speed:      { source: Source; pages: { path: string; score: number }[] };  // optional
 }
 interface Reading { value: number; change: number | null; source: Source }   // null: nothing to compare with
@@ -123,15 +129,19 @@ interface Portfolio {
            openOwnerIssues: number; checkedAt: IsoDate; source: Source }[];
 }
 
-// data/ga4/<siteKey>.json — committed by the GA4 Apps Script (decisions, Nov 20)
+// data/ga4/<siteKey>.json — committed by the GA4 Apps Script (decisions, Nov 20 and Nov 23)
+// schemaVersion 2 (Nov 23) adds views, titles and monthly. A version 1 file still
+// gives engagement and search, but no page views, so traffic keeps its last good GA4 data or sample.
 interface Ga4Export {
-  schemaVersion: 1;
+  schemaVersion: 2;
   siteKey: string;
   propertyId: string;
   generatedAt: string;                      // ISO date-time
   periodDays: number;                       // must equal the data run's WINDOW_DAYS (90)
   period: { start: IsoDate; end: IsoDate }; // the window, ending yesterday
-  pages: { path: string; engagementRate: number; sessions: number }[];   // 0–1; sessions only for the CT-2 threshold, never shown
+  pages: { path: string; views: number; engagementRate: number; sessions: number }[];   // views = screenPageViews; rate 0–1; sessions only for the CT-2 threshold, never shown
+  titles: { path: string; title: string }[];          // most viewed title per page; " | Site name" is cut by the data run
+  monthly: { month: string; views: number }[];        // "2026-04" …, page views per calendar month, the last 8 months to yesterday
   searchTerms: { term: string; count: number }[];      // 5+ searches, personal-looking terms removed
   dropped: { searchTerms: number; rare: number; personal: number; rareByCount: Record<string, number> };  // counts only, never the terms
 }

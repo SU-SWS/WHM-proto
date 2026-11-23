@@ -56,6 +56,6 @@ Saved as `data/fixtures/siteimprove/probe2-*.json`. `impmd` is stripped from lin
 
 - **Never fetch:** `quality_assurance/inventory/personal_id_numbers`, `email_addresses` and `phone_numbers` appear in `_links`. WHM doesn't need them, and personal ID findings are SWS-only (AD-7).
 - **SWS-only content:** drop SWS admin policies (for example "Old Analytics Code" and saml link exclusions) and any personal ID number findings (SI-20) before writing published data (AD-7).
-- **Joining to traffic:** normalize URLs before joining issue pages to Siteimprove Analytics page views (Q-5). Where a page can't be matched, rank by how often the issue occurs.
+- **Joining to traffic:** normalize URLs before joining issue pages to page views (Q-5): GA4 page views for a site with a GA4 property, Siteimprove Analytics otherwise (decisions, Nov 23). The Analytics endpoints above are used only for sites with no GA4 property. Issues with equal page views rank by how many pages they're on.
 - **Retries and failures:** retry with backoff. The SWS script hit HTTP 429 (rate limited) when calling many sites, and spaced its calls out; one live site in the prototype shouldn't, but handle 429 the same way. If a slice fails, keep that section's last good data and record the reason in `status.json`.
 - **Score methodology:** scores are Siteimprove's, not Stanford's, except the Site Target Score. Label them accordingly.

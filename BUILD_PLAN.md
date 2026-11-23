@@ -84,6 +84,8 @@ Then:
 
 **Done when:** a reviewed export is committed, a data run shows both sections as live for sitesuserguide, and no published term looks personal.
 
+**Changed Nov 23:** a site with a GA4 property takes *all* its analytics from GA4, including page views, the trend, page names and ranking (decisions, Nov 23). Siteimprove Analytics (step 6.3) is used only for sites with no GA4 property. The export is now `schemaVersion: 2`; re-paste the script and export again before the next data run, or sitesuserguide's page views show as samples.
+
 ## 7. Check and rehearse
 
 - Run an axe check on every page, test keyboard-only use and phone width, and confirm every chart has a table alternative (Q-1).

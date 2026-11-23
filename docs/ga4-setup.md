@@ -1,6 +1,6 @@
 # Setting up the GA4 export (Apps Script)
 
-The data run gets GA4 engagement and site search for sitesuserguide, over a rolling 90 days, from a small Google Apps Script that you run as yourself. There's no service account and no Cloud Console setup (decisions, Nov 20). The script is `scripts/apps-script/ga4-export.gs`. It commits `data/ga4/sitesuserguide.json` to this repo, and the next data run uses it.
+The data run gets all of sitesuserguide's analytics from GA4: page views, page names, engagement and site search over a rolling 90 days, and page views per month for the trend. Because the registry lists a GA4 property for the site, Siteimprove Analytics isn't used for it at all (decisions, Nov 23). The data comes from a small Google Apps Script that you run as yourself. There's no service account and no Cloud Console setup (decisions, Nov 20). The script is `scripts/apps-script/ga4-export.gs`. It commits `data/ga4/sitesuserguide.json` to this repo, and the next data run uses it.
 
 You need:
 
@@ -42,7 +42,8 @@ When the token nears expiry, GitHub emails you. Generate a new one the same way 
 1. In the editor, choose the function **dryRun** and select **Run**. Google asks you to authorize the script: allow it to view your Analytics data and to connect to an external service.
 2. Open **Execution log**. It shows the file the script would commit, and a line like “Dry run: 412 pages, 9 search terms kept, 37 dropped. Nothing was committed.”
 3. Check it before going further:
-   - `pages` should list sitesuserguide paths with an `engagementRate` between 0 and 1.
+   - The first 10 pages should be sitesuserguide paths, each with page views, an engagement rate between 0 and 1, and a name.
+   - “Page views by month” should list the last 8 months; months before GA4 was set up show 0 or are missing.
    - `searchTerms` should hold nothing that looks personal: no names, email addresses or phone numbers. The filter drops terms with an @, with 5 or more digits in a row, or with a web address, and keeps only terms searched at least 5 times. If something personal gets through, don't commit. Tell Claude what slipped through so the filter can be tightened.
    - If `searchTerms` is empty and `dropped` is 0, GA4 may not be recording site search for this site. Enhanced measurement detects searches from query parameters like `q`, `s` or `search`; Stanford Sites may use a different one. Check in GA4 under **Admin → Data streams → Enhanced measurement → Site search**.
 4. Send the log output to Claude to review if you'd like a second check.
@@ -61,7 +62,7 @@ While the GitHub token is waiting for approval, or if you'd rather not use one:
 2. Download it and save it in the repo as `data/ga4/sitesuserguide.json`, replacing any older copy.
 3. Commit and push it, then run **Data run**.
 
-The data run accepts the file for 14 days from when it was made, so repeat this at least every two weeks until the weekly trigger takes over.
+Once a file is more than 14 days old, the site still uses it but marks its numbers “may be out of date”, so repeat this at least every two weeks until the weekly trigger takes over.
 
 ## If something goes wrong
 
@@ -70,4 +71,5 @@ The data run accepts the file for 14 days from when it was made, so repeat this 
 - **“GitHub commit failed: HTTP 401 or 403”**: the token is wrong, has expired, lacks Contents write access, or is waiting for org approval.
 - **“GitHub commit failed: HTTP 409”**: someone else committed the file at the same moment. Run it again.
 - **A GA4 error mentioning permission**: your Google account can't view property 331314616.
-- **The site still shows sample data after a data run**: the export is more than 14 days old, or it's for a different property than the registry lists. The data run's reason in `status.json` (shown on the admin page) says which.
+- **The site says GA4 numbers “may be out of date”**: the export is more than 14 days old, or the data run couldn't use the newest one and kept the last good numbers. Export again.
+- **The site shows sample page views after a data run**: there's no usable export with page views. It may be missing, made by an older version of the script (re-paste the script and export again), for a different property than the registry lists, or for a different window. The data run's reason in `status.json` (shown on the admin page) says which. WHM never switches a GA4 site to Siteimprove Analytics.

@@ -69,3 +69,17 @@ export function ownerLabels(siteKey: string): string[] {
   const site = registry.sites.find((s) => s.key === siteKey);
   return (site?.owners ?? []).map((k) => registry.owners.find((o) => o.key === k)?.label ?? k);
 }
+
+/**
+ * Provenance for a site's traffic numbers (page views, trend, most visited pages):
+ * GA4 when the registry lists a GA4 property, else Siteimprove Analytics (decisions, Nov 23).
+ */
+export function trafficProvenance(site: SiteData) {
+  const a = site.analytics;
+  return {
+    provider: a?.provider ?? ("siteimproveAnalytics" as const),
+    source: a?.source ?? site.topPages.viewsSource,
+    date: a?.asOf ?? site.checkedAt,
+    stale: a?.stale,
+  };
+}

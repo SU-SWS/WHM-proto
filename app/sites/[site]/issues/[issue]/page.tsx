@@ -8,7 +8,7 @@ import { Notes, ProgressPanel, TrackedTable, type TrackedPage } from "@/componen
 import { getSite, getSiteKeys, getStatus } from "@/lib/data/load";
 import { displayPath } from "@/lib/data/paths";
 import type { IssuePage } from "@/lib/data/types";
-import { getIssueType, notesFor } from "@/lib/data/view";
+import { getIssueType, notesFor, trafficProvenance } from "@/lib/data/view";
 import { formatNumber } from "@/lib/format";
 import { formatDate } from "@/lib/data/provenance";
 
@@ -133,7 +133,7 @@ export default async function IssuePage({ params }: PageProps<"/sites/[site]/iss
       ) : tracksHere ? (
         <>
           <TrackedTable {...trackProps} thirdHeader={thirdHeader} viewsHeader={`Page views, last ${site.topPages.periodDays ?? 30} days`} />
-          <SourceNote className="meta mt-8" provider="siteimproveAnalytics" source={site.topPages.viewsSource} date={site.checkedAt} />
+          <SourceNote className="meta mt-8" {...trafficProvenance(site)} />
         </>
       ) : (
       <>
@@ -166,7 +166,7 @@ export default async function IssuePage({ params }: PageProps<"/sites/[site]/iss
           </tbody>
         </table>
       </TableWrap>
-      <SourceNote className="meta mt-8" provider="siteimproveAnalytics" source={site.topPages.viewsSource} date={site.checkedAt} />
+      <SourceNote className="meta mt-8" {...trafficProvenance(site)} />
       </>
       )}
 
