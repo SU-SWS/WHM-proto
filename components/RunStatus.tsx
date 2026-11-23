@@ -162,8 +162,20 @@ export function RunStatus({ initialStatus, sites }: { initialStatus: Status; sit
                   <th scope="row" className="!bg-transparent font-normal">
                     {s.name}
                   </th>
-                  <td>{r?.source === "live" ? "Live Siteimprove data" : "Sample data"}</td>
-                  <td>{resultText(r, s.live)}</td>
+                  <td>{r?.source === "live" ? "Live data" : "Sample data"}</td>
+                  <td>
+                    {resultText(r, s.live)}
+                    {r?.result === "complete" && r.reason && (
+                      <>
+                        <span className="mt-4 block text-16">Notes from this run:</span>
+                        <ul className="mb-0 mt-4 list-disc pl-20 text-16">
+                          {r.reason.split("; ").map((n) => (
+                            <li key={n}>{n}</li>
+                          ))}
+                        </ul>
+                      </>
+                    )}
+                  </td>
                   <td>{r?.finishedAt ? formatDateTime(r.finishedAt) : "Not run yet"}</td>
                 </tr>
               );

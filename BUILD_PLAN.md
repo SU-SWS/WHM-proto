@@ -90,7 +90,8 @@ Then:
 
 - Run an axe check on every page, test keyboard-only use and phone width, and confirm every chart has a table alternative (Q-1).
 - Confirm no secrets, names or emails appear in the repo or in the published files.
-- Write a short demo script, including a note that GA4 sections and the AI report are samples. Do two rehearsals.
+- Write a short demo script, including a note that the AI report, speed check, content freshness and the other two sites are samples (GA4 data is live for sitesuserguide). Do two rehearsals.
+- Follow `docs/demo-prep.md` to get the data ready: a week before, the weekend before, Dec 7 and the morning of the fair, including updating the GA4 export by hand through Google Drive.
 
 ## 8. After the approved items
 

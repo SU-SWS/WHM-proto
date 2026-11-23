@@ -11,6 +11,7 @@ Stanford Web Services (SWS) innovation project. A dashboard that turns Siteimpro
 - `docs/verdict-rules.md`: how live sites' state, verdict and lede are decided. Change the wording there and in `scripts/lib/verdict.mjs` together.
 - `docs/how-it-works.md`: plain-language overview for people outside the build. Keep it current when sources or behavior change.
 - `docs/ga4-setup.md`: the GA4 Apps Script export.
+- `docs/demo-prep.md`: getting the data ready for the fair. Keep it current when the data run or GA4 export changes.
 - `docs/requirements.md`, `docs/prototype-plan.md`, `docs/roadmap.md`, `docs/personas.md`: exported project docs. Requirement IDs (SP-, TR-, AC-, AD-, CT-, Q-) come from `requirements.md`.
 - `reference/whm-demo.html`: the clickable demo. It is the UI and content reference. Match its screens, flows and wording, not its code.
 

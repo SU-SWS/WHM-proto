@@ -4,6 +4,7 @@
 
 | Doc | What it is |
 | --- | --- |
+| [demo-prep.md](demo-prep.md) | Getting the data ready for the fair: what to check and when, updating the GA4 export by hand through Google Drive, running and checking a data run |
 | [how-it-works.md](how-it-works.md) | Plain-language overview of the prototype: data sources, how it decides what matters, privacy, prototype vs. MVP |
 | [decisions.md](decisions.md) | Dated decision log, plus the open questions. **It wins where it disagrees with any other doc**, including the exports below |
 

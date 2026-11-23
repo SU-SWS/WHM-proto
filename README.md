@@ -4,6 +4,7 @@ A dashboard from Stanford Web Services (SWS) that turns Siteimprove and Google A
 
 - **Site:** https://su-sws.github.io/WHM-proto/ (public, not indexed)
 - **How it works, in plain language:** [docs/how-it-works.md](docs/how-it-works.md)
+- **Getting the data ready for the demo:** [docs/demo-prep.md](docs/demo-prep.md)
 - **For Claude Code:** [CLAUDE.md](CLAUDE.md) (rules) and [BUILD_PLAN.md](BUILD_PLAN.md) (tasks and status)
 
 ## What's live
