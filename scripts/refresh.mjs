@@ -15,6 +15,7 @@ import { copyFile, mkdir, readFile, rename, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { readGa4 } from "./lib/ga4.mjs";
 import { buildLiveSite } from "./lib/live-site.mjs";
+import { fixerFor } from "./lib/fixer.mjs";
 import { createClient } from "./lib/siteimprove.mjs";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
@@ -46,6 +47,7 @@ const which = arg > -1 ? process.argv[arg + 1] : "all";
 
 const registry = await readJson(path.join(DATA, "registry.json"));
 const issueTypes = await readJson(path.join(DATA, "issue-types.json"));
+const annotations = await readJson(path.join(DATA, "annotations.json"));
 const known = registry.sites.map((s) => s.key);
 if (which !== "all" && !known.includes(which)) {
   console.error(`Unknown site "${which}". Use "all" or one of: ${known.join(", ")}.`);
@@ -90,7 +92,7 @@ async function refreshLive(site) {
   const published = await readJsonOr(path.join(PUBLISHED, "sites", `${site.key}.json`), null);
   // A site with a GA4 property takes all its analytics from the Apps Script export (decisions, Nov 23).
   const ga4 = site.ga4PropertyId ? await readGa4(ROOT, site) : { data: null, note: null };
-  const { data, sections, notes } = await buildLiveSite({ site, sample, previous: published, issueTypes, client, ga4: ga4.data });
+  const { data, sections, notes } = await buildLiveSite({ site, sample, previous: published, issueTypes, annotations, client, ga4: ga4.data });
   if (ga4.note) notes.push(ga4.note);
   await writeJson(path.join(PUBLISHED, "sites", `${site.key}.json`), data);
 
@@ -104,7 +106,6 @@ async function refreshLive(site) {
 }
 
 // Rebuild the rollup from what's now published, in registry order.
-const ownerFixable = new Set(issueTypes.types.filter((t) => t.fixer === "owner").map((t) => t.key));
 const portfolioSites = [];
 for (const key of known) {
   const s = await readJsonOr(path.join(PUBLISHED, "sites", `${key}.json`), null);
@@ -118,7 +119,7 @@ for (const key of known) {
     siteTargetScore: s.readings.siteTargetScore.value,
     accessibilityScore: s.readings.accessibilityScore.value,
     brokenLinks: s.readings.brokenLinks.value,
-    openOwnerIssues: s.issues.filter((i) => (i.fixer ? i.fixer === "owner" : ownerFixable.has(i.type))).length,
+    openOwnerIssues: s.issues.filter((i) => fixerFor({ siteKey: s.siteKey, issue: i, types: issueTypes.types, annotations }) === "owner").length,
     checkedAt: s.checkedAt,
     source: s.source,
   });

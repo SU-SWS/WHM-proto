@@ -4,12 +4,12 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useViewer } from "./Viewer";
 
-// Site pages, issue pages and reports all sit under "My sites".
+// Site pages, issue pages and reports all sit under "Your sites".
 const ITEMS = [
-  { href: "/", label: "My sites", match: (p: string) => p === "/" || p.startsWith("/sites/") },
+  { href: "/", label: "Your sites", match: (p: string) => p === "/" || p.startsWith("/sites/") },
   { href: "/email/", label: "Email preview", match: (p: string) => p.startsWith("/email") },
   { href: "/sws/", label: "All client sites", match: (p: string) => p.startsWith("/sws"), adminOnly: true },
-  { href: "/admin/", label: "Admin", match: (p: string) => p.startsWith("/admin") },
+  { href: "/admin/", label: "Admin", match: (p: string) => p.startsWith("/admin"), adminOnly: true },
 ];
 
 export function MainNav() {

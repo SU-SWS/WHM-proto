@@ -11,7 +11,7 @@ export function Readings({ site }: { site: SiteData }) {
     { label: "Accessibility score, out of 100", reading: r.accessibilityScore, lowerIsBetter: false },
     { label: "Broken links", reading: r.brokenLinks, lowerIsBetter: true },
     {
-      label: "Pages not updated in a year",
+      label: "Pages not updated in over a year",
       reading: r.stalePages,
       lowerIsBetter: true,
       note: `of ${formatNumber(r.stalePages.total)} pages${r.stalePages.simulated ? " (simulated check)" : ""}`,

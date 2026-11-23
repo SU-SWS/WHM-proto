@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { TableWrap } from "@/components/TableWrap";
 import Link from "next/link";
+import { Glossary } from "@/components/Glossary";
 import { IssueList, type IssueRow } from "@/components/IssueList";
 import { Readings } from "@/components/Readings";
 import { SourceNote } from "@/components/SourceNote";
@@ -66,6 +67,7 @@ export default async function SitePage({ params }: PageProps<"/sites/[site]">) {
       <SourceNote provider="siteimprove" source={site.readings.siteTargetScore.source} date={checked} run={run} showAge />
 
       <Readings site={site} />
+      <Glossary />
       <p className="mt-16 flex flex-wrap gap-10">
         <Link className="btn-secondary" href={`/sites/${siteKey}/share/`}>
           Share a summary
@@ -188,7 +190,9 @@ export default async function SitePage({ params }: PageProps<"/sites/[site]">) {
         <>
           <h2 className="section-heading">Speed check</h2>
           <p className="meta mb-12">
-            PageSpeed Insights performance score for the 3 most visited pages, out of 100. Higher is better.
+            {site.speed.source === "sample"
+              ? "Sample scores, to show the idea. The full version checks your 3 most visited pages with PageSpeed Insights and scores each out of 100. Higher is better."
+              : "PageSpeed Insights performance score for the 3 most visited pages, out of 100. Higher is better."}
           </p>
           <TableWrap label="Speed check" className="max-w-[576px]">
             <table className="data-table">

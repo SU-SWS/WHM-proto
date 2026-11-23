@@ -1,6 +1,6 @@
 # Verdict rules for live sites
 
-**Draft for SWS review (Nov 20, 2026).** The data run uses these rules to write the state, verdict and lede for any site with live data. Sample sites keep their hand-written text. The fetch script uses exactly these sentences, so change them here and in `scripts/refresh.mjs` together.
+**Draft for SWS review (Nov 20, 2026).** The data run uses these rules to write the state, verdict and lede for any site with live data. Sample sites keep their hand-written text. The fetch script uses exactly these sentences, so change them here and in `scripts/lib/verdict.mjs` together.
 
 ## Terms
 
@@ -36,13 +36,14 @@ Checked in this order; the first match wins.
 Built from these parts, in this order, skipping any that don't apply:
 
 1. **Score:** "Your Site Target Score is {score}, {up/down} {change} since the last check." If the change is under 0.1: "Your Site Target Score is {score}, the same as the last check." With no earlier check: "Your Site Target Score is {score}." Scores use two decimals, as on the page.
-2. **Where to start:** with 2 or more owner issues, "Fixing the first two items helps the most visitors." With 1: "Fixing the item below helps the most visitors."
-3. **SWS:** "{n} {item is / items are} being handled by SWS." (Leave out if none.)
+2. **Busiest page with issues (CT-2, added Nov 23):** when an owner issue is on one of the busiest pages, name the busiest such page: "Issues sit on “{page name}”, one of your busiest pages." If it's the single busiest page: "…, your busiest page." The home page is "your home page". (Then the low-engagement sentence below, if any.)
+3. **Where to start:** with 2 or more owner issues, "Fixing the first two items helps the most visitors." With 1: "Fixing the item below helps the most visitors."
+4. **SWS:** "{n} {item is / items are} being handled by SWS." (Leave out if none.)
 
 Illustration only, using today's sitesuserguide score and made-up changes and counts:
 
 > **Needs attention: your Site Target Score dropped since the last check, and issues sit on your busiest pages.**
-> Your Site Target Score is 98.38, down 0.2 since the last check. Fixing the first two items helps the most visitors. 4 items are being handled by SWS.
+> Your Site Target Score is 98.38, down 0.2 since the last check. Issues sit on your home page, your busiest page. Fixing the first two items helps the most visitors. 4 items are being handled by SWS.
 
 ## Low engagement on well-visited pages (CT-2)
 
@@ -51,7 +52,7 @@ From GA4 engagement rates, over the same rolling 90 days as page views. Only for
 - **Typical rate:** the median engagement rate across the site's pages that had at least 30 sessions.
 - **Flagged:** one of the 10 most visited pages (platform pages left out) with at least 30 sessions and an engagement rate at least 20 points below the typical rate.
 - **In “Most visited pages”:** the rate shows with “Fewer stay than on most pages,” and the note under the table gives the typical rate.
-- **In the lede:** for the most visited flagged page, after the score sentence: “Fewer visitors stay on “{page name}” than on most of your pages.” (“your home page” for `/`.)
+- **In the lede:** for the most visited flagged page, after the score and busiest-page sentences: “Fewer visitors stay on “{page name}” than on most of your pages.” (“your home page” for `/`.)
 - The home page is included, for now (Nov 20), even though home pages often have lower engagement because visitors use them to move on.
 - It doesn't change the state or verdict. Sessions are used only for the threshold and are never shown; page views are shown instead (Q-4).
 

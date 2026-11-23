@@ -212,7 +212,7 @@
     },
     {
       "key": "broken-template",
-      "title": "Links in the shared footer are reported broken",
+      "title": "Links in the shared header or footer are reported broken",
       "category": "Content quality",
       "fixer": "sws",
       "editorial": false,

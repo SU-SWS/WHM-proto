@@ -8,7 +8,7 @@ import { Notes, ProgressPanel, TrackedTable, type TrackedPage } from "@/componen
 import { getSite, getSiteKeys, getStatus } from "@/lib/data/load";
 import { displayPath } from "@/lib/data/paths";
 import type { IssuePage } from "@/lib/data/types";
-import { getIssueType, notesFor, trafficProvenance } from "@/lib/data/view";
+import { getIssueType, issueViews, notesFor, trafficProvenance } from "@/lib/data/view";
 import { formatNumber } from "@/lib/format";
 import { formatDate } from "@/lib/data/provenance";
 
@@ -28,13 +28,11 @@ export async function generateMetadata({ params }: PageProps<"/sites/[site]/issu
 export default async function IssuePage({ params }: PageProps<"/sites/[site]/issues/[issue]">) {
   const { site: siteKey, issue: issueKey } = await params;
   const site = getSite(siteKey);
-  const issue = site.issues.find((i) => i.type === issueKey);
-  if (!issue) notFound();
-  const type = getIssueType(issue.type);
+  const view = issueViews(site).find((v) => v.issue.type === issueKey);
+  if (!view) notFound();
+  const { issue, type } = view;
   const notes = notesFor(siteKey, issue.type);
-  const owner = (issue.fixer ?? type.fixer) === "owner";
-  // An owner-type issue moved to SWS because it's on nearly every page (template).
-  const fromTemplate = issue.fixer === "sws" && type.fixer === "owner";
+  const owner = view.fixer === "owner";
   const isStale = issue.pages.some((p) => "monthsSinceUpdate" in p);
   // Per-page reports in Siteimprove, from live data (impmd stripped on ingestion).
   const hasReports = issue.pages.some((p) => "siteimproveUrl" in p && p.siteimproveUrl);
@@ -53,6 +51,8 @@ export default async function IssuePage({ params }: PageProps<"/sites/[site]/iss
   }));
   const trackProps = { siteKey, issueType: issue.type, checkedAt: site.checkedAt, pages: tracked };
   const progress = issue.progress;
+  // A sample issue on a live site (simulated freshness) has sample page views too.
+  const pageViewsNote = issue.source === "sample" ? { ...trafficProvenance(site), source: "sample" as const, stale: false } : trafficProvenance(site);
 
   return (
     <SiteGate siteKey={siteKey} siteName={site.name}>
@@ -77,9 +77,11 @@ export default async function IssuePage({ params }: PageProps<"/sites/[site]/iss
           <p>{type.why}</p>
           <h2 className="subheading">What to do</h2>
           <p>
-            {fromTemplate
+            {view.swsBecause === "template"
               ? "No action needed from you. This is on nearly every page, so it comes from the site template, and SWS is handling it."
-              : type.todo}
+              : view.swsBecause === "note"
+                ? "No action needed from you. SWS is handling this; see the note from SWS below."
+                : type.todo}
           </p>
 
           {notes.map((n) => (
@@ -133,7 +135,7 @@ export default async function IssuePage({ params }: PageProps<"/sites/[site]/iss
       ) : tracksHere ? (
         <>
           <TrackedTable {...trackProps} thirdHeader={thirdHeader} viewsHeader={`Page views, last ${site.topPages.periodDays ?? 30} days`} />
-          <SourceNote className="meta mt-8" {...trafficProvenance(site)} />
+          <SourceNote className="meta mt-8" {...pageViewsNote} />
         </>
       ) : (
       <>
@@ -166,7 +168,7 @@ export default async function IssuePage({ params }: PageProps<"/sites/[site]/iss
           </tbody>
         </table>
       </TableWrap>
-      <SourceNote className="meta mt-8" {...trafficProvenance(site)} />
+      <SourceNote className="meta mt-8" {...pageViewsNote} />
       </>
       )}
 

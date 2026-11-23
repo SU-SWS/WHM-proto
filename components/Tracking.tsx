@@ -75,8 +75,8 @@ export function TrackedTable({ siteKey, issueType, checkedAt, pages, thirdHeader
   function apply(action: Status) {
     const paths = [...selected].filter((p) => shown.some((r) => r.path === p));
     if (!paths.length) return setMessage("Select one or more pages in the table first.");
-    if (action === "later" && !/^\d{4}-\d{2}-\d{2}$/.test(until)) return setMessage("Choose a revisit date first.");
-    if (action === "later" && until < today()) return setMessage("Choose a revisit date that hasn’t passed.");
+    if (action === "later" && !/^\d{4}-\d{2}-\d{2}$/.test(until)) return setMessage("Choose a “set aside until” date first.");
+    if (action === "later" && until < today()) return setMessage("Choose a “set aside until” date that hasn’t passed.");
     const next = { ...marks };
     for (const p of paths) {
       if (action === "todo") delete next[p];
@@ -130,7 +130,7 @@ export function TrackedTable({ siteKey, issueType, checkedAt, pages, thirdHeader
         </button>
         <span className="flex flex-wrap items-center gap-6">
           <label htmlFor={`${id}-until`} className="text-16">
-            Revisit by
+            Set aside until
           </label>
           <input
             id={`${id}-until`}
@@ -255,7 +255,7 @@ export function ProgressPanel({ siteKey, issueType, checkedAt, pages }: Omit<Pro
           <dt className="font-semibold">Still correct</dt>
           <dd className="mb-6 ml-0">You reviewed the page, and it doesn’t need an update right now.</dd>
           <dt className="font-semibold">Set aside</dt>
-          <dd className="mb-6 ml-0">You’ll decide later. The revisit date reminds you when to come back to it.</dd>
+          <dd className="mb-6 ml-0">You’ll decide later. The date says when to come back to it.</dd>
         </dl>
       </details>
     </>

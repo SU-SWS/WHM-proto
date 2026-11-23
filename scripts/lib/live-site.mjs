@@ -12,6 +12,7 @@ import { siteimproveLink } from "./siteimprove.mjs";
 import { assessEngagement } from "./ga4.mjs";
 import { WINDOW_DAYS } from "./window.mjs";
 import { verdictFor } from "./verdict.mjs";
+import { fixerFor } from "./fixer.mjs";
 
 /** Share of a site's pages at which an issue counts as coming from the template (decisions, Nov 20). */
 const TEMPLATE_SHARE = 0.9;
@@ -51,7 +52,7 @@ function median(xs) {
   return s.length ? s[Math.floor(s.length / 2)] : 0;
 }
 
-export async function buildLiveSite({ site, sample, previous, issueTypes, client, ga4 = null, now = new Date() }) {
+export async function buildLiveSite({ site, sample, previous, issueTypes, annotations = null, client, ga4 = null, now = new Date() }) {
   const id = site.siteimproveSiteId;
   const base = `/sites/${id}`;
   const months = monthWindow(now);
@@ -416,8 +417,11 @@ export async function buildLiveSite({ site, sample, previous, issueTypes, client
 
   // --- Issues: live only. Sample issues name sample pages, so they'd contradict
   // live data; one comes back only when its whole section fell back to sample.
+  // The exception is content freshness: no source exists yet, so its simulated,
+  // labeled issue stays, to show editorial tracking (TR-2) on the live site (decisions, Nov 23).
   const categoryOf = (key) => issueTypes.types.find((t) => t.key === key)?.category;
-  const fixerOf = (i) => i.fixer ?? issueTypes.types.find((t) => t.key === i.type)?.fixer;
+  // SWS specialist notes can move an issue to SWS (TR-5); same rule as the site uses.
+  const fixerOf = (i) => fixerFor({ siteKey: site.key, issue: i, types: issueTypes.types, annotations });
   // A policy issue can share a type with an accessibility issue (Vague Link Text uses
   // "linktext"); keep the first so each issue page has one source.
   const seen = new Set();
@@ -426,7 +430,8 @@ export async function buildLiveSite({ site, sample, previous, issueTypes, client
   );
   const sampleFallback = (i) =>
     (links.issues === null && (i.type === "broken" || i.type === "broken-template")) ||
-    (a11y === null && categoryOf(i.type) === "Accessibility");
+    (a11y === null && categoryOf(i.type) === "Accessibility") ||
+    i.type === "stale";
   const issues = [...liveIssues, ...sample.issues.filter(sampleFallback)];
   // Owner issues ranked by the page views of the pages they're on (SP-3), then by
   // how many pages; live first, then sample.
@@ -517,12 +522,20 @@ export async function buildLiveSite({ site, sample, previous, issueTypes, client
   }
 
   const onBusiest = owner.some((i) => i.source === "live" && i.pages.some((p) => busiest.includes(p.path)));
+  // Name the busiest page that has an owner issue (CT-2).
+  const hitPath = busiest.find((b) => owner.some((i) => i.source === "live" && i.pages.some((p) => p.path === b)));
+  const nameOf = (path) => {
+    if (path === "/") return "your home page";
+    const title = traffic.titles?.get(path) ?? topPages.pages.find((p) => p.path === path)?.title;
+    return `“${title ?? path}”`;
+  };
   const { state, verdict, lede } = verdictFor({
     score: scores.siteTargetScore.value,
     change: scores.siteTargetScore.change,
     ownerIssues: owner.length,
     swsIssues: ordered.length - owner.length,
     onBusiest,
+    busiestIssuePage: hitPath ? { name: nameOf(hitPath), top: hitPath === busiest[0] } : null,
     lowEngagementPage: lowPage ? (lowPage.path === "/" ? "your home page" : `“${lowPage.title ?? lowPage.path}”`) : null,
   });
 

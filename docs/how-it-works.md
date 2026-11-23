@@ -12,7 +12,7 @@ Website Health Monitoring (WHM) turns Siteimprove and Google Analytics data into
 | **Live** | Page views per page and per month; the most visited pages; engagement rate per page; what visitors search for on the site | Google Analytics 4 |
 | **Sample, labeled** | Two other demo sites (Stanford Web Services, Decanter) | Written for the demo |
 | **Sample, labeled** | AI content report; speed check | Written for the demo; planned for the MVP |
-| **Simulated, labeled** | Pages not updated in a year (content freshness) | No reliable source yet; kept to start the conversation with owners |
+| **Simulated, labeled** | Pages not updated in over a year (content freshness) | No reliable source yet; kept to start the conversation with owners |
 
 Every section on every page says where its data came from and how old it is, for example “Siteimprove check of Nov 20, 2026. Live data.”
 
@@ -32,7 +32,7 @@ If part of a data run fails, that part keeps its last good data and the Admin pa
 - **Ranked by visitors.** “Prioritized for me” orders the owner's issues by how many visitors see the affected pages. It shows the top five first. “Show everything plainly” lists every issue, unranked, by category.
 - **Owner or SWS.** An issue found on nearly every page (90% or more) comes from the shared site template, so it moves to “Being handled by SWS” instead of the owner's list. Broken links in the shared Stanford footer are treated the same way.
 - **Noise filtered out.** Incomplete Siteimprove checks are skipped. Platform pages that every Stanford Sites site shares, such as search, sign-in and “page not found,” are left out of “busiest pages.”
-- **Plain language.** Each issue says what it is, why it matters, what to do, and who fixes it, at about an 8th-grade reading level. Draft wording is marked “not yet reviewed by SWS.”
+- **Plain language.** Each issue says what it is, why it matters, what to do, and who fixes it, at about an 8th-grade reading level. The wording is a draft that SWS still needs to review; notes from the accessibility specialist are marked “not yet reviewed by SWS” until they are.
 - **Low engagement named.** A well-visited page where far fewer visitors stay than on the site's typical page is named in the summary.
 
 ## 4. Summarize and link: one system of record

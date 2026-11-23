@@ -17,9 +17,11 @@ export const FELL = 0.1;
  * @param {number} p.ownerIssues number of owner issues
  * @param {number} p.swsIssues   number of SWS-handled issues
  * @param {boolean} p.onBusiest  an owner issue is on one of the 5 busiest pages
+ * @param {{name: string, top: boolean}|null} p.busiestIssuePage  the busiest page with an owner issue, name already
+ *   quoted (or "your home page"); top = it's the single busiest page (CT-2)
  * @param {string|null} p.lowEngagementPage  the most visited page with low engagement, already quoted (CT-2)
  */
-export function verdictFor({ score, change, ownerIssues, swsIssues, onBusiest, lowEngagementPage = null }) {
+export function verdictFor({ score, change, ownerIssues, swsIssues, onBusiest, busiestIssuePage = null, lowEngagementPage = null }) {
   const fell = change !== null && change <= -FELL;
   const state = fell || onBusiest ? "attention" : ownerIssues === 0 ? "good" : "ok";
 
@@ -45,6 +47,9 @@ export function verdictFor({ score, change, ownerIssues, swsIssues, onBusiest, l
     parts.push(`Your Site Target Score is ${fmt(score)}${change === null ? "." : ", the same as the last check."}`);
   } else {
     parts.push(`Your Site Target Score is ${fmt(score)}, ${change > 0 ? "up" : "down"} ${fmt(Math.abs(change))} since the last check.`);
+  }
+  if (busiestIssuePage) {
+    parts.push(`Issues sit on ${busiestIssuePage.name}, ${busiestIssuePage.top ? "your busiest page" : "one of your busiest pages"}.`);
   }
   if (lowEngagementPage) parts.push(`Fewer visitors stay on ${lowEngagementPage} than on most of your pages.`);
   if (ownerIssues >= 2) parts.push("Fixing the first two items helps the most visitors.");

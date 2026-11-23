@@ -60,7 +60,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <div className="mx-auto max-w-[1152px] px-20 py-9 text-16">
             {anyLive ? (
               <>
-                <strong>Prototype.</strong> Some sections show live Siteimprove data. Sections marked
+                <strong>Prototype.</strong> Some sections show live Siteimprove and Google Analytics data. Sections marked
                 “Sample data” are illustrations, not measurements of these sites.
               </>
             ) : (

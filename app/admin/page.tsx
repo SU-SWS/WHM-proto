@@ -67,7 +67,7 @@ export default function AdminPage() {
                 </th>
                 <td>{hostOf(s.url)}</td>
                 <td className="tabular-nums">{s.siteimproveSiteId ?? <span className="italic text-black-80">Not set</span>}</td>
-                <td>{s.ga4PropertyId ?? <span className="italic text-black-80">Not used until the MVP</span>}</td>
+                <td>{s.ga4PropertyId ?? <span className="italic text-black-80">None (uses Siteimprove Analytics)</span>}</td>
                 <td>{ownerLabels(s.key).join(", ")}</td>
                 <td>{s.live ? "Live" : "Sample"}</td>
               </tr>

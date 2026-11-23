@@ -57,7 +57,7 @@ The live site (sitesuserguide) shows types driven by real Siteimprove data. The 
 | Shown on the live site | Key |
 | --- | --- |
 | Links lead to pages that don’t exist | `broken` |
-| Links in the shared footer are reported broken | `broken-template` |
+| Links in the shared header or footer are reported broken | `broken-template` |
 | Pages don’t start with a main heading | `a11y-h1-missing` |
 | Some headings have nothing under them | `a11y-content-after-heading` |
 | Headings skip levels | `a11y-heading-order` |
@@ -66,7 +66,7 @@ The live site (sitesuserguide) shows types driven by real Siteimprove data. The 
 | Lines of text are close together | `a11y-line-height` |
 | Some text doesn’t meet the higher contrast level | `a11y-contrast-enhanced` |
 | Link text doesn’t say where the link goes | `linktext` (also used for the Vague Link Text policy) |
-| Pages not updated in over a year (simulated) | `stale` |
+| Pages not updated in over a year (a labeled simulation) | `stale` |
 | Stanford policies: 15 types | keys starting with `policy-` |
 
 The rest (`alt`, `pdf`, `contrast`, `titles`, `searchdesc`, `policy`) appear only on the sample sites.

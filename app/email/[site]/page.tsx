@@ -48,7 +48,7 @@ export default async function EmailPage({ params }: PageProps<"/email/[site]">) 
           <p>{site.lede}</p>
           <p>
             <strong>Site Target Score:</strong> {formatNumber(r.siteTargetScore.value)} (goal: 100).{" "}
-            <strong>Accessibility:</strong> {formatNumber(r.accessibilityScore.value)} out of 100.{" "}
+            <strong>Accessibility score:</strong> {formatNumber(r.accessibilityScore.value)} out of 100.{" "}
             <strong>Broken links:</strong> {formatNumber(r.brokenLinks.value)}.
           </p>
           {owner.length > 0 && (
@@ -59,7 +59,7 @@ export default async function EmailPage({ params }: PageProps<"/email/[site]">) 
               <ol>
                 {owner.slice(0, 3).map((v) => (
                   <li key={v.issue.type}>
-                    {v.type.title}. {v.issue.reason}
+                    {v.type.title}. {v.issue.scope}
                   </li>
                 ))}
               </ol>
@@ -71,8 +71,8 @@ export default async function EmailPage({ params }: PageProps<"/email/[site]">) 
             </Link>
           </p>
           <p className="mb-0 text-15 text-black-80">
-            Data from the {origin.origin} {origin.sourceLabel}. Change how often you get this email in your dashboard
-            settings.
+            Data from the {origin.origin} {origin.sourceLabel}. In the full version, you’ll choose how often you get this
+            email.
           </p>
         </div>
       </section>

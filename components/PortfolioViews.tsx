@@ -9,10 +9,14 @@ export function PortfolioHeadline({ sites }: { sites: { key: string; state: stri
   const need = mine.filter((s) => s.state === "attention").length;
   const text =
     need === 0
-      ? `All of your ${mine.length === 1 ? "site is" : "sites are"} in good shape this week.`
-      : need === 1
-        ? `One of your ${mine.length} sites needs attention this week.`
-        : `${need} of your sites need attention this week.`;
+      ? mine.length === 1
+        ? "Your site is in good shape."
+        : `All of your sites are in good shape.`
+      : mine.length === 1
+        ? "Your site needs attention."
+        : need === 1
+          ? `One of your ${mine.length} sites needs attention.`
+          : `${need} of your ${mine.length} sites need attention.`;
   return <p className="verdict">{text}</p>;
 }
 

@@ -24,13 +24,13 @@ export function monthName(ym: string, style: "long" | "short" = "long"): string 
   return style === "short" ? name.slice(0, 3) : name;
 }
 
-/** "Up 3 since last check", "Down 0.6 since last check", "No change since last check". */
+/** "Up 3 since the last check", "Down 0.6 since the last check", "No change since the last check". */
 export function changeText(change: number | null): string {
   if (change === null) return "No earlier check to compare with";
-  if (change === 0) return "No change since last check";
+  if (change === 0) return "No change since the last check";
   // Two decimals, the precision Siteimprove reports scores in.
   const size = Math.round(Math.abs(change) * 100) / 100;
-  return `${change > 0 ? "Up" : "Down"} ${formatNumber(size)} since last check`;
+  return `${change > 0 ? "Up" : "Down"} ${formatNumber(size)} since the last check`;
 }
 
 /** Whether a change is good news. Words carry the meaning; color only repeats it. */

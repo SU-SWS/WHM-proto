@@ -32,10 +32,10 @@ export default function Portfolio() {
               <p className="my-6 max-w-[60ch] font-serif text-19">{s.verdict}</p>
               <ul className="m-0 flex list-none flex-wrap gap-x-20 gap-y-4 p-0 text-16 text-black-80">
                 <li className="mb-0">Site Target Score {formatNumber(s.siteTargetScore)}</li>
-                <li className="mb-0">Accessibility {formatNumber(s.accessibilityScore)}</li>
+                <li className="mb-0">Accessibility score {formatNumber(s.accessibilityScore)}</li>
                 <li className="mb-0">{formatNumber(s.brokenLinks)} broken links</li>
                 <li className="mb-0">
-                  {s.openOwnerIssues} {s.openOwnerIssues === 1 ? "item" : "items"} for you to review
+                  {s.openOwnerIssues} {s.openOwnerIssues === 1 ? "item" : "items"} for you to fix
                 </li>
               </ul>
               <SourceNote

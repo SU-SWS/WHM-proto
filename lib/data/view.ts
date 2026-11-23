@@ -2,6 +2,7 @@
 // types, so pages stay mostly markup.
 
 import { getAnnotations, getIssueTypes, getRegistry } from "./load";
+import { fixerFor, noteHandledBySws } from "../../scripts/lib/fixer.mjs";
 import type { Annotation, IssueType, PortfolioSite, SiteData, SiteIssue, SiteState } from "./types";
 
 const NEED_ORDER: Record<SiteState, number> = { attention: 0, ok: 1, good: 2 };
@@ -25,14 +26,25 @@ export function getIssueType(key: string): IssueType {
 export interface IssueView {
   issue: SiteIssue;
   type: IssueType;
-  /** Who fixes it: the issue's own override (template issues), else its type's. */
+  /** Who fixes it: an SWS specialist note, the issue's own override (template issues), else its type's (TR-5). */
   fixer: "owner" | "sws";
+  /** Why SWS has it when the type says the owner fixes it. */
+  swsBecause: "note" | "template" | null;
 }
 
 export function issueViews(site: SiteData): IssueView[] {
+  const types = getIssueTypes().types;
+  const annotations = getAnnotations();
   return site.issues.map((issue) => {
     const type = getIssueType(issue.type);
-    return { issue, type, fixer: issue.fixer ?? type.fixer };
+    const fixer = fixerFor({ siteKey: site.siteKey, issue, types, annotations }) as "owner" | "sws";
+    const swsBecause =
+      fixer === "sws" && type.fixer === "owner"
+        ? noteHandledBySws(annotations, site.siteKey, issue.type)
+          ? "note"
+          : "template"
+        : null;
+    return { issue, type, fixer, swsBecause };
   });
 }
 
