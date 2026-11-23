@@ -1,25 +1,25 @@
 {
   "schemaVersion": 1,
-  "runId": "44831575444",
-  "startedAt": "2026-11-20T22:46:01.859Z",
-  "finishedAt": "2026-11-20T22:46:16.274Z",
+  "runId": "45273185423",
+  "startedAt": "2026-11-23T21:47:23.394Z",
+  "finishedAt": "2026-11-23T21:47:44.058Z",
   "sites": {
     "sitesuserguide": {
       "result": "complete",
-      "reason": "policy “[QA] Google Docs” has no WHM issue type; policy “[QA] Homepages (High-level pages) with broken links” has no WHM issue type; policy “[QA] Google Docs Forms” has no WHM issue type; policy “[QA] Links to Stanford Digital Repository (sdr.stanford.edu)” has no WHM issue type; policy “[A11y] Captions Project: YouTube Links” has no WHM issue type; policy “[A11y] [QA] Documents” has no WHM issue type; GA4 export has no session counts, so low engagement isn't checked; re-run the Apps Script export",
-      "finishedAt": "2026-11-20T22:46:16.273Z",
+      "reason": "traffic: the GA4 export has no page views (showing sample data); policy “[QA] Google Docs” has no WHM issue type; policy “[QA] Homepages (High-level pages) with broken links” has no WHM issue type; policy “[QA] Google Docs Forms” has no WHM issue type; policy “[QA] Links to Stanford Digital Repository (sdr.stanford.edu)” has no WHM issue type; policy “[A11y] Captions Project: YouTube Links” has no WHM issue type; policy “[A11y] [QA] Documents” has no WHM issue type",
+      "finishedAt": "2026-11-23T21:47:44.055Z",
       "source": "live"
     },
     "webservices": {
       "result": "sample",
       "reason": null,
-      "finishedAt": "2026-11-20T22:12:49.844Z",
+      "finishedAt": "2026-11-23T21:47:44.056Z",
       "source": "sample"
     },
     "decanter": {
       "result": "sample",
       "reason": null,
-      "finishedAt": "2026-11-20T22:12:49.845Z",
+      "finishedAt": "2026-11-23T21:47:44.056Z",
       "source": "sample"
     }
   }
