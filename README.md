@@ -16,7 +16,7 @@ Only **sitesuserguide.stanford.edu** has live data: Siteimprove scores, issues, 
 | --- | --- | --- |
 | **Data run** | Fetches Siteimprove data for live sites, merges the latest GA4 export, writes `data/published/`, commits it, then builds and deploys the site. Weekly (Mondays) and on demand, with a site choice and a “Publish” checkbox for previewing a run first. | `.github/workflows/refresh-data.yml`, `scripts/refresh.mjs`, `scripts/lib/` |
 | **Deploy** | Builds and publishes the site on every push to `main`. | `.github/workflows/deploy.yml` |
-| **GA4 export** | A Google Apps Script, run as an SWS account, that writes `data/ga4/<site>.json` weekly: engagement per page and privacy-filtered site search terms. | `scripts/apps-script/ga4-export.gs`; setup in [docs/ga4-setup.md](docs/ga4-setup.md) |
+| **GA4 export** | A Google Apps Script, run as an SWS account, that writes `data/ga4/<site>.json` daily: page views, names and engagement per page, monthly page views, and privacy-filtered site search terms. | `scripts/apps-script/ga4-export.gs`; setup in [docs/ga4-setup.md](docs/ga4-setup.md) |
 | **Save Siteimprove fixtures** | Saves real API responses as a short-lived download for review before code depends on them. Commits nothing. | `.github/workflows/save-fixtures.yml`, `scripts/save-fixtures.mjs` |
 | **Website** | Next.js static export with the Decanter 7 design system. Reads only `data/` at build time; the browser never calls Siteimprove or Google. | `app/`, `components/`, `lib/` |
 

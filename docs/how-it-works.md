@@ -21,7 +21,7 @@ Every section on every page says where its data came from and how old it is, for
 ## 2. How data gets to the page
 
 1. **Data run, weekly or on demand.** A GitHub Actions workflow calls the Siteimprove API with credentials stored as GitHub secrets, builds one data file per site, and publishes the site. An SWS administrator can start an extra run: the Admin page's “Start data run” opens it in GitHub, and the Admin page then follows the run step by step until the new data is live.
-2. **GA4 export, weekly.** A small Google Apps Script, run under an SWS Google account, pulls page views, engagement and site search from GA4 and adds them to the repo. The next data run merges them in.
+2. **GA4 export, daily.** A small Google Apps Script, run under an SWS Google account, pulls page views, engagement and site search from GA4 and adds them to the repo. The next data run merges them in.
 3. **Static site.** The website is plain files on GitHub Pages. The browser never talks to Siteimprove or Google, so no credentials ever reach a visitor.
 
 If part of a data run fails, that part keeps its last good data and the Admin page says what failed. Old numbers are never shown as current.

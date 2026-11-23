@@ -79,7 +79,7 @@ Then:
 
 ## 6a. GA4 engagement and site search (added Nov 20)
 
-- Apps Script `scripts/apps-script/ga4-export.gs`, set up as in `docs/ga4-setup.md`: dry run, review, then weekly commits of `data/ga4/sitesuserguide.json`.
+- Apps Script `scripts/apps-script/ga4-export.gs`, set up as in `docs/ga4-setup.md`: dry run, review, then daily commits of `data/ga4/sitesuserguide.json` (a trigger set up by hand, 1am to 2am).
 - The data run merges engagement rate into "Most visited pages" and search terms into "What visitors search for", labeled Google Analytics 4 with the period's end date. Search terms are privacy-filtered twice.
 
 **Done when:** a reviewed export is committed, a data run shows both sections as live for sitesuserguide, and no published term looks personal.

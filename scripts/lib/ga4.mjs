@@ -12,7 +12,7 @@ import path from "node:path";
 import { normalizePath } from "./normalize.mjs";
 import { WINDOW_DAYS } from "./window.mjs";
 
-/** An export older than this is still used, but marked out of date (Q-7). The export runs weekly. */
+/** An export older than this is still used, but marked out of date (Q-7). The export runs daily. */
 export const MAX_AGE_DAYS = 14;
 /** Same rule as the Apps Script, applied again here before anything is published (decisions, Nov 20). */
 const MIN_SEARCHES = 5;

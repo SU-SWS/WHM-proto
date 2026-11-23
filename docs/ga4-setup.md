@@ -48,10 +48,17 @@ When the token nears expiry, GitHub emails you. Generate a new one the same way 
    - If `searchTerms` is empty and `dropped` is 0, GA4 may not be recording site search for this site. Enhanced measurement detects searches from query parameters like `q`, `s` or `search`; Stanford Sites may use a different one. Check in GA4 under **Admin → Data streams → Enhanced measurement → Site search**.
 4. Send the log output to Claude to review if you'd like a second check.
 
-## 4. Commit, then run weekly
+## 4. Commit, then run daily
 
 1. Choose **exportAndCommit** and select **Run**. The log says “Committed: …”, and a commit titled “GA4 export for sitesuserguide …” appears in the repo.
-2. Set up a weekly run by hand: in the left sidebar, select **Triggers** (the clock icon), then **+ Add Trigger**. Choose function **exportAndCommit**, event source **Time-driven**, type **Week timer**, day **Every Sunday**, and an evening time, so it runs ahead of Monday's data run. Save.
+2. Set up a daily run by hand: in the left sidebar, select **Triggers** (the clock icon), then **+ Add Trigger**, and choose:
+   - **Function to run:** `exportAndCommit`
+   - **Deployment:** Head
+   - **Event source:** Time-driven
+   - **Type of time based trigger:** Day timer
+   - **Time of day:** 1am to 2am
+
+   Save. The time follows the script's time zone (**Project settings → Time zone**); set it to Pacific time if it isn't. Each night's export then covers the 90 days up to the day before, ready for any data run that day. Google emails you if a run fails.
 3. Run **Data run** in GitHub Actions (or wait for Monday). The site page should then show engagement rates and search terms labeled “From Google Analytics 4, as of [date]. Live data.”
 
 ## Without the token (by hand)
@@ -62,7 +69,7 @@ While the GitHub token is waiting for approval, or if you'd rather not use one:
 2. Download it and save it in the repo as `data/ga4/sitesuserguide.json`, replacing any older copy.
 3. Commit and push it, then run **Data run**.
 
-Once a file is more than 14 days old, the site still uses it but marks its numbers “may be out of date”, so repeat this at least every two weeks until the weekly trigger takes over.
+Once a file is more than 14 days old, the site still uses it but marks its numbers “may be out of date”, so repeat this at least every two weeks until the daily trigger takes over.
 
 ## If something goes wrong
 

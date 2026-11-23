@@ -23,8 +23,8 @@
  *   exportToDrive()    builds the file and saves it to your Google Drive, for
  *                      committing by hand (for example while the token awaits approval).
  *
- * To run weekly, add a time-driven trigger for exportAndCommit by hand
- * (Triggers, the clock icon), as in docs/ga4-setup.md.
+ * To run daily, add a time-driven trigger for exportAndCommit by hand
+ * (Triggers, the clock icon: Day timer, 1am to 2am), as in docs/ga4-setup.md.
  */
 
 var SITE_KEY = "sitesuserguide";
