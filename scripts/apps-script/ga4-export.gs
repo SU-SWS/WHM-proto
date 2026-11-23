@@ -22,7 +22,9 @@
  *   exportAndCommit()  builds the file and commits it to the repo.
  *   exportToDrive()    builds the file and saves it to your Google Drive, for
  *                      committing by hand (for example while the token awaits approval).
- *   installWeeklyTrigger()  runs exportAndCommit every Sunday, before Monday's data run.
+ *
+ * To run weekly, add a time-driven trigger for exportAndCommit by hand
+ * (Triggers, the clock icon), as in docs/ga4-setup.md.
  */
 
 var SITE_KEY = "sitesuserguide";
@@ -75,14 +77,6 @@ function exportToDrive() {
   Logger.log("Saved " + name + " to your Google Drive: " + saved.getUrl() +
     "\nDownload it, save it in the repo as data/ga4/" + SITE_KEY + ".json, then commit and push." +
     "\n" + String(file.pages.length) + " pages, " + String(file.searchTerms.length) + " search terms.");
-}
-
-function installWeeklyTrigger() {
-  ScriptApp.getProjectTriggers().forEach(function (t) {
-    if (t.getHandlerFunction() === "exportAndCommit") ScriptApp.deleteTrigger(t);
-  });
-  ScriptApp.newTrigger("exportAndCommit").timeBased().onWeekDay(ScriptApp.WeekDay.SUNDAY).atHour(18).create();
-  Logger.log("Weekly trigger installed: Sundays around 6 p.m. (script time zone).");
 }
 
 function buildFile_() {

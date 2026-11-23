@@ -51,7 +51,7 @@ When the token nears expiry, GitHub emails you. Generate a new one the same way 
 ## 4. Commit, then run weekly
 
 1. Choose **exportAndCommit** and select **Run**. The log says “Committed: …”, and a commit titled “GA4 export for sitesuserguide …” appears in the repo.
-2. Choose **installWeeklyTrigger** and select **Run** once. The script then exports every Sunday evening, ahead of Monday's data run.
+2. Set up a weekly run by hand: in the left sidebar, select **Triggers** (the clock icon), then **+ Add Trigger**. Choose function **exportAndCommit**, event source **Time-driven**, type **Week timer**, day **Every Sunday**, and an evening time, so it runs ahead of Monday's data run. Save.
 3. Run **Data run** in GitHub Actions (or wait for Monday). The site page should then show engagement rates and search terms labeled “From Google Analytics 4, as of [date]. Live data.”
 
 ## Without the token (by hand)
