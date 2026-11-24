@@ -22,7 +22,11 @@ on:
         type: boolean
         default: true
   schedule:
-    - cron: "0 13 * * 1" # Mondays, about 5 a.m. Pacific
+    # Daily at 11:00 UTC: 3 a.m. Pacific in winter (4 a.m. in summer), an hour
+    # after the nightly GA4 export (1 to 2 a.m. Pacific), so each morning's site
+    # has that night's export and fresh Siteimprove data (decisions, Nov 24).
+    # GitHub can start scheduled runs late when it's busy.
+    - cron: "0 11 * * *"
 
 permissions:
   contents: write

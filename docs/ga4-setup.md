@@ -59,7 +59,7 @@ When the token nears expiry, GitHub emails you. Generate a new one the same way 
    - **Time of day:** 1am to 2am
 
    Save. The time follows the script's time zone (**Project settings → Time zone**); set it to Pacific time if it isn't. Each night's export then covers the 90 days up to the day before, ready for any data run that day. Google emails you if a run fails.
-3. Run **Data run** in GitHub Actions (or wait for Monday). The site page should then show engagement rates and search terms labeled “From Google Analytics 4, as of [date]. Live data.”
+3. Run **Data run** in GitHub Actions (or wait for the daily run at about 3 a.m. Pacific). The site page should then show engagement rates and search terms labeled “From Google Analytics 4, as of [date]. Live data.”
 
 ## Without the token (by hand)
 

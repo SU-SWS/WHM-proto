@@ -50,7 +50,7 @@ Ordered tasks for the December 8, 2026 prototype. Each task lists what "done" me
 
 ## 5. Refresh workflow (sample mode)
 
-- `.github/workflows/refresh-data.yml`: `workflow_dispatch` with input `site` (default `all`), plus a weekly schedule. It runs `scripts/refresh.mjs`, commits `data/published/`, then builds and deploys **in the same workflow**, because commits made with the default token don't trigger other workflows.
+- `.github/workflows/refresh-data.yml`: `workflow_dispatch` with input `site` (default `all`), plus a schedule (daily since Nov 24). It runs `scripts/refresh.mjs`, commits `data/published/`, then builds and deploys **in the same workflow**, because commits made with the default token don't trigger other workflows.
 - `scripts/refresh.mjs` in sample mode copies `data/sample/` to `data/published/` and writes `status.json`.
 
 **Done when:** a manual run updates `status.json`, redeploys, and the admin page shows the new result.

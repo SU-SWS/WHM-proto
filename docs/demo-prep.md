@@ -2,7 +2,7 @@
 
 *For whoever presents WHM at the innovation fair on Tuesday, December 8, 2026. Follow it in order.*
 
-The site shows what the last **data run** published. A data run pulls fresh Siteimprove data and reads the GA4 export that's in the repo at that moment, so the GA4 export has to be committed **before** the data run that matters. The scheduled data run is **Monday, Dec 7, about 5 a.m. Pacific**, the day before the fair.
+The site shows what the last **data run** published. A data run pulls fresh Siteimprove data and reads the GA4 export that's in the repo at that moment, so the GA4 export has to be committed **before** the data run that matters. A data run is scheduled **every day at about 3 a.m. Pacific**, an hour after the nightly GA4 export (1 to 2 a.m.), so each morning the site shows the previous night’s export and fresh Siteimprove data. The run on the morning of the fair, **Tue, Dec 8**, is the one people will see.
 
 | Thing | Where it comes from | How it gets updated |
 | --- | --- | --- |
@@ -28,13 +28,13 @@ The site shows what the last **data run** published. A data run pulls fresh Site
 
 ## 3. The day before (Mon, Dec 7)
 
-1. The scheduled data run starts about 5 a.m. Pacific. Wait for it to finish: in GitHub, **Actions → Data run**. It takes a few minutes.
+1. The scheduled data run starts about 3 a.m. Pacific. In the morning, check it finished: in GitHub, **Actions → Data run**.
 2. **Check the site** (section 6).
 3. If something's wrong:
    - GA4 out of date or missing: update it by hand (section 4), then run a data run (section 5).
    - Siteimprove part failed: the Admin page says which part and why. Run a data run again; temporary errors usually clear.
    - Still wrong: run a data run with **Publish** unticked, so nothing changes on the site, and look at the result before trying again.
-4. Once it's right, **leave it alone.** Don't start more data runs or merge changes before the demo.
+4. Once it's right, **leave it alone.** Don't merge changes before the demo. The 3 a.m. run on Dec 8 still happens; if any part of it fails, that part keeps the data from Dec 7 (and the Admin page says so).
 
 ## 4. Updating the GA4 export by hand (through Google Drive)
 
@@ -116,7 +116,7 @@ You need write access to the repo to start a run.
 
 ## 7. The morning of the fair (Tue, Dec 8)
 
-1. **Don't start a data run** unless something is broken. A run on the morning is a risk without much gain.
+1. **Check the 3 a.m. data run** finished (Admin page, or **Actions → Data run**), then look at the site (section 6). Don't start another run unless something is broken.
 2. On the demo laptop, **clear the browser's site data** for `su-sws.github.io`, so “Viewing as” starts at SWS administrator and no tracking or notes from rehearsals are left. In Chrome: the icon to the left of the address → **Cookies and site data → Manage on-device site data**, then delete `su-sws.github.io`.
 3. Open the site and walk the demo path once.
 4. Keep this page handy. If the site looks wrong during the day, see section 6 for what to check, and remember the last good data stays up even when a run fails.
