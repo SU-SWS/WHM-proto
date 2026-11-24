@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { BusiestMark, BusiestNote, mentionsBusiest } from "@/components/BusiestNote";
 import { SourceNote } from "@/components/SourceNote";
 import { TableWrap } from "@/components/TableWrap";
 import { AdminGate } from "@/components/Viewer";
@@ -50,7 +51,10 @@ export default function SwsPage() {
                   <br />
                   <span className="text-15 font-normal text-black-80">{hostOf(s.url)}</span>
                 </th>
-                <td className="min-w-[256px]">{s.verdict}</td>
+                <td className="min-w-[256px]">
+                  {s.verdict}
+                  <BusiestMark text={s.verdict} />
+                </td>
                 <td className="num">{formatNumber(s.siteTargetScore)}</td>
                 <td className="num">{s.openOwnerIssues}</td>
                 <td>{ownerLabels(s.key).join(", ")}</td>
@@ -69,6 +73,7 @@ export default function SwsPage() {
           </tbody>
         </table>
       </TableWrap>
+      {sites.some((s) => mentionsBusiest(s.verdict)) && <BusiestNote className="meta mt-12" />}
     </AdminGate>
   );
 }

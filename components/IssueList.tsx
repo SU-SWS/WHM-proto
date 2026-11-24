@@ -9,6 +9,7 @@ export interface IssueRow {
   category: string;
   fixer: "owner" | "sws";
   summary: string; // scope and reason
+  busiest?: boolean; // the summary mentions the busiest pages: gets an asterisk, explained below the list
   sample: boolean; // show a "Sample data" tag (only when the rest of the site is live)
 }
 
@@ -106,7 +107,10 @@ function Row({ siteKey, row, rank }: { siteKey: string; row: IssueRow; rank?: nu
             {rank && <span className="sr-only">Priority {rank}: </span>}
             {row.title}
           </span>
-          <span className="block text-16 text-black-80">{row.summary}</span>
+          <span className="block text-16 text-black-80">
+            {row.summary}
+            {row.busiest && <span aria-hidden="true">*</span>}
+          </span>
         </span>
         <span className={`flex flex-wrap items-start gap-6 md:justify-end ${rank ? "col-start-2 md:col-start-auto" : ""}`}>
           <span className="tag tag-cat">{row.category}</span>

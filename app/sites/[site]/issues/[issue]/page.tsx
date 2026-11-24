@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { TableWrap } from "@/components/TableWrap";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { BusiestMark, BusiestNote, mentionsBusiest } from "@/components/BusiestNote";
 import { SourceNote } from "@/components/SourceNote";
 import { SiteGate } from "@/components/Viewer";
 import { Notes, ProgressPanel, TrackedTable, type TrackedPage } from "@/components/Tracking";
@@ -63,8 +64,10 @@ export default async function IssuePage({ params }: PageProps<"/sites/[site]/iss
       <p className="verdict">{type.title}</p>
       <p className="lede">
         {issue.scope} {issue.reason}
+        <BusiestMark text={issue.reason} />
       </p>
       <SourceNote provider="siteimprove" source={issue.source} date={site.checkedAt} run={getStatus().sites[siteKey]} showAge />
+      {mentionsBusiest(issue.reason) && <BusiestNote href={`/sites/${siteKey}/#most-visited`} />}
       <p className="mb-16">
         {owner ? <span className="tag tag-you">You can fix this</span> : <span className="tag tag-sws">SWS is handling this</span>}
       </p>

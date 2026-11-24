@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { BusiestMark, BusiestNote, mentionsBusiest } from "@/components/BusiestNote";
 import { SiteGate } from "@/components/Viewer";
 import { getSite, getSiteKeys } from "@/lib/data/load";
 import { describeSection } from "@/lib/data/provenance";
@@ -44,8 +45,16 @@ export default async function EmailPage({ params }: PageProps<"/email/[site]">) 
           </div>
         </div>
         <div className="px-20 pb-24 pt-20">
-          <p className="mb-10 font-serif text-[2.4rem] font-semibold leading-tight">{site.verdict}</p>
-          <p>{site.lede}</p>
+          <p className="mb-10 font-serif text-[2.4rem] font-semibold leading-tight">{site.verdict}
+            <BusiestMark text={site.verdict} />
+          </p>
+          <p>
+            {site.lede}
+            <BusiestMark text={site.lede} />
+          </p>
+          {(mentionsBusiest(site.verdict) || mentionsBusiest(site.lede)) && (
+            <BusiestNote href={`/sites/${siteKey}/#most-visited`} className="text-16 text-black-80" />
+          )}
           <p>
             <strong>Site Target Score:</strong> {formatNumber(r.siteTargetScore.value)} (goal: 100).{" "}
             <strong>Accessibility score:</strong> {formatNumber(r.accessibilityScore.value)} out of 100.{" "}

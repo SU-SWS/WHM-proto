@@ -10,7 +10,7 @@
 import { normalizePath } from "./normalize.mjs";
 import { siteimproveLink } from "./siteimprove.mjs";
 import { assessEngagement } from "./ga4.mjs";
-import { WINDOW_DAYS } from "./window.mjs";
+import { BUSIEST, MOST_VISITED, WINDOW_DAYS } from "./window.mjs";
 import { verdictFor } from "./verdict.mjs";
 import { fixerFor } from "./fixer.mjs";
 
@@ -18,9 +18,6 @@ import { fixerFor } from "./fixer.mjs";
 const TEMPLATE_SHARE = 0.9;
 /** A check covering fewer pages than this share of the usual count is partial and skipped. */
 const PARTIAL_CHECK = 0.95;
-const BUSIEST = 5;
-/** Rows in "Most visited pages"; the low-engagement check looks at these (CT-2). */
-const MOST_VISITED = 10;
 /**
  * Stanford Sites platform pages, shared by every site on the platform: search,
  * sign-in/account pages, and the "page not found" page (GA4 records it as
