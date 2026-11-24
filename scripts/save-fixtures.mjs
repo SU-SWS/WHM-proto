@@ -53,16 +53,15 @@ async function save(name, target) {
 
 const limit = (href, n) => `${href}${href.includes("?") ? "&" : "?"}page_size=${n}`;
 /**
- * Round 4 (Nov 23): which pages are missing a search description (SP-2). The
- * seov2/issues list gives meta_desc_missing a "details" link; save it and the
- * first link it offers to a page list, if any, before building a live issue.
+ * Round 4 (Nov 23): pages missing a search description (SP-2). The page list
+ * is verified and saved; this run saves its history, so a change since the
+ * last check can be shown once checked.
  */
 async function probesRound4(id) {
   const detail = await save("probe4-seov2-meta-desc-missing", `/sites/${id}/seov2/issues/meta_desc_missing?page_size=10`);
-  const links = Object.entries(detail?._links ?? {}).filter(([k, v]) => k !== "self" && v?.href);
-  console.log(`meta_desc_missing links: ${links.map(([k]) => k).join(", ") || "none"}`);
-  const pages = links.find(([k]) => /page/i.test(k));
-  if (pages) await save("probe4-seov2-meta-desc-missing-pages", limit(pages[1].href, 10));
+  // The page list is the response itself (saved Nov 23). Its history link is next to verify.
+  const history = detail?.links?.history?.href;
+  if (history) await save("probe4-seov2-meta-desc-missing-history", limit(history, 10));
 }
 
 const registry = JSON.parse(await readFile(path.join(ROOT, "data", "registry.json"), "utf8"));

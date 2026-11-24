@@ -397,18 +397,53 @@ export async function buildLiveSite({ site, sample, previous, issueTypes, annota
     },
   );
 
-  // --- Search descriptions: pages missing one (SEO). No history, so no change.
+  // --- Search descriptions: pages missing one (SEO), as a reading and an issue
+  // (SP-2). The issue's "details" link lists the pages (verified Nov 23,
+  // fixtures/probe4-seov2-meta-desc-missing.json). Its history isn't verified
+  // yet, so there's no change since the last check.
+  const searchDescType = issueTypes.types.find((t) => t.key === "searchdesc");
   const searchDesc = await section(
     "searchDescriptions",
     async () => {
       const issues = await client.getAll(`${base}/seov2/issues?page_size=100`);
       const missing = issues.find((i) => i.issue_name === "meta_desc_missing");
       if (!missing) throw new Error("meta_desc_missing not in SEO issues");
-      return { value: missing.occurrences, change: null, source: "live" };
+      const reading = { value: missing.occurrences, change: null, source: "live" };
+      const n = missing.occurrences;
+      if (!searchDescType || !(n > 0)) return { reading, issue: null };
+      const fromTemplate = n >= sitePages * TEMPLATE_SHARE;
+      const pages = new Map();
+      if (!fromTemplate) {
+        const href = missing._links?.details?.href;
+        if (!href) throw new Error("meta_desc_missing has no details link");
+        for (const m of await client.getAll(`${href}${href.includes("?") ? "&" : "?"}page_size=100`)) {
+          const path = normalizePath(m.url, site.url);
+          if (!path || pages.has(path)) continue;
+          // m.page_views is Siteimprove's count: viewsOf uses it only for sites without GA4.
+          pages.set(path, { path, views: viewsOf(path, m.page_views), count: 1, siteimproveUrl: siteimproveLink(m._siteimprove?.page_report?.href) });
+        }
+      }
+      const list = [...pages.values()].sort((a, b) => b.views - a.views);
+      return {
+        reading,
+        issue: {
+          type: "searchdesc",
+          ...(fromTemplate ? { fixer: "sws" } : {}),
+          scope: `Found on ${n.toLocaleString("en-US")} ${n === 1 ? "page" : "pages"}.`,
+          reason: fromTemplate ? "It’s on nearly every page, so it comes from the site template." : busiestNote(list.map((p) => p.path)),
+          rank: null,
+          siteimproveUrl: null,
+          source: "live",
+          pages: list,
+        },
+      };
     },
     () => {
       const live = previous?.readings?.missingSearchDescriptions?.source === "live";
-      return keepOr(previous?.readings?.missingSearchDescriptions, live, sample.readings.missingSearchDescriptions);
+      const reading = keepOr(previous?.readings?.missingSearchDescriptions, live, sample.readings.missingSearchDescriptions);
+      // Keep the last good live issue; sample pages would contradict live data.
+      const issue = (previous?.issues ?? []).find((i) => i.type === "searchdesc" && i.source === "live") ?? null;
+      return { from: reading.from, value: { reading: reading.value, issue } };
     },
   );
 
@@ -422,7 +457,7 @@ export async function buildLiveSite({ site, sample, previous, issueTypes, annota
   // A policy issue can share a type with an accessibility issue (Vague Link Text uses
   // "linktext"); keep the first so each issue page has one source.
   const seen = new Set();
-  const liveIssues = [...(links.issues ?? []), ...(a11y ?? []), ...policyIssues].filter((i) =>
+  const liveIssues = [...(links.issues ?? []), ...(a11y ?? []), ...policyIssues, ...(searchDesc.issue ? [searchDesc.issue] : [])].filter((i) =>
     seen.has(i.type) ? false : (seen.add(i.type), true),
   );
   const sampleFallback = (i) =>
@@ -552,7 +587,7 @@ export async function buildLiveSite({ site, sample, previous, issueTypes, annota
       accessibilityScore: scores.accessibilityScore,
       brokenLinks: links.reading,
       stalePages: sample.readings.stalePages, // simulated: no freshness source yet (SI-17)
-      missingSearchDescriptions: searchDesc,
+      missingSearchDescriptions: searchDesc.reading,
     },
     trends: {
       months,

@@ -51,6 +51,8 @@ const routes = [
     return { items, total_items: items.length, total_pages: 1, links: {} };
   }],
   [/\/a11y\/issue_kinds\/confirmed\/issues/, () => load("probe-a11y-issue_kinds-confirmed-issues.json")],
+  // One saved page of 10 (of 73); served without "next", so the list ends there.
+  [/\/seov2\/issues\/meta_desc_missing/, () => ({ ...load("probe4-seov2-meta-desc-missing.json"), links: {} })],
   [/\/seov2\/issues/, () => load("probe2-seov2-issues.json")],
   [/\/policy\/policies\?/, () => load("probe2-policy-policies.json")],
   [/\/policy\/policies\/(\d+)\/content/, ([, id]) => {

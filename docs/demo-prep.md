@@ -100,7 +100,7 @@ You need write access to the repo to start a run.
 **On the Admin page**, under “Last result for each site”: sitesuserguide should say **Complete**. Read the “Notes from this run” under it:
 
 - Notes that a policy “has no WHM issue type” are expected and harmless.
-- Anything starting with `traffic:`, `scores:`, `brokenLinks:`, `accessibilityIssues:` or `policies:` means that part fell back to last good or sample data. Fix it before the demo.
+- Anything starting with `traffic:`, `scores:`, `brokenLinks:`, `accessibilityIssues:`, `policies:` or `searchDescriptions:` means that part fell back to last good or sample data. Fix it before the demo.
 - “GA4 export is … days old” or “no GA4 export found”: update it by hand (section 4).
 
 **On the sitesuserguide page** (https://su-sws.github.io/WHM-proto/sites/sitesuserguide/):

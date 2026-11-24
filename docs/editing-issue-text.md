@@ -66,10 +66,11 @@ The live site (sitesuserguide) shows types driven by real Siteimprove data. The 
 | Lines of text are close together | `a11y-line-height` |
 | Some text doesn’t meet the higher contrast level | `a11y-contrast-enhanced` |
 | Link text doesn’t say where the link goes | `linktext` (also used for the Vague Link Text policy) |
+| Pages are missing a search description | `searchdesc` |
 | Pages not updated in over a year (a labeled simulation) | `stale` |
 | Stanford policies: 15 types | keys starting with `policy-` |
 
-The rest (`alt`, `pdf`, `contrast`, `titles`, `searchdesc`, `policy`) appear only on the sample sites.
+The rest (`alt`, `pdf`, `contrast`, `titles`, `policy`) appear only on the sample sites.
 
 ## 3. Specialist notes: `data/annotations.json`
 
