@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { BusiestMark, BusiestNote, mentionsBusiest } from "@/components/BusiestNote";
 import { PortfolioHeadline, VisibleSite } from "@/components/PortfolioViews";
 import { SourceNote } from "@/components/SourceNote";
 import { getPortfolio, getStatus } from "@/lib/data/load";
@@ -30,10 +29,7 @@ export default function Portfolio() {
             <div>
               <h2 className="m-0 text-20 font-bold leading-tight">{s.name}</h2>
               <span className="text-15 text-black-80">{hostOf(s.url)}</span>
-              <p className="my-6 max-w-[60ch] font-serif text-19">
-                {s.verdict}
-                <BusiestMark text={s.verdict} />
-              </p>
+              <p className="my-6 max-w-[60ch] font-serif text-19">{s.verdict}</p>
               <ul className="m-0 flex list-none flex-wrap gap-x-20 gap-y-4 p-0 text-16 text-black-80">
                 <li className="mb-0">Site Target Score {formatNumber(s.siteTargetScore)}</li>
                 <li className="mb-0">Accessibility score {formatNumber(s.accessibilityScore)}</li>
@@ -59,7 +55,6 @@ export default function Portfolio() {
           </VisibleSite>
         ))}
       </ul>
-      {sites.some((s) => mentionsBusiest(s.verdict)) && <BusiestNote className="meta mt-16" />}
     </>
   );
 }

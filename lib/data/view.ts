@@ -3,6 +3,7 @@
 
 import { getAnnotations, getIssueTypes, getRegistry } from "./load";
 import { fixerFor, noteHandledBySws } from "../../scripts/lib/fixer.mjs";
+import { BUSIEST } from "../../scripts/lib/window.mjs";
 import type { Annotation, IssueType, PortfolioSite, SiteData, SiteIssue, SiteState } from "./types";
 
 const NEED_ORDER: Record<SiteState, number> = { attention: 0, ok: 1, good: 2 };
@@ -94,4 +95,13 @@ export function trafficProvenance(site: SiteData) {
     date: a?.asOf ?? site.checkedAt,
     stale: a?.stale,
   };
+}
+
+/**
+ * The site's busiest pages: the first 5 of "Most visited pages", which the data
+ * run picks the same way it picks the busiest pages for the verdict (platform
+ * pages left out, most page views first).
+ */
+export function busiestPaths(site: SiteData): Set<string> {
+  return new Set(site.topPages.pages.slice(0, BUSIEST).map((p) => p.path));
 }

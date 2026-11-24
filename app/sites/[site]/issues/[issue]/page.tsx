@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import { TableWrap } from "@/components/TableWrap";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { BusiestMark, BusiestNote, mentionsBusiest } from "@/components/BusiestNote";
+import { BusiestExplainer, BusiestLabel } from "@/components/Busiest";
 import { SourceNote } from "@/components/SourceNote";
 import { SiteGate } from "@/components/Viewer";
 import { Notes, ProgressPanel, TrackedTable, type TrackedPage } from "@/components/Tracking";
 import { getSite, getSiteKeys, getStatus } from "@/lib/data/load";
 import { displayPath } from "@/lib/data/paths";
 import type { IssuePage } from "@/lib/data/types";
-import { getIssueType, issueViews, notesFor, trafficProvenance } from "@/lib/data/view";
+import { busiestPaths, getIssueType, issueViews, notesFor, trafficProvenance } from "@/lib/data/view";
 import { formatNumber } from "@/lib/format";
 import { formatDate } from "@/lib/data/provenance";
 
@@ -41,6 +41,11 @@ export default async function IssuePage({ params }: PageProps<"/sites/[site]/iss
   // Owners review editorial issues page by page here (TR-2, revised). Issues
   // Siteimprove detects are fixed and rechecked in Siteimprove (TR-1, revised).
   const tracksHere = owner && type.editorial && issue.pages.length > 0;
+  // Sample pages on a live site (simulated freshness) aren't real pages, so they're never starred.
+  const busiest = issue.source === "sample" && site.source === "live" ? new Set<string>() : busiestPaths(site);
+  const starred = issue.pages.some((p) => busiest.has(p.path));
+  // Explain the busiest pages when the list stars some, or the summary mentions them.
+  const explainBusiest = starred || /busiest/i.test(issue.reason);
   const tracked: TrackedPage[] = issue.pages.map((p) => ({
     path: p.path,
     label: displayPath(p.path),
@@ -49,6 +54,7 @@ export default async function IssuePage({ params }: PageProps<"/sites/[site]/iss
     views: p.views,
     third: third(p),
     siteimproveUrl: ("siteimproveUrl" in p && p.siteimproveUrl) || null,
+    busiest: busiest.has(p.path),
   }));
   const trackProps = { siteKey, issueType: issue.type, checkedAt: site.checkedAt, pages: tracked };
   const progress = issue.progress;
@@ -64,10 +70,8 @@ export default async function IssuePage({ params }: PageProps<"/sites/[site]/iss
       <p className="verdict">{type.title}</p>
       <p className="lede">
         {issue.scope} {issue.reason}
-        <BusiestMark text={issue.reason} />
       </p>
       <SourceNote provider="siteimprove" source={issue.source} date={site.checkedAt} run={getStatus().sites[siteKey]} showAge />
-      {mentionsBusiest(issue.reason) && <BusiestNote href={`/sites/${siteKey}/#most-visited`} />}
       <p className="mb-16">
         {owner ? <span className="tag tag-you">You can fix this</span> : <span className="tag tag-sws">SWS is handling this</span>}
       </p>
@@ -139,6 +143,7 @@ export default async function IssuePage({ params }: PageProps<"/sites/[site]/iss
         <>
           <TrackedTable {...trackProps} thirdHeader={thirdHeader} viewsHeader={`Page views, last ${site.topPages.periodDays ?? 30} days`} />
           <SourceNote className="meta mt-8" {...pageViewsNote} />
+          {explainBusiest && <BusiestExplainer siteKey={siteKey} starred={starred} />}
         </>
       ) : (
       <>
@@ -156,8 +161,10 @@ export default async function IssuePage({ params }: PageProps<"/sites/[site]/iss
             {issue.pages.map((p) => (
               <tr key={p.path}>
                 <td>
-                  {/* Live paths are real pages on the site. Sample paths are made up, so they stay plain text. */}
-                  {issue.source === "live" ? <a href={new URL(p.path, site.url).href}>{displayPath(p.path)}</a> : displayPath(p.path)}
+                  <BusiestLabel busiest={busiest.has(p.path)}>
+                    {/* Live paths are real pages on the site. Sample paths are made up, so they stay plain text. */}
+                    {issue.source === "live" ? <a href={new URL(p.path, site.url).href}>{displayPath(p.path)}</a> : displayPath(p.path)}
+                  </BusiestLabel>
                   {"siteimproveUrl" in p && p.siteimproveUrl && (
                     <a href={p.siteimproveUrl} className="mt-4 block text-16">
                       Open in Siteimprove<span className="sr-only">: report for {displayPath(p.path)}</span>
@@ -172,6 +179,7 @@ export default async function IssuePage({ params }: PageProps<"/sites/[site]/iss
         </table>
       </TableWrap>
       <SourceNote className="meta mt-8" {...pageViewsNote} />
+      {explainBusiest && <BusiestExplainer siteKey={siteKey} starred={starred} />}
       </>
       )}
 

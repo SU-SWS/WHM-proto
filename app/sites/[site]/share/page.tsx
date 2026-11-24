@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { BusiestMark, BusiestNote, mentionsBusiest } from "@/components/BusiestNote";
 import { PrintButton } from "@/components/PrintButton";
 import { Readings } from "@/components/Readings";
 import { SourceNote } from "@/components/SourceNote";
@@ -39,15 +38,8 @@ export default async function SharePage({ params }: PageProps<"/sites/[site]/sha
       <h1 className="eyebrow">
         Website health summary for {hostOf(site.url)}, {formatDate(site.checkedAt)}
       </h1>
-      <p className="verdict">
-        {site.verdict}
-        <BusiestMark text={site.verdict} />
-      </p>
-      <p className="lede">
-        {site.lede}
-        <BusiestMark text={site.lede} />
-      </p>
-      {(mentionsBusiest(site.verdict) || mentionsBusiest(site.lede)) && <BusiestNote href={`/sites/${siteKey}/#most-visited`} />}
+      <p className="verdict">{site.verdict}</p>
+      <p className="lede">{site.lede}</p>
       <Readings site={site} />
 
       <h2 className="section-heading">Recommended changes, in order</h2>

@@ -11,6 +11,7 @@ import { useStored } from "@/lib/client/store";
 import { formatDate } from "@/lib/data/provenance";
 import type { IsoDate } from "@/lib/data/types";
 import { useViewer } from "./Viewer";
+import { BusiestLabel } from "./Busiest";
 
 type Mark = { state: "addressed" | "keep" | "later"; date: IsoDate; until?: IsoDate };
 type Marks = Record<string, Mark>;
@@ -23,6 +24,7 @@ export interface TrackedPage {
   views: number;
   third: string; // "3" or "14 months ago"
   siteimproveUrl: string | null;
+  busiest: boolean; // one of the site's 5 busiest pages: starred
 }
 
 interface Props {
@@ -201,7 +203,7 @@ export function TrackedTable({ siteKey, issueType, checkedAt, pages, thirdHeader
                     />
                   </td>
                   <td>
-                    {r.href ? <a href={r.href}>{r.label}</a> : r.label}
+                    <BusiestLabel busiest={r.busiest}>{r.href ? <a href={r.href}>{r.label}</a> : r.label}</BusiestLabel>
                     {r.siteimproveUrl && (
                       <a href={r.siteimproveUrl} className="mt-4 block text-16">
                         Open in Siteimprove<span className="sr-only">: report for {r.label}</span>

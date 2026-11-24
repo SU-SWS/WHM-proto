@@ -6,7 +6,7 @@
 
 - **Owner issue:** an issue whose type has `fixer: "owner"`, after template issues are moved to SWS.
 - **Template issue:** an issue found on at least 90% of the site's pages, or a broken link in the shared Stanford header or footer. Shown as "SWS is handling this" (decisions, Nov 20).
-- **Busiest pages:** the 5 pages with the most page views, from the same page views used to rank issues, leaving out Stanford Sites platform pages (search, sign-in and “page not found”; see decisions, Nov 20 and Nov 23). Page views come from GA4 for a site with a GA4 property, and from Siteimprove Analytics otherwise. Kept at 5 on purpose, to point owners at the issues that reach the most visitors; “Most visited pages” lists 10 for context, with the first 5 marked. Text that mentions the busiest pages carries an asterisk and a footnote that explains this (decisions, Nov 23).
+- **Busiest pages:** the 5 pages with the most page views, from the same page views used to rank issues, leaving out Stanford Sites platform pages (search, sign-in and “page not found”; see decisions, Nov 20 and Nov 23). Page views come from GA4 for a site with a GA4 property, and from Siteimprove Analytics otherwise. Kept at 5 on purpose, to point owners at the issues that reach the most visitors; “Most visited pages” lists 10 for context, with the 5 busiest starred; issue pages star them too and explain why (decisions, Nov 23).
 - **Fell:** the Site Target Score is lower than at the previous Siteimprove check, by at least 0.1. Smaller moves count as no change.
 
 ## State

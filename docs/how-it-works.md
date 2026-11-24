@@ -28,7 +28,7 @@ If part of a data run fails, that part keeps its last good data and the Admin pa
 
 ## 3. How WHM decides what matters
 
-- **One verdict per site.** Rules, written in plain language for SWS review, set each site to “needs attention,” “in good shape, with fixes worth making,” or “in good shape”. For example, a site needs attention if its Site Target Score dropped since the last check, or an issue sits on one of its five busiest pages. Five keeps the focus on the issues that reach the most visitors; each site page also lists its 10 most visited pages, with the five busiest marked.
+- **One verdict per site.** Rules, written in plain language for SWS review, set each site to “needs attention,” “in good shape, with fixes worth making,” or “in good shape”. For example, a site needs attention if its Site Target Score dropped since the last check, or an issue sits on one of its five busiest pages. Five keeps the focus on the issues that reach the most visitors; each site page also lists its 10 most visited pages, with the five busiest marked by a star; issue pages star them too.
 - **Ranked by visitors.** “Prioritized for me” orders the owner's issues by how many visitors see the affected pages. It shows the top five first. “Show everything plainly” lists every issue, unranked, by category.
 - **Owner or SWS.** An issue found on nearly every page (90% or more) comes from the shared site template, so it moves to “Being handled by SWS” instead of the owner's list. Broken links in the shared Stanford footer are treated the same way.
 - **Noise filtered out.** Incomplete Siteimprove checks are skipped. Platform pages that every Stanford Sites site shares, such as search, sign-in and “page not found,” are left out of “busiest pages.”

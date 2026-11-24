@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { TableWrap } from "@/components/TableWrap";
 import Link from "next/link";
-import { BusiestMark, BusiestNote, mentionsBusiest } from "@/components/BusiestNote";
+import { BusiestKey, BusiestLabel } from "@/components/Busiest";
 import { Glossary } from "@/components/Glossary";
 import { IssueList, type IssueRow } from "@/components/IssueList";
 import { Readings } from "@/components/Readings";
@@ -11,10 +11,9 @@ import { TrendChart, type TrendMetric } from "@/components/TrendChart";
 import { getReport, getSite, getSiteKeys, getStatus } from "@/lib/data/load";
 import { describeSection } from "@/lib/data/provenance";
 import type { SiteData } from "@/lib/data/types";
-import { byCategory, prioritized, trafficProvenance, type IssueView } from "@/lib/data/view";
+import { busiestPaths, byCategory, prioritized, trafficProvenance, type IssueView } from "@/lib/data/view";
 import { displayPath } from "@/lib/data/paths";
 import { formatNumber, formatPercent, hostOf } from "@/lib/format";
-import { BUSIEST } from "@/scripts/lib/window.mjs";
 
 export const dynamicParams = false;
 
@@ -39,12 +38,10 @@ export default async function SitePage({ params }: PageProps<"/sites/[site]">) {
     category: v.type.category,
     fixer: v.fixer,
     summary: `${v.issue.scope} ${v.issue.reason}`,
-    busiest: mentionsBusiest(v.issue.reason),
     sample: site.source === "live" && v.issue.source === "sample",
   });
   const checked = site.checkedAt;
-  const toMostVisited = `/sites/${siteKey}/#most-visited`;
-  const rowsMentionBusiest = [...owner, ...sws].some((v) => mentionsBusiest(v.issue.reason));
+  const busiest = busiestPaths(site);
   const traffic = trafficProvenance(site);
   const platformNote =
     site.topPages.viewsSource === "live"
@@ -67,16 +64,9 @@ export default async function SitePage({ params }: PageProps<"/sites/[site]">) {
       <h1 className="eyebrow">
         {site.name}, {hostOf(site.url)}
       </h1>
-      <p className="verdict">
-        {site.verdict}
-        <BusiestMark text={site.verdict} />
-      </p>
-      <p className="lede">
-        {site.lede}
-        <BusiestMark text={site.lede} />
-      </p>
+      <p className="verdict">{site.verdict}</p>
+      <p className="lede">{site.lede}</p>
       <SourceNote provider="siteimprove" source={site.readings.siteTargetScore.source} date={checked} run={run} showAge />
-      {(mentionsBusiest(site.verdict) || mentionsBusiest(site.lede)) && <BusiestNote href={toMostVisited} />}
 
       <Readings site={site} siteKey={siteKey} />
       <Glossary />
@@ -96,7 +86,6 @@ export default async function SitePage({ params }: PageProps<"/sites/[site]">) {
         sws={sws.map(toRow)}
         groups={byCategory(site).map((g) => ({ category: g.category, items: g.items.map(toRow) }))}
       />
-      {rowsMentionBusiest && <BusiestNote href={toMostVisited} className="meta mt-12" />}
 
       <h2 className="section-heading">Is it getting better or worse?</h2>
       <TrendChart months={site.trends.months} metrics={trendMetrics(site)} />
@@ -104,10 +93,7 @@ export default async function SitePage({ params }: PageProps<"/sites/[site]">) {
       <h2 id="most-visited" className="section-heading scroll-mt-24">
         Most visited pages
       </h2>
-      <p className="meta">
-        The first {BUSIEST} are your busiest pages. Issues on them are pointed out across WHM, because they reach the most
-        visitors.
-      </p>
+      <BusiestKey>Issues on them are pointed out across WHM, because they reach the most visitors.</BusiestKey>
       <TableWrap label="Most visited pages">
         <table className="data-table">
           <thead>
@@ -119,16 +105,17 @@ export default async function SitePage({ params }: PageProps<"/sites/[site]">) {
             </tr>
           </thead>
           <tbody>
-            {site.topPages.pages.map((p, i) => (
+            {site.topPages.pages.map((p) => (
               <tr key={p.path}>
                 <td>
-                  {/* Live paths are real pages; sample paths are made up, so they stay plain text. */}
-                  {site.topPages.viewsSource === "live" ? (
-                    <a href={new URL(p.path, site.url).href}>{displayPath(p.path)}</a>
-                  ) : (
-                    displayPath(p.path)
-                  )}
-                  {i < BUSIEST && <span className="block text-15 text-black-80">One of your {BUSIEST} busiest pages</span>}
+                  <BusiestLabel busiest={busiest.has(p.path)}>
+                    {/* Live paths are real pages; sample paths are made up, so they stay plain text. */}
+                    {site.topPages.viewsSource === "live" ? (
+                      <a href={new URL(p.path, site.url).href}>{displayPath(p.path)}</a>
+                    ) : (
+                      displayPath(p.path)
+                    )}
+                  </BusiestLabel>
                 </td>
                 <td className="num">{formatNumber(p.views)}</td>
                 <td className="num">
