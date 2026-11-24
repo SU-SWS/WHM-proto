@@ -13,8 +13,9 @@ The site shows what the last **data run** published. A data run pulls fresh Site
 ## 1. A week before (by Tue, Dec 1)
 
 1. **Check the GA4 export is current.** In GitHub, open `data/ga4/sitesuserguide.json` and look at the latest commit (“GA4 export for sitesuserguide, …”), or open the file and check `generatedAt`.
-   - **Daily trigger working** (GitHub token approved): there's a commit from each night. Nothing else to do.
-   - **No token yet:** update it by hand (section 4) now, and again on Dec 6 or 7.
+   - **Daily trigger working:** there's a commit from each night. Nothing else to do. (The GitHub token was approved and the first `exportAndCommit` ran Nov 24.)
+   - **No commit for a day or more:** in Apps Script, check **Executions** for errors and **Triggers** for the daily trigger. An HTTP 401 or 403 means the token expired or lost access (see `docs/ga4-setup.md`). Until it's fixed, update the export by hand (section 4).
+   - **Token expiry:** check the token's expiry date in GitHub (**Settings → Developer settings → Fine-grained tokens**). If it expires before Dec 8, renew it and paste the new one into the script's **Script properties**.
    - Open the file and check `"schemaVersion": 2`. Version 1 files have no page views, and the site will show sample page views.
 2. **Check Siteimprove has a recent complete check** of sitesuserguide (Siteimprove, the site's dashboard). WHM skips checks that covered noticeably fewer pages than usual.
 3. **Do a practice data run** (section 5) and check the site (section 6). Fix anything now, not on Dec 7.
@@ -37,7 +38,7 @@ The site shows what the last **data run** published. A data run pulls fresh Site
 
 ## 4. Updating the GA4 export by hand (through Google Drive)
 
-Use this while the GitHub token is waiting for approval, or if a nightly export fails.
+Use this if a nightly export fails, or if the token stops working.
 
 **In Apps Script** ([script.google.com](https://script.google.com), the “WHM GA4 export” project):
 
