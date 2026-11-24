@@ -38,8 +38,9 @@ export default async function IssuePage({ params }: PageProps<"/sites/[site]/iss
   // Per-page reports in Siteimprove, from live data (impmd stripped on ingestion).
   const hasReports = issue.pages.some((p) => "siteimproveUrl" in p && p.siteimproveUrl);
   const thirdHeader = isStale ? "Last updated" : issue.type === "broken" ? "Broken links" : "Times found";
-  // Owners review editorial issues page by page here (TR-2, revised). Issues
-  // Siteimprove detects are fixed and rechecked in Siteimprove (TR-1, revised).
+  // Owners review editorial issues page by page here, and leave notes on them
+  // (TR-2, TR-3, revised). Issues Siteimprove detects are fixed and rechecked in
+  // Siteimprove (TR-1, revised), so they have neither.
   const tracksHere = owner && type.editorial && issue.pages.length > 0;
   // Sample pages on a live site (simulated freshness) aren't real pages, so they're never starred.
   const busiest = issue.source === "sample" && site.source === "live" ? new Set<string>() : busiestPaths(site);
@@ -100,7 +101,7 @@ export default async function IssuePage({ params }: PageProps<"/sites/[site]/iss
           ))}
         </div>
 
-        <aside className="self-start rounded bg-fog-light px-18 py-16" aria-label="Your progress and notes">
+        <aside className="self-start rounded bg-fog-light px-18 py-16" aria-label={tracksHere ? "Your progress and notes" : "Progress"}>
           {tracksHere ? (
             <ProgressPanel {...trackProps} />
           ) : (
@@ -128,7 +129,8 @@ export default async function IssuePage({ params }: PageProps<"/sites/[site]/iss
               )}
             </>
           )}
-          <Notes siteKey={siteKey} issueType={issue.type} />
+          {/* Notes only where owners manage the work in WHM (TR-3, revised Nov 23). */}
+          {tracksHere && <Notes siteKey={siteKey} issueType={issue.type} />}
         </aside>
       </div>
 

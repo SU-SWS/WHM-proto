@@ -42,7 +42,7 @@ Site owners already have Siteimprove accounts, so WHM doesn't rebuild Siteimprov
 - WHM shows **which pages** have each issue, ranked and explained, with an **“Open in Siteimprove”** link to each page's report. Siteimprove remains where owners see the exact item and fix it.
 - WHM doesn't keep its own “fixed” status for issues Siteimprove detects. Instead, it compares each Siteimprove check with the last one and reports the difference, for example “Since the check of Nov 16: 6 pages fixed, 2 new.”
 - The one place WHM tracks progress itself is **content freshness**, which Siteimprove doesn't manage. Owners mark pages “updated,” “still correct,” or “set aside until a date.”
-- Owners can leave **notes** for their site's other owners. In the prototype, tracking and notes are saved only in the browser being used.
+- On content freshness, owners can also leave **notes** for their site's other owners. Other issues have no notes in WHM, because the work happens in Siteimprove. In the prototype, tracking and notes are saved only in the browser being used.
 
 ## 5. Who sees what
 

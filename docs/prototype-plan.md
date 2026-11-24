@@ -26,7 +26,7 @@ The prototype is a static Next.js site on GitHub Pages. All secrets and API call
 | Speed check | PageSpeed Insights for the top 3 pages (SP-8) | Optional script step, live site only | Wider coverage (Phase 3) |
 | Published data | One JSON file per site, plus a portfolio file and a status file | Committed to the repo and deployed with the site | API behind sign-in |
 | Web front end | Owner views, SWS all-sites view, share view, email views, admin page | Next.js 16 static export, Tailwind 3.4, `decanter@7.5.3` preset, Source Sans 3 and Source Serif 4 | Next.js with server rendering and Stanford sign-in |
-| Owner state | For editorial issues only: a status for each page (to do, updated, still correct, set aside until a date) and a progress summary. Notes on any issue. Issues Siteimprove detects show progress between checks instead (TR-1 to TR-3, revised). | Browser `localStorage`: one browser only, for demonstration | Database, shared across co-owners |
+| Owner state | For editorial issues only: a status for each page (to do, updated, still correct, set aside until a date) and a progress summary. Notes on editorial issues only. Issues Siteimprove detects show progress between checks instead (TR-1 to TR-3, revised). | Browser `localStorage`: one browser only, for demonstration | Database, shared across co-owners |
 | Access concept | Which owner sees which sites (AC-2) | A "Viewing as" switch driven by the owners in the registry file; not enforced | Stanford SSO plus per-site permissions |
 | Sample mode | Lets the demo run without live data | Sample JSON with `"source": "sample"` for the two non-live sites, and for the live site's AI report, speed check and content freshness, labeled on every screen | Removed |
 

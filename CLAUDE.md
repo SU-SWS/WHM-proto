@@ -50,7 +50,7 @@ Stanford Web Services (SWS) innovation project. A dashboard that turns Siteimpro
 - The issue list defaults to "Prioritized for me", ranked by visitor impact and whether the owner can fix it. "Show everything plainly" shows the same issues unranked, grouped by category (SP-3, SP-4).
 - Each issue shows its category, what it is, why it matters, what to do, and who fixes it: "You can fix this" or "SWS is handling this" (SP-5).
 - For issues Siteimprove detects, WHM keeps no fix status: it shows progress between Siteimprove checks ("6 pages fixed, 2 new") and links each page to Siteimprove (TR-1, revised). Only editorial issues, such as content freshness, are tracked **per page** in WHM, with the statuses To do; Updated; Still correct; Set aside until [date] (TR-2, revised).
-- Owner notes are visible to every owner of the site and are not sent to SWS (TR-3).
+- Owner notes appear only on editorial issues (those tracked per page in WHM). They are visible to every owner of the site and are not sent to SWS (TR-3, revised).
 - In user-facing text, say "check", not "crawl" ("Siteimprove check of Nov 10, 2026").
 - Write user-facing text in plain language at an 8th-grade reading level. Use typographic quotes and apostrophes in visible text.
 - Meet WCAG 2.2 AA. Every chart has a data-table alternative. Never rely on color alone.
