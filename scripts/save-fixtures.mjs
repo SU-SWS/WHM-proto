@@ -12,8 +12,8 @@
 // replaced with "[REMOVED]", because the repo is public and holds no names.
 // Never add personal ID numbers, email addresses or phone numbers here (AD-7).
 //
-// To verify something new, add it to probes() below. Earlier rounds are saved
-// as data/fixtures/siteimprove/probe-*.json and probe2-*.json.
+// To verify something new, replace the probe below. Earlier rounds are saved
+// as data/fixtures/siteimprove/probe-*.json to probe3-*.json; their code is in git history.
 
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
@@ -52,28 +52,20 @@ async function save(name, target) {
 }
 
 const limit = (href, n) => `${href}${href.includes("?") ? "&" : "?"}page_size=${n}`;
-/** Allowlisted policies only (decisions, Nov 20). */
-const ALLOWED = /^(\[(qa|a11y|seo)\])+|^(qa|a11y):/i;
-
-/** Round 3 (Nov 20): what Stanford policy matches look like (task 6, SI-24). */
-async function probes(id) {
-  const policies = await client.get(`/sites/${id}/policy/policies?page_size=200`);
-  // Policies about email addresses or phone numbers are skipped: their matches would hold personal contact details.
-  const allowed = (policies.items ?? []).filter((p) => ALLOWED.test(p.name) && !/e-?mail|phone/i.test(p.name) && p.matches > 0);
-  // One policy per match category (content, media, documents), choosing the one
-  // with the fewest matches so the file stays small.
-  const byCategory = new Map();
-  for (const p of allowed.sort((a, b) => a.matches - b.matches)) {
-    if (!byCategory.has(p.category)) byCategory.set(p.category, p);
-  }
-  for (const [category, p] of byCategory) {
-    if (p._links?.matches) await save(`probe3-policy-matches-${category}`, limit(p._links.matches.href, 10));
-    if (p._links?.history) await save(`probe3-policy-history-${category}`, limit(p._links.history.href, 10));
-  }
-  console.log(`Policies probed: ${[...byCategory.values()].map((p) => `${p.name} (${p.category}, ${p.matches} matches)`).join("; ")}`);
+/**
+ * Round 4 (Nov 23): which pages are missing a search description (SP-2). The
+ * seov2/issues list gives meta_desc_missing a "details" link; save it and the
+ * first link it offers to a page list, if any, before building a live issue.
+ */
+async function probesRound4(id) {
+  const detail = await save("probe4-seov2-meta-desc-missing", `/sites/${id}/seov2/issues/meta_desc_missing?page_size=10`);
+  const links = Object.entries(detail?._links ?? {}).filter(([k, v]) => k !== "self" && v?.href);
+  console.log(`meta_desc_missing links: ${links.map(([k]) => k).join(", ") || "none"}`);
+  const pages = links.find(([k]) => /page/i.test(k));
+  if (pages) await save("probe4-seov2-meta-desc-missing-pages", limit(pages[1].href, 10));
 }
 
 const registry = JSON.parse(await readFile(path.join(ROOT, "data", "registry.json"), "utf8"));
 const sites = registry.sites.filter((s) => s.live && s.siteimproveSiteId);
-for (const site of sites) await probes(site.siteimproveSiteId);
+for (const site of sites) await probesRound4(site.siteimproveSiteId);
 console.log(`Done: ${client.calls()} API calls.`);

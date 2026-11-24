@@ -41,7 +41,7 @@ Owners first get a plain verdict on each site's health, with detail and source d
 | ID | Requirement | Why | Personas | Data | Phase |
 | --- | --- | --- | --- | --- | --- |
 | SP-1 | Each site has a one-sentence health verdict, plus a small set of indicators: the Site Target Score first, then the accessibility score, then content quality, findability and content freshness. | 13 of 14 want a headline with drill-down; US1, US3. The Site Target Score is Stanford's own bar, so it leads. | P1, P2, P3 | Site Target Score (API location to confirm); SI-02, SI-04, SI-11, SI-13 | Prototype |
-| SP-2 | Every headline item opens its detail, and every detail links to the matching page in Siteimprove or GA4. | Approved description (direct links to third-party systems); US9 | All | SI-08, SI-24 | Prototype |
+| SP-2 | Every headline item opens its detail, and every detail links to the matching page in Siteimprove or GA4. | Approved description (direct links to third-party systems); US9 | All | SI-08, SI-24 | Prototype (Siteimprove links); MVP (GA4 links; see decisions, Nov 23) |
 | SP-3 | The default view ranks issues by visitor impact (traffic on affected pages) and by whether the owner can fix them. | 9 of 14 want prioritization; US1 | P1, P2, P3 | X-01, X-06; GA-03 where the site has a GA4 property, otherwise SI-27 (Siteimprove Analytics) | Prototype |
 | SP-4 | An owner can switch to a plain view showing the same findings unranked and grouped by category. | 5 of 14 want plain presentation; US9 | P4, P3 | Same as SP-3 | Prototype |
 | SP-5 | Each issue says what it is, why it matters, what to do, and who fixes it (owner or SWS). | Approved description (plain-language summary of issues); US3, US4 | All | OT-04, SI-26, X-06 | Prototype, for the issue types shown |

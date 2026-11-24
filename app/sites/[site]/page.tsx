@@ -78,7 +78,7 @@ export default async function SitePage({ params }: PageProps<"/sites/[site]">) {
       <SourceNote provider="siteimprove" source={site.readings.siteTargetScore.source} date={checked} run={run} showAge />
       {(mentionsBusiest(site.verdict) || mentionsBusiest(site.lede)) && <BusiestNote href={toMostVisited} />}
 
-      <Readings site={site} />
+      <Readings site={site} siteKey={siteKey} />
       <Glossary />
       <p className="mt-16 flex flex-wrap gap-10">
         <Link className="btn-secondary" href={`/sites/${siteKey}/share/`}>
