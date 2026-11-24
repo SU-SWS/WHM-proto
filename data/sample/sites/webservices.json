@@ -5,9 +5,9 @@
   "url": "https://webservices.stanford.edu",
   "source": "sample",
   "checkedAt": "2026-11-10",
-  "state": "ok",
-  "verdict": "In good shape, with two fixes worth making.",
-  "lede": "Accessibility is steady. A few new broken links appeared since the last check.",
+  "state": "attention",
+  "verdict": "Needs attention: issues sit on some of your busiest pages.",
+  "lede": "Accessibility is steady. A few new broken links appeared since the last check, including on the Services page, one of your busiest pages.",
   "readings": {
     "siteTargetScore": {
       "value": 99.6,
@@ -142,7 +142,7 @@
     {
       "type": "broken",
       "scope": "3 broken links on 2 pages, up from 2.",
-      "reason": "One is on the Services page.",
+      "reason": "Includes 2 of your 5 busiest pages.",
       "rank": 1,
       "siteimproveUrl": null,
       "source": "sample",
@@ -162,7 +162,7 @@
     {
       "type": "searchdesc",
       "scope": "4 of 48 pages.",
-      "reason": "Includes the Contact page.",
+      "reason": "Includes 1 of your 5 busiest pages.",
       "rank": 2,
       "siteimproveUrl": null,
       "source": "sample",
