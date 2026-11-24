@@ -122,7 +122,7 @@
         "path": "/for-designers/figma",
         "views": 610,
         "engagementRate": 0.62,
-        "openIssues": 1
+        "openIssues": 0
       },
       {
         "path": "/about",
@@ -142,19 +142,19 @@
     {
       "type": "titles",
       "scope": "2 pages share a title.",
-      "reason": "One is on your 3rd busiest page.",
+      "reason": "None are on your 5 busiest pages.",
       "rank": 1,
       "siteimproveUrl": null,
       "source": "sample",
       "pages": [
         {
-          "path": "/for-designers/figma",
-          "views": 610,
+          "path": "/for-designers/figma-kit",
+          "views": 90,
           "count": 1
         },
         {
-          "path": "/for-designers/figma-kit",
-          "views": 90,
+          "path": "/for-designers/figma-kit-v6",
+          "views": 40,
           "count": 1
         }
       ]
