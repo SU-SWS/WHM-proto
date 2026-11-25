@@ -2,90 +2,84 @@
   "schemaVersion": 2,
   "siteKey": "sitesuserguide",
   "propertyId": "331314616",
-  "generatedAt": "2026-11-24T23:17:22.214Z",
+  "generatedAt": "2026-11-25T09:19:14.373Z",
   "periodDays": 90,
   "period": {
-    "start": "2026-08-26",
-    "end": "2026-11-23"
+    "start": "2026-08-27",
+    "end": "2026-11-24"
   },
   "pages": [
     {
       "path": "/",
-      "views": 1679,
-      "engagementRate": 0.5345,
-      "sessions": 1551
+      "views": 1678,
+      "engagementRate": 0.5343,
+      "sessions": 1546
     },
     {
       "path": "/search",
-      "views": 1020,
-      "engagementRate": 0.9426,
-      "sessions": 383
+      "views": 1010,
+      "engagementRate": 0.9447,
+      "sessions": 380
     },
     {
       "path": "/build/working-text-editor/create-links/create-jump-links-using-id-tags",
-      "views": 398,
-      "engagementRate": 0.4204,
-      "sessions": 421
+      "views": 395,
+      "engagementRate": 0.4187,
+      "sessions": 418
     },
     {
       "path": "/support/launch-your-site",
       "views": 274,
-      "engagementRate": 0.6957,
-      "sessions": 253
+      "engagementRate": 0.6984,
+      "sessions": 252
     },
     {
       "path": "/user/login",
-      "views": 227,
-      "engagementRate": 0.3974,
-      "sessions": 151
+      "views": 229,
+      "engagementRate": 0.3896,
+      "sessions": 154
     },
     {
       "path": "/404.html",
-      "views": 216,
-      "engagementRate": 0.1556,
-      "sessions": 180
+      "views": 215,
+      "engagementRate": 0.1573,
+      "sessions": 178
     },
     {
       "path": "/build/stanford-only-sites",
-      "views": 211,
-      "engagementRate": 0.5843,
-      "sessions": 166
+      "views": 206,
+      "engagementRate": 0.5714,
+      "sessions": 161
     },
     {
       "path": "/get-started/request-new-site",
-      "views": 161,
-      "engagementRate": 0.6887,
-      "sessions": 151
+      "views": 159,
+      "engagementRate": 0.6846,
+      "sessions": 149
     },
     {
       "path": "/support",
-      "views": 156,
-      "engagementRate": 0.7785,
-      "sessions": 158
-    },
-    {
-      "path": "/build/people",
-      "views": 151,
-      "engagementRate": 0.7609,
-      "sessions": 92
+      "views": 159,
+      "engagementRate": 0.775,
+      "sessions": 160
     },
     {
       "path": "/build",
-      "views": 149,
-      "engagementRate": 0.9143,
-      "sessions": 140
+      "views": 151,
+      "engagementRate": 0.9149,
+      "sessions": 141
+    },
+    {
+      "path": "/build/people",
+      "views": 150,
+      "engagementRate": 0.7717,
+      "sessions": 92
     },
     {
       "path": "/build/media-library/alternative-text-alt-text-images-and-other-media",
-      "views": 130,
-      "engagementRate": 0.4622,
-      "sessions": 119
-    },
-    {
-      "path": "/support/take-stanford-sites-onboarding-session",
-      "views": 127,
-      "engagementRate": 0.7246,
-      "sessions": 138
+      "views": 131,
+      "engagementRate": 0.4667,
+      "sessions": 120
     },
     {
       "path": "/build/media-library/add-and-use-files-media-library",
@@ -94,22 +88,22 @@
       "sessions": 100
     },
     {
-      "path": "/get-started",
-      "views": 121,
-      "engagementRate": 0.8673,
-      "sessions": 113
+      "path": "/support/take-stanford-sites-onboarding-session",
+      "views": 124,
+      "engagementRate": 0.7164,
+      "sessions": 134
     },
     {
       "path": "/manage-your-site",
-      "views": 115,
-      "engagementRate": 0.9126,
-      "sessions": 103
+      "views": 120,
+      "engagementRate": 0.9065,
+      "sessions": 107
     },
     {
-      "path": "/build/create-and-edit-pages",
-      "views": 113,
-      "engagementRate": 0.91,
-      "sessions": 100
+      "path": "/get-started",
+      "views": 119,
+      "engagementRate": 0.8649,
+      "sessions": 111
     },
     {
       "path": "/build/lists-and-filtered-lists/lists-paragraph",
@@ -118,58 +112,58 @@
       "sessions": 92
     },
     {
+      "path": "/build/create-and-edit-pages",
+      "views": 112,
+      "engagementRate": 0.9091,
+      "sessions": 99
+    },
+    {
       "path": "/manage-your-site/menus-other-sitewide-features/main-navigation-menu",
-      "views": 108,
-      "engagementRate": 0.7297,
-      "sessions": 74
-    },
-    {
-      "path": "/build/event-content-type",
-      "views": 107,
-      "engagementRate": 0.7474,
-      "sessions": 95
-    },
-    {
-      "path": "/get-started/log-your-site",
       "views": 106,
-      "engagementRate": 0.8675,
-      "sessions": 83
-    },
-    {
-      "path": "/stanford-only-sites/stanford-sites-intranet-guide",
-      "views": 106,
-      "engagementRate": 0.8878,
-      "sessions": 98
-    },
-    {
-      "path": "/build/create-and-edit-pages/basic-page-content-type",
-      "views": 105,
-      "engagementRate": 0.5849,
-      "sessions": 106
+      "engagementRate": 0.726,
+      "sessions": 73
     },
     {
       "path": "/release-notes",
+      "views": 106,
+      "engagementRate": 0.7442,
+      "sessions": 86
+    },
+    {
+      "path": "/get-started/log-your-site",
+      "views": 105,
+      "engagementRate": 0.8659,
+      "sessions": 82
+    },
+    {
+      "path": "/build/event-content-type",
+      "views": 104,
+      "engagementRate": 0.7391,
+      "sessions": 92
+    },
+    {
+      "path": "/build/create-and-edit-pages/basic-page-content-type",
       "views": 103,
-      "engagementRate": 0.747,
-      "sessions": 83
+      "engagementRate": 0.5769,
+      "sessions": 104
     },
     {
       "path": "/manage-your-site/find-manage-site-content",
       "views": 102,
-      "engagementRate": 0.9231,
+      "engagementRate": 0.9121,
       "sessions": 91
     },
     {
-      "path": "/get-started/site-settings/enter-site-ownership-information",
-      "views": 100,
-      "engagementRate": 0.4889,
-      "sessions": 90
+      "path": "/stanford-only-sites/stanford-sites-intranet-guide",
+      "views": 101,
+      "engagementRate": 0.883,
+      "sessions": 94
     },
     {
-      "path": "/manage-your-site/user-accounts-and-roles",
-      "views": 97,
-      "engagementRate": 0.7982,
-      "sessions": 109
+      "path": "/get-started/site-settings/enter-site-ownership-information",
+      "views": 99,
+      "engagementRate": 0.4719,
+      "sessions": 89
     },
     {
       "path": "/manage-your-site/user-accounts-and-roles/manage-user-accounts-and-permissions",
@@ -178,70 +172,70 @@
       "sessions": 95
     },
     {
-      "path": "/tour/site-organization-menus/branding-and-logo-lockup-options",
-      "views": 95,
-      "engagementRate": 0.7222,
-      "sessions": 90
+      "path": "/manage-your-site/user-accounts-and-roles",
+      "views": 96,
+      "engagementRate": 0.7944,
+      "sessions": 107
     },
     {
-      "path": "/build-and-design/manage-site-content/edit-delete-revert-and-unpublish-content",
+      "path": "/tour/site-organization-menus/branding-and-logo-lockup-options",
       "views": 94,
-      "engagementRate": 0.6923,
-      "sessions": 91
+      "engagementRate": 0.7191,
+      "sessions": 89
     },
     {
       "path": "/build/media-library/images",
-      "views": 94,
-      "engagementRate": 0.6465,
-      "sessions": 99
+      "views": 93,
+      "engagementRate": 0.6598,
+      "sessions": 97
     },
     {
       "path": "/support/attend-office-hours",
+      "views": 93,
+      "engagementRate": 0.7789,
+      "sessions": 95
+    },
+    {
+      "path": "/build-and-design/manage-site-content/edit-delete-revert-and-unpublish-content",
       "views": 92,
-      "engagementRate": 0.7766,
-      "sessions": 94
+      "engagementRate": 0.6889,
+      "sessions": 90
     },
     {
-      "path": "/build/create-and-edit-pages/create-layouts-sections-and-paragraphs",
+      "path": "/build/media-library/embeddable-media",
       "views": 91,
-      "engagementRate": 0.8,
-      "sessions": 85
-    },
-    {
-      "path": "/build/media-library/images/image-sizes-and-specifications",
-      "views": 90,
-      "engagementRate": 0.6471,
-      "sessions": 102
+      "engagementRate": 0.6437,
+      "sessions": 87
     },
     {
       "path": "/build/taxonomy",
       "views": 90,
-      "engagementRate": 0.8472,
-      "sessions": 72
+      "engagementRate": 0.8451,
+      "sessions": 71
     },
     {
-      "path": "/build/media-library/embeddable-media",
+      "path": "/build/create-and-edit-pages/create-layouts-sections-and-paragraphs",
       "views": 89,
-      "engagementRate": 0.6353,
-      "sessions": 85
+      "engagementRate": 0.7952,
+      "sessions": 83
     },
     {
-      "path": "/manage-your-site/domains-and-urls",
-      "views": 88,
-      "engagementRate": 0.587,
-      "sessions": 92
+      "path": "/build/media-library/images/image-sizes-and-specifications",
+      "views": 89,
+      "engagementRate": 0.6436,
+      "sessions": 101
     },
     {
       "path": "/build/media-library/images/image-metadata",
-      "views": 87,
-      "engagementRate": 0.3977,
-      "sessions": 88
+      "views": 88,
+      "engagementRate": 0.4045,
+      "sessions": 89
     },
     {
       "path": "/build/create-and-edit-pages/add-anchor-navigation",
-      "views": 84,
-      "engagementRate": 0.5684,
-      "sessions": 95
+      "views": 85,
+      "engagementRate": 0.5567,
+      "sessions": 97
     },
     {
       "path": "/build/publications-content-type",
@@ -250,58 +244,52 @@
       "sessions": 64
     },
     {
+      "path": "/manage-your-site/domains-and-urls",
+      "views": 84,
+      "engagementRate": 0.5747,
+      "sessions": 87
+    },
+    {
       "path": "/build/best-practices/create-accessible-headings",
       "views": 83,
       "engagementRate": 0.3125,
       "sessions": 80
     },
     {
+      "path": "/build/best-practices/write-web",
+      "views": 80,
+      "engagementRate": 0.494,
+      "sessions": 83
+    },
+    {
       "path": "/meet-sws-team",
-      "views": 81,
-      "engagementRate": 0.94,
-      "sessions": 50
+      "views": 80,
+      "engagementRate": 0.9388,
+      "sessions": 49
     },
     {
       "path": "/manage-your-site/menus-other-sitewide-features",
-      "views": 80,
-      "engagementRate": 0.806,
-      "sessions": 67
+      "views": 78,
+      "engagementRate": 0.8,
+      "sessions": 65
     },
     {
       "path": "/build/paragraphs",
-      "views": 78,
-      "engagementRate": 0.7949,
-      "sessions": 78
-    },
-    {
-      "path": "/build/best-practices/write-web",
-      "views": 77,
-      "engagementRate": 0.4815,
-      "sessions": 81
+      "views": 76,
+      "engagementRate": 0.7895,
+      "sessions": 76
     },
     {
       "path": "/manage-your-site/menus-other-sitewide-features/utility-navigation",
-      "views": 76,
-      "engagementRate": 0.5529,
-      "sessions": 85
-    },
-    {
-      "path": "/news-new",
-      "views": 74,
-      "engagementRate": 0.8235,
-      "sessions": 68
-    },
-    {
-      "path": "/about-stanford-sites/design/stanford-basic-theme",
-      "views": 73,
-      "engagementRate": 0.76,
-      "sessions": 75
+      "views": 75,
+      "engagementRate": 0.5476,
+      "sessions": 84
     },
     {
       "path": "/about-stanford-sites/stanford-sites-designs",
-      "views": 72,
-      "engagementRate": 0.7656,
-      "sessions": 64
+      "views": 71,
+      "engagementRate": 0.7619,
+      "sessions": 63
     },
     {
       "path": "/build/paragraphs/text-area-paragraph",
@@ -314,6 +302,18 @@
       "views": 69,
       "engagementRate": 0.6071,
       "sessions": 56
+    },
+    {
+      "path": "/news-new",
+      "views": 69,
+      "engagementRate": 0.8226,
+      "sessions": 62
+    },
+    {
+      "path": "/about-stanford-sites/design/stanford-basic-theme",
+      "views": 68,
+      "engagementRate": 0.75,
+      "sessions": 72
     },
     {
       "path": "/build/paragraphs/image-banner-paragraph",
@@ -340,12 +340,6 @@
       "sessions": 57
     },
     {
-      "path": "/manage-your-site/marketing-and-analytics/use-google-analytics-your-site",
-      "views": 63,
-      "engagementRate": 0.6212,
-      "sessions": 66
-    },
-    {
       "path": "/build/lists-and-filtered-lists",
       "views": 62,
       "engagementRate": 0.9074,
@@ -358,10 +352,10 @@
       "sessions": 57
     },
     {
-      "path": "/build/working-text-editor/work-images-and-other-media-text-area",
+      "path": "/manage-your-site/marketing-and-analytics/use-google-analytics-your-site",
       "views": 62,
-      "engagementRate": 0.6667,
-      "sessions": 60
+      "engagementRate": 0.6094,
+      "sessions": 64
     },
     {
       "path": "/build/paragraphs/teaser-paragraph",
@@ -376,16 +370,16 @@
       "sessions": 62
     },
     {
-      "path": "/build/people/people-list-page",
-      "views": 59,
-      "engagementRate": 0.7778,
-      "sessions": 54
+      "path": "/build/working-text-editor/work-images-and-other-media-text-area",
+      "views": 60,
+      "engagementRate": 0.6552,
+      "sessions": 58
     },
     {
-      "path": "/release-notes/list-known-issues",
+      "path": "/build/people/people-list-page",
       "views": 58,
-      "engagementRate": 0.6491,
-      "sessions": 57
+      "engagementRate": 0.7736,
+      "sessions": 53
     },
     {
       "path": "/build/working-text-editor/tables",
@@ -394,10 +388,10 @@
       "sessions": 41
     },
     {
-      "path": "/manage-your-site/domains-and-urls/url-redirects",
+      "path": "/release-notes/list-known-issues",
       "views": 57,
-      "engagementRate": 0.6415,
-      "sessions": 53
+      "engagementRate": 0.6429,
+      "sessions": 56
     },
     {
       "path": "/about-stanford-sites/about-stanford-sites-platform/accessibility-commitment",
@@ -412,6 +406,12 @@
       "sessions": 60
     },
     {
+      "path": "/manage-your-site/domains-and-urls/url-redirects",
+      "views": 56,
+      "engagementRate": 0.6346,
+      "sessions": 52
+    },
+    {
       "path": "/build/create-and-edit-pages/add-page-main-menu",
       "views": 55,
       "engagementRate": 0.7857,
@@ -419,21 +419,15 @@
     },
     {
       "path": "/build/paragraphs/card-paragraph",
-      "views": 54,
-      "engagementRate": 0.8043,
-      "sessions": 46
+      "views": 53,
+      "engagementRate": 0.7955,
+      "sessions": 44
     },
     {
       "path": "/manage-your-site/menus-other-sitewide-features/main-navigation-menu/enable-drop-down-navigation",
-      "views": 54,
-      "engagementRate": 0.6111,
-      "sessions": 54
-    },
-    {
-      "path": "/build/person-profile-page/person-taxonomy",
       "views": 53,
-      "engagementRate": 0.7872,
-      "sessions": 47
+      "engagementRate": 0.6038,
+      "sessions": 53
     },
     {
       "path": "/about-stanford-sites/stanford-sites-policies/stanford-sites-renewal-and-retirement",
@@ -442,28 +436,16 @@
       "sessions": 52
     },
     {
-      "path": "/get-started/site-settings",
-      "views": 52,
-      "engagementRate": 0.9149,
-      "sessions": 47
-    },
-    {
       "path": "/build/best-practices/create-accessible-headings/heading-examples",
-      "views": 51,
-      "engagementRate": 0.5532,
-      "sessions": 47
+      "views": 52,
+      "engagementRate": 0.5417,
+      "sessions": 48
     },
     {
-      "path": "/build/event-content-type/event-list-pages",
-      "views": 51,
-      "engagementRate": 0.5714,
-      "sessions": 49
-    },
-    {
-      "path": "/build/person-profile-page/person-profile-importer",
-      "views": 51,
-      "engagementRate": 0.6486,
-      "sessions": 37
+      "path": "/build/person-profile-page/person-taxonomy",
+      "views": 52,
+      "engagementRate": 0.7826,
+      "sessions": 46
     },
     {
       "path": "/news/stanford-sites-v700-released-942026",
@@ -484,16 +466,16 @@
       "sessions": 46
     },
     {
-      "path": "/release-notes/stanford-sites-roadmap",
+      "path": "/build/event-content-type/event-list-pages",
       "views": 50,
-      "engagementRate": 0.7222,
-      "sessions": 54
+      "engagementRate": 0.5625,
+      "sessions": 48
     },
     {
-      "path": "/about-stanford-sites/about-stanford-sites-platform/web-application-firewall-waf",
-      "views": 49,
-      "engagementRate": 0.6,
-      "sessions": 50
+      "path": "/build/person-profile-page/person-profile-importer",
+      "views": 50,
+      "engagementRate": 0.6389,
+      "sessions": 36
     },
     {
       "path": "/build/media-library/stanford-digital-repository",
@@ -502,16 +484,28 @@
       "sessions": 54
     },
     {
-      "path": "/build/publications-content-type/publication-taxonomy",
-      "views": 49,
-      "engagementRate": 0.6829,
-      "sessions": 41
-    },
-    {
       "path": "/build/working-text-editor/create-links",
       "views": 49,
       "engagementRate": 0.5238,
       "sessions": 42
+    },
+    {
+      "path": "/get-started/site-settings",
+      "views": 49,
+      "engagementRate": 0.9111,
+      "sessions": 45
+    },
+    {
+      "path": "/release-notes/stanford-sites-roadmap",
+      "views": 49,
+      "engagementRate": 0.717,
+      "sessions": 53
+    },
+    {
+      "path": "/about-stanford-sites/about-stanford-sites-platform/web-application-firewall-waf",
+      "views": 48,
+      "engagementRate": 0.5918,
+      "sessions": 49
     },
     {
       "path": "/build/opportunity-content-type",
@@ -520,16 +514,16 @@
       "sessions": 34
     },
     {
+      "path": "/build/publications-content-type/publication-taxonomy",
+      "views": 48,
+      "engagementRate": 0.6429,
+      "sessions": 42
+    },
+    {
       "path": "/about-stanford-sites/design/typography",
       "views": 47,
       "engagementRate": 0.5,
       "sessions": 46
-    },
-    {
-      "path": "/build/media-library/embeddable-media/add-transcripts-or-longer-descriptions",
-      "views": 47,
-      "engagementRate": 0.6,
-      "sessions": 30
     },
     {
       "path": "/build/paragraphs/image-gallery-paragraph",
@@ -550,10 +544,22 @@
       "sessions": 32
     },
     {
+      "path": "/manage-your-site/menus-other-sitewide-features/manage-global-message",
+      "views": 47,
+      "engagementRate": 0.7083,
+      "sessions": 48
+    },
+    {
       "path": "/about-stanford-sites/about-stanford-sites-platform/included-modules",
       "views": 46,
       "engagementRate": 0.6739,
       "sessions": 46
+    },
+    {
+      "path": "/build/media-library/embeddable-media/add-transcripts-or-longer-descriptions",
+      "views": 46,
+      "engagementRate": 0.6207,
+      "sessions": 29
     },
     {
       "path": "/build/video",
@@ -568,52 +574,28 @@
       "sessions": 43
     },
     {
-      "path": "/design/custom-subthemes-stanford-sites",
-      "views": 45,
-      "engagementRate": 0.8919,
-      "sessions": 37
-    },
-    {
-      "path": "/design/minimally-branded-subtheme",
-      "views": 45,
-      "engagementRate": 0.8043,
-      "sessions": 46
-    },
-    {
       "path": "/manage-your-site/menus-other-sitewide-features/local-footer-modifications",
       "views": 45,
       "engagementRate": 0.7143,
       "sessions": 49
     },
     {
-      "path": "/manage-your-site/menus-other-sitewide-features/manage-global-message",
-      "views": 45,
-      "engagementRate": 0.7174,
-      "sessions": 46
+      "path": "/design/custom-subthemes-stanford-sites",
+      "views": 44,
+      "engagementRate": 0.8889,
+      "sessions": 36
     },
     {
       "path": "/build/create-and-edit-pages/basic-page-content-type/basic-page-layout-options",
-      "views": 44,
-      "engagementRate": 0.814,
-      "sessions": 43
+      "views": 43,
+      "engagementRate": 0.8095,
+      "sessions": 42
     },
     {
       "path": "/build/page-types/publications-content-type/publications-importer",
-      "views": 44,
-      "engagementRate": 0.58,
-      "sessions": 50
-    },
-    {
-      "path": "/news-new/news-rss-feed",
-      "views": 44,
-      "engagementRate": 0.725,
-      "sessions": 40
-    },
-    {
-      "path": "/build/best-practices",
       "views": 43,
-      "engagementRate": 0.8444,
-      "sessions": 45
+      "engagementRate": 0.5833,
+      "sessions": 48
     },
     {
       "path": "/build/working-text-editor/mathjax-displaying-math-notation-your-page",
@@ -622,34 +604,34 @@
       "sessions": 39
     },
     {
-      "path": "/build-and-design/site-organization-menus/manage-site-search",
+      "path": "/build/best-practices",
       "views": 42,
-      "engagementRate": 0.8947,
-      "sessions": 38
+      "engagementRate": 0.8409,
+      "sessions": 44
     },
     {
-      "path": "/get-started/site-settings/update-site-name",
+      "path": "/design/minimally-branded-subtheme",
       "views": 42,
-      "engagementRate": 0.75,
-      "sessions": 40
+      "engagementRate": 0.814,
+      "sessions": 43
     },
     {
-      "path": "/support/accessibility-support/make-content-accessible/interactive-element-does-not-meet-minimum",
-      "views": 42,
-      "engagementRate": 0.6585,
-      "sessions": 41
-    },
-    {
-      "path": "/about-stanford-sites/stanford-sites-policies",
+      "path": "/build/create-and-edit-web-pages",
       "views": 41,
-      "engagementRate": 0.8,
-      "sessions": 30
+      "engagementRate": 0.8158,
+      "sessions": 38
     },
     {
       "path": "/news",
       "views": 41,
-      "engagementRate": 0.8462,
+      "engagementRate": 0.8205,
       "sessions": 39
+    },
+    {
+      "path": "/news-new/news-rss-feed",
+      "views": 41,
+      "engagementRate": 0.7297,
+      "sessions": 37
     },
     {
       "path": "/support/accessibility-support/make-content-accessible",
@@ -658,22 +640,22 @@
       "sessions": 28
     },
     {
-      "path": "/build-and-design/site-organization-menus/manage-site-search/enhance-site-search",
+      "path": "/support/accessibility-support/make-content-accessible/interactive-element-does-not-meet-minimum",
+      "views": 41,
+      "engagementRate": 0.65,
+      "sessions": 40
+    },
+    {
+      "path": "/about-stanford-sites/stanford-sites-policies",
       "views": 40,
-      "engagementRate": 0.7317,
-      "sessions": 41
+      "engagementRate": 0.7931,
+      "sessions": 29
     },
     {
       "path": "/build/create-and-edit-pages/text-editing-basics/add-text-styles",
       "views": 40,
       "engagementRate": 0.7,
       "sessions": 40
-    },
-    {
-      "path": "/build/create-and-edit-web-pages",
-      "views": 40,
-      "engagementRate": 0.8108,
-      "sessions": 37
     },
     {
       "path": "/build/lists-and-filtered-lists/filtered-lists-paragraph",
@@ -688,16 +670,22 @@
       "sessions": 42
     },
     {
-      "path": "/manage-your-site/find-manage-site-content/bulk-edit-content",
+      "path": "/get-started/site-settings/update-site-name",
       "views": 40,
-      "engagementRate": 0.6341,
-      "sessions": 41
+      "engagementRate": 0.7368,
+      "sessions": 38
     },
     {
-      "path": "/manage-your-site/menus-other-sitewide-features/main-navigation-menu/add-custom-menu-item",
-      "views": 40,
-      "engagementRate": 0.8065,
-      "sessions": 31
+      "path": "/build-and-design/site-organization-menus/manage-site-search",
+      "views": 39,
+      "engagementRate": 0.8857,
+      "sessions": 35
+    },
+    {
+      "path": "/build-and-design/site-organization-menus/manage-site-search/enhance-site-search",
+      "views": 39,
+      "engagementRate": 0.725,
+      "sessions": 40
     },
     {
       "path": "/build/lists-and-filtered-lists/filtered-lists-paragraph/set-filters-filtered-list-paragraph",
@@ -706,22 +694,22 @@
       "sessions": 29
     },
     {
+      "path": "/manage-your-site/menus-other-sitewide-features/main-navigation-menu/add-custom-menu-item",
+      "views": 39,
+      "engagementRate": 0.8,
+      "sessions": 30
+    },
+    {
+      "path": "/support/site-content-health-checklist",
+      "views": 39,
+      "engagementRate": 0.7436,
+      "sessions": 39
+    },
+    {
       "path": "/build/person-profile-page/individual-person-profile-pages",
-      "views": 39,
-      "engagementRate": 0.7805,
-      "sessions": 41
-    },
-    {
-      "path": "/get-started/request-new-site/about-your-unlaunched-site",
-      "views": 39,
-      "engagementRate": 0.8421,
-      "sessions": 38
-    },
-    {
-      "path": "/get-started/site-settings/block-search-engines",
-      "views": 39,
-      "engagementRate": 0.6944,
-      "sessions": 36
+      "views": 38,
+      "engagementRate": 0.775,
+      "sessions": 40
     },
     {
       "path": "/build/video/add-video-card-or-text-area",
@@ -730,28 +718,28 @@
       "sessions": 27
     },
     {
-      "path": "/support/site-content-health-checklist",
+      "path": "/manage-your-site/find-manage-site-content/bulk-edit-content",
       "views": 38,
-      "engagementRate": 0.7368,
-      "sessions": 38
+      "engagementRate": 0.625,
+      "sessions": 40
     },
     {
-      "path": "/manage-your-site/marketing-and-analytics",
+      "path": "/get-started-stanford-sites",
       "views": 37,
-      "engagementRate": 0.6829,
-      "sessions": 41
+      "engagementRate": 0.7778,
+      "sessions": 36
     },
     {
-      "path": "/build/create-and-edit-pages/text-editing-basics/text-editing-toolbar",
-      "views": 36,
-      "engagementRate": 0.6757,
-      "sessions": 37
+      "path": "/get-started-stanford-sites/log-edit-your-site",
+      "views": 37,
+      "engagementRate": 0.7813,
+      "sessions": 32
     },
     {
-      "path": "/support/accessibility-support/fix-issues-siteimprove",
+      "path": "/get-started/site-settings/block-search-engines",
       "views": 36,
-      "engagementRate": 0.4865,
-      "sessions": 37
+      "engagementRate": 0.6667,
+      "sessions": 33
     },
     {
       "path": "/build/build-ai-ready-site/make-your-content-machine-readable-schemaorg-metadata",
@@ -766,10 +754,10 @@
       "sessions": 26
     },
     {
-      "path": "/get-started/replace-or-remove-default-content",
+      "path": "/build/policy-content-type",
       "views": 35,
-      "engagementRate": 0.7813,
-      "sessions": 32
+      "engagementRate": 0.8214,
+      "sessions": 28
     },
     {
       "path": "/manage-your-site/find-manage-site-content/manage-content-type",
@@ -778,22 +766,10 @@
       "sessions": 33
     },
     {
-      "path": "/news-new/news-article-display",
-      "views": 35,
-      "engagementRate": 0.8857,
-      "sessions": 35
-    },
-    {
       "path": "/release-notes/requested-features",
       "views": 35,
       "engagementRate": 0.8056,
       "sessions": 36
-    },
-    {
-      "path": "/about-stanford-sites/glossary-terms",
-      "views": 34,
-      "engagementRate": 0.5714,
-      "sessions": 28
     },
     {
       "path": "/build/build-ai-ready-site/use-meta-tags-ai-friendly-pages",
@@ -802,16 +778,10 @@
       "sessions": 36
     },
     {
-      "path": "/build/page-types/event-content-type/use-stanford-events-widget-display-events",
+      "path": "/build/create-and-edit-pages/text-editing-basics/text-editing-toolbar",
       "views": 34,
-      "engagementRate": 0.6286,
+      "engagementRate": 0.6857,
       "sessions": 35
-    },
-    {
-      "path": "/build/paragraphs/lists-paragraph/lists-paragraph-examples",
-      "views": 34,
-      "engagementRate": 0.6667,
-      "sessions": 36
     },
     {
       "path": "/build/paragraphs/stat-card",
@@ -826,9 +796,21 @@
       "sessions": 33
     },
     {
+      "path": "/get-started/request-new-site/about-your-unlaunched-site",
+      "views": 34,
+      "engagementRate": 0.8235,
+      "sessions": 34
+    },
+    {
       "path": "/manage-your-site/find-manage-site-content/access-denied-and-page-not-found-pages",
       "views": 34,
       "engagementRate": 0.6216,
+      "sessions": 37
+    },
+    {
+      "path": "/manage-your-site/marketing-and-analytics",
+      "views": 34,
+      "engagementRate": 0.6486,
       "sessions": 37
     },
     {
@@ -838,10 +820,22 @@
       "sessions": 34
     },
     {
+      "path": "/about-stanford-sites/glossary-terms",
+      "views": 33,
+      "engagementRate": 0.5556,
+      "sessions": 27
+    },
+    {
       "path": "/build/add-content-page/working-sections/section-options",
       "views": 33,
       "engagementRate": 0.7949,
       "sessions": 39
+    },
+    {
+      "path": "/build/page-types/event-content-type/use-stanford-events-widget-display-events",
+      "views": 33,
+      "engagementRate": 0.6176,
+      "sessions": 34
     },
     {
       "path": "/build/paragraphs/faq-accordion-list",
@@ -850,16 +844,22 @@
       "sessions": 36
     },
     {
-      "path": "/build/policy-content-type",
+      "path": "/build/paragraphs/lists-paragraph/lists-paragraph-examples",
       "views": 33,
-      "engagementRate": 0.8148,
-      "sessions": 27
+      "engagementRate": 0.6571,
+      "sessions": 35
     },
     {
-      "path": "/get-started-stanford-sites",
+      "path": "/news-new/news-article-display",
       "views": 33,
-      "engagementRate": 0.7742,
-      "sessions": 31
+      "engagementRate": 0.8788,
+      "sessions": 33
+    },
+    {
+      "path": "/support/accessibility-support/fix-issues-siteimprove",
+      "views": 33,
+      "engagementRate": 0.5294,
+      "sessions": 34
     },
     {
       "path": "/build-and-design/site-organization-menus/manage-site-search/add-metadata-basic-page",
@@ -886,16 +886,16 @@
       "sessions": 35
     },
     {
+      "path": "/get-started/replace-or-remove-default-content",
+      "views": 32,
+      "engagementRate": 0.7667,
+      "sessions": 30
+    },
+    {
       "path": "/manage-your-site/sitewide-features",
       "views": 32,
       "engagementRate": 0.8,
       "sessions": 15
-    },
-    {
-      "path": "/news-new/news-spotlight-display",
-      "views": 32,
-      "engagementRate": 0.7941,
-      "sessions": 34
     },
     {
       "path": "/support/your-questions-answered",
@@ -904,16 +904,10 @@
       "sessions": 35
     },
     {
-      "path": "/build/event-content-type/event-taxonomies",
+      "path": "/build/lists-and-filtered-lists/comparing-teaser-and-lists",
       "views": 31,
-      "engagementRate": 0.7742,
-      "sessions": 31
-    },
-    {
-      "path": "/build/page-types/event-content-type/import-events-stanford-events-calendar",
-      "views": 31,
-      "engagementRate": 0.75,
-      "sessions": 36
+      "engagementRate": 0.625,
+      "sessions": 32
     },
     {
       "path": "/build/video/media-caption-paragraph",
@@ -922,22 +916,22 @@
       "sessions": 30
     },
     {
-      "path": "/get-started-stanford-sites/log-edit-your-site",
+      "path": "/manage-your-site/menus-other-sitewide-features/local-footer-modifications/add-emails-and-phone",
       "views": 31,
-      "engagementRate": 0.8276,
-      "sessions": 29
-    },
-    {
-      "path": "/manage-your-site/find-manage-site-content/clone-pages",
-      "views": 31,
-      "engagementRate": 0.7576,
-      "sessions": 33
+      "engagementRate": 0.6765,
+      "sessions": 34
     },
     {
       "path": "/manage-your-site/menus-other-sitewide-features/manage-super-footer",
       "views": 31,
       "engagementRate": 0.7188,
       "sessions": 32
+    },
+    {
+      "path": "/news-new/news-spotlight-display",
+      "views": 31,
+      "engagementRate": 0.7879,
+      "sessions": 33
     },
     {
       "path": "/news-new/pre-built-news-list-page",
@@ -948,13 +942,13 @@
     {
       "path": "/build/create-and-edit-pages/text-editing-basics/add-icons-text-area",
       "views": 30,
-      "engagementRate": 0.4375,
-      "sessions": 32
+      "engagementRate": 0.4242,
+      "sessions": 33
     },
     {
-      "path": "/build/lists-and-filtered-lists/comparing-teaser-and-lists",
+      "path": "/build/event-content-type/event-taxonomies",
       "views": 30,
-      "engagementRate": 0.6333,
+      "engagementRate": 0.8,
       "sessions": 30
     },
     {
@@ -964,22 +958,22 @@
       "sessions": 28
     },
     {
-      "path": "/events",
+      "path": "/build/page-types/event-content-type/import-events-stanford-events-calendar",
       "views": 30,
-      "engagementRate": 0.8889,
-      "sessions": 27
+      "engagementRate": 0.7429,
+      "sessions": 35
+    },
+    {
+      "path": "/manage-your-site/find-manage-site-content/clone-pages",
+      "views": 30,
+      "engagementRate": 0.75,
+      "sessions": 32
     },
     {
       "path": "/manage-your-site/marketing-and-analytics/view-google-search-console",
       "views": 30,
       "engagementRate": 0.6129,
       "sessions": 31
-    },
-    {
-      "path": "/manage-your-site/menus-other-sitewide-features/local-footer-modifications/add-emails-and-phone",
-      "views": 30,
-      "engagementRate": 0.697,
-      "sessions": 33
     },
     {
       "path": "/news/stanford-sites-v623-released-6182026",
@@ -994,16 +988,16 @@
       "sessions": 30
     },
     {
-      "path": "/design/faculty-subtheme",
+      "path": "/build/media-library/images/recommended-image-sizes",
       "views": 29,
-      "engagementRate": 0.8,
-      "sessions": 30
+      "engagementRate": 0.5429,
+      "sessions": 35
     },
     {
-      "path": "/build-and-design/manage-site-content/hide-external-link-icons",
-      "views": 28,
-      "engagementRate": 0.6774,
-      "sessions": 31
+      "path": "/events",
+      "views": 29,
+      "engagementRate": 0.8846,
+      "sessions": 26
     },
     {
       "path": "/build/create-and-edit-pages/text-editing-basics/do-more-text-editor",
@@ -1012,28 +1006,16 @@
       "sessions": 20
     },
     {
-      "path": "/build/media-library/images/recommended-image-sizes",
-      "views": 28,
-      "engagementRate": 0.5294,
-      "sessions": 34
-    },
-    {
-      "path": "/build/paragraphs/lists-paragraph",
-      "views": 28,
-      "engagementRate": 0.8095,
-      "sessions": 21
-    },
-    {
       "path": "/build/taxonomy/basic-page-type",
       "views": 28,
       "engagementRate": 0.6207,
       "sessions": 29
     },
     {
-      "path": "/manage-your-site/domains-and-urls/manage-page-paths",
+      "path": "/design/faculty-subtheme",
       "views": 28,
-      "engagementRate": 0.75,
-      "sessions": 28
+      "engagementRate": 0.7931,
+      "sessions": 29
     },
     {
       "path": "/manage-your-site/user-accounts-and-roles/workgroup-mapping-and-user-roles",
@@ -1042,10 +1024,10 @@
       "sessions": 29
     },
     {
-      "path": "/courses",
+      "path": "/build/paragraphs/lists-paragraph",
       "views": 27,
-      "engagementRate": 0.9259,
-      "sessions": 27
+      "engagementRate": 0.8,
+      "sessions": 20
     },
     {
       "path": "/manage-your-site/domains-and-urls/how-bulk-upload-redirects",
@@ -1054,15 +1036,15 @@
       "sessions": 29
     },
     {
-      "path": "/news/stanford-sites-v703-released-10292026",
+      "path": "/manage-your-site/domains-and-urls/manage-page-paths",
       "views": 27,
       "engagementRate": 0.7407,
       "sessions": 27
     },
     {
-      "path": "/publications/ill-winds",
+      "path": "/news/stanford-sites-v703-released-10292026",
       "views": 27,
-      "engagementRate": 0.8519,
+      "engagementRate": 0.7407,
       "sessions": 27
     },
     {
@@ -1078,10 +1060,10 @@
       "sessions": 28
     },
     {
-      "path": "/support/accessibility-support/accessibility-testing/checking-page-accessibility",
-      "views": 27,
-      "engagementRate": 0.7143,
-      "sessions": 28
+      "path": "/build-and-design/manage-site-content/hide-external-link-icons",
+      "views": 26,
+      "engagementRate": 0.6552,
+      "sessions": 29
     },
     {
       "path": "/build/create-and-edit-pages/text-editing-basics/create-links",
@@ -1117,6 +1099,24 @@
       "path": "/build/working-text-editor/create-links/link-external-documents",
       "views": 26,
       "engagementRate": 0.5926,
+      "sessions": 27
+    },
+    {
+      "path": "/courses",
+      "views": 26,
+      "engagementRate": 0.9231,
+      "sessions": 26
+    },
+    {
+      "path": "/publications/ill-winds",
+      "views": 26,
+      "engagementRate": 0.8462,
+      "sessions": 26
+    },
+    {
+      "path": "/support/accessibility-support/accessibility-testing/checking-page-accessibility",
+      "views": 26,
+      "engagementRate": 0.7037,
       "sessions": 27
     },
     {
@@ -1192,12 +1192,6 @@
       "sessions": 24
     },
     {
-      "path": "/build/media-library/categorizing-media-your-media-library",
-      "views": 23,
-      "engagementRate": 0.6957,
-      "sessions": 23
-    },
-    {
       "path": "/build/taxonomy/courses-taxonomy",
       "views": 23,
       "engagementRate": 0.75,
@@ -1208,12 +1202,6 @@
       "views": 23,
       "engagementRate": 0.9048,
       "sessions": 21
-    },
-    {
-      "path": "/stanford-only-sites/stanford-sites-intranet-guide/access-security/file-sharing-strategies-intranet",
-      "views": 23,
-      "engagementRate": 0.3913,
-      "sessions": 23
     },
     {
       "path": "/build/build-ai-ready-site/use-meta-tags-ai-friendly-pages/default-page-metadata",
@@ -1228,10 +1216,10 @@
       "sessions": 19
     },
     {
-      "path": "/build/news-content-type/categorize-news",
+      "path": "/build/media-library/categorizing-media-your-media-library",
       "views": 22,
-      "engagementRate": 0.8696,
-      "sessions": 23
+      "engagementRate": 0.7273,
+      "sessions": 22
     },
     {
       "path": "/build/paragraphs/card-paragraph/card-paragraph-examples",
@@ -1246,8 +1234,14 @@
       "sessions": 22
     },
     {
-      "path": "/people/kerri-augenstein",
+      "path": "/stanford-only-sites/stanford-sites-intranet-guide/access-security/file-sharing-strategies-intranet",
       "views": 22,
+      "engagementRate": 0.4091,
+      "sessions": 22
+    },
+    {
+      "path": "/build/news-content-type/categorize-news",
+      "views": 21,
       "engagementRate": 0.8636,
       "sessions": 22
     },
@@ -1264,16 +1258,16 @@
       "sessions": 21
     },
     {
+      "path": "/people/kerri-augenstein",
+      "views": 21,
+      "engagementRate": 0.8571,
+      "sessions": 21
+    },
+    {
       "path": "/about-stanford-sites/stanford-sites-policies/embeddable-content-policy",
       "views": 20,
       "engagementRate": 0.85,
       "sessions": 20
-    },
-    {
-      "path": "/about-stanford-sites/stanford-sites-policies/personal-sites-stanford-sites",
-      "views": 20,
-      "engagementRate": 0.8421,
-      "sessions": 19
     },
     {
       "path": "/build/lists-and-filtered-lists/filtered-lists-paragraph/example-filtered-list-opportunities-card",
@@ -1288,16 +1282,10 @@
       "sessions": 20
     },
     {
-      "path": "/manage-your-site/find-manage-site-content/schedule-publish",
-      "views": 20,
-      "engagementRate": 0.6957,
-      "sessions": 23
-    },
-    {
-      "path": "/news/whats-new-stanford-sites-v400",
-      "views": 20,
-      "engagementRate": 0.95,
-      "sessions": 20
+      "path": "/about-stanford-sites/stanford-sites-policies/personal-sites-stanford-sites",
+      "views": 19,
+      "engagementRate": 0.8333,
+      "sessions": 18
     },
     {
       "path": "/about-stanford-sites/stanford-sites-policies/university-policies-related-website-ownership",
@@ -1318,9 +1306,27 @@
       "sessions": 14
     },
     {
+      "path": "/build/publication-content-type",
+      "views": 19,
+      "engagementRate": 0.7692,
+      "sessions": 13
+    },
+    {
       "path": "/get-started-stanford-sites/request-new-site",
       "views": 19,
       "engagementRate": 0.6842,
+      "sessions": 19
+    },
+    {
+      "path": "/manage-your-site/find-manage-site-content/schedule-publish",
+      "views": 19,
+      "engagementRate": 0.6818,
+      "sessions": 22
+    },
+    {
+      "path": "/news/whats-new-stanford-sites-v400",
+      "views": 19,
+      "engagementRate": 0.9474,
       "sessions": 19
     },
     {
@@ -1342,12 +1348,6 @@
       "sessions": 18
     },
     {
-      "path": "/build/publication-content-type",
-      "views": 18,
-      "engagementRate": 0.75,
-      "sessions": 12
-    },
-    {
       "path": "/build/taxonomy/basic-page-type-taxonomy",
       "views": 18,
       "engagementRate": 0.4211,
@@ -1360,9 +1360,9 @@
       "sessions": 19
     },
     {
-      "path": "/news/stanford-sites-v520-released-3282024",
+      "path": "/people/example-person",
       "views": 18,
-      "engagementRate": 0.7778,
+      "engagementRate": 0.8333,
       "sessions": 18
     },
     {
@@ -1396,12 +1396,6 @@
       "sessions": 17
     },
     {
-      "path": "/build/add-content-page/working-sections/vertical-dividers-section",
-      "views": 17,
-      "engagementRate": 0.8824,
-      "sessions": 17
-    },
-    {
       "path": "/build/media-library/add-and-use-files-media-library/create-accessible-documents",
       "views": 17,
       "engagementRate": 0.4375,
@@ -1412,6 +1406,12 @@
       "views": 17,
       "engagementRate": 0.7647,
       "sessions": 17
+    },
+    {
+      "path": "/build/stanford-sites-intranet-guide",
+      "views": 17,
+      "engagementRate": 0.6667,
+      "sessions": 18
     },
     {
       "path": "/courses/autumn",
@@ -1444,19 +1444,13 @@
       "sessions": 17
     },
     {
-      "path": "/news/stanford-sites-v541-released-2132025",
-      "views": 17,
-      "engagementRate": 0.8333,
-      "sessions": 18
-    },
-    {
-      "path": "/news/stanford-sites-v560-released-582025",
+      "path": "/news/stanford-sites-v520-released-3282024",
       "views": 17,
       "engagementRate": 0.8235,
       "sessions": 17
     },
     {
-      "path": "/news/stanford-sites-v570-released-6262025",
+      "path": "/news/stanford-sites-v560-released-582025",
       "views": 17,
       "engagementRate": 0.8235,
       "sessions": 17
@@ -1486,22 +1480,10 @@
       "sessions": 18
     },
     {
-      "path": "/people/example-person",
-      "views": 17,
-      "engagementRate": 0.8824,
-      "sessions": 17
-    },
-    {
       "path": "/stanford-only-sites/stanford-sites-intranet-guide/access-security/grant-or-remove-intranet-access",
       "views": 17,
       "engagementRate": 0.6316,
       "sessions": 19
-    },
-    {
-      "path": "/stanford-only-sites/stanford-sites-intranet-guide/common-questions-about-stanford-sites-intranet",
-      "views": 17,
-      "engagementRate": 0.8235,
-      "sessions": 17
     },
     {
       "path": "/about-stanford-sites/stanford-sites-designs/faculty-subtheme",
@@ -1516,9 +1498,9 @@
       "sessions": 16
     },
     {
-      "path": "/build/stanford-sites-intranet-guide",
+      "path": "/build/add-content-page/working-sections/vertical-dividers-section",
       "views": 16,
-      "engagementRate": 0.6875,
+      "engagementRate": 0.875,
       "sessions": 16
     },
     {
@@ -1568,6 +1550,12 @@
       "views": 16,
       "engagementRate": 0.8667,
       "sessions": 15
+    },
+    {
+      "path": "/news/stanford-sites-v570-released-6262025",
+      "views": 16,
+      "engagementRate": 0.8125,
+      "sessions": 16
     },
     {
       "path": "/news/web-editors-toolkit",
@@ -1684,6 +1672,12 @@
       "sessions": 15
     },
     {
+      "path": "/news/stanford-sites-v541-released-2132025",
+      "views": 15,
+      "engagementRate": 0.9375,
+      "sessions": 16
+    },
+    {
       "path": "/news/stanford-sites-v610-released-1232025",
       "views": 15,
       "engagementRate": 0.9333,
@@ -1720,16 +1714,16 @@
       "sessions": 15
     },
     {
-      "path": "/people/managers",
-      "views": 15,
-      "engagementRate": 1,
-      "sessions": 15
-    },
-    {
       "path": "/people/wen-yu-fang",
       "views": 15,
       "engagementRate": 0.75,
       "sessions": 16
+    },
+    {
+      "path": "/stanford-only-sites/stanford-sites-intranet-guide/common-questions-about-stanford-sites-intranet",
+      "views": 15,
+      "engagementRate": 0.8,
+      "sessions": 15
     },
     {
       "path": "/about-stanford-sites/stanford-sites-designs/custom-subthemes-stanford-sites",
@@ -1741,12 +1735,6 @@
       "path": "/about-stanford-sites/stanford-sites-policies/automated-scanning-tools",
       "views": 14,
       "engagementRate": 0.8571,
-      "sessions": 14
-    },
-    {
-      "path": "/about-stanford-sites/stanford-sites-policies/personal-sites-stanford-sites/themes-personal-sites",
-      "views": 14,
-      "engagementRate": 1,
       "sessions": 14
     },
     {
@@ -1800,8 +1788,8 @@
     {
       "path": "/build/media-library/categorize-images-videos-and-other-media",
       "views": 14,
-      "engagementRate": 0.5,
-      "sessions": 14
+      "engagementRate": 0.4667,
+      "sessions": 15
     },
     {
       "path": "/build/page-types/event-content-type/event-rss-feed",
@@ -1858,12 +1846,6 @@
       "sessions": 14
     },
     {
-      "path": "/news/stanford-sites-v401-released-7282023",
-      "views": 14,
-      "engagementRate": 0.8571,
-      "sessions": 14
-    },
-    {
       "path": "/news/stanford-sites-v511-released-2222024",
       "views": 14,
       "engagementRate": 0.9286,
@@ -1912,9 +1894,9 @@
       "sessions": 14
     },
     {
-      "path": "/people/kupaamauloa-kekauoha",
+      "path": "/people/managers",
       "views": 14,
-      "engagementRate": 0.9286,
+      "engagementRate": 1,
       "sessions": 14
     },
     {
@@ -1922,6 +1904,18 @@
       "views": 14,
       "engagementRate": 1,
       "sessions": 14
+    },
+    {
+      "path": "/publications/thesis-example-publication",
+      "views": 14,
+      "engagementRate": 0.8571,
+      "sessions": 14
+    },
+    {
+      "path": "/about-stanford-sites/stanford-sites-policies/personal-sites-stanford-sites/themes-personal-sites",
+      "views": 13,
+      "engagementRate": 1,
+      "sessions": 13
     },
     {
       "path": "/about-stanford-sites/stanford-sites-policies/university-policies-related-website-ownership-3",
@@ -2002,6 +1996,12 @@
       "sessions": 13
     },
     {
+      "path": "/news/stanford-sites-v401-released-7282023",
+      "views": 13,
+      "engagementRate": 0.9231,
+      "sessions": 13
+    },
+    {
       "path": "/news/stanford-sites-v402-released-1042023",
       "views": 13,
       "engagementRate": 0.9231,
@@ -2062,6 +2062,12 @@
       "sessions": 13
     },
     {
+      "path": "/people/kupaamauloa-kekauoha",
+      "views": 13,
+      "engagementRate": 0.9231,
+      "sessions": 13
+    },
+    {
       "path": "/people/project-management",
       "views": 13,
       "engagementRate": 1,
@@ -2077,12 +2083,6 @@
       "path": "/people/uxdesign",
       "views": 13,
       "engagementRate": 1,
-      "sessions": 13
-    },
-    {
-      "path": "/publications/thesis-example-publication",
-      "views": 13,
-      "engagementRate": 0.9231,
       "sessions": 13
     },
     {
@@ -2120,6 +2120,12 @@
       "views": 12,
       "engagementRate": 0.6364,
       "sessions": 11
+    },
+    {
+      "path": "/build/lists-and-filtered-lists/lists-paragraph/lists-paragraph-examples",
+      "views": 12,
+      "engagementRate": 0.5385,
+      "sessions": 13
     },
     {
       "path": "/build/people/person-content-type-profile-pages/link-person-profile-external-site",
@@ -2188,12 +2194,6 @@
       "sessions": 12
     },
     {
-      "path": "/403.html",
-      "views": 11,
-      "engagementRate": 1,
-      "sessions": 9
-    },
-    {
       "path": "/build-and-design/site-organization-menus/manage-site-search/enhance-site-search/set-third-party",
       "views": 11,
       "engagementRate": 0.6,
@@ -2212,28 +2212,22 @@
       "sessions": 6
     },
     {
-      "path": "/build/lists-and-filtered-lists/lists-paragraph/lists-paragraph-examples",
-      "views": 11,
-      "engagementRate": 0.5,
-      "sessions": 12
-    },
-    {
       "path": "/build/paragraphs/page-title-banner-paragraph",
       "views": 11,
       "engagementRate": 0.5556,
       "sessions": 9
     },
     {
-      "path": "/events/example-event",
+      "path": "/support/accessibility-support/make-content-accessible/fixing-common-accessibility-issues-container",
       "views": 11,
-      "engagementRate": 1,
+      "engagementRate": 0.5455,
       "sessions": 11
     },
     {
-      "path": "/support/feedback-and-bug-reports",
-      "views": 11,
-      "engagementRate": 0.7,
-      "sessions": 10
+      "path": "/403.html",
+      "views": 10,
+      "engagementRate": 1,
+      "sessions": 8
     },
     {
       "path": "/build/courses-content-type-and-importer/pre-built-courses-list-page",
@@ -2242,10 +2236,10 @@
       "sessions": 11
     },
     {
-      "path": "/build/page-types/publications-content-type/publications-list-page",
+      "path": "/events/example-event",
       "views": 10,
-      "engagementRate": 0.875,
-      "sessions": 8
+      "engagementRate": 1,
+      "sessions": 10
     },
     {
       "path": "/get-started-stanford-sites/replace-or-remove-default-content",
@@ -2260,10 +2254,10 @@
       "sessions": 10
     },
     {
-      "path": "/support/accessibility-support/make-content-accessible/fixing-common-accessibility-issues-container",
+      "path": "/support/feedback-and-bug-reports",
       "views": 10,
-      "engagementRate": 0.5,
-      "sessions": 10
+      "engagementRate": 0.6667,
+      "sessions": 9
     },
     {
       "path": "/build-and-design/site-organization-menus/manage-site-search/enhance-site-search/federated-search",
@@ -2276,6 +2270,12 @@
       "views": 9,
       "engagementRate": 0.3333,
       "sessions": 9
+    },
+    {
+      "path": "/build/page-types/publications-content-type/publications-list-page",
+      "views": 9,
+      "engagementRate": 0.8571,
+      "sessions": 7
     },
     {
       "path": "/build/paragraphs/filtered-lists-paragraph/set-filters-filtered-list-paragraph",
@@ -2320,6 +2320,24 @@
       "sessions": 8
     },
     {
+      "path": "/build/publication-content-type/pre-built-publications-list-page",
+      "views": 7,
+      "engagementRate": 0.6667,
+      "sessions": 6
+    },
+    {
+      "path": "/stanford-only-sites/stanford-sites-intranet-guide/frequently-asked-questions-about-stanford-sites",
+      "views": 7,
+      "engagementRate": 0.2857,
+      "sessions": 7
+    },
+    {
+      "path": "/about-stanford-sites-platform/accessibility-commitment",
+      "views": 6,
+      "engagementRate": 0.5,
+      "sessions": 4
+    },
+    {
       "path": "/about-stanford-sites/stanford-sites-designs/stanford-basic-theme",
       "views": 6,
       "engagementRate": 0.6667,
@@ -2350,10 +2368,10 @@
       "sessions": 7
     },
     {
-      "path": "/build/publication-content-type/pre-built-publications-list-page",
+      "path": "/build/publication-content-type/publications-importer",
       "views": 6,
-      "engagementRate": 0.6,
-      "sessions": 5
+      "engagementRate": 0.5,
+      "sessions": 6
     },
     {
       "path": "/get-started-stanford-sites/site-settings",
@@ -2377,12 +2395,6 @@
       "path": "/news/stanford-sites-v23-released-12092021",
       "views": 6,
       "engagementRate": 0.5,
-      "sessions": 6
-    },
-    {
-      "path": "/stanford-only-sites/stanford-sites-intranet-guide/frequently-asked-questions-about-stanford-sites",
-      "views": 6,
-      "engagementRate": 0.3333,
       "sessions": 6
     },
     {
@@ -2410,6 +2422,12 @@
       "sessions": 5
     },
     {
+      "path": "/build/build-ai-ready-site/metadata-ai-friendly-pages",
+      "views": 5,
+      "engagementRate": 0.1667,
+      "sessions": 6
+    },
+    {
       "path": "/build/create-and-edit-web-pages/text-editing-basics/text-editing-toolbar",
       "views": 5,
       "engagementRate": 0.4,
@@ -2422,45 +2440,21 @@
       "sessions": 4
     },
     {
-      "path": "/build/publication-content-type/publications-importer",
-      "views": 5,
-      "engagementRate": 0.4,
-      "sessions": 5
-    },
-    {
       "path": "/manage-your-site/domains-and-urls/redirects",
       "views": 5,
       "engagementRate": 0.2,
       "sessions": 5
     },
     {
-      "path": "/about-stanford-sites-platform/accessibility-commitment",
+      "path": "/build/create-and-edit-web-pages/text-editing-basics",
       "views": 4,
-      "engagementRate": 0.5,
-      "sessions": 2
-    },
-    {
-      "path": "/about-stanford-sites/stanford-sites-policies/embeddable-content",
-      "views": 4,
-      "engagementRate": 0.5,
-      "sessions": 4
-    },
-    {
-      "path": "/build/build-ai-ready-site/metadata-ai-friendly-pages",
-      "views": 4,
-      "engagementRate": 0.25,
+      "engagementRate": 0.75,
       "sessions": 4
     },
     {
       "path": "/build/event-content-type/stanford-events-widget",
       "views": 4,
       "engagementRate": 0.25,
-      "sessions": 4
-    },
-    {
-      "path": "/build/news-content-type/pre-built-news-list-page",
-      "views": 4,
-      "engagementRate": 1,
       "sessions": 4
     },
     {
@@ -2476,12 +2470,6 @@
       "sessions": 4
     },
     {
-      "path": "/news/stanford-sites-v22-released-10212021",
-      "views": 4,
-      "engagementRate": 0.5,
-      "sessions": 4
-    },
-    {
       "path": "/people/hannah-dimock",
       "views": 4,
       "engagementRate": 0.75,
@@ -2494,15 +2482,15 @@
       "sessions": 2
     },
     {
-      "path": "/build/create-and-edit-pages/create-layouts-sections-and-paragraphs/create-columns-sections/vertical",
+      "path": "/about-stanford-sites/stanford-sites-policies/embeddable-content",
       "views": 3,
       "engagementRate": 0.3333,
       "sessions": 3
     },
     {
-      "path": "/build/create-and-edit-web-pages/text-editing-basics",
+      "path": "/build/create-and-edit-pages/create-layouts-sections-and-paragraphs/create-columns-sections/vertical",
       "views": 3,
-      "engagementRate": 0.6667,
+      "engagementRate": 0.3333,
       "sessions": 3
     },
     {
@@ -2512,7 +2500,7 @@
       "sessions": 3
     },
     {
-      "path": "/build/page-types/basic-page-content-type-0/add-metadata-basic-page",
+      "path": "/build/news-content-type/pre-built-news-list-page",
       "views": 3,
       "engagementRate": 1,
       "sessions": 3
@@ -2584,6 +2572,12 @@
       "sessions": 2
     },
     {
+      "path": "/build/page-types/basic-page-content-type-0/add-metadata-basic-page",
+      "views": 2,
+      "engagementRate": 1,
+      "sessions": 2
+    },
+    {
       "path": "/build/page-types/courses-content-type-and-importer/courses-list-page",
       "views": 2,
       "engagementRate": 1,
@@ -2617,6 +2611,12 @@
       "path": "/news/stanford-sites-v213-release-07222021",
       "views": 2,
       "engagementRate": 0,
+      "sessions": 2
+    },
+    {
+      "path": "/news/stanford-sites-v22-released-10212021",
+      "views": 2,
+      "engagementRate": 0.5,
       "sessions": 2
     },
     {
@@ -2734,6 +2734,12 @@
       "sessions": 1
     },
     {
+      "path": "/build/lists-and-filtered-lists/lists",
+      "views": 1,
+      "engagementRate": 1,
+      "sessions": 1
+    },
+    {
       "path": "/build/paragraphs/filtered-lists-paragraph/example-filtered-list-opportunities-card-grid-display",
       "views": 1,
       "engagementRate": 1,
@@ -2743,6 +2749,24 @@
       "path": "/build/paragraphs/filtered-lists-paragraph/example-filtered-list-opportunities-default-list-display",
       "views": 1,
       "engagementRate": 1,
+      "sessions": 1
+    },
+    {
+      "path": "/build/paragraphs/stat-cards",
+      "views": 1,
+      "engagementRate": 1,
+      "sessions": 1
+    },
+    {
+      "path": "/build/paragraphs/teasers",
+      "views": 1,
+      "engagementRate": 0.5,
+      "sessions": 2
+    },
+    {
+      "path": "/build/stanford-sites-intranet-guide/other-options-stanford-only-sites",
+      "views": 1,
+      "engagementRate": 0,
       "sessions": 1
     },
     {
@@ -2898,56 +2922,52 @@
       "title": "Support | Stanford Sites User Guide"
     },
     {
-      "path": "/build/people",
-      "title": "People | Stanford Sites User Guide"
-    },
-    {
       "path": "/build",
       "title": "Build | Stanford Sites User Guide"
+    },
+    {
+      "path": "/build/people",
+      "title": "People | Stanford Sites User Guide"
     },
     {
       "path": "/build/media-library/alternative-text-alt-text-images-and-other-media",
       "title": "Alternative text (alt text) for images and other media | Stanford Sites User Guide"
     },
     {
-      "path": "/support/take-stanford-sites-onboarding-session",
-      "title": "Take a Stanford Sites Onboarding Session | Stanford Sites User Guide"
-    },
-    {
       "path": "/build/media-library/add-and-use-files-media-library",
       "title": "Add and use files in the Media Library | Stanford Sites User Guide"
     },
     {
-      "path": "/get-started",
-      "title": "Get Started | Stanford Sites User Guide"
+      "path": "/support/take-stanford-sites-onboarding-session",
+      "title": "Take a Stanford Sites Onboarding Session | Stanford Sites User Guide"
     },
     {
       "path": "/manage-your-site",
       "title": "Manage Your Site | Stanford Sites User Guide"
     },
     {
-      "path": "/build/create-and-edit-pages",
-      "title": "Create and Edit Pages | Stanford Sites User Guide"
+      "path": "/get-started",
+      "title": "Get Started | Stanford Sites User Guide"
     },
     {
       "path": "/build/lists-and-filtered-lists/lists-paragraph",
       "title": "Lists Paragraph | Stanford Sites User Guide"
     },
     {
-      "path": "/manage-your-site/menus-other-sitewide-features/main-navigation-menu",
-      "title": "Main Navigation (menu) | Stanford Sites User Guide"
+      "path": "/build/create-and-edit-pages",
+      "title": "Create and Edit Pages | Stanford Sites User Guide"
     },
     {
-      "path": "/build/event-content-type",
-      "title": "Event Content Type | Stanford Sites User Guide"
+      "path": "/manage-your-site/menus-other-sitewide-features/main-navigation-menu",
+      "title": "Main Navigation (menu) | Stanford Sites User Guide"
     },
     {
       "path": "/get-started/log-your-site",
       "title": "Log In to Your Site | Stanford Sites User Guide"
     },
     {
-      "path": "/stanford-only-sites/stanford-sites-intranet-guide",
-      "title": "Stanford Sites Intranet Guide | Stanford Sites User Guide"
+      "path": "/build/event-content-type",
+      "title": "Event Content Type | Stanford Sites User Guide"
     },
     {
       "path": "/build/create-and-edit-pages/basic-page-content-type",
@@ -2958,28 +2978,28 @@
       "title": "Find & Manage Site Content | Stanford Sites User Guide"
     },
     {
-      "path": "/get-started/site-settings/enter-site-ownership-information",
-      "title": "Enter Site Ownership Information | Stanford Sites User Guide"
+      "path": "/stanford-only-sites/stanford-sites-intranet-guide",
+      "title": "Stanford Sites Intranet Guide | Stanford Sites User Guide"
     },
     {
       "path": "/release-notes",
       "title": "What's New | Stanford Sites User Guide"
     },
     {
-      "path": "/manage-your-site/user-accounts-and-roles",
-      "title": "User Accounts and Roles | Stanford Sites User Guide"
+      "path": "/get-started/site-settings/enter-site-ownership-information",
+      "title": "Enter Site Ownership Information | Stanford Sites User Guide"
     },
     {
       "path": "/manage-your-site/user-accounts-and-roles/manage-user-accounts-and-permissions",
       "title": "Manage User Accounts and Permissions | Stanford Sites User Guide"
     },
     {
-      "path": "/tour/site-organization-menus/branding-and-logo-lockup-options",
-      "title": "Manage Branding and Logo Options | Stanford Sites User Guide"
+      "path": "/manage-your-site/user-accounts-and-roles",
+      "title": "User Accounts and Roles | Stanford Sites User Guide"
     },
     {
-      "path": "/build-and-design/manage-site-content/edit-delete-revert-and-unpublish-content",
-      "title": "Edit, Unpublish, Revert, and Delete Content | Stanford Sites User Guide"
+      "path": "/tour/site-organization-menus/branding-and-logo-lockup-options",
+      "title": "Manage Branding and Logo Options | Stanford Sites User Guide"
     },
     {
       "path": "/build/media-library/images",
@@ -2990,24 +3010,24 @@
       "title": "Attend Office Hours | Stanford Sites User Guide"
     },
     {
-      "path": "/build/create-and-edit-pages/create-layouts-sections-and-paragraphs",
-      "title": "Create Layouts with Sections and Paragraphs | Stanford Sites User Guide"
-    },
-    {
-      "path": "/build/media-library/images/image-sizes-and-specifications",
-      "title": "Image Sizes and Specifications | Stanford Sites User Guide"
-    },
-    {
-      "path": "/build/taxonomy",
-      "title": "Taxonomy | Stanford Sites User Guide"
+      "path": "/build-and-design/manage-site-content/edit-delete-revert-and-unpublish-content",
+      "title": "Edit, Unpublish, Revert, and Delete Content | Stanford Sites User Guide"
     },
     {
       "path": "/build/media-library/embeddable-media",
       "title": "Embeddable Media | Stanford Sites User Guide"
     },
     {
-      "path": "/manage-your-site/domains-and-urls",
-      "title": "Domains and URLs | Stanford Sites User Guide"
+      "path": "/build/taxonomy",
+      "title": "Taxonomy | Stanford Sites User Guide"
+    },
+    {
+      "path": "/build/create-and-edit-pages/create-layouts-sections-and-paragraphs",
+      "title": "Create Layouts with Sections and Paragraphs | Stanford Sites User Guide"
+    },
+    {
+      "path": "/build/media-library/images/image-sizes-and-specifications",
+      "title": "Image Sizes and Specifications | Stanford Sites User Guide"
     },
     {
       "path": "/build/media-library/images/image-metadata",
@@ -3022,8 +3042,16 @@
       "title": "Publications Content Type | Stanford Sites User Guide"
     },
     {
+      "path": "/manage-your-site/domains-and-urls",
+      "title": "Domains and URLs | Stanford Sites User Guide"
+    },
+    {
       "path": "/build/best-practices/create-accessible-headings",
       "title": "Create Accessible Headings | Stanford Sites User Guide"
+    },
+    {
+      "path": "/build/best-practices/write-web",
+      "title": "Write for the Web | Stanford Sites User Guide"
     },
     {
       "path": "/meet-sws-team",
@@ -3038,20 +3066,8 @@
       "title": "Paragraphs | Stanford Sites User Guide"
     },
     {
-      "path": "/build/best-practices/write-web",
-      "title": "Write for the Web | Stanford Sites User Guide"
-    },
-    {
       "path": "/manage-your-site/menus-other-sitewide-features/utility-navigation",
       "title": "Utility Navigation | Stanford Sites User Guide"
-    },
-    {
-      "path": "/news-new",
-      "title": "News/Spotlights | Stanford Sites User Guide"
-    },
-    {
-      "path": "/about-stanford-sites/design/stanford-basic-theme",
-      "title": "Stanford Basic Theme | Stanford Sites User Guide"
     },
     {
       "path": "/about-stanford-sites/stanford-sites-designs",
@@ -3064,6 +3080,14 @@
     {
       "path": "/build/publications-content-type/publications-list-page",
       "title": "Publications List Page | Stanford Sites User Guide"
+    },
+    {
+      "path": "/news-new",
+      "title": "News/Spotlights | Stanford Sites User Guide"
+    },
+    {
+      "path": "/about-stanford-sites/design/stanford-basic-theme",
+      "title": "Stanford Basic Theme | Stanford Sites User Guide"
     },
     {
       "path": "/build/paragraphs/image-banner-paragraph",
@@ -3082,10 +3106,6 @@
       "title": "About Stanford Sites | Stanford Sites User Guide"
     },
     {
-      "path": "/manage-your-site/marketing-and-analytics/use-google-analytics-your-site",
-      "title": "Use Google Analytics on your site | Stanford Sites User Guide"
-    },
-    {
       "path": "/build/lists-and-filtered-lists",
       "title": "Lists and Filtered Lists | Stanford Sites User Guide"
     },
@@ -3094,8 +3114,8 @@
       "title": "Media Library | Stanford Sites User Guide"
     },
     {
-      "path": "/build/working-text-editor/work-images-and-other-media-text-area",
-      "title": "Work with images and other media in a text area | Stanford Sites User Guide"
+      "path": "/manage-your-site/marketing-and-analytics/use-google-analytics-your-site",
+      "title": "Use Google Analytics on your site | Stanford Sites User Guide"
     },
     {
       "path": "/build/paragraphs/teaser-paragraph",
@@ -3106,20 +3126,20 @@
       "title": "Add Icons in a Text Area | Stanford Sites User Guide"
     },
     {
-      "path": "/build/people/people-list-page",
-      "title": "People List Page | Stanford Sites User Guide"
+      "path": "/build/working-text-editor/work-images-and-other-media-text-area",
+      "title": "Work with images and other media in a text area | Stanford Sites User Guide"
     },
     {
-      "path": "/release-notes/list-known-issues",
-      "title": "Known Issues | Stanford Sites User Guide"
+      "path": "/build/people/people-list-page",
+      "title": "People List Page | Stanford Sites User Guide"
     },
     {
       "path": "/build/working-text-editor/tables",
       "title": "Tables | Stanford Sites User Guide"
     },
     {
-      "path": "/manage-your-site/domains-and-urls/url-redirects",
-      "title": "URL Redirects | Stanford Sites User Guide"
+      "path": "/release-notes/list-known-issues",
+      "title": "Known Issues | Stanford Sites User Guide"
     },
     {
       "path": "/about-stanford-sites/about-stanford-sites-platform/accessibility-commitment",
@@ -3128,6 +3148,10 @@
     {
       "path": "/build/build-ai-ready-site",
       "title": "Build an AI-Ready Site | Stanford Sites User Guide"
+    },
+    {
+      "path": "/manage-your-site/domains-and-urls/url-redirects",
+      "title": "URL Redirects | Stanford Sites User Guide"
     },
     {
       "path": "/build/create-and-edit-pages/add-page-main-menu",
@@ -3142,28 +3166,16 @@
       "title": "Enable drop-down navigation menu | Stanford Sites User Guide"
     },
     {
-      "path": "/build/person-profile-page/person-taxonomy",
-      "title": "Person Taxonomy | Stanford Sites User Guide"
-    },
-    {
       "path": "/about-stanford-sites/stanford-sites-policies/stanford-sites-renewal-and-retirement",
       "title": "6. Stanford Sites Renewal and Retirement | Stanford Sites User Guide"
-    },
-    {
-      "path": "/get-started/site-settings",
-      "title": "Site Settings | Stanford Sites User Guide"
     },
     {
       "path": "/build/best-practices/create-accessible-headings/heading-examples",
       "title": "Heading Examples | Stanford Sites User Guide"
     },
     {
-      "path": "/build/event-content-type/event-list-pages",
-      "title": "Event List Pages | Stanford Sites User Guide"
-    },
-    {
-      "path": "/build/person-profile-page/person-profile-importer",
-      "title": "Person Profile Importer | Stanford Sites User Guide"
+      "path": "/build/person-profile-page/person-taxonomy",
+      "title": "Person Taxonomy | Stanford Sites User Guide"
     },
     {
       "path": "/news/stanford-sites-v700-released-942026",
@@ -3178,6 +3190,26 @@
       "title": "Courses Content Type and Importer | Stanford Sites User Guide"
     },
     {
+      "path": "/build/event-content-type/event-list-pages",
+      "title": "Event List Pages | Stanford Sites User Guide"
+    },
+    {
+      "path": "/build/person-profile-page/person-profile-importer",
+      "title": "Person Profile Importer | Stanford Sites User Guide"
+    },
+    {
+      "path": "/build/media-library/stanford-digital-repository",
+      "title": "Stanford Digital Repository | Stanford Sites User Guide"
+    },
+    {
+      "path": "/build/working-text-editor/create-links",
+      "title": "Create Links | Stanford Sites User Guide"
+    },
+    {
+      "path": "/get-started/site-settings",
+      "title": "Site Settings | Stanford Sites User Guide"
+    },
+    {
       "path": "/release-notes/stanford-sites-roadmap",
       "title": "Stanford Sites Roadmap | Stanford Sites User Guide"
     },
@@ -3186,20 +3218,12 @@
       "title": "Web Application Firewall (WAF) | Stanford Sites User Guide"
     },
     {
-      "path": "/build/media-library/stanford-digital-repository",
-      "title": "Stanford Digital Repository | Stanford Sites User Guide"
+      "path": "/build/opportunity-content-type",
+      "title": "Opportunity Content Type | Stanford Sites User Guide"
     },
     {
       "path": "/build/publications-content-type/publication-taxonomy",
       "title": "Publication Taxonomy | Stanford Sites User Guide"
-    },
-    {
-      "path": "/build/working-text-editor/create-links",
-      "title": "Create Links | Stanford Sites User Guide"
-    },
-    {
-      "path": "/build/opportunity-content-type",
-      "title": "Opportunity Content Type | Stanford Sites User Guide"
     },
     {
       "path": "/about-stanford-sites/design/typography",
@@ -3218,6 +3242,10 @@
       "title": "Do More with the Text Editor | Stanford Sites User Guide"
     },
     {
+      "path": "/manage-your-site/menus-other-sitewide-features/manage-global-message",
+      "title": "Manage Global Message | Stanford Sites User Guide"
+    },
+    {
       "path": "/about-stanford-sites/about-stanford-sites-platform/included-modules",
       "title": "Included Modules | Stanford Sites User Guide"
     },
@@ -3230,20 +3258,12 @@
       "title": "Ensure Accessible Documents | Stanford Sites User Guide"
     },
     {
-      "path": "/design/custom-subthemes-stanford-sites",
-      "title": "Custom Subthemes on Stanford Sites | Stanford Sites User Guide"
-    },
-    {
-      "path": "/design/minimally-branded-subtheme",
-      "title": "Minimally Branded Subtheme | Stanford Sites User Guide"
-    },
-    {
       "path": "/manage-your-site/menus-other-sitewide-features/local-footer-modifications",
       "title": "Local Footer Modifications | Stanford Sites User Guide"
     },
     {
-      "path": "/manage-your-site/menus-other-sitewide-features/manage-global-message",
-      "title": "Manage Global Message | Stanford Sites User Guide"
+      "path": "/design/custom-subthemes-stanford-sites",
+      "title": "Custom Subthemes on Stanford Sites | Stanford Sites User Guide"
     },
     {
       "path": "/build/create-and-edit-pages/basic-page-content-type/basic-page-layout-options",
@@ -3254,24 +3274,32 @@
       "title": "Publications Importer | Stanford Sites User Guide"
     },
     {
-      "path": "/news-new/news-rss-feed",
-      "title": "News RSS Feed | Stanford Sites User Guide"
+      "path": "/build/working-text-editor/mathjax-displaying-math-notation-your-page",
+      "title": "MathJax: Displaying math notation on your page | Stanford Sites User Guide"
     },
     {
       "path": "/build/best-practices",
       "title": "Best Practices | Stanford Sites User Guide"
     },
     {
-      "path": "/build/working-text-editor/mathjax-displaying-math-notation-your-page",
-      "title": "MathJax: Displaying math notation on your page | Stanford Sites User Guide"
+      "path": "/design/minimally-branded-subtheme",
+      "title": "Minimally Branded Subtheme | Stanford Sites User Guide"
     },
     {
-      "path": "/build-and-design/site-organization-menus/manage-site-search",
-      "title": "Manage On-Site Search | Stanford Sites User Guide"
+      "path": "/build/create-and-edit-web-pages",
+      "title": "Create and Edit Web Pages | Stanford Sites User Guide"
     },
     {
-      "path": "/get-started/site-settings/update-site-name",
-      "title": "Update the Site Name | Stanford Sites User Guide"
+      "path": "/news",
+      "title": "News | Stanford Sites User Guide"
+    },
+    {
+      "path": "/news-new/news-rss-feed",
+      "title": "News RSS Feed | Stanford Sites User Guide"
+    },
+    {
+      "path": "/support/accessibility-support/make-content-accessible",
+      "title": "Make content accessible | Stanford Sites User Guide"
     },
     {
       "path": "/support/accessibility-support/make-content-accessible/interactive-element-does-not-meet-minimum",
@@ -3282,24 +3310,8 @@
       "title": "Stanford Sites Policies | Stanford Sites User Guide"
     },
     {
-      "path": "/news",
-      "title": "News | Stanford Sites User Guide"
-    },
-    {
-      "path": "/support/accessibility-support/make-content-accessible",
-      "title": "Make content accessible | Stanford Sites User Guide"
-    },
-    {
-      "path": "/build-and-design/site-organization-menus/manage-site-search/enhance-site-search",
-      "title": "Enhance Site Search | Stanford Sites User Guide"
-    },
-    {
       "path": "/build/create-and-edit-pages/text-editing-basics/add-text-styles",
       "title": "Add Text Styles | Stanford Sites User Guide"
-    },
-    {
-      "path": "/build/create-and-edit-web-pages",
-      "title": "Create and Edit Web Pages | Stanford Sites User Guide"
     },
     {
       "path": "/build/lists-and-filtered-lists/filtered-lists-paragraph",
@@ -3310,48 +3322,52 @@
       "title": "Creating buttons and action links | Stanford Sites User Guide"
     },
     {
-      "path": "/manage-your-site/find-manage-site-content/bulk-edit-content",
-      "title": "Bulk edit content | Stanford Sites User Guide"
+      "path": "/get-started/site-settings/update-site-name",
+      "title": "Update the Site Name | Stanford Sites User Guide"
     },
     {
-      "path": "/manage-your-site/menus-other-sitewide-features/main-navigation-menu/add-custom-menu-item",
-      "title": "Add a custom menu item | Stanford Sites User Guide"
+      "path": "/build-and-design/site-organization-menus/manage-site-search",
+      "title": "Manage On-Site Search | Stanford Sites User Guide"
+    },
+    {
+      "path": "/build-and-design/site-organization-menus/manage-site-search/enhance-site-search",
+      "title": "Enhance Site Search | Stanford Sites User Guide"
     },
     {
       "path": "/build/lists-and-filtered-lists/filtered-lists-paragraph/set-filters-filtered-list-paragraph",
       "title": "Set Up Filters for the Filtered List Paragraph | Stanford Sites User Guide"
     },
     {
-      "path": "/build/person-profile-page/individual-person-profile-pages",
-      "title": "Individual Person Profile Pages | Stanford Sites User Guide"
-    },
-    {
-      "path": "/get-started/request-new-site/about-your-unlaunched-site",
-      "title": "About Your Unlaunched Site | Stanford Sites User Guide"
-    },
-    {
-      "path": "/get-started/site-settings/block-search-engines",
-      "title": "Block Search Engines | Stanford Sites User Guide"
-    },
-    {
-      "path": "/build/video/add-video-card-or-text-area",
-      "title": "Add Video in a Card or Text Area | Stanford Sites User Guide"
+      "path": "/manage-your-site/menus-other-sitewide-features/main-navigation-menu/add-custom-menu-item",
+      "title": "Add a custom menu item | Stanford Sites User Guide"
     },
     {
       "path": "/support/site-content-health-checklist",
       "title": "Site Content Health Checklist | Stanford Sites User Guide"
     },
     {
-      "path": "/manage-your-site/marketing-and-analytics",
-      "title": "Marketing and Analytics | Stanford Sites User Guide"
+      "path": "/build/person-profile-page/individual-person-profile-pages",
+      "title": "Individual Person Profile Pages | Stanford Sites User Guide"
     },
     {
-      "path": "/build/create-and-edit-pages/text-editing-basics/text-editing-toolbar",
-      "title": "Text Editing Toolbar | Stanford Sites User Guide"
+      "path": "/build/video/add-video-card-or-text-area",
+      "title": "Add Video in a Card or Text Area | Stanford Sites User Guide"
     },
     {
-      "path": "/support/accessibility-support/fix-issues-siteimprove",
-      "title": "Fix issues from Siteimprove | Stanford Sites User Guide"
+      "path": "/manage-your-site/find-manage-site-content/bulk-edit-content",
+      "title": "Bulk edit content | Stanford Sites User Guide"
+    },
+    {
+      "path": "/get-started-stanford-sites",
+      "title": "Get Started with Stanford Sites | Stanford Sites User Guide"
+    },
+    {
+      "path": "/get-started-stanford-sites/log-edit-your-site",
+      "title": "Log In to Edit Your Site | Stanford Sites User Guide"
+    },
+    {
+      "path": "/get-started/site-settings/block-search-engines",
+      "title": "Block Search Engines | Stanford Sites User Guide"
     },
     {
       "path": "/build/build-ai-ready-site/make-your-content-machine-readable-schemaorg-metadata",
@@ -3362,36 +3378,24 @@
       "title": "Find media and embeddables | Stanford Sites User Guide"
     },
     {
-      "path": "/get-started/replace-or-remove-default-content",
-      "title": "Replace or Remove Default Content | Stanford Sites User Guide"
+      "path": "/build/policy-content-type",
+      "title": "Policy Content Type | Stanford Sites User Guide"
     },
     {
       "path": "/manage-your-site/find-manage-site-content/manage-content-type",
       "title": "Manage Content by Type | Stanford Sites User Guide"
     },
     {
-      "path": "/news-new/news-article-display",
-      "title": "News Article Display | Stanford Sites User Guide"
-    },
-    {
       "path": "/release-notes/requested-features",
       "title": "Requested Features | Stanford Sites User Guide"
-    },
-    {
-      "path": "/about-stanford-sites/glossary-terms",
-      "title": "Glossary of Terms | Stanford Sites User Guide"
     },
     {
       "path": "/build/build-ai-ready-site/use-meta-tags-ai-friendly-pages",
       "title": "Use Meta Tags for AI-Friendly Pages | Stanford Sites User Guide"
     },
     {
-      "path": "/build/page-types/event-content-type/use-stanford-events-widget-display-events",
-      "title": "Use the Stanford Events widget to display events | Stanford Sites User Guide"
-    },
-    {
-      "path": "/build/paragraphs/lists-paragraph/lists-paragraph-examples",
-      "title": "Lists Paragraph Examples | Stanford Sites User Guide"
+      "path": "/build/create-and-edit-pages/text-editing-basics/text-editing-toolbar",
+      "title": "Text Editing Toolbar | Stanford Sites User Guide"
     },
     {
       "path": "/build/paragraphs/stat-card",
@@ -3402,28 +3406,48 @@
       "title": "Taxonomy Best Practices | Stanford Sites User Guide"
     },
     {
+      "path": "/get-started/request-new-site/about-your-unlaunched-site",
+      "title": "About Your Unlaunched Site | Stanford Sites User Guide"
+    },
+    {
       "path": "/manage-your-site/find-manage-site-content/access-denied-and-page-not-found-pages",
       "title": "Access Denied and Page Not Found Pages | Stanford Sites User Guide"
+    },
+    {
+      "path": "/manage-your-site/marketing-and-analytics",
+      "title": "Marketing and Analytics | Stanford Sites User Guide"
     },
     {
       "path": "/stanford-only-sites/stanford-sites-intranet-guide/access-security-intranets",
       "title": "Access & Security for Intranets | Stanford Sites User Guide"
     },
     {
+      "path": "/about-stanford-sites/glossary-terms",
+      "title": "Glossary of Terms | Stanford Sites User Guide"
+    },
+    {
       "path": "/build/add-content-page/working-sections/section-options",
       "title": "Section Options | Stanford Sites User Guide"
+    },
+    {
+      "path": "/build/page-types/event-content-type/use-stanford-events-widget-display-events",
+      "title": "Use the Stanford Events widget to display events | Stanford Sites User Guide"
     },
     {
       "path": "/build/paragraphs/faq-accordion-list",
       "title": "FAQ - Accordion List | Stanford Sites User Guide"
     },
     {
-      "path": "/build/policy-content-type",
-      "title": "Policy Content Type | Stanford Sites User Guide"
+      "path": "/build/paragraphs/lists-paragraph/lists-paragraph-examples",
+      "title": "Lists Paragraph Examples | Stanford Sites User Guide"
     },
     {
-      "path": "/get-started-stanford-sites",
-      "title": "Get Started with Stanford Sites | Stanford Sites User Guide"
+      "path": "/news-new/news-article-display",
+      "title": "News Article Display | Stanford Sites User Guide"
+    },
+    {
+      "path": "/support/accessibility-support/fix-issues-siteimprove",
+      "title": "Fix issues from Siteimprove | Stanford Sites User Guide"
     },
     {
       "path": "/build-and-design/site-organization-menus/manage-site-search/add-metadata-basic-page",
@@ -3442,40 +3466,36 @@
       "title": "Customize tables | Stanford Sites User Guide"
     },
     {
-      "path": "/manage-your-site/sitewide-features",
-      "title": "Sitewide Features | Stanford Sites User Guide"
+      "path": "/get-started/replace-or-remove-default-content",
+      "title": "Replace or Remove Default Content | Stanford Sites User Guide"
     },
     {
-      "path": "/news-new/news-spotlight-display",
-      "title": "News Spotlight Display | Stanford Sites User Guide"
+      "path": "/manage-your-site/sitewide-features",
+      "title": "Sitewide Features | Stanford Sites User Guide"
     },
     {
       "path": "/support/your-questions-answered",
       "title": "Your Questions Answered | Stanford Sites User Guide"
     },
     {
-      "path": "/build/event-content-type/event-taxonomies",
-      "title": "Event Taxonomies | Stanford Sites User Guide"
-    },
-    {
-      "path": "/build/page-types/event-content-type/import-events-stanford-events-calendar",
-      "title": "Import events from the Stanford Events calendar | Stanford Sites User Guide"
+      "path": "/build/lists-and-filtered-lists/comparing-teaser-and-lists",
+      "title": "Comparing Teaser and Lists | Stanford Sites User Guide"
     },
     {
       "path": "/build/video/media-caption-paragraph",
       "title": "Media with Caption Paragraph | Stanford Sites User Guide"
     },
     {
-      "path": "/get-started-stanford-sites/log-edit-your-site",
-      "title": "Log In to Edit Your Site | Stanford Sites User Guide"
-    },
-    {
-      "path": "/manage-your-site/find-manage-site-content/clone-pages",
-      "title": "Clone page(s) | Stanford Sites User Guide"
+      "path": "/manage-your-site/menus-other-sitewide-features/local-footer-modifications/add-emails-and-phone",
+      "title": "Add emails and phone numbers to the local footer | Stanford Sites User Guide"
     },
     {
       "path": "/manage-your-site/menus-other-sitewide-features/manage-super-footer",
       "title": "Manage the Super Footer | Stanford Sites User Guide"
+    },
+    {
+      "path": "/news-new/news-spotlight-display",
+      "title": "News Spotlight Display | Stanford Sites User Guide"
     },
     {
       "path": "/news-new/pre-built-news-list-page",
@@ -3486,28 +3506,24 @@
       "title": "Add Icons in a Text Area | Stanford Sites User Guide"
     },
     {
-      "path": "/build/lists-and-filtered-lists/comparing-teaser-and-lists",
-      "title": "Comparing Teaser and Lists | Stanford Sites User Guide"
-    },
-    {
-      "path": "/build/media-library/embeddable-media/add-transcripts-or-longer-descriptions",
-      "title": "Add transcripts or longer descriptions | Stanford Sites User Guide"
+      "path": "/build/event-content-type/event-taxonomies",
+      "title": "Event Taxonomies | Stanford Sites User Guide"
     },
     {
       "path": "/build/page-types/basic-page-content-type-0/create-list-basic-pages-basic-page-type",
       "title": "Create List of Basic Pages by Basic Page Type | Stanford Sites User Guide"
     },
     {
-      "path": "/events",
-      "title": "Events | Stanford Sites User Guide"
+      "path": "/build/page-types/event-content-type/import-events-stanford-events-calendar",
+      "title": "Import events from the Stanford Events calendar | Stanford Sites User Guide"
+    },
+    {
+      "path": "/manage-your-site/find-manage-site-content/clone-pages",
+      "title": "Clone page(s) | Stanford Sites User Guide"
     },
     {
       "path": "/manage-your-site/marketing-and-analytics/view-google-search-console",
       "title": "View Google Search Console | Stanford Sites User Guide"
-    },
-    {
-      "path": "/manage-your-site/menus-other-sitewide-features/local-footer-modifications/add-emails-and-phone",
-      "title": "Add emails and phone numbers to the local footer | Stanford Sites User Guide"
     },
     {
       "path": "/news/stanford-sites-v623-released-6182026",
@@ -3518,52 +3534,48 @@
       "title": "Stanford Sites v7.0.2 Released – 9/23/2026 | Stanford Sites User Guide"
     },
     {
-      "path": "/build-and-design/manage-site-content/hide-external-link-icons",
-      "title": "Add or Hide External Link Icons | Stanford Sites User Guide"
-    },
-    {
-      "path": "/build/create-and-edit-pages/text-editing-basics/do-more-text-editor",
-      "title": "Do More with the Text Editor | Stanford Sites User Guide"
+      "path": "/build/media-library/embeddable-media/add-transcripts-or-longer-descriptions",
+      "title": "Add transcripts or longer descriptions | Stanford Sites User Guide"
     },
     {
       "path": "/build/media-library/images/recommended-image-sizes",
       "title": "Recommended Image Sizes | Stanford Sites User Guide"
     },
     {
-      "path": "/build/paragraphs/lists-paragraph",
-      "title": "Lists Paragraph | Stanford Sites User Guide"
+      "path": "/events",
+      "title": "Events | Stanford Sites User Guide"
+    },
+    {
+      "path": "/build/create-and-edit-pages/text-editing-basics/do-more-text-editor",
+      "title": "Do More with the Text Editor | Stanford Sites User Guide"
     },
     {
       "path": "/build/taxonomy/basic-page-type",
       "title": "Basic Page Type | Stanford Sites User Guide"
     },
     {
-      "path": "/design/faculty-subtheme",
-      "title": "Faculty Subtheme | Stanford Sites User Guide"
-    },
-    {
-      "path": "/manage-your-site/domains-and-urls/manage-page-paths",
-      "title": "Manage Page Paths | Stanford Sites User Guide"
-    },
-    {
       "path": "/manage-your-site/user-accounts-and-roles/workgroup-mapping-and-user-roles",
       "title": "Workgroup Mapping and User Roles | Stanford Sites User Guide"
     },
     {
-      "path": "/courses",
-      "title": "Courses | Stanford Sites User Guide"
+      "path": "/build/paragraphs/lists-paragraph",
+      "title": "Lists Paragraph | Stanford Sites User Guide"
+    },
+    {
+      "path": "/design/faculty-subtheme",
+      "title": "Faculty Subtheme | Stanford Sites User Guide"
     },
     {
       "path": "/manage-your-site/domains-and-urls/how-bulk-upload-redirects",
       "title": "How to Bulk Upload Redirects | Stanford Sites User Guide"
     },
     {
-      "path": "/news/stanford-sites-v703-released-10292026",
-      "title": "Stanford Sites v7.0.3 Released – 10/29/2026 | Stanford Sites User Guide"
+      "path": "/manage-your-site/domains-and-urls/manage-page-paths",
+      "title": "Manage Page Paths | Stanford Sites User Guide"
     },
     {
-      "path": "/publications/ill-winds",
-      "title": "Ill Winds | Stanford Sites User Guide"
+      "path": "/news/stanford-sites-v703-released-10292026",
+      "title": "Stanford Sites v7.0.3 Released – 10/29/2026 | Stanford Sites User Guide"
     },
     {
       "path": "/support/accessibility-support",
@@ -3574,8 +3586,8 @@
       "title": "Accessibility Testing | Stanford Sites User Guide"
     },
     {
-      "path": "/support/accessibility-support/accessibility-testing/checking-page-accessibility",
-      "title": "Checking Page Accessibility | Stanford Sites User Guide"
+      "path": "/build-and-design/manage-site-content/hide-external-link-icons",
+      "title": "Add or Hide External Link Icons | Stanford Sites User Guide"
     },
     {
       "path": "/build/create-and-edit-pages/text-editing-basics/create-links",
@@ -3600,6 +3612,18 @@
     {
       "path": "/build/working-text-editor/create-links/link-external-documents",
       "title": "Link to External Documents | Stanford Sites User Guide"
+    },
+    {
+      "path": "/courses",
+      "title": "Courses | Stanford Sites User Guide"
+    },
+    {
+      "path": "/publications/ill-winds",
+      "title": "Ill Winds | Stanford Sites User Guide"
+    },
+    {
+      "path": "/support/accessibility-support/accessibility-testing/checking-page-accessibility",
+      "title": "Checking Page Accessibility | Stanford Sites User Guide"
     },
     {
       "path": "/support/resources-digital-communicators",
@@ -3650,20 +3674,12 @@
       "title": "Identify non-English text | Stanford Sites User Guide"
     },
     {
-      "path": "/build/media-library/categorizing-media-your-media-library",
-      "title": "Categorizing media in your media library | Stanford Sites User Guide"
-    },
-    {
       "path": "/build/taxonomy/courses-taxonomy",
       "title": "Courses Taxonomy | Stanford Sites User Guide"
     },
     {
       "path": "/people/examples",
       "title": "Examples | Stanford Sites User Guide"
-    },
-    {
-      "path": "/stanford-only-sites/stanford-sites-intranet-guide/access-security/file-sharing-strategies-intranet",
-      "title": "File Sharing Strategies for Intranet Owners | Stanford Sites User Guide"
     },
     {
       "path": "/build/build-ai-ready-site/use-meta-tags-ai-friendly-pages/default-page-metadata",
@@ -3674,8 +3690,8 @@
       "title": "Courses List Page | Stanford Sites User Guide"
     },
     {
-      "path": "/build/news-content-type/categorize-news",
-      "title": "Categorize News | Stanford Sites User Guide"
+      "path": "/build/media-library/categorizing-media-your-media-library",
+      "title": "Categorizing media in your media library | Stanford Sites User Guide"
     },
     {
       "path": "/build/paragraphs/card-paragraph/card-paragraph-examples",
@@ -3686,8 +3702,12 @@
       "title": "How to Set Up Third-Party Search | Stanford Sites User Guide"
     },
     {
-      "path": "/people/kerri-augenstein",
-      "title": "Kerri Augenstein | Stanford Sites User Guide"
+      "path": "/stanford-only-sites/stanford-sites-intranet-guide/access-security/file-sharing-strategies-intranet",
+      "title": "File Sharing Strategies for Intranet Owners | Stanford Sites User Guide"
+    },
+    {
+      "path": "/build/news-content-type/categorize-news",
+      "title": "Categorize News | Stanford Sites User Guide"
     },
     {
       "path": "/manage-your-site/marketing-and-analytics/add-social-media-marketing-tools",
@@ -3698,12 +3718,12 @@
       "title": "7.x | Stanford Sites User Guide"
     },
     {
-      "path": "/about-stanford-sites/stanford-sites-policies/embeddable-content-policy",
-      "title": "5. Embeddable Content Policy | Stanford Sites User Guide"
+      "path": "/people/kerri-augenstein",
+      "title": "Kerri Augenstein | Stanford Sites User Guide"
     },
     {
-      "path": "/about-stanford-sites/stanford-sites-policies/personal-sites-stanford-sites",
-      "title": "7. Personal Sites on Stanford Sites | Stanford Sites User Guide"
+      "path": "/about-stanford-sites/stanford-sites-policies/embeddable-content-policy",
+      "title": "5. Embeddable Content Policy | Stanford Sites User Guide"
     },
     {
       "path": "/build/lists-and-filtered-lists/filtered-lists-paragraph/example-filtered-list-opportunities-card",
@@ -3714,12 +3734,8 @@
       "title": "Accessibility tips for videos | Stanford Sites User Guide"
     },
     {
-      "path": "/manage-your-site/find-manage-site-content/schedule-publish",
-      "title": "Schedule Publish | Stanford Sites User Guide"
-    },
-    {
-      "path": "/news/whats-new-stanford-sites-v400",
-      "title": "What's new in Stanford Sites V4.0.0 | Stanford Sites User Guide"
+      "path": "/about-stanford-sites/stanford-sites-policies/personal-sites-stanford-sites",
+      "title": "7. Personal Sites on Stanford Sites | Stanford Sites User Guide"
     },
     {
       "path": "/about-stanford-sites/stanford-sites-policies/university-policies-related-website-ownership",
@@ -3734,8 +3750,20 @@
       "title": "Person Profile Importer | Stanford Sites User Guide"
     },
     {
+      "path": "/build/publication-content-type",
+      "title": "Publication Content Type | Stanford Sites User Guide"
+    },
+    {
       "path": "/get-started-stanford-sites/request-new-site",
       "title": "Request a New Site | Stanford Sites User Guide"
+    },
+    {
+      "path": "/manage-your-site/find-manage-site-content/schedule-publish",
+      "title": "Schedule Publish | Stanford Sites User Guide"
+    },
+    {
+      "path": "/news/whats-new-stanford-sites-v400",
+      "title": "What's new in Stanford Sites V4.0.0 | Stanford Sites User Guide"
     },
     {
       "path": "/about-stanford-sites/stanford-sites-policies/university-policies-related-website-ownership/social",
@@ -3750,10 +3778,6 @@
       "title": "Update from a legacy version of the filtered page | Stanford Sites User Guide"
     },
     {
-      "path": "/build/publication-content-type",
-      "title": "Publication Content Type | Stanford Sites User Guide"
-    },
-    {
       "path": "/build/taxonomy/basic-page-type-taxonomy",
       "title": "Basic Page Type (Taxonomy) | Stanford Sites User Guide"
     },
@@ -3762,8 +3786,8 @@
       "title": "Stanford Profiles Maintenance | Stanford Sites User Guide"
     },
     {
-      "path": "/news/stanford-sites-v520-released-3282024",
-      "title": "Stanford Sites v5.2.0 Released – 3/28/2024 | Stanford Sites User Guide"
+      "path": "/people/example-person",
+      "title": "User Guide Example: Person Content Type | Stanford Sites User Guide"
     },
     {
       "path": "/stanford-only-sites/stanford-sites-intranet-guide/access-security-intranets/file-sharing-strategies",
@@ -3786,16 +3810,16 @@
       "title": "Stanford Design System/Decanter | Stanford Sites User Guide"
     },
     {
-      "path": "/build/add-content-page/working-sections/vertical-dividers-section",
-      "title": "Vertical Dividers for a Section | Stanford Sites User Guide"
-    },
-    {
       "path": "/build/media-library/add-and-use-files-media-library/create-accessible-documents",
       "title": "Create Accessible Documents | Stanford Sites User Guide"
     },
     {
       "path": "/build/media-library/embeddable-media/use-embeddable-create-reusable-element-across-multiple-pages",
       "title": "Use an Embeddable to create a reusable element across multiple pages | Stanford Sites User Guide"
+    },
+    {
+      "path": "/build/stanford-sites-intranet-guide",
+      "title": "Stanford Sites Intranet Guide | Stanford Sites User Guide"
     },
     {
       "path": "/courses/autumn",
@@ -3818,16 +3842,12 @@
       "title": "Design | Stanford Sites User Guide"
     },
     {
-      "path": "/news/stanford-sites-v541-released-2132025",
-      "title": "Stanford Sites v5.4.1 Released – 2/13/2025 | Stanford Sites User Guide"
+      "path": "/news/stanford-sites-v520-released-3282024",
+      "title": "Stanford Sites v5.2.0 Released – 3/28/2024 | Stanford Sites User Guide"
     },
     {
       "path": "/news/stanford-sites-v560-released-582025",
       "title": "Stanford Sites v5.6.0 Released – 5/8/2025 | Stanford Sites User Guide"
-    },
-    {
-      "path": "/news/stanford-sites-v570-released-6262025",
-      "title": "Stanford Sites v5.7.0 Released – 6/26/2025 | Stanford Sites User Guide"
     },
     {
       "path": "/news/stanford-sites-v620-released-2192026",
@@ -3846,16 +3866,8 @@
       "title": "Customer Experience | Stanford Sites User Guide"
     },
     {
-      "path": "/people/example-person",
-      "title": "User Guide Example: Person Content Type | Stanford Sites User Guide"
-    },
-    {
       "path": "/stanford-only-sites/stanford-sites-intranet-guide/access-security/grant-or-remove-intranet-access",
       "title": "Grant or Remove Intranet Access | Stanford Sites User Guide"
-    },
-    {
-      "path": "/stanford-only-sites/stanford-sites-intranet-guide/common-questions-about-stanford-sites-intranet",
-      "title": "Common questions about Stanford Sites Intranet | Stanford Sites User Guide"
     },
     {
       "path": "/about-stanford-sites/stanford-sites-designs/faculty-subtheme",
@@ -3866,8 +3878,8 @@
       "title": "2.4 Digital Accessibility | Stanford Sites User Guide"
     },
     {
-      "path": "/build/stanford-sites-intranet-guide",
-      "title": "Stanford Sites Intranet Guide | Stanford Sites User Guide"
+      "path": "/build/add-content-page/working-sections/vertical-dividers-section",
+      "title": "Vertical Dividers for a Section | Stanford Sites User Guide"
     },
     {
       "path": "/build/taxonomy/opportunities-taxonomies",
@@ -3900,6 +3912,10 @@
     {
       "path": "/news/stanford-sites-v530-released-9262024",
       "title": "Stanford Sites v5.3.0 Released – 9/26/2024 | Stanford Sites User Guide"
+    },
+    {
+      "path": "/news/stanford-sites-v570-released-6262025",
+      "title": "Stanford Sites v5.7.0 Released – 6/26/2025 | Stanford Sites User Guide"
     },
     {
       "path": "/news/web-editors-toolkit",
@@ -3974,6 +3990,10 @@
       "title": "Stanford Sites v5.1.0 Released – 12/7/2023 | Stanford Sites User Guide"
     },
     {
+      "path": "/news/stanford-sites-v541-released-2132025",
+      "title": "Stanford Sites v5.4.1 Released – 2/13/2025 | Stanford Sites User Guide"
+    },
+    {
       "path": "/news/stanford-sites-v610-released-1232025",
       "title": "Stanford Sites v6.1.0 Released – 12/3/2025 | Stanford Sites User Guide"
     },
@@ -3998,12 +4018,12 @@
       "title": "John Bickar | Stanford Sites User Guide"
     },
     {
-      "path": "/people/managers",
-      "title": "Managers | Stanford Sites User Guide"
-    },
-    {
       "path": "/people/wen-yu-fang",
       "title": "Wen Yu Kao Fang | Stanford Sites User Guide"
+    },
+    {
+      "path": "/stanford-only-sites/stanford-sites-intranet-guide/common-questions-about-stanford-sites-intranet",
+      "title": "Common questions about Stanford Sites Intranet | Stanford Sites User Guide"
     },
     {
       "path": "/about-stanford-sites/stanford-sites-designs/custom-subthemes-stanford-sites",
@@ -4012,10 +4032,6 @@
     {
       "path": "/about-stanford-sites/stanford-sites-policies/automated-scanning-tools",
       "title": "3. Automated scanning tools | Stanford Sites User Guide"
-    },
-    {
-      "path": "/about-stanford-sites/stanford-sites-policies/personal-sites-stanford-sites/themes-personal-sites",
-      "title": "7.1 Themes for Personal Sites | Stanford Sites User Guide"
     },
     {
       "path": "/about-stanford-sites/stanford-sites-policies/security-standards",
@@ -4090,10 +4106,6 @@
       "title": "Stanford Sites v3.2 Released — 6/22/2023 | Stanford Sites User Guide"
     },
     {
-      "path": "/news/stanford-sites-v401-released-7282023",
-      "title": "Stanford Sites v4.0.1 Released — 7/28/2023 | Stanford Sites User Guide"
-    },
-    {
       "path": "/news/stanford-sites-v511-released-2222024",
       "title": "Stanford Sites v5.1.1 Released – 2/22/2024 | Stanford Sites User Guide"
     },
@@ -4126,12 +4138,20 @@
       "title": "Kathleen Lee Verani | Stanford Sites User Guide"
     },
     {
-      "path": "/people/kupaamauloa-kekauoha",
-      "title": "Kupa'amauloa Kekauoha | Stanford Sites User Guide"
+      "path": "/people/managers",
+      "title": "Managers | Stanford Sites User Guide"
     },
     {
       "path": "/people/melanie-biton",
       "title": "Melanie Biton | Stanford Sites User Guide"
+    },
+    {
+      "path": "/publications/thesis-example-publication",
+      "title": "Thesis example publication | Stanford Sites User Guide"
+    },
+    {
+      "path": "/about-stanford-sites/stanford-sites-policies/personal-sites-stanford-sites/themes-personal-sites",
+      "title": "7.1 Themes for Personal Sites | Stanford Sites User Guide"
     },
     {
       "path": "/about-stanford-sites/stanford-sites-policies/university-policies-related-website-ownership-3",
@@ -4186,6 +4206,10 @@
       "title": "Stanford Sites v3.1.1 Released — 12/1/2022 | Stanford Sites User Guide"
     },
     {
+      "path": "/news/stanford-sites-v401-released-7282023",
+      "title": "Stanford Sites v4.0.1 Released — 7/28/2023 | Stanford Sites User Guide"
+    },
+    {
       "path": "/news/stanford-sites-v402-released-1042023",
       "title": "Stanford Sites v4.0.2 Released — 10/4/2023 | Stanford Sites User Guide"
     },
@@ -4226,6 +4250,10 @@
       "title": "Joseph Dylan Gilliland-Lloyd | Stanford Sites User Guide"
     },
     {
+      "path": "/people/kupaamauloa-kekauoha",
+      "title": "Kupa'amauloa Kekauoha | Stanford Sites User Guide"
+    },
+    {
       "path": "/people/project-management",
       "title": "Project Management | Stanford Sites User Guide"
     },
@@ -4236,10 +4264,6 @@
     {
       "path": "/people/uxdesign",
       "title": "UX/Design | Stanford Sites User Guide"
-    },
-    {
-      "path": "/publications/thesis-example-publication",
-      "title": "Thesis example publication | Stanford Sites User Guide"
     },
     {
       "path": "/stanford-only-sites/stanford-sites-intranet-guide/access-security-intranets/grant-or-remove",
@@ -4264,6 +4288,10 @@
     {
       "path": "/build/create-and-edit-pages/create-layouts-sections-and-paragraphs/create-columns-sections",
       "title": "Create Columns with Sections | Stanford Sites User Guide"
+    },
+    {
+      "path": "/build/lists-and-filtered-lists/lists-paragraph/lists-paragraph-examples",
+      "title": "Lists Paragraph Examples | Stanford Sites User Guide"
     },
     {
       "path": "/build/people/person-content-type-profile-pages/link-person-profile-external-site",
@@ -4322,32 +4350,20 @@
       "title": "Tables | Stanford Sites User Guide"
     },
     {
-      "path": "/build/lists-and-filtered-lists/lists-paragraph/lists-paragraph-examples",
-      "title": "Lists Paragraph Examples | Stanford Sites User Guide"
-    },
-    {
       "path": "/build/paragraphs/page-title-banner-paragraph",
       "title": "Page Title Banner Paragraph | Stanford Sites User Guide"
     },
     {
-      "path": "/events/example-event",
-      "title": "Example Event | Stanford Sites User Guide"
-    },
-    {
-      "path": "/support/feedback-and-bug-reports",
-      "title": "Feedback and Bug Reports | Stanford Sites User Guide"
-    },
-    {
-      "path": "/403.html",
-      "title": "Access Denied | Stanford Sites User Guide"
+      "path": "/support/accessibility-support/make-content-accessible/fixing-common-accessibility-issues-container",
+      "title": "Fixing Common Accessibility Issues | Container Element is Empty | Stanford Sites User Guide"
     },
     {
       "path": "/build/courses-content-type-and-importer/pre-built-courses-list-page",
       "title": "Pre-Built Courses List Page | Stanford Sites User Guide"
     },
     {
-      "path": "/build/page-types/publications-content-type/publications-list-page",
-      "title": "Publications List Page | Stanford Sites User Guide"
+      "path": "/events/example-event",
+      "title": "Example Event | Stanford Sites User Guide"
     },
     {
       "path": "/get-started-stanford-sites/replace-or-remove-default-content",
@@ -4358,8 +4374,12 @@
       "title": "Federated Search | Stanford Sites User Guide"
     },
     {
-      "path": "/support/accessibility-support/make-content-accessible/fixing-common-accessibility-issues-container",
-      "title": "Fixing Common Accessibility Issues | Container Element is Empty | Stanford Sites User Guide"
+      "path": "/support/feedback-and-bug-reports",
+      "title": "Feedback and Bug Reports | Stanford Sites User Guide"
+    },
+    {
+      "path": "/403.html",
+      "title": "Access Denied | Stanford Sites User Guide"
     },
     {
       "path": "/build-and-design/site-organization-menus/manage-site-search/enhance-site-search/federated-search",
@@ -4368,6 +4388,10 @@
     {
       "path": "/build/create-and-edit-pages/text-editing-basics/create-links/link-external-documents",
       "title": "Link to External Documents | Stanford Sites User Guide"
+    },
+    {
+      "path": "/build/page-types/publications-content-type/publications-list-page",
+      "title": "Publications List Page | Stanford Sites User Guide"
     },
     {
       "path": "/build/paragraphs/filtered-lists-paragraph/set-filters-filtered-list-paragraph",
@@ -4402,6 +4426,18 @@
       "title": "Filtered Lists Paragraph | Stanford Sites User Guide"
     },
     {
+      "path": "/build/publication-content-type/pre-built-publications-list-page",
+      "title": "Pre-Built Publications List Page | Stanford Sites User Guide"
+    },
+    {
+      "path": "/stanford-only-sites/stanford-sites-intranet-guide/frequently-asked-questions-about-stanford-sites",
+      "title": "Frequently Asked Questions About Stanford Sites Intranet | Stanford Sites User Guide"
+    },
+    {
+      "path": "/about-stanford-sites-platform/accessibility-commitment",
+      "title": "Accessibility Commitment | Stanford Sites User Guide"
+    },
+    {
       "path": "/about-stanford-sites/stanford-sites-designs/stanford-basic-theme",
       "title": "Stanford Basic Theme | Stanford Sites User Guide"
     },
@@ -4422,8 +4458,8 @@
       "title": "Person Taxonomy | Stanford Sites User Guide"
     },
     {
-      "path": "/build/publication-content-type/pre-built-publications-list-page",
-      "title": "Pre-Built Publications List Page | Stanford Sites User Guide"
+      "path": "/build/publication-content-type/publications-importer",
+      "title": "Publications Importer | Stanford Sites User Guide"
     },
     {
       "path": "/get-started-stanford-sites/site-settings",
@@ -4442,10 +4478,6 @@
       "title": "Stanford Sites v2.3 Released — 12/09/2021 | Stanford Sites User Guide"
     },
     {
-      "path": "/stanford-only-sites/stanford-sites-intranet-guide/frequently-asked-questions-about-stanford-sites",
-      "title": "Frequently Asked Questions About Stanford Sites Intranet | Stanford Sites User Guide"
-    },
-    {
       "path": "/support/feedback",
       "title": "Feedback | Stanford Sites User Guide"
     },
@@ -4462,6 +4494,10 @@
       "title": "2.7 Stanford.EDU Name Assignment Policy | Stanford Sites User Guide"
     },
     {
+      "path": "/build/build-ai-ready-site/metadata-ai-friendly-pages",
+      "title": "Metadata for AI-Friendly Pages | Stanford Sites User Guide"
+    },
+    {
       "path": "/build/create-and-edit-web-pages/text-editing-basics/text-editing-toolbar",
       "title": "Text Editing Toolbar | Stanford Sites User Guide"
     },
@@ -4470,32 +4506,16 @@
       "title": "Comparing Teaser and Lists | Stanford Sites User Guide"
     },
     {
-      "path": "/build/publication-content-type/publications-importer",
-      "title": "Publications Importer | Stanford Sites User Guide"
-    },
-    {
       "path": "/manage-your-site/domains-and-urls/redirects",
       "title": "Redirects | Stanford Sites User Guide"
     },
     {
-      "path": "/about-stanford-sites-platform/accessibility-commitment",
-      "title": "Accessibility Commitment | Stanford Sites User Guide"
-    },
-    {
-      "path": "/about-stanford-sites/stanford-sites-policies/embeddable-content",
-      "title": "5. Embeddable Content Policy | Stanford Sites User Guide"
-    },
-    {
-      "path": "/build/build-ai-ready-site/metadata-ai-friendly-pages",
-      "title": "Metadata for AI-Friendly Pages | Stanford Sites User Guide"
+      "path": "/build/create-and-edit-web-pages/text-editing-basics",
+      "title": "Text Editing Basics | Stanford Sites User Guide"
     },
     {
       "path": "/build/event-content-type/stanford-events-widget",
       "title": "Stanford Events Widget | Stanford Sites User Guide"
-    },
-    {
-      "path": "/build/news-content-type/pre-built-news-list-page",
-      "title": "Pre-built News List Page | Stanford Sites User Guide"
     },
     {
       "path": "/build/page-types/filtered-list-pages/update-legacy-version-filtered-page",
@@ -4506,10 +4526,6 @@
       "title": "Google Search Console | Stanford Sites User Guide"
     },
     {
-      "path": "/news/stanford-sites-v22-released-10212021",
-      "title": "Stanford Sites v2.2 Released — 10/21/2021 | Stanford Sites User Guide"
-    },
-    {
       "path": "/people/hannah-dimock",
       "title": "Hannah Palmer Dimock | Stanford Sites User Guide"
     },
@@ -4518,20 +4534,20 @@
       "title": "Stanford Sites Policies | Stanford Sites User Guide"
     },
     {
-      "path": "/build/create-and-edit-pages/create-layouts-sections-and-paragraphs/create-columns-sections/vertical",
-      "title": "Vertical Dividers for a Section | Stanford Sites User Guide"
+      "path": "/about-stanford-sites/stanford-sites-policies/embeddable-content",
+      "title": "5. Embeddable Content Policy | Stanford Sites User Guide"
     },
     {
-      "path": "/build/create-and-edit-web-pages/text-editing-basics",
-      "title": "Text Editing Basics | Stanford Sites User Guide"
+      "path": "/build/create-and-edit-pages/create-layouts-sections-and-paragraphs/create-columns-sections/vertical",
+      "title": "Vertical Dividers for a Section | Stanford Sites User Guide"
     },
     {
       "path": "/build/media-library/embeddable-media/create-reusable-element",
       "title": "Create A Reusable Element | Stanford Sites User Guide"
     },
     {
-      "path": "/build/page-types/basic-page-content-type-0/add-metadata-basic-page",
-      "title": "Add Metadata to a Basic Page | Stanford Sites User Guide"
+      "path": "/build/news-content-type/pre-built-news-list-page",
+      "title": "Pre-built News List Page | Stanford Sites User Guide"
     },
     {
       "path": "/get-started-stanford-sites/site-settings/update-site-name",
@@ -4578,6 +4594,10 @@
       "title": "2.6 Stanford Identity | Stanford Sites User Guide"
     },
     {
+      "path": "/build/page-types/basic-page-content-type-0/add-metadata-basic-page",
+      "title": "Add Metadata to a Basic Page | Stanford Sites User Guide"
+    },
+    {
       "path": "/build/page-types/courses-content-type-and-importer/courses-list-page",
       "title": "Courses List Page | Stanford Sites User Guide"
     },
@@ -4600,6 +4620,10 @@
     {
       "path": "/news/stanford-sites-v213-release-07222021",
       "title": "Stanford Sites v2.1.3 Release — 07/22/2021 | Stanford Sites User Guide"
+    },
+    {
+      "path": "/news/stanford-sites-v22-released-10212021",
+      "title": "Stanford Sites v2.2 Released — 10/21/2021 | Stanford Sites User Guide"
     },
     {
       "path": "/stanford-sites-policies/2-university-policies-related-website-ownership/copyright-complaints",
@@ -4678,12 +4702,28 @@
       "title": "Do More with the Text Editor | Stanford Sites User Guide"
     },
     {
+      "path": "/build/lists-and-filtered-lists/lists",
+      "title": "Lists | Stanford Sites User Guide"
+    },
+    {
       "path": "/build/paragraphs/filtered-lists-paragraph/example-filtered-list-opportunities-card-grid-display",
       "title": "Example: Filtered List of Opportunities, Card Grid Display | Stanford Sites User Guide"
     },
     {
       "path": "/build/paragraphs/filtered-lists-paragraph/example-filtered-list-opportunities-default-list-display",
       "title": "Example: Filtered List of Opportunities, Default List Display | Stanford Sites User Guide"
+    },
+    {
+      "path": "/build/paragraphs/stat-cards",
+      "title": "Stat Cards | Stanford Sites User Guide"
+    },
+    {
+      "path": "/build/paragraphs/teasers",
+      "title": "Teasers | Stanford Sites User Guide"
+    },
+    {
+      "path": "/build/stanford-sites-intranet-guide/other-options-stanford-only-sites",
+      "title": "Other Options for Stanford-Only Sites | Stanford Sites User Guide"
     },
     {
       "path": "/news/stanford-sites-v101-released-03272020",
@@ -4789,13 +4829,13 @@
     },
     {
       "month": "2026-11",
-      "views": 4389
+      "views": 4489
     }
   ],
   "searchTerms": [
     {
       "term": "algolia",
-      "count": 10
+      "count": 9
     },
     {
       "term": "banner",
@@ -4843,14 +4883,14 @@
     }
   ],
   "dropped": {
-    "searchTerms": 314,
-    "rare": 314,
+    "searchTerms": 312,
+    "rare": 312,
     "personal": 0,
     "rareByCount": {
       "1": 259,
-      "2": 34,
-      "3": 15,
-      "4": 6
+      "2": 33,
+      "3": 13,
+      "4": 7
     }
   }
 }
