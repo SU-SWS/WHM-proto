@@ -55,7 +55,7 @@ jobs:
         run: node scripts/refresh.mjs --site "${{ inputs.site || 'all' }}"
 
       - name: Save the result for review
-        if: ${{ inputs.publish == false }}
+        if: ${{ github.event_name == 'workflow_dispatch' && !inputs.publish }}
         uses: actions/upload-artifact@v4
         with:
           name: data-run-preview
@@ -63,7 +63,7 @@ jobs:
           retention-days: 3
 
       - name: Commit published data
-        if: ${{ inputs.publish != false }}
+        if: ${{ github.event_name != 'workflow_dispatch' || inputs.publish }}
         run: |
           git add data/published
           if git diff --cached --quiet; then
@@ -77,20 +77,21 @@ jobs:
           fi
 
       - run: npm ci
-        if: ${{ inputs.publish != false }}
+        if: ${{ github.event_name != 'workflow_dispatch' || inputs.publish }}
       - run: npx next build
-        if: ${{ inputs.publish != false }}
+        if: ${{ github.event_name != 'workflow_dispatch' || inputs.publish }}
       - uses: actions/configure-pages@v5
-        if: ${{ inputs.publish != false }}
+        if: ${{ github.event_name != 'workflow_dispatch' || inputs.publish }}
       - uses: actions/upload-pages-artifact@v3
-        if: ${{ inputs.publish != false }}
+        if: ${{ github.event_name != 'workflow_dispatch' || inputs.publish }}
         with:
           path: out
 
   deploy:
     needs: refresh
-    # The schedule has no inputs, so a scheduled run always publishes.
-    if: ${{ inputs.publish != false }}
+    # A scheduled run has no inputs, and GitHub treats a missing input as equal
+    # to false, so check how the run started: scheduled runs always publish.
+    if: ${{ github.event_name != 'workflow_dispatch' || inputs.publish }}
     runs-on: ubuntu-latest
     environment:
       name: github-pages
