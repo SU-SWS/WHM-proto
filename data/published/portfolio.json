@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-24",
+  "generatedAt": "2026-11-25",
   "sites": [
     {
       "key": "sitesuserguide",
@@ -11,7 +11,7 @@
       "siteTargetScore": 98.37,
       "accessibilityScore": 93.01,
       "brokenLinks": 148,
-      "openOwnerIssues": 21,
+      "openOwnerIssues": 20,
       "checkedAt": "2026-11-20",
       "source": "live"
     },
