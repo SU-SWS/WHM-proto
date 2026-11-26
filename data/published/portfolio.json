@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-25",
+  "generatedAt": "2026-11-26",
   "sites": [
     {
       "key": "sitesuserguide",
@@ -10,9 +10,9 @@
       "verdict": "Needs attention: issues sit on some of your busiest pages.",
       "siteTargetScore": 98.37,
       "accessibilityScore": 93.01,
-      "brokenLinks": 148,
+      "brokenLinks": 145,
       "openOwnerIssues": 20,
-      "checkedAt": "2026-11-20",
+      "checkedAt": "2026-11-26",
       "source": "live"
     },
     {
