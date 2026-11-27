@@ -6,18 +6,18 @@
   "source": "live",
   "checkedAt": "2026-11-26",
   "state": "attention",
-  "verdict": "Needs attention: issues sit on some of your busiest pages.",
-  "lede": "Your Site Target Score is 98.37, the same as the last check. Issues sit on your home page, your busiest page. Fewer visitors stay on “Create Jump Links Using ID Tags” than on most of your pages. Fixing the first two items helps the most visitors. 7 items are being handled by SWS.",
+  "verdict": "Needs attention: your Site Target Score dropped since the last check, and issues sit on your busiest pages.",
+  "lede": "Your Site Target Score is 97.01, down 1.36 since the last check. Issues sit on your home page, your busiest page. Fewer visitors stay on “Create Jump Links Using ID Tags” than on most of your pages. Fixing the first two items helps the most visitors. 7 items are being handled by SWS.",
   "readings": {
     "siteTargetScore": {
-      "value": 98.37,
-      "change": 0,
+      "value": 97.01,
+      "change": -1.36,
       "source": "live",
       "goal": 100
     },
     "accessibilityScore": {
-      "value": 93.01,
-      "change": 0.01,
+      "value": 91.66,
+      "change": -1.34,
       "source": "live"
     },
     "brokenLinks": {
@@ -59,7 +59,7 @@
         98.67,
         98.22,
         97.87,
-        98.37
+        97.01
       ]
     },
     "accessibilityScore": {
@@ -72,7 +72,7 @@
         93.43,
         92.72,
         92.73,
-        93.01
+        91.66
       ]
     },
     "brokenLinks": {
@@ -106,21 +106,21 @@
     "viewsSource": "live",
     "periodDays": 90,
     "engagementSource": "live",
-    "engagementAsOf": "2026-11-25",
-    "typicalEngagement": 0.7188,
+    "engagementAsOf": "2026-11-26",
+    "typicalEngagement": 0.7172,
     "pages": [
       {
         "path": "/",
         "title": "Stanford Sites User Guide",
-        "views": 1655,
-        "engagementRate": 0.5301,
+        "views": 1645,
+        "engagementRate": 0.527,
         "openIssues": 1
       },
       {
         "path": "/build/working-text-editor/create-links/create-jump-links-using-id-tags",
         "title": "Create Jump Links Using ID Tags",
-        "views": 387,
-        "engagementRate": 0.4136,
+        "views": 382,
+        "engagementRate": 0.4173,
         "lowEngagement": true,
         "openIssues": 0
       },
@@ -128,42 +128,42 @@
         "path": "/support/launch-your-site",
         "title": "Launch your site",
         "views": 277,
-        "engagementRate": 0.6941,
+        "engagementRate": 0.698,
         "openIssues": 0
       },
       {
         "path": "/build/stanford-only-sites",
         "title": "Stanford-Only Sites",
-        "views": 203,
-        "engagementRate": 0.5696,
-        "openIssues": 0
-      },
-      {
-        "path": "/get-started/request-new-site",
-        "title": "Request a New Site",
-        "views": 156,
-        "engagementRate": 0.6781,
+        "views": 201,
+        "engagementRate": 0.5641,
         "openIssues": 0
       },
       {
         "path": "/support",
         "title": "Support",
-        "views": 155,
-        "engagementRate": 0.7722,
+        "views": 154,
+        "engagementRate": 0.7707,
+        "openIssues": 0
+      },
+      {
+        "path": "/get-started/request-new-site",
+        "title": "Request a New Site",
+        "views": 153,
+        "engagementRate": 0.6853,
         "openIssues": 0
       },
       {
         "path": "/build",
         "title": "Build",
-        "views": 148,
-        "engagementRate": 0.9137,
+        "views": 147,
+        "engagementRate": 0.913,
         "openIssues": 0
       },
       {
         "path": "/build/people",
         "title": "People",
-        "views": 147,
-        "engagementRate": 0.7667,
+        "views": 144,
+        "engagementRate": 0.764,
         "openIssues": 0
       },
       {
@@ -177,8 +177,8 @@
       {
         "path": "/build/media-library/add-and-use-files-media-library",
         "title": "Add and use files in the Media Library",
-        "views": 124,
-        "engagementRate": 0.72,
+        "views": 123,
+        "engagementRate": 0.7172,
         "openIssues": 0
       }
     ]
@@ -194,7 +194,7 @@
       "pages": [
         {
           "path": "/",
-          "views": 1655,
+          "views": 1645,
           "count": 1,
           "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/A11Y/Page?pageId=2202959107#/sia-r113/failed"
         },
@@ -263,7 +263,7 @@
         },
         {
           "path": "/build/best-practices/create-accessible-headings/heading-examples",
-          "views": 51,
+          "views": 52,
           "count": 1,
           "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/Policy/Page?pageId=2231881056"
         },
@@ -275,7 +275,7 @@
         },
         {
           "path": "/release-notes/stanford-sites-roadmap",
-          "views": 50,
+          "views": 49,
           "count": 1,
           "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/Policy/Page?pageId=2221815524"
         },
@@ -293,7 +293,7 @@
         },
         {
           "path": "/build/create-and-edit-pages/text-editing-basics/add-text-styles",
-          "views": 40,
+          "views": 39,
           "count": 1,
           "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/Policy/Page?pageId=19487217198"
         },
@@ -418,10 +418,22 @@
           "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/Policy/Page?pageId=33522051073"
         },
         {
+          "path": "/manage-your-site/domains-and-urls/redirects",
+          "views": 7,
+          "count": 1,
+          "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/Policy/Page?pageId=35503409932"
+        },
+        {
           "path": "/about-stanford-sites-platform/accessibility-commitment",
           "views": 6,
           "count": 1,
           "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/Policy/Page?pageId=36024487724"
+        },
+        {
+          "path": "/build/build-ai-ready-site/metadata-ai-friendly-pages",
+          "views": 6,
+          "count": 1,
+          "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/Policy/Page?pageId=35497609804"
         },
         {
           "path": "/build/publication-content-type/publications-importer",
@@ -430,22 +442,22 @@
           "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/Policy/Page?pageId=35000363319"
         },
         {
-          "path": "/build/build-ai-ready-site/metadata-ai-friendly-pages",
-          "views": 5,
-          "count": 1,
-          "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/Policy/Page?pageId=35497609804"
-        },
-        {
-          "path": "/manage-your-site/domains-and-urls/redirects",
-          "views": 5,
-          "count": 1,
-          "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/Policy/Page?pageId=35503409932"
-        },
-        {
           "path": "/build/paragraphs/accordions",
-          "views": 3,
+          "views": 4,
           "count": 1,
           "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/Policy/Page?pageId=36017449071"
+        },
+        {
+          "path": "/build/paragraphs/cards",
+          "views": 3,
+          "count": 1,
+          "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/Policy/Page?pageId=36017447339"
+        },
+        {
+          "path": "/build/paragraphs/teasers",
+          "views": 3,
+          "count": 1,
+          "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/Policy/Page?pageId=36017448400"
         },
         {
           "path": "/manage-your-site/analytics-and-marketing-tools/analytics",
@@ -460,28 +472,16 @@
           "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/Policy/Page?pageId=36030081568"
         },
         {
-          "path": "/build/paragraphs/teasers",
+          "path": "/get-started-stanford-sites/stanford-sites-intranet-guide",
           "views": 1,
           "count": 1,
-          "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/Policy/Page?pageId=36017448400"
+          "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/Policy/Page?pageId=36013248375"
         },
         {
           "path": "/news/stanford-sites-v211-released-05202021",
           "views": 1,
           "count": 1,
           "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/Policy/Page?pageId=2235374526"
-        },
-        {
-          "path": "/get-started-stanford-sites/stanford-sites-intranet-guide",
-          "views": 0,
-          "count": 1,
-          "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/Policy/Page?pageId=36013248375"
-        },
-        {
-          "path": "/build/paragraphs/cards",
-          "views": 0,
-          "count": 1,
-          "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/Policy/Page?pageId=36017447339"
         }
       ],
       "progress": {
@@ -506,7 +506,7 @@
         },
         {
           "path": "/people/examples",
-          "views": 23,
+          "views": 22,
           "count": 1,
           "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/SeoV2/Page?pageId=2240764888"
         },
@@ -515,18 +515,6 @@
           "views": 21,
           "count": 1,
           "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/SeoV2/Page?pageId=28347792835"
-        },
-        {
-          "path": "/news/stanford-sites-v520-released-3282024",
-          "views": 17,
-          "count": 1,
-          "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/SeoV2/Page?pageId=2233859314"
-        },
-        {
-          "path": "/news/design",
-          "views": 17,
-          "count": 1,
-          "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/SeoV2/Page?pageId=2238386949"
         },
         {
           "path": "/courses/physwell",
@@ -551,6 +539,18 @@
           "views": 16,
           "count": 1,
           "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/SeoV2/Page?pageId=2224244559"
+        },
+        {
+          "path": "/news/stanford-sites-v520-released-3282024",
+          "views": 16,
+          "count": 1,
+          "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/SeoV2/Page?pageId=2233859314"
+        },
+        {
+          "path": "/news/design",
+          "views": 16,
+          "count": 1,
+          "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/SeoV2/Page?pageId=2238386949"
         },
         {
           "path": "/news/stanford-sites-news",
@@ -581,12 +581,6 @@
           "views": 15,
           "count": 1,
           "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/SeoV2/Page?pageId=2231092029"
-        },
-        {
-          "path": "/news/stanford-sites-v510-released-1272023",
-          "views": 15,
-          "count": 1,
-          "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/SeoV2/Page?pageId=2233862184"
         },
         {
           "path": "/events/other",
@@ -625,6 +619,12 @@
           "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/SeoV2/Page?pageId=2238019933"
         },
         {
+          "path": "/news/stanford-sites-v510-released-1272023",
+          "views": 14,
+          "count": 1,
+          "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/SeoV2/Page?pageId=2233862184"
+        },
+        {
           "path": "/news/stanford-sites-v250-released-5182022",
           "views": 14,
           "count": 1,
@@ -641,12 +641,6 @@
           "views": 14,
           "count": 1,
           "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/SeoV2/Page?pageId=2234518688"
-        },
-        {
-          "path": "/news/stanford-sites-v310-released-10272022",
-          "views": 14,
-          "count": 1,
-          "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/SeoV2/Page?pageId=2234517391"
         },
         {
           "path": "/news/stanford-sites-v32-released-6222023",
@@ -695,6 +689,12 @@
           "views": 13,
           "count": 1,
           "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/SeoV2/Page?pageId=2234166914"
+        },
+        {
+          "path": "/news/stanford-sites-v310-released-10272022",
+          "views": 13,
+          "count": 1,
+          "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/SeoV2/Page?pageId=2234517391"
         },
         {
           "path": "/news/stanford-sites-v311-released-1212022",
@@ -919,16 +919,16 @@
           "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/SeoV2/Page?pageId=6374464847"
         },
         {
-          "path": "/news/stanford-sites-v212-released-06242021",
-          "views": 1,
-          "count": 1,
-          "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/SeoV2/Page?pageId=2235373845"
-        },
-        {
           "path": "/news/stanford-sites-v120-released-05212020",
           "views": 0,
           "count": 1,
           "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/SeoV2/Page?pageId=2236165392"
+        },
+        {
+          "path": "/news/stanford-sites-v212-released-06242021",
+          "views": 0,
+          "count": 1,
+          "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/SeoV2/Page?pageId=2235373845"
         }
       ],
       "progress": {
@@ -953,13 +953,13 @@
         },
         {
           "path": "/manage-your-site/domains-and-urls",
-          "views": 85,
+          "views": 83,
           "count": 1,
           "siteimproveUrl": "https://my2.us.siteimprove.com/QualityAssurance/1062154/PageDetails/Report?PageId=2219121134"
         },
         {
           "path": "/release-notes/stanford-sites-roadmap",
-          "views": 50,
+          "views": 49,
           "count": 2,
           "siteimproveUrl": "https://my2.us.siteimprove.com/QualityAssurance/1062154/PageDetails/Report?PageId=2221815524"
         },
@@ -988,12 +988,6 @@
           "siteimproveUrl": "https://my2.us.siteimprove.com/QualityAssurance/1062154/PageDetails/Report?PageId=2222234137"
         },
         {
-          "path": "/manage-your-site/domains-and-urls/how-bulk-upload-redirects",
-          "views": 27,
-          "count": 1,
-          "siteimproveUrl": "https://my2.us.siteimprove.com/QualityAssurance/1062154/PageDetails/Report?PageId=2219822861"
-        },
-        {
           "path": "/build/event-content-type/event-series",
           "views": 27,
           "count": 1,
@@ -1004,6 +998,12 @@
           "views": 26,
           "count": 1,
           "siteimproveUrl": "https://my2.us.siteimprove.com/QualityAssurance/1062154/PageDetails/Report?PageId=33511321112"
+        },
+        {
+          "path": "/manage-your-site/domains-and-urls/how-bulk-upload-redirects",
+          "views": 26,
+          "count": 1,
+          "siteimproveUrl": "https://my2.us.siteimprove.com/QualityAssurance/1062154/PageDetails/Report?PageId=2219822861"
         },
         {
           "path": "/build/create-and-edit-pages/text-editing-basics/create-links/create-buttons-and-action-links",
@@ -1018,16 +1018,16 @@
           "siteimproveUrl": "https://my2.us.siteimprove.com/QualityAssurance/1062154/PageDetails/Report?PageId=2215405087"
         },
         {
-          "path": "/build/taxonomy/shared-tags",
-          "views": 22,
-          "count": 1,
-          "siteimproveUrl": "https://my2.us.siteimprove.com/QualityAssurance/1062154/PageDetails/Report?PageId=2215406998"
-        },
-        {
           "path": "/manage-your-site/marketing-and-analytics/add-social-media-marketing-tools",
           "views": 21,
           "count": 1,
           "siteimproveUrl": "https://my2.us.siteimprove.com/QualityAssurance/1062154/PageDetails/Report?PageId=2219828311"
+        },
+        {
+          "path": "/build/taxonomy/shared-tags",
+          "views": 21,
+          "count": 1,
+          "siteimproveUrl": "https://my2.us.siteimprove.com/QualityAssurance/1062154/PageDetails/Report?PageId=2215406998"
         },
         {
           "path": "/support/launch-your-site/about-subdomains",
@@ -1132,16 +1132,16 @@
           "siteimproveUrl": "https://my2.us.siteimprove.com/QualityAssurance/1062154/PageDetails/Report?PageId=2236159244"
         },
         {
+          "path": "/build/paragraphs/image-galleries",
+          "views": 1,
+          "count": 1,
+          "siteimproveUrl": "https://my2.us.siteimprove.com/QualityAssurance/1062154/PageDetails/Report?PageId=36017449697"
+        },
+        {
           "path": "/news/stanford-sites-v120-released-05212020",
           "views": 0,
           "count": 2,
           "siteimproveUrl": "https://my2.us.siteimprove.com/QualityAssurance/1062154/PageDetails/Report?PageId=2236165392"
-        },
-        {
-          "path": "/build/paragraphs/image-galleries",
-          "views": 0,
-          "count": 1,
-          "siteimproveUrl": "https://my2.us.siteimprove.com/QualityAssurance/1062154/PageDetails/Report?PageId=36017449697"
         }
       ],
       "progress": {
@@ -1160,7 +1160,7 @@
       "pages": [
         {
           "path": "/build/event-content-type",
-          "views": 104,
+          "views": 103,
           "count": 1,
           "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/Policy/Page?pageId=2207814073"
         },
@@ -1207,6 +1207,12 @@
           "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/Policy/Page?pageId=2223736627"
         },
         {
+          "path": "/build/create-and-edit-web-pages/create-layouts-sections-and-paragraphs",
+          "views": 27,
+          "count": 1,
+          "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/Policy/Page?pageId=33512432605"
+        },
+        {
           "path": "/support/accessibility-support",
           "views": 27,
           "count": 1,
@@ -1217,12 +1223,6 @@
           "views": 26,
           "count": 1,
           "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/Policy/Page?pageId=33511321112"
-        },
-        {
-          "path": "/build/create-and-edit-web-pages/create-layouts-sections-and-paragraphs",
-          "views": 26,
-          "count": 1,
-          "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/Policy/Page?pageId=33512432605"
         },
         {
           "path": "/build/best-practices/best-practices-providing-contact-information",
@@ -1268,13 +1268,13 @@
         },
         {
           "path": "/stanford-sites-policies/7-personal-sites-stanford-sites/themes-personal-sites",
-          "views": 2,
+          "views": 3,
           "count": 1,
           "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/Policy/Page?pageId=36023185273"
         },
         {
           "path": "/about-stanford-sites-platform/glossary-terms",
-          "views": 2,
+          "views": 3,
           "count": 1,
           "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/Policy/Page?pageId=36023981597"
         }
@@ -1295,7 +1295,7 @@
       "pages": [
         {
           "path": "/build/media-library/images",
-          "views": 91,
+          "views": 89,
           "count": 1,
           "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/Policy/Page?pageId=2212810348"
         },
@@ -1307,7 +1307,7 @@
         },
         {
           "path": "/release-notes/stanford-sites-roadmap",
-          "views": 50,
+          "views": 49,
           "count": 1,
           "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/Policy/Page?pageId=2221815524"
         },
@@ -1361,7 +1361,7 @@
         },
         {
           "path": "/build/create-and-edit-web-pages/create-layouts-sections-and-paragraphs",
-          "views": 26,
+          "views": 27,
           "count": 1,
           "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/Policy/Page?pageId=33512432605"
         },
@@ -1397,7 +1397,7 @@
         },
         {
           "path": "/build/lists-and-filtered-lists/lists",
-          "views": 1,
+          "views": 2,
           "count": 1,
           "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/Policy/Page?pageId=36016691930"
         }
@@ -1486,16 +1486,16 @@
           "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/A11Y/Page?pageId=28347792835#/sia-r53/failed"
         },
         {
-          "path": "/news/design",
-          "views": 17,
-          "count": 1,
-          "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/A11Y/Page?pageId=2238386949#/sia-r53/failed"
-        },
-        {
           "path": "/news/release-notes/6x",
           "views": 16,
           "count": 1,
           "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/A11Y/Page?pageId=2224244559#/sia-r53/failed"
+        },
+        {
+          "path": "/news/design",
+          "views": 16,
+          "count": 1,
+          "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/A11Y/Page?pageId=2238386949#/sia-r53/failed"
         },
         {
           "path": "/news/stanford-sites-news",
@@ -1562,19 +1562,19 @@
       "pages": [
         {
           "path": "/build/media-library/images",
-          "views": 91,
+          "views": 89,
           "count": 1,
           "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/Policy/Page?pageId=2212810348"
         },
         {
           "path": "/build/media-library/images/add-images-media-library",
-          "views": 25,
+          "views": 24,
           "count": 1,
           "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/Policy/Page?pageId=2213367568"
         },
         {
           "path": "/build/taxonomy/basic-page-type-taxonomy",
-          "views": 19,
+          "views": 20,
           "count": 1,
           "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/Policy/Page?pageId=33058622042"
         },
@@ -1613,7 +1613,7 @@
         },
         {
           "path": "/news/stanford-sites-v510-released-1272023",
-          "views": 15,
+          "views": 14,
           "count": 1,
           "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/A11Y/Page?pageId=2233862184#/sia-r78/failed"
         },
@@ -1622,12 +1622,6 @@
           "views": 14,
           "count": 1,
           "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/A11Y/Page?pageId=2234909382#/sia-r78/failed"
-        },
-        {
-          "path": "/news/stanford-sites-v310-released-10272022",
-          "views": 14,
-          "count": 1,
-          "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/A11Y/Page?pageId=2234517391#/sia-r78/failed"
         },
         {
           "path": "/news/stanford-sites-v251-released-7212022",
@@ -1640,6 +1634,12 @@
           "views": 14,
           "count": 1,
           "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/A11Y/Page?pageId=2234516085#/sia-r78/failed"
+        },
+        {
+          "path": "/news/stanford-sites-v310-released-10272022",
+          "views": 13,
+          "count": 1,
+          "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/A11Y/Page?pageId=2234517391#/sia-r78/failed"
         },
         {
           "path": "/news/stanford-sites-v311-released-1212022",
@@ -1762,16 +1762,16 @@
           "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/A11Y/Page?pageId=2235372131#/sia-r78/failed"
         },
         {
-          "path": "/news/stanford-sites-v212-released-06242021",
-          "views": 1,
-          "count": 1,
-          "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/A11Y/Page?pageId=2235373845#/sia-r78/failed"
-        },
-        {
           "path": "/news/stanford-sites-v120-released-05212020",
           "views": 0,
           "count": 1,
           "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/A11Y/Page?pageId=2236165392#/sia-r78/failed"
+        },
+        {
+          "path": "/news/stanford-sites-v212-released-06242021",
+          "views": 0,
+          "count": 1,
+          "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/A11Y/Page?pageId=2235373845#/sia-r78/failed"
         }
       ],
       "progress": {
@@ -1790,7 +1790,7 @@
       "pages": [
         {
           "path": "/tour/site-organization-menus/branding-and-logo-lockup-options",
-          "views": 94,
+          "views": 93,
           "count": 1,
           "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/Policy/Page?pageId=2217647767"
         },
@@ -1817,7 +1817,7 @@
       "pages": [
         {
           "path": "/manage-your-site/menus-other-sitewide-features/local-footer-modifications/add-emails-and-phone",
-          "views": 31,
+          "views": 30,
           "count": 1,
           "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/Policy/Page?pageId=2217646185"
         },
@@ -1928,7 +1928,7 @@
       "pages": [
         {
           "path": "/manage-your-site/menus-other-sitewide-features/manage-super-footer",
-          "views": 31,
+          "views": 30,
           "count": 1,
           "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/Policy/Page?pageId=2217649369"
         },
@@ -1955,7 +1955,7 @@
       "pages": [
         {
           "path": "/news/planned-outage-june-19-21-workgroup-access-impacts-stanford-sites-and-stanford-sites-intranet",
-          "views": 15,
+          "views": 16,
           "count": 1,
           "siteimproveUrl": "https://my2.us.siteimprove.com/Inspector/1062154/Policy/Page?pageId=18092119125"
         }
@@ -2262,7 +2262,7 @@
   ],
   "siteSearch": {
     "source": "live",
-    "asOf": "2026-11-25",
+    "asOf": "2026-11-26",
     "periodDays": 90,
     "terms": [
       {
@@ -2335,7 +2335,7 @@
   "analytics": {
     "provider": "ga4",
     "source": "live",
-    "asOf": "2026-11-25",
+    "asOf": "2026-11-26",
     "periodDays": 90
   }
 }

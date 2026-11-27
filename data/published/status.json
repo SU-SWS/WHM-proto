@@ -1,25 +1,25 @@
 {
   "schemaVersion": 1,
-  "runId": "45808231252",
-  "startedAt": "2026-11-26T11:11:09.027Z",
-  "finishedAt": "2026-11-26T11:11:29.082Z",
+  "runId": "45988402102",
+  "startedAt": "2026-11-27T11:11:34.988Z",
+  "finishedAt": "2026-11-27T11:11:54.772Z",
   "sites": {
     "sitesuserguide": {
       "result": "complete",
       "reason": "accessibility rule 64 (“Empty headings”) has no WHM issue type; policy “[QA] Google Docs” has no WHM issue type; policy “[QA] Google Docs Forms” has no WHM issue type; policy “[QA] Links to Stanford Digital Repository (sdr.stanford.edu)” has no WHM issue type; policy “[A11y] Captions Project: YouTube Links” has no WHM issue type; policy “[A11y] [QA] Documents” has no WHM issue type",
-      "finishedAt": "2026-11-26T11:11:29.079Z",
+      "finishedAt": "2026-11-27T11:11:54.768Z",
       "source": "live"
     },
     "webservices": {
       "result": "sample",
       "reason": null,
-      "finishedAt": "2026-11-26T11:11:29.080Z",
+      "finishedAt": "2026-11-27T11:11:54.769Z",
       "source": "sample"
     },
     "decanter": {
       "result": "sample",
       "reason": null,
-      "finishedAt": "2026-11-26T11:11:29.080Z",
+      "finishedAt": "2026-11-27T11:11:54.769Z",
       "source": "sample"
     }
   }
